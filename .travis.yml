@@ -1,14 +1,16 @@
 language: ruby
 rvm:
-    - 2.5.1
-script: "JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.prod.yml'"
-
+- 2.5.1
+script: JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.prod.yml'
 deploy:
-    provider: pages
-    fqdn: karmen.fragaria.cz
-    local-dir: _site
-    skip-cleanup: true
-    github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
-    keep-history: true
-    on:
-        branch: master
+  provider: pages
+  fqdn: karmen.fragaria.cz
+  local-dir: _site
+  skip-cleanup: true
+  github-token: "$GH_PAGES_DEPLOY_TOKEN"
+  keep-history: true
+  on:
+    branch: master
+env:
+  global:
+    secure: TYBlVJkukUEA634mu7QjF3Sfj5CC2ezC7YM2ghlGeYVclnT3u7FPBjJwP6p5oKNujLhrg30zuoLwz3ZZuKHGKqS27ISsr9KnGlUTSPZrdPHatbmir92/HFVzqHslUB38I2+/iSHLs67STA2xhGfRmFliyDj9poA27XueYOu9WChhpGnSO8cInLgn3LMf1CCdx+d0mx2Eaq7ynQUlDkm0Im6RZWdBAyf2uLDBhHRhxpCtEzi/2QME5FqyJ4mlROKEVnPze1e30lqIcKWF22Mfl3kvee6jF2ygNjfuhaZ2H/glTyGtw2efh1ML3jBgekkAZK9iYJA9bPG4vVpMAYwsUC+bDkqeG5w2mgKQhXYRJ2Ci2H3yquwnw6e+oUSbNrpcR4u+mS0pM1gCn3KyMcalUSlvBpUzykAy/Plam1oN2SJqNopy3bqPW7z8FZMsV9hri5kAOVBGcNXDV2dWBtCB1B4LC/CKnjtIAH3HkBwniAsNXrmA0Jf6pkHNwqpLvYhhor4aDevKRHeYici2y+6aAVMizuMYX+W4WCPWnX4J3wNl7R6h9WvcWdTyDfrLM/NIHb4su/QpO6fKeP2MIaZvj99bJXKwf7lQxkJmLdXTRUiZNh+gGVAK9mR9oep+iRFtVSFm1wUrYYDU96cawFNh5byIDA55F6j2Dz4KXA/L8Xg=
