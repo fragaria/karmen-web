@@ -1,0 +1,249 @@
+$sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
+$sitenav-shrinked-push: gu(2);
+
+.sitenav {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    z-index: 20;
+}
+
+.sitenav__container {
+    max-width: $page-container-max-width;
+    margin: 0 auto;
+}
+
+@include breakpoint(tablet up) {
+    .sitenav.sitenav--shrinked {
+        .sitenav__menu {
+            transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
+            border-bottom: 1px solid map-get($palette, black);
+        }
+
+        .sitenav__brand img {
+            transform: translate3d(0, 2.5rem, 0) scale(0.8);
+        }
+    }
+}
+
+/* Menu container that is visible all the time */
+.sitenav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: getFontFamily($headingtype);
+    font-weight: map-get($headingtype, semi);
+    // necessary for z-index
+    position: relative;
+    // Menu is above the linkset and the linkset slides from the bottom of it
+    z-index: 2;
+    pointer-events: all;
+
+    background: map-get($palette, white);
+    height: map-get($sitenav-menu-height, mobile);
+
+    @include breakpoint(tablet up) {
+        margin-left: gu(-1);
+        margin-right: gu(-1);
+        padding-left: gu();
+        padding-right: gu();
+    }
+
+    @include breakpoint(tablet up) {
+        height: map-get($sitenav-menu-height, tablet);
+    }
+}
+
+
+.sitenav__company {
+    // On mobile, company takes all the remaining space.
+    flex: 1;
+}
+
+.sitenav__brand,
+.sitenav__menutoggle {
+    // On tablet up, all the elements are evenly sized.
+    @include breakpoint(tablet up) {
+        flex: 1;
+    }
+}
+
+// logo image
+.sitenav__brand {
+    height: map-get($sitenav-menu-height, mobile);
+    order: 1;
+    margin-left: gu(0.5);
+
+    img {
+        transform: translate3d(0, .8rem, 0);
+        height: gu(1.666);
+
+        @include breakpoint(tablet up) {
+            height: gu(5.5);
+            margin-bottom: gu(-2);
+        }
+    }
+
+    @include breakpoint(tablet-small up) {
+        margin-left: 0;
+    }
+
+    // logo image scales up on bigger screens
+    @include breakpoint(tablet up) {
+        height: map-get($sitenav-menu-height, tablet);
+        position: relative;
+        padding: 0;
+        order: 2;
+
+        // &:before {
+        //     content: ' ';
+        //     background: map-get($palette, white);
+        //     position: absolute;
+        //     top: 116px;
+        //     height: .55rem;
+        //     width: 100%;
+        //     left: 0;
+        // }
+    }
+}
+
+.sitenav__company {
+    height: map-get($sitenav-menu-height, mobile);
+    line-height: map-get($sitenav-menu-height, mobile);
+    transition: #{$anchor-hover-transition};
+    text-transform: uppercase;
+    text-align: left;
+    order: 2;
+    // Space between logo.
+    margin-left: gu(.5);
+    font-family: #{map-get($headingtype, font-family)};
+
+    @include fontsize(delta);
+
+    @include breakpoint(tablet up) {
+        order: 1;
+        margin-left: 0;
+    }
+
+    &:hover {
+        color: map-get($palette, red);
+    }
+}
+
+.sitenav__menutoggle {
+    height: map-get($sitenav-menu-height, mobile);
+    line-height: map-get($sitenav-menu-height, mobile);
+    margin-right: gu(0.5);
+
+    @include breakpoint(tablet-small up) {
+        margin-right: 0;
+    }
+
+    .hamburger-box {
+        float: right;
+    }
+}
+
+.sitenav--animated .sitenav__menu {
+    transition: transform .15s linear;
+    will-change: transform;
+}
+
+.sitenav--animated .sitenav__brand img {
+    @include breakpoint(tablet up) {
+        transition: transform .15s linear;
+        will-change: translate, scale;
+    }
+}
+
+/* List of menu links */
+.sitenav__linkset {
+    display: flex;
+    width: 100%;
+    padding-top: #{map-get($sitenav-menu-height, mobile) * 0.5};
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+    // Menu is above the linkset and the linkset slides from the bottom of it
+    z-index: 1;
+    height: calc(100vh - #{map-get($sitenav-menu-height, mobile)});
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include breakpoint(tablet up) {
+        padding-top: #{map-get($sitenav-menu-height, tablet) * 0.5};
+        height: calc(100vh - #{map-get($sitenav-menu-height, tablet)});
+        justify-content: flex-start;
+    }
+}
+
+.sitenav--shrinked .sitenav__linkset {
+    @include breakpoint(tablet up) {
+        padding-top: map-get($sitenav-menu-height, tablet);
+        height: calc(100vh - #{$sitenav-menu-height-shrinked - $sitenav-shrinked-push});
+    }
+}
+
+/* Single item within the links */
+.sitenav__linkset-item {
+    font-family: getFontFamily($headingtype);
+    font-weight: map-get($headingtype, semi);
+    letter-spacing: .1rem;
+    padding: 1rem 0;
+    width: 100%;
+
+    // active link is highlighted
+    &--active .sitenav__link,
+    &:hover .sitenav__link,
+    &:active .sitenav__link {
+        color: map-get($palette, red);
+    }
+
+    .sitenav__link {
+        display: block;
+        line-height: 1;
+
+        @include fontsize(gamma);
+    }
+}
+
+
+/* Set up animated props */
+.sitenav__linkset {
+    transform: translate3d(0, -100vh, 0);
+    opacity: 0;
+    background: map-get($palette, white);
+    pointer-events: none;
+    transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
+    will-change: opacity, transform;
+}
+
+/* Styles when menu is enabled */
+.sitenav-wrapper--show {
+    // Unshift linkset
+    .sitenav__linkset {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &.sitenav--shrinked {
+        @include breakpoint(tablet up) {
+            .sitenav__menu {
+                border: none;
+            }
+
+            .sitenav__linkset {
+                transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
+            }
+        }
+    }
+
+    .sitenav__menu {
+        background: map-get($palette, white);
+    }
+}
+
+.sitenav-wrapper--noanim .sitenav__linkset {
+    transition: none;
+}

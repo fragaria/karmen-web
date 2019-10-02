@@ -1,0 +1,37 @@
+@mixin shareboxVariant($icon, $foreground, $background) {
+    background: $background;
+    font-family: 'fragariacz-icons';
+
+    .sharebox__item-body:before {
+        color: $foreground;
+        content: $icon;
+    }
+}
+
+.sharebox__items {
+    display: flex;
+    list-style-type: none;
+}
+
+.sharebox__item {
+    @each $variantName, $variantSettings in $sharebox-variants {
+        &--#{$variantName} {
+            @include shareboxVariant(
+                map-get($variantSettings, icon),
+                map-get($variantSettings, foreground),
+                map-get($variantSettings, background)
+            );
+        }
+    }
+}
+
+.sharebox__item-body {
+    display: block;
+    width: gu(2);
+    height: gu();
+    line-height: gu();
+
+    > span {
+        display: none;
+    }
+}

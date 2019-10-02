@@ -1,0 +1,119 @@
+$full-view-break: 1000px;
+
+.v-career-section .v-career-section--content {
+    @include narrow-content;
+}
+
+// spacing of individual section blocks
+.v-career-section + .v-career-section {
+    margin-top: gu();
+}
+
+.v-career-section {
+    // section headline
+    .v-career-section__headline {
+        text-align: center;
+
+        i {
+            font-style: normal;
+            color: map-get($palette, red);
+        }
+
+        @include baseline(gamma, $headingtype, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 2, $breakpoint: tablet up);
+    }
+}
+
+// grid for facts about the company
+.v-career-facts-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 0 gu();
+    padding-top: gu();
+
+    @include breakpoint(tablet up) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.v-career-facts-grid__icon {
+    display: none;
+
+    @include breakpoint(tablet up) {
+        display: block;
+    }
+
+}
+
+.v-career-facts-grid__item {
+    @include breakpoint(tablet up) {
+        text-align: center;
+    }
+}
+
+.v-career-facts-grid .v-career-facts-grid__title {
+    @include baseline(epsilon, $headingtype);
+}
+
+.v-career-facts-grid .v-career-facts-grid__icon {
+    margin-top: gu();
+    font-size: gu();
+
+    &:before {
+        color: map-get($palette, red) !important;
+    }
+}
+
+
+
+
+// grid for technologies used in the company
+.v-career-tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: gu() gu();
+
+    padding-top: gu();
+    margin-bottom: gu(3);
+}
+
+.v-career-tech-grid__item {
+    text-align: center;
+}
+
+.v-career-tech-grid__image {
+    display: block;
+    height: gu(2);
+    width: gu(2);
+    margin: auto;
+}
+
+.v-career-tech-grid .v-career-tech-grid__title {
+    @include baseline(zeta, $headingtype);
+}
+
+// special section that has emphasized background
+.career-teaser {
+    @include narrow-content;
+
+    padding: gu(2);
+
+    background-color: map-get($palette, red);
+    color: map-get($palette, white);
+}
+
+// align 'contact us' button
+.career-teaser__contactbutton {
+    padding-top: gu();
+
+    .button:hover {
+        background-color: map-get($palette, white);
+        color: map-get($palette, red);
+    }
+}
+
+.career-teaser .career-teaser__headline {
+    @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 1.53, $below: 0);
+}

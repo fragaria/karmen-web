@@ -1,0 +1,240 @@
+// Colors
+$palette: (
+    black: #000,
+    white: #fff,
+    red: #ea272e,
+    dark-red: #9f1c21,
+    olive-green: #8fa13b,
+    gray-light: #f5f5f5,
+    gray-semilight: #ddd,
+    gray-medium: #ccc,
+    gray-dark: #888,
+    gray-very-dark: #333,
+);
+
+$brands: (
+    facebook: (
+        main:#3b5998,
+        alt: #fff,
+        icon: $icon--facebook,
+    ),
+    twitter: (
+        main: #1da1f2,
+        alt: #fff,
+        icon: $icon--twitter,
+    ),
+    linkedin: (
+        main: #0077b5,
+        alt: #fff,
+        icon: $icon--linkedin,
+    ),
+    github: (
+        main: #333,
+        alt: #fff,
+        icon: $icon--github,
+    ),
+);
+
+@function getBrandInfo($brand, $prop) {
+    @return map-get(map-get($brands, $brand), $prop);
+}
+
+$grid-unit: 1.5rem;
+
+$primary-color: map-get($palette, black);
+
+$body-background: map-get($palette, white);
+$text-color: $primary-color;
+
+$anchor-color: $primary-color;
+$anchor-hover-color: map-get($palette, red);
+$anchor-hover-transition: 'color .1s ease-in-out';
+
+$border-color: $primary-color;
+
+$hr-color: $primary-color;
+
+$caption-color: map-get($palette, black);
+
+$code-inline-background-color: map-get($palette, gray-light);
+$code-block-background-color: map-get($palette, gray-light);
+
+$selection-color: map-get($palette, red);
+
+$blog-listing-splitter-border-color: map-get($palette, black);
+
+$page-container-max-width: 1410px;
+
+// Buttons
+
+$button-variants: (
+    primary: (
+        foreground: map-get($palette, white),
+        background: map-get($palette, black),
+    )
+);
+
+// Sharebox
+
+$sharebox-variants: (
+    facebook: (
+        foreground: getBrandInfo(facebook, alt),
+        background:getBrandInfo(facebook, main),
+        icon: getBrandInfo(facebook, icon),
+    ),
+    twitter: (
+        foreground: getBrandInfo(twitter, alt),
+        background:getBrandInfo(twitter, main),
+        icon: getBrandInfo(twitter, icon),
+    ),
+);
+
+// Sitenav settings
+
+$sitenav-menu-height: (
+    mobile: 3 * $grid-unit,
+    tablet: 5 * $grid-unit,
+);
+$sitenav-menu-height-shrinked: 3 * $grid-unit;
+
+
+// Baseline settings
+
+// Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
+// Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
+$breakpoints: (
+    zero:           0px,            // 0px       Mobile first
+    mobile:         640px,          // 640px   ~ Small tablet up
+    tablet-small:   800px,          // 800px   ~ Large tablet up
+    tablet:         1024px,         // 1024px  ~ Desktop up
+    desktop:        1600px          // 1600px  ~ Large desktop up
+);
+
+// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+// ! Make sure to have as many sizes as breakpoints above.
+$rootsizes: (
+    zero:           18px,
+    mobile:         18px,
+    tablet-small:   18px,
+    tablet:         18px,
+    desktop:        18px,
+);
+
+// This defines, how much shift is added to baselined headings that
+// should support anchored links like /blog/2018/03/28/blockchain-can-do/#not-that-hard.
+// Since there is a sitenav that sticks from the top of the page, we need
+// to shift the window by a little bit to compensate.
+$anchor-baseline-shifts: (
+    zero:           map-get($sitenav-menu-height, mobile),
+    mobile:         map-get($sitenav-menu-height, mobile),
+    tablet-small:   map-get($sitenav-menu-height, mobile),
+    tablet:         $sitenav-menu-height-shrinked,
+    desktop:        $sitenav-menu-height-shrinked,
+);
+
+$bodytype: (
+    font-family: "'Andulka Text Pro', Georgia, Palatino, serif",
+    regular: normal,
+    bold: 600,
+    italic: italic,
+    cap-height: 0.64
+);
+
+$headingtype: (
+    font-family: "'Trivia Grotesk N2', Helvetica, Arial, sans-serif",
+    regular: bold,
+    semi: bold,
+    bold: bold,
+    cap-height: 0.67
+);
+
+$monospacetype: (
+    font-family: "'Source Code Pro', monospace",
+    regular: 400,
+    cap-height: 0.68
+);
+
+// Setting responsive modular-scales. Use appropriate scales for viewport sizes.
+// Major Third http://www.modularscale.com/
+$modular-scale: (
+    zero: (
+        alpha:   48.0px,
+        beta:    36.0px,
+        gamma:   30.0px,
+        delta:   24.0px,
+        epsilon: 24.0px,
+        zeta:    18.0px,
+        eta:     17.0px,
+        theta:   12.8px,
+        iota:    11.5px
+    ),
+    mobile: (
+        alpha:   64.0px,
+        beta:    36.0px,
+        gamma:   30.0px,
+        delta:   24.0px,
+        epsilon: 24.0px,
+        zeta:    18.0px,
+        eta:     17.0px,
+        theta:   12.8px,
+        iota:    11.5px
+    ),
+    tablet-small: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    ),
+    tablet: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    ),
+    desktop: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    )
+);
+
+// Text that uses monospace font can end up mixed in body font, hence we
+// need to fix the font size as it has different capsize.
+// @note: make sure to verify this against body font size and root size for the
+// breakpoint.
+$inline-monospace-sizes: (
+    zero: 18px,
+    mobile: 18px,
+    tablet-small: 18px,
+    tablet: 18px,
+    desktop: 18px,
+);
+
+// Hamburger settings
+// @see: https://jonsuh.com/hamburgers/
+
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: $grid-unit;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: $primary-color;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
+$hamburger-types: (collapse);

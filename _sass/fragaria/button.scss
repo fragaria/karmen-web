@@ -1,0 +1,44 @@
+@mixin buttonStyle($foreground, $background) {
+    color: $foreground;
+    background-color: $background;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+    font-family: getFontFamily($headingtype);
+    font-weight: bold;
+    cursor: pointer;
+
+    @include fontsize(zeta);
+
+    &:hover,
+    &:focus {
+        background: map-get($palette, red);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button,
+a.button {
+    display: inline-block;
+    padding: 0 gu();
+    line-height: gu(2);
+    height: gu(2);
+    border: 0;
+
+    @include buttonStyle(
+        map-get(map-get($button-variants, primary), foreground),
+        map-get(map-get($button-variants, primary), background)
+    );
+}
+
+
+@each $variantName, $variantSettings in $button-variants {
+    .button.button--#{$variantName} {
+        @include buttonStyle(
+            map-get($variantSettings, foreground),
+            map-get($variantSettings, background)
+        );
+    }
+}

@@ -1,0 +1,252 @@
+// Number of breakpoints.
+$breakpoints-limit: length($breakpoints);
+$breakpoint-keys: map-keys($breakpoints);
+
+// List of rootsizes, breakpoints.
+$sizes: map-values($rootsizes);
+$points: map-values($breakpoints);
+
+@function gu($multiplier: 1) {
+    @return $grid-unit * $multiplier;
+}
+
+
+@function calc-rootsize($breakpoint-idx) {
+    // 16 is default font size for most browsers.
+    @return strip-unit(nth($sizes, $breakpoint-idx)) / 16;
+}
+
+
+// Root font-size in %, outputted in correct breakpoints.
+@mixin rootsize {
+    font-size: calc-rootsize(1) * 100%;
+
+    // Loop through breakpoints.
+    @for $i from 2 through $breakpoints-limit {
+        @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
+            font-size: calc-rootsize($i) * 100%;
+        }
+    }
+}
+
+// Root font-size in %, outputted in correct breakpoints.
+@mixin baseline-grid {
+    background-image: -webkit-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -moz-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -o-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+    background-repeat: repeat-y;
+
+    background-size: 100% $grid-unit;
+
+    // Loop through breakpoints.
+    @for $i from 2 through $breakpoints-limit {
+        @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
+            background-size: 100% $grid-unit;
+        }
+    }
+}
+
+
+/**
+ * Border implementation which doesn't break baseline. It's done using position: absolute for :before.
+ */
+@mixin baseline-border($color: $border-color, $width: 1px, $orientation: 'top', $offset: 0, $size: 100%) {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: $size;
+        position: absolute;
+
+        @if ($orientation == 'top') {
+            top: $offset;
+            border-top: $width $color solid;
+        }
+
+        @if ($orientation == 'bottom') {
+            bottom: $offset;
+            border-bottom: $width $color solid;
+        }
+    }
+}
+
+/**
+ * Cancel out baseline-aware border.
+ */
+@mixin baseline-border-cancel($orientation: 'top') {
+    &:before {
+        @if ($orientation == 'top') {
+            border-top: 0;
+        }
+
+        @if ($orientation == 'bottom') {
+            border-bottom: 0;
+        }
+    }
+}
+
+/**
+ * Outputs mixin content so that it's wrapped by media query in between
+ * given breakpoints (including the first and up-to second).
+ */
+@mixin span-breakpoints($first: null, $second: null) {
+    $str: "";
+
+    @if $first {
+        $ratsize: map-get($breakpoints, $first) / map-get($rootsizes, $first);
+        $width: strip-unit($ratsize) * 1em;
+
+        @if $width > 0em {
+            $str: $str + "(min-width: #{$width})"
+        }
+    }
+
+    @if $second {
+        @if $str != "" {
+            $str: $str + " and ";
+        }
+
+        $rootsize: map-get($rootsizes, $second);
+        $ratsize: map-get($breakpoints, $second) / $rootsize;
+        $width: strip-unit($ratsize) * 1em - 0.0001;
+        $str: $str + "(max-width: #{$width})"
+    }
+
+    @if $str == "" {
+        @content;
+    }
+    @else {
+        @media screen and #{$str} {
+            @content;
+        }
+    }
+}
+
+
+/**
+ * Output font family and baseline alignment for given breakpoint and font settings.
+ */
+@mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below, $anchor) {
+    @if not map-has-key($breakpoints, $breakpoint) {
+        @warn "Unknown breakpoint class: #{$breakpoint}"
+    }
+
+    $cap-height: map-get($font, cap-height);
+    $scale: map-get($modular-scale, $breakpoint);
+    $size: map-get($scale, $fontsize);
+    $rootsize: map-get($rootsizes, $breakpoint);
+
+    $fontsize-rems: strip-unit($size / $rootsize);
+    $capheight-rems: $fontsize-rems * $cap-height;
+    $lh-rems: strip-unit(gu($lineheight));
+    $push: ($lh-rems - $capheight-rems) / 2;
+    $baseline-shift: strip-unit(gu($above)) + $push;
+    $baseline-push: strip-unit(gu($below)) - $push;
+
+    font-family: #{map-get($font, font-family)};
+    font-size: #{$fontsize-rems}rem;
+    margin-bottom: #{$baseline-push}rem;
+    line-height: #{$lh-rems}rem;
+
+    @if $anchor {
+        $anchor-shift: strip-unit(map-get($anchor-baseline-shifts, $breakpoint));
+        padding-top: #{$baseline-shift + $anchor-shift}rem;
+        margin-top: #{$anchor-shift * -1}rem;
+    } @else {
+        padding-top: #{$baseline-shift}rem;
+    }
+}
+
+/**
+ * Output font family and baseline alignment for multiple media queries using breakpoint expression.
+ */
+@mixin baseline($fontsize, $font, $lineheight: 1, $above: 0, $below: 0, $breakpoint: null, $anchor: false) {
+    @if not $breakpoint {
+        $breakpoint: zero up;
+    }
+
+    $bp-val: nth($breakpoint, 1);
+    $dir: if(length($breakpoint) > 1, nth($breakpoint, 2), only);
+
+    @if $dir == only {
+        @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
+            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below, $anchor);
+        }
+    } @else {
+        $bps: ();
+        $bp-idx: index($breakpoint-keys, $bp-val);
+
+
+        @if $dir == up {
+            $bps: list-slice($breakpoint-keys, $bp-idx);
+        } @else if $dir == down {
+            $bps: list-slice($breakpoint-keys, 1, $bp-idx);
+        } @else {
+            @error "#{$dir} is not a valid direction value, use one of: up, down, only";
+        }
+
+        @each $bp in $bps {
+            @include span-breakpoints(
+                if(index($breakpoints, $bp) == 1, null, $bp),
+                map-next-key($breakpoints, $bp)
+            ) {
+                @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below, $anchor);
+            }
+        }
+    }
+}
+
+/**
+ * Output fontsize for given breakpoint.
+ */
+@mixin fontsize-in-breakpoint($breakpoint, $fontsize) {
+    @if not map-has-key($breakpoints, $breakpoint) {
+        @warn "Unknown breakpoint class: #{$breakpoint}"
+    }
+
+    $scale: map-get($modular-scale, $breakpoint);
+    $size: map-get($scale, $fontsize);
+    $rootsize: map-get($rootsizes, $breakpoint);
+
+    font-size: #{$size / $rootsize}rem;
+}
+
+/**
+ * Output fontsize for multiple media queries using breakpoint expression.
+ */
+@mixin fontsize($fontsize, $breakpoint: null) {
+    @if not $breakpoint {
+        $breakpoint: zero up;
+    }
+
+    $bp-val: nth($breakpoint, 1);
+    $dir: if(length($breakpoint) > 1, nth($breakpoint, 2), only);
+
+    @if $dir == only {
+        @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
+            @include fontsize-in-breakpoint($bp-val, $fontsize);
+        }
+    } @else {
+        $bps: ();
+        $bp-idx: index($breakpoint-keys, $bp-val);
+
+        @if $dir == up {
+            $bps: list-slice($breakpoint-keys, $bp-idx);
+        } @else if $dir == down {
+            $bps: list-slice($breakpoint-keys, 1, $bp-idx);
+        } @else {
+            @error "#{$dir} is not a valid direction value, use one of: up, down, only";
+        }
+
+        @each $bp in $bps {
+            @include span-breakpoints(
+                if(index($breakpoints, $bp) == 1, null, $bp),
+                map-next-key($breakpoints, $bp)
+            ) {
+                @include fontsize-in-breakpoint($bp, $fontsize);
+            }
+        }
+    }
+}

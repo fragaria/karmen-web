@@ -1,0 +1,75 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: gu();
+    text-align: center;
+
+    @include breakpoint(tablet up) {
+        padding-top: gu(5);
+        padding-bottom: gu(3);
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
+
+    &--nobottom {
+        padding-bottom: 0;
+    }
+
+    // need to be scoped to take precendence over .typest
+    .hero__headline {
+        margin-left: auto;
+        margin-right: auto;
+
+        i {
+            font-style: normal;
+            color: map-get($palette, red);
+        }
+
+        @include baseline(alpha, $headingtype, $lineheight: 2, $below: 2, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 2.75, $below: 2, $breakpoint: mobile up);
+    }
+
+    .hero__sub {
+        @include breakpoint(mobile up) {
+            max-width: rem-calc(map-get($breakpoints, mobile));
+        }
+    }
+
+    .hero__headline + .hero__sub,
+    .hero__sub + .hero__sub {
+        @include baseline(zeta, $bodytype, $above: 2);
+    }
+
+    .hero__paginator {
+        font-weight: bold;
+        min-width: gu(2);
+        font-family: getFontFamily($headingtype);
+        font-size: 300%;
+        transition: #{$anchor-hover-transition};
+
+        @include breakpoint(tablet-small up) {
+            font-size: 500%;
+        }
+
+        &:hover {
+            color: map-get($palette, red);
+        }
+
+        &:first-of-type {
+            text-align: left;
+        }
+
+        &:nth-of-type(2) {
+            text-align: right;
+        }
+
+        &--blank {
+            visibility: hidden;
+        }
+    }
+}

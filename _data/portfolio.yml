@@ -1,0 +1,16 @@
+- title: 3D Aréna, z. s.
+  challenge: Open-source multiple 3D printer controller
+  desc: >
+    3D Aréna, z. s. is a non-profit organization that makes <a href="https://3darena.cz/produkty/kryal-cube/" class="anchor anchor--emphasized" target="_blank" rel="noopener">KRYAL Cube</a> printers. They aim to <a href="https://www.lupa.cz/clanky/kryal-cube-ceska-tiskarna-ktera-vznikla-ze-setkavani-fanousku-3d-tisku/" class="anchor anchor--emphasized" target="_blank" rel="noopener">popularize</a> aditive production using 3D printing.
+  img: portfolio/3darena.png
+  website:
+    href: https://3darena.cz
+    caption: 3darena.cz
+- title: IKEM
+  challenge: Open-source multiple 3D printer controller
+  desc: >
+    We’ve partnered with IKEM to help us try out Karmen in real-world conditions. IKEM focuses on <a href="https://www.prusa3d.com/prusa-stories-ikem/" class="anchor anchor--emphasized" target="_blank" rel="noopener">printing</a> precise models of organs to be transplanted.
+  img: portfolio/ikem.png
+  website:
+    href: https://www.ikem.cz
+    caption: ikem.cz

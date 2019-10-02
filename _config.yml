@@ -1,0 +1,124 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Karmen
+email: karmen@fragaria.cz
+description: >
+    Open-source solution for multi-printer management. It allows one to control a bunch of printers remotely, features an efficient management of print queues and offers smooth and user-friendly web interface.
+keywords: software, software development, web apps, vývoj software, webové aplikace, python, javascript, typescript, java, angular, vue, elasticsearch, html, css
+url: "http://localhost:4000" # the base hostname & protocol for your site
+baseurl: "/"
+logo: "/assets/logo.svg" # Site logo
+# favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+# Build settings
+markdown: kramdown
+
+plugins:
+    - jekyll-sitemap
+    - jekyll-feed
+    - jekyll-paginate
+    - jekyll-archives
+    - jekyll-redirect-from
+
+exclude:
+    - Dockerfile
+    - docker-compose.yml
+    - readme.md
+    - Gemfile
+    - Gemfile.lock
+    - __design
+    - __tools
+    - assets/favicons/README.md
+    - .sass-cache
+    - .travis
+    - README.md
+
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+    -
+        scope:
+            path: _posts
+        values:
+            layout: post
+            lang: en
+            tags: []
+
+# --------------------------- plugins ------------------------------------------
+
+# paginate_path: "/blog/archive/:num/"
+# paginate: 12
+
+# jekyll-archives:
+#     # Archives disabled for devel in order to speed things up
+#     # Run jekyll with archive support to try it.
+#     # bundle exec jekyll serve --config '_config.yml,_config.witharchives.yml'
+#     enabled:
+#         #- year
+#         #- month
+#         #- tags
+#     layout: scoped-archive
+#     permalinks:
+#         year: /blog/archive/year/:year/
+#         month: /blog/archive/month/:year-:month/
+#         #tag: /blog/archive/tag/:name/
+
+cloudinary:
+    cloud_name: fragaria
+    cloud_path_prefix: fragaria.cz/
+
+jekyll_tidy:
+    exclude:
+        - sw.js
+        - assets/js/*
+    compress_html: true
+    ignore_env: development
+
+# ---------------------- custom configuration ----------------------------------
+
+ga:
+    enabled: false
+
+service_worker:
+    # Only enabled in production, @see: _config.prod.yml
+    enabled: false
+    cache_version: 5
+
+
+company:
+    website_title: karmen.fragaria.cz
+    official_name: Fragaria s.r.o.
+    phone: +420 222 581 311
+    contact_email: karmen@fragaria.cz
+    # contact_email: xaralis93@gmail.com
+    ico: 48590151
+    dic: CZ48590151
+    account_nr: 2700620429/2010
+    listed_at: >
+        Spisová značka: C 18340 vedená u Městského soudu v Praze
+    address:
+        residence:
+            line1: Ječná 507/6
+            line2: 120 00 Praha 2
+            line3: Czech Republic
+            map_link: https://www.google.com/maps/place/Fragaria+s.r.o./@50.0754397,14.420427,17z/data=!4m13!1m7!3m6!1s0x470b94f4a0a239d7:0xb2eea226236a6892!2zSmXEjW7DoSA1MDcvNiwgMTIwIDAwIE5vdsOpIE3Em3N0bw!3b1!8m2!3d50.0754363!4d14.4226157!3m4!1s0x470b94f4a0a6806f:0x4cd2eac776b26943!8m2!3d50.07548!4d14.42264
+        billing:
+            line1: Pampelišková 2013/8
+            line2: 106 00 Praha 10
+            line3: Czech Republic
+    social:
+        twitter: Karmen3D
+        github: fragaria/karmen
+        youtube: UC9kcYa3r0x4MLR47i1flnFw
+        readthedocs: karmen
+

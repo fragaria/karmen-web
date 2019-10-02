@@ -1,0 +1,8 @@
+
+.anchor--default {
+    @include anchor-style();
+}
+
+.anchor--emphasized {
+    @include anchor-style(true);
+}

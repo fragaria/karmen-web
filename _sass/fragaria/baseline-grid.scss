@@ -1,0 +1,4 @@
+// shows baseline grid on the page
+.baseline-grid.baseline-grid--visible {
+    @include baseline-grid();
+}

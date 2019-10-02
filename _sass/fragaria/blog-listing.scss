@@ -1,0 +1,102 @@
+.blog-listing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(gu(5), auto);
+
+    /* 3 columns on a row for tablet and up */
+    @include breakpoint(tablet up) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(gu(5), auto);
+    }
+}
+
+.blog-listing__post {
+    display: flex;
+
+    & {
+        padding: gu() 0 gu(2);
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+
+    &:first-child,
+    & + & {
+        @include breakpoint(tablet-small down) {
+            @include baseline-border($color: $blog-listing-splitter-border-color, $orientation: 'top');
+        }
+    }
+
+
+    /* create vertical rules between columns on tablet and up */
+    @include breakpoint(tablet up) {
+        & {
+            padding: gu() 0;
+        }
+
+        &:first-child {
+            padding: 0 0 gu();
+        }
+
+        &:last-child {
+            padding: gu() 0;
+        }
+
+        &,
+        &:first-child,
+        &:last-child {
+            padding: 0;
+        }
+
+        // anything but first posting in the row should have left padding
+        &:not(:nth-child(3n + 4)):not(:first-child) .blog-listing__post-inner {
+            padding-left: gu();
+        }
+
+        // anything but last posting in the row should have right padding
+        &:not(:nth-child(3n + 3)) .blog-listing__post-inner {
+            padding-right: gu();
+        }
+
+        // middle posting includes borders around it
+        &:nth-child(3n + 2) .blog-listing__post-inner {
+            border-left: 1px $blog-listing-splitter-border-color solid;
+            border-right: 1px $blog-listing-splitter-border-color solid;
+        }
+    }
+}
+
+.blog-listing__post--tablet-margin {
+    @include breakpoint(tablet up) {
+        margin: gu() 0;
+    }
+}
+
+// Cancels out padding of the last blog-listing__post
+.blog-listing--nolastpad .blog-listing__post:last-child {
+    padding-bottom: 0;
+}
+
+// Cancels out horizontal divider of the first blog-listing__post
+.blog-listing--nofirstdivider .blog-listing__post:first-child {
+    @include baseline-border-cancel($orientation: 'top');
+}
+
+// this is a blog-listing that includes horizontal rule divider on tablet and larger
+.blog-listing--rowdivider {
+    /* create horizontal rules between rows on tablet and up */
+    @include breakpoint(tablet up) {
+        .blog-listing__post:nth-child(1n + 4) {
+            margin-top: gu();
+            padding-top: gu();
+            @include baseline-border($color: $blog-listing-splitter-border-color, $width:2px, $orientation: 'top');
+        }
+
+        .blog-listing__post-inner {
+            margin-top: gu();
+            margin-bottom: gu();
+        }
+    }
+}

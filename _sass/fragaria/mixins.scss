@@ -1,0 +1,10 @@
+@import
+    "mixins/utils",
+    "mixins/baseline",
+    "mixins/breakpoint",
+    "mixins/code-highlight",
+    "mixins/typography";
+
+@function getFontFamily($type) {
+    @return unquote(map-get($type, font-family));
+}

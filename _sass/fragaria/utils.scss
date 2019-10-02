@@ -1,0 +1,33 @@
+.hidden {
+    display: none;
+}
+
+.typeset .typeset__anchor--nounderline,
+.typeset .typeset__anchor--nounderline:hover {
+    background-image: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.u-margin--top1 {
+    margin-top: gu();
+}
+
+.u-margin--top2 {
+    margin-top: gu(2);
+}
+
+.u-margin--bottom1 {
+    margin-bottom: gu();
+}
+
+.u-margin--bottom2 {
+    margin-bottom: gu(2);
+}
+
+.hypenize {
+    // Will try to add word-breaking hypens according to post language (which defaults to EN).
+    hyphens: auto;
+}

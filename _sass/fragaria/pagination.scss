@@ -1,0 +1,36 @@
+.pagination {
+    @include baseline(gamma, $headingtype);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+
+
+    .pagination__anchor {
+        font-family: getFontFamily($headingtype);
+        font-weight: bold;
+        transition: #{$anchor-hover-transition};
+
+        &:hover {
+            color: map-get($palette, red);
+        }
+
+    }
+
+    @include breakpoint(tablet up) {
+        flex-direction: row;
+    }
+}
+
+.pagination__next {
+    @include breakpoint(tablet up) {
+        margin-left: auto;
+    }
+}
+
+.pagination__previous {
+    @include breakpoint(tablet up) {
+        margin-right: auto;
+    }
+}

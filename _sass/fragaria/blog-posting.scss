@@ -1,0 +1,182 @@
+.blog-posting {
+    width: 100%;
+    display: flex;
+
+    &--horizontal .blog-posting__body {
+        flex-direction: column;
+        padding-bottom: gu(2);
+
+        .blog-posting__media {
+            margin: gu() 0 0;
+            filter: grayscale(0);
+
+            @include breakpoint(tablet up) {
+                margin-left: gu();
+                margin-top: 0;
+                min-height: gu(12);
+            }
+        }
+
+        .blog-posting__content,
+        .blog-posting__media {
+            flex: 1;
+        }
+
+        @include breakpoint(tablet up) {
+            flex-direction: row;
+
+        }
+    }
+
+    &--featured .blog-posting__body {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin-bottom: gu();
+        color: map-get($palette, white);
+
+        // cancel color transition for the featured
+        &:hover .blog-posting__headline,
+        &:active .blog-posting__headline,
+        &:focus .blog-posting__headline {
+            color: inherit;
+        }
+
+        .blog-posting__media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            margin: 0;
+        }
+
+        .blog-posting__media-fill {
+            filter: grayscale(0%);
+        }
+
+        .blog-posting__content {
+            position: relative;
+            padding: gu(2) gu();
+            z-index: 1;
+
+
+            @include breakpoint(tablet up) {
+                padding: gu(3) gu() gu(2) gu();
+            }
+        }
+
+        .blog-posting__headline {
+            text-decoration: none;
+
+            @include baseline(alpha, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet-small down);
+            @include baseline(alpha, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet up);
+        }
+
+        .blog-posting__meta {
+            display: none;
+        }
+
+        .blog-posting__excerpt {
+            max-width: breakpoint-size(mobile);
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+
+            @include baseline(eta, $bodytype, $below: 1, $breakpoint: tablet-small down);
+            @include baseline(zeta, $bodytype, $below: 1, $breakpoint: tablet up);
+        }
+
+        .blog-posting__cta-button:hover {
+            background: $body-background;
+            color: $text-color;
+        }
+    }
+}
+
+
+.blog-posting__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .blog-posting__headline {
+        transition: #{$anchor-hover-transition};
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        // ... headline gets emphasis
+        .blog-posting__headline {
+            color: $anchor-hover-color;
+        }
+
+        @include breakpoint(tablet up) {
+            .blog-posting__media-fill {
+                transform: scale(1.04);
+                filter: grayscale(0%);
+            }
+        }
+
+    }
+}
+
+.blog-posting__cta {
+    padding-top: gu();
+}
+
+// this has to be scoped so it beats specificity of .typeset
+.blog-posting {
+    .blog-posting__excerpt {
+        hyphens: auto;
+
+        @include baseline(eta, $bodytype);
+    }
+
+    .blog-posting__meta {
+        @include baseline(eta, $bodytype, $below: 1);
+    }
+
+    .blog-posting__headline {
+        font-family: getFontFamily($headingtype);
+        text-decoration: none;
+
+        @include baseline(gamma, $headingtype, $lineheight: 1.53, $below: 1);
+    }
+}
+
+.blog-posting__author,
+.blog-posting__pubdate {
+    font-style: italic;
+}
+
+.blog-posting__media {
+    width: 100%;
+    flex: 1;
+    min-height: gu(4);
+    margin-top: gu();
+    overflow: hidden;
+}
+
+.blog-posting__media-fill {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include breakpoint(tablet up) {
+        background-size: initial;
+        transition-property: filter, transform;
+        transition-duration: .8s;
+        transition-timing-function: cubic-bezier(.2,1,.2,1);
+        transform: scale(1);
+        filter: grayscale(100%);
+    }
+}
+
+.blog-posting__image {
+    display: none;
+}

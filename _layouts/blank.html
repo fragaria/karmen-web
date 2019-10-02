@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% include_cached sitenav.html %}
+
+<div class="page-container__inner sitenav-wrapper">
+    <div class="sitenav-wrapper__push">
+        {{ content }}
+        {% include_cached footer.html %}
+    </div>
+</div>

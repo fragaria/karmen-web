@@ -1,0 +1,35 @@
+.v-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background: map-get($palette, red);
+    color: map-get($palette, white);
+    padding: gu();
+
+    .button {
+        &:hover {
+            background: map-get($palette, white);
+            color: map-get($palette, black);
+        }
+    }
+}
+
+.v-error .v-error__inner {
+    h1 {
+        @include baseline(alpha, $headingtype, $lineheight: 2.3, $below: 2, $breakpoint: mobile down);
+        @include baseline(beta, $headingtype, $lineheight: 3, $below: 2, $breakpoint: tablet-small up);
+    }
+
+
+    h3 {
+        @include baseline(delta, $headingtype, $lineheight: 2.3, $below: 4);
+    }
+
+    img {
+        height: gu(3);
+
+        @include baseline(delta, $headingtype, $lineheight: 0, $below: 2)
+    }
+}

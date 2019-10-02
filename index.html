@@ -1,0 +1,119 @@
+---
+layout: blank
+---
+
+<div class="content-block typeset v-home" itemscope itemtype="http://schema.org/LocalBusiness">
+    <meta itemprop="name" content="{{ site.company.official_name }}">
+    <meta itemprop="openingHours" content="Mo-Fr 10:00-17:00">
+    <meta itemprop="hasMap" content="{{ site.company.address.residence.map_link }}">
+    <meta itemprop="logo" content="{{ 'assets/img/strawberry.png' | absolute_url }}">
+    <meta itemprop="url" content="{{ '/' | absolute_url }}">
+    {% include_cached seo/company-image.html %}
+    {% if site.company.social.twitter %}
+        <meta itemprop="sameAs" content="https://twitter.com/{{ site.company.social.twitter }}">
+    {% endif %}
+    {% if site.company.social.linkedin %}
+        <meta itemprop="sameAs" content="https://linkedin.com/company/{{ site.company.social.linkedin }}">
+    {% endif %}
+    {% if site.company.social.github %}
+        <meta itemprop="sameAs" content="https://github.com/{{ site.company.social.github }}">
+    {% endif %}
+    {% if site.company.social.github %}
+        <meta itemprop="sameAs" content="https://stackshare.io/{{ site.company.social.stackshare }}">
+    {% endif %}
+
+    <section class="hero hero--vertical" role="banner">
+        <h1 class="hero__headline">Open-source multiple 3D printer controller</h1>
+        <p class="hero__sub">We’ve fallen in love with 3D print! And since we’re a developer company, we’ve decided to contribute to it by kicking-off an open-source solution for multi-printer management. It allows one to control a bunch of printers remotely, features an efficient management of print queues and offers smooth and user-friendly web interface.</p>
+    </section>
+    <section class="v-home__portfolio">
+        <h1 class="splitting-headline anchor-shift" id="projects">
+            <span class="splitting-headline__fill">Projects</span>
+        </h1>
+
+        {% include portfolio-strip.html %}
+    </section>
+
+    <section class="v-home__company">
+        <h1 class="splitting-headline anchor-shift" id="get-in-touch">
+            <span class="splitting-headline__fill">Get in touch</span>
+        </h1>
+
+        <meta itemprop="email" content="{{ site.company.email }}">
+        <meta itemprop="telephone" content="{{ site.company.phone }}">
+
+        <div class="v-home__company-content">
+            <article class="contact v-home__company-about">
+                <p class="contact__about">Based in <i>Prague, Czech Republic</i>, we love working with international teams too. Our people love communicating; we are proactive and have no issues speaking English the whole day (if required).</p>
+            </article>
+
+            <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
+                <h1 class="beta">Residence</h1>
+                <p class="contact__line">{{ site.company.official_name }}</p>
+                <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
+                <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
+                <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
+                <p class="contact__line u-margin--top1" itemprop="telephone">
+                    <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
+                </p>
+
+                <p class="contact__line" itemprop="email">
+                    <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
+                </p>
+
+                <p class="contact__line">
+                    <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
+                </p>
+
+
+            </article>
+
+            <article class="contact v-home__company-billing">
+                <h1 class="beta">Billing</h1>
+                <p class="contact__line">{{ site.company.official_name }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line1 }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line2 }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line3 }}</p>
+                <p class="contact__line u-margin--top1">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
+                <p class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></p>
+                <p class="contact__line">Account nr.: {{ site.company.account_nr }}</p>
+            </article>
+
+            <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <div class="form__line">
+                    <label class="form-label" for="git-subject">I would like to</label>
+                    <div class="form-control-wrapper form-control-wrapper--select">
+                        <select class="form-control" name="_subject" id="git-subject" required>
+                            <option value="New enquiry">Ask a question</option>
+                            <option value="Work interest">Work with you</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form__line">
+                    <label class="form-label" for="git-name">Full name</label>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="text" name="name" id="git-name" required>
+                    </div>
+                </div>
+                <div class="form__line">
+                    <label class="form-label" for="git-email">Email</label>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="email" name="_replyto" id="git-email"  required>
+                    </div>
+                </div>
+                <div class="form__line">
+                    <label class="form-label" for="git-message">What is your enquiry?</label>
+                    <div class="form-control-wrapper">
+                        <textarea class="form-control" name="message" id="git-message"  required></textarea>
+                    </div>
+                </div>
+                <div class="form__submit">
+                    <input type="submit" class="button" value="Send">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

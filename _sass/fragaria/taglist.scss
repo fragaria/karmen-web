@@ -1,0 +1,21 @@
+.taglist {
+    text-align: center;
+
+    @include baseline(eta, $bodytype, $below: 1);
+    @include breakpoint(tablet up) {
+        text-align: left;
+    }
+
+    &--leftbound {
+        text-align: left;
+    }
+}
+
+.taglist__tag {
+    display: inline-block;
+    margin-right: gu(0.5);
+
+    &:last-child {
+        margin: 0;
+    }
+}

@@ -1,0 +1,31 @@
+.splitting-headline {
+    position: relative;
+    padding-bottom: gu(2);
+    text-align: center;
+    text-transform: uppercase;
+
+    // Shall fix https://github.com/fragaria/website/issues/10
+    // Content above the .splitting-headline is hidden beneath the margin of .splitting-headline
+    z-index: -1;
+
+    @include breakpoint(tablet up) {
+        padding-bottom: gu(3);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        // TODO; @note: this has to match half the font size of the font used for the headline
+        margin-top: gu();
+        left: 0;
+        height: 3px;
+        background: $hr-color;
+        z-index: -1;
+    }
+}
+
+.splitting-headline__fill {
+    background: map-get($palette, white);
+    padding: gu();
+}

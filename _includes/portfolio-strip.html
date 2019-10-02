@@ -1,0 +1,34 @@
+<div id="js-portfolio-strip" class="portfolio-strip js-portfolio-strip {% if site.data.portfolio.size > 4 %}portfolio-strip--collapsed{% endif %}">
+    <div class="portfolio-strip__items">
+        {% for project in site.data.portfolio %}
+            <article class="portfolio-project js-portfolio-strip__item {% if forloop.index > 4 %}portfolio-project--hidden{% endif %}" itemtype="https://schema.org/SoftwareApplication" itemscope>
+                <meta itemprop="applicationCategory" content="website">
+                <meta itemprop="operatingSystem" content="all">
+
+                <span itemprop="author" itemtype="http://schema.org/Organization" class="hidden" itemscope>
+                    {% include_cached seo/company-image.html prop='logo' %}
+                    <meta itemprop="name" content="{{ site.company.official_name }}">
+                </span>
+
+                <div class="portfolio-project__media">
+                    <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
+                </div>
+
+                <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+                <p class="portfolio-project__subtitle">
+                    {{ project.challenge }}{% if project.website %},
+                        <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                    {% endif %}
+                </p>
+                <div class="portfolio-project-detail">
+                    <p class="portfolio-project-detail__description">{{ project.desc }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+
+    <div class="cta-row portfolio-strip__show-more">
+        <span class="button js-portfolio-strip__expand-toggle" role="button" aria-controls="js-portfolio-strip" aria-expanded="false">Show more</span>
+    </div>
+</div>
+

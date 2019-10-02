@@ -1,0 +1,41 @@
+@mixin cbPadding($width) {
+    padding-left: $width;
+    padding-right: $width;
+}
+
+@mixin cbMargin($width) {
+    margin-left: $width;
+    margin-right: $width;
+}
+
+.content-block {
+    @include cbPadding(gu(0.5));
+
+    @include breakpoint(tablet-small up) {
+        @include cbPadding(gu(1));
+    }
+
+    @include breakpoint(tablet up) {
+        @include cbPadding(gu(2));
+    }
+}
+
+.content-block__cover {
+    @include cbMargin(gu(-0.5));
+
+    @include breakpoint(tablet-small up) {
+        @include cbMargin(gu(-1));
+    }
+
+    @include breakpoint(tablet up) {
+        @include cbMargin(gu(-4));
+    }
+}
+
+.content-block__cover--mobile {
+    @include cbMargin(gu(-0.5));
+
+    @include breakpoint(tablet-small up) {
+        @include cbMargin(0);
+    }
+}
