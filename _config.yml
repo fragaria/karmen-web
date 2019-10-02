@@ -25,9 +25,9 @@ markdown: kramdown
 
 plugins:
     - jekyll-sitemap
-    - jekyll-feed
-    - jekyll-paginate
-    - jekyll-archives
+#    - jekyll-feed
+#    - jekyll-paginate
+#    - jekyll-archives
     - jekyll-redirect-from
 
 exclude:

@@ -1,15 +1,15 @@
 # Fragaria.cz website
 
-[![Build Status](https://travis-ci.org/fragaria/website.svg?branch=master)](https://travis-ci.org/fragaria/website)
+[![Build Status](https://travis-ci.com/fragaria/karmen-web.svg?branch=master)](https://travis-ci.com/fragaria/karmen-web)
 
 ## Table of contents
 
-- [Fragaria.cz website](#fragariacz-website)
+- [karmen.fragaria.cz website](#fragariacz-website)
     - [Table of contents](#table-of-contents)
-- [Creating posts](#creating-posts)
-    - [Providing images for the posts](#providing-images-for-the-posts)
-    - [Including images within the post body](#including-images-within-the-post-body)
-    - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
+- [Content](#content)
+    - [Providing images](#providing-images)
+    - [Including images within the page body](#including-images-within-the-page-body)
+    - [Including Youtube videos in the page body](#including-youtube-videos-in-the-page-body)
     - [Including embeddables like iframes](#including-embeddables-like-iframes)
     - [Highlighting code blocks](#highlighting-code-blocks)
 - [Development](#development)
@@ -24,33 +24,9 @@
     - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
     - [Using Docker](#using-docker)
 
-# Creating posts
+# Content
 
-The recommended way to add a new post is a pull request. Simply fork the
-repository, create your new post and make a PR. You can verify your post
-looks OK on your local installation.
-
-Posts are kept in `_posts` folder. They are simple Markdown documents with
-a header that contains [jekyll front matter](https://jekyllrb.com/docs/frontmatter/)
-written in YAML. Take a look at other files in `_posts` for the reference
-what can be included.
-
-Post files should be written in Markdown otherwise and the files **have to be named**
-in following format:
-
-    [year]-[month]-[day]-[slugified post title].md
-
-E.g.: `2014-10-20-ako-vyrobit-staticky-web-efektivne.md`
-
-At minimum, following properties need to be declared in the front matter:
-
-- `title`: title of your post
-- `date`: publication date of the post in ISO format (e.g. 2014-10-20T13:37:00.002+02:00)
-- `author`: your name
-- `lang`: language of the post (cs, sk, en)... we generally recommend writing all posts in English
-- `tags`: keywords of the post as a YAML array
-
-## Providing images for the posts
+## Providing images
 
 Images should be provided in high resolution so that we can serve it in good
 quality for retina displays too. Always make sure your image is at least in
@@ -72,7 +48,7 @@ Note the `Public ID` string. You can use this string as `cloudinary_src`
 attribute in the post **front matter**. This will serve as the post's main
 image.
 
-## Including images within the post body
+## Including images within the page body
 
 To include image within the post body, start by uploading the image using
 the `__tools/images` script described above. Once you have your `Public ID`,
@@ -82,7 +58,7 @@ you can embed your image by typing:
 
 You can omit the the `caption` argument.
 
-## Including Youtube videos in the post body
+## Including Youtube videos in the page body
 
 Just type:
 
@@ -163,10 +139,10 @@ ruby -v # Verify ruby@2.5.1 is installed
 
 ### Installing the app
 
-Once you have Ruby installed, clone the `fragaria/website` repository:
+Once you have Ruby installed, clone the `fragaria/karmen-web` repository:
 
 ```
-git clone https://github.com/fragaria/website.git fragaria.cz
+git clone https://github.com/fragaria/karmen-web.git karmen.fragaria.cz
 ```
 
 Switch to the cloned repository:

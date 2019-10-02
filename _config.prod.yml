@@ -1,10 +1,10 @@
-url: "https://fragaria.cz"
+url: "https://karmen.fragaria.cz"
 
 plugins:
     - jekyll-sitemap
-    - jekyll-feed
-    - jekyll-paginate
-    - jekyll-archives
+#    - jekyll-feed
+#    - jekyll-paginate
+#    - jekyll-archives
     - octopress-autoprefixer
 
 # On production tags are enabled too
