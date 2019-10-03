@@ -25,8 +25,8 @@ autoprefixer:
     only_production: true
 
 ga:
-    # enabled: true
-    # id: UA-9784905-1
+    enabled: true
+    id: UA-9784905-23
 
 # Service worker
 # Features:

@@ -26,18 +26,28 @@ layout: blank
         <h1 class="hero__headline">Multiple 3D printers controller</h1>
         <p class="hero__sub">Karmen is an <a href="https://github.com/{{ site.company.social.github }}" class="anchor anchor--emphasized" target="_blank" rel="noopener">open-source</a> solution for multi-printer management. It allows one to control a bunch of printers remotely, features an efficient management of print queues and offers smooth and user-friendly web interface.</p>
         <ul class="hero__sub hero__list">
-            <li>Control multiple 3D printers from a single interface using your web browser</li>
-            <li>Printers are in an isolated private network</li>
-            <li>Attachable control module for each printer</li>
-            <li>Realtime printer webcam stream</li>
-            <li>Simple print queues management</li>
-            <li>Printer auto-discovery</li>
-            <li><a href="https://github.com/{{ site.company.social.github }}" class="anchor anchor--emphasized" target="_blank" rel="noopener">Open-source</a></li>
+            <li>
+                <p class="icon--vpn"></p>
+                Isolated network and printer auto-discovery
+            </li>
+            <li>
+                <p class="icon--lock"></p>
+                Attachable control module for each printer</li>
+            <li>
+                <p class="icon--camera"></p>
+                Realtime printer webcam stream</li>
+            <li>
+                <p class="icon--queue"></p>
+                Simple print queues management</li>
         </ul>
+        <div class="hero__cta">
+            <a href="https://github.com/fragaria/karmen/releases/latest" class="button" role="button" target="_blank" rel="noopener">Download Karmen</a>
+        </div>
     </section>
+
     <section class="v-home__portfolio">
         <h1 class="splitting-headline anchor-shift" id="projects">
-            <span class="splitting-headline__fill">Projects</span>
+            <span class="splitting-headline__fill">Clients</span>
         </h1>
 
         {% include portfolio-strip.html %}
@@ -45,84 +55,17 @@ layout: blank
 
     <section class="v-home__company">
         <h1 class="splitting-headline anchor-shift" id="get-in-touch">
-            <span class="splitting-headline__fill">Get in touch</span>
+            <span class="splitting-headline__fill">Stay up-to-date</span>
         </h1>
 
-        <meta itemprop="email" content="{{ site.company.email }}">
-        <meta itemprop="telephone" content="{{ site.company.phone }}">
-
-        <div class="v-home__company-content">
-            <article class="contact v-home__company-about">
-                <p class="contact__about">Based in <i>Prague, Czech Republic</i>, we love working with international teams too. Our people love communicating; we are proactive and have no issues speaking English the whole day (if required).</p>
-            </article>
-
-            <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
-                <h1 class="beta">Residence</h1>
-                <p class="contact__line">{{ site.company.official_name }}</p>
-                <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
-                <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
-                <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
-                <p class="contact__line u-margin--top1" itemprop="telephone">
-                    <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
-                </p>
-
-                <p class="contact__line" itemprop="email">
-                    <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
-                </p>
-
-                <p class="contact__line">
-                    <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener">Map to our office</a>
-                </p>
-
-
-            </article>
-
-            <article class="contact v-home__company-billing">
-                <h1 class="beta">Billing</h1>
-                <p class="contact__line">{{ site.company.official_name }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line1 }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line2 }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line3 }}</p>
-                <p class="contact__line u-margin--top1">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
-                <p class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></p>
-                <p class="contact__line">Account nr.: {{ site.company.account_nr }}</p>
-            </article>
-
-            <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">
-                <input type="text" name="_gotcha" style="display:none" />
-
-                <div class="form__line">
-                    <label class="form-label" for="git-subject">I would like to</label>
-                    <div class="form-control-wrapper form-control-wrapper--select">
-                        <select class="form-control" name="_subject" id="git-subject" required>
-                            <option value="New enquiry">Ask a question</option>
-                            <option value="Work interest">Work with you</option>
-                        </select>
-                    </div>
+        <form class="form" action="https://formcarry.com/s/XvDXjaBoXaG" method="POST" accept-charset="UTF-8" >
+            <fieldset class="form__line">
+                <div class="form-control-wrapper">
+                    <input class="form-control" type="email" name="email" placeholder="E-mail" />
+                    <input type="hidden" name="_gotcha" />
+                    <button class="button" type="submit">Subscribe!</button>
                 </div>
-
-                <div class="form__line">
-                    <label class="form-label" for="git-name">Full name</label>
-                    <div class="form-control-wrapper">
-                        <input class="form-control" type="text" name="name" id="git-name" required>
-                    </div>
-                </div>
-                <div class="form__line">
-                    <label class="form-label" for="git-email">Email</label>
-                    <div class="form-control-wrapper">
-                        <input class="form-control" type="email" name="_replyto" id="git-email"  required>
-                    </div>
-                </div>
-                <div class="form__line">
-                    <label class="form-label" for="git-message">What is your enquiry?</label>
-                    <div class="form-control-wrapper">
-                        <textarea class="form-control" name="message" id="git-message"  required></textarea>
-                    </div>
-                </div>
-                <div class="form__submit">
-                    <input type="submit" class="button" value="Send">
-                </div>
-            </form>
-        </div>
+            </fieldset>
+        </form>
     </section>
 </div>
