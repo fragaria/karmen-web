@@ -42,6 +42,7 @@ exclude:
     - .sass-cache
     - .travis
     - README.md
+    - vendor
 
 permalink: /blog/:year/:month/:day/:title/
 
