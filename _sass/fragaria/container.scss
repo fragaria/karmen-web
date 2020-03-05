@@ -9,6 +9,7 @@
 .page-container__inner {
     width: 100%;
     max-width: $page-container-max-width;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
     padding-top: map-get($sitenav-menu-height, mobile);
@@ -17,4 +18,13 @@
     @include breakpoint(tablet up) {
         padding-top: map-get($sitenav-menu-height, tablet);
     }
+
+    @include breakpoint(desktop up) {
+        padding-top: map-get($sitenav-menu-height, desktop);
+    }
+}
+
+
+.karmen-logo {
+    height: 18vh
 }

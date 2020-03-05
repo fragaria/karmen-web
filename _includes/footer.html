@@ -1,13 +1,9 @@
 <footer class="content-block">
     <div class="footer">
-        <a class="footer__meta" href="https://fragaria.cz" target="_blank" rel="noopener">
-            <img alt="{{ site.company.official_name }}" class="footer__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
-            <div class="footer__copy">
-                <div class="footer__copy-line footer__copy-line--emphasized">FRAGARIA &copy; {{ site.time | date: '%Y' }}</div>
-                <div class="footer__copy-line">Talk is cheap, show me the code.</div>
-            </div>
-        </a>
         <div class="footer__social">
+            {% if site.company.social.facebook %}
+                <a href="https://facebook/{{ site.company.social.facebook }}" class="icon--facebook footer__social-icon" title="Facebook profile page"></a>
+            {% endif %}
             {% if site.company.social.github %}
                 <a href="https://github.com/{{ site.company.social.github }}" class="icon--github footer__social-icon" title="GitHub profile page"></a>
             {% endif %}
@@ -21,5 +17,12 @@
                 <a href="https://www.youtube.com/channel/{{ site.company.social.youtube }}" class="icon--youtube footer__social-icon" title="Karmen Youtube Channel"></a>
             {% endif %}
         </div>
+        <a class="footer__meta" href="https://fragaria.cz" target="_blank" rel="noopener">
+            <div class="footer__copy">
+                <div class="footer__copy-line footer__copy-line--emphasized">FRAGARIA &copy; {{ site.time | date: '%Y' }}</div>
+                <div class="footer__copy-line">Talk is cheap, show me the code.</div>
+            </div>
+            <img alt="{{ site.company.official_name }}" class="footer__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
+        </a>
     </div>
 </footer>

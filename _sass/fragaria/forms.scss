@@ -3,11 +3,11 @@
 }
 
 .form__line + .form__line {
-    margin-top: gu();
+    // margin-top: gu();
 }
 
 .form__submit {
-    margin-top: gu();
+    // margin-top: gu();
 }
 
 .form-label {
@@ -43,7 +43,7 @@
      * This breaks the grid temporarily for sake of better readability.
      */
      $shift: gu(0.5);
-     margin-top: $shift * -1;
+     // margin-top: $shift * -1;
      padding-bottom: $shift;
      margin-bottom: gu(-1);
      text-align: center;
