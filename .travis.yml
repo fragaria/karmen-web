@@ -9,7 +9,7 @@ before_install:
 script: JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.prod.yml'
 deploy:
   provider: pages
-  fqdn: karmen.fragaria.cz
+  fqdn: karmen.tech
   local-dir: _site
   skip-cleanup: true
   github-token: "$GH_PAGES_DEPLOY_TOKEN"

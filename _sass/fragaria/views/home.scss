@@ -3,11 +3,11 @@
     padding: gu(1) 0 gu(2);
 
     @include breakpoint(tablet-small up) {
-        padding: gu(3) 0 gu(5);
+        padding: gu(3) 0 gu(2);
     }
 
     @include breakpoint(tablet up) {
-        padding: gu(4) 0 gu(6);
+        padding: gu(4) 0 gu(2);
     }
 
     .hero__headline {
@@ -24,6 +24,10 @@
             color: map-get($palette, red);
         }
     }
+}
+
+.v-home .career-teaser {
+    margin: 0 auto gu(4);
 }
 
 .v-home__portfolio {

@@ -74,9 +74,15 @@ $full-view-break: 1000px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: gu() gu();
+    align-items: center;
 
     padding-top: gu();
     margin-bottom: gu(3);
+
+
+    @include breakpoint(tablet up) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 .v-career-tech-grid__item {
@@ -85,8 +91,9 @@ $full-view-break: 1000px;
 
 .v-career-tech-grid__image {
     display: block;
-    height: gu(2);
-    width: gu(2);
+    height: auto;
+    max-height: gu(2);
+    max-width: 100%;
     margin: auto;
 }
 

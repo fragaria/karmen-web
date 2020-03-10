@@ -1,4 +1,11 @@
-- name: Clients
-  url: /#projects
-- name: Subscribe
-  url: /#get-in-touch
+- name: Produkty a služby
+  url: /#products
+
+- name: Kde koupit
+  url: /#buy
+
+- name: Reference
+  url: /#portfolio
+
+# - name: Tisk a média
+#   url: /#press

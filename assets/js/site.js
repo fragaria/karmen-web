@@ -84,7 +84,7 @@ function siteMenu(rootElem) {
                 var sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
                 var targetId = targetSuffix.substring(1);
                 var target = document.getElementById(targetId);
-                window.scroll({top: target.offsetTop, behavior: 'smooth'});
+                window.scroll({top: target.offsetTop - 80, behavior: 'smooth'});
                 history.pushState({}, evt.target.text, targetUrl);
 
                 rootElem.classList.add('sitenav-wrapper--noanim');
