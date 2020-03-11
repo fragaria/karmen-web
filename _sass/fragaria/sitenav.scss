@@ -75,7 +75,7 @@ $sitenav-shrinked-push: gu(2);
     margin-left: gu(0.5);
 
     img {
-        transform: translate3d(0, 2.8rem, 0);
+        transform: translate3d(0, .8rem, 0);
         height: gu(1.666);
 
         @include breakpoint(tablet up) {
@@ -217,14 +217,6 @@ $sitenav-shrinked-push: gu(2);
     transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
     will-change: opacity, transform;
 }
-
-.sitenav-wrapper__push {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 
 /* Styles when menu is enabled */
 .sitenav-wrapper--show {

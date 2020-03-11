@@ -92,9 +92,8 @@ $sharebox-variants: (
 // Sitenav settings
 
 $sitenav-menu-height: (
-    mobile: 1 * $grid-unit,
-    tablet: 3 * $grid-unit,
-    desktop: 5 * $grid-unit,
+    mobile: 3 * $grid-unit,
+    tablet: 5 * $grid-unit,
 );
 $sitenav-menu-height-shrinked: 3 * $grid-unit;
 

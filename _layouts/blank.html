@@ -2,19 +2,11 @@
 layout: default
 ---
 
+{% include_cached sitenav.html %}
 
 <div class="page-container__inner sitenav-wrapper">
     <div class="sitenav-wrapper__push">
-      <div>
-        <div class="text-center">
-          <a href="{{ '/' | relative_url }}">
-              <img class="karmen-logo" alt="{{ site.company.official_name }}" src="{{ '/assets/img/karmen-logo.svg' | relative_url }}">
-          </a>
-        </div>
-
         {{ content }}
-
-      </div>
         {% include_cached footer.html %}
     </div>
 </div>
