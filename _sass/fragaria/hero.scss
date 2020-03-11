@@ -42,7 +42,7 @@
 
     .hero__headline + .hero__sub,
     .hero__sub + .hero__sub {
-        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 2, $above: 2);
+        @include baseline(zeta, $bodytype, $above: 2);
     }
 
     .hero__paginator {

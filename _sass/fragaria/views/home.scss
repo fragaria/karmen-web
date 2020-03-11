@@ -1,45 +1,34 @@
 .v-home .hero {
     text-align: center;
-    padding: gu(1) 0 gu(4);
+    padding: gu(1) 0 gu(2);
 
     @include breakpoint(tablet-small up) {
-        padding: gu(1) 0 gu(4);
+        padding: gu(3) 0 gu(2);
     }
 
     @include breakpoint(tablet up) {
-        padding: gu(1) 0 gu(2);
+        padding: gu(4) 0 gu(2);
     }
-
-    // @include breakpoint(desktop up) {
-    //     padding: gu(3) 0 gu(2);
-    // }
 
     .hero__headline {
         max-width: 40em;
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: gu(1);
         text-align: center;
 
-        @include baseline(beta, $headingtype, $lineheight: 1.8, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 2, $breakpoint: mobile down);
         @include baseline(alpha, $headingtype, $lineheight: 2.75, $breakpoint: mobile up);
-        @include baseline(beta, $headingtype, $lineheight: 2.75, $breakpoint: tablet up);
 
         i {
             font-style: normal;
             color: map-get($palette, red);
         }
     }
+}
 
-    .hero__sub {
-        padding-bottom: gu(1);
-        @include baseline(zeta, $headingtype, $lineheight: 1.1, $breakpoint: mobile down);
-        @include baseline(delta, $headingtype, $lineheight: 2.75, $breakpoint: mobile up);
-
-        @include breakpoint(mobile up) {
-            max-width: rem-calc(map-get($breakpoints, mobile));
-        }
-    }}
+.v-home .career-teaser {
+    margin: 0 auto gu(4);
+}
 
 .v-home__portfolio {
     margin-bottom: gu(3);
@@ -122,6 +111,5 @@
         margin: 0;
     }
 }
-
 
 

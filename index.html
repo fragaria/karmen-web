@@ -23,17 +23,156 @@ layout: blank
     {% endif %}
 
     <section class="hero hero--vertical" role="banner">
-        <h1 class="hero__headline">Karmen will launch in April 2020!</h1>
-        <h2 class="hero__sub">Subscribe to our newsletter and stay tuned.</h2>
-
-        <form class="form" action="https://formcarry.com/s/XvDXjaBoXaG" method="POST" accept-charset="UTF-8" >
-            <fieldset class="form__line">
-                <div class="form-control-wrapper">
-                    <input class="form-control" type="email" name="email" placeholder="E-mail" />
-                    <input type="hidden" name="_gotcha" />
-                    <button class="button" type="submit">Subscribe!</button>
-                </div>
-            </fieldset>
-        </form>
+        <h1 class="hero__headline">Multiple 3D printer controller</h1>
+        <h2 class="hero__sub">Open source řešení pro vzdálenou správu a monitoring 3D tiskáren</h2>
+        <p class="hero__sub">
+            Karmen umožňuje monitoring a správu jedné nebo více 3D tiskáren přes lokální síť, nebo internet. Z webového prohlížeče vašeho počítače, tabletu či telefonu můžete zadávat tiskové úlohy, sledovat průběh tisku vrstvu po vrstvě, distribuovat tisk mezi více tiskárnami apod. Díky použitému softwarovému řešení je Karmen kompatibililní s širokou škálou tiskáren i slicerů.
+        </p>
+        <p class="hero__sub" id="subscribe">
+            Ačkoliv oficiální spuštění proběhne v dubnu 2020, má Karmen již několik uživatelů z řad škol, coworkových dílen, firem a také jedna nemocnice.
+        </p>
+<!--         <div class="hero__cta">
+            <a href="https://github.com/fragaria/karmen/releases/latest" class="button" role="button" target="_blank" rel="noopener">Download Karmen</a>
+        </div>
+ -->
     </section>
+
+    <section class="v-career-section career-teaser content-block__cover--mobile">
+        <h1 class="career-teaser__headline">Informovat o Karmen novinkách</h1>
+        <div class="career-teaser__contactbutton">
+            <form class="form" action="https://formcarry.com/s/XvDXjaBoXaG" method="POST" accept-charset="UTF-8" >
+                <fieldset class="form__line">
+                    <div class="form-control-wrapper form-control-wrapper--inline">
+                        <input class="form-control" type="email" name="email" placeholder="E-mail" />
+                        <input type="hidden" name="_gotcha" />
+                        <button class="button" type="submit">Odebírat</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+
+<!--     <section class="v-home__portfolio">
+        <h1 class="splitting-headline anchor-shift" id="projects">
+            <span class="splitting-headline__fill">Clients</span>
+        </h1>
+        {% include portfolio-strip.html %}
+    </section>
+ -->
+
+    <section class="v-home__portfolio" id="products">
+        <h1 class="splitting-headline">
+            <span class="splitting-headline__fill">Produkty a služby</span>
+        </h1>
+        <p class="v-home__career-content">
+            Celé řešení je navržené jako open source, přičemž některé jeho části vychází z řešení Octoprint. S cílem okamžitě „připojit a tisknout“ nabízíme placené a podporované řešení Karmen tak, aby uživatel získal podporované a aktualizované řešení, které jednoduše zapojí a integruje do svého provozu.
+        </p>
+
+
+        <div class="v-home__career-content article-typeset">
+            <article>
+                <h2>Karmen Pill</h2>
+                <p>
+                    Kompaktní hardwarové zařízení Karmen Pill s integrovanou webovou kamerou, které se přes USB rozhraní připojí ke 3D tiskárně, zpřístupní ji do lokální sítě či internetu a zajistí tak její vzdálenou správu a obsluhu.
+                </p>
+                <figure class="figure content-block__cover--mobile "> <img src="/assets/img/karmen-pill.jpg" class="figure__image"> <figcaption class="figure__caption">Karmen Pill</figcaption> </figure>
+                <ul>
+                    <li>Kompatibilita s nejrozšířenějšími slicery Slic3r, PrusaSlicer, Ultimaker Cura apod.</li>
+                    <li>Obraz z kamery ve webovém rozhraní</li>
+                    <li>Uživatelské webové rozhraní pro monitoring: teplota senzorů, probíhající tisk, obraz z vestavěné kamery</li>
+                    <li>Základní ovládání tiskárny: (po)zastavení/spuštění tisku apod.</li>
+                    <li>Cena: 3.500,00 bez DPH</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Karmen</h2>
+                <p>
+                    Cloudová služba Karmen navržená pro správu všech tiskáren v rámci jedné organizace, pod jedním uživatelským účtem na jednom místě. Opět se jedná o open source nástroj, v případě, že využijete naší hostované služby, máte provoz do určitého množství připojených tiskáren a objemu dat zdarma.
+                </p>
+
+
+                <p>S Karmen získáte:</p>
+                <ul>
+                    <li>Uživatelské webové rozhraní pro monitoring a správu připojených tiskáren</li>
+                    <li>Videopřenos v reálném čase.</li>
+                    <li>Vzdálené ovládání.</li>
+                    <li>Pokročilou správu uživatelů a tiskových souborů.</li>
+                    <li>Odeslání tiskových souborů na připojené tiskárny.</li>
+                    <li>Otevřenou vývojářskou dokumentaci a API pro snadnou integraci Karmen do jiných systémů.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="v-home__company" id="buy">
+        <h1 class="splitting-headline anchor-shift" id="get-in-touch">
+            <span class="splitting-headline__fill">Kde koupit</span>
+        </h1>
+
+        <meta itemprop="email" content="{{ site.company.email }}">
+        <meta itemprop="telephone" content="{{ site.company.phone }}">
+
+        <div class="v-home__career-content">
+            <article class="contact v-home__company-about">
+                <p>Oficiální spuštění a prodej plánujeme na duben 2020. Do té doby budeme rádi, <a href="/#subscribe" class="anchor anchor--emphasized">pokud nám zanecháte svůj e-mail</a>, abychom Vás mohli informovat o našich novinkách.</p>
+                <p>Zároveň je možné si rezervovat naše produkty přes jednoduchý formulář:</p>
+            </article>
+
+            <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <div class="form__line">
+                    <label class="form-label" for="git-name">Jméno</label>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="text" name="name" id="git-name" required>
+                    </div>
+                </div>
+                <div class="form__line">
+                    <label class="form-label" for="git-email">E-mail</label>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="email" name="_replyto" id="git-email"  required>
+                    </div>
+                </div>
+                <div class="form__line">
+                    <label class="form-label" for="git-message">Vzkaz</label>
+                    <div class="form-control-wrapper">
+                        <textarea class="form-control" name="message" id="git-message"  required></textarea>
+                    </div>
+                </div>
+                <div class="form__submit">
+                    <input type="submit" class="button" value="Odeslat">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="v-home__company" id="portfolio">
+        <h1 class="splitting-headline">
+            <span class="splitting-headline__fill">Reference</span>
+        </h1>
+
+        <p>
+            Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.
+            Oproti konkurenčním řešením umožňuje Karmen připojení a spolupráci s více typy 3D tiskáren, tedy více tiskárnami od různých výrobců.
+        </p>
+
+        <div class="v-career-tech-grid">
+            {% for client in site.data.portfolio %}
+                <span class="v-career-tech-grid__item">
+                    <img class="v-career-tech-grid__image" src="{{ client.img | relative_url }}" alt="{{ client.title }}" title="{{ client.title }}">
+                </span>
+            {% endfor %}
+        </div>
+    </section>
+
+<!--
+    <section class="v-home__company" id="press">
+        <h1 class="splitting-headline">
+            <span class="splitting-headline__fill">Tisk a média</span>
+        </h1>
+        <p>sem by se měli dávat tiskové zprávy, loga a fotky ke stažení (jednu TZ máme téměř připravenou). Nevím zda sem dát i odkaz na sociální sítě, co jsou v patičce?</p>
+    </section>
+ -->
 </div>

@@ -18,16 +18,15 @@
 }
 
 .form-control {
+    display: block;
+    width: 100%;
     font-family: getFontFamily($headingtype);
     background-color: map-get($palette, gray-light);
     border: 0;
     border-radius: 0;
     padding: gu(0.5);
-    @include fontsize(zeta);
 
-    @include breakpoint(mobile up) {
-        min-width: 20rem;
-    }
+    @include fontsize(zeta);
 
     &:focus {
         outline: none;
@@ -46,7 +45,6 @@
      // margin-top: $shift * -1;
      padding-bottom: $shift;
      margin-bottom: gu(-1);
-     text-align: center;
 
     &--select::after {
         font-family: '#{$icomoon-font-family}';
@@ -59,6 +57,10 @@
         line-height: gu(2);
         font-size: 1.5rem;
         right: gu(0.5);
+    }
+
+    &--inline {
+        display: flex;
     }
 }
 
