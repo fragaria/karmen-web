@@ -153,17 +153,19 @@ layout: blank
             <span class="splitting-headline__fill">Reference</span>
         </h1>
 
-        <p>
-            Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.
-            Oproti konkurenčním řešením umožňuje Karmen připojení a spolupráci s více typy 3D tiskáren, tedy více tiskárnami od různých výrobců.
-        </p>
+        <div class="v-home__career-content">
+            <p>
+                Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.
+                Oproti konkurenčním řešením umožňuje Karmen připojení a spolupráci s více typy 3D tiskáren, tedy více tiskárnami od různých výrobců.
+            </p>
 
-        <div class="v-career-tech-grid">
-            {% for client in site.data.portfolio %}
-                <span class="v-career-tech-grid__item">
-                    <img class="v-career-tech-grid__image" src="{{ client.img | relative_url }}" alt="{{ client.title }}" title="{{ client.title }}">
-                </span>
-            {% endfor %}
+            <div class="v-career-tech-grid">
+                {% for client in site.data.portfolio %}
+                    <span class="v-career-tech-grid__item">
+                        <img class="v-career-tech-grid__image" src="{{ client.img | relative_url }}" alt="{{ client.title }}" title="{{ client.title }}">
+                    </span>
+                {% endfor %}
+            </div>
         </div>
     </section>
 
