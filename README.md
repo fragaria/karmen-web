@@ -155,9 +155,10 @@ Then, install Ruby gems using following from *within the
 repository directory*:
 
 ```
-rbenv install         # Installs Ruby version required by the project
-gem install bundler   # Installs bundler
-bundle install        # Installs Ruby gems
+rbenv install            # Installs Ruby version required by the project
+gem i bundler -v '< 2'   # Installs bundler
+bundle install           # Installs Ruby gems
+
 ```
 
 ## Launching the app

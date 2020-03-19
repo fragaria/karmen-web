@@ -16,7 +16,7 @@
             </div>
 
             <ul class="sitenav__linkset">
-                {% for menuitem in site.data.sitenav %}
+                {% for menuitem in site.data.sitenav[page.lang] %}
                     <li class="sitenav__linkset-item js-sitenav__link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline js-sitenav-menu__anchor" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
                 {% endfor %}
             </ul>

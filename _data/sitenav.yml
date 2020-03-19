@@ -1,11 +1,25 @@
-- name: Produkty a služby
-  url: /#products
+cs:
+  - name: Produkty a služby
+    url: /#products
 
-- name: Kde koupit
-  url: /#buy
+  - name: Kde koupit
+    url: /#buy
 
-- name: Reference
-  url: /#portfolio
+  - name: Reference
+    url: /#portfolio
 
-# - name: Tisk a média
-#   url: /#press
+  # - name: Tisk a média
+  #   url: /#press
+
+en:
+  - name: Products and Services
+    url: /en/#products
+
+  - name: Where to buy
+    url: /en/#buy
+
+  - name: Testimonials
+    url: /en/#portfolio
+
+  # - name: Tisk a média
+  #   url: /#press
