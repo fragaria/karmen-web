@@ -1,0 +1,42 @@
+.flag {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    transform: scale(.4);
+
+    &.czech-republic {
+        background: linear-gradient(146deg, #11457E 25%, transparent 15%) 0 -40px, linear-gradient(34deg, #11457E 25%, transparent 15%) 0 -40px, linear-gradient(to bottom, white 50%, #D7141A 50%);
+        background-size: 80px 80px;
+    }
+
+    &.united-kingdom {
+        background: #00247D;
+        background-size: 80px 80px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background:
+                linear-gradient(to bottom, transparent 40%, #CC142B 40%, #CC142B 60%, transparent 60%),
+                linear-gradient(to right, transparent 45%, #CC142B 45%, #CC142B 55%, transparent 55%),
+                linear-gradient(to bottom, transparent 35%, white 35%, white 65%, transparent 65%),
+                linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%),
+                linear-gradient(146deg, transparent 50%, #CC142B 50%, #CC142B 53%, transparent 53%) -45px 31px,
+                linear-gradient(146deg, transparent 50%, #CC142B 50%, #CC142B 53%, transparent 53%) 45px -35px,
+                linear-gradient(34deg, transparent 50%, #CC142B 50%, #CC142B 53%, transparent 53%) -45px -26px,
+                linear-gradient(34deg, transparent 50%, #CC142B 50%, #CC142B 53%, transparent 53%) 46px 31px,
+                linear-gradient(146deg, transparent 45%, white 45%, white 55%, transparent 55%),
+                linear-gradient(34deg, transparent 45%, white 45%, white 55%, transparent 55%);
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+

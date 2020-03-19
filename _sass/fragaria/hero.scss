@@ -40,14 +40,6 @@
         }
     }
 
-    .hero__switch {
-        @include baseline(eta, $bodytype, $lineheight: 1, $below: 3, $breakpoint: mobile up);
-
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-
     .hero__headline + .hero__sub,
     .hero__sub + .hero__sub {
         @include baseline(zeta, $bodytype, $above: 2);

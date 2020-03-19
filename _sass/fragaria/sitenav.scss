@@ -58,13 +58,9 @@ $sitenav-shrinked-push: gu(2);
 .sitenav__company {
     // On mobile, company takes all the remaining space.
     flex: 1;
-}
 
-.sitenav__brand,
-.sitenav__menutoggle {
-    // On tablet up, all the elements are evenly sized.
     @include breakpoint(tablet up) {
-        flex: 1;
+        flex: 0;
     }
 }
 
@@ -94,16 +90,7 @@ $sitenav-shrinked-push: gu(2);
         position: relative;
         padding: 0;
         order: 2;
-
-        // &:before {
-        //     content: ' ';
-        //     background: map-get($palette, white);
-        //     position: absolute;
-        //     top: 116px;
-        //     height: .55rem;
-        //     width: 100%;
-        //     left: 0;
-        // }
+        flex: 1;
     }
 }
 
@@ -142,6 +129,10 @@ $sitenav-shrinked-push: gu(2);
     .hamburger-box {
         float: right;
     }
+}
+
+.sitenav__switch {
+    order: 3;
 }
 
 .sitenav--animated .sitenav__menu {
