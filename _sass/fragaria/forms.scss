@@ -60,7 +60,17 @@
     }
 
     &--inline {
-        display: flex;
+        .button {
+            margin-top: gu();
+        }
+
+        @include breakpoint(mobile up) {
+            display: flex;
+
+            .button {
+                margin-top: 0;
+            }
+        }
     }
 }
 
