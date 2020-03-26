@@ -5,6 +5,9 @@ cs:
   - name: Kde koupit
     url: /#buy
 
+  - name: Beta testování
+    url: /#beta
+
   - name: Reference
     url: /#portfolio
 
