@@ -54,7 +54,7 @@ module.exports = {
       en: [
         {name: 'Products and Services', url: '/en/#products'},
         {name: 'Where to buy', url: `/en/#buy`},
-        {name: 'Testimonials', url: `/#portfolio`},
+        {name: 'Testimonials', url: `/en/#portfolio`},
       ],
       cs: [
         {name: 'Produkty a služby', url: '/#products'},

@@ -46,65 +46,6 @@ function showIEWarning(rootElem) {
 }
 
 
-function siteMenu(rootElem) {
-    var toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
-    var links = rootElem.getElementsByClassName('js-sitenav__link');
-    var currentUrl = window.location.pathname;
-
-    forEachNode(toggles, function (index, toggle) {
-        toggle.addEventListener('click', function () {
-            rootElem.classList.remove('sitenav-wrapper--noanim');
-            rootElem.classList.toggle('sitenav-wrapper--show');
-
-            if (toggle.classList.contains('is-active')) {
-                toggle.classList.remove('is-active');
-                toggle.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('noscroll');
-            } else {
-                toggle.classList.add('is-active');
-                toggle.setAttribute('aria-expanded', 'true');
-                document.body.classList.add('noscroll');
-            }
-        });
-    });
-
-    forEachNode(links, function (index, link) {
-        link.addEventListener('click', function (evt) {
-            var targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
-
-            if (! targetAnchor) {
-                console.warn('Could not found target anchor for current click evt.', evt);
-                return;
-            }
-
-            var targetUrl = targetAnchor.getAttribute('href');
-            var targetSuffix = targetUrl.replace(currentUrl, '');
-
-            // id-based navigation on current page
-            if (targetSuffix.startsWith('#')) {
-                evt.preventDefault();
-
-                var sitenavWrap = rootElem;
-                var sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
-                var sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
-                var targetId = targetSuffix.substring(1);
-                var target = document.getElementById(targetId);
-                window.scroll({top: target.offsetTop - 80, behavior: 'smooth'});
-                history.pushState({}, evt.target.text, targetUrl);
-
-                rootElem.classList.add('sitenav-wrapper--noanim');
-                rootElem.classList.remove('sitenav-wrapper--show');
-                document.body.classList.remove('noscroll');
-
-                forEachNode(toggles, function (index, toggle) {
-                    toggle.classList.remove('is-active');
-                    toggle.setAttribute('aria-expanded', 'false');
-                });
-            }
-        });
-    });
-}
-
 /**
  * Simple window reload handler.
  * @param {HTMLElement} rootElem
@@ -278,7 +219,7 @@ window.toggleGrid = function toggleGrid(valueToSet) {
 
 var handlers = [
     {query: '.js-ie-warn', handler: showIEWarning},
-    {query: '.js-sitenav', handler: siteMenu},
+    // {query: '.js-sitenav', handler: siteMenu},
     {query: '.js-sitenav', handler: shirkSidenavOnScroll},
     {query: '.js-site-reload-button', handler: siteReload},
     {query: '.js-fix-baseline, .typeset h1, .typeset h2, .typeset h3, .typeset h4, .article-typeset h1, .article-typset h2, .article-typset h3, .article-typeset h4', handler: fixBaseline},
