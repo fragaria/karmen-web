@@ -48,135 +48,34 @@ Note the `Public ID` string. You can use this string as `cloudinary_src`
 attribute in the post **front matter**. This will serve as the post's main
 image.
 
-## Including images within the page body
-
-To include image within the post body, start by uploading the image using
-the `__tools/images` script described above. Once you have your `Public ID`,
-you can embed your image by typing:
-
-    {% include figure.html cloudinary_src='[Public ID]' caption='[optional caption]' %}
-
-You can omit the the `caption` argument.
-
-## Including Youtube videos in the page body
-
-Just type:
-
-    {% include youtube.html id='[youtube video id]' %}
-
-## Including embeddables like iframes
-
-You can embed iframes normally like you would do in a HTML document. Jekyll
-understands HTML syntax within markdown documents too.
-
-## Highlighting code blocks
-
-Use `{% highlight %}` tag for that:
-
-    {% highlight html %}
-    <my-code></my-code>
-    {% endhighlight %}
-
-You can also enable line numbers with: `{% highlight html linenos %}`.
-
 # Development
 
-This project requires Ruby to be installed on your computer (best installed
-using [rbenv](https://github.com/rbenv/rbenv)).
+This project requires NodeJS.
 
 ## Installation
 
-The process is practically the same on any Linux. Only difference is build dependencies.
-
-### Install build dependencies
-
-First, install required development dependencies:
-
-#### Ubuntu 18.04
-
-
 ```
-sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common
+git clone https://github.com/fragaria/karmen-web.git karmen.tech
+cd karmen.tech
+npm i
 ```
 
-#### Fedora 28
-
-```
-sudo dnf install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl
-```
-
-### Install rbenv
-
-Next, install Ruby using rbenv:
-
-```
-cd
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
-
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
-
-rbenv install 2.5.1
-rbenv global 2.5.1
-ruby -v # Verify ruby@2.5.1 is installed
-```
-
-### Installing dependencies on macOS
-
-```
-brew install rbenv
-rbenv init
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
-rbenv install 2.5.1
-ruby -v # Verify ruby@2.5.1 is installed
-```
-
-### Installing the app
-
-Once you have Ruby installed, clone the `fragaria/karmen-web` repository:
-
-```
-git clone https://github.com/fragaria/karmen-web.git karmen.fragaria.cz
-```
-
-Switch to the cloned repository:
-
-```
-cd fragaria.cz
-```
-
-Then, install Ruby gems using following from *within the
-repository directory*:
-
-```
-rbenv install            # Installs Ruby version required by the project
-gem i bundler -v '< 2'   # Installs bundler
-bundle install           # Installs Ruby gems
-
-```
-
-## Launching the app
+## Launching for development
 
 Start the application using:
 
 ```
-bundle exec jekyll serve --livereload
+gatsby develop
 ```
 
-Testing site will be available at `http://localhost:4000/`.
+Testing site will be available at `http://localhost:8000/`.
 
-## Viewing future articles and drafts
+## Bundling for production
 
-Simple! Just run the app using:
+Create bundle using:
 
 ```
-bundle exec jekyll serve --livereload --future --drafts
+gatsby build
 ```
 
 ## Using Docker
