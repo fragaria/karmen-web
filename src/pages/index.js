@@ -8,7 +8,7 @@ import pillImg from "assets/img/karmen-pill.jpg"
 
 const IndexPage = ({ data }) => {
     return (
-        <MainPageWrap lang="cs">
+        <MainPageWrap lang="cs" pageTitle="Vítejte">
             <section className="hero hero--vertical" role="banner">
                 <h1 className="hero__headline">Řešení na vzdálenou správu 3D tiskáren</h1>
                 <h2 className="hero__sub">Management, monitoring a distribuce tiskových souborů kdykoliv a odkudkoliv</h2>

@@ -11,7 +11,7 @@ module.exports = {
     keywords: ['software', 'software development', 'web apps', 'vývoj software', 'webové aplikace', 'python', 'javascript', 'react', 'html', 'css'],
     siteUrl: 'https://karmen.tech', // no trailing slash!
     company: {
-      websiteTitle: 'karmen.tech',
+      websiteTitle: 'Karmen',
       officialName: 'Fragaria s.r.o.',
       phone: '+420 222 581 311',
       contactEmail: 'karmen@fragaria.cz',

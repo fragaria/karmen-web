@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import CookieConsent, { Cookies } from "react-cookie-consent"
+import CookieConsent from "react-cookie-consent"
 
 const BlankLayout = ({ children }) => (
     <>

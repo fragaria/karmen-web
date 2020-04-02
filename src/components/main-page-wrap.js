@@ -7,7 +7,7 @@ import SEOCompanyImage from "../components/seo/company-image"
 
 import karmenSocialLogo from "assets/img/karmen-logo-social-media.png"
 
-const MainPageWrap = ({ children, lang }) => {
+const MainPageWrap = ({ children, lang, pageTitle }) => {
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -32,7 +32,7 @@ const MainPageWrap = ({ children, lang }) => {
 
     return (
         <Layout lang={lang}>
-            <SEOMetadata title="karmen.tech" />
+            <SEOMetadata title={pageTitle} />
             <div className="content-block typeset v-home" itemScope itemType="http://schema.org/LocalBusiness">
                 <meta itemProp="name" content={data.site.siteMetadata.company.officialName} />
                 <meta itemProp="openingHours" content="Mo-Fr 10:00-17:00" />

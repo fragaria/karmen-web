@@ -8,7 +8,7 @@ import pillImg from "assets/img/karmen-pill.jpg"
 
 const IndexENPage = ({ data }) => {
     return (
-        <MainPageWrap lang="en">
+        <MainPageWrap lang="en" pageTitle="Welcome">
             <section className="hero hero--vertical" role="banner">
                 <h1 className="hero__headline">Multiple 3D printer controller</h1>
                 <h2 className="hero__sub">
