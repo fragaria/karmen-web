@@ -8,67 +8,60 @@ import { useStaticQuery, graphql } from "gatsby"
 import karmenLogoImg from "assets/img/karmen-logo.svg"
 
 
-// function siteMenu(rootElem) {
-//     var toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
-//     var links = rootElem.getElementsByClassName('js-sitenav__link');
-//     var currentUrl = window.location.pathname;
+/**
+ * Shrink site navigation when user scrolls 100px down
+ * and takes it backs when user returns to top
+ * @param {HTMLElement} element
+ */
+function shirkSitenavOnScroll(element) {
+    function getBodyScrollTop() {
+        const el = document.scrollingElement || document.documentElement
+        return el.scrollTop
+    }
 
-//     forEachNode(toggles, function (index, toggle) {
-//         toggle.addEventListener('click', function () {
-//             rootElem.classList.remove('sitenav-wrapper--noanim');
-//             rootElem.classList.toggle('sitenav-wrapper--show');
+    const onScroll = () => {
+        const scrolled = Math.max(window.pageYOffset, getBodyScrollTop())
 
-//             if (toggle.classList.contains('is-active')) {
-//                 toggle.classList.remove('is-active');
-//                 toggle.setAttribute('aria-expanded', 'false');
-//                 document.body.classList.remove('noscroll');
-//             } else {
-//                 toggle.classList.add('is-active');
-//                 toggle.setAttribute('aria-expanded', 'true');
-//                 document.body.classList.add('noscroll');
-//             }
-//         });
-//     });
+        scrolled > 100 ?
+            element.classList.add('sitenav--shrinked') :
+            element.classList.remove('sitenav--shrinked')
+    };
 
-//     forEachNode(links, function (index, link) {
-//         link.addEventListener('click', function (evt) {
-//             var targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
+    const enableAnimations = () => {
+        element.classList.add('sitenav--animated')
+    }
 
-//             if (! targetAnchor) {
-//                 console.warn('Could not found target anchor for current click evt.', evt);
-//                 return;
-//             }
+    const raf = window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        window.oRequestAnimationFrame
+    let lastScrollTop = getBodyScrollTop()
 
-//             var targetUrl = targetAnchor.getAttribute('href');
-//             var targetSuffix = targetUrl.replace(currentUrl, '');
+    if (raf) {
+        // make sure to run it first time too
+        onScroll()
+        loop()
+        setTimeout(enableAnimations)
+    }
 
-//             // id-based navigation on current page
-//             if (targetSuffix.startsWith('#')) {
-//                 evt.preventDefault();
+    function loop() {
+        const scrollTop = getBodyScrollTop()
 
-//                 var sitenavWrap = rootElem;
-//                 var sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
-//                 var sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
-//                 var targetId = targetSuffix.substring(1);
-//                 var target = document.getElementById(targetId);
-//                 window.scroll({top: target.offsetTop - 80, behavior: 'smooth'});
-//                 history.pushState({}, evt.target.text, targetUrl);
+        if (lastScrollTop === scrollTop) {
+            raf(loop)
+            return
+        } else {
+            lastScrollTop = scrollTop
 
-//                 rootElem.classList.add('sitenav-wrapper--noanim');
-//                 rootElem.classList.remove('sitenav-wrapper--show');
-//                 document.body.classList.remove('noscroll');
+            // fire scroll function if scrolls vertically
+            onScroll()
+            raf(loop)
+        }
+    }
+}
 
-//                 forEachNode(toggles, function (index, toggle) {
-//                     toggle.classList.remove('is-active');
-//                     toggle.setAttribute('aria-expanded', 'false');
-//                 });
-//             }
-//         });
-//     });
-// }
-
-const Sitenav = ({ lang, wrapperRef }) => {
-
+const Sitenav = ({ lang }) => {
     const data = useStaticQuery(graphql`
         query SitenavQuery {
             site {
@@ -90,6 +83,11 @@ const Sitenav = ({ lang, wrapperRef }) => {
 
     const [ isOpen, setIsOpen ] = useState(false)
     const [ isAnimated, setIsAnimated] = useState(true)
+    const sitenavRef = React.createRef()
+
+    useEffect(() => {
+        shirkSitenavOnScroll(sitenavRef.current)
+    })
 
     const menuToggleClasses = classNames("sitenav__menutoggle hamburger hamburger--collapse", {
         "is-active": isOpen,
@@ -124,7 +122,7 @@ const Sitenav = ({ lang, wrapperRef }) => {
     }
 
     return (
-        <nav id="js-sitenav" className={rootClasses} role="navigation" itemScope itemType="http://schema.org/SiteNavigationElement">
+        <nav id="js-sitenav" ref={sitenavRef} className={rootClasses} role="navigation" itemScope itemType="http://schema.org/SiteNavigationElement">
             <div className="sitenav__container">
                 <div className="content-block content-block__cover--mobile">
                     <div className="sitenav__menu js-sitenav-menu">
@@ -167,7 +165,6 @@ const Sitenav = ({ lang, wrapperRef }) => {
 
 Sitenav.props = {
     lang: PropTypes.string.isRequired,
-    wrapperRef: PropTypes.object.isRequired,
 }
 
 export default Sitenav

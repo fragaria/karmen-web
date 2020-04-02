@@ -8,6 +8,5 @@
 
 import "src/styles/global.scss"
 
-import "assets/js/element-closest.js"
 import "assets/js/site.js"
 import "assets/js/smoothscroll.js"

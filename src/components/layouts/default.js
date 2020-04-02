@@ -15,11 +15,10 @@ import IEWarning from "../legacy/ie-warning";
 import BlankLayout from "./blank"
 
 const Layout = ({ lang, children }) => {
-  const wrapperRef = React.createRef();
   return (
       <BlankLayout>
-          <Sitenav lang={lang} wrapperRef={wrapperRef} />
-          <div className="page-container__inner sitenav-wrapper" ref={wrapperRef}>
+          <Sitenav lang={lang} />
+          <div className="page-container__inner sitenav-wrapper">
             <div className="sitenav-wrapper__push">
                 <IEWarning />
                 {children}
