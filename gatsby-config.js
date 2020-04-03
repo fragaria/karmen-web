@@ -2,8 +2,6 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Fragaria s.r.o.`,
     title: 'Karmen',
     email: 'karmen@fragaria.cz',
@@ -65,6 +63,9 @@ module.exports = {
     }
   },
   plugins: [
+    /**
+     * Adds SASS support.
+     */
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -75,7 +76,14 @@ module.exports = {
         },
       },
     },
+    /**
+     * Allows modifications of <head> tags from any component
+     */
     `gatsby-plugin-react-helmet`,
+    /**
+     * Adds aliases for src/pages/assets directories.
+     * e.g. import someImage from 'assets/img/myimage.png'
+     */
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
@@ -84,6 +92,9 @@ module.exports = {
         assets: path.join(__dirname, 'src/assets'),
       }
     },
+    /**
+     * Filesystem source for gatsby transformers.
+     */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -93,6 +104,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    /**
+     * Creates website manifest (favicons etc.)
+     */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -105,6 +119,10 @@ module.exports = {
         icon: `src/assets/img/karmen-logo.svg`, // This path is relative to the root of the site.
       },
     },
+    /**
+     * Adds GA tracking script.
+     * Will ONLY be appended when running gatsby build.
+     */
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

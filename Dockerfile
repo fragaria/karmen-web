@@ -1,17 +1,16 @@
-FROM jekyll/jekyll:3.7.3
+FROM node:13-buster as build
 
-# Install ImageMagick
-RUN apk --no-cache add \
-    file \
-    imagemagick
+RUN apt-get update && \
+    apt-get install -y \
+        libglu1 \
+        libxi6 \
+        libgconf-2-4 \
+    && ldconfig \
+    && npm i gatsby-cli -g
+WORKDIR /app
+ADD . ./
+RUN npm ci
+RUN gatsby build
 
-CMD ["jekyll", "--help"]
-
-ENTRYPOINT ["/usr/jekyll/bin/entrypoint"]
-
-WORKDIR /srv/jekyll
-
-VOLUME  /srv/jekyll
-
-EXPOSE 35729
-EXPOSE 4000
+FROM gatsbyjs/gatsby
+COPY --from=build /app/public /pub

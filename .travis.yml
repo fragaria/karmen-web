@@ -1,16 +1,16 @@
 notifications:
   email: false
-language: ruby
+language: javascript
 rvm:
 - 2.5.1
 before_install:
-    - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
-    - gem install bundler -v '< 2'
-script: JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.prod.yml'
+  - npm i gatsby-cli -g
+  - npm ci
+script: gatsby build
 deploy:
   provider: pages
   fqdn: karmen.tech
-  local-dir: _site
+  local-dir: public
   skip-cleanup: true
   github-token: "$GH_PAGES_DEPLOY_TOKEN"
   keep-history: true
