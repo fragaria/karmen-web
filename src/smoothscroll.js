@@ -1,37 +1,37 @@
 /* eslint-disable */
-'use strict';
+"use strict"
 
 // polyfill
 function polyfill() {
   // aliases
-  var w = window;
-  var d = document;
+  var w = window
+  var d = document
 
   // return if scroll behavior is supported and polyfill is not forced
   if (
-    'scrollBehavior' in d.documentElement.style &&
+    "scrollBehavior" in d.documentElement.style &&
     w.__forceSmoothScrollPolyfill__ !== true
   ) {
-    return;
+    return
   }
 
   // globals
-  var Element = w.HTMLElement || w.Element;
-  var SCROLL_TIME = 468;
+  var Element = w.HTMLElement || w.Element
+  var SCROLL_TIME = 468
 
   // object gathering original scroll methods
   var original = {
     scroll: w.scroll || w.scrollTo,
     scrollBy: w.scrollBy,
     elementScroll: Element.prototype.scroll || scrollElement,
-    scrollIntoView: Element.prototype.scrollIntoView
-  };
+    scrollIntoView: Element.prototype.scrollIntoView,
+  }
 
   // define timing method
   var now =
     w.performance && w.performance.now
       ? w.performance.now.bind(w.performance)
-      : Date.now;
+      : Date.now
 
   /**
    * indicates if a the current browser is made by Microsoft
@@ -40,9 +40,9 @@ function polyfill() {
    * @returns {Boolean}
    */
   function isMicrosoftBrowser(userAgent) {
-    var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+    var userAgentPatterns = ["MSIE ", "Trident/", "Edge/"]
 
-    return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    return new RegExp(userAgentPatterns.join("|")).test(userAgent)
   }
 
   /*
@@ -50,7 +50,7 @@ function polyfill() {
    * rounding up scrollHeight and scrollWidth causing false positives
    * on hasScrollableSpace
    */
-  var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+  var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0
 
   /**
    * changes scroll position inside an element
@@ -60,8 +60,8 @@ function polyfill() {
    * @returns {undefined}
    */
   function scrollElement(x, y) {
-    this.scrollLeft = x;
-    this.scrollTop = y;
+    this.scrollLeft = x
+    this.scrollTop = y
   }
 
   /**
@@ -71,7 +71,7 @@ function polyfill() {
    * @returns {Number}
    */
   function ease(k) {
-    return 0.5 * (1 - Math.cos(Math.PI * k));
+    return 0.5 * (1 - Math.cos(Math.PI * k))
   }
 
   /**
@@ -83,27 +83,27 @@ function polyfill() {
   function shouldBailOut(firstArg) {
     if (
       firstArg === null ||
-      typeof firstArg !== 'object' ||
+      typeof firstArg !== "object" ||
       firstArg.behavior === undefined ||
-      firstArg.behavior === 'auto' ||
-      firstArg.behavior === 'instant'
+      firstArg.behavior === "auto" ||
+      firstArg.behavior === "instant"
     ) {
       // first argument is not an object/null
       // or behavior is auto, instant or undefined
-      return true;
+      return true
     }
 
-    if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+    if (typeof firstArg === "object" && firstArg.behavior === "smooth") {
       // first argument is an object and behavior is smooth
-      return false;
+      return false
     }
 
     // throw error when behavior is not supported
     throw new TypeError(
-      'behavior member of ScrollOptions ' +
+      "behavior member of ScrollOptions " +
         firstArg.behavior +
-        ' is not a valid value for enumeration ScrollBehavior.'
-    );
+        " is not a valid value for enumeration ScrollBehavior."
+    )
   }
 
   /**
@@ -114,12 +114,12 @@ function polyfill() {
    * @returns {Boolean}
    */
   function hasScrollableSpace(el, axis) {
-    if (axis === 'Y') {
-      return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+    if (axis === "Y") {
+      return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight
     }
 
-    if (axis === 'X') {
-      return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+    if (axis === "X") {
+      return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth
     }
   }
 
@@ -131,9 +131,9 @@ function polyfill() {
    * @returns {Boolean}
    */
   function canOverflow(el, axis) {
-    var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+    var overflowValue = w.getComputedStyle(el, null)["overflow" + axis]
 
-    return overflowValue === 'auto' || overflowValue === 'scroll';
+    return overflowValue === "auto" || overflowValue === "scroll"
   }
 
   /**
@@ -144,10 +144,10 @@ function polyfill() {
    * @returns {Boolean}
    */
   function isScrollable(el) {
-    var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
-    var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+    var isScrollableY = hasScrollableSpace(el, "Y") && canOverflow(el, "Y")
+    var isScrollableX = hasScrollableSpace(el, "X") && canOverflow(el, "X")
 
-    return isScrollableY || isScrollableX;
+    return isScrollableY || isScrollableX
   }
 
   /**
@@ -157,17 +157,17 @@ function polyfill() {
    * @returns {Node} el
    */
   function findScrollableParent(el) {
-    var isBody;
+    var isBody
 
     do {
-      el = el.parentNode;
+      el = el.parentNode
 
-      isBody = el === d.body;
-    } while (isBody === false && isScrollable(el) === false);
+      isBody = el === d.body
+    } while (isBody === false && isScrollable(el) === false)
 
-    isBody = null;
+    isBody = null
 
-    return el;
+    return el
   }
 
   /**
@@ -177,26 +177,26 @@ function polyfill() {
    * @returns {undefined}
    */
   function step(context) {
-    var time = now();
-    var value;
-    var currentX;
-    var currentY;
-    var elapsed = (time - context.startTime) / SCROLL_TIME;
+    var time = now()
+    var value
+    var currentX
+    var currentY
+    var elapsed = (time - context.startTime) / SCROLL_TIME
 
     // avoid elapsed times higher than one
-    elapsed = elapsed > 1 ? 1 : elapsed;
+    elapsed = elapsed > 1 ? 1 : elapsed
 
     // apply easing to elapsed time
-    value = ease(elapsed);
+    value = ease(elapsed)
 
-    currentX = context.startX + (context.x - context.startX) * value;
-    currentY = context.startY + (context.y - context.startY) * value;
+    currentX = context.startX + (context.x - context.startX) * value
+    currentY = context.startY + (context.y - context.startY) * value
 
-    context.method.call(context.scrollable, currentX, currentY);
+    context.method.call(context.scrollable, currentX, currentY)
 
     // scroll more if we have not reached our destination
     if (currentX !== context.x || currentY !== context.y) {
-      w.requestAnimationFrame(step.bind(w, context));
+      w.requestAnimationFrame(step.bind(w, context))
     }
   }
 
@@ -209,23 +209,23 @@ function polyfill() {
    * @returns {undefined}
    */
   function smoothScroll(el, x, y) {
-    var scrollable;
-    var startX;
-    var startY;
-    var method;
-    var startTime = now();
+    var scrollable
+    var startX
+    var startY
+    var method
+    var startTime = now()
 
     // define scroll context
     if (el === d.body) {
-      scrollable = w;
-      startX = w.scrollX || w.pageXOffset;
-      startY = w.scrollY || w.pageYOffset;
-      method = original.scroll;
+      scrollable = w
+      startX = w.scrollX || w.pageXOffset
+      startY = w.scrollY || w.pageYOffset
+      method = original.scroll
     } else {
-      scrollable = el;
-      startX = el.scrollLeft;
-      startY = el.scrollTop;
-      method = scrollElement;
+      scrollable = el
+      startX = el.scrollLeft
+      startY = el.scrollTop
+      method = scrollElement
     }
 
     // scroll looping over a frame
@@ -236,8 +236,8 @@ function polyfill() {
       startX: startX,
       startY: startY,
       x: x,
-      y: y
-    });
+      y: y,
+    })
   }
 
   // ORIGINAL METHODS OVERRIDES
@@ -245,7 +245,7 @@ function polyfill() {
   w.scroll = w.scrollTo = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
-      return;
+      return
     }
 
     // avoid smooth behavior if not required
@@ -254,18 +254,18 @@ function polyfill() {
         w,
         arguments[0].left !== undefined
           ? arguments[0].left
-          : typeof arguments[0] !== 'object'
-            ? arguments[0]
-            : w.scrollX || w.pageXOffset,
+          : typeof arguments[0] !== "object"
+          ? arguments[0]
+          : w.scrollX || w.pageXOffset,
         // use top prop, second argument if present or fallback to scrollY
         arguments[0].top !== undefined
           ? arguments[0].top
           : arguments[1] !== undefined
-            ? arguments[1]
-            : w.scrollY || w.pageYOffset
-      );
+          ? arguments[1]
+          : w.scrollY || w.pageYOffset
+      )
 
-      return;
+      return
     }
 
     // LET THE SMOOTHNESS BEGIN!
@@ -278,14 +278,14 @@ function polyfill() {
       arguments[0].top !== undefined
         ? ~~arguments[0].top
         : w.scrollY || w.pageYOffset
-    );
-  };
+    )
+  }
 
   // w.scrollBy
   w.scrollBy = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
-      return;
+      return
     }
 
     // avoid smooth behavior if not required
@@ -294,13 +294,17 @@ function polyfill() {
         w,
         arguments[0].left !== undefined
           ? arguments[0].left
-          : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+          : typeof arguments[0] !== "object"
+          ? arguments[0]
+          : 0,
         arguments[0].top !== undefined
           ? arguments[0].top
-          : arguments[1] !== undefined ? arguments[1] : 0
-      );
+          : arguments[1] !== undefined
+          ? arguments[1]
+          : 0
+      )
 
-      return;
+      return
     }
 
     // LET THE SMOOTHNESS BEGIN!
@@ -309,21 +313,21 @@ function polyfill() {
       d.body,
       ~~arguments[0].left + (w.scrollX || w.pageXOffset),
       ~~arguments[0].top + (w.scrollY || w.pageYOffset)
-    );
-  };
+    )
+  }
 
   // Element.prototype.scroll and Element.prototype.scrollTo
   Element.prototype.scroll = Element.prototype.scrollTo = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
-      return;
+      return
     }
 
     // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0]) === true) {
       // if one number is passed, throw error to match Firefox implementation
-      if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
-        throw new SyntaxError('Value could not be converted');
+      if (typeof arguments[0] === "number" && arguments[1] === undefined) {
+        throw new SyntaxError("Value could not be converted")
       }
 
       original.elementScroll.call(
@@ -331,33 +335,37 @@ function polyfill() {
         // use left prop, first number argument or fallback to scrollLeft
         arguments[0].left !== undefined
           ? ~~arguments[0].left
-          : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+          : typeof arguments[0] !== "object"
+          ? ~~arguments[0]
+          : this.scrollLeft,
         // use top prop, second argument or fallback to scrollTop
         arguments[0].top !== undefined
           ? ~~arguments[0].top
-          : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
-      );
+          : arguments[1] !== undefined
+          ? ~~arguments[1]
+          : this.scrollTop
+      )
 
-      return;
+      return
     }
 
-    var left = arguments[0].left;
-    var top = arguments[0].top;
+    var left = arguments[0].left
+    var top = arguments[0].top
 
     // LET THE SMOOTHNESS BEGIN!
     smoothScroll.call(
       this,
       this,
-      typeof left === 'undefined' ? this.scrollLeft : ~~left,
-      typeof top === 'undefined' ? this.scrollTop : ~~top
-    );
-  };
+      typeof left === "undefined" ? this.scrollLeft : ~~left,
+      typeof top === "undefined" ? this.scrollTop : ~~top
+    )
+  }
 
   // Element.prototype.scrollBy
   Element.prototype.scrollBy = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
-      return;
+      return
     }
 
     // avoid smooth behavior if not required
@@ -370,17 +378,17 @@ function polyfill() {
         arguments[0].top !== undefined
           ? ~~arguments[0].top + this.scrollTop
           : ~~arguments[1] + this.scrollTop
-      );
+      )
 
-      return;
+      return
     }
 
     this.scroll({
       left: ~~arguments[0].left + this.scrollLeft,
       top: ~~arguments[0].top + this.scrollTop,
-      behavior: arguments[0].behavior
-    });
-  };
+      behavior: arguments[0].behavior,
+    })
+  }
 
   // Element.prototype.scrollIntoView
   Element.prototype.scrollIntoView = function() {
@@ -389,15 +397,15 @@ function polyfill() {
       original.scrollIntoView.call(
         this,
         arguments[0] === undefined ? true : arguments[0]
-      );
+      )
 
-      return;
+      return
     }
 
     // LET THE SMOOTHNESS BEGIN!
-    var scrollableParent = findScrollableParent(this);
-    var parentRects = scrollableParent.getBoundingClientRect();
-    var clientRects = this.getBoundingClientRect();
+    var scrollableParent = findScrollableParent(this)
+    var parentRects = scrollableParent.getBoundingClientRect()
+    var clientRects = this.getBoundingClientRect()
 
     if (scrollableParent !== d.body) {
       // reveal element inside parent
@@ -406,31 +414,31 @@ function polyfill() {
         scrollableParent,
         scrollableParent.scrollLeft + clientRects.left - parentRects.left,
         scrollableParent.scrollTop + clientRects.top - parentRects.top
-      );
+      )
 
       // reveal parent in viewport unless is fixed
-      if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+      if (w.getComputedStyle(scrollableParent).position !== "fixed") {
         w.scrollBy({
           left: parentRects.left,
           top: parentRects.top,
-          behavior: 'smooth'
-        });
+          behavior: "smooth",
+        })
       }
     } else {
       // reveal element in viewport
       w.scrollBy({
         left: clientRects.left,
         top: clientRects.top,
-        behavior: 'smooth'
-      });
+        behavior: "smooth",
+      })
     }
-  };
+  }
 }
 
-if (typeof exports === 'object' && typeof module !== 'undefined') {
+if (typeof exports === "object" && typeof module !== "undefined") {
   // commonjs
-  module.exports = { polyfill: polyfill };
+  module.exports = { polyfill: polyfill }
 } else {
   // global
-  polyfill();
+  polyfill()
 }

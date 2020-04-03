@@ -4,9 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
-
 import "src/styles/global.scss"
 
-import "assets/js/site.js"
-import "assets/js/smoothscroll.js"
+import "src/smoothscroll.js"

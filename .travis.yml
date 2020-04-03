@@ -1,8 +1,6 @@
 notifications:
   email: false
-language: javascript
-rvm:
-- 2.5.1
+language: node_js
 before_install:
   - npm i gatsby-cli -g
   - npm ci

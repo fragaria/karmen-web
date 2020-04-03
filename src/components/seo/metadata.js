@@ -31,7 +31,7 @@ function SEOMetadata({ description, lang, meta, title, img, pathname }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaImg = img || fallbackImg
-  const metaUrl = `${site.siteMetadata.siteUrl}${pathname || '/'}`
+  const metaUrl = `${site.siteMetadata.siteUrl}${pathname || "/"}`
 
   return (
     <Helmet
@@ -94,8 +94,7 @@ function SEOMetadata({ description, lang, meta, title, img, pathname }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-    </Helmet>
+    ></Helmet>
   )
 }
 

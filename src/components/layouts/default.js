@@ -10,23 +10,23 @@ import PropTypes from "prop-types"
 
 import Sitenav from "../sitenav"
 import Footer from "../footer"
-import IEWarning from "../legacy/ie-warning";
+import IEWarning from "../legacy/ie-warning"
 
 import BlankLayout from "./blank"
 
 const Layout = ({ lang, children }) => {
   return (
-      <BlankLayout>
-          <Sitenav lang={lang} />
-          <div className="page-container__inner sitenav-wrapper">
-            <div className="sitenav-wrapper__push">
-                <IEWarning />
-                {children}
-                <Footer />
-            </div>
-          </div>
-      </BlankLayout>
-  );
+    <BlankLayout>
+      <Sitenav lang={lang} />
+      <div className="page-container__inner sitenav-wrapper">
+        <div className="sitenav-wrapper__push">
+          <IEWarning />
+          {children}
+          <Footer />
+        </div>
+      </div>
+    </BlankLayout>
+  )
 }
 
 Layout.propTypes = {

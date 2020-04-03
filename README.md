@@ -5,24 +5,24 @@
 ## Table of contents
 
 - [karmen.fragaria.cz website](#fragariacz-website)
-    - [Table of contents](#table-of-contents)
+  - [Table of contents](#table-of-contents)
 - [Content](#content)
-    - [Providing images](#providing-images)
-    - [Including images within the page body](#including-images-within-the-page-body)
-    - [Including Youtube videos in the page body](#including-youtube-videos-in-the-page-body)
-    - [Including embeddables like iframes](#including-embeddables-like-iframes)
-    - [Highlighting code blocks](#highlighting-code-blocks)
+  - [Providing images](#providing-images)
+  - [Including images within the page body](#including-images-within-the-page-body)
+  - [Including Youtube videos in the page body](#including-youtube-videos-in-the-page-body)
+  - [Including embeddables like iframes](#including-embeddables-like-iframes)
+  - [Highlighting code blocks](#highlighting-code-blocks)
 - [Development](#development)
-    - [Installation](#installation)
-        - [Install build dependencies](#install-build-dependencies)
-            - [Ubuntu 18.04](#ubuntu-1804)
-            - [Fedora 28](#fedora-28)
-        - [Install rbenv](#install-rbenv)
-        - [Installing dependencies on macOS](#installing-dependencies-on-macos)
-        - [Installing the app](#installing-the-app)
-    - [Launching the app](#launching-the-app)
-    - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
-    - [Using Docker](#using-docker)
+  - [Installation](#installation)
+    - [Install build dependencies](#install-build-dependencies)
+      - [Ubuntu 18.04](#ubuntu-1804)
+      - [Fedora 28](#fedora-28)
+    - [Install rbenv](#install-rbenv)
+    - [Installing dependencies on macOS](#installing-dependencies-on-macos)
+    - [Installing the app](#installing-the-app)
+  - [Launching the app](#launching-the-app)
+  - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
+  - [Using Docker](#using-docker)
 
 # Content
 
@@ -65,7 +65,7 @@ npm i
 Start the application using:
 
 ```
-gatsby develop
+npm start
 ```
 
 Testing site will be available at `http://localhost:8000/`.
@@ -75,7 +75,7 @@ Testing site will be available at `http://localhost:8000/`.
 Create bundle using:
 
 ```
-gatsby build
+npm run build
 ```
 
 ## Using Docker
@@ -86,14 +86,13 @@ to get things up and running.
 First, make sure you have Docker along with `docker-comopose` installed. To do
 so, please follow a guide according to you OS of choice:
 
-* [Windows](https://docs.docker.com/docker-for-windows/install/)
-* [macOS](https://docs.docker.com/docker-for-mac/install/)
-* [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-* [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
+- [Windows](https://docs.docker.com/docker-for-windows/install/)
+- [macOS](https://docs.docker.com/docker-for-mac/install/)
+- [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
 `docker-compose` can be installed by following
 [official resources](https://docs.docker.com/compose/install/).
-
 
 **Note for Fedora**: It's better to run docker-compose without `sudo`. Please
 follow [this guide](https://bluntinstrumentsoftesting.com/2016/12/03/run-docker-without-sudo-in-fedora-25/)
