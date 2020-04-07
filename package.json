@@ -5,11 +5,15 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-react-intl": "^7.1.0",
     "classnames": "^2.2.6",
     "cookieconsent": "^3.1.1",
+    "formik": "^2.1.4",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-load-script": "^1.0.6",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.1.24",
@@ -18,14 +22,20 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.4.3",
+    "intl": "^1.2.5",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
+    "ptz-i18n": "^1.0.0",
     "react": "^16.12.0",
     "react-cookie-consent": "^3.0.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-intl": "^4.3.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "babel-preset-gatsby": "^0.3.1",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.19.1",
     "resolve-url-loader": "^3.1.1"
@@ -42,6 +52,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "prettier",
+    "extract-messages": "babel ./src  --out-file /dev/null",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

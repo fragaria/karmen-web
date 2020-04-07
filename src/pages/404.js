@@ -1,13 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layouts/blank"
-import SEOMetadata from "../components/seo/metadata"
+import Layout from "layouts/blank"
+import SEOMetadata from "components/seo/metadata"
 
 import karmenLogoImg from "assets/img/karmen-logo.svg"
 
 const NotFoundPage = () => {
   const data = useStaticQuery(graphql`
-    query NotFoundQuery {
+    query {
       site {
         siteMetadata {
           company {

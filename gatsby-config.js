@@ -1,4 +1,5 @@
 const path = require("path")
+const languages = require("./src/data/languages")
 
 module.exports = {
   siteMetadata: {
@@ -20,6 +21,11 @@ module.exports = {
       "css",
     ],
     siteUrl: "https://karmen.tech", // no trailing slash!
+    languages,
+    checkout: {
+      octobatApiKey: process.env.OCTOBAT_API_KEY || null,
+      octobatBeanieConfigurationId: process.env.OCTOBAT_BEANIE_CONFIGURATION_ID || "default",
+    },
     company: {
       websiteTitle: "Karmen",
       officialName: "Fragaria s.r.o.",
@@ -68,10 +74,10 @@ module.exports = {
         { name: "Testimonials", url: `/en/#portfolio` },
       ],
       cs: [
-        { name: "Produkty a služby", url: "/#products" },
-        { name: "Kde koupit", url: `/#buy` },
-        { name: "Beta testování", url: `/#beta` },
-        { name: "Reference", url: `/#portfolio` },
+        { name: "Produkty a služby", url: "/cs/#products" },
+        { name: "Kde koupit", url: `/cs/#buy` },
+        { name: "Beta testování", url: `/cs/#beta` },
+        { name: "Reference", url: `/cs/#portfolio` },
       ],
     },
   },
@@ -101,8 +107,11 @@ module.exports = {
       resolve: "gatsby-plugin-root-import",
       options: {
         src: path.join(__dirname, "src"),
+        components: path.join(__dirname, "src/components"),
+        layouts: path.join(__dirname, "src/layouts"),
         pages: path.join(__dirname, "src/pages"),
         assets: path.join(__dirname, "src/assets"),
+        translations: path.join(__dirname, "src/data/translations"),
       },
     },
     /**
@@ -143,6 +152,24 @@ module.exports = {
         trackingId: "UA-9784905-23",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: languages.defaultLangKey,
+        prefixDefault: true,
+      }
+    },
+    /**
+     * Load Octobat Beanie checkout script
+     */
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        disable: !process.env.OCTOBAT_API_KEY,
+        src: 'https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,0 +1,21 @@
+{
+  "checkoutform.error_missing_name": "Vyplňte prosím vaše jméno.",
+  "checkoutform.error_missing_phone": "Vyplňte prosím váš telefon.",
+  "checkoutform.error_missing_email": "Vyplňte prosím váš email.",
+  "checkoutform.error_missing_line1": "Vyplňte prosím ulici a číslo domu.",
+  "checkoutform.error_missing_line2": "Vyplňte prosím město.",
+  "checkoutform.error_missing_postal_code": "Vyplňte prosím PSČ.",
+  "checkoutform.us_adapters_out_of_stock": "<em>US adaptéry nejsou momentálně skladem. Je možné, že doba pro dodání bude trochu delší.</em>",
+  "checkoutform.label_variant": "Varianta",
+  "checkoutform.label_count": "Počet",
+  "checkoutform.label_full_name": "Vaše celé jméno",
+  "checkoutform.label_email": "Váš email",
+  "checkoutform.label_phone": "Váš telefon",
+  "checkoutform.label_company": "Firma",
+  "checkoutform.label_line1": "Ulice a číslo domu",
+  "checkoutform.label_line2": "Město",
+  "checkoutform.label_postal_code": "PSČ",
+  "checkoutform.label_state": "Stát",
+  "checkoutform.label_country": "Země",
+  "checkoutform.cta_buy": "Koupit"
+}

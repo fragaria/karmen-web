@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "react-intl",
+      {
+        "messagesDir": "./src/data/messages/",
+        "extractSourceLocation": true
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
+      }
+    ]
+  ]
+}

@@ -22,7 +22,7 @@
     width: 100%;
     font-family: getFontFamily($headingtype);
     background-color: map-get($palette, gray-light);
-    border: 0;
+    border: gu(0.1) transparent solid;
     border-radius: 0;
     padding: gu(0.5);
 
@@ -72,12 +72,28 @@
             }
         }
     }
+
+    &--errored {
+      color: map-get($palette, red);
+    }
+}
+
+p.form-control-error,
+.typeset p.form-control-error {
+  font-family: getFontFamily($headingtype);
+  margin-bottom: 0;
+
+  @include fontsize(eta);
 }
 
 input.form-control {
     // height: 2rem;
     line-height: gu();
     // border: 0;
+}
+
+.form-control-wrapper--errored input.form-control {
+  border-color: map-get($palette, red);
 }
 
 select.form-control {

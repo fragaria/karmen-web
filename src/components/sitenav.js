@@ -3,6 +3,7 @@ import classNames from "classnames"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { getCurrentLangKey } from "ptz-i18n"
 
 import karmenLogoImg from "assets/img/karmen-logo.svg"
 
@@ -60,7 +61,7 @@ function shirkSitenavOnScroll(element) {
   }
 }
 
-const Sitenav = ({ lang }) => {
+const Sitenav = () => {
   const data = useStaticQuery(graphql`
     query SitenavQuery {
       site {
@@ -85,6 +86,10 @@ const Sitenav = ({ lang }) => {
               name
             }
           }
+          languages {
+            defaultLangKey
+            langs
+          }
         }
       }
     }
@@ -93,6 +98,10 @@ const Sitenav = ({ lang }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isAnimated, setIsAnimated] = useState(true)
   const sitenavRef = React.createRef()
+
+  const { langs, defaultLangKey } = data.site.siteMetadata.languages
+  const langKey = getCurrentLangKey(langs, defaultLangKey, window.location.pathname)
+  const homeLink = `/${langKey}/`
 
   useEffect(() => {
     shirkSitenavOnScroll(sitenavRef.current)
@@ -147,29 +156,29 @@ const Sitenav = ({ lang }) => {
       <div className="sitenav__container">
         <div className="content-block content-block__cover--mobile">
           <div className="sitenav__menu js-sitenav-menu">
-            <a
-              href="/"
+            <Link
+              to={homeLink}
               className="sitenav__company typeset__anchor--nounderline"
               itemProp="url"
             >
               <span itemProp="name">Karmen</span>
-            </a>
+            </Link>
 
-            <a className="sitenav__brand" href="/">
+            <Link className="sitenav__brand" to={homeLink}>
               <img
                 alt={data.site.siteMetadata.company.officialName}
                 src={karmenLogoImg}
               />
-            </a>
+            </Link>
 
-            {lang === "en" && (
+            {langKey === "en" && (
               <Link
-                to="/"
+                to="/cs/"
                 className="sitenav__switch flag czech-republic"
                 title="Přepnout do češtiny"
               ></Link>
             )}
-            {lang !== "en" && (
+            {langKey !== "en" && (
               <Link
                 to="/en/"
                 className="sitenav__switch flag united-kingdom"
@@ -192,7 +201,7 @@ const Sitenav = ({ lang }) => {
           </div>
 
           <ul className="sitenav__linkset">
-            {data.site.siteMetadata.nav[lang].map(item => (
+            {data.site.siteMetadata.nav[langKey].map(item => (
               <li
                 key={item.url}
                 className="sitenav__linkset-item js-sitenav__link"
@@ -213,8 +222,6 @@ const Sitenav = ({ lang }) => {
   )
 }
 
-Sitenav.props = {
-  lang: PropTypes.string.isRequired,
-}
+Sitenav.props = {}
 
 export default Sitenav
