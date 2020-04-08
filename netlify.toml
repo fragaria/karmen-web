@@ -1,0 +1,5 @@
+## _redirects
+/en  /en/:splat   302
+/cs  /cs/:splat   302
+/*  /cs/:splat   302  Language=cs
+/*  /en/:splat   302
