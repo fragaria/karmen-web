@@ -160,7 +160,7 @@ const IndexENPage = ({ data, location }) => {
                 </li>
               </ul>
             </article>
-            <CheckoutBooth />
+            <CheckoutBooth location={location} />
             <span id="buy"></span>
           </div>
         </section>

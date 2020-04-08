@@ -82,7 +82,7 @@ const CheckoutForm = ({ onBuy }) => (
     onSubmit={(values, { setSubmitting }) => onBuy(values)}
   >
     {({ isSubmitting, values }) => {
-      const showAdapterWarning = values["variant"] == "karmen_pill_us_adapter"
+      const showAdapterWarning = values["variant"] === "karmen_pill_us_adapter"
       const pillVariant = getItemBySku(PILL_VARIANTS, values["variant"])
       const shippingVariant = selectShippingVariant(values["country"])
 

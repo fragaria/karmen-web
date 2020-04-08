@@ -61,7 +61,7 @@ function shirkSitenavOnScroll(element) {
   }
 }
 
-const Sitenav = () => {
+const Sitenav = ({ location }) => {
   const data = useStaticQuery(graphql`
     query SitenavQuery {
       site {
@@ -100,7 +100,7 @@ const Sitenav = () => {
   const langKey = getCurrentLangKey(
     langs,
     defaultLangKey,
-    window.location.pathname
+    location.pathname
   )
   const homeLink = `/${langKey}/`
 
@@ -223,6 +223,8 @@ const Sitenav = () => {
   )
 }
 
-Sitenav.props = {}
+Sitenav.props = {
+  location: PropTypes.object.isRequired
+}
 
 export default Sitenav

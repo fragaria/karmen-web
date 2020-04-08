@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import { injectIntl, defineMessages, useIntl } from "react-intl"
+import { defineMessages, useIntl } from "react-intl"
 
 import strawberryImg from "assets/img/strawberry.svg"
 

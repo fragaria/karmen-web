@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n"
+import { getCurrentLangKey } from "ptz-i18n"
 import { IntlProvider } from "react-intl"
 import "intl"
 
@@ -36,7 +36,7 @@ const Layout = ({ children, location, i18nMessages }) => {
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <BlankLayout>
-        <Sitenav />
+        <Sitenav location={location} />
         <div className="page-container__inner sitenav-wrapper">
           <div className="sitenav-wrapper__push">
             {/* <IEWarning /> */}

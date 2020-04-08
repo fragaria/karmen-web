@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { getCurrentLangKey } from "ptz-i18n"
 
@@ -6,7 +7,7 @@ import { CheckoutSession } from "./session"
 import CheckoutForm from "./form"
 import { selectShippingVariant } from "./config"
 
-const CheckoutBooth = () => {
+const CheckoutBooth = ({ location }) => {
   const { site: config } = useStaticQuery(graphql`
     query {
       site {
@@ -61,6 +62,10 @@ const CheckoutBooth = () => {
   }
 
   return <CheckoutForm onBuy={finalizeSession} />
+}
+
+CheckoutBooth.propTypes = {
+  location: PropTypes.object.isRequired
 }
 
 export default CheckoutBooth
