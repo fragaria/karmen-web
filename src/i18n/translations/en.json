@@ -18,6 +18,8 @@
   "checkoutform.label_state": "State",
   "checkoutform.label_variant": "Variant",
   "checkoutform.us_adapters_out_of_stock": "<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>",
+  "cookieconsent.cta": "Got it!",
+  "cookieconsent.statement": "This site uses its own cookies and third-party cookies to gather information on your browsing for statistical purposes. If you continue browsing or fill in the form, we consider that you accept its use and <a>Fragaria Privacy Policy</a>.",
   "footer.docs_title": "Karmen docs",
   "footer.fb_profile_title": "Facebook profile page",
   "footer.gh_profile_title": "GitHub profile page",

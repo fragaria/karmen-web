@@ -65,7 +65,7 @@ const CheckoutBooth = ({ location }) => {
 }
 
 CheckoutBooth.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 }
 
 export default CheckoutBooth

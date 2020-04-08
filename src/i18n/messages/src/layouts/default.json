@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cookieconsent.cta",
+    "defaultMessage": "Got it!",
+    "file": "src/layouts/default.js",
+    "start": { "line": 23, "column": 7 },
+    "end": { "line": 26, "column": 3 }
+  },
+  {
+    "id": "cookieconsent.statement",
+    "defaultMessage": "This site uses its own cookies and third-party cookies to gather information on your browsing for statistical purposes. If you continue browsing or fill in the form, we consider that you accept its use and <a>Fragaria Privacy Policy</a>.",
+    "file": "src/layouts/default.js",
+    "start": { "line": 56, "column": 6 },
+    "end": { "line": 68, "column": 8 }
+  }
+]

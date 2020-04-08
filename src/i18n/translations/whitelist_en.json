@@ -22,5 +22,7 @@
   "footer.tw_profile_title",
   "footer.fb_profile_title",
   "footer.yt_channel_title",
-  "footer.docs_title"
+  "footer.docs_title",
+  "cookieconsent.cta",
+  "cookieconsent.statement"
 ]

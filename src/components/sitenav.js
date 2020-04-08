@@ -97,11 +97,7 @@ const Sitenav = ({ location }) => {
   const sitenavRef = React.createRef()
 
   const { langs, defaultLangKey } = data.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(
-    langs,
-    defaultLangKey,
-    location.pathname
-  )
+  const langKey = getCurrentLangKey(langs, defaultLangKey, location.pathname)
   const homeLink = `/${langKey}/`
 
   useEffect(() => {
@@ -224,7 +220,7 @@ const Sitenav = ({ location }) => {
 }
 
 Sitenav.props = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 }
 
 export default Sitenav

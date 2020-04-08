@@ -4,248 +4,248 @@
       {
         "defaultMessage": "Please fill out your name.",
         "end": {
-          "column": 129,
-          "line": 72
+          "column": 12,
+          "line": 36
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_name",
         "start": {
-          "column": 28,
-          "line": 72
+          "column": 10,
+          "line": 33
         }
       },
       {
         "defaultMessage": "Please fill out your phone number.",
         "end": {
-          "column": 135,
-          "line": 75
+          "column": 12,
+          "line": 44
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_phone",
         "start": {
-          "column": 25,
-          "line": 75
+          "column": 10,
+          "line": 41
         }
       },
       {
         "defaultMessage": "Please fill out your email address.",
         "end": {
-          "column": 136,
-          "line": 78
+          "column": 12,
+          "line": 52
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_email",
         "start": {
-          "column": 25,
-          "line": 78
+          "column": 10,
+          "line": 49
         }
       },
       {
         "defaultMessage": "Please fill out street and house number of your residence.",
         "end": {
-          "column": 159,
-          "line": 81
+          "column": 12,
+          "line": 60
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_line1",
         "start": {
-          "column": 25,
-          "line": 81
+          "column": 10,
+          "line": 57
         }
       },
       {
         "defaultMessage": "Please fill out the city.",
         "end": {
-          "column": 126,
-          "line": 84
+          "column": 12,
+          "line": 68
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_line2",
         "start": {
-          "column": 25,
-          "line": 84
+          "column": 10,
+          "line": 65
         }
       },
       {
         "defaultMessage": "Please fill out your postal code.",
         "end": {
-          "column": 145,
-          "line": 87
+          "column": 12,
+          "line": 76
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_postal_code",
         "start": {
-          "column": 30,
-          "line": 87
+          "column": 10,
+          "line": 73
         }
       },
       {
         "defaultMessage": "<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>",
         "end": {
           "column": 10,
-          "line": 109
+          "line": 104
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.us_adapters_out_of_stock",
         "start": {
-          "column": 34,
-          "line": 103
+          "column": 8,
+          "line": 94
         }
       },
       {
         "defaultMessage": "Variant",
         "end": {
-          "column": 145,
-          "line": 121
+          "column": 22,
+          "line": 122
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_variant",
         "start": {
-          "column": 68,
-          "line": 121
+          "column": 20,
+          "line": 119
         }
       },
       {
         "defaultMessage": "Count",
         "end": {
-          "column": 142,
-          "line": 141
+          "column": 22,
+          "line": 154
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_count",
         "start": {
-          "column": 69,
-          "line": 141
+          "column": 20,
+          "line": 151
         }
       },
       {
         "defaultMessage": "Your full name",
         "end": {
-          "column": 155,
-          "line": 157
+          "column": 22,
+          "line": 180
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_full_name",
         "start": {
-          "column": 69,
-          "line": 157
+          "column": 20,
+          "line": 177
         }
       },
       {
         "defaultMessage": "Your email",
         "end": {
-          "column": 144,
-          "line": 172
+          "column": 22,
+          "line": 200
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_email",
         "start": {
-          "column": 66,
-          "line": 172
+          "column": 20,
+          "line": 197
         }
       },
       {
         "defaultMessage": "Your phone",
         "end": {
-          "column": 144,
-          "line": 187
+          "column": 22,
+          "line": 220
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_phone",
         "start": {
-          "column": 66,
-          "line": 187
+          "column": 20,
+          "line": 217
         }
       },
       {
         "defaultMessage": "Company name",
         "end": {
-          "column": 150,
-          "line": 202
+          "column": 22,
+          "line": 240
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_company",
         "start": {
-          "column": 68,
-          "line": 202
+          "column": 20,
+          "line": 237
         }
       },
       {
         "defaultMessage": "Street and house number",
         "end": {
-          "column": 157,
-          "line": 217
+          "column": 22,
+          "line": 260
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_line1",
         "start": {
-          "column": 66,
-          "line": 217
+          "column": 20,
+          "line": 257
         }
       },
       {
         "defaultMessage": "City",
         "end": {
-          "column": 138,
-          "line": 232
+          "column": 22,
+          "line": 280
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_line2",
         "start": {
-          "column": 66,
-          "line": 232
+          "column": 20,
+          "line": 277
         }
       },
       {
         "defaultMessage": "Postal code",
         "end": {
-          "column": 156,
-          "line": 247
+          "column": 22,
+          "line": 300
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_postal_code",
         "start": {
-          "column": 71,
-          "line": 247
+          "column": 20,
+          "line": 297
         }
       },
       {
         "defaultMessage": "State",
         "end": {
-          "column": 139,
-          "line": 262
+          "column": 22,
+          "line": 320
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_state",
         "start": {
-          "column": 66,
-          "line": 262
+          "column": 20,
+          "line": 317
         }
       },
       {
         "defaultMessage": "Country",
         "end": {
-          "column": 145,
-          "line": 277
+          "column": 22,
+          "line": 340
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_country",
         "start": {
-          "column": 68,
-          "line": 277
+          "column": 20,
+          "line": 337
         }
       },
       {
         "defaultMessage": "Buy",
         "end": {
-          "column": 83,
-          "line": 302
+          "column": 16,
+          "line": 383
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.cta_buy",
         "start": {
-          "column": 16,
-          "line": 302
+          "column": 14,
+          "line": 380
         }
       }
     ],
@@ -320,5 +320,36 @@
       }
     ],
     "path": "src/components/footer.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Got it!",
+        "end": {
+          "column": 3,
+          "line": 26
+        },
+        "file": "src/layouts/default.js",
+        "id": "cookieconsent.cta",
+        "start": {
+          "column": 7,
+          "line": 23
+        }
+      },
+      {
+        "defaultMessage": "This site uses its own cookies and third-party cookies to gather information on your browsing for statistical purposes. If you continue browsing or fill in the form, we consider that you accept its use and <a>Fragaria Privacy Policy</a>.",
+        "end": {
+          "column": 8,
+          "line": 68
+        },
+        "file": "src/layouts/default.js",
+        "id": "cookieconsent.statement",
+        "start": {
+          "column": 6,
+          "line": 56
+        }
+      }
+    ],
+    "path": "src/layouts/default.json"
   }
 ]
