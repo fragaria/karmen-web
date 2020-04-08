@@ -20,7 +20,7 @@ module.exports = {
       "html",
       "css",
     ],
-    siteUrl: "https://karmen.tech", // no trailing slash!
+    siteUrl: process.env.SITE_URL || "https://karmen.tech", // no trailing slash!
     languages,
     checkout: {
       octobatConfigured: !!process.env.OCTOBAT_API_KEY,
