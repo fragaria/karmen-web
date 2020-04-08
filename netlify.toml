@@ -1,5 +1,20 @@
-## _redirects
-/en  /en/:splat   302
-/cs  /cs/:splat   302
-/*  /cs/:splat   302  Language=cs
-/*  /en/:splat   302
+[[redirects]]
+  from = "/cs"
+  to = "/cs/:splat"
+  status = 302
+
+[[redirects]]
+  from = "/en"
+  to = "/en/:splat"
+  status = 302
+
+[[redirects]]
+  from = "/*"
+  to = "/cs/:splat"
+  status = 302
+  conditions = {Language = ["cs"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
