@@ -39,6 +39,7 @@ exclude:
     - __design
     - __tools
     - assets/favicons/README.md
+    - node_modules
     - .sass-cache
     - .travis
     - README.md
