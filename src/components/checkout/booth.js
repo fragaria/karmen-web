@@ -42,7 +42,7 @@ const CheckoutBooth = ({ location }) => {
         octobatBeanieConfigurationId:
           config.siteMetadata.checkout.octobatBeanieConfigurationId,
         successUrl: config.siteMetadata.siteUrl + successUrl,
-        cancelUrl: config.siteMetadata.checkout.cancelUrl + cancelUrl,
+        cancelUrl: config.siteMetadata.siteUrl + cancelUrl,
       })
       const shippingVariant = selectShippingVariant(values["country"])
 
