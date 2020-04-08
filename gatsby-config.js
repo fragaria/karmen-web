@@ -1,5 +1,5 @@
 const path = require("path")
-const languages = require("./src/data/languages")
+const languages = require("./src/i18n/languages")
 
 module.exports = {
   siteMetadata: {
@@ -24,7 +24,9 @@ module.exports = {
     languages,
     checkout: {
       octobatApiKey: process.env.OCTOBAT_API_KEY || null,
-      octobatBeanieConfigurationId: process.env.OCTOBAT_BEANIE_CONFIGURATION_ID || "default",
+      octobatBeanieConfigurationId:
+        process.env.OCTOBAT_BEANIE_CONFIGURATION_ID ||
+        "oc_beanie_cc_15861720512wyfd43d44f5",
     },
     company: {
       websiteTitle: "Karmen",
@@ -111,7 +113,7 @@ module.exports = {
         layouts: path.join(__dirname, "src/layouts"),
         pages: path.join(__dirname, "src/pages"),
         assets: path.join(__dirname, "src/assets"),
-        translations: path.join(__dirname, "src/data/translations"),
+        translations: path.join(__dirname, "src/i18n/translations"),
       },
     },
     /**
@@ -155,21 +157,22 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyForNull: 'any',
+        langKeyForNull: "any",
         langKeyDefault: languages.defaultLangKey,
         prefixDefault: true,
-      }
+      },
     },
     /**
      * Load Octobat Beanie checkout script
      */
     {
-      resolve: 'gatsby-plugin-load-script',
+      resolve: "gatsby-plugin-load-script",
       options: {
         disable: !process.env.OCTOBAT_API_KEY,
-        src: 'https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js',
+        src:
+          "https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

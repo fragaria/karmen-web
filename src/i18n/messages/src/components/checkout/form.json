@@ -1,0 +1,135 @@
+[
+  {
+    "id": "checkoutform.error_missing_name",
+    "defaultMessage": "Please fill out your name.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 33, "column": 10 },
+    "end": { "line": 36, "column": 12 }
+  },
+  {
+    "id": "checkoutform.error_missing_phone",
+    "defaultMessage": "Please fill out your phone number.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 41, "column": 10 },
+    "end": { "line": 44, "column": 12 }
+  },
+  {
+    "id": "checkoutform.error_missing_email",
+    "defaultMessage": "Please fill out your email address.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 49, "column": 10 },
+    "end": { "line": 52, "column": 12 }
+  },
+  {
+    "id": "checkoutform.error_missing_line1",
+    "defaultMessage": "Please fill out street and house number of your residence.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 57, "column": 10 },
+    "end": { "line": 60, "column": 12 }
+  },
+  {
+    "id": "checkoutform.error_missing_line2",
+    "defaultMessage": "Please fill out the city.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 65, "column": 10 },
+    "end": { "line": 68, "column": 12 }
+  },
+  {
+    "id": "checkoutform.error_missing_postal_code",
+    "defaultMessage": "Please fill out your postal code.",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 73, "column": 10 },
+    "end": { "line": 76, "column": 12 }
+  },
+  {
+    "id": "checkoutform.us_adapters_out_of_stock",
+    "defaultMessage": "<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 94, "column": 8 },
+    "end": { "line": 104, "column": 10 }
+  },
+  {
+    "id": "checkoutform.label_variant",
+    "defaultMessage": "Variant",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 119, "column": 20 },
+    "end": { "line": 122, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_count",
+    "defaultMessage": "Count",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 151, "column": 20 },
+    "end": { "line": 154, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_full_name",
+    "defaultMessage": "Your full name",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 177, "column": 20 },
+    "end": { "line": 180, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_email",
+    "defaultMessage": "Your email",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 197, "column": 20 },
+    "end": { "line": 200, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_phone",
+    "defaultMessage": "Your phone",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 217, "column": 20 },
+    "end": { "line": 220, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_company",
+    "defaultMessage": "Company name",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 237, "column": 20 },
+    "end": { "line": 240, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_line1",
+    "defaultMessage": "Street and house number",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 257, "column": 20 },
+    "end": { "line": 260, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_line2",
+    "defaultMessage": "City",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 277, "column": 20 },
+    "end": { "line": 280, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_postal_code",
+    "defaultMessage": "Postal code",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 297, "column": 20 },
+    "end": { "line": 300, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_state",
+    "defaultMessage": "State",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 317, "column": 20 },
+    "end": { "line": 320, "column": 22 }
+  },
+  {
+    "id": "checkoutform.label_country",
+    "defaultMessage": "Country",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 337, "column": 20 },
+    "end": { "line": 340, "column": 22 }
+  },
+  {
+    "id": "checkoutform.cta_buy",
+    "defaultMessage": "Buy",
+    "file": "src/components/checkout/form.js",
+    "start": { "line": 380, "column": 14 },
+    "end": { "line": 383, "column": 16 }
+  }
+]

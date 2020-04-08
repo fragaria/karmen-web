@@ -3,7 +3,7 @@
     [
       "react-intl",
       {
-        "messagesDir": "./src/data/messages/",
+        "messagesDir": "./src/i18n/messages/",
         "extractSourceLocation": true
       }
     ]

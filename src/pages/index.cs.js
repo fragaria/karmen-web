@@ -6,7 +6,7 @@ import SEOBusinessInfo from "components/seo/business-info"
 import Layout from "layouts/cs"
 
 import Testimonials from "components/testimonials"
-import CheckoutForm from "components/checkout/form"
+import CheckoutBooth from "components/checkout/booth"
 
 import printersListImg from "assets/img/karmen-printers-list.png"
 import pillImg from "assets/img/karmen-pill.jpg"
@@ -99,8 +99,8 @@ const IndexPage = ({ data, location }) => {
             </a>
             , přičemž některé její části vychází z aplikace Octoprint. S cílem
             okamžitě „připojit a tisknout“ nabízíme placené a podporované řešení
-            tak, aby uživatel získal pravidelně aktualizovanou službu a kontroler,
-            který jednoduše zapojí a integruje do svého provozu.
+            tak, aby uživatel získal pravidelně aktualizovanou službu a
+            kontroler, který jednoduše zapojí a integruje do svého provozu.
           </p>
           <div className="v-home__career-content article-typeset">
             <article>
@@ -116,8 +116,8 @@ const IndexPage = ({ data, location }) => {
               </figure>
               <ul>
                 <li>
-                  Kompatibilita s nejrozšířenějšími slicery: Slic3r, PrusaSlicer,
-                  Ultimaker Cura apod.
+                  Kompatibilita s nejrozšířenějšími slicery: Slic3r,
+                  PrusaSlicer, Ultimaker Cura apod.
                 </li>
                 <li>Obraz z kamery ve webovém rozhraní</li>
                 <li>
@@ -133,9 +133,9 @@ const IndexPage = ({ data, location }) => {
             <article>
               <h2>Karmen</h2>
               <p>
-                Cloudová služba Karmen navržená pro správu všech tiskáren v rámci
-                jedné organizace, pod jedním uživatelským účtem na jednom místě.
-                Opět se jedná o{" "}
+                Cloudová služba Karmen navržená pro správu všech tiskáren v
+                rámci jedné organizace, pod jedním uživatelským účtem na jednom
+                místě. Opět se jedná o{" "}
                 <a
                   href="https://github.com/fragaria/karmen"
                   className="anchor anchor--emphasized"
@@ -154,8 +154,8 @@ const IndexPage = ({ data, location }) => {
               <p>S Karmen získáte:</p>
               <ul>
                 <li>
-                  Uživatelské webové rozhraní pro monitoring a správu připojených
-                  tiskáren
+                  Uživatelské webové rozhraní pro monitoring a správu
+                  připojených tiskáren
                 </li>
                 <li>Videopřenos v reálném čase</li>
                 <li>Vzdálené ovládání</li>
@@ -167,7 +167,7 @@ const IndexPage = ({ data, location }) => {
                 </li>
               </ul>
             </article>
-            <CheckoutForm />
+            <CheckoutBooth />
             <span id="buy"></span>
           </div>
         </section>
@@ -280,10 +280,11 @@ const IndexPage = ({ data, location }) => {
 
           <div className="v-home__career-content">
             <p>
-              Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí
-              3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.
-              Oproti konkurenčním řešením umožňuje Karmen připojení a spolupráci s
-              více typy 3D tiskáren, tedy více tiskárnami od různých výrobců.
+              Řešení Karmen se snaží cílit na jednotlivce s typicky jednou
+              domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D
+              tiskárnami. Oproti konkurenčním řešením umožňuje Karmen připojení
+              a spolupráci s více typy 3D tiskáren, tedy více tiskárnami od
+              různých výrobců.
             </p>
 
             <Testimonials />

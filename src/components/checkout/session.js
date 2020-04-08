@@ -1,21 +1,25 @@
-export const CheckoutSession = ({ octobatApiKey, octobatBeanieConfigurationId }) => ({
-  beanie: null,
-  /**
-   * Load all products (Pill and shipping variants)
-   */
-  initialize() {
-    this.beanie = window.OctobatBeanie(octobatApiKey)
-  },
+/**
+ * Simple checkout sesion that will redirect to Octobat Beanie simple checkout
+ * page.
+ */
+export const CheckoutSession = ({
+  octobatApiKey,
+  octobatBeanieConfigurationId,
+  successUrl,
+  cancelUrl,
+}) => ({
   /**
    * Redirect customer to the checkout page
    */
   finalize({ prefillData, items }) {
-    this.beanie.redirectToBeanie({
+    const beanie = window.OctobatBeanie(octobatApiKey)
+
+    beanie.redirectToBeanie({
       items,
-      successUrl: "https://karmen.tech",
-      cancelUrl: "https://karmen.tech",
+      successUrl,
+      cancelUrl,
       configurationId: octobatBeanieConfigurationId,
-      prefillData
+      prefillData,
     })
-  }
+  },
 })

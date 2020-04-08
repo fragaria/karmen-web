@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+// Load i18n graphql fragment
+import { querying } from "src/i18n/querying"

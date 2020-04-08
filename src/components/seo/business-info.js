@@ -28,10 +28,7 @@ const SEOBusinessInfo = ({ children, location, pageTitle }) => {
   `)
 
   return (
-    <div
-      itemScope
-      itemType="http://schema.org/LocalBusiness"
-    >
+    <div itemScope itemType="http://schema.org/LocalBusiness">
       <meta
         itemProp="name"
         content={data.site.siteMetadata.company.officialName}

@@ -38,6 +38,7 @@
     "babel-preset-gatsby": "^0.3.1",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.19.1",
+    "react-intl-translations-manager": "^5.0.3",
     "resolve-url-loader": "^3.1.1"
   },
   "keywords": [
@@ -51,8 +52,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "prettier",
+    "lint": "npm run format",
     "extract-messages": "babel ./src  --out-file /dev/null",
+    "manage-translations": "node ./translations.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

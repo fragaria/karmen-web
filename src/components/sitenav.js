@@ -86,10 +86,7 @@ const Sitenav = () => {
               name
             }
           }
-          languages {
-            defaultLangKey
-            langs
-          }
+          ...Languages
         }
       }
     }
@@ -100,7 +97,11 @@ const Sitenav = () => {
   const sitenavRef = React.createRef()
 
   const { langs, defaultLangKey } = data.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, window.location.pathname)
+  const langKey = getCurrentLangKey(
+    langs,
+    defaultLangKey,
+    window.location.pathname
+  )
   const homeLink = `/${langKey}/`
 
   useEffect(() => {

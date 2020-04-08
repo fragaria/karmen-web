@@ -6,7 +6,7 @@ import SEOBusinessInfo from "components/seo/business-info"
 import Layout from "layouts/en"
 
 import Testimonials from "components/testimonials"
-import CheckoutForm from "components/checkout/form"
+import CheckoutBooth from "components/checkout/booth"
 
 import printersListImg from "assets/img/karmen-printers-list.png"
 import pillImg from "assets/img/karmen-pill.jpg"
@@ -28,10 +28,10 @@ const IndexENPage = ({ data, location }) => {
             Karmen makes monitoring and management of an arbitrary number of 3D
             printers a breeze. Simply connect printers either to your local
             network or to the internet and Karmen will take care of the rest. It
-            allows you to enqueue print jobs, inspect the print progress layer by
-            layer and distribute jobs among multiple printers simply using your
-            web browser on any device. Karmen is compatible with a wide range of
-            printers and slicers. It’s set to launch in April 2020.
+            allows you to enqueue print jobs, inspect the print progress layer
+            by layer and distribute jobs among multiple printers simply using
+            your web browser on any device. Karmen is compatible with a wide
+            range of printers and slicers. It’s set to launch in April 2020.
           </p>
           <p className="hero__sub" id="subscribe">
             Nevertheless, it has already been{" "}
@@ -101,17 +101,17 @@ const IndexENPage = ({ data, location }) => {
             </a>{" "}
             software. Some of it’s magical powers are being handled by the well
             known Octoprint which Karmen builds upon under the scenes. If
-            “plug-and-print” is what you’re after, we also offer a paid and fully
-            supported option which comes up with regular updates and a genuine
-            Karmen Pill controller to connect your printer effortlessly.
+            “plug-and-print” is what you’re after, we also offer a paid and
+            fully supported option which comes up with regular updates and a
+            genuine Karmen Pill controller to connect your printer effortlessly.
           </p>
           <div className="v-home__career-content article-typeset">
             <article>
               <h2>Karmen Pill</h2>
               <p>
                 The Pill makes your printer smarter. It serves as a hardware
-                bridge for remote management tasks and integrates a webcam at the
-                same time in a single device with a tiny footprint. Printer
+                bridge for remote management tasks and integrates a webcam at
+                the same time in a single device with a tiny footprint. Printer
                 connection is made using an USB interface.
               </p>
               <figure className="figure content-block__cover--mobile ">
@@ -135,10 +135,10 @@ const IndexENPage = ({ data, location }) => {
               <p>
                 The Karmen cloud service is the brains behind the remote printer
                 management. It integrates all of your printers in a single
-                streamlined web interface which you can access from anywhere using
-                your account. If you decide to go with our hosted option, you will
-                be granted with a limited traffic and printer connections for
-                free.
+                streamlined web interface which you can access from anywhere
+                using your account. If you decide to go with our hosted option,
+                you will be granted with a limited traffic and printer
+                connections for free.
               </p>
 
               <figure className="figure content-block__cover--mobile ">
@@ -160,7 +160,7 @@ const IndexENPage = ({ data, location }) => {
                 </li>
               </ul>
             </article>
-            <CheckoutForm />
+            <CheckoutBooth />
             <span id="buy"></span>
           </div>
         </section>
@@ -176,8 +176,8 @@ const IndexENPage = ({ data, location }) => {
           <div className="v-home__career-content">
             <article className="contact v-home__company-about">
               <p>
-                Karmen will launch officially in April 2020. We would love to keep
-                you in touch with all the news until then —{" "}
+                Karmen will launch officially in April 2020. We would love to
+                keep you in touch with all the news until then —{" "}
                 <a href="./#subscribe" className="anchor anchor--emphasized">
                   please drop us your email
                 </a>
