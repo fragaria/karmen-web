@@ -23,7 +23,8 @@ module.exports = {
     siteUrl: "https://karmen.tech", // no trailing slash!
     languages,
     checkout: {
-      octobatApiKey: process.env.OCTOBAT_API_KEY || null,
+      octobatConfigured: !!process.env.OCTOBAT_API_KEY,
+      octobatApiKey: process.env.OCTOBAT_API_KEY || "???",
       octobatBeanieConfigurationId:
         process.env.OCTOBAT_BEANIE_CONFIGURATION_ID ||
         "oc_beanie_cc_15861720512wyfd43d44f5",
