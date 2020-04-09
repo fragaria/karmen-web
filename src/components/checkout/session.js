@@ -16,9 +16,14 @@ export const CheckoutSession = ({
 
     const metadata = {}
 
-    // store all shipping data under metadata keys prefixed by shipping_
+    // store all shipping data under metadata keys prefixed by shipping:
     Object.keys(shippingAddress).forEach(key => {
-      metadata[`shipping_${key}`] = shippingAddress[key]
+      metadata[`shipping:${key}`] = shippingAddress[key]
+    })
+
+    // store all item data under metadata keys prefixed by order:
+    items.forEach((item, index) => {
+      metadata[`order:item_${index}_${item.sku}`] = `${item.quantity}x ${item.name}`
     })
 
     beanie.redirectToBeanie({

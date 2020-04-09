@@ -17,8 +17,16 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
     const retVals = { ...values }
     // Get Pill config by its id
     const pillRef = getItemByProp(PILLS, "id", retVals["variant"])
-    // Select right SKU according to the country used
-    retVals["variant"] = getPillRefSku(pillRef, retVals["country"])
+
+    retVals["product"] = {
+      // Provide full Pill name
+      name: pillRef.name,
+      // Select right SKU according to the country used
+      sku: getPillRefSku(pillRef, retVals["country"])
+    }
+
+    // Drop internal variant reference
+    delete retVals["variant"]
 
     setSubmitting(true)
 

@@ -49,8 +49,8 @@ const CheckoutBooth = ({ location }) => {
       session.finalize({
         clientReferenceId: values["email"],
         items: [
-          { sku: values["variant"], quantity: values["quantity"] },
-          { sku: shippingVariant.sku, quantity: 1 },
+          { sku: values["product"].sku, name: values["product"].name, quantity: values["quantity"] },
+          { sku: shippingVariant.sku, name: shippingVariant.name, quantity: 1}
         ],
         prefillData: {
           customer_name: values["fullName"],
