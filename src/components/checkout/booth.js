@@ -47,6 +47,7 @@ const CheckoutBooth = ({ location }) => {
       const shippingVariant = selectShippingVariant(values["country"])
 
       session.finalize({
+        clientReferenceId: values["email"],
         items: [
           { sku: values["variant"], quantity: values["quantity"] },
           { sku: shippingVariant.sku, quantity: 1 },
@@ -54,6 +55,17 @@ const CheckoutBooth = ({ location }) => {
         prefillData: {
           customer_name: values["fullName"],
           customer_email: values["email"],
+        },
+        shippingAddress: {
+          fullName: values["fullName"],
+          company: values["company"],
+          email: values["email"],
+          phone: values["phone"],
+          line1: values["line1"],
+          line2: values["line2"],
+          state: values["state"],
+          postalCode: values["postalCode"],
+          country: values["country"],
         },
       })
     } else {
