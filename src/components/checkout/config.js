@@ -1,25 +1,58 @@
-export const PILL_VARIANTS = [
+export const PILLS = [
   {
-    sku: "karmen_pill_eu_adapter",
+    id: "pill_eu",
     name: "Karmen Pill (EU adapter)",
-    price: 130,
+    skus: {
+      CZ: "karmen_pill_eu_adapter_czk",
+      "*": "karmen_pill_eu_adapter",
+    },
   },
   {
-    sku: "karmen_pill_uk_adapter",
+    id: "pill_uk",
     name: "Karmen Pill (UK adapter)",
-    price: 130,
+    skus: {
+      CZ: "karmen_pill_uk_adapter_czk",
+      "*": "karmen_pill_uk_adapter",
+    },
   },
   {
-    sku: "karmen_pill_us_adapter",
+    id: "pill_us",
     name: "Karmen Pill (US adapter)",
-    price: 130,
+    skus: {
+      CZ: "karmen_pill_us_adapter_czk",
+      "*": "karmen_pill_us_adapter",
+    },
   },
 ]
 
-export const SHIPPING_VARIANTS = [
-  { sku: "shipping_to_cz", name: "Shipping (Czech Republic)", price: 5 },
-  { sku: "shipping_to_eu", name: "Shipping (EU countries)", price: 10 },
-  { sku: "shipping_outside_eu", name: "Shipping (outside EU)", price: 15 },
+export const PILL_SKUS = [
+  { sku: "karmen_pill_eu_adapter_czk", price: 3500, currency: "CZK" },
+  { sku: "karmen_pill_eu_adapter", price: 130, currency: "EUR" },
+  { sku: "karmen_pill_uk_adapter_czk", price: 3500, currency: "CZK" },
+  { sku: "karmen_pill_uk_adapter", price: 130, currency: "EUR" },
+  { sku: "karmen_pill_us_adapter_czk", price: 3500, currency: "CZK" },
+  { sku: "karmen_pill_us_adapter", price: 130, currency: "EUR" },
+]
+
+export const SHIPPING_SKUS = [
+  {
+    sku: "shipping_to_cz",
+    name: "Shipping (Czech Republic)",
+    price: 120,
+    currency: "CZK",
+  },
+  {
+    sku: "shipping_to_eu",
+    name: "Shipping (EU countries)",
+    price: 10,
+    currency: "EUR",
+  },
+  {
+    sku: "shipping_outside_eu",
+    name: "Shipping (outside EU)",
+    price: 15,
+    currency: "EUR",
+  },
 ]
 
 export const COUNTRIES = [
@@ -269,10 +302,17 @@ export const COUNTRIES = [
 ]
 
 /**
- * Find item by `sku` property in given item list
+ * Find item by given property in given item list
  */
-export function getItemBySku(items, sku) {
-  return items.find(variant => variant.sku === sku)
+export function getItemByProp(items, prop, value) {
+  return items.find(i => i[prop] === value)
+}
+
+export function getPillRefSku(pillRef, countryId) {
+  if (pillRef.skus[countryId]) {
+    return pillRef.skus[countryId]
+  }
+  return pillRef.skus["*"]
 }
 
 /**
@@ -282,8 +322,9 @@ export function selectShippingVariant(countryId) {
   const country = COUNTRIES.find(country => country.id === countryId)
 
   if (country) {
-    return getItemBySku(
-      SHIPPING_VARIANTS,
+    return getItemByProp(
+      SHIPPING_SKUS,
+      "sku",
       country.shippingSku || "shipping_outside_eu"
     )
   }

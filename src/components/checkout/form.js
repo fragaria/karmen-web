@@ -4,16 +4,18 @@ import { Formik, Form, Field } from "formik"
 import { FormattedMessage } from "react-intl"
 
 import {
-  PILL_VARIANTS,
+  PILLS,
+  PILL_SKUS,
   COUNTRIES,
   selectShippingVariant,
-  getItemBySku,
+  getPillRefSku,
+  getItemByProp,
 } from "./config"
 
-const CheckoutForm = ({ onBuy }) => (
+const CheckoutForm = ({ onBuy, initialCountryCode }) => (
   <Formik
     initialValues={{
-      variant: PILL_VARIANTS[0].sku,
+      variant: PILLS[0].id,
       quantity: 1,
       fullName: "",
       email: "",
@@ -23,7 +25,7 @@ const CheckoutForm = ({ onBuy }) => (
       line2: "",
       postalCode: "",
       state: "",
-      country: COUNTRIES[0].id,
+      country: initialCountryCode,
     }}
     validate={values => {
       const errors = {}
@@ -82,12 +84,22 @@ const CheckoutForm = ({ onBuy }) => (
     onSubmit={(values, { setSubmitting }) => onBuy(values)}
   >
     {({ isSubmitting, values }) => {
-      const showAdapterWarning = values["variant"] === "karmen_pill_us_adapter"
-      const pillVariant = getItemBySku(PILL_VARIANTS, values["variant"])
-      const shippingVariant = selectShippingVariant(values["country"])
+      const currentCountry = values["country"]
+      const showAdapterWarning = values["variant"] === "pill_us"
 
+      // Get Pill config by its id
+      const pillRef = getItemByProp(PILLS, "id", values["variant"])
+      // Select right SKU according to the country used
+      const pillSku = getPillRefSku(pillRef, currentCountry)
+      // Get pill variant config (currency + price) by the sku
+      const pillVariant = getItemByProp(PILL_SKUS, "sku", pillSku)
+      // Shipping variant according to selected country
+      const shippingVariant = selectShippingVariant(values["country"])
+      // Total pill price (multiplied by quantity) excl. VAT
       const pillPrice = pillVariant.price * values["quantity"]
+      // Total shipping price
       const shippingPrice = shippingVariant.price
+      // Total price (pill + shipping)
       const totalPrice = pillPrice + shippingPrice
 
       const adapterWarningMsg = (
@@ -128,8 +140,8 @@ const CheckoutForm = ({ onBuy }) => (
                     )}
                   >
                     <select className="form-control" {...field}>
-                      {PILL_VARIANTS.map(variant => (
-                        <option key={variant.sku} value={variant.sku}>
+                      {PILLS.map(variant => (
+                        <option key={variant.id} value={variant.id}>
                           {variant.name}
                         </option>
                       ))}
@@ -364,10 +376,15 @@ const CheckoutForm = ({ onBuy }) => (
           <div>
             <h2>Souhrn</h2>
             <p>
-              {values["quantity"]}x Karmen Pill: {pillPrice} EUR bez DPH
+              {values["quantity"]}x Karmen Pill: {pillPrice}{" "}
+              {pillVariant.currency} bez DPH
             </p>
-            <p>Doprava: {shippingPrice} EUR bez DPH</p>
-            <p>Celkem: {totalPrice} EUR bez DPH</p>
+            <p>
+              Doprava: {shippingPrice} {shippingVariant.currency} bez DPH
+            </p>
+            <p>
+              Celkem: {totalPrice} {pillVariant.currency} bez DPH
+            </p>
           </div>
           <div className="form__submit">
             <p>
@@ -391,6 +408,11 @@ const CheckoutForm = ({ onBuy }) => (
 
 CheckoutForm.props = {
   onBuy: PropTypes.func.isRequired,
+  initialCountryCode: PropTypes.string,
+}
+
+CheckoutForm.defaultProps = {
+  initialCountryCode: "US",
 }
 
 export default CheckoutForm

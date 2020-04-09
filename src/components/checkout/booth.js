@@ -24,15 +24,15 @@ const CheckoutBooth = ({ location }) => {
     }
   `)
 
+  const { langs, defaultLangKey } = config.siteMetadata.languages
+  const langKey = getCurrentLangKey(
+    langs,
+    defaultLangKey,
+    window.location.pathname
+  )
+
   const finalizeSession = async values => {
     if (config.siteMetadata.checkout.octobatConfigured) {
-      const { langs, defaultLangKey } = config.siteMetadata.languages
-      const langKey = getCurrentLangKey(
-        langs,
-        defaultLangKey,
-        window.location.pathname
-      )
-
       const successUrl = langKey === "cs" ? "/cs/zaplaceno/" : "/en/paid/"
       const cancelUrl =
         langKey === "cs" ? "/cs/platba-zrusena/" : "/en/payment-cancelled/"
@@ -61,7 +61,12 @@ const CheckoutBooth = ({ location }) => {
     }
   }
 
-  return <CheckoutForm onBuy={finalizeSession} />
+  return (
+    <CheckoutForm
+      onBuy={finalizeSession}
+      initialCountryCode={langKey === "cs" ? "CZ" : "US"}
+    />
+  )
 }
 
 CheckoutBooth.propTypes = {
