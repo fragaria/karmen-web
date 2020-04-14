@@ -54,7 +54,7 @@ const IndexENPage = ({ data, location }) => {
               method="POST"
               acceptCharset="UTF-8"
               target="_blank"
-              novalidate
+              noValidate
             >
               <fieldset className="form__line">
                 <div className="form-control-wrapper form-control-wrapper--inline">
@@ -65,14 +65,15 @@ const IndexENPage = ({ data, location }) => {
                     placeholder="E-mail"
                   />
                   <div
-                    style={{position: 'absolute', left: '-5000px;'}}
+                    style={{position: 'absolute', left: '-5000px'}}
                     aria-hidden="true"
                   >
                     <input
                       type="text"
                       name="b_4dcf00156fa5e9a90c4bdda03_b15800dd3b"
-                      tabindex="-1"
+                      tabIndex="-1"
                       value=""
+                      readOnly
                     />
                   </div>
                   <button className="button" type="submit">
