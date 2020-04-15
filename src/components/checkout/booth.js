@@ -28,7 +28,7 @@ const CheckoutBooth = ({ location }) => {
   const langKey = getCurrentLangKey(
     langs,
     defaultLangKey,
-    window.location.pathname
+    location.pathname
   )
 
   const finalizeSession = async values => {
