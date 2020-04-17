@@ -83,6 +83,20 @@ module.exports = {
         { name: "Reference", url: `/cs/#portfolio` },
       ],
     },
+    footerNav: {
+      en: [
+        [
+          { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
+          { name: "Karmen Pill docs", url: "https://docs.karmen.tech/#/pill-getting-started" },
+        ]
+      ],
+      cs: [
+        [
+          { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
+          { name: "Karmen Pill docs", url: "https://docs.karmen.tech/#/pill-getting-started" },
+        ]
+      ],
+    },
   },
   plugins: [
     /**

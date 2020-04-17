@@ -1,30 +1,41 @@
 .page-container {
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-    &.noscroll {
-        overflow: hidden;
-    }
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+.page-container-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  &--gray {
+    background-color: map-get($palette, gray-light);
+  }
 }
 
 .page-container__inner {
-    width: 100%;
-    max-width: $page-container-max-width;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: map-get($sitenav-menu-height, mobile);
-    text-align: left;
+  width: 100%;
+  max-width: $page-container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  // padding-top: map-get($sitenav-menu-height, mobile);
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
-    @include breakpoint(tablet up) {
-        padding-top: map-get($sitenav-menu-height, tablet);
-    }
+  // @include breakpoint(tablet up) {
+  //     padding-top: map-get($sitenav-menu-height, tablet);
+  // }
 
-    @include breakpoint(desktop up) {
-        padding-top: map-get($sitenav-menu-height, desktop);
-    }
+  // @include breakpoint(desktop up) {
+  //     padding-top: map-get($sitenav-menu-height, desktop);
+  // }
 }
 
 
-.karmen-logo {
-    height: 16vh
-}

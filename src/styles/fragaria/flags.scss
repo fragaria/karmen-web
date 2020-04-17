@@ -6,6 +6,7 @@
     overflow: hidden;
     border: 1px solid #efefef;
     transform: scale(.3);
+    transform-origin: right;
 
     &.czech-republic {
         background: linear-gradient(146deg, #11457E 25%, transparent 15%) 0 -40px, linear-gradient(34deg, #11457E 25%, transparent 15%) 0 -40px, linear-gradient(to bottom, white 50%, #D7141A 50%);

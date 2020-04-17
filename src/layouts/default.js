@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import classNames from "classnames"
 import { useStaticQuery, graphql } from "gatsby"
 import { getCurrentLangKey } from "ptz-i18n"
 import {
@@ -76,7 +77,7 @@ const CC = () => {
   )
 }
 
-const Layout = ({ children, location, i18nMessages }) => {
+const Layout = ({ children, location, i18nMessages, containerWrapperClass = "page-container-wrapper--gray" } = {}) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -90,19 +91,20 @@ const Layout = ({ children, location, i18nMessages }) => {
   const url = location.pathname
   const { langs, defaultLangKey } = data.site.siteMetadata.languages
   const langKey = getCurrentLangKey(langs, defaultLangKey, url)
+  const wrapperClassName = classNames("page-container-wrapper", containerWrapperClass)
 
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <BlankLayout>
         <CC />
         <Sitenav location={location} />
-        <div className="page-container__inner sitenav-wrapper">
-          <div className="sitenav-wrapper__push">
+        <div className={wrapperClassName}>
+          <div className="page-container__inner">
             {/* <IEWarning /> */}
             {children}
-            <Footer />
           </div>
         </div>
+        <Footer location={location} />
       </BlankLayout>
     </IntlProvider>
   )
