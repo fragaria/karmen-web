@@ -141,7 +141,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#ea272e`,
         display: `minimal-ui`,
-        icon: `src/assets/img/karmen-logo-rect.svg`, // This path is relative to the root of the site.
+        icon: `src/assets/img/logo.svg`, // This path is relative to the root of the site.
       },
     },
     /**
