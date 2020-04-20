@@ -21,6 +21,8 @@ import "intl"
 
 import Sitenav from "components/sitenav"
 import Footer from "components/footer"
+import GitterLink from "components/gitter-link"
+import SubscriptionBox from "components/subscription-box"
 // import IEWarning from "../legacy/ie-warning"
 
 import BlankLayout from "./blank"
@@ -77,7 +79,7 @@ const CC = () => {
   )
 }
 
-const Layout = ({ children, location, i18nMessages, containerWrapperClass = "page-container-wrapper--gray" } = {}) => {
+const Layout = ({ children, location, i18nMessages, containerClass } = {}) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -91,19 +93,19 @@ const Layout = ({ children, location, i18nMessages, containerWrapperClass = "pag
   const url = location.pathname
   const { langs, defaultLangKey } = data.site.siteMetadata.languages
   const langKey = getCurrentLangKey(langs, defaultLangKey, url)
-  const wrapperClassName = classNames("page-container-wrapper", containerWrapperClass)
+  const wrapperClassName = classNames("page-container-wrapper", containerClass)
 
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
+      <GitterLink />
       <BlankLayout>
         <CC />
         <Sitenav location={location} />
         <div className={wrapperClassName}>
-          <div className="page-container__inner">
-            {/* <IEWarning /> */}
-            {children}
-          </div>
+          {/* <IEWarning /> */}
+          {children}
         </div>
+        <SubscriptionBox />
         <Footer location={location} />
       </BlankLayout>
     </IntlProvider>

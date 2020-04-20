@@ -19,10 +19,10 @@
     @include underlineSkippingDescenders();
 
     @if ($emphasize) {
-        color: map-get($palette, red);
+      color: map-get($palette, red);
     }
 
     &:hover {
-        text-decoration: none;
+      text-decoration: none;
     }
 }

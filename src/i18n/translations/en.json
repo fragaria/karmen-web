@@ -23,6 +23,20 @@
   "footer.docs_title": "Karmen docs",
   "footer.fb_profile_title": "Facebook profile page",
   "footer.gh_profile_title": "GitHub profile page",
+  "footer.important_links": "Important links",
   "footer.tw_profile_title": "Twitter profile page",
-  "footer.yt_channel_title": "Karmen YouTube channel"
+  "footer.yt_channel_title": "Karmen YouTube channel",
+  "gitter.label": "I need help",
+  "pricing-block.buy": "Buy Karmen",
+  "pricing-block.combo_price": "130 EUR",
+  "pricing-block.combo_price_note": "Total excl. VAT",
+  "pricing-block.headline": "Buy Karmen",
+  "pricing-block.karmen_price": "Free",
+  "pricing-block.karmen_price_note": "Launch special offer",
+  "pricing-block.pill_price": "130 EUR",
+  "pricing-block.special_offer_memo": "Conditions apply.",
+  "subscription-box.main": "Subscribe to Karmen news",
+  "subscription-box.sub": "Stay in the loop",
+  "testimonials-block.headline": "Clients & partners",
+  "testimonials-block.paragraph": "Karmen aims at both individuals with a single 3d printer as well as companies and organizations with multiple ones. Contrary to the other solutions on the market, Karmen allows you to connect multiple printers and to combine various printer brands without any limitations."
 }

@@ -58,6 +58,7 @@ module.exports = {
         youtube: "UC9kcYa3r0x4MLR47i1flnFw",
         readthedocs: "karmen",
         facebook: "karmen3D",
+        gitter: "fragaria/karmen",
       },
     },
     clients: [
@@ -86,14 +87,24 @@ module.exports = {
     footerNav: {
       en: [
         [
+          { name: "Sign up", url: "https://cloud.karmen.tech/register" },
+          { name: "Log in", url: "https://cloud.karmen.tech" },
+        ],
+        [
           { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
           { name: "Karmen Pill docs", url: "https://docs.karmen.tech/#/pill-getting-started" },
+          { name: "GitHub", url: "https://github.com/fragaria/karmen" },
         ]
       ],
       cs: [
         [
+          { name: "Zaregistrovat se", url: "https://cloud.karmen.tech/register" },
+          { name: "Přihlásit se", url: "https://cloud.karmen.tech" },
+        ],
+        [
           { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
           { name: "Karmen Pill docs", url: "https://docs.karmen.tech/#/pill-getting-started" },
+          { name: "GitHub", url: "https://github.com/fragaria/karmen" },
         ]
       ],
     },
@@ -155,7 +166,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#ea272e`,
         display: `minimal-ui`,
-        icon: `src/assets/img/logo.svg`, // This path is relative to the root of the site.
+        icon: `src/assets/img/karmen-logo-rect.svg`, // This path is relative to the root of the site.
       },
     },
     /**

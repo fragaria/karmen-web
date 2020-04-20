@@ -1,0 +1,7 @@
+@mixin anchor-behavior() {
+  transition: #{$anchor-hover-transition};
+
+  &:hover {
+    color: $anchor-hover-color;
+  }
+}

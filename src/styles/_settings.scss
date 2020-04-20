@@ -5,8 +5,8 @@ $palette: (
     red: #ea272e,
     dark-red: #9f1c21,
     olive-green: #8fa13b,
-    gray-light: #f5f5f5,
-    gray-semilight: #ddd,
+    gray-light: #f7f7f7,
+    gray-semilight: #f2f2f2,
     gray-medium: #ccc,
     gray-dark: #888,
     gray-very-dark: #333,
@@ -63,7 +63,9 @@ $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
 
-$page-container-max-width: 1410px;
+$page-container-max-width: 120rem; // ~1920px
+$page-content-max-width: 84rem; // ~1344px
+$sitenav-max-width: 96rem; // ~1536px
 
 // Buttons
 
@@ -90,12 +92,10 @@ $sharebox-variants: (
 );
 
 // Sitenav settings
-
-$sitenav-menu-height: (
+$sitenav-height: (
     mobile: 3 * $grid-unit,
     tablet: 5 * $grid-unit,
 );
-$sitenav-menu-height-shrinked: 3 * $grid-unit;
 
 
 // Baseline settings
@@ -110,34 +110,22 @@ $breakpoints: (
     desktop:        1600px          // 1600px  ~ Large desktop up
 );
 
-// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+// Root font-sizes for each breakpoint. Set to two thrids of desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    zero:           18px,
-    mobile:         18px,
-    tablet-small:   18px,
-    tablet:         18px,
-    desktop:        18px,
-);
-
-// This defines, how much shift is added to baselined headings that
-// should support anchored links like /blog/2018/03/28/blockchain-can-do/#not-that-hard.
-// Since there is a sitenav that sticks from the top of the page, we need
-// to shift the window by a little bit to compensate.
-$anchor-baseline-shifts: (
-    zero:           map-get($sitenav-menu-height, mobile),
-    mobile:         map-get($sitenav-menu-height, mobile),
-    tablet-small:   map-get($sitenav-menu-height, mobile),
-    tablet:         $sitenav-menu-height-shrinked,
-    desktop:        $sitenav-menu-height-shrinked,
+    zero:           16px,
+    mobile:         16px,
+    tablet-small:   16px,
+    tablet:         16px,
+    desktop:        16px,
 );
 
 $bodytype: (
-    font-family: "'Andulka Text Pro', Georgia, Palatino, serif",
+    font-family: "'Fira Sans', Helvetica, Arial, sans-serif",
     regular: normal,
     bold: 600,
     italic: italic,
-    cap-height: 0.64
+    cap-height: 0.66
 );
 
 $headingtype: (
@@ -158,59 +146,59 @@ $monospacetype: (
 // Major Third http://www.modularscale.com/
 $modular-scale: (
     zero: (
-        alpha:   48.0px,
-        beta:    36.0px,
-        gamma:   30.0px,
-        delta:   24.0px,
-        epsilon: 24.0px,
-        zeta:    18.0px,
-        eta:     17.0px,
-        theta:   12.8px,
-        iota:    11.5px
+        s9:   48.0px,
+        s8:   36.0px,
+        s7:   30.0px,
+        s6:   24.0px,
+        s5:   24.0px,
+        s4:   20.0px,
+        s3:   17.0px,
+        s2:   12.8px,
+        s1:   11.5px
     ),
     mobile: (
-        alpha:   64.0px,
-        beta:    36.0px,
-        gamma:   30.0px,
-        delta:   24.0px,
-        epsilon: 24.0px,
-        zeta:    18.0px,
-        eta:     17.0px,
-        theta:   12.8px,
-        iota:    11.5px
+        s9:   64.0px,
+        s8:   36.0px,
+        s7:   30.0px,
+        s6:   24.0px,
+        s5:   24.0px,
+        s4:   20.0px,
+        s3:   17.0px,
+        s2:   12.8px,
+        s1:   11.5px
     ),
     tablet-small: (
-        alpha:   72.0px,
-        beta:    64.0px,
-        gamma:   36.0px,
-        delta:   30.7px,
-        epsilon: 22.5px,
-        zeta:    20.0px,
-        eta:     18px,
-        theta:   15.0px,
-        iota:    12.7px
+        s9:   72.0px,
+        s8:   64.0px,
+        s7:   48.0px,
+        s6:   32.0px,
+        s5:   24.0px,
+        s4:   20.0px,
+        s3:   18px,
+        s2:   14.0px,
+        s1:   12.7px
     ),
     tablet: (
-        alpha:   72.0px,
-        beta:    64.0px,
-        gamma:   36.0px,
-        delta:   30.7px,
-        epsilon: 22.5px,
-        zeta:    20.0px,
-        eta:     18px,
-        theta:   15.0px,
-        iota:    12.7px
+        s9:   72.0px,
+        s8:   64.0px,
+        s7:   48.0px,
+        s6:   32.0px,
+        s5:   24.0px,
+        s4:   20.0px,
+        s3:   18px,
+        s2:   14.0px,
+        s1:   12.7px
     ),
     desktop: (
-        alpha:   72.0px,
-        beta:    64.0px,
-        gamma:   36.0px,
-        delta:   30.7px,
-        epsilon: 22.5px,
-        zeta:    20.0px,
-        eta:     18px,
-        theta:   15.0px,
-        iota:    12.7px
+        s9:   72.0px,
+        s8:   64.0px,
+        s7:   48.0px,
+        s6:   32.0px,
+        s5:   24.0px,
+        s4:   20.0px,
+        s3:   18px,
+        s2:   14.0px,
+        s1:   12.7px
     )
 );
 

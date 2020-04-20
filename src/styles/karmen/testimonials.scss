@@ -1,0 +1,18 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: gu(2) gu();
+}
+
+.testimonials__item {
+  text-align: center;
+}
+
+.testimonials__image {
+  display: block;
+  max-height: gu(1.5);
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+}

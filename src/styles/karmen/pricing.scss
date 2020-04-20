@@ -1,0 +1,82 @@
+.pricing {
+  display: flex;
+  position: relative;
+}
+
+.pricing__box {
+  width: 33.333%;
+  padding: gu(2) gu(2.5);
+  background: map-get($palette, white);
+  text-align: left;
+
+  & + .pricing__box {
+    border-left: 1px map-get($palette, gray-semilight) solid;
+  }
+
+  .price__item {
+    @include baseline(s6, $headingtype, 2);
+  }
+
+  .price__sum {
+    color: map-get($palette, red);
+    @include baseline(s7, $bodytype, 2);
+  }
+
+  .price__note {
+    @include baseline(s2, $bodytype);
+  }
+
+  img {
+    display: block;
+    height: gu(5);
+    margin-bottom: gu(1);
+    margin-right: auto;
+  }
+
+  &--emphasized {
+    background: map-get($palette, red);
+
+    &, .price__sum {
+      color: map-get($palette, white);
+    }
+  }
+}
+
+.pricing__offerinfo {
+  // color: map-get($palette, red);
+  margin-left: gu(0.25);
+}
+
+.pricing__plussign {
+  position: absolute;
+  left: 33.333%;
+  bottom: 16%;
+  transform: translateX(-50%);
+  color: map-get($palette, red);
+
+  @include fontsize(s7, zero up);
+}
+
+.pricing__total {
+  margin-left: -0.81em;
+}
+
+.pricing__buybutton.button {
+  display: block;
+  width: 33.333%;
+  margin-left: auto;
+  margin-top: gu(.5);
+  margin-bottom: gu(.5);
+
+  // Override default button styles
+  text-align: left;
+  padding-left: gu(2);
+
+  &:after {
+    float: right;
+    font-family: 'Font Awesome 5 Free';
+    color: currentColor;
+    width: gu(1);
+    content: fa-content($fa-var-shopping-cart);
+  }
+}

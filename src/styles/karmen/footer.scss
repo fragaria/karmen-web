@@ -1,0 +1,150 @@
+.footer {
+  background: map-get($palette, white);
+}
+
+.footer__section {
+  position: relative;
+  padding: gu(2) 0;
+
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: map-get($palette, gray-semilight);
+    height: 1px;
+  }
+}
+
+.footer-sitelinks {
+  display: flex;
+
+  .footer__karmenlogo {
+    margin-left: auto;
+  }
+}
+
+.footer__karmenlogo {
+  height: gu(5);
+}
+
+.footer__brandinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: gu(2);
+
+  @include breakpoint(tablet up) {
+    flex-direction: row;
+  }
+}
+
+.footer__meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  @include breakpoint(tablet up) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+
+.footer__brand {
+  display: block;
+  height: gu(1.666);
+}
+
+.footer__copy {
+  padding-left: 0;
+  letter-spacing: 0.09em;
+  text-align: center;
+  margin-top: gu();
+
+  @include breakpoint(tablet up) {
+    margin-top: 0;
+    padding-left: gu(0.5);
+    text-align: left;
+  }
+}
+
+.footer__copy-line {
+  font-family: #{map-get($headingtype, font-family)};
+
+  @include baseline(
+    s2,
+    $headingtype,
+    $lineheight: 0.5,
+    $breakpoint: mobile down
+  );
+  @include fontsize(s2, $breakpoint: tablet-small up);
+
+  @include breakpoint(tablet-small up) {
+    line-height: 1.15;
+  }
+}
+
+.footer__copy-line--emphasized {
+  font-family: getFontFamily($headingtype);
+  font-weight: bold;
+}
+
+.footer__social {
+  line-height: gu(2);
+  font-size: gu(0.65);
+
+  @include breakpoint(tablet up) {
+    font-size: gu(0.75);
+  }
+}
+
+.footer__social-icon {
+  transition: #{$anchor-hover-transition};
+
+  &:hover {
+    color: $anchor-hover-color;
+  }
+}
+
+.footer__social-icon + .footer__social-icon {
+  margin-left: 0.8em;
+}
+
+.footer-linkgroups__title {
+  @include baseline(s7, $headingtype, 2, $below: 2);
+}
+
+.footer-linkgroups__container {
+  display: flex;
+}
+
+.footer-linkgroups__group {
+  list-style-type: none;
+  padding-left: gu(1);
+
+  &:not(:first-of-type) {
+    margin-left: gu(4);
+  }
+}
+
+.footer-linkgroups__item {
+  @include baseline(s2, $bodytype, 1);
+
+  a {
+    @include anchor-behavior();
+  }
+
+  &:before {
+    position: absolute;
+    content: fa-content($fa-var-long-arrow-alt-right);
+    font-family: 'Font Awesome 5 Free';
+    color: map-get($palette, red);
+    display: inline-block;
+    margin-left: gu(-1);
+    width: gu(1);
+  }
+
+}

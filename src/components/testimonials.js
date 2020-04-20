@@ -16,11 +16,11 @@ const Testimonials = () => {
   `)
 
   return (
-    <div className="v-career-tech-grid">
+    <div className="testimonials">
       {data.site.siteMetadata.clients.map(client => (
-        <span key={client.title} className="v-career-tech-grid__item">
+        <span key={client.title} className="testimonials__item">
           <img
-            className="v-career-tech-grid__image"
+            className="testimonials__image"
             src={client.img}
             alt={client.title}
             title={client.title}

@@ -1,0 +1,33 @@
+.subscription-box {
+  display: flex;
+  width: 100%;
+  max-width: $sitenav-max-width;
+  margin: auto;
+  background: map-get($palette, red);
+  padding: gu(2) gu(4) gu(2);
+  color: map-get($palette, white);
+}
+
+.subscription-box__caption {
+  flex: 1;
+}
+
+.subscription-box__title {
+  @include baseline(s7, $headingtype, 2, $above: 0);
+}
+
+.subscription-box__subtitle {
+  @include baseline(s5, $bodytype, 1.5, $above: 0);
+  padding-bottom: gu(.5);
+}
+
+.subscription-box__form {
+  align-self: center;
+  flex: 1;
+  margin-left: auto;
+}
+
+.subscription-box__input {
+  max-width: 20em;
+  margin-left: auto;
+}

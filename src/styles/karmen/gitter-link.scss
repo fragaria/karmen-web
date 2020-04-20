@@ -1,0 +1,51 @@
+.gitter-link {
+  position: fixed;
+  right: 0;
+  top: gu(16);
+  z-index: 1000
+}
+
+.gitter-link__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotate(270deg);
+  transform-origin: right bottom;
+  color: map-get($palette, white);
+  background: map-get($palette, black);
+  padding: gu(0.5) gu(2);
+  text-align: center;
+  height: gu(3);
+
+  &:hover {
+    background: map-get($palette, red);
+  }
+}
+
+.gitter-link__caption {
+  color: currentColor;
+  padding-top: 4px;
+  font-family: #{map-get($bodytype, font-family)};
+  @include fontsize(s2, $breakpoint: zero up);
+}
+
+.gitter-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gitter-logo-img,
+.gitter-logo-text {
+  display: block;
+  fill: currentColor;
+}
+
+.gitter-logo-img {
+  height: gu(.5);
+}
+
+.gitter-logo-text {
+  height: gu(.4);
+  margin-left: gu(0.25);
+}

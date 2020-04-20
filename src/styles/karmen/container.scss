@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: map-get($sitenav-height, mobile);
+  background-color: map-get($palette, gray-light);
 
   &.noscroll {
     overflow: hidden;
@@ -12,22 +14,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-
-  &--gray {
-    background-color: map-get($palette, gray-light);
-  }
-}
-
-.page-container__inner {
   width: 100%;
   max-width: $page-container-max-width;
   margin-left: auto;
   margin-right: auto;
   // padding-top: map-get($sitenav-menu-height, mobile);
   text-align: left;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+}
 
   // @include breakpoint(tablet up) {
   //     padding-top: map-get($sitenav-menu-height, tablet);
@@ -36,6 +29,4 @@
   // @include breakpoint(desktop up) {
   //     padding-top: map-get($sitenav-menu-height, desktop);
   // }
-}
-
 

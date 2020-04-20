@@ -1,11 +1,11 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import classNames from "classnames"
-import { defineMessages, useIntl } from "react-intl"
+import { defineMessages, useIntl, formatMessage, FormattedMessage } from "react-intl"
 import { getCurrentLangKey } from "ptz-i18n"
 
 import strawberryImg from "assets/img/strawberry.svg"
-import karmenImg from "assets/img/logo.svg"
+import karmenImg from "assets/img/karmen-logo.svg"
 
 const messages = defineMessages({
   ghProfileTitle: {
@@ -32,13 +32,20 @@ const messages = defineMessages({
 
 
 const FooterLinks = ({ navGroups }) => (
-  <nav aria-label="Footer" className="footer__linkgroups">
-    <div className="content-block">
-        {navGroups.map((group, index) =>
-          <ul key={index} className="footer__linkgroup">
-            {group.map(item => <li key={item.url} className="footer__linkitem"><a href={item.url}>{item.name}</a></li>)}
-          </ul>
-        )}
+  <nav aria-label="Footer" className="footer-linkgroups">
+
+    <h1 className="footer-linkgroups__title">
+      <FormattedMessage
+        id="footer.important_links"
+        defaultMessage="Important links"
+      />
+    </h1>
+    <div className="footer-linkgroups__container">
+      {navGroups.map((group, index) =>
+        <ul key={index} className="footer-linkgroups__group">
+          {group.map(item => <li key={item.url} className="footer-linkgroups__item"><a href={item.url}>{item.name}</a></li>)}
+        </ul>
+      )}
     </div>
   </nav>
 )
@@ -76,9 +83,11 @@ const Footer = ({ location }) => {
 
   return (
     <footer className="footer">
-      <div className="footer__section footer__section--sitelinks">
-        <FooterLinks navGroups={data.site.siteMetadata.footerNav[langKey]} />
-        <img className="footer__karmenlogo" src={karmenImg} alt="Karmen"/>
+      <div className="footer__section">
+        <div className="content-block footer-sitelinks">
+          <FooterLinks navGroups={data.site.siteMetadata.footerNav[langKey]} />
+          <img className="footer__karmenlogo" src={karmenImg} alt="Karmen"/>
+        </div>
       </div>
       <div className="footer__section">
         <div className="content-block">

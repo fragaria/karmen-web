@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { getCurrentLangKey } from "ptz-i18n"
 
-import karmenLogoImg from "assets/img/karmen-logo.svg"
+import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
 
 
 const Sitenav = ({ location }) => {
@@ -91,15 +91,15 @@ const Sitenav = ({ location }) => {
       itemScope
       itemType="http://schema.org/SiteNavigationElement"
     >
-      <div className="content-block content-block__cover--mobile">
-        <div className="sitenav__menu">
-          <Link className="sitenav__brand" to={homeLink}>
-            <img
-              alt={data.site.siteMetadata.company.officialName}
-              src={karmenLogoImg}
-            />
-          </Link>
+      <div className="sitenav__menu">
+        <Link className="sitenav__brand" to={homeLink}>
+          <img
+            alt={data.site.siteMetadata.company.officialName}
+            src={karmenLogoImg}
+          />
+        </Link>
 
+        <div className="sitenav__links">
           <Link
             to={homeLink}
             className="sitenav__company sitenav__link typeset__anchor--nounderline"
@@ -108,6 +108,20 @@ const Sitenav = ({ location }) => {
             <span itemProp="name">Karmen</span>
           </Link>
 
+          {langKey === "en" && (
+            <Link
+              to="/cs/"
+              className="sitenav__langswitch"
+              title="Přepnout do češtiny"
+            >CS</Link>
+          )}
+          {langKey !== "en" && (
+            <Link
+              to="/en/"
+              className="sitenav__langswitch"
+              title="Switch to english"
+            >EN</Link>
+          )}
 
           {data.site.siteMetadata.nav[langKey].map(item => (
             <a
@@ -119,21 +133,6 @@ const Sitenav = ({ location }) => {
               <span itemProp="name">{item.name}</span>
             </a>
           ))}
-
-          {langKey === "en" && (
-            <Link
-              to="/cs/"
-              className="sitenav__langswitch flag czech-republic"
-              title="Přepnout do češtiny"
-            ></Link>
-          )}
-          {langKey !== "en" && (
-            <Link
-              to="/en/"
-              className="sitenav__langswitch flag united-kingdom"
-              title="Switch to english"
-            ></Link>
-          )}
         </div>
       </div>
     </nav>

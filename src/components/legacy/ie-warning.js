@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 
-import karmenLogoImg from "assets/img/karmen-logo.svg"
+import karmenLogoImg from "assets/img/karmen-logo-rect.svg"
 
 const IEWarning = () => {
   const data = useStaticQuery(graphql`

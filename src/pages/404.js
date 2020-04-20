@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "layouts/blank"
 import SEOMetadata from "components/seo/metadata"
 
-import karmenLogoImg from "assets/img/karmen-logo.svg"
+import karmenLogoImg from "assets/img/karmen-logo-rect.svg"
 
 const NotFoundPage = () => {
   const data = useStaticQuery(graphql`

@@ -14,19 +14,20 @@
     display: block;
     font-family: getFontFamily($headingtype);
 
-    @include baseline(zeta, $headingtype, $below: 1);
+    @include baseline(s4, $headingtype, $below: 1);
 }
 
 .form-control {
     display: block;
     width: 100%;
+    height: gu(3);
     font-family: getFontFamily($headingtype);
-    background-color: map-get($palette, gray-light);
+    background-color: map-get($palette, white);
     border: gu(0.1) transparent solid;
     border-radius: 0;
-    padding: gu(0.5);
+    padding: 0 gu(1.5);
 
-    @include fontsize(zeta);
+    @include fontsize(s4);
 
     &:focus {
         outline: none;
@@ -83,7 +84,7 @@ p.form-control-error,
   font-family: getFontFamily($headingtype);
   margin-bottom: 0;
 
-  @include fontsize(eta);
+  @include fontsize(s3);
 }
 
 input.form-control {

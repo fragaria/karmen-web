@@ -128,7 +128,7 @@ $points: map-values($breakpoints);
 /**
  * Output font family and baseline alignment for given breakpoint and font settings.
  */
-@mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below, $anchor) {
+@mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below) {
     @if not map-has-key($breakpoints, $breakpoint) {
         @warn "Unknown breakpoint class: #{$breakpoint}"
     }
@@ -149,20 +149,13 @@ $points: map-values($breakpoints);
     font-size: #{$fontsize-rems}rem;
     margin-bottom: #{$baseline-push}rem;
     line-height: #{$lh-rems}rem;
-
-    @if $anchor {
-        $anchor-shift: strip-unit(map-get($anchor-baseline-shifts, $breakpoint));
-        padding-top: #{$baseline-shift + $anchor-shift}rem;
-        margin-top: #{$anchor-shift * -1}rem;
-    } @else {
-        padding-top: #{$baseline-shift}rem;
-    }
+    padding-top: #{$baseline-shift}rem;
 }
 
 /**
  * Output font family and baseline alignment for multiple media queries using breakpoint expression.
  */
-@mixin baseline($fontsize, $font, $lineheight: 1, $above: 0, $below: 0, $breakpoint: null, $anchor: false) {
+@mixin baseline($fontsize, $font, $lineheight: 1, $above: 0, $below: 0, $breakpoint: null) {
     @if not $breakpoint {
         $breakpoint: zero up;
     }
@@ -172,7 +165,7 @@ $points: map-values($breakpoints);
 
     @if $dir == only {
         @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
-            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below, $anchor);
+            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below);
         }
     } @else {
         $bps: ();
@@ -192,7 +185,7 @@ $points: map-values($breakpoints);
                 if(index($breakpoints, $bp) == 1, null, $bp),
                 map-next-key($breakpoints, $bp)
             ) {
-                @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below, $anchor);
+                @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below);
             }
         }
     }

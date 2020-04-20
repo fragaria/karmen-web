@@ -3,11 +3,12 @@
     background-color: $background;
     transition: all .2s ease-in-out;
     text-transform: uppercase;
-    font-family: getFontFamily($headingtype);
-    font-weight: bold;
+    font-family: getFontFamily($bodytype);
+    font-weight: 600;
+    letter-spacing: 2px;
     cursor: pointer;
 
-    @include fontsize(zeta);
+    @include fontsize(s2);
 
     &:hover,
     &:focus {
@@ -22,9 +23,9 @@
 .button,
 a.button {
     display: inline-block;
-    padding: 0 gu();
-    line-height: gu(2);
-    height: gu(2);
+    padding: 0 gu(1.5);
+    line-height: gu(3);
+    height: gu(3);
     border: 0;
 
     @include buttonStyle(

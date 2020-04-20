@@ -30,8 +30,8 @@
             color: map-get($palette, red);
         }
 
-        @include baseline(alpha, $headingtype, $lineheight: 2, $below: 2, $breakpoint: mobile down);
-        @include baseline(alpha, $headingtype, $lineheight: 2.75, $below: 2, $breakpoint: mobile up);
+        @include baseline(s9, $headingtype, $lineheight: 2, $below: 2, $breakpoint: mobile down);
+        @include baseline(s9, $headingtype, $lineheight: 2.75, $below: 2, $breakpoint: mobile up);
     }
 
     .hero__sub {
@@ -42,7 +42,7 @@
 
     .hero__headline + .hero__sub,
     .hero__sub + .hero__sub {
-        @include baseline(zeta, $bodytype, $above: 2);
+        @include baseline(s4, $bodytype, $above: 2);
     }
 
     .hero__paginator {
@@ -107,6 +107,6 @@
     }
 
     .hero__cta {
-        @include baseline(zeta, $bodytype, $above: 4);
+        @include baseline(s4, $bodytype, $above: 4);
     }
 }

@@ -1,0 +1,68 @@
+
+
+.sitenav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: map-get($palette, white);
+  z-index: 1000;
+}
+
+.sitenav__menu {
+  width: 100%;
+  max-width: $sitenav-max-width;
+  margin: auto;
+  height: map-get($sitenav-height, mobile);
+  display: flex;
+  align-items: stretch;
+  font-family: getFontFamily($bodytype);
+  text-transform: uppercase;
+}
+
+.sitenav__brand {
+  width: gu(3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: map-get($palette, red);
+
+  img {
+    height: gu(2)
+  }
+}
+
+.sitenav__links {
+  display: flex;
+  align-items: center;
+}
+
+.sitenav__company
+.sitenav__langswitch,
+.sitenav__link {
+  @include anchor-behavior();
+}
+
+.sitenav__langswitch,
+.sitenav__link {
+  @include fontsize(s2);
+}
+
+.sitenav__link {
+  margin: 0 gu(1);
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.sitenav__company {
+  margin: 0 gu(2.5) 0 gu(1);
+  font-family: getFontFamily($headingtype);
+  font-weight: map-get($headingtype, semi);
+  letter-spacing: 4px;
+  @include fontsize(s4);
+}
+
+.sitenav__langswitch {
+  background: map-get($palette, gray-light);
+  padding: gu(0.3) gu(0.5);
+  margin-right: gu(.5);
+}
