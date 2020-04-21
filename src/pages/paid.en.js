@@ -13,7 +13,9 @@ const Paid = ({ location }) => {
           <h3>Payment has been processed sucessfully</h3>
           <h1>Thank you for your purchase</h1>
           <div className="cta-row">
-            <Link to="/en/" className="button">Continue back to homepage</Link>
+            <Link to="/en/" className="button">
+              Continue back to homepage
+            </Link>
           </div>
         </div>
       </div>

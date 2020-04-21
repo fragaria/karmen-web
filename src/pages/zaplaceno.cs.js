@@ -13,7 +13,9 @@ const Zaplaceno = ({ location }) => {
           <h3>Platba proběhla úspěšně</h3>
           <h1>Děkujeme za váš nákup</h1>
           <div className="cta-row">
-            <Link to="/cs/" className="button">Zpátky na homepage</Link>
+            <Link to="/cs/" className="button">
+              Zpátky na homepage
+            </Link>
           </div>
         </div>
       </div>

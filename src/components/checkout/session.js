@@ -23,7 +23,9 @@ export const CheckoutSession = ({
 
     // store all item data under metadata keys prefixed by order:
     items.forEach((item, index) => {
-      metadata[`order:item_${index}_${item.sku}`] = `${item.quantity}x ${item.name}`
+      metadata[
+        `order:item_${index}_${item.sku}`
+      ] = `${item.quantity}x ${item.name}`
     })
 
     beanie.redirectToBeanie({

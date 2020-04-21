@@ -1,6 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import classNames from "classnames"
 import { FormattedMessage } from "react-intl"
 
 const SubscriptionBox = () => {
@@ -38,7 +36,7 @@ const SubscriptionBox = () => {
                 placeholder="E-mail"
               />
               <div
-                style={{position: 'absolute', left: '-5000px'}}
+                style={{ position: "absolute", left: "-5000px" }}
                 aria-hidden="true"
               >
                 <input

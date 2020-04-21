@@ -25,11 +25,7 @@ const CheckoutBooth = ({ location }) => {
   `)
 
   const { langs, defaultLangKey } = config.siteMetadata.languages
-  const langKey = getCurrentLangKey(
-    langs,
-    defaultLangKey,
-    location.pathname
-  )
+  const langKey = getCurrentLangKey(langs, defaultLangKey, location.pathname)
 
   const finalizeSession = async values => {
     if (config.siteMetadata.checkout.octobatConfigured) {
@@ -49,8 +45,12 @@ const CheckoutBooth = ({ location }) => {
       session.finalize({
         clientReferenceId: values["email"],
         items: [
-          { sku: values["product"].sku, name: values["product"].name, quantity: values["quantity"] },
-          { sku: shippingVariant.sku, name: shippingVariant.name, quantity: 1}
+          {
+            sku: values["product"].sku,
+            name: values["product"].name,
+            quantity: values["quantity"],
+          },
+          { sku: shippingVariant.sku, name: shippingVariant.name, quantity: 1 },
         ],
         prefillData: {
           customer_name: values["fullName"],

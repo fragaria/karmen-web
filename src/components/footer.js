@@ -1,8 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import classNames from "classnames"
-import { defineMessages, useIntl, formatMessage, FormattedMessage } from "react-intl"
-import { getCurrentLangKey } from "ptz-i18n"
+import { defineMessages, useIntl, FormattedMessage } from "react-intl"
 
 import strawberryImg from "assets/img/strawberry.svg"
 import karmenImg from "assets/img/karmen-logo.svg"
@@ -30,10 +28,8 @@ const messages = defineMessages({
   },
 })
 
-
 const FooterLinks = ({ navGroups }) => (
   <nav aria-label="Footer" className="footer-linkgroups">
-
     <h1 className="footer-linkgroups__title">
       <FormattedMessage
         id="footer.important_links"
@@ -41,16 +37,23 @@ const FooterLinks = ({ navGroups }) => (
       />
     </h1>
     <div className="footer-linkgroups__container">
-      {navGroups.map((group, index) =>
+      {navGroups.map((group, index) => (
         <ul key={index} className="footer-linkgroups__group arrow-list">
-          {group.map(item => <li key={item.url} className="footer-linkgroups__item arrow-list__item"><a href={item.url}>{item.name}</a></li>)}
+          {group.map(item => (
+            <li
+              key={item.url}
+              className="footer-linkgroups__item arrow-list__item"
+            >
+              <a href={item.url}>{item.name}</a>
+            </li>
+          ))}
         </ul>
-      )}
+      ))}
     </div>
   </nav>
 )
 
-const Footer = ({ location }) => {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query FooterQuery {
       site {
@@ -65,17 +68,20 @@ const Footer = ({ location }) => {
             }
           }
           footerNav {
-            en { name, url }
-            cs { name, url }
+            en {
+              name
+              url
+            }
+            cs {
+              name
+              url
+            }
           }
           ...Languages
         }
       }
     }
   `)
-
-  const { langs, defaultLangKey } = data.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, location.pathname)
 
   const currentYear = new Date().getFullYear()
   const intl = useIntl()
@@ -84,8 +90,10 @@ const Footer = ({ location }) => {
     <footer className="footer">
       <div className="footer__section">
         <div className="content-block footer-sitelinks">
-          <FooterLinks navGroups={data.site.siteMetadata.footerNav[langKey]} />
-          <img className="footer__karmenlogo" src={karmenImg} alt="Karmen"/>
+          <FooterLinks
+            navGroups={data.site.siteMetadata.footerNav[intl.locale]}
+          />
+          <img className="footer__karmenlogo" src={karmenImg} alt="Karmen" />
         </div>
       </div>
       <div className="footer__section">
@@ -95,7 +103,7 @@ const Footer = ({ location }) => {
               className="footer__meta"
               href="https://fragaria.cz"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <img
                 alt={data.site.siteMetadata.company.officialName}
@@ -120,28 +128,36 @@ const Footer = ({ location }) => {
                   }
                   className="icon--github footer__social-icon"
                   title={intl.formatMessage(messages.ghProfileTitle)}
-                ></a>
+                >
+                  <span>{intl.formatMessage(messages.ghProfileTitle)}</span>
+                </a>
               )}
               {data.site.siteMetadata.company.social.twitter && (
                 <a
                   href={`https://twitter.com/${data.site.siteMetadata.company.social.twitter}`}
                   className="icon--twitter footer__social-icon"
                   title={intl.formatMessage(messages.twProfileTitle)}
-                ></a>
+                >
+                  <span>{intl.formatMessage(messages.twProfileTitle)}</span>
+                </a>
               )}
               {data.site.siteMetadata.company.social.facebook && (
                 <a
                   href={`https://facebook.com/${data.site.siteMetadata.company.social.facebook}`}
                   className="icon--facebook footer__social-icon"
                   title={intl.formatMessage(messages.fbProfileTitle)}
-                ></a>
+                >
+                  <span>{intl.formatMessage(messages.fbProfileTitle)}</span>
+                </a>
               )}
               {data.site.siteMetadata.company.social.youtube && (
                 <a
                   href={`https://www.youtube.com/channel/${data.site.siteMetadata.company.social.youtube}`}
                   className="icon--youtube footer__social-icon"
                   title={intl.formatMessage(messages.ytChannelTitle)}
-                ></a>
+                >
+                  <span>{intl.formatMessage(messages.ytChannelTitle)}</span>
+                </a>
               )}
             </div>
           </div>

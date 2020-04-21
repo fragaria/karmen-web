@@ -100,7 +100,7 @@ const Layout = ({ children, location, i18nMessages, containerClass } = {}) => {
       <GitterLink />
       <BlankLayout>
         <CC />
-        <Sitenav location={location} />
+        <Sitenav />
         <div className={wrapperClassName}>
           {/* <IEWarning /> */}
           {children}

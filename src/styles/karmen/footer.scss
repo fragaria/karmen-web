@@ -107,6 +107,10 @@
   &:hover {
     color: $anchor-hover-color;
   }
+
+  span {
+    display: none;
+  }
 }
 
 .footer__social-icon + .footer__social-icon {

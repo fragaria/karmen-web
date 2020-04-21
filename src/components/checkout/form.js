@@ -22,7 +22,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
       // Provide full Pill name
       name: pillRef.name,
       // Select right SKU according to the country used
-      sku: getPillRefSku(pillRef, retVals["country"])
+      sku: getPillRefSku(pillRef, retVals["country"]),
     }
 
     // Drop internal variant reference

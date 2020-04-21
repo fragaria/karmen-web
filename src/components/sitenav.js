@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import classNames from "classnames"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { getCurrentLangKey } from "ptz-i18n"
+import { useIntl } from "react-intl"
 
 import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
 
-
-const Sitenav = ({ location }) => {
+const Sitenav = () => {
   const data = useStaticQuery(graphql`
     query SitenavQuery {
       site {
@@ -33,56 +31,36 @@ const Sitenav = ({ location }) => {
               name
             }
           }
-          ...Languages
         }
       }
     }
   `)
 
-  const [isOpen, setIsOpen] = useState(false)
-  const [isAnimated, setIsAnimated] = useState(true)
-  const sitenavRef = React.createRef()
+  // const [isOpen, setIsOpen] = useState(false)
 
-  const { langs, defaultLangKey } = data.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, location.pathname)
-  const homeLink = `/${langKey}/`
+  const intl = useIntl()
+  const homeLink = `/${intl.locale}/`
 
-  const menuToggleClasses = classNames(
-    "sitenav__menutoggle hamburger hamburger--collapse",
-    {
-      "is-active": isOpen,
-    }
-  )
   const rootClasses = classNames("sitenav", {
-    "sitenav-wrapper--noanim": !isAnimated,
-    "sitenav-wrapper--show": isOpen,
+    // "sitenav-wrapper--show": isOpen,
   })
 
-  const toggle = () => {
-    setIsAnimated(true)
-    isOpen
-      ? document.body.classList.remove("noscroll")
-      : document.body.classList.add("noscroll")
-    setIsOpen(!isOpen)
-  }
+  // const navigate = (evt, url) => {
+  //   const targetSuffix = url.replace(window.location.pathname, "")
 
-  const navigate = (evt, url) => {
-    const targetSuffix = url.replace(window.location.pathname, "")
+  //   if (targetSuffix.startsWith("#")) {
+  //     evt.preventDefault()
+  //     const targetId = targetSuffix.substring(1)
+  //     const target = document.getElementById(targetId)
 
-    if (targetSuffix.startsWith("#")) {
-      evt.preventDefault()
-      const targetId = targetSuffix.substring(1)
-      const target = document.getElementById(targetId)
+  //     window.scroll({ top: target.offsetTop - 80, behavior: "smooth" })
+  //     window.history.pushState({}, evt.target.text, targetSuffix)
 
-      window.scroll({ top: target.offsetTop - 80, behavior: "smooth" })
-      window.history.pushState({}, evt.target.text, targetSuffix)
+  //     setIsOpen(false)
 
-      setIsAnimated(false)
-      setIsOpen(false)
-
-      document.body.classList.remove("noscroll")
-    }
-  }
+  //     document.body.classList.remove("noscroll")
+  //   }
+  // }
 
   return (
     <nav
@@ -108,30 +86,34 @@ const Sitenav = ({ location }) => {
             <span itemProp="name">Karmen</span>
           </Link>
 
-          {langKey === "en" && (
+          {intl.locale === "en" && (
             <Link
               to="/cs/"
               className="sitenav__langswitch"
               title="Přepnout do češtiny"
-            >CS</Link>
+            >
+              CS
+            </Link>
           )}
-          {langKey !== "en" && (
+          {intl.locale !== "en" && (
             <Link
               to="/en/"
               className="sitenav__langswitch"
               title="Switch to english"
-            >EN</Link>
+            >
+              EN
+            </Link>
           )}
 
-          {data.site.siteMetadata.nav[langKey].map(item => (
-            <a
-              onClick={evt => navigate(evt, item.url)}
+          {data.site.siteMetadata.nav[intl.locale].map(item => (
+            <Link
+              to={item.url}
               className="sitenav__link typeset__anchor--nounderline"
               itemProp="url"
               key={item.url}
             >
               <span itemProp="name">{item.name}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -139,8 +121,6 @@ const Sitenav = ({ location }) => {
   )
 }
 
-Sitenav.props = {
-  location: PropTypes.object.isRequired,
-}
+Sitenav.props = {}
 
 export default Sitenav
