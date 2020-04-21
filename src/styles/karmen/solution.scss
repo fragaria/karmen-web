@@ -1,0 +1,78 @@
+.solution__inner {
+  background: url(../../assets/img/smartphone-and-pill.png) right top no-repeat;
+  background-size: 50%;
+  padding-bottom: gu(7);
+}
+
+.solution__headline {
+  @include baseline(s9, $headingtype, 3);
+}
+
+.solution__sub {
+  @include baseline(s4, $bodytype, 1, $below: 1, $above: 2);
+}
+
+.solution__carousel,
+.solution__carousel .carousel__slider--horizontal {
+  max-height: gu(9);
+}
+
+.solution__carousel {
+  width: 35em;
+
+  h3 {
+    @include baseline(s7, $headingtype, 2, $below: 1, $above: 1);
+  }
+  p {
+    @include baseline(s4, $bodytype, 1);
+  }
+
+  .carousel__dot-group {
+    display: flex;
+    height: gu();
+    align-items: center;
+  }
+
+  .carousel__dot,
+  .carousel__back-button,
+  .carousel__next-button {
+    border-radius: 50%;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .carousel__dot {
+    background: map-get($palette, gray-medium);
+    width: 12px;
+    height: 12px;
+
+    &--selected {
+      background: map-get($palette, red);
+    }
+
+    + .carousel__dot {
+      margin-left: 12px;
+    }
+  }
+
+  .carousel__back-button,
+  .carousel__next-button {
+    font-size: 20px;
+    color: map-get($palette, red);
+
+    &[disabled] {
+    color: map-get($palette, gray-medium);
+    }
+  }
+  .carousel__back-button {
+    margin-right: gu();
+  }
+  .carousel__next-button {
+    margin-left: gu();
+  }
+}
+
+.solution__carousel-controls {
+  display: flex;
+}

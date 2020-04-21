@@ -7,7 +7,8 @@ import Testimonials from "components/testimonials"
 const TestimonialsBlock = props => {
   return (
     <section {...props}>
-      <h1 className="page-block-headline">
+      <h1 className="page-block-headline sitenav__anchorpush">
+        <span className="sitenav__anchor" id="partners"></span>
         <FormattedMessage id="testimonials-block.headline" defaultMessage="Clients &amp; partners" />
       </h1>
       <p className="page-block-sub">

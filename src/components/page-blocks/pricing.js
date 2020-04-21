@@ -33,7 +33,8 @@ const PricingBlock = ({ location, ...props }) => {
   const buyLink = langKey === "cs" ? "/cs/koupit/" : "/en/buy/"
   return (
     <section {...props}>
-      <h1 className="page-block-headline">
+      <h1 className="page-block-headline sitenav__anchorpush">
+        <span className="sitenav__anchor" id="buy"></span>
         <FormattedMessage id="pricing-block.headline" defaultMessage="Buy Karmen" />
       </h1>
       <div className="pricing">

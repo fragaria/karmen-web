@@ -7,7 +7,7 @@ $palette: (
     olive-green: #8fa13b,
     gray-light: #f7f7f7,
     gray-semilight: #f2f2f2,
-    gray-medium: #ccc,
+    gray-medium: #eaeaea,
     gray-dark: #888,
     gray-very-dark: #333,
 );
@@ -73,7 +73,11 @@ $button-variants: (
     primary: (
         foreground: map-get($palette, white),
         background: map-get($palette, black),
-    )
+    ),
+    red: (
+        foreground: map-get($palette, white),
+        background: map-get($palette, red),
+    ),
 );
 
 // Sharebox

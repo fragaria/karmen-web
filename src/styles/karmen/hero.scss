@@ -1,112 +1,42 @@
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding-top: 0;
-    padding-bottom: gu();
-    text-align: center;
+  position: relative;
+  background: url(../../assets/img/lead.jpg) center center;
+  background-size: cover;
+  height: gu(24);
+  z-index: 1;
 
-    @include breakpoint(tablet up) {
-        padding-top: gu(5);
-        padding-bottom: gu(3);
-    }
+  &:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
 
-    &--vertical {
-        flex-direction: column;
-    }
+.hero__headline {
+  color: map-get($palette, white);
+  z-index: 1;
+  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 
-    &--nobottom {
-        padding-bottom: 0;
-    }
+  @include baseline(s9, $headingtype, 3, $above: 9);
+}
 
-    // need to be scoped to take precendence over .typest
-    .hero__headline {
-        margin-left: auto;
-        margin-right: auto;
+.hero__sub,
+.hero__above {
+  color: map-get($palette, white);
+  z-index: 1;
+  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
+}
 
-        i {
-            font-style: normal;
-            color: map-get($palette, red);
-        }
+.hero__sub {
+  @include baseline(s4, $bodytype, 1, $below: 1, $above: 2);
+}
 
-        @include baseline(s9, $headingtype, $lineheight: 2, $below: 2, $breakpoint: mobile down);
-        @include baseline(s9, $headingtype, $lineheight: 2.75, $below: 2, $breakpoint: mobile up);
-    }
-
-    .hero__sub {
-        @include breakpoint(mobile up) {
-            max-width: rem-calc(map-get($breakpoints, mobile));
-        }
-    }
-
-    .hero__headline + .hero__sub,
-    .hero__sub + .hero__sub {
-        @include baseline(s4, $bodytype, $above: 2);
-    }
-
-    .hero__paginator {
-        font-weight: bold;
-        min-width: gu(2);
-        font-family: getFontFamily($headingtype);
-        font-size: 300%;
-        transition: #{$anchor-hover-transition};
-
-        @include breakpoint(tablet-small up) {
-            font-size: 500%;
-        }
-
-        &:hover {
-            color: map-get($palette, red);
-        }
-
-        &:first-of-type {
-            text-align: left;
-        }
-
-        &:nth-of-type(2) {
-            text-align: right;
-        }
-
-        &--blank {
-            visibility: hidden;
-        }
-    }
-
-    .hero__list {
-        display: grid;
-        max-width: 45rem;
-        grid-gap: 1.4rem;
-        grid-template-columns: 1fr 1fr;
-        list-style: none;
-
-
-        @include breakpoint(tablet up) {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-        li {
-            margin-left: 0
-        }
-
-        [class*="icon-"] {
-            color: map-get($palette, red);
-        }
-        .icon--vpn {
-            font-size: 1.9rem
-        }
-        .icon--lock {
-            font-size: 2.5rem
-        }
-        .icon--camera {
-            font-size: 2.2rem
-        }
-        .icon--queue {
-            font-size: 1.5rem
-        }
-    }
-
-    .hero__cta {
-        @include baseline(s4, $bodytype, $above: 4);
-    }
+.hero__cta {
+  margin-top: gu(2.5);
 }
