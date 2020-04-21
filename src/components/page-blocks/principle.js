@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl"
 
 import signupImg from "assets/img/principle-signup.png"
 import pillImg from "assets/img/principle-pill.png"
-import cloudImg from "assets/img/principle-cloud.png"
+import cloudImg from "assets/img/karmen-cloud.png"
 
 const PrincipleBlock = props => {
   return (

@@ -17,7 +17,7 @@
     background-size: cover;
   }
 
-  &:not(:hover) {
+  // &:not(:hover) {
     &:before {
       z-index: -1;
       content: '';
@@ -35,7 +35,7 @@
       color: map-get($palette, white);
       text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
     }
-  }
+  // }
 
   h1 {
     @include baseline(s7, $headingtype, 2, $below: 2);
@@ -45,9 +45,9 @@
     @include baseline(s4, $bodytype);
   }
 
-  &:hover {
-    background: map-get($palette, white);
-  }
+  // &:hover {
+  //   background: map-get($palette, white);
+  // }
 
   + .cases__box {
     border-left: 1px map-get($palette, gray-semilight);

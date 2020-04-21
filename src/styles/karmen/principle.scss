@@ -57,12 +57,12 @@
 }
 
 .principle-box__img {
-  padding: gu(2) gu(4);
+  padding: gu(1) gu(3);
 }
 
 .principle-box__content {
   // @note: see .principle-box__title
-  padding: gu(1) gu(2.5) gu(1.5);
+  padding: gu(1) gu(3) gu(1.5);
 }
 
 .principle-box__img {
@@ -92,7 +92,7 @@
     width: gu();
     height: gu();
     background: map-get($palette, red);
-    right: gu(3.6); // match padding of .principle-box__img minus offset given by circle height
+    right: gu(2.6); // match padding of .principle-box__img minus offset given by circle height
     bottom: 50%;
     border-radius: 50%;
     transform: translateY(gu(0.5));

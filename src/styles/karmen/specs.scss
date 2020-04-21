@@ -1,0 +1,30 @@
+.specs {
+  display: flex;
+  width: 100%;
+}
+
+.specs__box {
+  flex: 1;
+
+  h2 {
+    @include baseline(s7, $headingtype, 2, $above: 4, $below: 2);
+  }
+
+  li {
+    @include baseline(s3, $bodytype, 1);
+  }
+
+  + .specs__box {
+    margin-left: gu(2.5);
+    padding-left: gu(2.5);
+    border-left: 1px map-get($palette, gray-medium) solid;
+  }
+}
+
+.specs__cta {
+  margin-top: gu(2);
+}
+
+.specs__img {
+  float: right;
+}

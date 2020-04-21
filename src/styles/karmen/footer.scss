@@ -122,9 +122,6 @@
 }
 
 .footer-linkgroups__group {
-  list-style-type: none;
-  padding-left: gu(1);
-
   &:not(:first-of-type) {
     margin-left: gu(4);
   }
@@ -134,17 +131,6 @@
   @include baseline(s2, $bodytype, 1);
 
   a {
-    @include anchor-behavior();
+    @include anchor-style();
   }
-
-  &:before {
-    position: absolute;
-    content: fa-content($fa-var-long-arrow-alt-right);
-    font-family: 'Font Awesome 5 Free';
-    color: map-get($palette, red);
-    display: inline-block;
-    margin-left: gu(-1);
-    width: gu(1);
-  }
-
 }

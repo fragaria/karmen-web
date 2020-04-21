@@ -11,6 +11,7 @@ import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
 import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
+import SpecsBlock from "components/page-blocks/specs"
 import StoryBlock from "components/page-blocks/story"
 
 const IndexENPage = ({ data, location }) => {
@@ -28,6 +29,7 @@ const IndexENPage = ({ data, location }) => {
       </div>
 
       <div className="content-block">
+        <SpecsBlock className="v-home-specs v-home-section" />
         <PricingBlock location={location} className="v-home-pricing v-home-section" />
         <TestimonialsBlock className="v-home-testimonials v-home-section" />
       </div>

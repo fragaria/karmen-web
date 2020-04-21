@@ -61,6 +61,8 @@ module.exports = {
         gitter: "fragaria/karmen",
       },
     },
+    pillDocs: "https://docs.karmen.tech/#/pill-getting-started",
+    karmenDocs: "https://docs.karmen.tech/#/quickstart",
     clients: [
       { title: "3darena", img: "/portfolio/3darena-logo.png" },
       { title: "cwrkjzd", img: "/portfolio/cwrkjzd-logo.png" },

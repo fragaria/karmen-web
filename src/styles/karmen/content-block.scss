@@ -36,6 +36,18 @@
       max-width: $sitenav-max-width + gu(2)*2;
     }
   }
+
+  &--sitenavinnerwide {
+    max-width: $sitenav-max-width - gu(6) + gu(0.5)*2;
+
+    @include breakpoint(tablet-small up) {
+      max-width: $sitenav-max-width - gu(6) + gu(1)*2;
+    }
+
+    @include breakpoint(tablet up) {
+      max-width: $sitenav-max-width - gu(6) + gu(2)*2;
+    }
+  }
 }
 
 // .content-block__cover {

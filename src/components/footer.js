@@ -42,8 +42,8 @@ const FooterLinks = ({ navGroups }) => (
     </h1>
     <div className="footer-linkgroups__container">
       {navGroups.map((group, index) =>
-        <ul key={index} className="footer-linkgroups__group">
-          {group.map(item => <li key={item.url} className="footer-linkgroups__item"><a href={item.url}>{item.name}</a></li>)}
+        <ul key={index} className="footer-linkgroups__group arrow-list">
+          {group.map(item => <li key={item.url} className="footer-linkgroups__item arrow-list__item"><a href={item.url}>{item.name}</a></li>)}
         </ul>
       )}
     </div>
@@ -59,7 +59,6 @@ const Footer = ({ location }) => {
             officialName
             social {
               github
-              readthedocs
               twitter
               facebook
               youtube
@@ -121,13 +120,6 @@ const Footer = ({ location }) => {
                   }
                   className="icon--github footer__social-icon"
                   title={intl.formatMessage(messages.ghProfileTitle)}
-                ></a>
-              )}
-              {data.site.siteMetadata.company.social.readthedocs && (
-                <a
-                  href={`https://${data.site.siteMetadata.company.social.readthedocs}.readthedocs.io/`}
-                  className="icon--readthedocs footer__social-icon"
-                  title={intl.formatMessage(messages.docsTitle)}
                 ></a>
               )}
               {data.site.siteMetadata.company.social.twitter && (

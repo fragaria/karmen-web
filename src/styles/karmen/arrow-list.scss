@@ -1,0 +1,15 @@
+.arrow-list {
+  list-style-type: none;
+  padding-left: gu(1);
+}
+
+.arrow-list__item:before {
+  position: absolute;
+  content: fa-content($fa-var-long-arrow-alt-right);
+  font-family: 'Font Awesome 5 Free';
+  color: map-get($palette, red);
+  display: inline-block;
+  margin-left: gu(-1);
+  width: gu(1);
+
+}
