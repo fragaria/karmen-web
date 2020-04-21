@@ -18,6 +18,7 @@ const StoryBlock = props => {
 
   const intl = useIntl()
   const storyLink = intl.locale === "cs" ? "/cs/pribeh/" : "/en/story/"
+  const teamLink = intl.locale === "cs" ? "/cs/pribeh/#team" : "/en/story/#team"
 
   return (
     <section {...props}>
@@ -51,7 +52,7 @@ const StoryBlock = props => {
             />
           </h1>
           <p>
-            <Link className="anchor anchor--default" to={storyLink}>
+            <Link className="anchor anchor--default" to={teamLink}>
               See the team
             </Link>
           </p>

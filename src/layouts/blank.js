@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const BlankLayout = ({ children }) => (
-  <div className="page-container baseline-grid baseline-grid--visible js-ie-warn">
+  <div className="page-container baseline-grid js-ie-warn">
     {children}
   </div>
 )

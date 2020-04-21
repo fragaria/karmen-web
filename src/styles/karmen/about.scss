@@ -1,0 +1,117 @@
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(../../assets/img/lead.jpg);
+  background-size: cover;
+  height: gu(24);
+  z-index: 1;
+  margin-bottom: gu(3);
+
+  &:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.about-hero__main,
+.about-hero__sub {
+  color: map-get($palette, white);
+  text-align: center;
+  z-index: 1;
+  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
+}
+
+.about-hero__main {
+  @include baseline(s9, $headingtype, 3, $below: 1);
+}
+
+.about-hero__sub {
+  @include baseline(s4, $bodytype, 1);
+}
+
+.about-body {
+  text-align: center;
+
+  h3 {
+    @include baseline(s7, $headingtype, 3, $below: 1, $above: 1);
+  }
+
+  p {
+    @include baseline(s4, $bodytype, 1, $below: 3);
+  }
+
+  p + h3 {
+    position: relative;
+
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: -1px;
+      width: 100%;
+      background: map-get($palette, gray-medium);
+      height: 1px;
+    }
+  }
+}
+
+.about-founders-headline {
+  text-align: center;
+  @include baseline(s9, $headingtype, 2, $above: 3, $below: 2);
+}
+
+.about-founders {
+  display: flex;
+  width: 100%;
+  margin-bottom: gu(6);
+}
+
+.about-founders__founder {
+  flex: 1;
+  background: map-get($palette, white);
+
+  + .about-founders__founder {
+    border-left: 1px map-get($palette, gray-medium) solid;
+  }
+}
+
+.about-founders__founder-image {
+  height: gu(11);
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-founders__founder-body {
+  padding: gu(1) gu(2) gu(2);
+
+  h2 {
+    @include baseline(s6, $headingtype, 2);
+  }
+
+  h3 {
+    color: map-get($palette, red);
+    @include baseline(s2, $bodytype, 1);
+  }
+
+  p {
+    @include baseline(s3, $bodytype, 1, $above: 1);
+  }
+}
+
+.about-founders__founder--company .about-founders__founder-image img {
+  height: 100%;
+}

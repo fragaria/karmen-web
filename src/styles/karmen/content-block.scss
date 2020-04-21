@@ -25,6 +25,30 @@
     @include cbPadding(gu(2));
   }
 
+  &--narrow {
+    max-width: gu(45) + gu(0.5)*2;
+
+    @include breakpoint(tablet-small up) {
+      max-width: gu(45) + gu(1)*2;
+    }
+
+    @include breakpoint(tablet up) {
+      max-width: gu(45) + gu(2)*2;
+    }
+  }
+
+  &--narrower {
+    max-width: gu(30) + gu(0.5)*2;
+
+    @include breakpoint(tablet-small up) {
+      max-width: gu(30) + gu(1)*2;
+    }
+
+    @include breakpoint(tablet up) {
+      max-width: gu(30) + gu(2)*2;
+    }
+  }
+
   &--sitenavwide {
     max-width: $sitenav-max-width + gu(0.5)*2;
 
