@@ -8,6 +8,7 @@ import SEOBusinessInfo from "components/seo/business-info"
 import CasesBlock from "components/page-blocks/cases"
 import HeroBlock from "components/page-blocks/hero"
 import PricingBlock from "components/page-blocks/pricing"
+import PrincipleBlock from "components/page-blocks/principle"
 import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
 import StoryBlock from "components/page-blocks/story"
@@ -23,6 +24,7 @@ const IndexENPage = ({ data, location }) => {
 
       <div className="content-block content-block--sitenavwide">
         <CasesBlock className="v-home-cases v-home-section" />
+        <PrincipleBlock className="v-home-principle v-home-section" />
       </div>
 
       <div className="content-block">

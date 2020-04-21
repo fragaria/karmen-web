@@ -38,7 +38,7 @@ body {
 
 // Links.
 a {
-    color: $anchor-color;
+    color: currentColor;
     text-decoration: none;
 
     &:not(&.nohover) {

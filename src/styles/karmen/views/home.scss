@@ -4,7 +4,8 @@ $narrow-parts-width: gu(45);
 .v-home-solution,
 .v-home-pricing,
 .v-home-testimonials,
-.v-home-story {
+.v-home-story,
+.v-home-principle {
   padding-top: gu(6);
 }
 
@@ -32,6 +33,11 @@ $narrow-parts-width: gu(45);
 
 .v-home-pricing {
   max-width: $narrow-parts-width;
+  margin: auto;
+  text-align: center;
+}
+
+.v-home-principle {
   margin: auto;
   text-align: center;
 }
