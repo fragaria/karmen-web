@@ -1,11 +1,14 @@
 $narrow-parts-width: gu(45);
 
 
-.v-home-section + .v-home-section {
-  margin-top: gu(6);
+.v-home-solution,
+.v-home-pricing,
+.v-home-testimonials,
+.v-home-story {
+  padding-top: gu(6);
 }
 
-.v-home-section:last-of-type {
+.v-home-story {
   margin-bottom: gu(6);
 }
 

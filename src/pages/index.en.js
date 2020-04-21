@@ -5,6 +5,7 @@ import Layout from "layouts/en"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
+import CasesBlock from "components/page-blocks/cases"
 import HeroBlock from "components/page-blocks/hero"
 import PricingBlock from "components/page-blocks/pricing"
 import TestimonialsBlock from "components/page-blocks/testimonials"
@@ -19,6 +20,10 @@ const IndexENPage = ({ data, location }) => {
 
       <HeroBlock className="v-home-hero v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
+
+      <div className="content-block content-block--sitenavwide">
+        <CasesBlock className="v-home-cases v-home-section" />
+      </div>
 
       <div className="content-block">
         <PricingBlock location={location} className="v-home-pricing v-home-section" />
