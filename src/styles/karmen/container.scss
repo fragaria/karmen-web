@@ -8,6 +8,10 @@
   &.noscroll {
     overflow: hidden;
   }
+
+  &--nopush {
+    padding-top: 0;
+  }
 }
 
 .page-container-wrapper {

@@ -1,9 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+
 import Layout from "layouts/blank"
+
 import SEOMetadata from "components/seo/metadata"
 
-import karmenLogoImg from "assets/img/karmen-logo-rect.svg"
+import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
 
 const NotFoundPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +28,7 @@ const NotFoundPage = () => {
   `)
 
   return (
-    <Layout lang="en">
+    <Layout lang="en" wrapperClass="page-container--nopush">
       <SEOMetadata title="Oh-oh! There is nothing here." />
       <div className="v-error typeset">
         <div className="v-error__inner">
@@ -38,7 +40,7 @@ const NotFoundPage = () => {
           <h3>Sorry, we couldn't find the page you were looking for.</h3>
           <div className="text-center">
             <a href="/" className="button" role="button">
-              Go to homepage instead
+              See homepage instead
             </a>
           </div>
         </div>

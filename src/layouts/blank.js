@@ -6,13 +6,17 @@
  */
 
 import React from "react"
+import classNames from "classnames"
 import PropTypes from "prop-types"
 
-const BlankLayout = ({ children }) => (
-  <div className="page-container baseline-grid js-ie-warn">
-    {children}
-  </div>
-)
+const BlankLayout = ({ wrapperClass = "", children } = {}) => {
+  const containerClass = classNames("page-container baseline-grid js-ie-warn", wrapperClass)
+  return (
+    <div className={containerClass}>
+      {children}
+    </div>
+  )
+}
 
 BlankLayout.propTypes = {
   children: PropTypes.node.isRequired,

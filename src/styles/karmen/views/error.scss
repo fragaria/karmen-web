@@ -1,0 +1,46 @@
+.v-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  background: map-get($palette, red);
+  color: map-get($palette, white);
+  padding: gu();
+
+  .button {
+    &:hover {
+      background: map-get($palette, white);
+      color: map-get($palette, black);
+    }
+  }
+}
+
+.v-error .v-error__inner {
+  text-align: center;
+
+  h1 {
+    @include baseline(
+      s9,
+      $headingtype,
+      $lineheight: 2,
+      $below: 0,
+      $breakpoint: mobile down
+    );
+    @include baseline(
+      s8,
+      $headingtype,
+      $lineheight: 3,
+      $below: 0,
+      $breakpoint: tablet-small up
+    );
+  }
+
+  h3 {
+    @include baseline(s5, $bodytype, $lineheight: 2.3, $below: 4);
+  }
+
+  img {
+    height: gu(3);
+  }
+}
