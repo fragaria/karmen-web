@@ -143,9 +143,8 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
             "")
 
         return (
-          <Form>
-            <h2>Buy Karmen</h2>
-            <div className="form__line">
+          <Form className="checkout-form">
+            <div className="form__line checkout-form__variant checkout-form__body">
               <Field name="variant">
                 {({ field, meta }) => (
                   <>
@@ -177,226 +176,237 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                 )}
               </Field>
             </div>
-            <div className="form__line">
-              <Field name="quantity">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="quantity">
-                      <FormattedMessage
-                        id="checkoutform.label_count"
-                        defaultMessage="Count"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input
-                        className="form-control"
-                        type="number"
-                        min="1"
-                        {...field}
-                      />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
+            <div className="checkout-form__body">
+              <div className="form__line">
+                <Field name="quantity">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="quantity">
+                        <FormattedMessage
+                          id="checkoutform.label_count"
+                          defaultMessage="Count"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input
+                          className="form-control form-control--bordered"
+                          type="number"
+                          min="1"
+                          {...field}
+                        />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.shipping_address"
+                  defaultMessage="Shipping address"
+                />
+              </h2>
+              <div className="form__line">
+                <Field name="fullName">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="fullName">
+                        <FormattedMessage
+                          id="checkoutform.label_full_name"
+                          defaultMessage="Your full name"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="email">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="email">
+                        <FormattedMessage
+                          id="checkoutform.label_email"
+                          defaultMessage="Your email"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="email" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="phone">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="phone">
+                        <FormattedMessage
+                          id="checkoutform.label_phone"
+                          defaultMessage="Your phone"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="phone" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="company">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="company">
+                        <FormattedMessage
+                          id="checkoutform.label_company"
+                          defaultMessage="Company name"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="line1">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="line1">
+                        <FormattedMessage
+                          id="checkoutform.label_line1"
+                          defaultMessage="Street and house number"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="line2">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="line2">
+                        <FormattedMessage
+                          id="checkoutform.label_line2"
+                          defaultMessage="City"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="postalCode">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="postalCode">
+                        <FormattedMessage
+                          id="checkoutform.label_postal_code"
+                          defaultMessage="Postal code"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="state">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="state">
+                        <FormattedMessage
+                          id="checkoutform.label_state"
+                          defaultMessage="State"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="country">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="country">
+                        <FormattedMessage
+                          id="checkoutform.label_country"
+                          defaultMessage="Country"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select className="form-control form-control--bordered" {...field}>
+                          {COUNTRIES.map(country => (
+                            <option key={country.id} value={country.id}>
+                              {country.name}
+                            </option>
+                          ))}
+                        </select>
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
             </div>
-            <h3>Adresa pro doručení</h3>
-            <div className="form__line">
-              <Field name="fullName">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="fullName">
-                      <FormattedMessage
-                        id="checkoutform.label_full_name"
-                        defaultMessage="Your full name"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="email">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="email">
-                      <FormattedMessage
-                        id="checkoutform.label_email"
-                        defaultMessage="Your email"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="email" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="phone">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="phone">
-                      <FormattedMessage
-                        id="checkoutform.label_phone"
-                        defaultMessage="Your phone"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="phone" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="company">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="company">
-                      <FormattedMessage
-                        id="checkoutform.label_company"
-                        defaultMessage="Company name"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="line1">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="line1">
-                      <FormattedMessage
-                        id="checkoutform.label_line1"
-                        defaultMessage="Street and house number"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="line2">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="line2">
-                      <FormattedMessage
-                        id="checkoutform.label_line2"
-                        defaultMessage="City"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="postalCode">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="postalCode">
-                      <FormattedMessage
-                        id="checkoutform.label_postal_code"
-                        defaultMessage="Postal code"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="state">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="state">
-                      <FormattedMessage
-                        id="checkoutform.label_state"
-                        defaultMessage="State"
-                      />
-                    </label>
-                    <div className={getClass("form-control-wrapper", meta)}>
-                      <input className="form-control" type="text" {...field} />
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <div className="form__line">
-              <Field name="country">
-                {({ field, meta }) => (
-                  <>
-                    <label className="form-label" htmlFor="country">
-                      <FormattedMessage
-                        id="checkoutform.label_country"
-                        defaultMessage="Country"
-                      />
-                    </label>
-                    <div
-                      className={getClass(
-                        "form-control-wrapper form-control-wrapper--select",
-                        meta
-                      )}
-                    >
-                      <select className="form-control" {...field}>
-                        {COUNTRIES.map(country => (
-                          <option key={country.id} value={country.id}>
-                            {country.name}
-                          </option>
-                        ))}
-                      </select>
-                      {meta.touched && meta.error && (
-                        <p className="form-control-error">{meta.error}</p>
-                      )}
-                    </div>
-                  </>
-                )}
-              </Field>
-            </div>
-            <hr />
-            <div>
-              <h2>Souhrn</h2>
+            <div class="checkout-form__body">
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.summary"
+                  defaultMessage="Summary"
+                />
+              </h2>
               <p>
                 {values["quantity"]}x Karmen Pill: {pillPrice}{" "}
                 {pillVariant.currency} bez DPH
@@ -407,21 +417,21 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
               <p>
                 Celkem: {totalPrice} {pillVariant.currency} bez DPH
               </p>
-            </div>
-            <div className="form__submit">
-              <p>
-                <em>
-                  Po kliknutí na „Koupit“ budete přesměrování k pokladně.
-                  Fakturační údaje a stanovení výše DPH bude doplněno u
-                  pokladny.
-                </em>
-              </p>
-              <button type="submit" className="button" disabled={isSubmitting}>
-                <FormattedMessage
-                  id="checkoutform.cta_buy"
-                  defaultMessage="Buy"
-                />
-              </button>
+              <div className="form__submit">
+                <p>
+                  <em>
+                    Po kliknutí na „Koupit“ budete přesměrování k pokladně.
+                    Fakturační údaje a stanovení výše DPH bude doplněno u
+                    pokladny.
+                  </em>
+                </p>
+                <button type="submit" className="button" disabled={isSubmitting}>
+                  <FormattedMessage
+                    id="checkoutform.cta_buy"
+                    defaultMessage="Buy"
+                  />
+                </button>
+              </div>
             </div>
           </Form>
         )

@@ -75,15 +75,14 @@ module.exports = {
     ],
     nav: {
       en: [
-        { name: "Products and Services", url: "/en/#products" },
-        { name: "Where to buy", url: `/en/#buy` },
-        { name: "Testimonials", url: `/en/#portfolio` },
+        { name: "How it works?", url: `/en/#principle` },
+        { name: "Buy", url: `/en/buy/` },
+        { name: "Our story", url: `/en/story/` },
       ],
       cs: [
-        { name: "Produkty a služby", url: "/cs/#products" },
-        { name: "Kde koupit", url: `/cs/#buy` },
-        { name: "Beta testování", url: `/cs/#beta` },
-        { name: "Reference", url: `/cs/#portfolio` },
+        { name: "Jak to funguje?", url: `/cs/#principle` },
+        { name: "Koupit", url: `/cs/koupit/` },
+        { name: "Náš příběh", url: `/cs/pribeh/` },
       ],
     },
     footerNav: {

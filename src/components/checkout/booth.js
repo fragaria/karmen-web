@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { getCurrentLangKey } from "ptz-i18n"
+import { useIntl } from "react-intl"
 
 import { CheckoutSession } from "./session"
 import CheckoutForm from "./form"
 import { selectShippingVariant } from "./config"
 
-const CheckoutBooth = ({ location }) => {
+const CheckoutBooth = () => {
   const { site: config } = useStaticQuery(graphql`
     query {
       site {
@@ -18,14 +18,13 @@ const CheckoutBooth = ({ location }) => {
             octobatApiKey
             octobatBeanieConfigurationId
           }
-          ...Languages
         }
       }
     }
   `)
 
-  const { langs, defaultLangKey } = config.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, location.pathname)
+  const intl = useIntl()
+  const langKey = intl.locale
 
   const finalizeSession = async values => {
     if (config.siteMetadata.checkout.octobatConfigured) {
@@ -81,8 +80,6 @@ const CheckoutBooth = ({ location }) => {
   )
 }
 
-CheckoutBooth.propTypes = {
-  location: PropTypes.object.isRequired,
-}
+CheckoutBooth.propTypes = {}
 
 export default CheckoutBooth

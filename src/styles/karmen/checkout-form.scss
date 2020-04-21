@@ -1,0 +1,19 @@
+.checkout-form {
+  background: map-get($palette, white);
+
+  h2 {
+    @include baseline(s6, $headingtype, 2, $below: 1, $above: 1);
+  }
+}
+
+.checkout-form__body {
+  padding: gu(1) gu(2) gu(2);
+}
+
+.checkout-form__variant {
+  background: map-get($palette, red);
+
+  .form-label {
+    color: map-get($palette, white);
+  }
+}

@@ -1,0 +1,18 @@
+.buy {
+  display: flex;
+  padding-top: gu(3);
+  margin-bottom: gu(6);
+}
+
+.buy__image {
+  max-width: gu(20);
+  margin-right: gu(2);
+}
+
+.buy__form {
+  max-width: gu(25);
+
+  .page-block-headline {
+    @include baseline(s7, $headingtype, 2, $below: 1);
+  }
+}

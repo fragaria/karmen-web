@@ -34,6 +34,10 @@
         box-shadow: none;
         background-color: darken(map-get($palette, gray-light), 1%);
     }
+
+    &--bordered {
+      border: gu(0.1) map-get($palette, gray-medium) solid;
+    }
 }
 
 .form-control-wrapper {
