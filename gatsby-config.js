@@ -75,14 +75,16 @@ module.exports = {
     ],
     nav: {
       en: [
-        { name: "How it works?", url: `/en/#principle` },
+        { name: "How it works", url: `/en/#principle` },
+        { name: "Pricing", url: `/en/#buy` },
         { name: "Buy", url: `/en/buy/` },
-        { name: "Our story", url: `/en/story/` },
+        { name: "Story", url: `/en/story/` },
       ],
       cs: [
-        { name: "Jak to funguje?", url: `/cs/#principle` },
+        { name: "Jak na to", url: `/cs/#principle` },
+        { name: "Cena", url: `/cs/#buy` },
         { name: "Koupit", url: `/cs/koupit/` },
-        { name: "Náš příběh", url: `/cs/pribeh/` },
+        { name: "Příběh", url: `/cs/pribeh/` },
       ],
     },
     footerNav: {
@@ -109,9 +111,9 @@ module.exports = {
           { name: "Přihlásit se", url: "https://cloud.karmen.tech" },
         ],
         [
-          { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
+          { name: "Karmen dokumentace", url: "https://docs.karmen.tech/#/quickstart" },
           {
-            name: "Karmen Pill docs",
+            name: "Karmen Pill dokumentace",
             url: "https://docs.karmen.tech/#/pill-getting-started",
           },
           { name: "GitHub", url: "https://github.com/fragaria/karmen" },
