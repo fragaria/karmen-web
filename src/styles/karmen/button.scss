@@ -1,4 +1,4 @@
-@mixin buttonStyle($foreground, $background) {
+@mixin buttonStyle($foreground, $background, $foregroundHover, $backgroundHover) {
     color: $foreground;
     background-color: $background;
     transition: all .2s ease-in-out;
@@ -12,7 +12,8 @@
 
     &:hover,
     &:focus {
-        background: map-get($palette, red);
+        color: $foregroundHover;
+        background: $backgroundHover;
     }
 
     &:focus {
@@ -34,7 +35,9 @@ a.button {
 
     @include buttonStyle(
         map-get(map-get($button-variants, primary), foreground),
-        map-get(map-get($button-variants, primary), background)
+        map-get(map-get($button-variants, primary), background),
+        map-get(map-get($button-variants, primary), foregroundHover),
+        map-get(map-get($button-variants, primary), backgroundHover)
     );
 }
 
@@ -43,7 +46,9 @@ a.button {
     .button.button--#{$variantName} {
         @include buttonStyle(
             map-get($variantSettings, foreground),
-            map-get($variantSettings, background)
+            map-get($variantSettings, background),
+            map-get($variantSettings, foregroundHover),
+            map-get($variantSettings, backgroundHover)
         );
     }
 }

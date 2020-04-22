@@ -15,7 +15,7 @@ $narrow-parts-width: gu(45);
 }
 
 .v-home-section .page-block-headline {
-  @include baseline(s9, $headingtype, 2, $below: 2);
+  @include baseline(s9, $headingtype, 3, $below: 2);
 }
 
 .v-home-section .page-block-sub {

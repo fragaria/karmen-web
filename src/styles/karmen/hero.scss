@@ -1,8 +1,11 @@
 .hero {
-  position: relative;
   background-size: cover;
   height: gu(24);
-  z-index: 1;
+}
+
+.hero__cover {
+  position: relative;
+  height: 100%;
 
   &:before {
     z-index: -1;
@@ -37,5 +40,5 @@
 }
 
 .hero__cta {
-  margin-top: gu(2.5);
+  transform: translateY(gu(-1.5));
 }

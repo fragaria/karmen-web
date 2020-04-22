@@ -35,7 +35,7 @@ const CasesBlock = props => {
             <p>
               <FormattedMessage
                 id="cases-block.individuals_desc"
-                defaultMessage="Získejte dokonalý přehled a komfort obsluhy Vaší 3D tiskárny. Karmen vám umožní ovládat tiskovou frontu kdekoli na světě prostřednictvím počítače či mobilního telefonu. Díky zabudované kameře snadno zjistíte,  v jakém stádiu tisku se váš projekt nachází."
+                defaultMessage="Get a complete overview of your print progress. Karmen lets you monitor print jobs and manage the print queue from anywhere on computer or smartphone. The built-in camera lets you quickly see if everything’s turning out OK."
               />
             </p>
           </div>
@@ -55,7 +55,7 @@ const CasesBlock = props => {
             <p>
               <FormattedMessage
                 id="cases-block.teams_desc"
-                defaultMessage="Tiskněte prototypy, náhradní díly či nedostatkové zboží.  S pomocí řešení Karmen snadno vytvoříte efektivní strukturu pro vaše tisková zařízení a týmy po celém světě. Karmen  si pro své vlastnosti oblíbily firmy, školy, coworkingová centra i další organizace. "
+                defaultMessage="Print prototypes, spare parts or scarce items. Karmen makes your print queue more effective and makes it easy to coordinate the management of print jobs and teams worldwide. Karmen’s features make it popular among companies, schools, co-working spaces and other organisations."
               />
             </p>
           </div>

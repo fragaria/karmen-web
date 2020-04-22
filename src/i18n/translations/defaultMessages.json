@@ -436,117 +436,117 @@
         "defaultMessage": "Story of Karmen",
         "end": {
           "column": 16,
-          "line": 36
+          "line": 31
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.story_headline",
         "start": {
           "column": 14,
-          "line": 33
+          "line": 28
         }
       },
       {
         "defaultMessage": "Everything starts with laziness.",
         "end": {
           "column": 16,
-          "line": 42
+          "line": 37
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.motto",
         "start": {
           "column": 14,
-          "line": 39
+          "line": 34
         }
       },
       {
         "defaultMessage": "The beginning",
         "end": {
           "column": 14,
-          "line": 52
+          "line": 47
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.beginning",
         "start": {
           "column": 12,
-          "line": 49
+          "line": 44
         }
       },
       {
         "defaultMessage": "The progress",
         "end": {
           "column": 14,
-          "line": 62
+          "line": 57
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.progress",
         "start": {
           "column": 12,
-          "line": 59
+          "line": 54
         }
       },
       {
         "defaultMessage": "The finale",
         "end": {
           "column": 14,
-          "line": 72
+          "line": 67
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.finale",
         "start": {
           "column": 12,
-          "line": 69
+          "line": 64
         }
       },
       {
         "defaultMessage": "Founders",
         "end": {
           "column": 14,
-          "line": 88
+          "line": 83
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.team_headline",
         "start": {
           "column": 12,
-          "line": 85
+          "line": 80
         }
       },
       {
         "defaultMessage": "Fragaria CEO",
         "end": {
           "column": 20,
-          "line": 101
+          "line": 97
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.burian_sub",
         "start": {
           "column": 18,
-          "line": 98
+          "line": 94
         }
       },
       {
         "defaultMessage": "Fragaria CTO, chairmen of Pyvec.org",
         "end": {
           "column": 20,
-          "line": 120
+          "line": 117
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.bilek_sub",
         "start": {
           "column": 18,
-          "line": 117
+          "line": 114
         }
       },
       {
         "defaultMessage": "Developer team",
         "end": {
           "column": 20,
-          "line": 139
+          "line": 136
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.devteam",
         "start": {
           "column": 18,
-          "line": 136
+          "line": 133
         }
       }
     ],
@@ -558,13 +558,13 @@
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 14,
-          "line": 20
+          "line": 29
         },
         "file": "src/components/page-blocks/buy.js",
         "id": "buy-block.headline",
         "start": {
           "column": 12,
-          "line": 17
+          "line": 26
         }
       }
     ],
@@ -575,53 +575,40 @@
       {
         "defaultMessage": "For individuals",
         "end": {
-          "column": 14,
-          "line": 14
+          "column": 16,
+          "line": 33
         },
         "file": "src/components/page-blocks/cases.js",
         "id": "cases-block.individuals_headline",
         "start": {
-          "column": 12,
-          "line": 11
-        }
-      },
-      {
-        "defaultMessage": "Získejte dokonalý přehled a komfort obsluhy Vaší 3D tiskárny. Karmen vám umožní ovládat tiskovou frontu kdekoli na světě prostřednictvím počítače či mobilního telefonu. Díky zabudované kameře snadno zjistíte,  v jakém stádiu tisku se váš projekt nachází.",
-        "end": {
           "column": 14,
-          "line": 21
-        },
-        "file": "src/components/page-blocks/cases.js",
-        "id": "cases-block.individuals_desc",
-        "start": {
-          "column": 12,
-          "line": 17
+          "line": 30
         }
       },
       {
         "defaultMessage": "For teams",
         "end": {
-          "column": 14,
-          "line": 29
+          "column": 16,
+          "line": 49
         },
         "file": "src/components/page-blocks/cases.js",
         "id": "cases-block.teams_headline",
         "start": {
-          "column": 12,
-          "line": 26
+          "column": 14,
+          "line": 46
         }
       },
       {
-        "defaultMessage": "Tiskněte prototypy, náhradní díly či nedostatkové zboží.  S pomocí řešení Karmen snadno vytvoříte efektivní strukturu pro vaše tisková zařízení a týmy po celém světě. Karmen  si pro své vlastnosti oblíbily firmy, školy, coworkingová centra i další organizace. ",
+        "defaultMessage": "Print prototypes, spare parts or scarce items. Karmen makes your print queue more effective and makes it easy to coordinate the management of print jobs and teams worldwide. Karmen’s features make it popular among companies, schools, co-working spaces and other organisations.",
         "end": {
-          "column": 14,
-          "line": 37
+          "column": 16,
+          "line": 55
         },
         "file": "src/components/page-blocks/cases.js",
         "id": "cases-block.teams_desc",
         "start": {
-          "column": 12,
-          "line": 32
+          "column": 14,
+          "line": 52
         }
       }
     ],
@@ -630,42 +617,42 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Your 3D printers{lineBreak}anywhere, anytime with you",
+        "defaultMessage": "Your 3D printers{lineBreak}anytime, anywhere",
         "end": {
-          "column": 14,
-          "line": 18
+          "column": 16,
+          "line": 29
         },
         "file": "src/components/page-blocks/hero.js",
-        "id": "hero-block.meet_karmen",
+        "id": "hero-block.headline",
         "start": {
-          "column": 12,
-          "line": 14
+          "column": 14,
+          "line": 25
         }
       },
       {
-        "defaultMessage": "Get a complete overview of your print jobs.{lineBreak}For companies, schools, makerspaces and individuals.",
+        "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
         "end": {
-          "column": 14,
-          "line": 25
+          "column": 16,
+          "line": 36
         },
         "file": "src/components/page-blocks/hero.js",
-        "id": "hero-block.claim",
+        "id": "hero-block.sub",
         "start": {
-          "column": 12,
-          "line": 21
+          "column": 14,
+          "line": 32
         }
       },
       {
         "defaultMessage": "Learn more",
         "end": {
           "column": 80,
-          "line": 28
+          "line": 42
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.cta",
         "start": {
           "column": 12,
-          "line": 28
+          "line": 42
         }
       }
     ],
@@ -737,7 +724,7 @@
           "line": 22
         },
         "file": "src/components/page-blocks/payment-cancelled.js",
-        "id": "paid-block.back_to_hp",
+        "id": "payment-cancelled-block.back_to_hp",
         "start": {
           "column": 10,
           "line": 19
@@ -752,104 +739,104 @@
         "defaultMessage": "Conditions apply.",
         "end": {
           "column": 3,
-          "line": 14
+          "line": 15
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.special_offer_memo",
         "start": {
           "column": 20,
-          "line": 11
+          "line": 12
         }
       },
       {
-        "defaultMessage": "Buy Karmen",
+        "defaultMessage": "One price, unlimited possibilities",
         "end": {
           "column": 10,
-          "line": 27
+          "line": 36
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.headline",
         "start": {
           "column": 8,
-          "line": 24
+          "line": 33
         }
       },
       {
         "defaultMessage": "130 EUR",
         "end": {
           "column": 14,
-          "line": 38
+          "line": 47
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.pill_price",
         "start": {
           "column": 12,
-          "line": 35
+          "line": 44
         }
       },
       {
         "defaultMessage": "Free",
         "end": {
           "column": 14,
-          "line": 48
+          "line": 61
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.karmen_price",
         "start": {
           "column": 12,
-          "line": 45
+          "line": 58
         }
       },
       {
         "defaultMessage": "Special limited offer",
         "end": {
           "column": 14,
-          "line": 54
+          "line": 67
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.karmen_price_note",
         "start": {
           "column": 12,
-          "line": 51
+          "line": 64
         }
       },
       {
         "defaultMessage": "130 EUR",
         "end": {
           "column": 14,
-          "line": 75
+          "line": 92
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price",
         "start": {
           "column": 12,
-          "line": 72
+          "line": 89
         }
       },
       {
         "defaultMessage": "Total excl. VAT",
         "end": {
           "column": 14,
-          "line": 81
+          "line": 98
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price_note",
         "start": {
           "column": 12,
-          "line": 78
+          "line": 95
         }
       },
       {
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 12,
-          "line": 90
+          "line": 107
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.buy",
         "start": {
           "column": 10,
-          "line": 87
+          "line": 104
         }
       }
     ],
@@ -858,107 +845,107 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "How it works?",
+        "defaultMessage": "How it works",
         "end": {
           "column": 10,
-          "line": 16
+          "line": 29
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.headline",
         "start": {
           "column": 8,
-          "line": 13
-        }
-      },
-      {
-        "defaultMessage": "Sign-up",
-        "end": {
-          "column": 16,
-          "line": 29
-        },
-        "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.signup",
-        "start": {
-          "column": 14,
           "line": 26
         }
       },
       {
-        "defaultMessage": "Sign-up on {signupLink}",
+        "defaultMessage": "Sign up",
         "end": {
           "column": 16,
           "line": 42
         },
         "file": "src/components/page-blocks/principle.js",
+        "id": "principle-block.signup",
+        "start": {
+          "column": 14,
+          "line": 39
+        }
+      },
+      {
+        "defaultMessage": "Register at {signupLink}",
+        "end": {
+          "column": 16,
+          "line": 55
+        },
+        "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.signup_note",
         "start": {
           "column": 14,
-          "line": 32
+          "line": 45
         }
       },
       {
         "defaultMessage": "Connect Pill to your printer",
         "end": {
           "column": 16,
-          "line": 56
+          "line": 69
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect",
         "start": {
           "column": 14,
-          "line": 53
+          "line": 66
         }
       },
       {
-        "defaultMessage": "Use printer USB port",
+        "defaultMessage": "Use the printer’s USB port",
         "end": {
           "column": 16,
-          "line": 62
+          "line": 75
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect_note",
         "start": {
           "column": 14,
-          "line": 59
+          "line": 72
         }
       },
       {
-        "defaultMessage": "Add your printer to Karmen",
+        "defaultMessage": "Connect the new printer to your fleet",
         "end": {
           "column": 16,
-          "line": 76
+          "line": 89
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer",
         "start": {
           "column": 14,
-          "line": 73
+          "line": 86
         }
       },
       {
-        "defaultMessage": "See {addLink}",
+        "defaultMessage": "It’s faster than drinking a cup of coffee",
         "end": {
           "column": 16,
-          "line": 87
+          "line": 95
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer_note",
         "start": {
           "column": 14,
-          "line": 79
+          "line": 92
         }
       },
       {
-        "defaultMessage": "All done!",
+        "defaultMessage": "You’re good to go!",
         "end": {
           "column": 16,
-          "line": 99
+          "line": 107
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.all_done",
         "start": {
           "column": 14,
-          "line": 96
+          "line": 104
         }
       }
     ],
@@ -970,39 +957,169 @@
         "defaultMessage": "Meet Karmen",
         "end": {
           "column": 18,
-          "line": 24
+          "line": 39
         },
         "file": "src/components/page-blocks/solution.js",
         "id": "solution-block.meet_karmen",
         "start": {
           "column": 16,
-          "line": 21
+          "line": 36
         }
       },
       {
-        "defaultMessage": "Karmen lets you manage 3D printers remotely.",
+        "defaultMessage": "Karmen lets you manage your 3D printers remotely.",
         "end": {
           "column": 18,
-          "line": 30
+          "line": 45
         },
         "file": "src/components/page-blocks/solution.js",
         "id": "solution-block.claim_1",
         "start": {
           "column": 16,
-          "line": 27
+          "line": 42
         }
       },
       {
         "defaultMessage": "Get rid of SD cards once and for all.",
         "end": {
           "column": 18,
-          "line": 35
+          "line": 50
         },
         "file": "src/components/page-blocks/solution.js",
         "id": "solution-block.claim_2",
         "start": {
           "column": 16,
-          "line": 32
+          "line": 47
+        }
+      },
+      {
+        "defaultMessage": "Your print jobs. Centralized.",
+        "end": {
+          "column": 22,
+          "line": 68
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_1_title",
+        "start": {
+          "column": 20,
+          "line": 65
+        }
+      },
+      {
+        "defaultMessage": "It doesn’t matter how many 3D printers you have or where they’re located. Karmen lets you manage your printers on a computer or smartphone. Start, pause and stop print jobs, change the order in the queue or redirect to another device.",
+        "end": {
+          "column": 22,
+          "line": 74
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_1_content",
+        "start": {
+          "column": 20,
+          "line": 71
+        }
+      },
+      {
+        "defaultMessage": "Right there with you on the road",
+        "end": {
+          "column": 22,
+          "line": 82
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_2_title",
+        "start": {
+          "column": 20,
+          "line": 79
+        }
+      },
+      {
+        "defaultMessage": "It’s easy to send new print jobs over the internet and assign them to printers according to workload or filament colour.",
+        "end": {
+          "column": 22,
+          "line": 88
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_2_content",
+        "start": {
+          "column": 20,
+          "line": 85
+        }
+      },
+      {
+        "defaultMessage": "Video from print jobs in real time",
+        "end": {
+          "column": 22,
+          "line": 96
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_3_title",
+        "start": {
+          "column": 20,
+          "line": 93
+        }
+      },
+      {
+        "defaultMessage": "Monitor print job progress in real time. Check job status visually anytime and show print progress to colleagues and clients.",
+        "end": {
+          "column": 22,
+          "line": 102
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_3_content",
+        "start": {
+          "column": 20,
+          "line": 99
+        }
+      },
+      {
+        "defaultMessage": "Easy team management",
+        "end": {
+          "column": 22,
+          "line": 110
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_4_title",
+        "start": {
+          "column": 20,
+          "line": 107
+        }
+      },
+      {
+        "defaultMessage": "Create teams for all your printers. Members can manage their devices remotely, while support has a complete overview of device usage.",
+        "end": {
+          "column": 22,
+          "line": 116
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_4_content",
+        "start": {
+          "column": 20,
+          "line": 113
+        }
+      },
+      {
+        "defaultMessage": "Tested by the toughest users",
+        "end": {
+          "column": 22,
+          "line": 124
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_5_title",
+        "start": {
+          "column": 20,
+          "line": 121
+        }
+      },
+      {
+        "defaultMessage": "Karmen has proven itself everywhere there’s a need to rapidly and effectively innovate, such as in healthcare and technology companies.",
+        "end": {
+          "column": 22,
+          "line": 130
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.slide_5_content",
+        "start": {
+          "column": 20,
+          "line": 127
         }
       }
     ],
@@ -1011,29 +1128,159 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Connects to the printer’s USB port",
+        "end": {
+          "column": 16,
+          "line": 44
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.pill_1",
+        "start": {
+          "column": 14,
+          "line": 41
+        }
+      },
+      {
+        "defaultMessage": "Provides internet connectivity",
+        "end": {
+          "column": 16,
+          "line": 50
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.pill_2",
+        "start": {
+          "column": 14,
+          "line": 47
+        }
+      },
+      {
+        "defaultMessage": "Includes a web camera with LED light",
+        "end": {
+          "column": 16,
+          "line": 56
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.pill_3",
+        "start": {
+          "column": 14,
+          "line": 53
+        }
+      },
+      {
+        "defaultMessage": "Simple installation with a wizard",
+        "end": {
+          "column": 16,
+          "line": 62
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.pill_4",
+        "start": {
+          "column": 14,
+          "line": 59
+        }
+      },
+      {
+        "defaultMessage": "Enables remote printer management with Karmen",
+        "end": {
+          "column": 16,
+          "line": 68
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.pill_5",
+        "start": {
+          "column": 14,
+          "line": 65
+        }
+      },
+      {
         "defaultMessage": "Getting started",
         "end": {
           "column": 14,
-          "line": 46
+          "line": 80
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_getting_started",
         "start": {
           "column": 12,
-          "line": 43
+          "line": 77
+        }
+      },
+      {
+        "defaultMessage": "Remote printer management via web browser",
+        "end": {
+          "column": 16,
+          "line": 96
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.karmen_1",
+        "start": {
+          "column": 14,
+          "line": 93
+        }
+      },
+      {
+        "defaultMessage": "Live monitoring and statistics",
+        "end": {
+          "column": 16,
+          "line": 102
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.karmen_2",
+        "start": {
+          "column": 14,
+          "line": 99
+        }
+      },
+      {
+        "defaultMessage": "Team management",
+        "end": {
+          "column": 16,
+          "line": 108
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.karmen_3",
+        "start": {
+          "column": 14,
+          "line": 105
+        }
+      },
+      {
+        "defaultMessage": "Open API and easy integration with other systems",
+        "end": {
+          "column": 16,
+          "line": 114
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.karmen_4",
+        "start": {
+          "column": 14,
+          "line": 111
+        }
+      },
+      {
+        "defaultMessage": "SaaS or on-premise",
+        "end": {
+          "column": 16,
+          "line": 120
+        },
+        "file": "src/components/page-blocks/specs.js",
+        "id": "specs-block.karmen_5",
+        "start": {
+          "column": 14,
+          "line": 117
         }
       },
       {
         "defaultMessage": "Quickstart",
         "end": {
           "column": 14,
-          "line": 74
+          "line": 132
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_quickstart",
         "start": {
           "column": 12,
-          "line": 71
+          "line": 129
         }
       }
     ],
@@ -1042,7 +1289,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Karmen story",
+        "defaultMessage": "The Karmen story",
         "end": {
           "column": 14,
           "line": 32
@@ -1055,7 +1302,7 @@
         }
       },
       {
-        "defaultMessage": "Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.",
+        "defaultMessage": "Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective.",
         "end": {
           "column": 14,
           "line": 38
@@ -1094,16 +1341,29 @@
         }
       },
       {
+        "defaultMessage": "See the team",
+        "end": {
+          "column": 16,
+          "line": 59
+        },
+        "file": "src/components/page-blocks/story.js",
+        "id": "story-block.karmen_team_link",
+        "start": {
+          "column": 14,
+          "line": 56
+        }
+      },
+      {
         "defaultMessage": "Contact us",
         "end": {
           "column": 14,
-          "line": 65
+          "line": 68
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.contact_us",
         "start": {
           "column": 12,
-          "line": 62
+          "line": 65
         }
       }
     ],
@@ -1112,29 +1372,29 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Clients & partners",
+        "defaultMessage": "Clients and partners",
         "end": {
           "column": 10,
-          "line": 14
+          "line": 26
         },
         "file": "src/components/page-blocks/testimonials.js",
         "id": "testimonials-block.headline",
         "start": {
           "column": 8,
-          "line": 11
+          "line": 23
         }
       },
       {
-        "defaultMessage": "Karmen aims at both individuals with a single 3d printer as well as companies and organizations with multiple ones. Contrary to the other solutions on the market, Karmen allows you to connect multiple printers and to combine various printer brands without any limitations.",
+        "defaultMessage": "Karmen is popular among companies that own 3D printers of various manufacturers and types, as well as among individuals who want an overview of their print jobs.",
         "end": {
           "column": 10,
-          "line": 20
+          "line": 32
         },
         "file": "src/components/page-blocks/testimonials.js",
         "id": "testimonials-block.paragraph",
         "start": {
           "column": 8,
-          "line": 17
+          "line": 29
         }
       }
     ],

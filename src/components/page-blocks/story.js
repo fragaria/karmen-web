@@ -28,13 +28,13 @@ const StoryBlock = props => {
             <span className="sitenav__anchor" id="story"></span>
             <FormattedMessage
               id="story-block.karmen_story"
-              defaultMessage="Karmen story"
+              defaultMessage="The Karmen story"
             />
           </h1>
           <p>
             <FormattedMessage
               id="story-block.karmen_story_full"
-              defaultMessage="Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami."
+              defaultMessage="Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective."
             />
           </p>
           <Link className="button button--red" to={storyLink}>
@@ -53,7 +53,10 @@ const StoryBlock = props => {
           </h1>
           <p>
             <Link className="anchor anchor--default" to={teamLink}>
-              See the team
+              <FormattedMessage
+                id="story-block.karmen_team_link"
+                defaultMessage="See the team"
+              />
             </Link>
           </p>
         </div>

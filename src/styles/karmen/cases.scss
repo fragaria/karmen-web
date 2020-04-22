@@ -3,6 +3,8 @@
 }
 
 .cases__box {
+  width: 100%;
+  display: flex;
 
   + .cases__box {
     border-left: 1px map-get($palette, gray-semilight);

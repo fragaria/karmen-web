@@ -25,7 +25,7 @@ const PrincipleBlock = props => {
         <span className="sitenav__anchor" id="principle"></span>
         <FormattedMessage
           id="principle-block.headline"
-          defaultMessage="How it works?"
+          defaultMessage="How it works"
         />
       </h1>
       <div className="principle">
@@ -38,13 +38,13 @@ const PrincipleBlock = props => {
             <h2 className="principle-box__title">
               <FormattedMessage
                 id="principle-block.signup"
-                defaultMessage="Sign-up"
+                defaultMessage="Sign up"
               />
             </h2>
             <h3 className="principle-box__sub">
               <FormattedMessage
                 id="principle-block.signup_note"
-                defaultMessage="Sign-up on {signupLink}"
+                defaultMessage="Register at {signupLink}"
                 values={{
                   signupLink: (
                     <a href="https://cloud.karmen.tech/register">
@@ -71,7 +71,7 @@ const PrincipleBlock = props => {
             <h3 className="principle-box__sub">
               <FormattedMessage
                 id="principle-block.connect_note"
-                defaultMessage="Use printer USB port"
+                defaultMessage="Use the printer’s USB port"
               />
             </h3>
           </div>
@@ -85,18 +85,13 @@ const PrincipleBlock = props => {
             <h2 className="principle-box__title">
               <FormattedMessage
                 id="principle-block.add_printer"
-                defaultMessage="Add your printer to Karmen"
+                defaultMessage="Connect the new printer to your fleet"
               />
             </h2>
             <h3 className="principle-box__sub">
               <FormattedMessage
                 id="principle-block.add_printer_note"
-                defaultMessage="See {addLink}"
-                values={{
-                  addLink: (
-                    <a href="https://cloud.karmen.tech">cloud.karmen.tech</a>
-                  ),
-                }}
+                defaultMessage="It’s faster than drinking a cup of coffee"
               />
             </h3>
           </div>
@@ -108,7 +103,7 @@ const PrincipleBlock = props => {
             <h2 className="principle-box__title">
               <FormattedMessage
                 id="principle-block.all_done"
-                defaultMessage="All done!"
+                defaultMessage="You’re good to go!"
               />
             </h2>
           </div>

@@ -26,7 +26,7 @@
     @include baseline(s2, $bodytype);
   }
 
-  img {
+  .pricing__box-img {
     display: block;
     height: gu(5);
     margin-bottom: gu(1);

@@ -47,7 +47,7 @@ const SubscriptionBox = () => {
                   readOnly
                 />
               </div>
-              <button className="button" type="submit">
+              <button className="button button--primaryToWhite" type="submit">
                 Subscribe
               </button>
             </div>

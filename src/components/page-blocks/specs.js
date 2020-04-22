@@ -37,14 +37,35 @@ const SpecsBlock = props => {
           />
           <h2>Karmen Pill</h2>
           <ul className="arrow-list">
-            <li className="arrow-list__item">Krabička k tiskárně</li>
             <li className="arrow-list__item">
-              Běžným tiskárnám přidává konektivitu do internetu
+              <FormattedMessage
+                id="specs-block.pill_1"
+                defaultMessage="Connects to the printer’s USB port"
+              />
             </li>
-            <li className="arrow-list__item">Webcam, octoprint-based</li>
-            <li className="arrow-list__item">Instalační wizard</li>
             <li className="arrow-list__item">
-              Umožňuje snadné připojení ke Karmen cloud
+              <FormattedMessage
+                id="specs-block.pill_2"
+                defaultMessage="Provides internet connectivity"
+              />
+            </li>
+            <li className="arrow-list__item">
+              <FormattedMessage
+                id="specs-block.pill_3"
+                defaultMessage="Includes a web camera with LED light"
+              />
+            </li>
+            <li className="arrow-list__item">
+              <FormattedMessage
+                id="specs-block.pill_4"
+                defaultMessage="Simple installation with a wizard"
+              />
+            </li>
+            <li className="arrow-list__item">
+              <FormattedMessage
+                id="specs-block.pill_5"
+                defaultMessage="Enables remote printer management with Karmen"
+              />
             </li>
           </ul>
           <a
@@ -69,16 +90,35 @@ const SpecsBlock = props => {
           <h2>Karmen</h2>
           <ul className="arrow-list">
             <li className="arrow-list__item">
-              Vzdálená správu tiskáren skrze web browser
+              <FormattedMessage
+                id="specs-block.karmen_1"
+                defaultMessage="Remote printer management via web browser"
+              />
             </li>
-            <li className="arrow-list__item">Live monitoring, statistiky</li>
             <li className="arrow-list__item">
-              Přístup pro více uživatelů, správa tiskových souborů
+              <FormattedMessage
+                id="specs-block.karmen_2"
+                defaultMessage="Live monitoring and statistics"
+              />
             </li>
             <li className="arrow-list__item">
-              Otevřené API, snadná integrace do dalších systémů
+              <FormattedMessage
+                id="specs-block.karmen_3"
+                defaultMessage="Team management"
+              />
             </li>
-            <li className="arrow-list__item">SaaS, nebo on-premise</li>
+            <li className="arrow-list__item">
+              <FormattedMessage
+                id="specs-block.karmen_4"
+                defaultMessage="Open API and easy integration with other systems"
+              />
+            </li>
+            <li className="arrow-list__item">
+              <FormattedMessage
+                id="specs-block.karmen_5"
+                defaultMessage="SaaS or on-premise"
+              />
+            </li>
           </ul>
           <a
             href={data.site.siteMetadata.karmenDocs}

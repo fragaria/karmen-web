@@ -31,7 +31,7 @@ export const Image = ({
 }
 
 Image.propTypes = {
-  file: PropTypes.string.isRequired,
+  file: PropTypes.object.isRequired,
   className: PropTypes.string,
   fixed: PropTypes.bool,
 }
@@ -67,7 +67,7 @@ export const BackgroundImage = ({
 }
 
 BackgroundImage.propTypes = {
-  file: PropTypes.string.isRequired,
+  file: PropTypes.object.isRequired,
   className: PropTypes.string,
   fixed: PropTypes.bool,
   tag: PropTypes.string,

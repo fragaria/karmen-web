@@ -73,10 +73,20 @@ $button-variants: (
     primary: (
         foreground: map-get($palette, white),
         background: map-get($palette, black),
+        foregroundHover: map-get($palette, white),
+        backgroundHover: map-get($palette, red),
+    ),
+    primaryToWhite: (
+        foreground: map-get($palette, white),
+        background: map-get($palette, black),
+        foregroundHover: map-get($palette, black),
+        backgroundHover: map-get($palette, white),
     ),
     red: (
         foreground: map-get($palette, white),
         background: map-get($palette, red),
+        foregroundHover: map-get($palette, white),
+        backgroundHover: map-get($palette, black),
     ),
 );
 

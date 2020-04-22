@@ -32,13 +32,13 @@ const PricingBlock = ({ location, ...props }) => {
         <span className="sitenav__anchor" id="buy"></span>
         <FormattedMessage
           id="pricing-block.headline"
-          defaultMessage="Buy Karmen"
+          defaultMessage="One price, unlimited possibilities"
         />
       </h1>
       <div className="pricing">
         <span className="pricing__plussign">+</span>
         <div className="pricing__box price">
-          <img src={pillImg} alt="Karmen Pill" />
+          <img src={pillImg} className="pricing__box-img" alt="Karmen Pill" />
           <h2 className="price__item">Karmen Pill</h2>
           <h3 className="price__sum">
             <FormattedMessage
@@ -48,7 +48,11 @@ const PricingBlock = ({ location, ...props }) => {
           </h3>
         </div>
         <div className="pricing__box price">
-          <img src={cloudImg} alt="Karmen cloud service" />
+          <img
+            src={cloudImg}
+            className="pricing__box-img"
+            alt="Karmen cloud service"
+          />
           <h2 className="price__item">Karmen</h2>
           <h3 className="price__sum">
             <FormattedMessage
@@ -74,7 +78,11 @@ const PricingBlock = ({ location, ...props }) => {
           </div>
         </div>
         <div className="pricing__box pricing__box--emphasized price">
-          <Image file={data.pillWCloud} alt="Pill + Karmen cloud service" />
+          <Image
+            file={data.pillWCloud}
+            className="pricing__box-img"
+            alt="Pill + Karmen cloud service"
+          />
           <h2 className="price__item">Pill + Karmen</h2>
           <h3 className="pricing__total price__sum">
             ={" "}

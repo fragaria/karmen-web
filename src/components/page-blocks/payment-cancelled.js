@@ -17,7 +17,7 @@ const PaymentCancelledBlock = () => {
       <div className="cta-row">
         <Link to={`/${intl.locale}/`} className="button">
           <FormattedMessage
-            id="paid-block.back_to_hp"
+            id="payment-cancelled-block.back_to_hp"
             defaultMessage="Back to homepage"
           />
         </Link>
