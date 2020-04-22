@@ -4,23 +4,24 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url(../../assets/img/lead.jpg);
-  background-size: cover;
+  // background: url(../../assets/img/lead.jpg);
+  // background-size: cover;
+  background-color: map-get($palette, red);
   height: gu(24);
   z-index: 1;
   margin-bottom: gu(3);
 
-  &:before {
-    z-index: -1;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
+  // &:before {
+  //   z-index: -1;
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background: rgba(0, 0, 0, 0.4);
+  // }
 }
 
 .about-hero__main,
@@ -28,7 +29,7 @@
   color: map-get($palette, white);
   text-align: center;
   z-index: 1;
-  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
+  // text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 }
 
 .about-hero__main {

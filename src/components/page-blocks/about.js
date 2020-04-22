@@ -1,6 +1,7 @@
 import React from "react"
 import { FormattedMessage } from "react-intl"
 
+import martinBurianImg from "assets/img/martin-burian.jpg"
 import martinBilekImg from "assets/img/martin-bilek.jpg"
 import strawberryImg from "assets/img/strawberry.svg"
 
@@ -72,7 +73,7 @@ const AboutBlock = props => {
           <div className="about-founders">
             <div className="about-founders__founder">
               <div className="about-founders__founder-image">
-                <img src={martinBilekImg} alt="Martin Bílek" />
+                <img src={martinBurianImg} alt="Martin Bílek" />
               </div>
               <div className="about-founders__founder-body">
                 <h2>Martin Burián</h2>
