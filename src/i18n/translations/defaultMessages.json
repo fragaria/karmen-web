@@ -314,16 +314,29 @@
         }
       },
       {
+        "defaultMessage": "You will be redirected to the checkout page after clicking on \"Buy\". VAT amount as well as billing details will be resolved there.",
+        "end": {
+          "column": 22,
+          "line": 518
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.cta_note",
+        "start": {
+          "column": 20,
+          "line": 515
+        }
+      },
+      {
         "defaultMessage": "Buy",
         "end": {
           "column": 20,
-          "line": 528
+          "line": 529
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.cta_buy",
         "start": {
           "column": 18,
-          "line": 525
+          "line": 526
         }
       }
     ],

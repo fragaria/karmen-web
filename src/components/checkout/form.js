@@ -512,9 +512,10 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
               <div className="checkout-form__submit">
                 <p>
                   <em>
-                    Po kliknutí na „Koupit“ budete přesměrování k pokladně.
-                    Fakturační údaje a stanovení výše DPH bude doplněno u
-                    pokladny.
+                    <FormattedMessage
+                      id="checkoutform.cta_note"
+                      defaultMessage={`You will be redirected to the checkout page after clicking on "Buy". VAT amount as well as billing details will be resolved there.`}
+                    />
                   </em>
                 </p>
                 <button
