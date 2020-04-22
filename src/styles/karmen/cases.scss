@@ -3,38 +3,34 @@
 }
 
 .cases__box {
+
+  + .cases__box {
+    border-left: 1px map-get($palette, gray-semilight);
+  }
+
+}
+
+.cases__inner-box {
   padding: gu(6) gu(4);
   position: relative;
-  z-index: 1;
 
-  &--individuals {
-    background: url(../../assets/img/cases-individual.jpg);
-    background-size: cover;
+  &:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
   }
 
-  &--teams {
-    background: url(../../assets/img/cases-teams.jpg);
-    background-size: cover;
+  h1,
+  p {
+    color: map-get($palette, white);
+    text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
   }
-
-  // &:not(:hover) {
-    &:before {
-      z-index: -1;
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    h1,
-    p {
-      color: map-get($palette, white);
-      text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
-    }
   // }
 
   h1 {
@@ -44,13 +40,4 @@
   p {
     @include baseline(s4, $bodytype);
   }
-
-  // &:hover {
-  //   background: map-get($palette, white);
-  // }
-
-  + .cases__box {
-    border-left: 1px map-get($palette, gray-semilight);
-  }
-
 }

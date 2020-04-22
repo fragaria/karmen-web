@@ -1,11 +1,23 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import martinBurianImg from "assets/img/martin-burian.jpg"
-import martinBilekImg from "assets/img/martin-bilek.jpg"
+import { BackgroundImage } from "components/image"
+
 import strawberryImg from "assets/img/strawberry.svg"
 
 const AboutBlock = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      martinBilek: file(relativePath: { eq: "martin-bilek.jpg" }) {
+        ...fluidImage600_traced
+      }
+      martinBurian: file(relativePath: { eq: "martin-burian.jpg" }) {
+        ...fluidImage600_traced
+      }
+    }
+  `)
+
   return (
     <article>
       <section {...props}>
@@ -72,9 +84,10 @@ const AboutBlock = props => {
           </h1>
           <div className="about-founders">
             <div className="about-founders__founder">
-              <div className="about-founders__founder-image">
-                <img src={martinBurianImg} alt="Martin Bílek" />
-              </div>
+              <BackgroundImage
+                file={data.martinBurian}
+                className="about-founders__founder-image"
+              />
               <div className="about-founders__founder-body">
                 <h2>Martin Burián</h2>
                 <h3>
@@ -91,9 +104,10 @@ const AboutBlock = props => {
               </div>
             </div>
             <div className="about-founders__founder">
-              <div className="about-founders__founder-image">
-                <img src={martinBilekImg} alt="Martin Bílek" />
-              </div>
+              <BackgroundImage
+                file={data.martinBilek}
+                className="about-founders__founder-image"
+              />
               <div className="about-founders__founder-body">
                 <h2>Martin Bílek</h2>
                 <h3>

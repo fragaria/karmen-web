@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 import {
   CarouselProvider,
@@ -10,12 +11,26 @@ import {
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
+import { BackgroundImage } from "components/image"
+
 const SolutionBlock = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      smartphoneAndPill: file(relativePath: { eq: "smartphone-and-pill.png" }) {
+        ...fluidImage1024_traced
+      }
+    }
+  `)
+
   return (
     <section {...props}>
       <div className="solution">
         <div className="content-block">
-          <div className="solution__inner">
+          <BackgroundImage
+            file={data.smartphoneAndPill}
+            className="solution__inner"
+            style={{ backgroundPosition: "right top", backgroundSize: "50%" }}
+          >
             <div className="solution__desc">
               <h1 className="solution__headline">
                 <FormattedMessage
@@ -98,7 +113,7 @@ const SolutionBlock = props => {
                 </ButtonNext>
               </div>
             </CarouselProvider>
-          </div>
+          </BackgroundImage>
         </div>
       </div>
     </section>

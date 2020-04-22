@@ -1,14 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage, useIntl } from "react-intl"
+
+import { BackgroundImage } from "components/image"
 
 const HeroBlock = props => {
   const intl = useIntl()
   const learnLink = intl.locale === "cs" ? "/cs/#buy" : "/en/#buy"
 
+  const data = useStaticQuery(graphql`
+    query {
+      cover: file(relativePath: { eq: "lead.jpg" }) {
+        ...fluidImage1920
+      }
+    }
+  `)
+
   return (
     <section {...props}>
-      <div className="hero">
+      <BackgroundImage file={data.cover} className="hero">
         <div className="content-block">
           <h1 className="hero__headline">
             <FormattedMessage
@@ -29,7 +39,7 @@ const HeroBlock = props => {
             <br />
           </Link>
         </div>
-      </div>
+      </BackgroundImage>
     </section>
   )
 }

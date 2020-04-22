@@ -10,6 +10,16 @@ import "src/smoothscroll.js"
 // Load i18n graphql fragment
 import { querying } from "src/i18n/querying" // eslint-disable-line
 
+// Load imaging graphql fragments
+// eslint-disable-next-line
+import {
+  fluidImage300,
+  fluidImage600,
+  fluidImage750,
+  fluidImage1024,
+  fluidImage1920,
+} from "src/imaging"
+
 /**
  * Automatically redirect to /en if lang prefix is missing
  */

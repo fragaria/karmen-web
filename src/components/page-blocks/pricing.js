@@ -1,11 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import ReactTooltip from "react-tooltip"
 import { FormattedMessage, useIntl, defineMessages } from "react-intl"
 
+import { Image } from "components/image"
+
 import pillImg from "assets/img/pill-outline.svg"
 import cloudImg from "assets/img/cloud-outline.svg"
-import pillWCloudImg from "assets/img/pill-w-cloud.png"
 
 const messages = defineMessages({
   specialOfferMemo: {
@@ -17,6 +18,14 @@ const messages = defineMessages({
 const PricingBlock = ({ location, ...props }) => {
   const intl = useIntl()
   const buyLink = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
+  const data = useStaticQuery(graphql`
+    query {
+      pillWCloud: file(relativePath: { eq: "pill-w-cloud.png" }) {
+        ...fluidImage300
+      }
+    }
+  `)
+
   return (
     <section {...props}>
       <h1 className="page-block-headline sitenav__anchorpush">
@@ -65,7 +74,7 @@ const PricingBlock = ({ location, ...props }) => {
           </div>
         </div>
         <div className="pricing__box pricing__box--emphasized price">
-          <img src={pillWCloudImg} alt="Pill + Cloud" />
+          <Image file={data.pillWCloud} alt="Pill + Karmen cloud service" />
           <h2 className="price__item">Pill + Karmen</h2>
           <h3 className="pricing__total price__sum">
             ={" "}

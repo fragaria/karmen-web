@@ -1,11 +1,24 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import signupImg from "assets/img/principle-signup.png"
-import pillImg from "assets/img/principle-pill.png"
-import cloudImg from "assets/img/karmen-cloud.png"
+import { Image } from "components/image"
 
 const PrincipleBlock = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      signup: file(relativePath: { eq: "principle-signup.png" }) {
+        ...fluidImage600
+      }
+      pill: file(relativePath: { eq: "principle-pill.png" }) {
+        ...fluidImage600
+      }
+      cloud: file(relativePath: { eq: "karmen-cloud.png" }) {
+        ...fluidImage600
+      }
+    }
+  `)
+
   return (
     <section {...props}>
       <h1 className="page-block-headline sitenav__anchorpush">
@@ -18,7 +31,7 @@ const PrincipleBlock = props => {
       <div className="principle">
         <div className="principle__box principle-box">
           <div className="principle-box__img">
-            <img src={signupImg} alt="Karmen Signup" />
+            <Image file={data.signup} alt="Karmen signup" />
           </div>
           <div className="principle-box__content">
             <h3 className="principle-box__nr">01</h3>
@@ -45,7 +58,7 @@ const PrincipleBlock = props => {
         </div>
         <div className="principle__box principle-box">
           <div className="principle-box__img">
-            <img src={pillImg} alt="Karmen Pill" />
+            <Image file={data.pill} alt="Karmen Pill" />
           </div>
           <div className="principle-box__content">
             <h3 className="principle-box__nr">02</h3>
@@ -65,7 +78,7 @@ const PrincipleBlock = props => {
         </div>
         <div className="principle__box principle-box principle-box--cutoff">
           <div className="principle-box__img">
-            <img src={cloudImg} alt="Karmen cloud" />
+            <Image file={data.cloud} alt="Karmen cloud" />
           </div>
           <div className="principle-box__content">
             <h3 className="principle-box__nr">03</h3>

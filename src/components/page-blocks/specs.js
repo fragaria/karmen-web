@@ -1,8 +1,8 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import cloudImg from "assets/img/karmen-cloud.png"
+import { Image } from "components/image"
 
 const SpecsBlock = props => {
   const data = useStaticQuery(graphql`
@@ -13,6 +13,14 @@ const SpecsBlock = props => {
           karmenDocs
         }
       }
+
+      cloud: file(relativePath: { eq: "karmen-cloud.png" }) {
+        childImageSharp {
+          fixed(width: 240, height: 174) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -21,7 +29,12 @@ const SpecsBlock = props => {
       <div className="specs sitenav__anchorpush">
         <span className="sitenav__anchor" id="specs"></span>
         <div className="specs__box">
-          <img className="specs__img" src={cloudImg} alt="Karmen cloud" />
+          <Image
+            file={data.cloud}
+            fixed={true}
+            className="specs__img"
+            alt="Karmen Pill"
+          />
           <h2>Karmen Pill</h2>
           <ul className="arrow-list">
             <li className="arrow-list__item">Krabička k tiskárně</li>
@@ -47,7 +60,12 @@ const SpecsBlock = props => {
           </a>
         </div>
         <div className="specs__box">
-          <img className="specs__img" src={cloudImg} alt="Karmen cloud" />
+          <Image
+            file={data.cloud}
+            fixed={true}
+            className="specs__img"
+            alt="Karmen cloud"
+          />
           <h2>Karmen</h2>
           <ul className="arrow-list">
             <li className="arrow-list__item">

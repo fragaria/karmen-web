@@ -3,7 +3,7 @@
     "id": "buy-block.headline",
     "defaultMessage": "Buy Karmen",
     "file": "src/components/page-blocks/buy.js",
-    "start": { "line": 17, "column": 12 },
-    "end": { "line": 20, "column": 14 }
+    "start": { "line": 27, "column": 12 },
+    "end": { "line": 30, "column": 14 }
   }
 ]

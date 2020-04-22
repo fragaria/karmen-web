@@ -2,250 +2,328 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "excl. VAT",
+        "end": {
+          "column": 3,
+          "line": 19
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.price_note",
+        "start": {
+          "column": 13,
+          "line": 16
+        }
+      },
+      {
         "defaultMessage": "Please fill out your name.",
         "end": {
           "column": 14,
-          "line": 59
+          "line": 68
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_name",
         "start": {
           "column": 12,
-          "line": 56
+          "line": 65
         }
       },
       {
         "defaultMessage": "Please fill out your phone number.",
         "end": {
           "column": 14,
-          "line": 67
+          "line": 76
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_phone",
         "start": {
           "column": 12,
-          "line": 64
+          "line": 73
         }
       },
       {
         "defaultMessage": "Please fill out your email address.",
         "end": {
           "column": 14,
-          "line": 75
+          "line": 84
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_email",
         "start": {
           "column": 12,
-          "line": 72
+          "line": 81
+        }
+      },
+      {
+        "defaultMessage": "Please fill out a valid email address.",
+        "end": {
+          "column": 14,
+          "line": 95
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.error_invalid_email",
+        "start": {
+          "column": 12,
+          "line": 92
         }
       },
       {
         "defaultMessage": "Please fill out street and house number of your residence.",
         "end": {
           "column": 14,
-          "line": 83
+          "line": 103
         },
         "file": "src/components/checkout/form.js",
-        "id": "checkoutform.error_missing_line1",
+        "id": "checkoutform.error_missing_street",
         "start": {
           "column": 12,
-          "line": 80
+          "line": 100
         }
       },
       {
         "defaultMessage": "Please fill out the city.",
         "end": {
           "column": 14,
-          "line": 91
+          "line": 111
         },
         "file": "src/components/checkout/form.js",
-        "id": "checkoutform.error_missing_line2",
+        "id": "checkoutform.error_missing_city",
         "start": {
           "column": 12,
-          "line": 88
+          "line": 108
         }
       },
       {
         "defaultMessage": "Please fill out your postal code.",
         "end": {
           "column": 14,
-          "line": 99
+          "line": 119
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.error_missing_postal_code",
         "start": {
           "column": 12,
-          "line": 96
+          "line": 116
         }
       },
       {
         "defaultMessage": "<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>",
         "end": {
           "column": 12,
-          "line": 137
+          "line": 157
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.us_adapters_out_of_stock",
         "start": {
           "column": 10,
-          "line": 127
+          "line": 147
         }
       },
       {
         "defaultMessage": "Variant",
         "end": {
           "column": 24,
-          "line": 156
+          "line": 175
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_variant",
         "start": {
           "column": 22,
-          "line": 153
+          "line": 172
         }
       },
       {
         "defaultMessage": "Count",
         "end": {
           "column": 24,
-          "line": 188
+          "line": 205
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_count",
         "start": {
           "column": 22,
-          "line": 185
+          "line": 202
+        }
+      },
+      {
+        "defaultMessage": "Shipping address",
+        "end": {
+          "column": 18,
+          "line": 227
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.shipping_address",
+        "start": {
+          "column": 16,
+          "line": 224
         }
       },
       {
         "defaultMessage": "Your full name",
         "end": {
-          "column": 24,
-          "line": 214
+          "column": 26,
+          "line": 237
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_full_name",
         "start": {
-          "column": 22,
-          "line": 211
+          "column": 24,
+          "line": 234
         }
       },
       {
         "defaultMessage": "Your email",
         "end": {
-          "column": 24,
-          "line": 234
+          "column": 26,
+          "line": 261
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_email",
         "start": {
-          "column": 22,
-          "line": 231
+          "column": 24,
+          "line": 258
         }
       },
       {
         "defaultMessage": "Your phone",
         "end": {
-          "column": 24,
-          "line": 254
+          "column": 26,
+          "line": 285
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_phone",
         "start": {
-          "column": 22,
-          "line": 251
+          "column": 24,
+          "line": 282
         }
       },
       {
         "defaultMessage": "Company name",
         "end": {
-          "column": 24,
-          "line": 274
+          "column": 26,
+          "line": 309
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_company",
         "start": {
-          "column": 22,
-          "line": 271
+          "column": 24,
+          "line": 306
         }
       },
       {
         "defaultMessage": "Street and house number",
         "end": {
-          "column": 24,
-          "line": 294
+          "column": 26,
+          "line": 333
         },
         "file": "src/components/checkout/form.js",
-        "id": "checkoutform.label_line1",
+        "id": "checkoutform.label_street",
         "start": {
-          "column": 22,
-          "line": 291
+          "column": 24,
+          "line": 330
         }
       },
       {
         "defaultMessage": "City",
         "end": {
-          "column": 24,
-          "line": 314
+          "column": 26,
+          "line": 357
         },
         "file": "src/components/checkout/form.js",
-        "id": "checkoutform.label_line2",
+        "id": "checkoutform.label_city",
         "start": {
-          "column": 22,
-          "line": 311
+          "column": 24,
+          "line": 354
         }
       },
       {
         "defaultMessage": "Postal code",
         "end": {
-          "column": 24,
-          "line": 334
+          "column": 26,
+          "line": 381
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_postal_code",
         "start": {
-          "column": 22,
-          "line": 331
+          "column": 24,
+          "line": 378
         }
       },
       {
         "defaultMessage": "State",
         "end": {
-          "column": 24,
-          "line": 354
+          "column": 26,
+          "line": 405
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_state",
         "start": {
-          "column": 22,
-          "line": 351
+          "column": 24,
+          "line": 402
         }
       },
       {
         "defaultMessage": "Country",
         "end": {
-          "column": 24,
-          "line": 374
+          "column": 26,
+          "line": 429
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_country",
         "start": {
-          "column": 22,
-          "line": 371
+          "column": 24,
+          "line": 426
+        }
+      },
+      {
+        "defaultMessage": "Summary",
+        "end": {
+          "column": 18,
+          "line": 461
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.summary",
+        "start": {
+          "column": 16,
+          "line": 458
+        }
+      },
+      {
+        "defaultMessage": "Shipping:",
+        "end": {
+          "column": 20,
+          "line": 481
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.shipping",
+        "start": {
+          "column": 18,
+          "line": 478
+        }
+      },
+      {
+        "defaultMessage": "Total:",
+        "end": {
+          "column": 20,
+          "line": 499
+        },
+        "file": "src/components/checkout/form.js",
+        "id": "checkoutform.total",
+        "start": {
+          "column": 18,
+          "line": 496
         }
       },
       {
         "defaultMessage": "Buy",
         "end": {
-          "column": 18,
-          "line": 423
+          "column": 20,
+          "line": 528
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.cta_buy",
         "start": {
-          "column": 16,
-          "line": 420
+          "column": 18,
+          "line": 525
         }
       }
     ],
@@ -355,6 +433,146 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Story of Karmen",
+        "end": {
+          "column": 16,
+          "line": 36
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.story_headline",
+        "start": {
+          "column": 14,
+          "line": 33
+        }
+      },
+      {
+        "defaultMessage": "Everything starts with laziness.",
+        "end": {
+          "column": 16,
+          "line": 42
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.motto",
+        "start": {
+          "column": 14,
+          "line": 39
+        }
+      },
+      {
+        "defaultMessage": "The beginning",
+        "end": {
+          "column": 14,
+          "line": 52
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.beginning",
+        "start": {
+          "column": 12,
+          "line": 49
+        }
+      },
+      {
+        "defaultMessage": "The progress",
+        "end": {
+          "column": 14,
+          "line": 62
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.progress",
+        "start": {
+          "column": 12,
+          "line": 59
+        }
+      },
+      {
+        "defaultMessage": "The finale",
+        "end": {
+          "column": 14,
+          "line": 72
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.finale",
+        "start": {
+          "column": 12,
+          "line": 69
+        }
+      },
+      {
+        "defaultMessage": "Founders",
+        "end": {
+          "column": 14,
+          "line": 88
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.team_headline",
+        "start": {
+          "column": 12,
+          "line": 85
+        }
+      },
+      {
+        "defaultMessage": "Fragaria CEO",
+        "end": {
+          "column": 20,
+          "line": 101
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.burian_sub",
+        "start": {
+          "column": 18,
+          "line": 98
+        }
+      },
+      {
+        "defaultMessage": "Fragaria CTO, chairmen of Pyvec.org",
+        "end": {
+          "column": 20,
+          "line": 120
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.bilek_sub",
+        "start": {
+          "column": 18,
+          "line": 117
+        }
+      },
+      {
+        "defaultMessage": "Developer team",
+        "end": {
+          "column": 20,
+          "line": 139
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.devteam",
+        "start": {
+          "column": 18,
+          "line": 136
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/about.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Buy Karmen",
+        "end": {
+          "column": 14,
+          "line": 20
+        },
+        "file": "src/components/page-blocks/buy.js",
+        "id": "buy-block.headline",
+        "start": {
+          "column": 12,
+          "line": 17
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/buy.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "For individuals",
         "end": {
           "column": 14,
@@ -452,6 +670,81 @@
       }
     ],
     "path": "src/components/page-blocks/hero.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Payment was successful",
+        "end": {
+          "column": 10,
+          "line": 18
+        },
+        "file": "src/components/page-blocks/paid.js",
+        "id": "paid-block.payment_successful",
+        "start": {
+          "column": 8,
+          "line": 15
+        }
+      },
+      {
+        "defaultMessage": "Thank you{lineBreak}for your purchase",
+        "end": {
+          "column": 10,
+          "line": 25
+        },
+        "file": "src/components/page-blocks/paid.js",
+        "id": "paid-block.thanks",
+        "start": {
+          "column": 8,
+          "line": 21
+        }
+      },
+      {
+        "defaultMessage": "Back to homepage",
+        "end": {
+          "column": 12,
+          "line": 32
+        },
+        "file": "src/components/page-blocks/paid.js",
+        "id": "paid-block.back_to_hp",
+        "start": {
+          "column": 10,
+          "line": 29
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/paid.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Payment was cancelled",
+        "end": {
+          "column": 10,
+          "line": 15
+        },
+        "file": "src/components/page-blocks/payment-cancelled.js",
+        "id": "payment-cancelled-block.thanks",
+        "start": {
+          "column": 8,
+          "line": 11
+        }
+      },
+      {
+        "defaultMessage": "Back to homepage",
+        "end": {
+          "column": 12,
+          "line": 22
+        },
+        "file": "src/components/page-blocks/payment-cancelled.js",
+        "id": "paid-block.back_to_hp",
+        "start": {
+          "column": 10,
+          "line": 19
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/payment-cancelled.json"
   },
   {
     "descriptors": [
@@ -752,65 +1045,65 @@
         "defaultMessage": "Karmen story",
         "end": {
           "column": 14,
-          "line": 31
+          "line": 32
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.karmen_story",
         "start": {
           "column": 12,
-          "line": 28
+          "line": 29
         }
       },
       {
         "defaultMessage": "Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.",
         "end": {
           "column": 14,
-          "line": 37
+          "line": 38
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.karmen_story_full",
         "start": {
           "column": 12,
-          "line": 34
+          "line": 35
         }
       },
       {
         "defaultMessage": "See full story",
         "end": {
           "column": 14,
-          "line": 43
+          "line": 44
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.karmen_story_link",
         "start": {
           "column": 12,
-          "line": 40
+          "line": 41
         }
       },
       {
         "defaultMessage": "Karmen team",
         "end": {
           "column": 14,
-          "line": 51
+          "line": 52
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.karmen_team",
         "start": {
           "column": 12,
-          "line": 48
+          "line": 49
         }
       },
       {
         "defaultMessage": "Contact us",
         "end": {
           "column": 14,
-          "line": 64
+          "line": 65
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story-block.contact_us",
         "start": {
           "column": 12,
-          "line": 61
+          "line": 62
         }
       }
     ],
@@ -908,5 +1201,49 @@
       }
     ],
     "path": "src/layouts/default.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Oh-oh! There is nothing here.",
+        "end": {
+          "column": 14,
+          "line": 44
+        },
+        "file": "src/pages/404.js",
+        "id": "notfound.headline",
+        "start": {
+          "column": 12,
+          "line": 41
+        }
+      },
+      {
+        "defaultMessage": "Sorry, we couldn't find the page you were looking for.",
+        "end": {
+          "column": 14,
+          "line": 50
+        },
+        "file": "src/pages/404.js",
+        "id": "notfound.sub",
+        "start": {
+          "column": 12,
+          "line": 47
+        }
+      },
+      {
+        "defaultMessage": "See homepage instead",
+        "end": {
+          "column": 16,
+          "line": 57
+        },
+        "file": "src/pages/404.js",
+        "id": "notfound.cta",
+        "start": {
+          "column": 14,
+          "line": 54
+        }
+      }
+    ],
+    "path": "src/pages/404.json"
   }
 ]

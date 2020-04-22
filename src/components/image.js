@@ -1,6 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import PropTypes from "prop-types"
+import classNames from "classnames"
+import BackgroundImg from "gatsby-background-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,23 +15,60 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ file: filePath, ...props }) => {
-  const data = useStaticQuery(
-    graphql`
-      query getPlaceholder($filePath: String) {
-        placeholderImage: file(relativePath: { eq: $filePath }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `,
-    filePath
-  )
+export const Image = ({
+  file,
+  className: desiredClass = "",
+  fixed = false,
+  ...props
+} = {}) => {
+  const cls = classNames("image", desiredClass)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} {...props} />
+  if (fixed) {
+    return <Img className={cls} fixed={file.childImageSharp.fixed} {...props} />
+  }
+
+  return <Img className={cls} fluid={file.childImageSharp.fluid} {...props} />
 }
 
-export default Image
+Image.propTypes = {
+  file: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  fixed: PropTypes.bool,
+}
+
+export const BackgroundImage = ({
+  file,
+  tag,
+  className: desiredClass = "",
+  fixed = false,
+  ...props
+}) => {
+  const cls = classNames("background-image", desiredClass)
+
+  if (fixed) {
+    return (
+      <BackgroundImg
+        Tag={tag}
+        className={cls}
+        fixed={file.childImageSharp.fixed}
+        {...props}
+      />
+    )
+  }
+
+  return (
+    <BackgroundImg
+      Tag={tag}
+      className={cls}
+      fluid={file.childImageSharp.fluid}
+      {...props}
+    />
+  )
+}
+
+BackgroundImage.propTypes = {
+  file: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  fixed: PropTypes.bool,
+  tag: PropTypes.string,
+}
