@@ -1,10 +1,21 @@
 .v-payment-confirmation {
   text-align: center;
-  // padding: gu(10) 0;
+  padding: gu(6) 0;
 
-  min-height: gu(30);
+  img {
+    max-width: gu(30);
+    display: block;
+    margin: auto;
+    margin-bottom: gu(2);
+  }
+
+  h1 {
+    @include baseline(s9, $headingtype, 3);
+  }
 
   h3 {
     color: map-get($palette, red);
+
+    @include baseline(s5, $bodytype, 1);
   }
 }
