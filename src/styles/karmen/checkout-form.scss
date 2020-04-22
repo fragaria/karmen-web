@@ -2,12 +2,25 @@
   background: map-get($palette, white);
 
   h2 {
-    @include baseline(s6, $headingtype, 2, $below: 1, $above: 1);
+    @include baseline(s6, $headingtype, 2, $below: 2, $above: 0);
   }
 }
 
 .checkout-form__body {
   padding: gu(1) gu(2) gu(2);
+
+  &--wdivider {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      border: 1px map-get($palette, gray-semilight) solid;
+    }
+  }
 }
 
 .checkout-form__variant {
@@ -15,5 +28,67 @@
 
   .form-label {
     color: map-get($palette, white);
+  }
+}
+
+.checkout-form__quantity-field {
+  max-width: gu(5);
+}
+
+.checkout-form__summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: gu();
+}
+
+.checkout-form__summary-item {
+  @include baseline(s4, $bodytype);
+}
+
+.checkout-form__summary-price-main,
+.checkout-form__summary-price-note {
+  display: block;
+  text-align: right;
+}
+
+.checkout-form__summary-price-main {
+  font-weight: bold;
+
+  @include baseline(s5, $bodytype);
+}
+
+.checkout-form__summary-price-note {
+  transform: translateY(gu(-0.25)); // grid break intentional
+
+  @include baseline(s2, $bodytype);
+}
+
+
+.checkout-form__summary-line--total {
+  .checkout-form__summary-item {
+    @include baseline(s4, $bodytype, $above: 1);
+  }
+
+  .checkout-form__summary-price-main {
+    color: map-get($palette, red);
+
+    @include baseline(s7, $bodytype, 2);
+  }
+}
+
+
+.checkout-form__submit {
+  display: flex;
+
+  .button {
+    flex-grow: 1;
+  }
+
+  p {
+    width: 70%;
+    min-width: 20em;
+    padding-right: gu();
+
+    @include baseline(s2, $bodytype);
   }
 }

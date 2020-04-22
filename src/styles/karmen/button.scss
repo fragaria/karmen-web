@@ -18,6 +18,10 @@
     &:focus {
         outline: none;
     }
+
+    &:disabled {
+      background: map-get($palette, gray-dark);
+    }
 }
 
 .button,

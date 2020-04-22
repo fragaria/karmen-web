@@ -1,1 +1,16 @@
-[{"id":"specs-block.pill_getting_started","defaultMessage":"Getting started","file":"src/components/page-blocks/specs.js","start":{"line":43,"column":12},"end":{"line":46,"column":14}},{"id":"specs-block.karmen_quickstart","defaultMessage":"Quickstart","file":"src/components/page-blocks/specs.js","start":{"line":71,"column":12},"end":{"line":74,"column":14}}]
+[
+  {
+    "id": "specs-block.pill_getting_started",
+    "defaultMessage": "Getting started",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 43, "column": 12 },
+    "end": { "line": 46, "column": 14 }
+  },
+  {
+    "id": "specs-block.karmen_quickstart",
+    "defaultMessage": "Quickstart",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 71, "column": 12 },
+    "end": { "line": 74, "column": 14 }
+  }
+]

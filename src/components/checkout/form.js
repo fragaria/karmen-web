@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Formik, Form, Field } from "formik"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
 import {
   PILLS,
@@ -11,6 +11,13 @@ import {
   getPillRefSku,
   getItemByProp,
 } from "./config"
+
+const messages = defineMessages({
+  priceNote: {
+    id: "checkoutform.price_note",
+    defaultMessage: "excl. VAT",
+  },
+})
 
 const CheckoutForm = ({ onBuy, initialCountryCode }) => {
   const onSubmit = (values, { setSubmitting }) => {
@@ -33,6 +40,8 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
     return onBuy(retVals)
   }
 
+  const intl = useIntl()
+
   return (
     <Formik
       initialValues={{
@@ -42,8 +51,8 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
         email: "",
         phone: "",
         company: "",
-        line1: "",
-        line2: "",
+        street: "",
+        city: "",
         postalCode: "",
         state: "",
         country: initialCountryCode,
@@ -75,18 +84,29 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
             />
           )
         }
-        if (!values.line1) {
-          errors.line1 = (
+        if (
+          values.email &&
+          !values.email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)
+        ) {
+          errors.email = (
             <FormattedMessage
-              id="checkoutform.error_missing_line1"
+              id="checkoutform.error_invalid_email"
+              defaultMessage="Please fill out a valid email address."
+            />
+          )
+        }
+        if (!values.street) {
+          errors.street = (
+            <FormattedMessage
+              id="checkoutform.error_missing_street"
               defaultMessage="Please fill out street and house number of your residence."
             />
           )
         }
-        if (!values.line2) {
-          errors.line2 = (
+        if (!values.city) {
+          errors.city = (
             <FormattedMessage
-              id="checkoutform.error_missing_line2"
+              id="checkoutform.error_missing_city"
               defaultMessage="Please fill out the city."
             />
           )
@@ -144,10 +164,10 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
 
         return (
           <Form className="checkout-form">
-            <div className="form__line checkout-form__variant checkout-form__body">
+            <div className="form__multiline checkout-form__variant checkout-form__body">
               <Field name="variant">
                 {({ field, meta }) => (
-                  <>
+                  <div className="form__field">
                     <label className="form-label" htmlFor="variant">
                       <FormattedMessage
                         id="checkoutform.label_variant"
@@ -172,36 +192,34 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                       )}
                       {showAdapterWarning && adapterWarningMsg}
                     </div>
-                  </>
+                  </div>
+                )}
+              </Field>
+              <Field name="quantity">
+                {({ field, meta }) => (
+                  <div className="form__field checkout-form__quantity-field">
+                    <label className="form-label" htmlFor="quantity">
+                      <FormattedMessage
+                        id="checkoutform.label_count"
+                        defaultMessage="Count"
+                      />
+                    </label>
+                    <div className={getClass("form-control-wrapper", meta)}>
+                      <input
+                        className="form-control form-control--bordered"
+                        type="number"
+                        min="1"
+                        {...field}
+                      />
+                      {meta.touched && meta.error && (
+                        <p className="form-control-error">{meta.error}</p>
+                      )}
+                    </div>
+                  </div>
                 )}
               </Field>
             </div>
             <div className="checkout-form__body">
-              <div className="form__line">
-                <Field name="quantity">
-                  {({ field, meta }) => (
-                    <>
-                      <label className="form-label" htmlFor="quantity">
-                        <FormattedMessage
-                          id="checkoutform.label_count"
-                          defaultMessage="Count"
-                        />
-                      </label>
-                      <div className={getClass("form-control-wrapper", meta)}>
-                        <input
-                          className="form-control form-control--bordered"
-                          type="number"
-                          min="1"
-                          {...field}
-                        />
-                        {meta.touched && meta.error && (
-                          <p className="form-control-error">{meta.error}</p>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </Field>
-              </div>
               <h2>
                 <FormattedMessage
                   id="checkoutform.shipping_address"
@@ -219,7 +237,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -239,7 +261,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="email" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="email"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -259,7 +285,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="phone" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="phone"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -279,7 +309,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -289,17 +323,21 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                 </Field>
               </div>
               <div className="form__line">
-                <Field name="line1">
+                <Field name="street">
                   {({ field, meta }) => (
                     <>
-                      <label className="form-label" htmlFor="line1">
+                      <label className="form-label" htmlFor="street">
                         <FormattedMessage
-                          id="checkoutform.label_line1"
+                          id="checkoutform.label_street"
                           defaultMessage="Street and house number"
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -309,17 +347,21 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                 </Field>
               </div>
               <div className="form__line">
-                <Field name="line2">
+                <Field name="city">
                   {({ field, meta }) => (
                     <>
-                      <label className="form-label" htmlFor="line2">
+                      <label className="form-label" htmlFor="city">
                         <FormattedMessage
-                          id="checkoutform.label_line2"
+                          id="checkoutform.label_city"
                           defaultMessage="City"
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -339,7 +381,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -359,7 +405,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
-                        <input className="form-control form-control--bordered" type="text" {...field} />
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
@@ -384,7 +434,10 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                           meta
                         )}
                       >
-                        <select className="form-control form-control--bordered" {...field}>
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
                           {COUNTRIES.map(country => (
                             <option key={country.id} value={country.id}>
                               {country.name}
@@ -400,24 +453,63 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                 </Field>
               </div>
             </div>
-            <div class="checkout-form__body">
+            <div className="checkout-form__body checkout-form__body--wdivider">
               <h2>
                 <FormattedMessage
                   id="checkoutform.summary"
                   defaultMessage="Summary"
                 />
               </h2>
-              <p>
-                {values["quantity"]}x Karmen Pill: {pillPrice}{" "}
-                {pillVariant.currency} bez DPH
-              </p>
-              <p>
-                Doprava: {shippingPrice} {shippingVariant.currency} bez DPH
-              </p>
-              <p>
-                Celkem: {totalPrice} {pillVariant.currency} bez DPH
-              </p>
-              <div className="form__submit">
+              <div className="checkout-form__summary-line">
+                <h3 className="checkout-form__summary-item">
+                  {values["quantity"]}x Karmen Pill:
+                </h3>
+                <div className="checkout-form__summary-price">
+                  <span className="checkout-form__summary-price-main">
+                    {pillPrice} {pillVariant.currency}
+                  </span>
+                  <span className="checkout-form__summary-price-note">
+                    {intl.formatMessage(messages.priceNote)}
+                  </span>
+                </div>
+              </div>
+              <div className="checkout-form__summary-line">
+                <h3 className="checkout-form__summary-item">
+                  <FormattedMessage
+                    id="checkoutform.shipping"
+                    defaultMessage="Shipping:"
+                  />
+                </h3>
+                <div className="checkout-form__summary-price">
+                  <span className="checkout-form__summary-price-main">
+                    {shippingPrice} {shippingVariant.currency}
+                  </span>
+                  <span className="checkout-form__summary-price-note">
+                    {intl.formatMessage(messages.priceNote)}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="checkout-form__body checkout-form__body--wdivider">
+              <div className="checkout-form__summary-line checkout-form__summary-line--total">
+                <h3 className="checkout-form__summary-item">
+                  <FormattedMessage
+                    id="checkoutform.total"
+                    defaultMessage="Total:"
+                  />
+                </h3>
+                <div className="checkout-form__summary-price">
+                  <span className="checkout-form__summary-price-main">
+                    {totalPrice} {pillVariant.currency}
+                  </span>
+                  <span className="checkout-form__summary-price-note">
+                    {intl.formatMessage(messages.priceNote)}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="checkout-form__body checkout-form__body--wdivider">
+              <div className="checkout-form__submit">
                 <p>
                   <em>
                     Po kliknutí na „Koupit“ budete přesměrování k pokladně.
@@ -425,7 +517,11 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                     pokladny.
                   </em>
                 </p>
-                <button type="submit" className="button" disabled={isSubmitting}>
+                <button
+                  type="submit"
+                  className="button button--red"
+                  disabled={isSubmitting}
+                >
                   <FormattedMessage
                     id="checkoutform.cta_buy"
                     defaultMessage="Buy"

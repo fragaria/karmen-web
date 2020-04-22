@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -60,8 +59,8 @@ const CheckoutBooth = () => {
           company: values["company"],
           email: values["email"],
           phone: values["phone"],
-          line1: values["line1"],
-          line2: values["line2"],
+          line1: values["street"],
+          line2: values["city"],
           state: values["state"],
           postalCode: values["postalCode"],
           country: values["country"],
@@ -79,7 +78,5 @@ const CheckoutBooth = () => {
     />
   )
 }
-
-CheckoutBooth.propTypes = {}
 
 export default CheckoutBooth

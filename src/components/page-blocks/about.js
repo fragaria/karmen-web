@@ -33,23 +33,31 @@ const AboutBlock = props => {
               defaultMessage="The beginning"
             />
           </h3>
-          <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami. </p>
+          <p>
+            Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí
+            3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.{" "}
+          </p>
           <h3>
             <FormattedMessage
               id="about-block.progress"
               defaultMessage="The progress"
             />
           </h3>
-          <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami. </p>
+          <p>
+            Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí
+            3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.{" "}
+          </p>
           <h3>
             <FormattedMessage
               id="about-block.finale"
               defaultMessage="The finale"
             />
           </h3>
-          <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami. </p>
+          <p>
+            Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí
+            3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.{" "}
+          </p>
         </div>
-
       </section>
 
       <section>
@@ -64,7 +72,7 @@ const AboutBlock = props => {
           <div className="about-founders">
             <div className="about-founders__founder">
               <div className="about-founders__founder-image">
-                <img src={martinBilekImg} alt="Martin Bílek"/>
+                <img src={martinBilekImg} alt="Martin Bílek" />
               </div>
               <div className="about-founders__founder-body">
                 <h2>Martin Burián</h2>
@@ -74,12 +82,16 @@ const AboutBlock = props => {
                     defaultMessage="Fragaria CEO"
                   />
                 </h3>
-                <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.</p>
+                <p>
+                  Řešení Karmen se snaží cílit na jednotlivce s typicky jednou
+                  domácí 3D tiskárnou, stejně tak na firmy a organizace s více
+                  3D tiskárnami.
+                </p>
               </div>
             </div>
             <div className="about-founders__founder">
               <div className="about-founders__founder-image">
-                <img src={martinBilekImg} alt="Martin Bílek"/>
+                <img src={martinBilekImg} alt="Martin Bílek" />
               </div>
               <div className="about-founders__founder-body">
                 <h2>Martin Bílek</h2>
@@ -89,12 +101,16 @@ const AboutBlock = props => {
                     defaultMessage="Fragaria CTO, chairmen of Pyvec.org"
                   />
                 </h3>
-                <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.</p>
+                <p>
+                  Řešení Karmen se snaží cílit na jednotlivce s typicky jednou
+                  domácí 3D tiskárnou, stejně tak na firmy a organizace s více
+                  3D tiskárnami.
+                </p>
               </div>
             </div>
             <div className="about-founders__founder about-founders__founder--company">
               <div className="about-founders__founder-image">
-                <img src={strawberryImg} alt="Fragaria"/>
+                <img src={strawberryImg} alt="Fragaria" />
               </div>
               <div className="about-founders__founder-body">
                 <h2>Fragaria</h2>
@@ -104,7 +120,11 @@ const AboutBlock = props => {
                     defaultMessage="Developer team"
                   />
                 </h3>
-                <p>Řešení Karmen se snaží cílit na jednotlivce s typicky jednou domácí 3D tiskárnou, stejně tak na firmy a organizace s více 3D tiskárnami.</p>
+                <p>
+                  Řešení Karmen se snaží cílit na jednotlivce s typicky jednou
+                  domácí 3D tiskárnou, stejně tak na firmy a organizace s více
+                  3D tiskárnami.
+                </p>
               </div>
             </div>
           </div>

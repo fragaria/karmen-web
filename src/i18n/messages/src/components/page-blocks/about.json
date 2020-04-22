@@ -1,1 +1,65 @@
-[{"id":"about-block.story_headline","defaultMessage":"Story of Karmen","file":"src/components/page-blocks/about.js","start":{"line":15,"column":14},"end":{"line":18,"column":16}},{"id":"about-block.motto","defaultMessage":"Everything starts with laziness.","file":"src/components/page-blocks/about.js","start":{"line":21,"column":14},"end":{"line":24,"column":16}},{"id":"about-block.beginning","defaultMessage":"The beginning","file":"src/components/page-blocks/about.js","start":{"line":31,"column":12},"end":{"line":34,"column":14}},{"id":"about-block.progress","defaultMessage":"The progress","file":"src/components/page-blocks/about.js","start":{"line":38,"column":12},"end":{"line":41,"column":14}},{"id":"about-block.finale","defaultMessage":"The finale","file":"src/components/page-blocks/about.js","start":{"line":45,"column":12},"end":{"line":48,"column":14}},{"id":"about-block.team_headline","defaultMessage":"Founders","file":"src/components/page-blocks/about.js","start":{"line":59,"column":12},"end":{"line":62,"column":14}},{"id":"about-block.burian_sub","defaultMessage":"Fragaria CEO","file":"src/components/page-blocks/about.js","start":{"line":72,"column":18},"end":{"line":75,"column":20}},{"id":"about-block.bilek_sub","defaultMessage":"Fragaria CTO, chairmen of Pyvec.org","file":"src/components/page-blocks/about.js","start":{"line":87,"column":18},"end":{"line":90,"column":20}},{"id":"about-block.devteam","defaultMessage":"Developer team","file":"src/components/page-blocks/about.js","start":{"line":102,"column":18},"end":{"line":105,"column":20}}]
+[
+  {
+    "id": "about-block.story_headline",
+    "defaultMessage": "Story of Karmen",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 15, "column": 14 },
+    "end": { "line": 18, "column": 16 }
+  },
+  {
+    "id": "about-block.motto",
+    "defaultMessage": "Everything starts with laziness.",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 21, "column": 14 },
+    "end": { "line": 24, "column": 16 }
+  },
+  {
+    "id": "about-block.beginning",
+    "defaultMessage": "The beginning",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 31, "column": 12 },
+    "end": { "line": 34, "column": 14 }
+  },
+  {
+    "id": "about-block.progress",
+    "defaultMessage": "The progress",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 41, "column": 12 },
+    "end": { "line": 44, "column": 14 }
+  },
+  {
+    "id": "about-block.finale",
+    "defaultMessage": "The finale",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 51, "column": 12 },
+    "end": { "line": 54, "column": 14 }
+  },
+  {
+    "id": "about-block.team_headline",
+    "defaultMessage": "Founders",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 67, "column": 12 },
+    "end": { "line": 70, "column": 14 }
+  },
+  {
+    "id": "about-block.burian_sub",
+    "defaultMessage": "Fragaria CEO",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 80, "column": 18 },
+    "end": { "line": 83, "column": 20 }
+  },
+  {
+    "id": "about-block.bilek_sub",
+    "defaultMessage": "Fragaria CTO, chairmen of Pyvec.org",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 99, "column": 18 },
+    "end": { "line": 102, "column": 20 }
+  },
+  {
+    "id": "about-block.devteam",
+    "defaultMessage": "Developer team",
+    "file": "src/components/page-blocks/about.js",
+    "start": { "line": 118, "column": 18 },
+    "end": { "line": 121, "column": 20 }
+  }
+]
