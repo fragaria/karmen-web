@@ -19,7 +19,7 @@ const messages = defineMessages({
   },
 })
 
-const CheckoutForm = ({ onBuy, initialCountryCode }) => {
+const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
     // Get Pill config by its id
@@ -394,7 +394,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                   )}
                 </Field>
               </div>
-              <div className="form__line">
+              {showStateField && <div className="form__line">
                 <Field name="state">
                   {({ field, meta }) => (
                     <>
@@ -418,6 +418,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
                   )}
                 </Field>
               </div>
+              }
               <div className="form__line">
                 <Field name="country">
                   {({ field, meta }) => (
@@ -540,6 +541,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode }) => {
 CheckoutForm.props = {
   onBuy: PropTypes.func.isRequired,
   initialCountryCode: PropTypes.string,
+  showStateField: PropTypes.bool,
 }
 
 CheckoutForm.defaultProps = {

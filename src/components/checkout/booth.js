@@ -75,6 +75,7 @@ const CheckoutBooth = () => {
     <CheckoutForm
       onBuy={finalizeSession}
       initialCountryCode={langKey === "cs" ? "CZ" : "US"}
+      showStateField={langKey !== "cs"}
     />
   )
 }
