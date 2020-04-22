@@ -1,7 +1,7 @@
 .gitter-link {
   position: fixed;
   right: 0;
-  top: gu(17);
+  top: gu(15);
   z-index: 1000
 }
 
@@ -16,6 +16,7 @@
   padding: gu(0.5) gu(2);
   text-align: center;
   height: gu(3);
+  width: gu(9);
 
   &:hover {
     background: map-get($palette, red);

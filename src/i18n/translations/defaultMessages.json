@@ -586,29 +586,42 @@
         }
       },
       {
+        "defaultMessage": "Get a complete overview of your print progress. Karmen lets you monitor print jobs and manage the print queue from anywhere on computer or smartphone. The built-in camera lets you quickly see if everything’s turning out OK.",
+        "end": {
+          "column": 16,
+          "line": 39
+        },
+        "file": "src/components/page-blocks/cases.js",
+        "id": "cases-block.individuals_desc",
+        "start": {
+          "column": 14,
+          "line": 36
+        }
+      },
+      {
         "defaultMessage": "For teams",
         "end": {
           "column": 16,
-          "line": 49
+          "line": 53
         },
         "file": "src/components/page-blocks/cases.js",
         "id": "cases-block.teams_headline",
         "start": {
           "column": 14,
-          "line": 46
+          "line": 50
         }
       },
       {
         "defaultMessage": "Print prototypes, spare parts or scarce items. Karmen makes your print queue more effective and makes it easy to coordinate the management of print jobs and teams worldwide. Karmen’s features make it popular among companies, schools, co-working spaces and other organisations.",
         "end": {
           "column": 16,
-          "line": 55
+          "line": 59
         },
         "file": "src/components/page-blocks/cases.js",
         "id": "cases-block.teams_desc",
         "start": {
           "column": 14,
-          "line": 52
+          "line": 56
         }
       }
     ],
