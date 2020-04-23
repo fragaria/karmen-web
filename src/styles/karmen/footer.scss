@@ -26,16 +26,20 @@
 }
 
 .footer__karmenlogo {
+  display: none;
   height: gu(5);
+
+  @include breakpoint(tablet-small up) {
+    display: block;
+  }
 }
 
 .footer__brandinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: gu(2);
 
-  @include breakpoint(tablet up) {
+  @include breakpoint(mobile up) {
     flex-direction: row;
   }
 }
@@ -43,14 +47,8 @@
 .footer__meta {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 1rem;
-
-  @include breakpoint(tablet up) {
-    flex-direction: row;
-    margin-bottom: 0;
-  }
 }
 
 .footer__brand {
@@ -61,14 +59,8 @@
 .footer__copy {
   padding-left: 0;
   letter-spacing: 0.09em;
-  text-align: center;
-  margin-top: gu();
-
-  @include breakpoint(tablet up) {
-    margin-top: 0;
-    padding-left: gu(0.5);
-    text-align: left;
-  }
+  padding-left: gu(0.5);
+  text-align: left;
 }
 
 .footer__copy-line {
@@ -94,10 +86,12 @@
 
 .footer__social {
   line-height: gu(2);
-  font-size: gu(0.65);
+  font-size: gu(1);
+  margin-bottom: gu(2);
 
-  @include breakpoint(tablet up) {
+  @include breakpoint(mobile up) {
     font-size: gu(0.75);
+    margin-bottom: 0;
   }
 }
 
@@ -117,17 +111,33 @@
   margin-left: 0.8em;
 }
 
+.footer__bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @include breakpoint(mobile up) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .footer-linkgroups__title {
   @include baseline(s7, $headingtype, 2, $below: 2);
 }
 
 .footer-linkgroups__container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-linkgroups__group {
   &:not(:first-of-type) {
-    margin-left: gu(4);
+    margin-left: gu(0.5);
+
+    @include breakpoint(tablet up) {
+      margin-left: gu(4);
+    }
   }
 }
 

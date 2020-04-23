@@ -52,3 +52,12 @@ a.button {
         );
     }
 }
+
+.button.button--responsive {
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint(tablet-tiny up) {
+    width: auto;
+  }
+}

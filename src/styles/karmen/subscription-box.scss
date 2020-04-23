@@ -1,11 +1,20 @@
 .subscription-box {
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: $sitenav-max-width;
   margin: auto;
   background: map-get($palette, red);
-  padding: gu(2) gu(4) gu(2);
+  padding: gu(2) gu(1.5);
   color: map-get($palette, white);
+
+  @include breakpoint(tablet-small up) {
+    flex-direction: row;
+  }
+
+  @include breakpoint(tablet up) {
+    padding: gu(2) gu(4);
+  }
 }
 
 .subscription-box__caption {
@@ -17,17 +26,51 @@
 }
 
 .subscription-box__subtitle {
-  @include baseline(s5, $bodytype, 1.5, $above: 0);
   padding-bottom: gu(.5);
+
+  @include baseline(s3, $bodytype, 1.5, $below: 2);
+  @include baseline(s5, $bodytype, 1.5, $above: 0, $breakpoint: tablet-small up);
 }
 
 .subscription-box__form {
   align-self: center;
   flex: 1;
-  margin-left: auto;
+  width: 100%;
+
+  .button {
+    width: 100%;
+    transform: translateY(gu(-0.5));
+  }
+
+  @include breakpoint(mobile up) {
+    .button {
+      transform: translateY(0);
+    }
+  }
+
+  @include breakpoint(tablet up) {
+    margin-left: auto;
+
+    .button {
+      width: auto;
+      transform: none;
+    }
+  }
 }
 
 .subscription-box__input {
-  max-width: 20em;
   margin-left: auto;
+
+  @include breakpoint(tablet up) {
+    max-width: 20em;
+  }
+}
+
+.subscription-box__form {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(tablet up) {
+    flex-direction: row;
+  }
 }

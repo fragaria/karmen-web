@@ -4,10 +4,7 @@
   min-height: 100vh;
   padding-top: map-get($sitenav-height, mobile);
   background-color: map-get($palette, gray-light);
-
-  &.noscroll {
-    overflow: hidden;
-  }
+  overflow: hidden;
 
   &--nopush {
     padding-top: 0;

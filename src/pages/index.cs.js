@@ -20,27 +20,17 @@ const IndexPage = ({ data, location }) => {
     <Layout location={location} containerClass="v-home">
       <SEOMetadata title="Vítejte" />
       <SEOBusinessInfo />
-
       <HeroBlock className="v-home-hero v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
-
-      <div className="content-block content-block--sitenavwide">
-        <CasesBlock className="v-home-cases v-home-section" />
-        <PrincipleBlock className="v-home-principle v-home-section" />
-      </div>
-
-      <div className="content-block">
-        <SpecsBlock className="v-home-specs v-home-section" />
-        <PricingBlock
-          location={location}
-          className="v-home-pricing v-home-section"
-        />
-        <TestimonialsBlock className="v-home-testimonials v-home-section" />
-      </div>
-
-      <div className="content-block content-block--sitenavwide">
-        <StoryBlock className="v-home-story v-home-section" />
-      </div>
+      <CasesBlock className="v-home-cases v-home-section" />
+      <PrincipleBlock className="v-home-principle v-home-section" />
+      <SpecsBlock className="v-home-specs v-home-section" />
+      <PricingBlock
+        location={location}
+        className="v-home-pricing v-home-section"
+      />
+      <TestimonialsBlock className="v-home-testimonials v-home-section" />
+      <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )
 }

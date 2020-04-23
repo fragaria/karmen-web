@@ -51,10 +51,23 @@
   margin: 0 gu(1);
   cursor: pointer;
   letter-spacing: 2px;
+  display: none;
+
+  &:not(&--lowprio) {
+    @include breakpoint(mobile up) {
+      display: block;
+    }
+  }
+
+  &--lowprio {
+    @include breakpoint(tablet up) {
+      display: block;
+    }
+  }
 }
 
 .sitenav__company {
-  margin: 0 gu(2.5) 0 gu(1);
+  margin: 0 0 0 gu(1);
   font-family: getFontFamily($headingtype);
   font-weight: map-get($headingtype, semi);
   letter-spacing: 4px;
@@ -63,8 +76,17 @@
 
 .sitenav__langswitch {
   background: map-get($palette, gray-light);
+  margin-left: gu(1);
   padding: gu(0.3) gu(0.5);
   margin-right: gu(.5);
+
+  @include breakpoint(mobile up) {
+    margin-left: gu(1.5);
+  }
+
+  @include breakpoint(tablet up) {
+    margin-left: gu(2.5);
+  }
 }
 
 .sitenav__anchorpush {

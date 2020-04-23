@@ -8,17 +8,12 @@
     margin-right: $width;
 }
 
-.content-block {
-  margin: auto;
+@mixin contentBlock($mobilePadding: 1.5) {
   width: 100%;
-  max-width: $page-content-max-width + gu(0.5)*2;
+  margin: auto;
+  max-width: $page-content-max-width + gu($mobilePadding)*2;
 
-  @include cbPadding(gu(0.5));
-
-  @include breakpoint(tablet-small up) {
-    max-width: $page-content-max-width + gu(1)*2;
-    @include cbPadding(gu(1));
-  }
+  @include cbPadding(gu($mobilePadding));
 
   @include breakpoint(tablet up) {
     max-width: $page-content-max-width + gu(2)*2;
@@ -26,11 +21,7 @@
   }
 
   &--narrow {
-    max-width: gu(45) + gu(0.5)*2;
-
-    @include breakpoint(tablet-small up) {
-      max-width: gu(45) + gu(1)*2;
-    }
+    max-width: gu(45) + gu($mobilePadding)*2;
 
     @include breakpoint(tablet up) {
       max-width: gu(45) + gu(2)*2;
@@ -38,11 +29,7 @@
   }
 
   &--narrower {
-    max-width: gu(30) + gu(0.5)*2;
-
-    @include breakpoint(tablet-small up) {
-      max-width: gu(30) + gu(1)*2;
-    }
+    max-width: gu(30) + gu($mobilePadding)*2;
 
     @include breakpoint(tablet up) {
       max-width: gu(30) + gu(2)*2;
@@ -50,11 +37,7 @@
   }
 
   &--sitenavwide {
-    max-width: $sitenav-max-width + gu(0.5)*2;
-
-    @include breakpoint(tablet-small up) {
-      max-width: $sitenav-max-width + gu(1)*2;
-    }
+    max-width: $sitenav-max-width + gu($mobilePadding)*2;
 
     @include breakpoint(tablet up) {
       max-width: $sitenav-max-width + gu(2)*2;
@@ -62,11 +45,7 @@
   }
 
   &--sitenavinnerwide {
-    max-width: $sitenav-max-width - gu(6) + gu(0.5)*2;
-
-    @include breakpoint(tablet-small up) {
-      max-width: $sitenav-max-width - gu(6) + gu(1)*2;
-    }
+    max-width: $sitenav-max-width - gu(6) + gu($mobilePadding)*2;
 
     @include breakpoint(tablet up) {
       max-width: $sitenav-max-width - gu(6) + gu(2)*2;
@@ -74,22 +53,18 @@
   }
 }
 
-// .content-block__cover {
-//     @include cbMargin(gu(-0.5));
+.content-block {
+  @include contentBlock();
+}
 
-//     @include breakpoint(tablet-small up) {
-//         @include cbMargin(gu(-1));
-//     }
+.content-block.content-block--shift-mobile {
+  @include contentBlock(0.5);
+}
 
-//     @include breakpoint(tablet up) {
-//         @include cbMargin(gu(-4));
-//     }
-// }
+.content-block--cover-mobile {
+  @include cbMargin(gu(-1.5));
 
-.content-block__cover--mobile {
-    @include cbMargin(gu(-0.5));
-
-    @include breakpoint(tablet-small up) {
-        @include cbMargin(0);
-    }
+  @include breakpoint(tablet-small up) {
+      @include cbMargin(0);
+  }
 }

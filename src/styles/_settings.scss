@@ -118,10 +118,12 @@ $sitenav-height: (
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
     zero:           0px,            // 0px       Mobile first
-    mobile:         640px,          // 640px   ~ Small tablet up
+    mobile:         480px,          // 480px   ~ Small tablet up
+    tablet-tiny:    640px,          // 640px   ~ Small tiny up
     tablet-small:   800px,          // 800px   ~ Large tablet up
     tablet:         1024px,         // 1024px  ~ Desktop up
-    desktop:        1600px          // 1600px  ~ Large desktop up
+    desktop:        1536px,         // 1536px  ~ Large desktop up
+    fullhd:         1920px          // 1536px  ~ Full HD up
 );
 
 // Root font-sizes for each breakpoint. Set to two thrids of desired line-height of body text.
@@ -129,9 +131,11 @@ $breakpoints: (
 $rootsizes: (
     zero:           16px,
     mobile:         16px,
+    tablet-tiny:    16px,
     tablet-small:   16px,
     tablet:         16px,
     desktop:        16px,
+    fullhd:         16px,
 );
 
 $bodytype: (
@@ -160,59 +164,81 @@ $monospacetype: (
 // Major Third http://www.modularscale.com/
 $modular-scale: (
     zero: (
-        s9:   48.0px,
-        s8:   36.0px,
-        s7:   30.0px,
-        s6:   24.0px,
-        s5:   24.0px,
-        s4:   20.0px,
-        s3:   17.0px,
-        s2:   12.8px,
-        s1:   11.5px
+      s9:   64.0px,
+      s8:   48.0px,
+      s7:   36.0px,
+      s6:   28.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   11.0px
     ),
     mobile: (
-        s9:   64.0px,
-        s8:   36.0px,
-        s7:   30.0px,
-        s6:   24.0px,
-        s5:   24.0px,
-        s4:   20.0px,
-        s3:   17.0px,
-        s2:   12.8px,
-        s1:   11.5px
+      s9:   64.0px,
+      s8:   48.0px,
+      s7:   36.0px,
+      s6:   28.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   11.0px
+    ),
+    tablet-tiny: (
+      s9:   64.0px,
+      s8:   48.0px,
+      s7:   36.0px,
+      s6:   28.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   11.0px
     ),
     tablet-small: (
-        s9:   72.0px,
-        s8:   64.0px,
-        s7:   48.0px,
-        s6:   32.0px,
-        s5:   24.0px,
-        s4:   20.0px,
-        s3:   18px,
-        s2:   14.0px,
-        s1:   12.7px
+      s9:   64.0px,
+      s8:   48.0px,
+      s7:   36.0px,
+      s6:   28.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   11.0px
     ),
     tablet: (
-        s9:   72.0px,
-        s8:   64.0px,
-        s7:   48.0px,
-        s6:   32.0px,
-        s5:   24.0px,
-        s4:   20.0px,
-        s3:   18px,
-        s2:   14.0px,
-        s1:   12.7px
+      s9:   64.0px,
+      s8:   48.0px,
+      s7:   36.0px,
+      s6:   28.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   11.0px
     ),
     desktop: (
-        s9:   72.0px,
-        s8:   64.0px,
-        s7:   48.0px,
-        s6:   32.0px,
-        s5:   24.0px,
-        s4:   20.0px,
-        s3:   18px,
-        s2:   14.0px,
-        s1:   12.7px
+      s9:   72.0px,
+      s8:   64.0px,
+      s7:   48.0px,
+      s6:   32.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   12.0px
+    ),
+    fullhd: (
+      s9:   72.0px,
+      s8:   64.0px,
+      s7:   48.0px,
+      s6:   32.0px,
+      s5:   24.0px,
+      s4:   20.0px,
+      s3:   18.0px,
+      s2:   14.0px,
+      s1:   12.0px
     )
 );
 
@@ -223,6 +249,7 @@ $modular-scale: (
 $inline-monospace-sizes: (
     zero: 18px,
     mobile: 18px,
+    tablet-tiny: 18px,
     tablet-small: 18px,
     tablet: 18px,
     desktop: 18px,

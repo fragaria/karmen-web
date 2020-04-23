@@ -1,8 +1,8 @@
 .testimonials {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: gu(2) gu();
+  grid-gap: gu();
 }
 
 .testimonials__item {
@@ -11,8 +11,26 @@
 
 .testimonials__image {
   display: block;
-  max-height: gu(1.5);
   height: auto;
-  max-width: 100%;
   margin: auto;
+  max-width: 100%;
+  max-height: gu(1.5);
+}
+
+@include breakpoint(mobile up) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include breakpoint(tablet-small up) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: gu(2) gu();
+
+    .testimonials__image {
+      max-width: 100%;
+      max-height: gu(1.5);
+    }
+  }
 }

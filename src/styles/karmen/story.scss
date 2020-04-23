@@ -1,22 +1,26 @@
 .story {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "story  team"
-                       "story  contact";
   grid-gap: 0;
   background: map-get($palette, white);
+  grid-template-areas: "story"
+                       "team"
+                       "contact";
 }
 
 .story-box {
-  padding: gu(3);
+  padding: gu(1) gu(1) gu(2);
+
+  + .story-box {
+    border-top: 1px map-get($palette, gray-semilight) solid;
+  }
 }
 
 .story__story {
   grid-area: story;
-  padding-left: gu(4);
 
   h1 {
-    @include baseline(s7, $headingtype, 2, $below: 1);
+    @include baseline(s8, $headingtype, 2, $below: 1, $above: 1);
+    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: tablet-small up);
   }
 
   p {
@@ -26,10 +30,9 @@
 
 .story__team,
 .story__contact {
-  border-left: 1px map-get($palette, gray-semilight) solid;
-
   h1 {
-    @include baseline(s6, $headingtype, 2, $below: 1);
+    @include baseline(s7, $headingtype, 2, $below: 1);
+    @include baseline(s6, $headingtype, 2, $below: 1, $breakpoint: tablet-small up);
   }
 
   p {
@@ -39,10 +42,47 @@
 
 .story__team {
   grid-area: team;
-  border-bottom: 1px map-get($palette, gray-semilight) solid;
 }
 
 .story__contact {
   grid-area: contact;
 }
 
+@include breakpoint(tablet-small up) {
+  .story {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "story  team"
+                         "story  contact";
+  }
+
+  .story-box {
+    border-top: 0;
+  }
+
+  .story__team,
+  .story__contact {
+    border-left: 1px map-get($palette, gray-semilight) solid;
+  }
+
+  .story__team {
+    border-bottom: 1px map-get($palette, gray-semilight) solid;
+  }
+}
+
+@include breakpoint(desktop up) {
+  .story {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "story  team"
+                         "story  contact";
+  }
+
+  .story-box {
+    padding: gu(3);
+  }
+
+  .story__story {
+    padding-left: gu(4);
+  }
+
+
+}

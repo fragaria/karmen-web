@@ -97,10 +97,10 @@ const Layout = ({ children, location, i18nMessages, containerClass } = {}) => {
 
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
-      <GitterLink />
       <BlankLayout>
         <CC />
         <Sitenav />
+        <GitterLink />
         <div className={wrapperClassName}>
           {/* <IEWarning /> */}
           {children}

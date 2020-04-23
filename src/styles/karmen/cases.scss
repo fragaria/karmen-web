@@ -1,20 +1,25 @@
+@mixin casesFontOver {
+  color: map-get($palette, white);
+  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
+}
+
 .cases {
   display: flex;
+  flex-direction: column;
 }
 
 .cases__box {
   width: 100%;
   display: flex;
 
-  + .cases__box {
-    border-left: 1px map-get($palette, gray-semilight);
+  &:not(:last-of-type) {
+    margin-bottom: gu(1);
   }
-
 }
 
 .cases__inner-box {
-  padding: gu(6) gu(4);
   position: relative;
+  padding: gu(2) gu(1) 0;
 
   &:before {
     z-index: -1;
@@ -28,18 +33,47 @@
     background: rgba(0, 0, 0, 0.5);
   }
 
-  h1,
-  p {
-    color: map-get($palette, white);
-    text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
-  }
-  // }
-
   h1 {
-    @include baseline(s7, $headingtype, 2, $below: 2);
+    @include baseline(s7, $headingtype, 2, $above: 2, $below: 2);
+    @include baseline(s7, $headingtype, 2, $below: 2, $breakpoint: tablet-small up);
+    @include casesFontOver();
   }
 
   p {
-    @include baseline(s4, $bodytype);
+    @include baseline(s3, $bodytype, $below: 2);
+    @include baseline(s4, $bodytype, $below: 2, $breakpoint: tablet-small up);
+  }
+}
+
+.cases__inner-desc {
+  background: map-get($palette, white);
+  margin: 0 gu(-1);
+  padding: gu(1);
+}
+
+@include breakpoint(tablet-small up) {
+  .cases {
+    flex-direction: row;
+  }
+
+  .cases__box,
+  .cases__box:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  .cases__inner-desc {
+    background: transparent;
+  }
+
+  .cases__inner-box {
+    p {
+      @include casesFontOver();
+    }
+  }
+}
+
+@include breakpoint(desktop up) {
+  .cases__inner-box {
+    padding: gu(6) gu(4) gu(4);
   }
 }

@@ -1,25 +1,26 @@
 .pricing {
   display: flex;
   position: relative;
+  flex-direction: column;
+
 }
 
 .pricing__box {
-  width: 33.333%;
-  padding: gu(2) gu(2.5);
+  width: 100%;
+  padding: gu(1) gu();
   background: map-get($palette, white);
   text-align: left;
-
-  & + .pricing__box {
-    border-left: 1px map-get($palette, gray-semilight) solid;
-  }
+  position: relative;
 
   .price__item {
-    @include baseline(s6, $headingtype, 2);
+    @include baseline(s7, $headingtype, 2);
+    @include baseline(s6, $headingtype, 2, $breakpoint: tablet-small up);
   }
 
   .price__sum {
     color: map-get($palette, red);
-    @include baseline(s7, $bodytype, 2);
+    @include baseline(s8, $bodytype, 2);
+    @include baseline(s7, $bodytype, 2, $breakpoint: tablet-small up);
   }
 
   .price__note {
@@ -28,9 +29,19 @@
 
   .pricing__box-img {
     display: block;
-    height: gu(5);
-    margin-bottom: gu(1);
-    margin-right: auto;
+    float: right;
+    max-width: 30%;
+  }
+
+  &:not(:first-of-type):after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: map-get($palette, gray-semilight);
+    height: 1px;
   }
 
   &--emphasized {
@@ -43,34 +54,21 @@
 }
 
 .pricing__offerinfo {
-  // color: map-get($palette, red);
   margin-left: gu(0.25);
 }
 
 .pricing__plussign {
-  position: absolute;
-  left: 33.333%;
-  bottom: 16%;
-  transform: translateX(-50%);
-  color: map-get($palette, red);
-
-  @include fontsize(s7, zero up);
-}
-
-.pricing__total {
-  margin-left: -0.81em;
+  display: none;
 }
 
 .pricing__buybutton.button {
   display: block;
-  width: 33.333%;
-  margin-left: auto;
   margin-top: gu(.5);
   margin-bottom: gu(.5);
 
   // Override default button styles
   text-align: left;
-  padding-left: gu(2);
+  padding-left: gu(1);
 
   &:after {
     float: right;
@@ -78,5 +76,56 @@
     color: currentColor;
     width: gu(1);
     content: fa-content($fa-var-shopping-cart);
+  }
+}
+
+@include breakpoint(tablet-small up) {
+  .pricing {
+    flex-direction: row;
+  }
+
+  .pricing__box {
+    width: 33.333%;
+    padding: gu(2) gu(1);
+
+    & + .pricing__box {
+      border-left: 1px map-get($palette, gray-semilight) solid;
+    }
+  }
+
+  .princing__box-img {
+    float: none;
+    height: gu(5);
+    margin-bottom: gu(1);
+    margin-right: auto;
+  }
+
+  .pricing__buybutton.button {
+    width: 33.333%;
+    margin-left: auto;
+  }
+
+  .pricing__plussign {
+    position: absolute;
+    left: 33.333%;
+    bottom: 16%;
+    transform: translateX(-50%);
+    color: map-get($palette, red);
+
+    @include fontsize(s7, zero up);
+  }
+}
+
+@include breakpoint(tablet up) {
+  .pricing__box {
+    padding: gu(2) gu(2.5);
+  }
+
+  .pricing__total {
+    margin-left: -0.81em;
+  }
+
+  .pricing__buybutton.button {
+    padding-left: gu(2.5);
   }
 }

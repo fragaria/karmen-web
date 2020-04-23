@@ -1,10 +1,12 @@
 .specs {
-  display: flex;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .specs__box {
   flex: 1;
+  margin-bottom: gu(2);
 
   h2 {
     @include baseline(s7, $headingtype, 2, $above: 4, $below: 2);
@@ -13,12 +15,6 @@
   li {
     @include baseline(s3, $bodytype, 1);
   }
-
-  + .specs__box {
-    margin-left: gu(2.5);
-    padding-left: gu(2.5);
-    border-left: 1px map-get($palette, gray-medium) solid;
-  }
 }
 
 .specs__cta {
@@ -26,5 +22,22 @@
 }
 
 .specs__img {
+  max-width: 50%;
   float: right;
+}
+
+@include breakpoint(tablet up) {
+  .specs {
+    flex-direction: row;
+  }
+
+  .specs__box {
+    margin-bottom: 0;
+
+    + .specs__box {
+      margin-left: gu(2.5);
+      padding-left: gu(2.5);
+      border-left: 1px map-get($palette, gray-medium) solid;
+    }
+  }
 }

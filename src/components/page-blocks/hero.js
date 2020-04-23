@@ -6,7 +6,7 @@ import { BackgroundImage } from "components/image"
 
 const HeroBlock = props => {
   const intl = useIntl()
-  const learnLink = intl.locale === "cs" ? "/cs/#buy" : "/en/#buy"
+  const learnLink = intl.locale === "cs" ? "/cs/#meet" : "/en/#meet"
 
   const data = useStaticQuery(graphql`
     query {
@@ -38,7 +38,7 @@ const HeroBlock = props => {
           </div>
         </div>
         <div className="content-block">
-          <Link to={learnLink} className="button button--red hero__cta">
+          <Link to={learnLink} className="button button--red button--responsive hero__cta">
             <FormattedMessage id="hero-block.cta" defaultMessage="Learn more" />
             <br />
           </Link>

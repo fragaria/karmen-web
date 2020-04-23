@@ -1,18 +1,16 @@
 .principle {
   display: flex;
+  flex-direction: column;
   position: relative;
   text-align: left;
   margin: auto;
 }
 
 .principle__box {
-  width: 25%;
+  width: 100%;
   background: map-get($palette, white);
   text-align: left;
-
-  & + .principle__box {
-    border-left: 1px map-get($palette, gray-semilight) solid;
-  }
+  position: relative;
 }
 
 .principle-box {
@@ -20,13 +18,8 @@
     background: map-get($palette, red);
 
     &,
-    .principle-box__nr,
     .principle-box__sub {
       color: map-get($palette, white);
-    }
-
-    .principle-box__content:after {
-      background: lighten(map-get($palette, red), $amount: 10);
     }
 
     .principle-box__img i {
@@ -35,21 +28,34 @@
   }
 }
 
+// Mobile step nr floats on the right side
 .principle-box__nr {
-  color: map-get($palette, red);
   font-weight: medium;
+  color: map-get($palette, white);
+  background-color: map-get($palette, red);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  right: gu();
+  top: 44px; // should match content dash line
+  width: gu(1.5);
+  height: gu(1.5);
+  line-height: gu(1.5);
+  text-align: center;
 
-  @include baseline(s4, $bodytype, 1, $below: 1);
+  @include fontsize(s3);
 }
 
 .principle-box__title {
   // @note: this is fixed by compensating on principle-box__content bottom padding
-  @include baseline(s6, $headingtype, 1.25, $below: 1);
+  @include baseline(s7, $headingtype, 2, $below: 1);
+  @include baseline(s6, $headingtype, 1.25, $below: 1, $breakpoint: desktop up);
 }
 
 .principle-box__sub {
   color: map-get($palette, red);
-  @include baseline(s2, $bodytype, $below: 1);
+  @include baseline(s2, $bodytype, $below: 0);
+  @include baseline(s2, $bodytype, $below: 1, $breakpoint: desktop up);
 
   a {
     @include anchor-style();
@@ -57,62 +63,7 @@
 }
 
 .principle-box__img {
-  padding: gu(1) gu(3);
-}
-
-.principle-box__content {
-  // @note: see .principle-box__title
-  padding: gu(1) gu(3) gu(1.5);
-}
-
-.principle-box__img {
-  display: flex;
-  min-height: gu(10);
-  align-items: center;
-  justify-content: center;
-
-  .image {
-    display: block;
-    margin: auto;
-    // @note: needs to be fixed for the bottom line to work
-    width: 100%;
-  }
-}
-
-// Draw dashed line connecting individual boxes.
-.principle-box:not(.principle-box--emphasized) .principle-box__img {
-  position: relative;
-  z-index: 2;
-
-  // Red dot at the tip of the line
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: gu();
-    height: gu();
-    background: map-get($palette, red);
-    right: gu(2.6); // match padding of .principle-box__img minus offset given by circle height
-    bottom: 50%;
-    border-radius: 50%;
-    transform: translateY(gu(0.5));
-  }
-
-  // The line itself (pushed to right to avoid joining dashes)
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    width: 100%;
-    bottom: 50%;
-    border: 1px map-get($palette, red) dashed;
-  }
-}
-
-// Last box cuts the hanging line part
-.principle-box--cutoff {
-  overflow: hidden;
+  display: none;
 }
 
 .principle-box--emphasized .principle-box__img {
@@ -126,6 +77,9 @@
 
 .principle-box__content {
   position: relative;
+  // @note: see .principle-box__title
+  // Avoid overlap with .principle-box__nr
+  padding: gu(1) gu(3) gu(2) gu(1);
 
   &:after {
     content: " ";
@@ -138,3 +92,142 @@
     height: 1px;
   }
 }
+
+// The dashed line in white boxes
+.principle-box:not(.principle-box--emphasized) .principle-box__content:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: gu(1.75);
+  height: 100%;
+  top: 44px;
+  border: 1px map-get($palette, red) dashed;
+}
+
+.principle-box--emphasized {
+  .principle-box__nr {
+    color: map-get($palette, red);
+    background-color: map-get($palette, white);
+  }
+
+  // The dashed line in last red box
+  .principle-box__content:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    right: gu(1.75);
+    height: 44px;
+    top: 0;
+    border: 1px map-get($palette, white) dashed;
+  }
+}
+
+// First principle box has no divider
+.principle-box:first-of-type .principle-box__content:after {
+  background: transparent;
+}
+
+@include breakpoint(desktop up) {
+  .principle {
+    flex-direction: row;
+  }
+
+  .principle__box {
+    width: 25%;
+
+    + .principle__box {
+      border-left: 1px map-get($palette, gray-semilight) solid;
+    }
+  }
+
+  .principle-box__title {
+    padding-right: 0;
+  }
+
+  .principle-box__nr {
+    position: static;
+    color: map-get($palette, red);
+    background-color: transparent;
+
+    width: auto;
+    height: auto;
+    text-align: left;
+
+    @include baseline(s4, $bodytype, 1, $below: 1);
+  }
+
+  .principle-box--emphasized .principle-box__nr {
+    color: map-get($palette, white);
+    background-color: transparent;
+  }
+
+  .principle-box__img {
+    display: flex;
+    min-height: gu(10);
+    align-items: center;
+    justify-content: center;
+    padding: gu(1) gu(3);
+
+    .image {
+      display: block;
+      margin: auto;
+      // @note: needs to be fixed for the bottom line to work
+      width: 100%;
+    }
+  }
+
+  .principle-box__content {
+    padding: gu(1) gu(3) gu(1.5);
+
+    // Cancel vertical red dashed line
+    &:before {
+      display: none;
+    }
+  }
+
+  // Last box cuts the hanging line part
+  .principle-box--cutoff {
+    overflow: hidden;
+  }
+
+  // Image - content dividiers
+  // Even first box should have the divider in portrait mode
+  .principle-box:first-of-type .principle-box__content:after {
+    background: map-get($palette, gray-semilight);
+  }
+  .principle-box--emphasized.principle-box__content:after {
+    background: lighten(map-get($palette, red), $amount: 10);
+  }
+
+  // Draw dashed line connecting individual boxes.
+  .principle-box:not(.principle-box--emphasized) .principle-box__img {
+    position: relative;
+    z-index: 2;
+
+    // Red dot at the tip of the line
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: gu();
+      height: gu();
+      background: map-get($palette, red);
+      right: gu(2.6); // match padding of .principle-box__img minus offset given by circle height
+      bottom: 50%;
+      border-radius: 50%;
+      transform: translateY(gu(0.5));
+    }
+
+    // The line itself (pushed to right to avoid joining dashes)
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      width: 100%;
+      bottom: 50%;
+      border: 1px map-get($palette, red) dashed;
+    }
+  }
+}
+

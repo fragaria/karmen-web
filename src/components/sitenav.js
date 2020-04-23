@@ -108,7 +108,7 @@ const Sitenav = () => {
           {data.site.siteMetadata.nav[intl.locale].map(item => (
             <Link
               to={item.url}
-              className="sitenav__link typeset__anchor--nounderline"
+              className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
               itemProp="url"
               key={item.url}
             >

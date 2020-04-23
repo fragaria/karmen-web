@@ -1,6 +1,6 @@
 .hero {
   background-size: cover;
-  height: gu(24);
+  height: gu(16);
 }
 
 .hero__cover {
@@ -25,7 +25,10 @@
   z-index: 1;
   text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 
-  @include baseline(s9, $headingtype, 3, $above: 9);
+  @include baseline(s8, $headingtype, 2, $above: 2, $below: 1);
+  @include baseline(s8, $headingtype, 2, $above: 4, $below: 1, $breakpoint: mobile up);
+  @include baseline(s8, $headingtype, 2, $above: 5, $below: 1, $breakpoint: tablet-tiny up);
+  @include baseline(s9, $headingtype, 3, $above: 4, $below: 1, $breakpoint: tablet-small up);
 }
 
 .hero__sub,
@@ -36,9 +39,19 @@
 }
 
 .hero__sub {
-  @include baseline(s4, $bodytype, 1, $below: 1, $above: 2);
+  @include baseline(s4, $bodytype, 1, $below: 1);
 }
 
 .hero__cta {
   transform: translateY(gu(-1.5));
+}
+
+@include breakpoint(desktop up) {
+  .hero {
+    height: gu(24);
+  }
+
+  .hero__headline {
+    @include baseline(s9, $headingtype, 3, $above: 9, $below: 2);
+  }
 }

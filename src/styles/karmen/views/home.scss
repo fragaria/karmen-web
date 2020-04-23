@@ -1,21 +1,41 @@
 $narrow-parts-width: gu(45);
 
 
-.v-home-solution,
+.v-home-solution {
+  padding-top: gu(4);
+}
+
 .v-home-pricing,
 .v-home-testimonials,
 .v-home-story,
 .v-home-principle,
 .v-home-specs {
-  padding-top: gu(6);
+  padding-top: gu(2);
+
+  @include breakpoint(tablet up) {
+    padding-top: gu(4);
+  }
+
+  @include breakpoint(desktop up) {
+    padding-top: gu(6);
+  }
 }
 
 .v-home-story {
-  margin-bottom: gu(6);
+  margin-bottom: gu(2);
+
+  @include breakpoint(tablet up) {
+    margin-bottom: gu(4);
+  }
+
+  @include breakpoint(desktop up) {
+    margin-bottom: gu(6);
+  }
 }
 
 .v-home-section .page-block-headline {
-  @include baseline(s9, $headingtype, 3, $below: 2);
+  @include baseline(s8, $headingtype, 2, $below: 2);
+  @include baseline(s9, $headingtype, 3, $below: 2, $breakpoint: tablet-small up);
 }
 
 .v-home-section .page-block-sub {
@@ -40,5 +60,14 @@ $narrow-parts-width: gu(45);
 
 .v-home-principle {
   margin: auto;
-  text-align: center;
+
+  .page-block-headline {
+    text-align: left;
+    margin-left: gu();
+
+    @include breakpoint(desktop up) {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
 }

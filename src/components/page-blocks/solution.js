@@ -11,7 +11,7 @@ import {
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
-import { BackgroundImage } from "components/image"
+import { Image, BackgroundImage } from "components/image"
 
 const SolutionBlock = props => {
   const data = useStaticQuery(graphql`
@@ -19,13 +19,22 @@ const SolutionBlock = props => {
       smartphoneAndPill: file(relativePath: { eq: "smartphone-and-pill.png" }) {
         ...fluidImage1024_traced
       }
+
+      smartphoneAndPillFixed: file(relativePath: { eq: "pill-w-cloud.png" }) {
+        childImageSharp {
+          fixed(height: 480) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
   return (
     <section {...props}>
       <div className="solution">
-        <div className="content-block">
+        <div className="content-block sitenav__anchorpush">
+          <span className="sitenav__anchor" id="meet"></span>
           <BackgroundImage
             file={data.smartphoneAndPill}
             className="solution__inner"
@@ -49,6 +58,9 @@ const SolutionBlock = props => {
                   defaultMessage="Get rid of SD cards once and for all."
                 />
               </h2>
+            </div>
+            <div className="solution__mobileimage">
+              <Image fixed={true} file={data.smartphoneAndPillFixed} />
             </div>
 
             <CarouselProvider
