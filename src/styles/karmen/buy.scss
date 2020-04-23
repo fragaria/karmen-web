@@ -5,15 +5,24 @@
 }
 
 .buy__image {
+  display: none;
   width: 100%;
   max-width: gu(20);
   margin-right: gu(2);
 }
 
 .buy__form {
+  width: 100%;
   max-width: gu(28);
 
   .page-block-headline {
     @include baseline(s7, $headingtype, 2, $below: 1);
+  }
+}
+
+
+@include breakpoint(tablet up) {
+  .buy__image {
+    display: block;
   }
 }

@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import { Image } from "components/image"
+import { BackgroundImage } from "components/image"
 
 const SpecsBlock = props => {
   const data = useStaticQuery(graphql`
@@ -15,18 +15,10 @@ const SpecsBlock = props => {
       }
 
       cloud: file(relativePath: { eq: "screen-printers-both.png" }) {
-        childImageSharp {
-          fixed(height: 216) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...fluidImage1024_traced
       }
       pill: file(relativePath: { eq: "karmen-pill.png" }) {
-        childImageSharp {
-          fixed(height: 216) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...fluidImage1024_traced
       }
     }
   `)
@@ -37,13 +29,18 @@ const SpecsBlock = props => {
         <div className="specs sitenav__anchorpush">
           <span className="sitenav__anchor" id="specs"></span>
           <div className="specs__box">
-            <Image
-              file={data.pill}
-              fixed={true}
-              className="specs__img"
-              alt="Karmen Pill"
-            />
-            <h2>Karmen Pill</h2>
+            <div className="specs__top-row">
+              <BackgroundImage
+                file={data.pill}
+                style={{
+                  backgroundPosition: "right bottom",
+                  backgroundSize: "contain",
+                }}
+                className="specs__img"
+                alt="Karmen Pill"
+              />
+              <h2>Karmen Pill</h2>
+            </div>
             <ul className="arrow-list">
               <li className="arrow-list__item">
                 <FormattedMessage
@@ -89,13 +86,18 @@ const SpecsBlock = props => {
             </a>
           </div>
           <div className="specs__box">
-            <Image
-              file={data.cloud}
-              fixed={true}
-              className="specs__img"
-              alt="Karmen cloud"
-            />
-            <h2>Karmen</h2>
+            <div className="specs__top-row">
+              <BackgroundImage
+                file={data.cloud}
+                className="specs__img"
+                style={{
+                  backgroundPosition: "right bottom",
+                  backgroundSize: "contain",
+                }}
+                alt="Karmen cloud"
+              />
+              <h2>Karmen</h2>
+            </div>
             <ul className="arrow-list">
               <li className="arrow-list__item">
                 <FormattedMessage

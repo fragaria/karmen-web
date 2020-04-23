@@ -11,7 +11,7 @@ import {
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
-import { Image, BackgroundImage } from "components/image"
+import { BackgroundImage } from "components/image"
 
 const SolutionBlock = props => {
   const data = useStaticQuery(graphql`
@@ -19,13 +19,10 @@ const SolutionBlock = props => {
       smartphoneAndPill: file(relativePath: { eq: "smartphone-and-pill.png" }) {
         ...fluidImage1024_traced
       }
-
-      smartphoneAndPillFixed: file(relativePath: { eq: "pill-w-cloud.png" }) {
-        childImageSharp {
-          fixed(height: 480) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+      smartphoneAndPillMobile: file(
+        relativePath: { eq: "pill-w-cloud-mobile.png" }
+      ) {
+        ...fluidImage1024_traced
       }
     }
   `)
@@ -59,9 +56,14 @@ const SolutionBlock = props => {
                 />
               </h2>
             </div>
-            <div className="solution__mobileimage">
-              <Image fixed={true} file={data.smartphoneAndPillFixed} />
-            </div>
+            <BackgroundImage
+              file={data.smartphoneAndPillMobile}
+              style={{
+                backgroundPosition: "left top",
+                backgroundSize: "600px 373px",
+              }}
+              className="solution__mobileimage"
+            />
 
             <CarouselProvider
               naturalSlideWidth={100}

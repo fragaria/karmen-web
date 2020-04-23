@@ -111,7 +111,10 @@ module.exports = {
           { name: "Přihlásit se", url: "https://cloud.karmen.tech" },
         ],
         [
-          { name: "Karmen dokumentace", url: "https://docs.karmen.tech/#/quickstart" },
+          {
+            name: "Karmen dokumentace",
+            url: "https://docs.karmen.tech/#/quickstart",
+          },
           {
             name: "Karmen Pill dokumentace",
             url: "https://docs.karmen.tech/#/pill-getting-started",

@@ -1,1 +1,16 @@
-[{"id":"subscription-box.main","defaultMessage":"Subscribe to Karmen news","file":"src/components/subscription-box.js","start":{"line":9,"column":10},"end":{"line":12,"column":12}},{"id":"subscription-box.sub","defaultMessage":"Stay in the loop","file":"src/components/subscription-box.js","start":{"line":15,"column":10},"end":{"line":18,"column":12}}]
+[
+  {
+    "id": "subscription-box.main",
+    "defaultMessage": "Subscribe to Karmen news",
+    "file": "src/components/subscription-box.js",
+    "start": { "line": 9, "column": 10 },
+    "end": { "line": 12, "column": 12 }
+  },
+  {
+    "id": "subscription-box.sub",
+    "defaultMessage": "Stay in the loop",
+    "file": "src/components/subscription-box.js",
+    "start": { "line": 15, "column": 10 },
+    "end": { "line": 18, "column": 12 }
+  }
+]

@@ -394,31 +394,32 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
                   )}
                 </Field>
               </div>
-              {showStateField && <div className="form__line">
-                <Field name="state">
-                  {({ field, meta }) => (
-                    <>
-                      <label className="form-label" htmlFor="state">
-                        <FormattedMessage
-                          id="checkoutform.label_state"
-                          defaultMessage="State"
-                        />
-                      </label>
-                      <div className={getClass("form-control-wrapper", meta)}>
-                        <input
-                          className="form-control form-control--bordered"
-                          type="text"
-                          {...field}
-                        />
-                        {meta.touched && meta.error && (
-                          <p className="form-control-error">{meta.error}</p>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </Field>
-              </div>
-              }
+              {showStateField && (
+                <div className="form__line">
+                  <Field name="state">
+                    {({ field, meta }) => (
+                      <>
+                        <label className="form-label" htmlFor="state">
+                          <FormattedMessage
+                            id="checkoutform.label_state"
+                            defaultMessage="State"
+                          />
+                        </label>
+                        <div className={getClass("form-control-wrapper", meta)}>
+                          <input
+                            className="form-control form-control--bordered"
+                            type="text"
+                            {...field}
+                          />
+                          {meta.touched && meta.error && (
+                            <p className="form-control-error">{meta.error}</p>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </Field>
+                </div>
+              )}
               <div className="form__line">
                 <Field name="country">
                   {({ field, meta }) => (

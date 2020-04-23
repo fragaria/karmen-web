@@ -103,19 +103,21 @@ const Footer = () => {
               <a
                 href="https://fragaria.cz"
                 target="_blank"
-                rel="noopener noreferrer">
-                  <img
-                    alt={data.site.siteMetadata.company.officialName}
-                    className="footer__brand"
-                    src={strawberryImg}
-                  />
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt={data.site.siteMetadata.company.officialName}
+                  className="footer__brand"
+                  src={strawberryImg}
+                />
               </a>
               <div className="footer__copy">
                 <div className="footer__copy-line footer__copy-line--emphasized">
                   <a
                     href="https://fragaria.cz"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     FRAGARIA &copy; {currentYear}
                   </a>
                 </div>

@@ -1,1 +1,9 @@
-[{"id":"buy-block.headline","defaultMessage":"Buy Karmen","file":"src/components/page-blocks/buy.js","start":{"line":26,"column":12},"end":{"line":29,"column":14}}]
+[
+  {
+    "id": "buy-block.headline",
+    "defaultMessage": "Buy Karmen",
+    "file": "src/components/page-blocks/buy.js",
+    "start": { "line": 26, "column": 12 },
+    "end": { "line": 29, "column": 14 }
+  }
+]

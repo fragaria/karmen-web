@@ -9,6 +9,9 @@
   margin-bottom: gu(2);
 
   h2 {
+    flex: 1;
+    padding-right: gu(1);
+
     @include baseline(s7, $headingtype, 2, $above: 4, $below: 2);
   }
 
@@ -17,13 +20,19 @@
   }
 }
 
+.specs__top-row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .specs__cta {
   margin-top: gu(2);
 }
 
 .specs__img {
-  max-width: 50%;
-  float: right;
+  width: 100%;
+  max-width: gu(12);
+  height: gu(8);
 }
 
 @include breakpoint(tablet up) {

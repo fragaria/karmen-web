@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: gu(12);
   // background: url(../../assets/img/lead.jpg);
   // background-size: cover;
   background-color: map-get($palette, red);
-  height: gu(24);
   z-index: 1;
-  margin-bottom: gu(3);
+  margin-bottom: gu(2);
 
   // &:before {
   //   z-index: -1;
@@ -44,11 +44,13 @@
   text-align: center;
 
   h3 {
-    @include baseline(s7, $headingtype, 3, $below: 1, $above: 1);
+    @include baseline(s7, $headingtype, 3, $below: 1);
+    @include baseline(s7, $headingtype, 3, $below: 1, $above: 1, $breakpoint: tablet-small up);
   }
 
   p {
-    @include baseline(s4, $bodytype, 1, $below: 3);
+    @include baseline(s4, $bodytype, 1, $below: 1);
+    @include baseline(s4, $bodytype, 1, $below: 3, $breakpoint: tablet-small up);
   }
 
   p + h3 {
@@ -73,8 +75,9 @@
 
 .about-founders {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: gu(6);
+  margin-bottom: gu(4);
 }
 
 .about-founders__founder {
@@ -114,4 +117,25 @@
 
 .about-founders__founder--company .about-founders__founder-image img {
   height: 100%;
+}
+
+
+@include breakpoint(tablet-small up) {
+  .about-hero {
+    margin-bottom: gu(3);
+  }
+
+  .about-founders {
+    margin-bottom: gu(6);
+  }
+
+  .about-founders {
+    flex-direction: row;
+  }
+}
+
+@include breakpoint(desktop up) {
+  .about-hero {
+    height: gu(24);
+  }
 }

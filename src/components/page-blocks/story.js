@@ -38,7 +38,10 @@ const StoryBlock = props => {
                 defaultMessage="Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective."
               />
             </p>
-            <Link className="button button--red button--responsive" to={storyLink}>
+            <Link
+              className="button button--red button--responsive"
+              to={storyLink}
+            >
               <FormattedMessage
                 id="story-block.karmen_story_link"
                 defaultMessage="See full story"
