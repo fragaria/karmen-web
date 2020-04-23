@@ -43,9 +43,9 @@ const CC = () => {
       buttonText={intl.formatMessage(messages.cta)}
       cookieName="cookieConsent"
       style={{
-        background: "#ea272e",
+        background: "rgba(234, 39, 46, .75)",
+        backdropFilter: "saturate(180%) blur(10px)",
         fontSize: ".9rem",
-        boxShadow: "-10px -10px 16px rgba(255, 255, 255, .4)",
         padding: ".5rem",
       }}
       buttonStyle={{

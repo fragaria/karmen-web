@@ -4,30 +4,33 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background: map-get($palette, white);
+  background: hsla(0, 0, 100%, .89);
+  backdrop-filter: saturate(180%) blur(10px);
   z-index: 1000;
 }
 
 .sitenav__menu {
-  width: 100%;
-  max-width: $sitenav-max-width;
-  margin: auto;
+  @include contentBlock(1, 88.5);
   height: map-get($sitenav-height, mobile);
   display: flex;
   align-items: stretch;
   font-family: getFontFamily($bodytype);
   text-transform: uppercase;
+
+  @include breakpoint(tablet up) {
+    height: map-get($sitenav-height, tablet);
+  }
 }
 
 .sitenav__brand {
-  width: gu(3);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: map-get($palette, red);
+  padding: 0 gu();
 
   img {
-    height: gu(2)
+    height: gu(2);
+    margin-bottom: 4px;
   }
 }
 
@@ -67,11 +70,11 @@
 }
 
 .sitenav__company {
-  margin: 0 0 0 gu(1);
+  margin: 0;
   font-family: getFontFamily($headingtype);
   font-weight: map-get($headingtype, semi);
-  letter-spacing: 4px;
-  @include fontsize(s4);
+  font-size: 1.7rem;
+  letter-spacing: .01rem;
 }
 
 .sitenav__langswitch {

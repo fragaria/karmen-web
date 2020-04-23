@@ -26,11 +26,11 @@
 @include breakpoint(tablet-small up) {
   .testimonials {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: gu(2) gu();
+    grid-gap: gu(3) gu();
 
     .testimonials__image {
       max-width: 100%;
-      max-height: gu(1.5);
+      max-height: gu(3);
     }
   }
 }

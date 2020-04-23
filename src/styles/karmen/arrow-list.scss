@@ -1,15 +1,21 @@
 .arrow-list {
   list-style-type: none;
-  padding-left: gu(1);
+  padding-left: gu(.75);
 }
 
-.arrow-list__item:before {
-  position: absolute;
-  content: fa-content($fa-var-long-arrow-alt-right);
-  font-family: 'Font Awesome 5 Free';
-  color: map-get($palette, red);
-  display: inline-block;
-  margin-left: gu(-1);
-  width: gu(1);
+.arrow-list__item {
+  position: relative;
 
+  &:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: .95rem;
+    left: 0;
+    margin-left: gu(-.75);
+    width: gu(.3);
+    height: gu(.3);
+    background-color: map-get($palette, red);
+  }
 }
+

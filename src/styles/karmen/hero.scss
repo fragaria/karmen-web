@@ -26,9 +26,9 @@
   text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 
   @include baseline(s8, $headingtype, 2, $above: 2, $below: 1);
-  @include baseline(s8, $headingtype, 2, $above: 4, $below: 1, $breakpoint: mobile up);
-  @include baseline(s8, $headingtype, 2, $above: 5, $below: 1, $breakpoint: tablet-tiny up);
-  @include baseline(s9, $headingtype, 3, $above: 4, $below: 1, $breakpoint: tablet-small up);
+  @include baseline(s8, $headingtype, 2, $above: 3, $below: 1, $breakpoint: mobile up);
+  @include baseline(s8, $headingtype, 2, $above: 4, $below: 1, $breakpoint: tablet-tiny up);
+  @include baseline(s9, $headingtype, 3, $above: 3, $below: 1, $breakpoint: tablet-small up);
 }
 
 .hero__sub,
@@ -48,10 +48,10 @@
 
 @include breakpoint(desktop up) {
   .hero {
-    height: gu(24);
+    height: gu(21);
   }
 
   .hero__headline {
-    @include baseline(s9, $headingtype, 3, $above: 9, $below: 2);
+    @include baseline(s9, $headingtype, 3, $above: 6, $below: 2);
   }
 }
