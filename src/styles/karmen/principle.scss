@@ -108,17 +108,16 @@
 
   .principle-box__img {
     flex: 1;
+    width: 100%;
     display: flex;
-    min-height: gu(2);
-    align-items: center;
-    justify-content: center;
     padding: gu(1) gu(10) gu(1) gu(3);
 
-    .image {
+    .principle-box__img-body {
       display: block;
-      margin: auto;
-      // @note: needs to be fixed for the bottom line to work
       width: 100%;
+      // margin: auto;
+      // @note: needs to be fixed for the bottom line to work
+      // height: auto;
     }
   }
 

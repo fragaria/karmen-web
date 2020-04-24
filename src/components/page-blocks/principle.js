@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import { Image } from "components/image"
+import { BackgroundImage, Image } from "components/image"
 
 const PrincipleBlock = props => {
   const data = useStaticQuery(graphql`
@@ -54,7 +54,7 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <Image file={data.signup} alt="Karmen signup" />
+              <BackgroundImage className="principle-box__img-body" file={data.signup} style={{backgroundSize: "contain"}} />
             </div>
           </div>
           <div className="principle__box principle-box">
@@ -74,7 +74,7 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <Image file={data.pill} alt="Karmen Pill" />
+              <BackgroundImage className="principle-box__img-body" file={data.pill} style={{backgroundSize: "contain"}} />
             </div>
           </div>
           <div className="principle__box principle-box principle-box--cutoff">
@@ -94,7 +94,7 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <Image file={data.cloud} alt="Karmen cloud" />
+              <BackgroundImage className="principle-box__img-body" file={data.cloud} style={{backgroundSize: "contain"}} />
             </div>
           </div>
           <div className="principle__box principle-box principle-box--emphasized">
