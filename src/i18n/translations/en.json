@@ -13,6 +13,7 @@
   "cases-block.individuals_headline": "For individuals",
   "cases-block.teams_desc": "Print prototypes, spare parts or scarce items. Karmen makes your print queue more effective and makes it easy to coordinate the management of print jobs and teams worldwide. Karmen’s features make it popular among companies, schools, co-working spaces and other organisations.",
   "cases-block.teams_headline": "For teams",
+  "checkoutform.corona_warning": "<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time.",
   "checkoutform.cta_buy": "Buy",
   "checkoutform.cta_note": "You will be redirected to the checkout page after clicking on \"Buy\". VAT amount as well as billing details will be resolved there.",
   "checkoutform.error_invalid_email": "Please fill out a valid email address.",

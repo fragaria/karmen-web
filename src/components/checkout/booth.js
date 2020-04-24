@@ -12,6 +12,9 @@ const CheckoutBooth = () => {
       site {
         siteMetadata {
           siteUrl
+          company {
+            contactEmail
+          }
           checkout {
             octobatConfigured
             octobatApiKey
@@ -74,6 +77,7 @@ const CheckoutBooth = () => {
   return (
     <CheckoutForm
       onBuy={finalizeSession}
+      contactEmail={config.siteMetadata.company.contactEmail}
       initialCountryCode={langKey === "cs" ? "CZ" : "US"}
       showStateField={langKey !== "cs"}
     />

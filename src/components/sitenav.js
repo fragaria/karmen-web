@@ -109,15 +109,11 @@ const Sitenav = () => {
               </Link>
             ))}
           </div>
-          <a
-            href="#"
-            className={mobileToggleClasses}
-            onClick={toggleMobileMenu}
-          >
+          <button className={mobileToggleClasses} onClick={toggleMobileMenu}>
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>
             </span>
-          </a>
+          </button>
         </div>
       </nav>
       <MobileMenu

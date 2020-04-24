@@ -19,7 +19,12 @@ const messages = defineMessages({
   },
 })
 
-const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
+const CheckoutForm = ({
+  contactEmail,
+  onBuy,
+  initialCountryCode,
+  showStateField = true,
+}) => {
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
     // Get Pill config by its id
@@ -529,6 +534,23 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
               </div>
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
+              <p class="typeset checkout-form__corona-warning">
+                <FormattedMessage
+                  id="checkoutform.corona_warning"
+                  defaultMessage="<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time."
+                  values={{
+                    strong: (...chunks) => <strong>{chunks}</strong>,
+                    a: (...chunks) => (
+                      <a
+                        className="anchor--emphasized"
+                        href={`mailto:${contactEmail}`}
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  }}
+                />
+              </p>
               <div className="checkout-form__submit">
                 <p>
                   <em>
@@ -558,6 +580,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
 }
 
 CheckoutForm.props = {
+  contactEmail: PropTypes.string.isRequired,
   onBuy: PropTypes.func.isRequired,
   initialCountryCode: PropTypes.string,
   showStateField: PropTypes.bool,
