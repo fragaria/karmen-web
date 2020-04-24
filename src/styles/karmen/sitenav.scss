@@ -12,7 +12,7 @@
 }
 
 .sitenav__menu {
-  @include contentBlockVariant(71.3, 1, 1);
+  @include contentBlockVariant($sitenav-max-width, 0, 0);
   height: map-get($sitenav-height, mobile);
   margin: 0 auto;
   display: flex;
@@ -29,10 +29,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 gu(1);
+  padding: 0 .6rem 0 3.9rem;
 
   img {
     height: gu(2);
+    width: 2rem;
     margin-bottom: 4px;
 
     @include breakpoint(tablet up) {
