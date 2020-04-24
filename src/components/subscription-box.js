@@ -29,6 +29,7 @@ const SubscriptionBox = () => {
         >
           <fieldset className="form__line">
             <div className="form-control-wrapper form-control-wrapper--inline">
+              <label htmlFor="email" class="hidden">Email</label>
               <input
                 className="form-control subscription-box__input"
                 type="email"
