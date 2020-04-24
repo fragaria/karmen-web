@@ -534,7 +534,7 @@ const CheckoutForm = ({
               </div>
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
-              <p class="typeset checkout-form__corona-warning">
+              <p className="typeset checkout-form__corona-warning">
                 <FormattedMessage
                   id="checkoutform.corona_warning"
                   defaultMessage="<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time."

@@ -40,12 +40,25 @@ const SolutionBlock = props => {
           <span className="sitenav__anchor" id="meet"></span>
           <meta itemProp="name" content="Karmen" />
           <meta itemProp="price" content="130" />
-          <div itemProp="offers" itemtype="http://schema.org/Offer" itemScope>
+          <div itemProp="offers" itemType="http://schema.org/Offer" itemScope>
             <meta itemProp="priceCurrency" content="EUR" />
-            <meta itemProp="availability" content="https://schema.org/InStock" />
-            <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
-            <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
-              <meta itemprop="name" content={data.site.siteMetadata.company.officialName} />
+            <meta
+              itemProp="availability"
+              content="https://schema.org/InStock"
+            />
+            <meta
+              itemProp="itemCondition"
+              content="https://schema.org/NewCondition"
+            />
+            <div
+              itemProp="seller"
+              itemType="http://schema.org/Organization"
+              itemScope
+            >
+              <meta
+                itemProp="name"
+                content={data.site.siteMetadata.company.officialName}
+              />
             </div>
           </div>
           <link

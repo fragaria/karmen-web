@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import classNames from "classnames"
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "react-intl"
+import { useIntl, FormattedMessage } from "react-intl"
 import { slide as MobileMenu } from "react-burger-menu"
 
 import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
@@ -20,6 +20,7 @@ const Sitenav = () => {
               twitter
               facebook
               youtube
+              gitter
             }
           }
           nav {
@@ -133,6 +134,15 @@ const Sitenav = () => {
             <span itemProp="name">{item.name}</span>
           </Link>
         ))}
+        <a
+          href={`https://gitter.im/${data.site.siteMetadata.company.social.gitter}`}
+          itemProp="url"
+          className="sitenav__gitter-link"
+        >
+          <span itemProp="name">
+            <FormattedMessage id="sitenav.gitter" defaultMessage="Get help" />
+          </span>
+        </a>
       </MobileMenu>
     </>
   )

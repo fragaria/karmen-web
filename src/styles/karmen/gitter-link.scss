@@ -3,14 +3,19 @@
   z-index: 1000;
   top: 0;
   right: gu(3);
+  display: none;
+
+  @include breakpoint(tablet-tiny up) {
+    display: block;
+  }
 
   @include breakpoint(tablet up) {
     right: gu(-6); // match button width
-    top: gu(20); // match HP hero section height
+    top: gu(19); // match HP hero section height
   }
 
   @include breakpoint(desktop up) {
-    top: gu(25);
+    top: gu(22);
   }
 }
 

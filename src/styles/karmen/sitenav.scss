@@ -144,14 +144,17 @@
   background: map-get($palette, black);
   padding: gu(.5);
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -1px;
-    height: map-get($sitenav-height, mobile);
-    border: 1px lighten(map-get($palette, black), $amount: 30) solid;
+  @include breakpoint(mobile up) {
+    &:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -1px;
+      height: map-get($sitenav-height, mobile);
+      border: 1px lighten(map-get($palette, black), $amount: 30) solid;
+    }
   }
+
 
   @include breakpoint(tablet up) {
     display: none;
@@ -161,4 +164,11 @@
 .sitenav__mobile-overlay {
   background: $sitenav-background;
   backdrop-filter: saturate(80%) blur(4px);
+}
+
+// Display gitter link in the menu until it has it's own button (see gitter-link styles)
+.sitenav__gitter-link {
+  @include breakpoint(tablet-tiny up) {
+    display: none !important;
+  }
 }
