@@ -25,6 +25,9 @@ const SolutionBlock = props => {
       site {
         siteMetadata {
           siteUrl
+          company {
+            officialName
+          }
         }
       }
     }
@@ -37,8 +40,14 @@ const SolutionBlock = props => {
           <span className="sitenav__anchor" id="meet"></span>
           <meta itemProp="name" content="Karmen" />
           <meta itemProp="price" content="130" />
-          <meta itemProp="priceCurrency" content="EUR" />
-          <meta itemProp="availability" content="https://schema.org/InStock" />
+          <div itemProp="offers" itemtype="http://schema.org/Offer" itemScope>
+            <meta itemProp="priceCurrency" content="EUR" />
+            <meta itemProp="availability" content="https://schema.org/InStock" />
+            <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
+            <div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
+              <meta itemprop="name" content={data.site.siteMetadata.company.officialName} />
+            </div>
+          </div>
           <link
             itemProp="image"
             href={`${data.site.siteMetadata.siteUrl}${data.smartphoneAndPillMetadata.childImageSharp.fluid.src}`}

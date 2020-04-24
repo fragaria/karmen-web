@@ -1,9 +1,1 @@
-[
-  {
-    "id": "gitter.label",
-    "defaultMessage": "I need help",
-    "file": "src/components/gitter-link.js",
-    "start": { "line": 87, "column": 10 },
-    "end": { "line": 87, "column": 77 }
-  }
-]
+[{"id":"gitter.label","defaultMessage":"I need help","file":"src/components/gitter-link.js","start":{"line":87,"column":10},"end":{"line":87,"column":77}}]
