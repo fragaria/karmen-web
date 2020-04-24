@@ -524,6 +524,19 @@
         }
       },
       {
+        "defaultMessage": "Right at the start of January 2019, we discovered OctoPrint. We set everything up in such a way as to optimize the number of steps through the office it would take to get to the printer. Unfortunately, not everything in OctoPrint is worked out ideally, so we agreed ourselves to help them improve it. We had some ideas about functions that would be useful, and at the same time we found out that a lot of companies and organisations would welcome the possibility to manage their printers in one place. OctoPrint couldn’t do that—it’s always tied to a single printer. We got the idea for an interesting product, and it just happened to be at a time when we wanted to invest in development. We weren’t held up with analyses of markets and competitors, cost-benefit calculations or product briefs. We just went into it with what we ourselves would find useful and which would be simply scalable to multiple printers. We called the product Karmen because it’s a name that’s easily pronounced. It’s also the name of a variety of strawberry. The strawberry—fragaria in expert terminology—had previously given our company its name.",
+        "end": {
+          "column": 1210,
+          "line": 81
+        },
+        "file": "src/components/page-blocks/about.js",
+        "id": "about-block.story_idea_content",
+        "start": {
+          "column": 12,
+          "line": 81
+        }
+      },
+      {
         "defaultMessage": "The result",
         "end": {
           "column": 14,
@@ -840,7 +853,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Conditions apply.",
+        "defaultMessage": "Free for limited number of connected devices. Curious about large scale operation pricing? Contact us.",
         "end": {
           "column": 3,
           "line": 15

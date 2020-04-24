@@ -11,7 +11,8 @@ import cloudImg from "assets/img/cloud-outline.svg"
 const messages = defineMessages({
   specialOfferMemo: {
     id: "pricing-block.special_offer_memo",
-    defaultMessage: "Conditions apply.",
+    defaultMessage:
+      "Free for limited number of connected devices. Curious about large scale operation pricing? Contact us.",
   },
 })
 

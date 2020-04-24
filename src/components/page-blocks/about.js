@@ -78,7 +78,10 @@ const AboutBlock = props => {
             />
           </h3>
           <p>
-            {/* <FormattedMessage id="about-block.story_start_content" defaultMessage="We bought a 3D printer for our office in 2018 as a Christmas gift to thank our employees. We originally thought it would be used to print out parts for drones and other toys, like for special tracks for Legos. It was a lot of fun! But in addition to having fun, we also found out that our printer – like the vast majority of FFF printers – didn’t have a network connection, which meant we had to constantly walk over to it with an SD card. And this is where our aversion to doing unnecessary work comes in – as well as the programmers’ faith that there’s always a simpler way to do things." /> */}
+            <FormattedMessage
+              id="about-block.story_idea_content"
+              defaultMessage="Right at the start of January 2019, we discovered OctoPrint. We set everything up in such a way as to optimize the number of steps through the office it would take to get to the printer. Unfortunately, not everything in OctoPrint is worked out ideally, so we agreed ourselves to help them improve it. We had some ideas about functions that would be useful, and at the same time we found out that a lot of companies and organisations would welcome the possibility to manage their printers in one place. OctoPrint couldn’t do that—it’s always tied to a single printer. We got the idea for an interesting product, and it just happened to be at a time when we wanted to invest in development. We weren’t held up with analyses of markets and competitors, cost-benefit calculations or product briefs. We just went into it with what we ourselves would find useful and which would be simply scalable to multiple printers. We called the product Karmen because it’s a name that’s easily pronounced. It’s also the name of a variety of strawberry. The strawberry—fragaria in expert terminology—had previously given our company its name."
+            />
           </p>
           <h3>
             <FormattedMessage
