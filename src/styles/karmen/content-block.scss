@@ -8,7 +8,7 @@
     margin-right: $width;
 }
 
-@mixin contentBlockVariant($baseMaxWidth, $mobilePadding: 1.5, $defaultPadding: 2) {
+@mixin contentBlockVariant($baseMaxWidth, $mobilePadding: 1.5, $defaultPadding: 1.5) {
   max-width: $baseMaxWidth + gu($mobilePadding)*2;
 
   @include breakpoint(tablet up) {
@@ -16,7 +16,7 @@
   }
 }
 
-@mixin contentBlock($mobilePadding: 1.5, $defaultPadding: 2) {
+@mixin contentBlock($mobilePadding: 1.5, $defaultPadding: 3) {
   width: 100%;
 
   @include cbMargin(auto);

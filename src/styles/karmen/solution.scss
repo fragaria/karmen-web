@@ -32,17 +32,33 @@
 .solution__carousel,
 .solution__carousel .carousel__slider--horizontal {
   height: gu(15);
+
+  @include breakpoint(tablet-tiny up) {
+    height: gu(9);
+  }
+
+  @include breakpoint(mobile up) {
+    height: gu(10);
+  }
+
+  @include breakpoint(tablet-small up) {
+    height: gu(9);
+  }
 }
+
+
+
+
+
 
 .solution__carousel {
   width: 100%;
 
   h3 {
     @include baseline(s6, $headingtype, 2, $below: 1, $above: 0);
-    @include baseline(s6, $headingtype, 2, $below: 1, $above: 1, $breakpoint: tablet-small up);
   }
   p {
-    @include baseline(s4, $bodytype, 1);
+    @include baseline(s4, $bodytype, 1, $above: 0);
   }
 
   .carousel__dot-group {
@@ -105,31 +121,14 @@
 }
 
 @include breakpoint(mobile up) {
-  .solution__carousel,
-  .solution__carousel .carousel__slider--horizontal {
-    height: gu(10);
-  }
-
   .solution__carousel {
     max-width: 35em;
-  }
-}
-
-@include breakpoint(tablet-tiny up) {
-  .solution__carousel,
-  .solution__carousel .carousel__slider--horizontal {
-    height: gu(9);
   }
 }
 
 @include breakpoint(tablet-small up) {
   .solution__mobileimage {
     display: none;
-  }
-
-  .solution__carousel,
-  .solution__carousel .carousel__slider--horizontal {
-    height: gu(10);
   }
 
   .solution__carousel {

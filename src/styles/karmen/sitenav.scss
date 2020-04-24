@@ -12,7 +12,7 @@
 }
 
 .sitenav__menu {
-  @include contentBlockVariant(91.3, 1, 1);
+  @include contentBlockVariant(71.3, 1, 1);
   height: map-get($sitenav-height, mobile);
   margin: 0 auto;
   display: flex;
@@ -29,14 +29,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 gu();
+  padding: 0 gu(1);
 
   img {
     height: gu(2);
     margin-bottom: 4px;
 
     @include breakpoint(tablet up) {
-      height: gu(2.3);
+      height: gu(2);
     }
   }
 }
@@ -80,7 +80,7 @@
   margin: 0;
   font-family: getFontFamily($headingtype);
   font-weight: map-get($headingtype, semi);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   letter-spacing: .01rem;
 }
 

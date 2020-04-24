@@ -3,7 +3,7 @@
   height: gu(16);
 
   @include breakpoint(desktop up) {
-    height: gu(21);
+    height: gu(19);
   }
 }
 
@@ -35,7 +35,7 @@
   @include baseline(s9, $headingtype, 3, $above: 3, $below: 1, $breakpoint: tablet-small up);
 
   @include breakpoint(desktop up) {
-    @include baseline(s9, $headingtype, 3, $above: 6, $below: 2);
+    @include baseline(s9, $headingtype, 2, $above: 6, $below: 2);
   }
 }
 
