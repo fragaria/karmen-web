@@ -6,8 +6,6 @@ import {
   DotGroup,
   Slider,
   Slide,
-  ButtonBack,
-  ButtonNext,
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
@@ -35,7 +33,7 @@ const SolutionBlock = props => {
           <BackgroundImage
             file={data.smartphoneAndPill}
             className="solution__inner"
-            style={{ backgroundPosition: "right top", backgroundSize: "50%" }}
+            style={{ backgroundPosition: "right 80px", backgroundSize: "44%" }}
           >
             <div className="solution__desc">
               <h1 className="solution__headline">
@@ -147,13 +145,7 @@ const SolutionBlock = props => {
               </Slider>
 
               <div className="solution__carousel-controls">
-                <ButtonBack>
-                  <i className="fas fa-long-arrow-alt-left" />
-                </ButtonBack>
                 <DotGroup />
-                <ButtonNext>
-                  <i className="fas fa-long-arrow-alt-right" />
-                </ButtonNext>
               </div>
             </CarouselProvider>
           </BackgroundImage>

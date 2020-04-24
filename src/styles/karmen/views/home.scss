@@ -2,7 +2,7 @@ $narrow-parts-width: gu(45);
 
 
 .v-home-solution {
-  padding-top: gu(4);
+  padding-top: gu(6);
 }
 
 .v-home-pricing,
@@ -48,7 +48,10 @@ $narrow-parts-width: gu(45);
   text-align: center;
 
   .page-block-sub {
-    padding-bottom: gu(2);
+    padding-bottom: gu(4);
+    max-width: 35em;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

@@ -39,7 +39,7 @@ $brands: (
     @return map-get(map-get($brands, $brand), $prop);
 }
 
-$grid-unit: 1.5rem;
+$grid-unit: 1.618rem;
 
 $primary-color: map-get($palette, black);
 
@@ -62,6 +62,8 @@ $code-block-background-color: map-get($palette, gray-light);
 $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
+
+$sitenav-background: hsla(0, 0, 100%, .89);
 
 $page-container-max-width: 120rem; // ~1920px
 $page-content-max-width: 84rem; // ~1344px
@@ -108,7 +110,7 @@ $sharebox-variants: (
 // Sitenav settings
 $sitenav-height: (
     mobile: 3 * $grid-unit,
-    tablet: 5 * $grid-unit,
+    tablet: 3.5 * $grid-unit,
 );
 
 
