@@ -5,11 +5,6 @@ $web-font-path: 'https://res.cloudinary.com/fragaria/raw/upload/v1534234755/frag
 // $fa-font-path:        "../webfonts";
 $icomoon-font-path: '../../../assets/fonts';
 
-@import
-  "@fortawesome/fontawesome-free/scss/fontawesome.scss",
-  "@fortawesome/fontawesome-free/scss/solid.scss"
-;
-
 // Import frameworks & theme styles
 @import
     "karmen/reset",

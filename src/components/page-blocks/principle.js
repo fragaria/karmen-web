@@ -31,11 +31,8 @@ const PrincipleBlock = props => {
         </h1>
         <div className="principle">
           <div className="principle__box principle-box">
-            <div className="principle-box__img">
-              <Image file={data.signup} alt="Karmen signup" />
-            </div>
+            <h3 className="principle-box__nr">01</h3>
             <div className="principle-box__content">
-              <h3 className="principle-box__nr">01</h3>
               <h2 className="principle-box__title">
                 <FormattedMessage
                   id="principle-block.signup"
@@ -56,13 +53,13 @@ const PrincipleBlock = props => {
                 />
               </h3>
             </div>
+            <div className="principle-box__img">
+              <Image file={data.signup} alt="Karmen signup" />
+            </div>
           </div>
           <div className="principle__box principle-box">
-            <div className="principle-box__img">
-              <Image file={data.pill} alt="Karmen Pill" />
-            </div>
+            <h3 className="principle-box__nr">02</h3>
             <div className="principle-box__content">
-              <h3 className="principle-box__nr">02</h3>
               <h2 className="principle-box__title">
                 <FormattedMessage
                   id="principle-block.connect"
@@ -76,13 +73,13 @@ const PrincipleBlock = props => {
                 />
               </h3>
             </div>
+            <div className="principle-box__img">
+              <Image file={data.pill} alt="Karmen Pill" />
+            </div>
           </div>
           <div className="principle__box principle-box principle-box--cutoff">
-            <div className="principle-box__img">
-              <Image file={data.cloud} alt="Karmen cloud" />
-            </div>
+            <h3 className="principle-box__nr">03</h3>
             <div className="principle-box__content">
-              <h3 className="principle-box__nr">03</h3>
               <h2 className="principle-box__title">
                 <FormattedMessage
                   id="principle-block.add_printer"
@@ -96,17 +93,22 @@ const PrincipleBlock = props => {
                 />
               </h3>
             </div>
+            <div className="principle-box__img">
+              <Image file={data.cloud} alt="Karmen cloud" />
+            </div>
           </div>
           <div className="principle__box principle-box principle-box--emphasized">
-            <div className="principle-box__img"></div>
+            <h3 className="principle-box__nr">04</h3>
             <div className="principle-box__content">
-              <h3 className="principle-box__nr">04</h3>
               <h2 className="principle-box__title">
                 <FormattedMessage
                   id="principle-block.all_done"
                   defaultMessage="You’re good to go!"
                 />
               </h2>
+            </div>
+            <div className="principle-box__img">
+              <span className="icon--check"></span>
             </div>
           </div>
         </div>

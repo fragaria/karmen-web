@@ -7,6 +7,7 @@
 }
 
 .principle__box {
+  display: flex;
   width: 100%;
   background: map-get($palette, white);
   text-align: left;
@@ -26,24 +27,6 @@
       font-size: 144px;
     }
   }
-}
-
-// Mobile step nr floats on the right side
-.principle-box__nr {
-  font-weight: medium;
-  color: map-get($palette, white);
-  background-color: map-get($palette, red);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-  right: gu();
-  top: 44px; // should match content dash line
-  width: gu(1.5);
-  height: gu(1.5);
-  line-height: gu(1.5);
-  text-align: center;
-
-  @include fontsize(s3);
 }
 
 .principle-box__title {
@@ -66,15 +49,6 @@
   display: none;
 }
 
-.principle-box--emphasized .principle-box__img {
-  &:before {
-    content: fa-content($fa-var-check);
-    font-family: 'Font Awesome 5 Free';
-    display: inline-block;
-    font-size: gu(5);
-  }
-}
-
 .principle-box__content {
   position: relative;
   // @note: see .principle-box__title
@@ -93,32 +67,10 @@
   }
 }
 
-// The dashed line in white boxes
-.principle-box:not(.principle-box--emphasized) .principle-box__content:before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  right: gu(1.75);
-  height: 100%;
-  top: 44px;
-  border: 1px map-get($palette, red) dashed;
-}
-
 .principle-box--emphasized {
   .principle-box__nr {
     color: map-get($palette, red);
     background-color: map-get($palette, white);
-  }
-
-  // The dashed line in last red box
-  .principle-box__content:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    right: gu(1.75);
-    height: 44px;
-    top: 0;
-    border: 1px map-get($palette, white) dashed;
   }
 }
 
@@ -128,13 +80,9 @@
 }
 
 @include breakpoint(desktop up) {
-  .principle {
-    flex-direction: row;
-  }
+  .principle {}
 
   .principle__box {
-    width: 25%;
-
     + .principle__box {
       border-left: 1px map-get($palette, gray-semilight) solid;
     }
@@ -145,15 +93,12 @@
   }
 
   .principle-box__nr {
-    position: static;
+    flex: 1;
+    padding-left: gu(3);
     color: map-get($palette, red);
-    background-color: transparent;
-
-    width: auto;
-    height: auto;
-    text-align: left;
-
-    @include baseline(s4, $bodytype, 1, $below: 1);
+    text-align: right;
+    font-weight: bold;
+    @include baseline(s9, $bodytype, 2, $above: 2, $below: 0);
   }
 
   .principle-box--emphasized .principle-box__nr {
@@ -162,11 +107,12 @@
   }
 
   .principle-box__img {
+    flex: 1;
     display: flex;
-    min-height: gu(10);
+    min-height: gu(2);
     align-items: center;
     justify-content: center;
-    padding: gu(1) gu(3);
+    padding: gu(1) gu(10) gu(1) gu(3);
 
     .image {
       display: block;
@@ -177,12 +123,8 @@
   }
 
   .principle-box__content {
+    flex: 1;
     padding: gu(1) gu(3) gu(1.5);
-
-    // Cancel vertical red dashed line
-    &:before {
-      display: none;
-    }
   }
 
   // Last box cuts the hanging line part
@@ -203,31 +145,5 @@
   .principle-box:not(.principle-box--emphasized) .principle-box__img {
     position: relative;
     z-index: 2;
-
-    // Red dot at the tip of the line
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      width: gu();
-      height: gu();
-      background: map-get($palette, red);
-      right: gu(2.6); // match padding of .principle-box__img minus offset given by circle height
-      bottom: 50%;
-      border-radius: 50%;
-      transform: translateY(gu(0.5));
-    }
-
-    // The line itself (pushed to right to avoid joining dashes)
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      left: 50%;
-      width: 100%;
-      bottom: 50%;
-      border: 1px map-get($palette, red) dashed;
-    }
   }
 }
-

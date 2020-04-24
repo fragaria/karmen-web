@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lov52n');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lov52n#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?lov52n') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?lov52n') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?lov52n##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7zw0l8');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7zw0l8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7zw0l8') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7zw0l8') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7zw0l8##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,139 +27,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon--lock {
+.icon--check {
   &:before {
-    content: $icon--lock;
-  }
-}
-.icon--power {
-  &:before {
-    content: $icon--power;
-  }
-}
-.icon--house {
-  &:before {
-    content: $icon--house;
-  }
-}
-.icon--location {
-  &:before {
-    content: $icon--location;
-  }
-}
-.icon--phone {
-  &:before {
-    content: $icon--phone;
+    content: $icon--check; 
   }
 }
 .icon--linkedin {
   &:before {
-    content: $icon--linkedin;
+    content: $icon--linkedin; 
   }
 }
 .icon--github {
   &:before {
-    content: $icon--github;
+    content: $icon--github; 
   }
 }
 .icon--twitter {
   &:before {
-    content: $icon--twitter;
+    content: $icon--twitter; 
   }
 }
 .icon--facebook {
   &:before {
-    content: $icon--facebook;
+    content: $icon--facebook; 
   }
 }
-.icon--vpn {
+.icon--cart {
   &:before {
-    content: $icon--vpn;
+    content: $icon--cart; 
   }
 }
 .icon--arrow-down {
   &:before {
-    content: $icon--arrow-down;
+    content: $icon--arrow-down; 
   }
 }
-.icon--link {
+.icon--twitter {
   &:before {
-    content: $icon--link;
+    content: $icon--twitter; 
   }
 }
-.icon--city {
+.icon--facebook {
   &:before {
-    content: $icon--city;
-  }
-}
-.icon--beer {
-  &:before {
-    content: $icon--beer;
-  }
-}
-.icon--queue {
-  &:before {
-    content: $icon--queue;
-  }
-}
-.icon--at {
-  &:before {
-    content: $icon--at;
-  }
-}
-.icon--camera {
-  &:before {
-    content: $icon--camera;
-  }
-}
-.icon--movie {
-  &:before {
-    content: $icon--movie;
-  }
-}
-.icon--video {
-  &:before {
-    content: $icon--video;
-  }
-}
-.icon--record {
-  &:before {
-    content: $icon--record;
-  }
-}
-.icon--film {
-  &:before {
-    content: $icon--film;
-  }
-}
-.icon--thermometer {
-  &:before {
-    content: $icon--thermometer;
+    content: $icon--facebook; 
   }
 }
 .icon--youtube {
   &:before {
-    content: $icon--youtube;
-  }
-}
-.icon--readthedocs {
-  &:before {
-    content: $icon--readthedocs;
-  }
-}
-.icon--stackshare {
-  &:before {
-    content: $icon--stackshare;
-  }
-}
-.icon--open-source {
-  &:before {
-    content: $icon--open-source;
-  }
-}
-.icon--paw {
-  &:before {
-    content: $icon--paw;
+    content: $icon--youtube; 
   }
 }
 
