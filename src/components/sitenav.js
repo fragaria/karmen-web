@@ -134,9 +134,11 @@ const Sitenav = () => {
       </nav>
       <MobileMenu
         isOpen={isOpen}
+        onStateChange={({ isOpen }) => setIsOpen(isOpen)}
         right
         customCrossIcon={false}
         customBurgerIcon={false}
+        disableAutoFocus
         // gu size for gitter link and menu button
         width={'14.562rem'}
         className="sitenav__mobile-menu"

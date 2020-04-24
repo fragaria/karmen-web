@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "babel-plugin-react-intl": "^7.1.0",
     "classnames": "^2.2.6",
     "cookieconsent": "^3.1.1",
