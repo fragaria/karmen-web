@@ -105,7 +105,11 @@
 
 .sitenav__anchor {
   position: absolute;
-  top: -1* map-get($sitenav-height, mobile) - gu();
+  top: -1 * map-get($sitenav-height, mobile);
+
+  @include breakpoint(tablet up) {
+    top: -1 * map-get($sitenav-height, tablet);
+  }
 }
 
 .sitenav__mobile-menu {

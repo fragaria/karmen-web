@@ -222,9 +222,6 @@ module.exports = {
     // Make specific links smooth-scrollable
     {
       resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
-      },
     },
     // Generate sitemap in production mode
     {
