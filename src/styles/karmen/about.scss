@@ -134,8 +134,14 @@
   }
 }
 
+@include breakpoint(tablet-small up) {
+  .about-hero {
+    height: gu(16);
+  }
+}
+
 @include breakpoint(desktop up) {
   .about-hero {
-    height: gu(24);
+    height: gu(19);
   }
 }
