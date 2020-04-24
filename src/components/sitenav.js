@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import classNames from "classnames"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "react-intl"
+import { slide as MobileMenu } from "react-burger-menu"
 
 import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
 
@@ -36,7 +37,7 @@ const Sitenav = () => {
     }
   `)
 
-  // const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   const intl = useIntl()
   const homeLink = `/${intl.locale}/`
@@ -61,6 +62,11 @@ const Sitenav = () => {
   //     document.body.classList.remove("noscroll")
   //   }
   // }
+
+  const toggleMobileMenu = evt => {
+    evt.preventDefault();
+    setIsOpen(!isOpen);
+  }
 
   return (
     <nav
@@ -116,7 +122,28 @@ const Sitenav = () => {
             </Link>
           ))}
         </div>
+        <a href="" className="sitenav__mobile-menu-toggle hamburger" onClick={toggleMobileMenu}>
+          <span className="hamburger-box"><span className="hamburger-inner"></span></span>
+        </a>
       </div>
+      <MobileMenu
+        isOpen={isOpen}
+        right
+        customCrossIcon={false}
+        customBurgerIcon={false}
+        className="sitenav__mobile-menu"
+      >
+        {data.site.siteMetadata.nav[intl.locale].map(item => (
+            <Link
+              to={item.url}
+              className=""
+              itemProp="url"
+              key={item.url}
+            >
+              <span itemProp="name">{item.name}</span>
+            </Link>
+          ))}
+      </MobileMenu>
     </nav>
   )
 }

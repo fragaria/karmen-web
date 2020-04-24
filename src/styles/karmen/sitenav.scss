@@ -97,3 +97,24 @@
   position: absolute;
   top: -1* map-get($sitenav-height, mobile) - gu();
 }
+
+.sitenav__mobile-menu {
+  background: map-get($palette, white);
+  padding: gu(3);
+
+  .bm-item {
+    @include baseline(s7, $bodytype, 3);
+  }
+}
+
+.sitenav__mobile-menu-toggle {
+  height: map-get($sitenav-height, mobile);
+  width: gu(3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: map-get($palette, black);
+  padding: gu(.5);
+}
