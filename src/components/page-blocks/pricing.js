@@ -67,7 +67,7 @@ const PricingBlock = ({ location, ...props }) => {
                 defaultMessage="Special limited offer"
               />
               <i
-                className="pricing__offerinfo fas fa-info-circle"
+                className="pricing__offerinfo icon--info"
                 data-tip={intl.formatMessage(messages.specialOfferMemo)}
               ></i>
               <ReactTooltip
