@@ -5,8 +5,12 @@
   right: gu(3);
 
   @include breakpoint(tablet up) {
-    right: 0;
-    top: gu(12.5);
+    right: gu(-6); // match button width
+    top: gu(20); // match HP hero section height
+  }
+
+  @include breakpoint(desktop up) {
+    top: gu(25);
   }
 }
 
@@ -32,7 +36,7 @@
 
   @include breakpoint(tablet up) {
     transform: rotate(270deg);
-    transform-origin: right bottom;
+    transform-origin: left top;
   }
 }
 
