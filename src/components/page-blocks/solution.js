@@ -39,8 +39,8 @@ const SolutionBlock = props => {
         <div className="content-block sitenav__anchorpush">
           <span className="sitenav__anchor" id="meet"></span>
           <meta itemProp="name" content="Karmen" />
-          <meta itemProp="price" content="130" />
           <div itemProp="offers" itemType="http://schema.org/Offer" itemScope>
+            <meta itemProp="price" content="130" />
             <meta itemProp="priceCurrency" content="EUR" />
             <meta
               itemProp="availability"
