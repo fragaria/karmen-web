@@ -17,8 +17,8 @@
 
   color: map-get($palette, white);
   background: map-get($palette, black);
-  padding: gu(0.5) gu(0.5);
   text-align: center;
+  width: gu(6);
   height: gu(3);
 
   @include breakpoint(tablet up) {

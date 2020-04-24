@@ -68,70 +68,79 @@ const Sitenav = () => {
     setIsOpen(!isOpen);
   }
 
-  return (
-    <nav
-      className={rootClasses}
-      role="navigation"
-      itemScope
-      itemType="http://schema.org/SiteNavigationElement"
-    >
-      <div className="sitenav__menu">
-        <Link className="sitenav__brand" to={homeLink}>
-          <img
-            alt={data.site.siteMetadata.company.officialName}
-            src={karmenLogoImg}
-          />
-        </Link>
+  const mobileToggleClasses = classNames("sitenav__mobile-menu-toggle hamburger", {
+    "hamburger--collapse is-active": isOpen
+  })
 
-        <div className="sitenav__links">
-          <Link
-            to={homeLink}
-            className="sitenav__company sitenav__link typeset__anchor--nounderline"
-            itemProp="url"
-          >
-            <span itemProp="name">Karmen</span>
+  return (
+    <>
+      <nav
+        className={rootClasses}
+        role="navigation"
+        itemScope
+        itemType="http://schema.org/SiteNavigationElement"
+      >
+        <div className="sitenav__menu">
+          <Link className="sitenav__brand" to={homeLink}>
+            <img
+              alt={data.site.siteMetadata.company.officialName}
+              src={karmenLogoImg}
+            />
           </Link>
 
-          {intl.locale === "en" && (
+          <div className="sitenav__links">
             <Link
-              to="/cs/"
-              className="sitenav__langswitch"
-              title="Přepnout do češtiny"
-            >
-              CS
-            </Link>
-          )}
-          {intl.locale !== "en" && (
-            <Link
-              to="/en/"
-              className="sitenav__langswitch"
-              title="Switch to english"
-            >
-              EN
-            </Link>
-          )}
-
-          {data.site.siteMetadata.nav[intl.locale].map(item => (
-            <Link
-              to={item.url}
-              className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
+              to={homeLink}
+              className="sitenav__company sitenav__link typeset__anchor--nounderline"
               itemProp="url"
-              key={item.url}
             >
-              <span itemProp="name">{item.name}</span>
+              <span itemProp="name">Karmen</span>
             </Link>
-          ))}
+
+            {intl.locale === "en" && (
+              <Link
+                to="/cs/"
+                className="sitenav__langswitch"
+                title="Přepnout do češtiny"
+              >
+                CS
+              </Link>
+            )}
+            {intl.locale !== "en" && (
+              <Link
+                to="/en/"
+                className="sitenav__langswitch"
+                title="Switch to english"
+              >
+                EN
+              </Link>
+            )}
+
+            {data.site.siteMetadata.nav[intl.locale].map(item => (
+              <Link
+                to={item.url}
+                className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
+                itemProp="url"
+                key={item.url}
+              >
+                <span itemProp="name">{item.name}</span>
+              </Link>
+            ))}
+          </div>
+          <a href="#" className={mobileToggleClasses} onClick={toggleMobileMenu}>
+            <span className="hamburger-box"><span className="hamburger-inner"></span></span>
+          </a>
         </div>
-        <a href="" className="sitenav__mobile-menu-toggle hamburger" onClick={toggleMobileMenu}>
-          <span className="hamburger-box"><span className="hamburger-inner"></span></span>
-        </a>
-      </div>
+      </nav>
       <MobileMenu
         isOpen={isOpen}
         right
         customCrossIcon={false}
         customBurgerIcon={false}
+        // gu size for gitter link and menu button
+        width={'14.562rem'}
         className="sitenav__mobile-menu"
+        overlayClassName="sitenav__mobile-overlay"
       >
         {data.site.siteMetadata.nav[intl.locale].map(item => (
             <Link
@@ -144,7 +153,7 @@ const Sitenav = () => {
             </Link>
           ))}
       </MobileMenu>
-    </nav>
+    </>
   )
 }
 

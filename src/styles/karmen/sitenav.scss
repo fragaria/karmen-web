@@ -4,9 +4,13 @@
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1000;
+}
+
+.sitenav,
+.sitenav__mobile-menu {
   background: $sitenav-background;
   backdrop-filter: saturate(180%) blur(10px);
-  z-index: 1000;
 }
 
 .sitenav__menu {
@@ -102,11 +106,25 @@
 }
 
 .sitenav__mobile-menu {
-  background: map-get($palette, white);
-  padding: gu(3);
+  padding: gu(1) gu(1);
 
   .bm-item {
-    @include baseline(s7, $bodytype, 3);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    outline: none;
+    color: map-get($palette, black);
+
+    @include baseline(s3, $bodytype, 2);
+  }
+
+  .bm-overlay {
+    background: none;
+  }
+
+  .bm-item:focus,
+  .bm-item:hover {
+    outline: none;
+    color: map-get($palette, red);
   }
 }
 
@@ -118,10 +136,25 @@
   right: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: map-get($palette, black);
   padding: gu(.5);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    height: map-get($sitenav-height, mobile);
+    border: 1px lighten(map-get($palette, black), $amount: 30) solid;
+  }
 
   @include breakpoint(tablet up) {
     display: none;
   }
+}
+
+.sitenav__mobile-overlay {
+  background: $sitenav-background;
+  backdrop-filter: saturate(80%) blur(4px);
 }
