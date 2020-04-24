@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import { BackgroundImage, Image } from "components/image"
+import { BackgroundImage } from "components/image"
 
 const PrincipleBlock = props => {
   const data = useStaticQuery(graphql`
