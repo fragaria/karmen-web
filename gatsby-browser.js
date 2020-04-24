@@ -5,7 +5,6 @@
  */
 
 import "src/styles/global.scss"
-import "src/smoothscroll.js"
 
 // Load i18n graphql fragment
 import { querying } from "src/i18n/querying" // eslint-disable-line

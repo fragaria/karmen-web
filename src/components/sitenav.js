@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import classNames from "classnames"
-import { Link } from "gatsby"
+import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "react-intl"
 import { slide as MobileMenu } from "react-burger-menu"
@@ -42,27 +42,6 @@ const Sitenav = () => {
   const intl = useIntl()
   const homeLink = `/${intl.locale}/`
 
-  const rootClasses = classNames("sitenav", {
-    // "sitenav-wrapper--show": isOpen,
-  })
-
-  // const navigate = (evt, url) => {
-  //   const targetSuffix = url.replace(window.location.pathname, "")
-
-  //   if (targetSuffix.startsWith("#")) {
-  //     evt.preventDefault()
-  //     const targetId = targetSuffix.substring(1)
-  //     const target = document.getElementById(targetId)
-
-  //     window.scroll({ top: target.offsetTop - 80, behavior: "smooth" })
-  //     window.history.pushState({}, evt.target.text, targetSuffix)
-
-  //     setIsOpen(false)
-
-  //     document.body.classList.remove("noscroll")
-  //   }
-  // }
-
   const toggleMobileMenu = evt => {
     evt.preventDefault();
     setIsOpen(!isOpen);
@@ -75,7 +54,7 @@ const Sitenav = () => {
   return (
     <>
       <nav
-        className={rootClasses}
+        className="sitenav"
         role="navigation"
         itemScope
         itemType="http://schema.org/SiteNavigationElement"

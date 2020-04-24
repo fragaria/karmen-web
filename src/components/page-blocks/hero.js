@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import { BackgroundImage } from "components/image"
