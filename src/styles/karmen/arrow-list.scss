@@ -1,6 +1,9 @@
 .arrow-list {
   list-style-type: none;
   padding-left: gu(.75);
+
+
+  @include baseline(s3, $bodytype, 1, $above: 0, $below: 0);
 }
 
 .arrow-list__item {
@@ -10,7 +13,7 @@
     display: block;
     content: " ";
     position: absolute;
-    top: .95rem;
+    top: .5rem;
     left: 0;
     margin-left: gu(-.75);
     width: gu(.3);

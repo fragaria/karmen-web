@@ -11,12 +11,9 @@
   h2 {
     flex: 1;
     padding-right: gu(1);
+    white-space: nowrap;
 
     @include baseline(s7, $headingtype, 2, $above: 4, $below: 2);
-  }
-
-  li {
-    @include baseline(s3, $bodytype, 1);
   }
 }
 
