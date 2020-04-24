@@ -4,13 +4,13 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background: hsla(0, 0, 100%, .89);
+  background: $sitenav-background;
   backdrop-filter: saturate(180%) blur(10px);
   z-index: 1000;
 }
 
 .sitenav__menu {
-  @include contentBlock(1, 88.5);
+  @include contentBlock(1);
   height: map-get($sitenav-height, mobile);
   display: flex;
   align-items: stretch;

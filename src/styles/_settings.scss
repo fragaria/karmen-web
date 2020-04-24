@@ -63,6 +63,8 @@ $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
 
+$sitenav-background: hsla(0, 0, 100%, .89);
+
 $page-container-max-width: 120rem; // ~1920px
 $page-content-max-width: 84rem; // ~1344px
 $sitenav-max-width: 96rem; // ~1536px
