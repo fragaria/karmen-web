@@ -43,13 +43,16 @@ const Sitenav = () => {
   const homeLink = `/${intl.locale}/`
 
   const toggleMobileMenu = evt => {
-    evt.preventDefault();
-    setIsOpen(!isOpen);
+    evt.preventDefault()
+    setIsOpen(!isOpen)
   }
 
-  const mobileToggleClasses = classNames("sitenav__mobile-menu-toggle hamburger", {
-    "hamburger--collapse is-active": isOpen
-  })
+  const mobileToggleClasses = classNames(
+    "sitenav__mobile-menu-toggle hamburger",
+    {
+      "hamburger--collapse is-active": isOpen,
+    }
+  )
 
   return (
     <>
@@ -106,8 +109,14 @@ const Sitenav = () => {
               </Link>
             ))}
           </div>
-          <a href="#" className={mobileToggleClasses} onClick={toggleMobileMenu}>
-            <span className="hamburger-box"><span className="hamburger-inner"></span></span>
+          <a
+            href="#"
+            className={mobileToggleClasses}
+            onClick={toggleMobileMenu}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
           </a>
         </div>
       </nav>
@@ -119,20 +128,15 @@ const Sitenav = () => {
         customBurgerIcon={false}
         disableAutoFocus
         // gu size for gitter link and menu button
-        width={'14.562rem'}
+        width={"14.562rem"}
         className="sitenav__mobile-menu"
         overlayClassName="sitenav__mobile-overlay"
       >
         {data.site.siteMetadata.nav[intl.locale].map(item => (
-            <Link
-              to={item.url}
-              className=""
-              itemProp="url"
-              key={item.url}
-            >
-              <span itemProp="name">{item.name}</span>
-            </Link>
-          ))}
+          <Link to={item.url} className="" itemProp="url" key={item.url}>
+            <span itemProp="name">{item.name}</span>
+          </Link>
+        ))}
       </MobileMenu>
     </>
   )

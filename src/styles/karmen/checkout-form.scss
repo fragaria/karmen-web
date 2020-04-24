@@ -7,7 +7,7 @@
 }
 
 .checkout-form__body {
-  padding: gu(1) gu(2) gu(2);
+  padding: gu(1) gu(1) gu(2);
 
   &--wdivider {
     position: relative;
@@ -33,6 +33,32 @@
 
 .checkout-form__quantity-field {
   max-width: gu(5);
+}
+
+.checkout-form__quantity-field-row {
+  display: flex;
+
+  button {
+    background: map-get($palette, white);
+    color: map-get($palette, red);
+    border: 0;
+    font-size: 1.8rem;
+    min-width: gu(1.5);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &.minus {
+      padding-left: gu(.5);
+    }
+    &.plus {
+      padding-right: gu(.5);
+    }
+  }
+
+  .form-control {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .checkout-form__summary-line {
@@ -90,5 +116,12 @@
     padding-right: gu();
 
     @include baseline(s2, $bodytype);
+  }
+}
+
+
+@include breakpoint(tablet up) {
+  .checkout-form__body {
+    padding: gu(1) gu(2) gu(2);
   }
 }

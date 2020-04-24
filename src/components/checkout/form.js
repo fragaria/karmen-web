@@ -124,7 +124,7 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
       }}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting, values }) => {
+      {({ isSubmitting, values, setFieldValue }) => {
         const currentCountry = values["country"]
         const showAdapterWarning = values["variant"] === "pill_us"
 
@@ -161,6 +161,16 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
           base +
           ((meta.touched && meta.error && " form-control-wrapper--errored") ||
             "")
+
+        const incQuantity = evt => {
+          evt.preventDefault()
+          setFieldValue("quantity", values.quantity + 1)
+        }
+
+        const decQuantity = evt => {
+          evt.preventDefault()
+          setFieldValue("quantity", Math.max(1, values.quantity - 1))
+        }
 
         return (
           <Form className="checkout-form">
@@ -205,12 +215,20 @@ const CheckoutForm = ({ onBuy, initialCountryCode, showStateField = true }) => {
                       />
                     </label>
                     <div className={getClass("form-control-wrapper", meta)}>
-                      <input
-                        className="form-control form-control--bordered"
-                        type="number"
-                        min="1"
-                        {...field}
-                      />
+                      <div className="checkout-form__quantity-field-row">
+                        <button className="minus" onClick={decQuantity}>
+                          -
+                        </button>
+                        <input
+                          className="form-control"
+                          type="number"
+                          min="1"
+                          {...field}
+                        />
+                        <button className="plus" onClick={incQuantity}>
+                          +
+                        </button>
+                      </div>
                       {meta.touched && meta.error && (
                         <p className="form-control-error">{meta.error}</p>
                       )}

@@ -1,1 +1,86 @@
-[{"id":"specs-block.pill_1","defaultMessage":"Connects to the printer’s USB port","file":"src/components/page-blocks/specs.js","start":{"line":46,"column":16},"end":{"line":49,"column":18}},{"id":"specs-block.pill_2","defaultMessage":"Provides internet connectivity","file":"src/components/page-blocks/specs.js","start":{"line":52,"column":16},"end":{"line":55,"column":18}},{"id":"specs-block.pill_3","defaultMessage":"Includes a web camera with LED light","file":"src/components/page-blocks/specs.js","start":{"line":58,"column":16},"end":{"line":61,"column":18}},{"id":"specs-block.pill_4","defaultMessage":"Simple installation with a wizard","file":"src/components/page-blocks/specs.js","start":{"line":64,"column":16},"end":{"line":67,"column":18}},{"id":"specs-block.pill_5","defaultMessage":"Enables remote printer management with Karmen","file":"src/components/page-blocks/specs.js","start":{"line":70,"column":16},"end":{"line":73,"column":18}},{"id":"specs-block.pill_getting_started","defaultMessage":"Getting started","file":"src/components/page-blocks/specs.js","start":{"line":82,"column":14},"end":{"line":85,"column":16}},{"id":"specs-block.karmen_1","defaultMessage":"Remote printer management via web browser","file":"src/components/page-blocks/specs.js","start":{"line":103,"column":16},"end":{"line":106,"column":18}},{"id":"specs-block.karmen_2","defaultMessage":"Live monitoring and statistics","file":"src/components/page-blocks/specs.js","start":{"line":109,"column":16},"end":{"line":112,"column":18}},{"id":"specs-block.karmen_3","defaultMessage":"Team management","file":"src/components/page-blocks/specs.js","start":{"line":115,"column":16},"end":{"line":118,"column":18}},{"id":"specs-block.karmen_4","defaultMessage":"Open API and easy integration with other systems","file":"src/components/page-blocks/specs.js","start":{"line":121,"column":16},"end":{"line":124,"column":18}},{"id":"specs-block.karmen_5","defaultMessage":"SaaS or on-premise","file":"src/components/page-blocks/specs.js","start":{"line":127,"column":16},"end":{"line":130,"column":18}},{"id":"specs-block.karmen_quickstart","defaultMessage":"Quickstart","file":"src/components/page-blocks/specs.js","start":{"line":139,"column":14},"end":{"line":142,"column":16}}]
+[
+  {
+    "id": "specs-block.pill_1",
+    "defaultMessage": "Connects to the printer’s USB port",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 46, "column": 16 },
+    "end": { "line": 49, "column": 18 }
+  },
+  {
+    "id": "specs-block.pill_2",
+    "defaultMessage": "Provides internet connectivity",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 52, "column": 16 },
+    "end": { "line": 55, "column": 18 }
+  },
+  {
+    "id": "specs-block.pill_3",
+    "defaultMessage": "Includes a web camera with LED light",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 58, "column": 16 },
+    "end": { "line": 61, "column": 18 }
+  },
+  {
+    "id": "specs-block.pill_4",
+    "defaultMessage": "Simple installation with a wizard",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 64, "column": 16 },
+    "end": { "line": 67, "column": 18 }
+  },
+  {
+    "id": "specs-block.pill_5",
+    "defaultMessage": "Enables remote printer management with Karmen",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 70, "column": 16 },
+    "end": { "line": 73, "column": 18 }
+  },
+  {
+    "id": "specs-block.pill_getting_started",
+    "defaultMessage": "Getting started",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 82, "column": 14 },
+    "end": { "line": 85, "column": 16 }
+  },
+  {
+    "id": "specs-block.karmen_1",
+    "defaultMessage": "Remote printer management via web browser",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 103, "column": 16 },
+    "end": { "line": 106, "column": 18 }
+  },
+  {
+    "id": "specs-block.karmen_2",
+    "defaultMessage": "Live monitoring and statistics",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 109, "column": 16 },
+    "end": { "line": 112, "column": 18 }
+  },
+  {
+    "id": "specs-block.karmen_3",
+    "defaultMessage": "Team management",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 115, "column": 16 },
+    "end": { "line": 118, "column": 18 }
+  },
+  {
+    "id": "specs-block.karmen_4",
+    "defaultMessage": "Open API and easy integration with other systems",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 121, "column": 16 },
+    "end": { "line": 124, "column": 18 }
+  },
+  {
+    "id": "specs-block.karmen_5",
+    "defaultMessage": "SaaS or on-premise",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 127, "column": 16 },
+    "end": { "line": 130, "column": 18 }
+  },
+  {
+    "id": "specs-block.karmen_quickstart",
+    "defaultMessage": "Quickstart",
+    "file": "src/components/page-blocks/specs.js",
+    "start": { "line": 139, "column": 14 },
+    "end": { "line": 142, "column": 16 }
+  }
+]

@@ -16,22 +16,24 @@ const BuyBlock = props => {
   `)
 
   return (
-    <article {...props}>
-      <div className="buy">
-        <div className="buy__image">
-          <Image file={data.pill} alt="Karmen Pill" />
+    <div className="content-block content-block--sitenavwidth content-block--shift-mobile">
+      <article {...props}>
+        <div className="buy">
+          <div className="buy__image">
+            <Image file={data.pill} alt="Karmen Pill" />
+          </div>
+          <div className="buy__form">
+            <h1 className="page-block-headline">
+              <FormattedMessage
+                id="buy-block.headline"
+                defaultMessage="Buy Karmen"
+              />
+            </h1>
+            <CheckoutBooth />
+          </div>
         </div>
-        <div className="buy__form">
-          <h1 className="page-block-headline">
-            <FormattedMessage
-              id="buy-block.headline"
-              defaultMessage="Buy Karmen"
-            />
-          </h1>
-          <CheckoutBooth />
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
   )
 }
 

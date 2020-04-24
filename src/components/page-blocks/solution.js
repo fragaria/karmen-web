@@ -1,12 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
-import {
-  CarouselProvider,
-  DotGroup,
-  Slider,
-  Slide,
-} from "pure-react-carousel"
+import { CarouselProvider, DotGroup, Slider, Slide } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import { BackgroundImage } from "components/image"

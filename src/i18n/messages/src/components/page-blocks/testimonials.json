@@ -1,1 +1,16 @@
-[{"id":"testimonials-block.headline","defaultMessage":"Clients and partners","file":"src/components/page-blocks/testimonials.js","start":{"line":24,"column":10},"end":{"line":27,"column":12}},{"id":"testimonials-block.paragraph","defaultMessage":"Karmen is popular among companies that own 3D printers of various manufacturers and types, as well as among individuals who want an overview of their print jobs.","file":"src/components/page-blocks/testimonials.js","start":{"line":30,"column":10},"end":{"line":33,"column":12}}]
+[
+  {
+    "id": "testimonials-block.headline",
+    "defaultMessage": "Clients and partners",
+    "file": "src/components/page-blocks/testimonials.js",
+    "start": { "line": 24, "column": 10 },
+    "end": { "line": 27, "column": 12 }
+  },
+  {
+    "id": "testimonials-block.paragraph",
+    "defaultMessage": "Karmen is popular among companies that own 3D printers of various manufacturers and types, as well as among individuals who want an overview of their print jobs.",
+    "file": "src/components/page-blocks/testimonials.js",
+    "start": { "line": 30, "column": 10 },
+    "end": { "line": 33, "column": 12 }
+  }
+]

@@ -11,10 +11,7 @@ const BuyPage = ({ location }) => {
     <Layout location={location} containerClass="v-buy">
       <SEOMetadata title="Koupit Karmen" />
       <SEOBusinessInfo />
-
-      <div className="content-block content-block--sitenavwidth">
-        <BuyBlock />
-      </div>
+      <BuyBlock />
     </Layout>
   )
 }
