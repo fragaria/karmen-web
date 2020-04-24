@@ -14,8 +14,9 @@
 }
 
 .sitenav__menu {
-  @include contentBlockVariant(88.5, 1, 1);
+  @include contentBlockVariant(90.6, 1, 1);
   height: map-get($sitenav-height, mobile);
+  margin: 0 auto;
   display: flex;
   align-items: stretch;
   font-family: getFontFamily($bodytype);
