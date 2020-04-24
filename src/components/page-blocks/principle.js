@@ -10,7 +10,7 @@ const PrincipleBlock = props => {
       signup: file(relativePath: { eq: "screen-signup.png" }) {
         ...fluidImage600
       }
-      pill: file(relativePath: { eq: "principle-pill.png" }) {
+      pill: file(relativePath: { eq: "pill-w-printer.png" }) {
         ...fluidImage600
       }
       cloud: file(relativePath: { eq: "screen-printers-both.png" }) {
