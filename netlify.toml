@@ -18,3 +18,8 @@
   from = "/*"
   to = "/en/:splat"
   status = 302
+
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404

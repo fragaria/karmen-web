@@ -9,6 +9,11 @@ import { BackgroundImage } from "components/image"
 const SolutionBlock = props => {
   const data = useStaticQuery(graphql`
     query {
+      smartphoneAndPillMetadata: file(
+        relativePath: { eq: "smartphone-and-pill.png" }
+      ) {
+        ...fluidImage1920_noblur
+      }
       smartphoneAndPill: file(relativePath: { eq: "smartphone-and-pill.png" }) {
         ...fluidImage1024_traced
       }
@@ -17,14 +22,27 @@ const SolutionBlock = props => {
       ) {
         ...fluidImage1024_traced
       }
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
     }
   `)
 
   return (
     <section {...props}>
-      <div className="solution">
+      <div className="solution" itemType="http://schema.org/Product" itemScope>
         <div className="content-block sitenav__anchorpush">
           <span className="sitenav__anchor" id="meet"></span>
+          <meta itemProp="name" content="Karmen" />
+          <meta itemProp="price" content="130" />
+          <meta itemProp="priceCurrency" content="EUR" />
+          <meta itemProp="availability" content="https://schema.org/InStock" />
+          <link
+            itemProp="image"
+            href={`${data.site.siteMetadata.siteUrl}${data.smartphoneAndPillMetadata.childImageSharp.fluid.src}`}
+          />
           <BackgroundImage
             file={data.smartphoneAndPill}
             className="solution__inner"
@@ -37,7 +55,7 @@ const SolutionBlock = props => {
                   defaultMessage="Meet Karmen"
                 />
               </h1>
-              <h2 className="solution__sub">
+              <h2 className="solution__sub" itemProp="description">
                 <FormattedMessage
                   id="solution-block.claim_1"
                   defaultMessage="Karmen lets you manage your 3D printers remotely."

@@ -1,13 +1,14 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 
-import socialMediaLogo from "assets/img/karmen-logo-social-media.png"
+import fragariaLogo from "assets/img/strawberry.svg"
 
 const SEOCompanyImage = () => {
   const data = useStaticQuery(graphql`
     query SiteCompanyQuery {
       site {
         siteMetadata {
+          siteUrl
           company {
             officialName
           }
@@ -25,11 +26,11 @@ const SEOCompanyImage = () => {
     >
       <meta
         itemProp="caption"
-        content={data.site.siteMetadata.company.officialName}
+        content={`${data.site.siteMetadata.siteUrl}${data.site.siteMetadata.company.officialName}`}
       />
-      <meta itemProp="url" content={socialMediaLogo} />
-      <meta itemProp="width" content="272" />
-      <meta itemProp="height" content="507" />
+      <meta itemProp="url" content={fragariaLogo} />
+      <meta itemProp="width" content="172" />
+      <meta itemProp="height" content="134" />
     </span>
   )
 }

@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl"
 import { BackgroundImage } from "components/image"
 
 import strawberryImg from "assets/img/strawberry.svg"
+import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
 const AboutBlock = props => {
   const data = useStaticQuery(graphql`
@@ -15,11 +16,29 @@ const AboutBlock = props => {
       martinBurian: file(relativePath: { eq: "martin-burian.jpg" }) {
         ...fluidImage600_traced
       }
+      site {
+        siteMetadata {
+          siteUrl
+          title
+        }
+      }
     }
   `)
 
   return (
-    <article>
+    <article itemType="http://schema.org/Organization" itemScope>
+      <span
+        itemProp="logo"
+        itemType="http://schema.org/ImageObject"
+        itemScope
+        className="hidden"
+      >
+        <meta itemProp="caption" content={data.site.siteMetadata.title} />
+        <meta itemProp="url" content={karmenLogo} />
+        <meta itemProp="width" content="1000" />
+        <meta itemProp="height" content="1000" />
+      </span>
+      <meta itemProp="url" content={data.site.siteMetadata.siteUrl} />
       <section {...props}>
         <div className="about-hero">
           <div className="content-block about-hero__headline">
