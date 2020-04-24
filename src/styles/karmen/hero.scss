@@ -1,6 +1,10 @@
 .hero {
   background-size: cover;
   height: gu(16);
+
+  @include breakpoint(desktop up) {
+    height: gu(21);
+  }
 }
 
 .hero__cover {
@@ -29,6 +33,10 @@
   @include baseline(s8, $headingtype, 2, $above: 3, $below: 1, $breakpoint: mobile up);
   @include baseline(s8, $headingtype, 2, $above: 4, $below: 1, $breakpoint: tablet-tiny up);
   @include baseline(s9, $headingtype, 3, $above: 3, $below: 1, $breakpoint: tablet-small up);
+
+  @include breakpoint(desktop up) {
+    @include baseline(s9, $headingtype, 3, $above: 6, $below: 2);
+  }
 }
 
 .hero__sub,
@@ -46,12 +54,3 @@
   transform: translateY(gu(-1.5));
 }
 
-@include breakpoint(desktop up) {
-  .hero {
-    height: gu(21);
-  }
-
-  .hero__headline {
-    @include baseline(s9, $headingtype, 3, $above: 6, $below: 2);
-  }
-}
