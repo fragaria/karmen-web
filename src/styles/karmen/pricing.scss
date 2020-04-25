@@ -3,52 +3,113 @@
   position: relative;
   flex-direction: column;
 
+  @include breakpoint(tablet-small up) {
+    padding-top: gu();
+    // flex-direction: row;
+  }
 }
 
 .pricing__box {
+  display: flex;
+  flex: 1;
+  align-items: center;
   width: 100%;
-  padding: gu(1) gu();
-  background: map-get($palette, white);
+  // background: map-get($palette, white);
   text-align: left;
   position: relative;
 
+  // @include breakpoint(tablet up) {
+  //   padding: gu(2) gu(2.5);
+  // }
+
   .price__item {
-    @include baseline(s7, $headingtype, 2);
-    @include baseline(s6, $headingtype, 2, $breakpoint: tablet-small up);
+    width: gu(4);
+    white-space: nowrap;
+    @include baseline(s4, $headingtype, 0);
+    @include baseline(s5, $headingtype, 0, $breakpoint: tablet-small up);
+
+    @include breakpoint(tablet-small up) {
+      width: gu(10);
+    }
   }
 
   .price__sum {
-    color: map-get($palette, red);
-    @include baseline(s8, $bodytype, 2);
-    @include baseline(s7, $bodytype, 2, $breakpoint: tablet-small up);
+    flex: 1;
+
+    h3 {
+      color: map-get($palette, olive-green);
+      text-transform: uppercase;
+
+      @include baseline(s4, $headingtype, 0);
+      @include baseline(s5, $headingtype, 0, $breakpoint: tablet-small up);
+    }
   }
 
   .price__note {
-    @include baseline(s2, $bodytype);
+    position: absolute;
+    @include baseline(s1, $bodytype, .55);
+    @include baseline(s2, $bodytype, .75, $breakpoint: tablet-small up);
   }
 
   .pricing__box-img {
-    display: block;
-    float: right;
-    max-width: 30%;
+    width: gu(4);
+    padding: 0 gu(.5);
+
+    @include breakpoint(tablet-small up) {
+      width: gu(11);
+      padding: gu(.5) gu(3.8) gu(.5) gu(3.8);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
-  &:not(:first-of-type):after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: map-get($palette, gray-semilight);
-    height: 1px;
+  &:first-child {
+    padding-bottom:  gu(.5);
+
+    .pricing__box-img {
+      padding: gu(.5) gu(1);
+
+      @include breakpoint(tablet-small up) {
+        padding: gu(.5) gu(4.5) gu(.5) gu(4.5);
+      }
+    }
+
+    .price__sum h3 {
+      color: $primary-color;
+    }
+  }
+}
+
+.pricing__box--emphasized {
+  margin-top: gu(1);
+  padding-top: gu(1);
+  border-top: 2px solid map-get($palette, red);
+
+  .pricing__box-img {
+    width: gu(4);
+    padding: gu(.5);
+
+    @include breakpoint(tablet-small up) {
+      width: gu(11);
+      padding: gu(.5) gu(2.5);
+    }
   }
 
-  &--emphasized {
-    background: map-get($palette, red);
+  .price__item {
+    @include baseline(s5, $headingtype, 0);
+    @include baseline(s7, $headingtype, 0, $breakpoint: tablet-small up);
+  }
 
-    &, .price__sum {
-      color: map-get($palette, white);
+  .price__sum {
+    h3 {
+      color: map-get($palette, red);
+      @include baseline(s5, $headingtype, 0);
+      @include baseline(s7, $headingtype, 0, $breakpoint: tablet-small up);
+
     }
   }
 }
@@ -57,19 +118,13 @@
   margin-left: gu(0.25);
 }
 
-.pricing__plussign {
-  display: none;
-}
-
 .pricing__buybutton.button {
   position: relative;
-  display: block;
-  margin-top: gu(.5);
-  margin-bottom: gu(.5);
-
   // Override default button styles
-  text-align: left;
+  margin: gu(2) auto 0;
   padding-left: gu(3.5);
+  padding-right: gu(2);
+  text-align: left;
 
   &:before {
     display: block;
@@ -81,52 +136,5 @@
     color: currentColor;
     font-size: 1.6em;
     font-weight: normal;
-  }
-}
-
-@include breakpoint(tablet-small up) {
-  .pricing {
-    flex-direction: row;
-  }
-
-  .pricing__box {
-    width: 33.333%;
-    padding: gu(2) gu(1);
-
-    & + .pricing__box {
-      border-left: 1px map-get($palette, gray-semilight) solid;
-    }
-  }
-
-  .princing__box-img {
-    float: none;
-    height: gu(5);
-    margin-bottom: gu(1);
-    margin-right: auto;
-  }
-
-  .pricing__buybutton.button {
-    width: 33.333%;
-    margin-left: auto;
-  }
-
-  .pricing__plussign {
-    position: absolute;
-    left: 33.333%;
-    bottom: 16%;
-    transform: translateX(-50%);
-    color: map-get($palette, red);
-
-    @include fontsize(s7, zero up);
-  }
-}
-
-@include breakpoint(tablet up) {
-  .pricing__box {
-    padding: gu(2) gu(2.5);
-  }
-
-  .pricing__total {
-    margin-left: -0.81em;
   }
 }

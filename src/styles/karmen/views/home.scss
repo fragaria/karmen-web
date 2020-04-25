@@ -65,12 +65,6 @@ $narrow-parts-width: gu(45);
   margin: auto;
 
   .page-block-headline {
-    text-align: left;
-    margin-left: gu();
-
-    @include breakpoint(desktop up) {
-      text-align: center;
-      margin-left: 0;
-    }
+    text-align: center;
   }
 }

@@ -20,7 +20,7 @@ const PrincipleBlock = props => {
   `)
 
   return (
-    <div className="content-block content-block--sitenavwide content-block--shift-mobile">
+    <div className="content-block content-block--narrower content-block--shift-mobile">
       <section {...props}>
         <h1 className="page-block-headline sitenav__anchorpush">
           <span className="sitenav__anchor" id="principle"></span>
@@ -31,7 +31,9 @@ const PrincipleBlock = props => {
         </h1>
         <div className="principle">
           <div className="principle__box principle-box">
-            <h3 className="principle-box__nr">01</h3>
+            <div className="principle-box__nr">
+              <h3 className="principle-box__nr-text">01</h3>
+            </div>
             <div className="principle-box__content">
               <h2 className="principle-box__title">
                 <FormattedMessage
@@ -58,7 +60,9 @@ const PrincipleBlock = props => {
             </div>
           </div>
           <div className="principle__box principle-box">
-            <h3 className="principle-box__nr">02</h3>
+            <div className="principle-box__nr">
+              <h3 className="principle-box__nr-text">02</h3>
+            </div>
             <div className="principle-box__content">
               <h2 className="principle-box__title">
                 <FormattedMessage
@@ -78,7 +82,9 @@ const PrincipleBlock = props => {
             </div>
           </div>
           <div className="principle__box principle-box principle-box--cutoff">
-            <h3 className="principle-box__nr">03</h3>
+            <div className="principle-box__nr">
+              <h3 className="principle-box__nr-text">03</h3>
+            </div>
             <div className="principle-box__content">
               <h2 className="principle-box__title">
                 <FormattedMessage
@@ -95,20 +101,6 @@ const PrincipleBlock = props => {
             </div>
             <div className="principle-box__img">
               <BackgroundImage className="principle-box__img-body" file={data.cloud} style={{backgroundSize: "contain"}} />
-            </div>
-          </div>
-          <div className="principle__box principle-box principle-box--emphasized">
-            <h3 className="principle-box__nr">04</h3>
-            <div className="principle-box__content">
-              <h2 className="principle-box__title">
-                <FormattedMessage
-                  id="principle-block.all_done"
-                  defaultMessage="You’re good to go!"
-                />
-              </h2>
-            </div>
-            <div className="principle-box__img">
-              <span className="icon--check"></span>
             </div>
           </div>
         </div>

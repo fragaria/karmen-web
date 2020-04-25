@@ -60,7 +60,7 @@
 
     p {
       @include baseline(s3, $bodytype, $below: 2);
-      @include baseline(s4, $bodytype, $lineheight: 1.5, $below: .5, $breakpoint: tablet up);
+      @include baseline(s4, $bodytype, $lineheight: 1.5, $below: 0, $breakpoint: tablet up);
 
       @include breakpoint(tablet-small up) {
         @include casesFontOver();
