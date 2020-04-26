@@ -8,10 +8,14 @@
 }
 
 .story-box {
-  padding: gu(1) gu(1) gu(2);
+  padding: gu(2) gu(1) 0;
 
-  + .story-box {
-    border-top: 1px map-get($palette, gray-semilight) solid;
+  @include breakpoint(tablet-small up) {
+    padding: gu(2);
+  }
+
+  @include breakpoint(desktop up) {
+    padding: gu(2) gu(2) gu(2) gu(3);
   }
 }
 
@@ -19,24 +23,26 @@
   grid-area: story;
 
   h1 {
-    @include baseline(s8, $headingtype, 2, $below: 1, $above: 1);
-    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: tablet-small up);
+    @include baseline(s8, $headingtype, 1, $below: 1);
+    @include baseline(s7, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
+    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: fullhd up);
   }
 
   p {
-    @include baseline(s3, $bodytype, 1, $below: 2);
+    @include baseline(s3, $bodytype, 1, $below: 1);
+    @include baseline(s3, $bodytype, 1, $below: 2, $breakpoint: desktop up);
   }
 }
 
 .story__team,
 .story__contact {
   h1 {
-    @include baseline(s7, $headingtype, 2, $below: 1);
-    @include baseline(s6, $headingtype, 2, $below: 1, $breakpoint: tablet-small up);
+    @include baseline(s7, $headingtype, 1, $below: 1);
+    @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
   }
 
   p {
-    @include baseline(s3, $bodytype);
+    @include baseline(s3, $bodytype, $above: 0);
   }
 }
 
@@ -46,6 +52,10 @@
 
 .story__contact {
   grid-area: contact;
+
+  @include breakpoint(tablet-small down) {
+    padding-bottom: gu();
+  }
 }
 
 @include breakpoint(tablet-small up) {
@@ -67,22 +77,4 @@
   .story__team {
     border-bottom: 1px map-get($palette, gray-semilight) solid;
   }
-}
-
-@include breakpoint(desktop up) {
-  .story {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "story  team"
-                         "story  contact";
-  }
-
-  .story-box {
-    padding: gu(3);
-  }
-
-  .story__story {
-    padding-left: gu(4);
-  }
-
-
 }
