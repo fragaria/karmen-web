@@ -18,9 +18,9 @@
   text-align: left;
   position: relative;
 
-  // @include breakpoint(tablet up) {
-  //   padding: gu(2) gu(2.5);
-  // }
+  @include breakpoint(tablet up) {
+    min-height: gu(4);
+  }
 
   .price__item {
     width: gu(4);
@@ -68,10 +68,8 @@
   }
 
   &:first-child {
-    padding-bottom:  gu(.5);
-
     .pricing__box-img {
-      padding: gu(.5) gu(1);
+      padding: gu(0) gu(1);
 
       @include breakpoint(tablet-small up) {
         padding: gu(.5) gu(4.5) gu(.5) gu(4.5);
@@ -87,7 +85,11 @@
 .pricing__box--emphasized {
   margin-top: gu(1);
   padding-top: gu(1);
-  border-top: 2px solid map-get($palette, red);
+  @include baseline-border(map-get($palette, red), 2px);
+
+  @include breakpoint(tablet-small up) {
+    min-height: gu(6);
+  }
 
   .pricing__box-img {
     width: gu(4);

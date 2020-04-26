@@ -2,18 +2,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: $sitenav-max-width;
   margin: auto;
   background: map-get($palette, red);
   padding: gu(2) gu(1.5);
   color: map-get($palette, white);
 
-  @include breakpoint(tablet-small up) {
+  @include breakpoint(tablet up) {
     flex-direction: row;
   }
 
   @include breakpoint(tablet up) {
-    padding: gu(2) gu(4);
+    padding: gu(2) gu(3);
   }
 }
 
@@ -22,20 +21,24 @@
 }
 
 .subscription-box__title {
-  @include baseline(s7, $headingtype, 2, $above: 0);
+  @include baseline(s7, $headingtype, 1, $above: 0);
+  @include baseline(s7, $headingtype, 1.5, $above: 0, $breakpoint: desktop up);
 }
 
 .subscription-box__subtitle {
-  padding-bottom: gu(.5);
-
-  @include baseline(s3, $bodytype, 1.5, $below: 2);
-  @include baseline(s5, $bodytype, 1.5, $above: 0, $breakpoint: tablet-small up);
+  @include baseline(s3, $bodytype, 1, $below: 1);
+  @include baseline(s5, $bodytype, 1, $breakpoint: desktop up);
 }
 
 .subscription-box__form {
   align-self: center;
   flex: 1;
   width: 100%;
+
+  .form-control-wrapper {
+    margin: 0;
+    padding: 0;
+  }
 
   .button {
     transform: translateY(gu(-0.5));
