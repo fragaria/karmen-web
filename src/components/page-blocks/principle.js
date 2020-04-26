@@ -103,6 +103,22 @@ const PrincipleBlock = props => {
               <BackgroundImage className="principle-box__img-body" file={data.cloud} style={{backgroundSize: "contain"}} />
             </div>
           </div>
+          <div className="principle__box principle-box principle-box--emphasized">
+            <div className="principle-box__nr">
+              <h3 className="principle-box__nr-text">04</h3>
+            </div>
+            <div className="principle-box__content">
+              <h2 className="principle-box__title">
+                <FormattedMessage
+                  id="principle-block.all_done"
+                  defaultMessage="You’re good to go!"
+                />
+              </h2>
+            </div>
+            <div className="principle-box__img">
+              <span className="icon--check"></span>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 
 const BlankLayout = ({ wrapperClass = "", children } = {}) => {
   const containerClass = classNames(
-    "page-container baseline-grid  js-ie-warn",
+    "page-container baseline-grid baseline-grid--visible js-ie-warn",
     wrapperClass
   )
   return <div className={containerClass}>{children}</div>
