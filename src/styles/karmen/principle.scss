@@ -11,13 +11,20 @@
   width: 100%;
   min-height: gu(4);
   background: map-get($palette, white);
-  border-bottom:  1px map-get($palette, gray-semilight) solid;
   position: relative;
+
+  @include baseline-border($color: map-get($palette, gray-semilight));
+
+  &:first-child {
+    @include baseline-border-cancel();
+  }
 }
 
 .principle-box {
   &--emphasized {
     background: map-get($palette, red);
+
+    @include baseline-border-cancel();
 
     &,
     .principle-box__sub {

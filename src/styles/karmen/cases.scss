@@ -20,6 +20,14 @@
     margin-bottom: 0;
   }
 
+  @include breakpoint(tablet up) {
+    height: gu(23);
+  }
+
+  @include breakpoint(desktop up) {
+    height: gu(25)
+  }
+
   &:not(:last-of-type) {
     margin-bottom: gu(1);
 
@@ -60,18 +68,10 @@
 
     p {
       @include baseline(s3, $bodytype, $below: 2);
-      @include baseline(s4, $bodytype, $lineheight: 1.5, $below: 0.5, $breakpoint: tablet up);
+      @include baseline(s4, $bodytype, $lineheight: 1.5, $above:0, $below: 0, $breakpoint: tablet up);
 
       @include breakpoint(tablet-small up) {
         @include casesFontOver();
-      }
-
-      @include breakpoint(tablet up) {
-        height: gu(12);
-      }
-
-      @include breakpoint(desktop up) {
-        height: gu(9)
       }
     }
   }
