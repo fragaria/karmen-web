@@ -22,6 +22,8 @@
 
   .footer__karmenlogo {
     margin-left: auto;
+    align-self: flex-end;
+    margin-bottom: gu(-.75);
   }
 }
 
@@ -129,20 +131,19 @@
 .footer-linkgroups__container {
   display: flex;
   flex-wrap: wrap;
-}
+  flex-direction: column;
 
-.footer-linkgroups__group {
-  &:not(:first-of-type) {
-    margin-left: gu(0.5);
-
-    @include breakpoint(tablet up) {
-      margin-left: gu(4);
-    }
+  @include breakpoint(mobile up) {
+    flex-direction: row;
   }
 }
 
+.footer-linkgroups__group {
+  padding-right: gu(3);
+}
+
 .footer-linkgroups__item {
-  @include baseline(s2, $bodytype, 1);
+  // @include baseline(s2, $bodytype, 1);
 
   a {
     @include anchor-style();
