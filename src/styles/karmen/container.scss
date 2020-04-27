@@ -6,8 +6,8 @@
   background-color: map-get($palette, gray-light);
   overflow: hidden;
 
-  @include breakpoint(tablet up) {
-    padding-top: map-get($sitenav-height, tablet);
+  @include breakpoint(tablet-tiny up) {
+    padding-top: map-get($sitenav-height, tablet-tiny);
   }
 
   &--nopush {

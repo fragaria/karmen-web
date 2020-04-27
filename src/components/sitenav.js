@@ -125,7 +125,7 @@ const Sitenav = () => {
         customBurgerIcon={false}
         disableAutoFocus
         // gu size for gitter link and menu button
-        width={"14.562rem"}
+        width={"13.5rem"}
         className="sitenav__mobile-menu"
         overlayClassName="sitenav__mobile-overlay"
       >

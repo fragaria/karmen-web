@@ -110,7 +110,7 @@ $sharebox-variants: (
 // Sitenav settings
 $sitenav-height: (
     mobile: 2 * $grid-unit,
-    tablet: 3 * $grid-unit,
+    tablet-tiny: 3 * $grid-unit,
 );
 
 
@@ -262,7 +262,7 @@ $inline-monospace-sizes: (
 
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
-$hamburger-layer-width: 1.5*$grid-unit;
+$hamburger-layer-width: 100%;
 $hamburger-layer-height: 2px;
 $hamburger-layer-spacing: 8px;
 $hamburger-layer-color: map-get($palette, white);

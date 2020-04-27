@@ -20,7 +20,7 @@ const SolutionBlock = props => {
       smartphoneAndPillMobile: file(
         relativePath: { eq: "pill-w-cloud-mobile.png" }
       ) {
-        ...fluidImage1024_traced
+        ...fluidImage600_traced
       }
       site {
         siteMetadata {

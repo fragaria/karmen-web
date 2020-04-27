@@ -21,7 +21,7 @@
   text-transform: uppercase;
 
   @include breakpoint(tablet-tiny up) {
-    height: map-get($sitenav-height, tablet);
+    height: map-get($sitenav-height, tablet-tiny);
   }
 }
 
@@ -118,7 +118,7 @@
   top: -1 * map-get($sitenav-height, mobile);
 
   @include breakpoint(tablet up) {
-    top: -1 * map-get($sitenav-height, tablet);
+    top: -1 * map-get($sitenav-height, tablet-tiny);
   }
 }
 
@@ -148,7 +148,7 @@
 
 .sitenav__mobile-menu-toggle {
   height: map-get($sitenav-height, mobile);
-  width: gu(3);
+  width: gu(2);
   position: fixed;
   top: 0;
   right: 0;
@@ -158,19 +158,19 @@
   background: map-get($palette, black);
   padding: gu(.5);
 
-  @include breakpoint(mobile up) {
+  @include breakpoint(tablet-tiny up) {
+    height: map-get($sitenav-height, tablet-tiny);
+    width: gu(3);
+    padding: gu(.75);
+
     &:after {
       content: '';
       position: absolute;
       top: -2px;
       left: -1px;
-      height: map-get($sitenav-height, mobile);
+      height: map-get($sitenav-height, tablet-tiny);
       border: 1px lighten(map-get($palette, black), $amount: 30) solid;
     }
-  }
-
-  @include breakpoint(tablet-tiny up) {
-    height: map-get($sitenav-height, tablet);
   }
 
   @include breakpoint(tablet up) {

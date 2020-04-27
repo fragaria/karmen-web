@@ -5,9 +5,6 @@ import { FormattedMessage, useIntl, defineMessages } from "react-intl"
 
 import { Image } from "components/image"
 
-import pillImg from "assets/img/karmen-pill.png"
-import cloudImg from "assets/img/screen-printers-both.png"
-
 const messages = defineMessages({
   specialOfferMemo: {
     id: "pricing-block.special_offer_memo",
@@ -22,7 +19,7 @@ const PricingBlock = ({ location, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
       pillWCloud: file(relativePath: { eq: "pill-w-cloud.png" }) {
-        ...fluidImage300
+        ...fluidImage1024
       }
     }
   `)

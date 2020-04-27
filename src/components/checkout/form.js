@@ -129,7 +129,7 @@ const CheckoutForm = ({
       }}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting, values, setFieldValue }) => {
+      {({ isSubmitting, isValid, values, setFieldValue }) => {
         const currentCountry = values["country"]
 
         // Get Pill config by its id
@@ -549,7 +549,7 @@ const CheckoutForm = ({
                 <button
                   type="submit"
                   className="button button--red"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !isValid}
                 >
                   <FormattedMessage
                     id="checkoutform.cta_buy"
