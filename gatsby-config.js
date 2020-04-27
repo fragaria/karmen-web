@@ -65,14 +65,42 @@ module.exports = {
     pillDocs: "https://docs.karmen.tech/#/pill-getting-started",
     karmenDocs: "https://docs.karmen.tech/#/quickstart",
     clients: [
-      { title: "3darena", img: "/portfolio/3darena-logo.png" },
-      { title: "cwrkjzd", img: "/portfolio/cwrkjzd-logo.png" },
-      { title: "ČVUT", img: "/portfolio/cvut-logo.png" },
-      { title: "anyonego", img: "/portfolio/anyonego-logo.png" },
-      { title: "FIT", img: "/portfolio/fit-cvut-logo.svg" },
-      { title: "GJK", img: "/portfolio/gjk-logo.png" },
-      { title: "IKEM", img: "/portfolio/ikem-logo.png" },
-      { title: "Třeběšín", img: "/portfolio/trebesin-logo.png" },
+      {
+        title: "3darena",
+        img: "/portfolio/3darena-logo.png",
+        href: "https://3darena.cz/",
+      },
+      {
+        title: "cwrkjzd",
+        img: "/portfolio/cwrkjzd-logo.png",
+        href: "https://www.cwrkjzd.cz/",
+      },
+      {
+        title: "3D print na FIT ČVUT",
+        img: "/portfolio/cvut-logo.png",
+        href: "https://3dprint.fit.cvut.cz/",
+      },
+      {
+        title: "anyonego",
+        img: "/portfolio/anyonego-logo.png",
+        href: "https://anyonego.com",
+      },
+      {
+        title: "FIT",
+        img: "/portfolio/fit-cvut-logo.svg",
+        href: "https://fit.cvut.cz/",
+      },
+      { title: "GJK", img: "/portfolio/gjk-logo.png", href: "https://gjk.cz/" },
+      {
+        title: "IKEM",
+        img: "/portfolio/ikem-logo.png",
+        href: "https://www.ikem.cz/",
+      },
+      {
+        title: "Třeběšín",
+        img: "/portfolio/trebesin-logo.png",
+        href: "https://www.trebesin.cz/",
+      },
     ],
     nav: {
       en: [
@@ -102,7 +130,10 @@ module.exports = {
           },
         ],
         [
-          { name: "Source code on GitHub", url: "https://github.com/fragaria/karmen" },
+          {
+            name: "Source code on GitHub",
+            url: "https://github.com/fragaria/karmen",
+          },
           {
             name: "Releases",
             url: "https://github.com/fragaria/karmen/releases",
@@ -128,7 +159,10 @@ module.exports = {
           },
         ],
         [
-          { name: "Zdrojový kód na GitHubu", url: "https://github.com/fragaria/karmen" },
+          {
+            name: "Zdrojový kód na GitHubu",
+            url: "https://github.com/fragaria/karmen",
+          },
           {
             name: "Releasy",
             url: "https://github.com/fragaria/karmen/releases",

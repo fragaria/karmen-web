@@ -74,6 +74,7 @@ $field-height: gu(3);
     }
 
     &::after {
+      pointer-events: none;
       font-family: "#{$icomoon-font-family}";
       position: absolute;
       right: 0;

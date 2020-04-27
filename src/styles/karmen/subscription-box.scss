@@ -50,6 +50,7 @@
 
   .button {
     transform: translateY(gu(-0.5));
+    margin-left: 0;
   }
 
   @include breakpoint(mobile up) {

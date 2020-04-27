@@ -130,7 +130,12 @@ const Sitenav = () => {
         overlayClassName="sitenav__mobile-overlay"
       >
         {data.site.siteMetadata.nav[intl.locale].map(item => (
-          <Link to={item.url} itemProp="url" key={item.url} onClick={() => setIsOpen(false)}>
+          <Link
+            to={item.url}
+            itemProp="url"
+            key={item.url}
+            onClick={() => setIsOpen(false)}
+          >
             <span itemProp="name">{item.name}</span>
           </Link>
         ))}

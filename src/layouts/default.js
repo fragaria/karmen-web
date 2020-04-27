@@ -46,13 +46,14 @@ const CC = () => {
         background: "rgba(234, 39, 46, .75)",
         backdropFilter: "saturate(180%) blur(10px)",
         fontSize: ".9rem",
-        padding: ".5rem",
+        padding: "1rem",
       }}
       buttonStyle={{
-        fontFamily: "'Trivia Grotesk N2', Helvetica, Arial, sans-serif",
+        fontFamily: "'Fira Sans', Helvetica, Arial, sans-serif",
         color: "#fff",
         background: "#000",
         fontSize: "1rem",
+        padding: "1rem",
       }}
       contentStyle={{
         maxWidth: "80em",

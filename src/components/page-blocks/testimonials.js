@@ -10,6 +10,7 @@ const TestimonialsBlock = props => {
           clients {
             title
             img
+            href
           }
         }
       }
@@ -34,14 +35,22 @@ const TestimonialsBlock = props => {
         </p>
         <div className="testimonials">
           {data.site.siteMetadata.clients.map(client => (
-            <span key={client.title} className="testimonials__item">
-              <img
-                className="testimonials__image"
-                src={client.img}
-                alt={client.title}
-                title={client.title}
-              />
-            </span>
+            <a
+              key={client.href}
+              href={client.href}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={client.title}
+            >
+              <span className="testimonials__item">
+                <img
+                  className="testimonials__image"
+                  src={client.img}
+                  alt={client.title}
+                  title={client.title}
+                />
+              </span>
+            </a>
           ))}
         </div>
       </section>
