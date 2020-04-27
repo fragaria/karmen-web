@@ -38,7 +38,7 @@ export const SHIPPING_SKUS = [
   {
     sku: "shipping_to_cz",
     name: "Shipping (Czech Republic)",
-    price: 120,
+    price: 50,
     currency: "CZK",
   },
   {
