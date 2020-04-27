@@ -95,10 +95,9 @@ $points: map-values($breakpoints);
     $str: "";
 
     @if $first {
-        $ratsize: map-get($breakpoints, $first) / map-get($rootsizes, $first);
-        $width: strip-unit($ratsize) * 1em;
+        $width: map-get($breakpoints, $first);
 
-        @if $width > 0em {
+        @if $width > 0px {
             $str: $str + "(min-width: #{$width})"
         }
     }
@@ -108,9 +107,7 @@ $points: map-values($breakpoints);
             $str: $str + " and ";
         }
 
-        $rootsize: map-get($rootsizes, $second);
-        $ratsize: map-get($breakpoints, $second) / $rootsize;
-        $width: strip-unit($ratsize) * 1em - 0.0001;
+        $width: map-get($breakpoints, $second) - 1px;
         $str: $str + "(max-width: #{$width})"
     }
 
