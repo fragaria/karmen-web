@@ -28,10 +28,14 @@
 .button,
 a.button {
     display: inline-block;
-    padding: 0 gu(1.5);
+    padding: 0 gu(1);
     line-height: gu(3);
     height: gu(3);
     border: 0;
+
+    @include breakpoint(tablet up) {
+      padding: 0 gu(1.5);
+    }
 
     @include buttonStyle(
         map-get(map-get($button-variants, primary), foreground),
