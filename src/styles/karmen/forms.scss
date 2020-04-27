@@ -49,7 +49,7 @@ $field-height: gu(3);
   &:focus {
     outline: none;
     box-shadow: none;
-    background-color: darken(map-get($palette, gray-light), 1%);
+    background-color: map-get($palette, gray-light);
   }
 
   &--bordered {
@@ -68,17 +68,23 @@ $field-height: gu(3);
   padding-bottom: $shift;
   margin-bottom: gu(-1);
 
-  &--select::after {
-    font-family: "#{$icomoon-font-family}";
-    position: absolute;
-    right: 0;
-    top: 0;
-    content: $icon--arrow-down;
-    display: block;
-    height: $field-height;
-    line-height: $field-height;
-    font-size: 1.5rem;
-    right: gu(0.5);
+  &--select {
+    .form-control {
+      padding-right: gu(2);
+    }
+
+    &::after {
+      font-family: "#{$icomoon-font-family}";
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: $icon--arrow-down;
+      display: block;
+      height: $field-height;
+      line-height: $field-height;
+      font-size: 1.5rem;
+      right: gu(0.5);
+    }
   }
 
   &--inline {

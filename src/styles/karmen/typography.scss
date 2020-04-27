@@ -64,7 +64,7 @@ a {
     // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
     p {
         @include baseline(
-            $fontsize: s4,
+            $fontsize: s3,
             $font: $bodytype,
             $lineheight: 1,
             $below: 1

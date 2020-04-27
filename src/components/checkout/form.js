@@ -131,7 +131,6 @@ const CheckoutForm = ({
     >
       {({ isSubmitting, values, setFieldValue }) => {
         const currentCountry = values["country"]
-        const showAdapterWarning = values["variant"] === "pill_us"
 
         // Get Pill config by its id
         const pillRef = getItemByProp(PILLS, "id", values["variant"])
@@ -147,20 +146,6 @@ const CheckoutForm = ({
         const shippingPrice = shippingVariant.price
         // Total price (pill + shipping)
         const totalPrice = pillPrice + shippingPrice
-
-        const adapterWarningMsg = (
-          <FormattedMessage
-            id="checkoutform.us_adapters_out_of_stock"
-            defaultMessage="<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>"
-            values={{
-              em: (...chunks) => (
-                <p>
-                  <em>{chunks}</em>
-                </p>
-              ),
-            }}
-          />
-        )
 
         const getClass = (base, meta) =>
           base +
@@ -205,7 +190,6 @@ const CheckoutForm = ({
                       {meta.touched && meta.error && (
                         <p className="form-control-error">{meta.error}</p>
                       )}
-                      {showAdapterWarning && adapterWarningMsg}
                     </div>
                   </div>
                 )}
@@ -534,23 +518,25 @@ const CheckoutForm = ({
               </div>
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
-              <p className="typeset checkout-form__corona-warning">
-                <FormattedMessage
-                  id="checkoutform.corona_warning"
-                  defaultMessage="<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time."
-                  values={{
-                    strong: (...chunks) => <strong>{chunks}</strong>,
-                    a: (...chunks) => (
-                      <a
-                        className="anchor--emphasized"
-                        href={`mailto:${contactEmail}`}
-                      >
-                        {chunks}
-                      </a>
-                    ),
-                  }}
-                />
-              </p>
+              <div className="typeset">
+                <p className="checkout-form__corona-warning">
+                  <FormattedMessage
+                    id="checkoutform.corona_warning"
+                    defaultMessage="<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time."
+                    values={{
+                      strong: (...chunks) => <strong>{chunks}</strong>,
+                      a: (...chunks) => (
+                        <a
+                          className="anchor--emphasized"
+                          href={`mailto:${contactEmail}`}
+                        >
+                          {chunks}
+                        </a>
+                      ),
+                    }}
+                  />
+                </p>
+              </div>
               <div className="checkout-form__submit">
                 <p>
                   <em>

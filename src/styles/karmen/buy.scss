@@ -16,7 +16,10 @@
   max-width: gu(28);
 
   .page-block-headline {
-    @include baseline(s7, $headingtype, 2, $below: 1);
+    text-align: center;
+
+    @include baseline(s9, $headingtype, 2, $below: 1);
+    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: tablet up);
   }
 }
 
@@ -24,5 +27,9 @@
 @include breakpoint(tablet up) {
   .buy__image {
     display: block;
+  }
+
+  .buy__form .page-block-headline {
+    text-align: left;
   }
 }

@@ -40,19 +40,16 @@ const PricingBlock = ({ location, ...props }) => {
         <div className="pricing">
           <div className="pricing__box">
             <div className="pricing__box-img">
-              <Image
-                file={data.pillWCloud}
-                alt="Pill + Karmen cloud service"
-              />
+              <Image file={data.pillWCloud} alt="Pill + Karmen cloud service" />
             </div>
 
             <div className="pricing__box--price">
               <h2 className="price__title">Pill + Karmen</h2>
 
-
               <dl className="price__items">
                 <dt className="price__item">
-                  <span>Karmen Pill</span></dt>
+                  <span>Karmen Pill</span>
+                </dt>
                 <dd className="price__sum">
                   <h3>
                     <FormattedMessage
@@ -62,7 +59,8 @@ const PricingBlock = ({ location, ...props }) => {
                   </h3>
                 </dd>
                 <dt className="price__item">
-                  <span>Karmen</span></dt>
+                  <span>Karmen</span>
+                </dt>
                 <dd className="price__sum price__sum--limited-offer">
                   <h3>
                     <FormattedMessage

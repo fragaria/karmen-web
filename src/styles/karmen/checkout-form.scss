@@ -29,18 +29,49 @@
   .form-label {
     color: map-get($palette, white);
   }
+
+  .form-control {
+    color: map-get($palette, white);
+    background-color: map-get($palette, red);
+    border: 1px map-get($palette, white) solid;
+
+    &:focus {
+      background-color: map-get($palette, red);
+    }
+  }
+
+  .form-control-wrapper--select {
+    &:after {
+      color: map-get($palette, white);
+    }
+  }
 }
 
 .checkout-form__quantity-field {
-  max-width: gu(5);
+  max-width: gu(4);
+  margin: 0;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .form-control {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .checkout-form__quantity-field-row {
   display: flex;
+  height: gu(3);
+  // border is totally overriden for this one - see .form-control compensation below
+  border: 1px map-get($palette, white) solid;
 
   button {
-    background: map-get($palette, white);
-    color: map-get($palette, red);
+    color: map-get($palette, white);
+    background-color: transparent;
     border: 0;
     font-size: 1.8rem;
     min-width: gu(1.5);
@@ -56,8 +87,9 @@
   }
 
   .form-control {
-    padding: 0;
-    text-align: center;
+    border: 0;
+    height: calc(#{gu(3)} - 2px);
+
   }
 }
 
@@ -108,16 +140,14 @@
 
 .checkout-form__submit {
   display: flex;
+  flex-direction: column;
 
   .button {
     flex-grow: 1;
+    margin-top: gu();
   }
 
   p {
-    width: 70%;
-    min-width: 20em;
-    padding-right: gu();
-
     @include baseline(s2, $bodytype);
   }
 }
@@ -126,5 +156,19 @@
 @include breakpoint(tablet up) {
   .checkout-form__body {
     padding: gu(1) gu(2) gu(2);
+  }
+
+  .checkout-form__submit {
+    flex-direction: row;
+
+    p {
+      width: 70%;
+      min-width: 20em;
+      padding-right: gu();
+    }
+
+    .button {
+      margin-top: 0;
+    }
   }
 }

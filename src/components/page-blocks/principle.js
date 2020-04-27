@@ -56,7 +56,11 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <BackgroundImage className="principle-box__img-body" file={data.signup} style={{backgroundSize: "contain"}} />
+              <BackgroundImage
+                className="principle-box__img-body"
+                file={data.signup}
+                style={{ backgroundSize: "contain" }}
+              />
             </div>
           </div>
           <div className="principle__box principle-box">
@@ -78,7 +82,11 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <BackgroundImage className="principle-box__img-body" file={data.pill} style={{backgroundSize: "contain"}} />
+              <BackgroundImage
+                className="principle-box__img-body"
+                file={data.pill}
+                style={{ backgroundSize: "contain" }}
+              />
             </div>
           </div>
           <div className="principle__box principle-box principle-box--cutoff">
@@ -100,7 +108,11 @@ const PrincipleBlock = props => {
               </h3>
             </div>
             <div className="principle-box__img">
-              <BackgroundImage className="principle-box__img-body" file={data.cloud} style={{backgroundSize: "contain"}} />
+              <BackgroundImage
+                className="principle-box__img-body"
+                file={data.cloud}
+                style={{ backgroundSize: "contain" }}
+              />
             </div>
           </div>
           <div className="principle__box principle-box principle-box--emphasized">
