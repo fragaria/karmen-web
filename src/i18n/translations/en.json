@@ -68,7 +68,7 @@
   "payment-cancelled-block.thanks": "Payment was cancelled",
   "pricing-block.buy": "Buy Karmen",
   "pricing-block.combo_price": "130 EUR",
-  "pricing-block.combo_price_note": "Total excl. VAT",
+  "pricing-block.combo_price_note": "excl. VAT",
   "pricing-block.headline": "One price, unlimited possibilities",
   "pricing-block.karmen_price": "Free",
   "pricing-block.karmen_price_note": "Special limited offer",

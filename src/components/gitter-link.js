@@ -22,6 +22,8 @@ const GitterLink = () => {
       <a
         href={`https://gitter.im/${data.site.siteMetadata.company.social.gitter}`}
         className="gitter-link__button"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="gitter-brand">
           <svg

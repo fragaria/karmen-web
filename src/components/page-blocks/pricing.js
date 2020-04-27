@@ -97,7 +97,7 @@ const PricingBlock = ({ location, ...props }) => {
                 <div className="price__note">
                   <FormattedMessage
                     id="pricing-block.combo_price_note"
-                    defaultMessage="Total excl. VAT"
+                    defaultMessage="excl. VAT"
                   />
                 </div>
               </div>
