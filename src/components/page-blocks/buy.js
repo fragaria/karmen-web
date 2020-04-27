@@ -10,7 +10,11 @@ const BuyBlock = props => {
   const data = useStaticQuery(graphql`
     query {
       pill: file(relativePath: { eq: "pill-on-pillar.png" }) {
-        ...fluidImage600
+        childImageSharp {
+          fluid(maxWidth: 600, srcSetBreakpoints: [ 300, 584 ], quality: 85) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
       }
     }
   `)
@@ -20,7 +24,7 @@ const BuyBlock = props => {
       <article {...props}>
         <div className="buy">
           <div className="buy__image">
-            <Image file={data.pill} alt="Karmen Pill" />
+            <Image file={data.pill} alt="Karmen Pill" critical />
           </div>
           <div className="buy__form">
             <h1 className="page-block-headline">
