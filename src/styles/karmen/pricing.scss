@@ -2,116 +2,164 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  min-height: gu(10);
 
   @include breakpoint(tablet-small up) {
-    padding-top: gu();
+    padding-top: gu(2);
     // flex-direction: row;
   }
 }
 
 .pricing__box {
-  display: flex;
-  flex: 1;
-  align-items: center;
   width: 100%;
   // background: map-get($palette, white);
   text-align: left;
   position: relative;
+  margin-bottom: gu();
 
-  @include breakpoint(tablet up) {
-    min-height: gu(4);
+  @include breakpoint(mobile up) {
+    display: flex;
+  }
+
+
+  .pricing__box--price {
+    flex: 1.1;
+    padding-top: gu();
+
+    @include breakpoint(tablet-small up) {
+      padding-left: gu(3);
+      padding-top: 0;
+    }
+
+    @include breakpoint(tablet up) {
+      flex: .9;
+    }
+  }
+
+  .price__title {
+    text-align: center;
+
+    @include breakpoint(mobile up) {
+      padding-left: gu(2);
+      text-align: left;
+    }
+
+    @include breakpoint(tablet-small up) {
+      padding-left: 0;
+    }
+
+    @include baseline(s6, $headingtype, 1, $above: 1, $below: 1, $breakpoint: mobile down);
+    @include baseline(s6, $headingtype, 1, $below: 1);
+    @include baseline(s7, $headingtype, 2, $above: 0, $below: 1, $breakpoint: tablet-small up);
+  }
+
+
+  .price__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: gu(1.5);
+    padding-right: gu(1.5);
+
+    @include breakpoint(mobile up) {
+      grid-template-columns: auto 1fr;
+      padding-left: gu(2);
+      padding-right: 0;
+    }
+
+    @include breakpoint(tablet-small up) {
+      padding-left: 0;
+    }
   }
 
   .price__item {
-    width: gu(4);
+    padding-right: gu(.5);
     white-space: nowrap;
-    @include baseline(s4, $headingtype, 0);
-    @include baseline(s5, $headingtype, 0, $breakpoint: tablet-small up);
+    @include baseline(s3, $bodytype, 1);
 
     @include breakpoint(tablet-small up) {
-      width: gu(10);
+      padding-right: gu(4);
     }
   }
 
   .price__sum {
-    flex: 1;
-
     h3 {
-      color: map-get($palette, olive-green);
+      color: map-get($palette, black);
+      text-transform: uppercase;
+      font-weight: bold;
+
+      @include baseline(s3, $bodytype, 1);
+
+      @include breakpoint(mobile up) {}
+    }
+
+    &.price__sum--limited-offer {
+      h3 {
+        color: map-get($palette, green);
+      }
+    }
+  }
+
+
+  .price__sum--total {
+    text-align: center;
+
+    @include breakpoint(mobile up) {
+      padding-left: gu(2);
+      text-align: left;
+    }
+
+    @include breakpoint(tablet-small up) {
+      padding-left: 0;
+    }
+
+    h2 {
+      color: map-get($palette, red);
       text-transform: uppercase;
 
-      @include baseline(s4, $headingtype, 0);
-      @include baseline(s5, $headingtype, 0, $breakpoint: tablet-small up);
+      @include baseline(s9, $headingtype, 2, $above: 2);
+    }
+
+    .price__note {
+      position: relative;
+
+      @include breakpoint(mobile up) {
+        position: absolute;
+      }
     }
   }
 
   .price__note {
     position: absolute;
+    @include baseline(s1, $bodytype, 1, $breakpoint: mobile down);
     @include baseline(s1, $bodytype, .55);
-    @include baseline(s2, $bodytype, .75, $breakpoint: tablet-small up);
+    @include baseline(s1, $bodytype, .75, $breakpoint: tablet-small up);
+
+    @include breakpoint(tablet-small up) {
+      white-space: nowrap;
+    }
   }
 
   .pricing__box-img {
-    width: gu(4);
-    padding: 0 gu(.5);
+    flex: .9;
+    max-width: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: gu();
 
-    @include breakpoint(tablet-small up) {
-      width: gu(11);
-      padding: gu(.5) gu(3.8) gu(.5) gu(3.8);
+    @include breakpoint(mobile up) {
+      max-width: 100%;
+      // max-width: gu(15)
+    }
+
+
+    @include breakpoint(tablet up) {
+      flex: 1.1;
     }
 
     img {
       display: block;
       width: 100%;
       max-width: 100%;
-    }
-  }
-
-  &:first-child {
-    .pricing__box-img {
-      padding: gu(0) gu(1);
-
-      @include breakpoint(tablet-small up) {
-        padding: gu(.5) gu(4.5) gu(.5) gu(4.5);
-      }
-    }
-
-    .price__sum h3 {
-      color: $primary-color;
-    }
-  }
-}
-
-.pricing__box--emphasized {
-  margin-top: gu(1);
-  padding-top: gu(1);
-  @include baseline-border(map-get($palette, red), 2px);
-
-  @include breakpoint(tablet-small up) {
-    min-height: gu(6);
-  }
-
-  .pricing__box-img {
-    width: gu(4);
-    padding: gu(.5);
-
-    @include breakpoint(tablet-small up) {
-      width: gu(11);
-      padding: gu(.5) gu(2.5);
-    }
-  }
-
-  .price__item {
-    @include baseline(s5, $headingtype, 0);
-    @include baseline(s7, $headingtype, 0, $breakpoint: tablet-small up);
-  }
-
-  .price__sum {
-    h3 {
-      color: map-get($palette, red);
-      @include baseline(s5, $headingtype, 0);
-      @include baseline(s7, $headingtype, 0, $breakpoint: tablet-small up);
-
     }
   }
 }

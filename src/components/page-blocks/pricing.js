@@ -38,74 +38,67 @@ const PricingBlock = ({ location, ...props }) => {
           />
         </h1>
         <div className="pricing">
-          <div className="pricing__box price">
-            <div className="pricing__box-img">
-              <img src={pillImg} alt="Karmen Pill" />
-             </div>
-            <h2 className="price__item">Karmen Pill</h2>
-            <div className="price__sum">
-              <h3>
-                <FormattedMessage
-                  id="pricing-block.pill_price"
-                  defaultMessage="130 EUR"
-                />
-              </h3>
-            </div>
-          </div>
-          <div className="pricing__box price">
-            <div className="pricing__box-img">
-              <img
-                src={cloudImg}
-                alt="Karmen cloud service"
-              />
-            </div>
-            <h2 className="price__item">Karmen</h2>
-
-            <div className="price__sum">
-              <h3>
-                <FormattedMessage
-                  id="pricing-block.karmen_price"
-                  defaultMessage="Free"
-                />
-              </h3>
-              <div className="price__note">
-                <FormattedMessage
-                  id="pricing-block.karmen_price_note"
-                  defaultMessage="Special limited offer"
-                />
-                <i
-                  className="pricing__offerinfo icon--info"
-                  data-tip={intl.formatMessage(messages.specialOfferMemo)}
-                ></i>
-                <ReactTooltip
-                  place="bottom"
-                  type="dark"
-                  effect="solid"
-                  borderRadius="0"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="pricing__box pricing__box--emphasized price">
+          <div className="pricing__box">
             <div className="pricing__box-img">
               <Image
                 file={data.pillWCloud}
                 alt="Pill + Karmen cloud service"
               />
             </div>
-            <h2 className="price__item">Pill + Karmen</h2>
-            <div className="price__sum">
-              <h3>
-                <FormattedMessage
-                  id="pricing-block.combo_price"
-                  defaultMessage="130 EUR"
-                />
-              </h3>
-              <div className="price__note">
-                <FormattedMessage
-                  id="pricing-block.combo_price_note"
-                  defaultMessage="Total excl. VAT"
-                />
+
+            <div className="pricing__box--price">
+              <h2 className="price__title">Pill + Karmen</h2>
+
+
+              <dl className="price__items">
+                <dt className="price__item">Karmen Pill</dt>
+                <dd className="price__sum">
+                  <h3>
+                    <FormattedMessage
+                      id="pricing-block.pill_price"
+                      defaultMessage="130 EUR"
+                    />
+                  </h3>
+                </dd>
+                <dt className="price__item">Karmen</dt>
+                <dd className="price__sum price__sum--limited-offer">
+                  <h3>
+                    <FormattedMessage
+                      id="pricing-block.karmen_price"
+                      defaultMessage="Free"
+                    />
+                  </h3>
+                  <div className="price__note">
+                    <FormattedMessage
+                      id="pricing-block.karmen_price_note"
+                      defaultMessage="Special limited offer"
+                    />
+                    <i
+                      className="pricing__offerinfo icon--info"
+                      data-tip={intl.formatMessage(messages.specialOfferMemo)}
+                    ></i>
+                    <ReactTooltip
+                      place="bottom"
+                      type="dark"
+                      effect="solid"
+                      borderRadius="0"
+                    />
+                  </div>
+                </dd>
+              </dl>
+              <div className="price__sum--total">
+                <h2>
+                  <FormattedMessage
+                    id="pricing-block.combo_price"
+                    defaultMessage="130 EUR"
+                  />
+                </h2>
+                <div className="price__note">
+                  <FormattedMessage
+                    id="pricing-block.combo_price_note"
+                    defaultMessage="Total excl. VAT"
+                  />
+                </div>
               </div>
             </div>
           </div>

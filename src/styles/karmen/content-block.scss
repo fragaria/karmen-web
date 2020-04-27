@@ -11,7 +11,7 @@
 @mixin contentBlockVariant($baseMaxWidth, $mobilePadding: 1.5, $defaultPadding: 1.5) {
   max-width: $baseMaxWidth + gu($mobilePadding)*2;
 
-  @include breakpoint(tablet up) {
+  @include breakpoint(desktop up) {
     max-width: $baseMaxWidth + gu($defaultPadding)*2;
   }
 }
