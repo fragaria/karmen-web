@@ -47,8 +47,8 @@
       padding-left: 0;
     }
 
-    @include baseline(s6, $headingtype, 1, $above: 1, $below: 1, $breakpoint: mobile down);
-    @include baseline(s6, $headingtype, 1, $below: 1);
+    @include baseline(s7, $headingtype, 1, $above: 1, $below: 1, $breakpoint: mobile down);
+    @include baseline(s7, $headingtype, 1, $below: 1);
     @include baseline(s7, $headingtype, 2, $above: 0, $below: 1, $breakpoint: tablet-small up);
   }
 

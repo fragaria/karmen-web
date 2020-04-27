@@ -121,7 +121,7 @@ const AboutBlock = props => {
       </section>
 
       <section>
-        <div className="content-block content-block--narrow">
+        <div className="content-block content-block--narrow content-block--shift-mobile">
           <h1 className="about-founders-headline sitenav__anchorpush">
             <span className="sitenav__anchor" id="team"></span>
             <FormattedMessage

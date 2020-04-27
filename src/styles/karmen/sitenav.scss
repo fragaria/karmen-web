@@ -13,6 +13,7 @@
 
 .sitenav__menu {
   @include contentBlockVariant($sitenav-max-width, 0, 0);
+
   height: map-get($sitenav-height, mobile);
   margin: 0 auto;
   display: flex;

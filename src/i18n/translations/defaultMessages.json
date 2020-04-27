@@ -662,7 +662,7 @@
         "defaultMessage": "Due to unexpectedly large number of orders, we had to <strong>temporarily disable our online store</strong> to be able fulfill the orders within a reasonable time. Please <contactLink>drop us an email</contactLink> in case you're interested in buying Karmen and we'll let you know once the store is back online.",
         "end": {
           "column": 20,
-          "line": 58
+          "line": 64
         },
         "file": "src/components/page-blocks/buy.js",
         "id": "buy-block.disabled_temporarily",
@@ -853,7 +853,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Free for limited number of connected devices. Curious about large scale operation pricing? Contact us.",
+        "defaultMessage": "Free for limited number of connected devices.<br />Curious about large scale operation pricing? Contact us.",
         "end": {
           "column": 3,
           "line": 13
@@ -921,39 +921,39 @@
         "defaultMessage": "130 EUR",
         "end": {
           "column": 20,
-          "line": 91
+          "line": 95
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price",
         "start": {
           "column": 18,
-          "line": 88
+          "line": 92
         }
       },
       {
         "defaultMessage": "Total excl. VAT",
         "end": {
           "column": 20,
-          "line": 97
+          "line": 101
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price_note",
         "start": {
           "column": 18,
-          "line": 94
+          "line": 98
         }
       },
       {
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 14,
-          "line": 106
+          "line": 110
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.buy",
         "start": {
           "column": 12,
-          "line": 103
+          "line": 107
         }
       }
     ],
@@ -1538,29 +1538,55 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Email",
+        "end": {
+          "column": 3,
+          "line": 8
+        },
+        "file": "src/components/subscription-box.js",
+        "id": "subscription-box.email",
+        "start": {
+          "column": 9,
+          "line": 5
+        }
+      },
+      {
         "defaultMessage": "Subscribe to Karmen news",
         "end": {
           "column": 14,
-          "line": 13
+          "line": 22
         },
         "file": "src/components/subscription-box.js",
         "id": "subscription-box.main",
         "start": {
           "column": 12,
-          "line": 10
+          "line": 19
         }
       },
       {
         "defaultMessage": "Stay in the loop",
         "end": {
           "column": 14,
-          "line": 19
+          "line": 28
         },
         "file": "src/components/subscription-box.js",
         "id": "subscription-box.sub",
         "start": {
           "column": 12,
-          "line": 16
+          "line": 25
+        }
+      },
+      {
+        "defaultMessage": "Subscribe",
+        "end": {
+          "column": 20,
+          "line": 67
+        },
+        "file": "src/components/subscription-box.js",
+        "id": "subscription-box.cta",
+        "start": {
+          "column": 18,
+          "line": 64
         }
       }
     ],

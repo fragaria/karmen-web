@@ -5,23 +5,10 @@
   justify-content: center;
   position: relative;
   min-height: gu(12);
-  // background: url(../../assets/img/lead.jpg);
-  // background-size: cover;
   background-color: map-get($palette, red);
   z-index: 1;
   margin-bottom: gu(2);
 
-  // &:before {
-  //   z-index: -1;
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   background: rgba(0, 0, 0, 0.4);
-  // }
 }
 
 .about-hero__main,
@@ -29,7 +16,6 @@
   color: map-get($palette, white);
   text-align: center;
   z-index: 1;
-  // text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 }
 
 .about-hero__main {
@@ -49,7 +35,7 @@
   }
 
   p {
-    @include baseline(s4, $bodytype, 1, $below: 1);
+    @include baseline(s3, $bodytype, 1, $below: 1);
     @include baseline(s4, $bodytype, 1, $below: 3, $breakpoint: tablet-small up);
   }
 
@@ -77,16 +63,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: gu(4);
 }
 
 .about-founders__founder {
   flex: 1;
   background: map-get($palette, white);
-
-  + .about-founders__founder {
-    border-left: 1px map-get($palette, gray-medium) solid;
-  }
 }
 
 .about-founders__founder-image {
@@ -99,7 +80,7 @@
 }
 
 .about-founders__founder-body {
-  padding: gu(1) gu(2) gu(2);
+  padding: gu(1) gu(1) gu(2);
 
   h2 {
     @include baseline(s6, $headingtype, 2);
@@ -122,6 +103,7 @@
 
 @include breakpoint(tablet-small up) {
   .about-hero {
+    height: gu(16);
     margin-bottom: gu(3);
   }
 
@@ -132,16 +114,19 @@
   .about-founders {
     flex-direction: row;
   }
-}
 
-@include breakpoint(tablet-small up) {
-  .about-hero {
-    height: gu(16);
+  .about-founders__founder + .about-founders__founder {
+    border-left: 1px map-get($palette, gray-medium) solid;
   }
+
 }
 
 @include breakpoint(desktop up) {
   .about-hero {
     height: gu(19);
+  }
+
+  .about-founders__founder-body {
+    padding: gu(1) gu(1) gu(2);
   }
 }

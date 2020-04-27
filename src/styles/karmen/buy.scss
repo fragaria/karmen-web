@@ -1,7 +1,6 @@
 .buy {
   display: flex;
-  padding-top: gu(3);
-  margin-bottom: gu(6);
+  padding-top: gu();
 }
 
 .buy__image {
@@ -13,13 +12,13 @@
 
 .buy__form {
   width: 100%;
-  max-width: gu(28);
 
   .page-block-headline {
     text-align: center;
 
     @include baseline(s9, $headingtype, 2, $below: 1);
-    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: tablet up);
+    @include baseline(s8, $headingtype, 2, $below: 1, $breakpoint: tablet up);
+    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: desktop up);
   }
 }
 
@@ -28,13 +27,24 @@
   padding: gu(1) gu(2);
 }
 
+@include breakpoint(tablet-small up) {
+  .buy {
+    padding-top: gu(4);
+    margin-bottom: gu(6);
+  }
+}
+
 
 @include breakpoint(tablet up) {
   .buy__image {
     display: block;
   }
 
-  .buy__form .page-block-headline {
-    text-align: left;
+  .buy__form {
+    max-width: gu(28);
+
+    .page-block-headline {
+      text-align: left;
+    }
   }
 }

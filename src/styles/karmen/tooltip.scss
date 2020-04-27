@@ -1,0 +1,7 @@
+.tooltip.__react_component_tooltip {
+  text-align: center;
+  background: rgba(0, 0, 0, .95);
+  color: map-get($palette, white);
+  border-radius: 0;
+  padding: gu(.5);
+}

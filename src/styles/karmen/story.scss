@@ -40,7 +40,7 @@
     @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
   }
 
-  p {
+  p, li a {
     @include baseline(s3, $bodytype, $above: 0);
   }
 }

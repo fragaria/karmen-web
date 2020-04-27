@@ -9,7 +9,7 @@ const messages = defineMessages({
   specialOfferMemo: {
     id: "pricing-block.special_offer_memo",
     defaultMessage:
-      "Free for limited number of connected devices. Curious about large scale operation pricing? Contact us.",
+      "Free for limited number of connected devices.<br />Curious about large scale operation pricing? Contact us.",
   },
 })
 
@@ -78,7 +78,11 @@ const PricingBlock = ({ location, ...props }) => {
                       place="bottom"
                       type="dark"
                       effect="solid"
+                      className="tooltip"
+                      border={false}
                       borderRadius="0"
+                      html={true}
+                      backgroundColor={"rgba(0, 0, 0, .95)"}
                     />
                   </div>
                 </dd>

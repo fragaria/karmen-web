@@ -32,7 +32,7 @@ const BuyBlock = props => {
   const checkoutEnabled = data.site.siteMetadata.checkout.enabled
 
   return (
-    <div className="content-block content-block--sitenavwidth content-block--shift-mobile">
+    <div className="content-block content-block--sitenavwide content-block--shift-mobile">
       <article {...props}>
         <div className="buy">
           <div className="buy__image">

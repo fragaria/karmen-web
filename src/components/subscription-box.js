@@ -1,7 +1,16 @@
 import React from "react"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, defineMessages, useIntl } from "react-intl"
+
+const messages = defineMessages({
+  email: {
+    id: "subscription-box.email",
+    defaultMessage: "Email",
+  },
+})
 
 const SubscriptionBox = () => {
+  const intl = useIntl()
+
   return (
     <div className="content-block content-block--sitenavwide content-block--shift-mobile">
       <div className="subscription-box">
@@ -31,13 +40,13 @@ const SubscriptionBox = () => {
             <fieldset className="form__line">
               <div className="form-control-wrapper form-control-wrapper--inline">
                 <label htmlFor="email" className="hidden">
-                  Email
+                  {intl.formatMessage(messages.email)}
                 </label>
                 <input
                   className="form-control subscription-box__input"
                   type="email"
                   name="EMAIL"
-                  placeholder="E-mail"
+                  placeholder={intl.formatMessage(messages.email)}
                 />
                 <div
                   style={{ position: "absolute", left: "-5000px" }}
@@ -52,7 +61,10 @@ const SubscriptionBox = () => {
                   />
                 </div>
                 <button className="button button--primaryToWhite" type="submit">
-                  Subscribe
+                  <FormattedMessage
+                    id="subscription-box.cta"
+                    defaultMessage="Subscribe"
+                  />
                 </button>
               </div>
             </fieldset>
