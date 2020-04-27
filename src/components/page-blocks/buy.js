@@ -36,7 +36,7 @@ const BuyBlock = props => {
       <article {...props}>
         <div className="buy">
           <div className="buy__image">
-            <Image file={data.pill} alt="Karmen Pill" critical />
+            <Image file={data.pill} alt="Karmen Pill" loading="eager" />
           </div>
           <div className="buy__form">
             <h1 className="page-block-headline">
