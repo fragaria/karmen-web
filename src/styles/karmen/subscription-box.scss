@@ -7,12 +7,19 @@
   padding: gu(1);
   color: map-get($palette, white);
 
-  @include breakpoint(tablet up) {
-    flex-direction: row;
-    padding: gu(2) gu(1.5);
+  @include breakpoint(mobile up) {
+    padding: gu(2) gu(1);
   }
 
-  @include breakpoint(tablet up) {
+  @include breakpoint(tablet-tiny up) {
+    flex-direction: row;
+  }
+
+  @include breakpoint(tablet-small up) {
+    padding: gu(2);
+  }
+
+  @include breakpoint(desktop up) {
     padding: gu(2) gu(3);
   }
 }

@@ -145,8 +145,8 @@
 
   .price__note {
     position: absolute;
-    @include baseline(s1, $bodytype, 1, $breakpoint: mobile down);
-    @include baseline(s1, $bodytype, .55);
+    @include baseline(s1, $bodytype, 1, $above: 0);
+    @include baseline(s1, $bodytype, .55, $breakpoint: mobile up);
     @include baseline(s1, $bodytype, .75, $breakpoint: tablet-small up);
 
     @include breakpoint(tablet-small up) {
@@ -160,6 +160,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: gu();
+    height: gu(6);
 
     @include breakpoint(mobile up) {
       max-width: 100%;

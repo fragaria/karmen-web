@@ -34,6 +34,8 @@
 
 .solution__carousel,
 .solution__carousel .carousel__slider--horizontal {
+  height: gu(11);
+
   @include breakpoint(tablet-tiny up) {
     height: gu(9);
   }
