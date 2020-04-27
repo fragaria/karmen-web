@@ -72,12 +72,28 @@
   }
 
   .price__item {
+    position: relative;
     padding-right: gu(.5);
     white-space: nowrap;
     @include baseline(s3, $bodytype, 1);
 
     @include breakpoint(tablet-small up) {
       padding-right: gu(4);
+
+      &:after {
+        position: absolute;
+        content: ". . . . . . . . . . . . . . . . . ";
+        right: gu(.5);
+        white-space: nowrap;
+        color: map-get($palette, gray-dark);
+      }
+
+      > span {
+        position: relative;
+        background: map-get($palette, gray-light);
+        padding-right: gu(.5);
+        z-index: 1;
+      }
     }
   }
 

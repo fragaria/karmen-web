@@ -51,7 +51,8 @@ const PricingBlock = ({ location, ...props }) => {
 
 
               <dl className="price__items">
-                <dt className="price__item">Karmen Pill</dt>
+                <dt className="price__item">
+                  <span>Karmen Pill</span></dt>
                 <dd className="price__sum">
                   <h3>
                     <FormattedMessage
@@ -60,7 +61,8 @@ const PricingBlock = ({ location, ...props }) => {
                     />
                   </h3>
                 </dd>
-                <dt className="price__item">Karmen</dt>
+                <dt className="price__item">
+                  <span>Karmen</span></dt>
                 <dd className="price__sum price__sum--limited-offer">
                   <h3>
                     <FormattedMessage
