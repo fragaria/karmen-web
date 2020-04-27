@@ -102,7 +102,7 @@ module.exports = {
           },
         ],
         [
-          { name: "Code on GitHub", url: "https://github.com/fragaria/karmen" },
+          { name: "Source code on GitHub", url: "https://github.com/fragaria/karmen" },
           {
             name: "Releases",
             url: "https://github.com/fragaria/karmen/releases",
@@ -128,7 +128,7 @@ module.exports = {
           },
         ],
         [
-          { name: "Kód na GitHubu", url: "https://github.com/fragaria/karmen" },
+          { name: "Zdrojový kód na GitHubu", url: "https://github.com/fragaria/karmen" },
           {
             name: "Releasy",
             url: "https://github.com/fragaria/karmen/releases",
