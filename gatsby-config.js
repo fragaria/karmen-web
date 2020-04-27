@@ -100,6 +100,8 @@ module.exports = {
             name: "Karmen Pill docs",
             url: "https://docs.karmen.tech/#/pill-getting-started",
           },
+        ],
+        [
           { name: "Code on GitHub", url: "https://github.com/fragaria/karmen" },
           {
             name: "Releases",
@@ -124,6 +126,8 @@ module.exports = {
             name: "Karmen Pill dokumentace",
             url: "https://docs.karmen.tech/#/pill-getting-started",
           },
+        ],
+        [
           { name: "Kód na GitHubu", url: "https://github.com/fragaria/karmen" },
           {
             name: "Releasy",
