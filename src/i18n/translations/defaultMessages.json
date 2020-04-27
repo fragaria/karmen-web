@@ -106,250 +106,237 @@
         }
       },
       {
-        "defaultMessage": "<em>Please note that US adapters are currently out-of-stock and allow for a bit longer delivery time.</em>",
-        "end": {
-          "column": 12,
-          "line": 162
-        },
-        "file": "src/components/checkout/form.js",
-        "id": "checkoutform.us_adapters_out_of_stock",
-        "start": {
-          "column": 10,
-          "line": 152
-        }
-      },
-      {
         "defaultMessage": "Variant",
         "end": {
           "column": 24,
-          "line": 190
+          "line": 175
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_variant",
         "start": {
           "column": 22,
-          "line": 187
+          "line": 172
         }
       },
       {
         "defaultMessage": "Count",
         "end": {
           "column": 24,
-          "line": 220
+          "line": 204
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_count",
         "start": {
           "column": 22,
-          "line": 217
+          "line": 201
         }
       },
       {
         "defaultMessage": "Shipping address",
         "end": {
           "column": 18,
-          "line": 250
+          "line": 234
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.shipping_address",
         "start": {
           "column": 16,
-          "line": 247
+          "line": 231
         }
       },
       {
         "defaultMessage": "Your full name",
         "end": {
           "column": 26,
-          "line": 260
+          "line": 244
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_full_name",
         "start": {
           "column": 24,
-          "line": 257
+          "line": 241
         }
       },
       {
         "defaultMessage": "Your email",
         "end": {
           "column": 26,
-          "line": 284
+          "line": 268
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_email",
         "start": {
           "column": 24,
-          "line": 281
+          "line": 265
         }
       },
       {
         "defaultMessage": "Your phone",
         "end": {
           "column": 26,
-          "line": 308
+          "line": 292
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_phone",
         "start": {
           "column": 24,
-          "line": 305
+          "line": 289
         }
       },
       {
         "defaultMessage": "Company name",
         "end": {
           "column": 26,
-          "line": 332
+          "line": 316
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_company",
         "start": {
           "column": 24,
-          "line": 329
+          "line": 313
         }
       },
       {
         "defaultMessage": "Street and house number",
         "end": {
           "column": 26,
-          "line": 356
+          "line": 340
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_street",
         "start": {
           "column": 24,
-          "line": 353
+          "line": 337
         }
       },
       {
         "defaultMessage": "City",
         "end": {
           "column": 26,
-          "line": 380
+          "line": 364
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_city",
         "start": {
           "column": 24,
-          "line": 377
+          "line": 361
         }
       },
       {
         "defaultMessage": "Postal code",
         "end": {
           "column": 26,
-          "line": 404
+          "line": 388
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_postal_code",
         "start": {
           "column": 24,
-          "line": 401
+          "line": 385
         }
       },
       {
         "defaultMessage": "State",
         "end": {
           "column": 28,
-          "line": 429
+          "line": 413
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_state",
         "start": {
           "column": 26,
-          "line": 426
+          "line": 410
         }
       },
       {
         "defaultMessage": "Country",
         "end": {
           "column": 26,
-          "line": 454
+          "line": 438
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.label_country",
         "start": {
           "column": 24,
-          "line": 451
+          "line": 435
         }
       },
       {
         "defaultMessage": "Summary",
         "end": {
           "column": 18,
-          "line": 486
+          "line": 470
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.summary",
         "start": {
           "column": 16,
-          "line": 483
+          "line": 467
         }
       },
       {
         "defaultMessage": "Shipping:",
         "end": {
           "column": 20,
-          "line": 506
+          "line": 490
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.shipping",
         "start": {
           "column": 18,
-          "line": 503
+          "line": 487
         }
       },
       {
         "defaultMessage": "Total:",
         "end": {
           "column": 20,
-          "line": 524
+          "line": 508
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.total",
         "start": {
           "column": 18,
-          "line": 521
+          "line": 505
         }
       },
       {
         "defaultMessage": "<strong>Important note:</strong> Due to complications related to the coronavirus outbreak, order delivery might be delayed. Please <a>contact us</a> for up-to-date information about current expected delivery time.",
         "end": {
-          "column": 18,
-          "line": 552
+          "column": 20,
+          "line": 537
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.corona_warning",
         "start": {
-          "column": 16,
-          "line": 538
+          "column": 18,
+          "line": 523
         }
       },
       {
         "defaultMessage": "You will be redirected to the checkout page after clicking on \"Buy\". VAT amount as well as billing details will be resolved there.",
         "end": {
           "column": 22,
-          "line": 560
+          "line": 546
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.cta_note",
         "start": {
           "column": 20,
-          "line": 557
+          "line": 543
         }
       },
       {
         "defaultMessage": "Buy",
         "end": {
           "column": 20,
-          "line": 571
+          "line": 557
         },
         "file": "src/components/checkout/form.js",
         "id": "checkoutform.cta_buy",
         "start": {
           "column": 18,
-          "line": 568
+          "line": 554
         }
       }
     ],
@@ -526,8 +513,8 @@
       {
         "defaultMessage": "Right at the start of January 2019, we discovered OctoPrint. We set everything up in such a way as to optimize the number of steps through the office it would take to get to the printer. Unfortunately, not everything in OctoPrint is worked out ideally, so we agreed ourselves to help them improve it. We had some ideas about functions that would be useful, and at the same time we found out that a lot of companies and organisations would welcome the possibility to manage their printers in one place. OctoPrint couldn’t do that—it’s always tied to a single printer. We got the idea for an interesting product, and it just happened to be at a time when we wanted to invest in development. We weren’t held up with analyses of markets and competitors, cost-benefit calculations or product briefs. We just went into it with what we ourselves would find useful and which would be simply scalable to multiple printers. We called the product Karmen because it’s a name that’s easily pronounced. It’s also the name of a variety of strawberry. The strawberry—fragaria in expert terminology—had previously given our company its name.",
         "end": {
-          "column": 1210,
-          "line": 81
+          "column": 14,
+          "line": 84
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.story_idea_content",
@@ -540,117 +527,117 @@
         "defaultMessage": "The result",
         "end": {
           "column": 14,
-          "line": 87
+          "line": 90
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.story_result",
         "start": {
           "column": 12,
-          "line": 84
+          "line": 87
         }
       },
       {
         "defaultMessage": "The first Karmen prototypes fulfilled their purpose, but the product had to be properly developed and tested for real operation. We were greatly helped in this by <arenaLink>3D aréna</arenaLink> and <ikemLink>Prague’s Institute for Clinical and Experimental Medicine (IKEM)</ikemLink>, where they print real copies of transplanted organs. We also found out that Karmen has huge added value for schools and co-working spaces. It’s very popular in companies because it enables simple connections between departments where print materials are prepared and branches where the printer is physically present. These don’t have to be in the same building, or even on the same continent.",
         "end": {
           "column": 14,
-          "line": 115
+          "line": 118
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.story_result_content",
         "start": {
           "column": 12,
-          "line": 90
+          "line": 93
         }
       },
       {
         "defaultMessage": "Founders",
         "end": {
           "column": 14,
-          "line": 127
+          "line": 130
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.team_headline",
         "start": {
           "column": 12,
-          "line": 124
+          "line": 127
         }
       },
       {
         "defaultMessage": "Founder and CEO, Fragaria",
         "end": {
           "column": 20,
-          "line": 141
+          "line": 144
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.burian_sub",
         "start": {
           "column": 18,
-          "line": 138
+          "line": 141
         }
       },
       {
         "defaultMessage": "Martin Burián loves to talk about project management and new ideas to make his employees’ work environment a better place. Because he was originally an auditor, he makes sure everything in the company works properly. In Fragaria, he’s in charge of HR, finance, economics and corporate infrastructure. He’s had his ups and downs in his 15 years as CEO, but he’s always been able to learn from his experiences. For Burián, as for the whole company, the Karmen project has become a labour of love, and it fills him with great expectations.",
         "end": {
           "column": 20,
-          "line": 147
+          "line": 150
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.burian_bio",
         "start": {
           "column": 18,
-          "line": 144
+          "line": 147
         }
       },
       {
         "defaultMessage": "CTO of Fragaria, Chairman of Pyvec.org",
         "end": {
           "column": 20,
-          "line": 162
+          "line": 165
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.bilek_sub",
         "start": {
           "column": 18,
-          "line": 159
+          "line": 162
         }
       },
       {
         "defaultMessage": "Martin Bílek started programming in his childhood. At the time, his primary machine was a <didaktikLink>Didaktik Gama</didaktikLink>, which used audiocassettes instead of hard disks as storage. This is one of the reasons he’s keenly aware of how important it is to keep up with developments and to constantly seek out new and innovative solutions.  He considers open source software to be the best direction; it enables programs and solutions to be continuously developed and perfected – Karmen has been built on open source as well. Martin is also the chairman of <pyvecLink>Pyvec.org</pyvecLink>, the Czech community around the Python programming language.",
         "end": {
           "column": 20,
-          "line": 190
+          "line": 193
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.bilek_bio",
         "start": {
           "column": 18,
-          "line": 165
+          "line": 168
         }
       },
       {
         "defaultMessage": "Development team",
         "end": {
           "column": 20,
-          "line": 204
+          "line": 207
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.devteam",
         "start": {
           "column": 18,
-          "line": 201
+          "line": 204
         }
       },
       {
         "defaultMessage": "Fragaria is a traditional Czech specialist in the area of custom IT solutions development with many years of experience in the areas of banking, e-commerce, media companies and startups. In its development projects, Fragaria emphasises agile development methodologies, prototyping and modern solutions, which bring clients maximum benefits and added value. In addition to custom development tailored to clients’ needs, Fragaria invests into the development of its own products. More information is available at <fragaLink>fragaria.cz</fragaLink>.",
         "end": {
           "column": 20,
-          "line": 222
+          "line": 225
         },
         "file": "src/components/page-blocks/about.js",
         "id": "about-block.devteam_bio",
         "start": {
           "column": 18,
-          "line": 207
+          "line": 210
         }
       }
     ],
@@ -662,13 +649,26 @@
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 16,
-          "line": 30
+          "line": 46
         },
         "file": "src/components/page-blocks/buy.js",
         "id": "buy-block.headline",
         "start": {
           "column": 14,
-          "line": 27
+          "line": 43
+        }
+      },
+      {
+        "defaultMessage": "Due to unexpectedly large number of orders, we had to <strong>temporarily disable our online store</strong> to be able fulfill the orders within a reasonable time. Please <contactLink>drop us an email</contactLink> in case you're interested in buying Karmen and we'll let you know once the store is back online.",
+        "end": {
+          "column": 20,
+          "line": 58
+        },
+        "file": "src/components/page-blocks/buy.js",
+        "id": "buy-block.disabled_temporarily",
+        "start": {
+          "column": 18,
+          "line": 51
         }
       }
     ],
@@ -737,39 +737,39 @@
         "defaultMessage": "Your 3D printers{lineBreak}anytime, anywhere",
         "end": {
           "column": 16,
-          "line": 30
+          "line": 34
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.headline",
         "start": {
           "column": 14,
-          "line": 26
+          "line": 30
         }
       },
       {
         "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
         "end": {
           "column": 16,
-          "line": 37
+          "line": 41
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.sub",
         "start": {
           "column": 14,
-          "line": 33
+          "line": 37
         }
       },
       {
         "defaultMessage": "Learn more",
         "end": {
           "column": 80,
-          "line": 46
+          "line": 50
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.cta",
         "start": {
           "column": 12,
-          "line": 46
+          "line": 50
         }
       }
     ],
@@ -856,104 +856,104 @@
         "defaultMessage": "Free for limited number of connected devices. Curious about large scale operation pricing? Contact us.",
         "end": {
           "column": 3,
-          "line": 15
+          "line": 13
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.special_offer_memo",
         "start": {
           "column": 20,
-          "line": 12
+          "line": 9
         }
       },
       {
         "defaultMessage": "One price, unlimited possibilities",
         "end": {
           "column": 12,
-          "line": 37
+          "line": 35
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.headline",
         "start": {
           "column": 10,
-          "line": 34
+          "line": 32
         }
       },
       {
         "defaultMessage": "130 EUR",
         "end": {
-          "column": 16,
-          "line": 48
+          "column": 22,
+          "line": 55
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.pill_price",
         "start": {
-          "column": 14,
-          "line": 45
+          "column": 20,
+          "line": 52
         }
       },
       {
         "defaultMessage": "Free",
         "end": {
-          "column": 16,
-          "line": 62
+          "column": 22,
+          "line": 66
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.karmen_price",
         "start": {
-          "column": 14,
-          "line": 59
+          "column": 20,
+          "line": 63
         }
       },
       {
         "defaultMessage": "Special limited offer",
         "end": {
-          "column": 16,
-          "line": 68
+          "column": 22,
+          "line": 72
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.karmen_price_note",
         "start": {
-          "column": 14,
-          "line": 65
+          "column": 20,
+          "line": 69
         }
       },
       {
         "defaultMessage": "130 EUR",
         "end": {
-          "column": 16,
-          "line": 93
+          "column": 20,
+          "line": 91
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price",
         "start": {
-          "column": 14,
-          "line": 90
+          "column": 18,
+          "line": 88
         }
       },
       {
         "defaultMessage": "Total excl. VAT",
         "end": {
-          "column": 16,
-          "line": 99
+          "column": 20,
+          "line": 97
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.combo_price_note",
         "start": {
-          "column": 14,
-          "line": 96
+          "column": 18,
+          "line": 94
         }
       },
       {
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 14,
-          "line": 108
+          "line": 106
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.buy",
         "start": {
           "column": 12,
-          "line": 105
+          "line": 103
         }
       }
     ],
@@ -978,91 +978,91 @@
         "defaultMessage": "Sign up",
         "end": {
           "column": 18,
-          "line": 40
+          "line": 42
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.signup",
         "start": {
           "column": 16,
-          "line": 37
+          "line": 39
         }
       },
       {
         "defaultMessage": "Register at {signupLink}",
         "end": {
           "column": 18,
-          "line": 53
+          "line": 55
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.signup_note",
         "start": {
           "column": 16,
-          "line": 43
+          "line": 45
         }
       },
       {
         "defaultMessage": "Connect Pill to your printer",
         "end": {
           "column": 18,
-          "line": 67
+          "line": 75
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect",
         "start": {
           "column": 16,
-          "line": 64
+          "line": 72
         }
       },
       {
         "defaultMessage": "Use the printer’s USB port",
         "end": {
           "column": 18,
-          "line": 73
+          "line": 81
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect_note",
         "start": {
           "column": 16,
-          "line": 70
+          "line": 78
         }
       },
       {
         "defaultMessage": "Connect the new printer to your fleet",
         "end": {
           "column": 18,
-          "line": 87
+          "line": 101
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer",
         "start": {
           "column": 16,
-          "line": 84
+          "line": 98
         }
       },
       {
         "defaultMessage": "It’s faster than drinking a cup of coffee",
         "end": {
           "column": 18,
-          "line": 93
+          "line": 107
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer_note",
         "start": {
           "column": 16,
-          "line": 90
+          "line": 104
         }
       },
       {
         "defaultMessage": "You’re good to go!",
         "end": {
           "column": 18,
-          "line": 107
+          "line": 127
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.all_done",
         "start": {
           "column": 16,
-          "line": 104
+          "line": 124
         }
       }
     ],
@@ -1540,27 +1540,27 @@
       {
         "defaultMessage": "Subscribe to Karmen news",
         "end": {
-          "column": 12,
-          "line": 12
+          "column": 14,
+          "line": 13
         },
         "file": "src/components/subscription-box.js",
         "id": "subscription-box.main",
         "start": {
-          "column": 10,
-          "line": 9
+          "column": 12,
+          "line": 10
         }
       },
       {
         "defaultMessage": "Stay in the loop",
         "end": {
-          "column": 12,
-          "line": 18
+          "column": 14,
+          "line": 19
         },
         "file": "src/components/subscription-box.js",
         "id": "subscription-box.sub",
         "start": {
-          "column": 10,
-          "line": 15
+          "column": 12,
+          "line": 16
         }
       }
     ],

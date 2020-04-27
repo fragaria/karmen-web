@@ -23,6 +23,11 @@
   }
 }
 
+.buy__disabled-warning {
+  background: map-get($palette, white);
+  padding: gu(1) gu(2);
+}
+
 
 @include breakpoint(tablet up) {
   .buy__image {

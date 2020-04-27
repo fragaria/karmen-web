@@ -7,7 +7,6 @@
   "checkoutform.error_missing_street",
   "checkoutform.error_missing_city",
   "checkoutform.error_missing_postal_code",
-  "checkoutform.us_adapters_out_of_stock",
   "checkoutform.label_variant",
   "checkoutform.label_count",
   "checkoutform.shipping_address",

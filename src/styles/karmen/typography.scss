@@ -63,54 +63,56 @@ a {
 .typeset {
     // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
     p {
-        @include baseline(
-            $fontsize: s3,
-            $font: $bodytype,
-            $lineheight: 1,
-            $below: 1
-        );
-        font-feature-settings: "kern", "onum", "liga";
+      @include baseline(
+          $fontsize: s3,
+          $font: $bodytype,
+          $lineheight: 1,
+          $below: 1
+      );
+      font-feature-settings: "kern", "onum", "liga";
 
-        &.s9 {
-            @include baseline(
-                $fontsize: s9,
-                $font: $bodytype,
-                $lineheight: 2,
-                $below: 1
-            );
-        }
-
-        &.s8 {
-            @include baseline(
-                $fontsize: s8,
-                $font: $bodytype,
-                $lineheight: 2,
-                $below: 1
-            );
-        }
-
-        &.s7 {
-            @include baseline(
-                $fontsize: s7,
-                $font: $bodytype,
-                $lineheight: 2,
-                $below: 1
-            );
-        }
-
-        &.s6 {
-            @include baseline(
-                $fontsize: s6,
-                $font: $bodytype,
-                $lineheight: 1,
-                $below: 1
-            );
-        }
     }
 
     p + .figure {
         padding-top: gu();
     }
+
+    .s9 {
+        @include baseline(
+            $fontsize: s9,
+            $font: $bodytype,
+            $lineheight: 2,
+            $below: 1
+        );
+    }
+
+    .s8 {
+        @include baseline(
+            $fontsize: s8,
+            $font: $bodytype,
+            $lineheight: 2,
+            $below: 1
+        );
+    }
+
+    .s7 {
+        @include baseline(
+            $fontsize: s7,
+            $font: $bodytype,
+            $lineheight: 2,
+            $below: 1
+        );
+    }
+
+    .s6 {
+        @include baseline(
+            $fontsize: s6,
+            $font: $bodytype,
+            $lineheight: 1,
+            $below: 1
+        );
+    }
+
 
     // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
     h1,
@@ -126,37 +128,37 @@ a {
 
     // Heading level 1.
     h1,
-    .s9 {
+    .hs9 {
         @include baseline($fontsize: s7, $font: $headingtype, $lineheight: 1.53);
     }
 
     // Heading level 2.
     h2,
-    .s8 {
+    .hs8 {
         @include baseline(s6, $headingtype, $lineheight: 2);
     }
 
     // Heading level 3.
     h3,
-    .s7 {
+    .hs7 {
         @include baseline(s5, $headingtype, $lineheight: 2);
     }
 
     // Heading level 4.
     h4,
-    .s6 {
+    .hs6 {
         @include baseline(s4, $headingtype);
     }
 
     // Heading level 5.
     h5,
-    .s5 {
+    .hs5 {
         @include baseline(s3, $headingtype);
     }
 
     // Heading level 6.
     h6,
-    .s4 {
+    .hs4 {
         @include baseline(s2, $headingtype);
     }
 
@@ -296,6 +298,11 @@ a {
     strong,
     .bold {
         font-weight: map-get($bodytype, bold);
+    }
+
+    a {
+      // default anchor style
+      @include anchor-style(true);
     }
 
     // Italic.

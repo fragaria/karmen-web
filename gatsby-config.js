@@ -23,6 +23,7 @@ module.exports = {
     siteUrl: process.env.SITE_URL || "https://karmen.tech", // no trailing slash!
     languages,
     checkout: {
+      enabled: (process.env.CHECKOUT_ENABLED || "1") === "1",
       octobatConfigured: !!process.env.OCTOBAT_API_KEY,
       octobatApiKey: process.env.OCTOBAT_API_KEY || "???",
       octobatBeanieConfigurationId:
@@ -78,13 +79,13 @@ module.exports = {
         { name: "How it works", url: `/en/#principle` },
         { name: "Pricing", url: `/en/#buy` },
         { name: "Buy", url: `/en/buy/` },
-        { name: "Story", url: `/en/story/` },
+        { name: "Karmen story", url: `/en/story/` },
       ],
       cs: [
         { name: "Jak na to", url: `/cs/#principle` },
         { name: "Cena", url: `/cs/#buy` },
         { name: "Koupit", url: `/cs/koupit/` },
-        { name: "Příběh", url: `/cs/pribeh/` },
+        { name: "Příběh Karmen", url: `/cs/pribeh/` },
       ],
     },
     footerNav: {
@@ -99,7 +100,11 @@ module.exports = {
             name: "Karmen Pill docs",
             url: "https://docs.karmen.tech/#/pill-getting-started",
           },
-          { name: "GitHub", url: "https://github.com/fragaria/karmen" },
+          { name: "Code on GitHub", url: "https://github.com/fragaria/karmen" },
+          {
+            name: "Releases",
+            url: "https://github.com/fragaria/karmen/releases",
+          },
         ],
       ],
       cs: [
@@ -119,7 +124,11 @@ module.exports = {
             name: "Karmen Pill dokumentace",
             url: "https://docs.karmen.tech/#/pill-getting-started",
           },
-          { name: "GitHub", url: "https://github.com/fragaria/karmen" },
+          { name: "Kód na GitHubu", url: "https://github.com/fragaria/karmen" },
+          {
+            name: "Releasy",
+            url: "https://github.com/fragaria/karmen/releases",
+          },
         ],
       ],
     },
