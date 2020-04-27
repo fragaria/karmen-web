@@ -75,13 +75,23 @@ const CheckoutBooth = () => {
   }
 
   return (
-    <CheckoutForm
-      onBuy={finalizeSession}
-      contactEmail={config.siteMetadata.company.contactEmail}
-      initialCountryCode={langKey === "cs" ? "CZ" : "US"}
-      showStateField={langKey !== "cs"}
-    />
+    <>
+      {!config.siteMetadata.checkout.octobatConfigured &&
+        <div class="typeset">
+          <p><strong>Configure octobat!</strong></p>
+        </div>
+      }
+      {config.siteMetadata.checkout.octobatConfigured &&
+        <CheckoutForm
+          onBuy={finalizeSession}
+          contactEmail={config.siteMetadata.company.contactEmail}
+          initialCountryCode={langKey === "cs" ? "CZ" : "US"}
+          showStateField={langKey !== "cs"}
+        />
+      }
+    </>
   )
+
 }
 
 export default CheckoutBooth
