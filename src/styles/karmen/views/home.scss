@@ -22,8 +22,6 @@ $narrow-parts-width: gu(45);
 }
 
 .v-home-story {
-  margin-bottom: gu(2);
-
   @include breakpoint(tablet up) {
     margin-bottom: gu(4);
   }
@@ -48,10 +46,14 @@ $narrow-parts-width: gu(45);
   text-align: center;
 
   .page-block-sub {
-    padding-bottom: gu(4);
+    padding-bottom: gu(2);
     max-width: 35em;
     margin-right: auto;
     margin-left: auto;
+
+    @include breakpoint(tablet up) {
+      padding-bottom: gu(4);
+    }
   }
 }
 

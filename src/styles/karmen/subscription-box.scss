@@ -4,11 +4,12 @@
   width: 100%;
   margin: auto;
   background: map-get($palette, red);
-  padding: gu(2) gu(1.5);
+  padding: gu(1);
   color: map-get($palette, white);
 
   @include breakpoint(tablet up) {
     flex-direction: row;
+    padding: gu(2) gu(1.5);
   }
 
   @include breakpoint(tablet up) {

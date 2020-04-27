@@ -53,7 +53,7 @@
   grid-area: contact;
 
   @include breakpoint(tablet-small down) {
-    padding-bottom: gu();
+    padding-bottom: gu(2);
   }
 }
 

@@ -28,14 +28,6 @@
     height: gu(25)
   }
 
-  &:not(:last-of-type) {
-    margin-bottom: gu(1);
-
-    @include breakpoint(tablet-small up) {
-      margin-bottom: 0;
-    }
-  }
-
   .cases__inner-box {
     position: relative;
     padding: gu(2) gu(1) 0;

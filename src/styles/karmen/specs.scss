@@ -2,18 +2,38 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(tablet-small up) {
+    flex-direction: row;
+  }
 }
 
 .specs__box {
   flex: 1;
   margin-bottom: gu(2);
 
+  @include breakpoint(tablet-small up) {
+    margin-bottom: 0;
+  }
+
+  + .specs__box {
+    margin-top: gu(1);
+
+    @include breakpoint(tablet-small up) {
+      margin-top: 0;
+      margin-left: gu(2.5);
+      padding-left: gu(2.5);
+      border-left: 1px map-get($palette, gray-medium) solid;
+    }
+  }
+
   h2 {
     flex: 1;
     padding-right: gu(1);
     white-space: nowrap;
 
-    @include baseline(s7, $headingtype, 2, $above: 4, $below: 2);
+    @include baseline(s7, $headingtype, 2, $above: 1, $below: 2);
+    @include baseline(s7, $headingtype, 2, $above: 4, $below: 2, $breakpoint: tablet-small up);
   }
 }
 
@@ -29,21 +49,11 @@
 .specs__img {
   width: 100%;
   max-width: gu(12);
-  height: gu(8);
-}
+  height: gu(4);
 
-@include breakpoint(tablet up) {
-  .specs {
-    flex-direction: row;
-  }
-
-  .specs__box {
-    margin-bottom: 0;
-
-    + .specs__box {
-      margin-left: gu(2.5);
-      padding-left: gu(2.5);
-      border-left: 1px map-get($palette, gray-medium) solid;
-    }
+  @include breakpoint(tablet-tiny up) {
+    max-width: 100%;
+    height: gu(8);
   }
 }
+

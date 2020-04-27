@@ -16,7 +16,7 @@
   }
 }
 
-@mixin contentBlock($mobilePadding: 1.5, $defaultPadding: 3) {
+@mixin contentBlock($mobilePadding: 1, $defaultPadding: 3) {
   width: 100%;
 
   @include cbMargin(auto);
@@ -49,7 +49,7 @@
 .content-block.content-block--shift-mobile {
   width: auto;
 
-  @include cbMargin(gu(-1.5));
+  @include cbMargin(gu(-1));
 
   @include breakpoint(tablet-small up) {
     width: 100%;

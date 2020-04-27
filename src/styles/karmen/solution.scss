@@ -6,6 +6,7 @@
   padding-bottom: gu(7);
 
   @include breakpoint(tablet-tiny down) {
+    padding-bottom: gu(3);
     // Hide desktop background image at the right.
     &:before,
     &:after {
@@ -25,14 +26,14 @@
 }
 
 .solution__mobileimage {
-  height: gu(16);
+  height: gu(6);
   margin-right: gu(-6);
+  margin-left: gu(-1);
+  margin-bottom: gu();
 }
 
 .solution__carousel,
 .solution__carousel .carousel__slider--horizontal {
-  height: gu(15);
-
   @include breakpoint(tablet-tiny up) {
     height: gu(9);
   }
@@ -46,16 +47,12 @@
   }
 }
 
-
-
-
-
-
 .solution__carousel {
   width: 100%;
 
   h3 {
-    @include baseline(s6, $headingtype, 2, $below: 1, $above: 0);
+    @include baseline(s6, $headingtype, 1, $below: 1, $above: 0);
+    @include baseline(s6, $headingtype, 2, $below: 1, $breakpoint: mobile up);
   }
   p {
     @include baseline(s4, $bodytype, 1, $above: 0);

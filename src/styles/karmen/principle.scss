@@ -58,7 +58,7 @@
 }
 
 .principle-box__nr {
-  padding: gu(1) gu(1) gu(0) gu(1);
+  padding: gu(1) gu(.5) gu(0) gu(1);
 
   @include breakpoint(tablet-small up) {
     padding: gu(1.5) gu(1) gu(0) gu(3);

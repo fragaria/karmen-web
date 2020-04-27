@@ -1,8 +1,16 @@
 .testimonials {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: gu();
+
+  @include breakpoint(mobile up) {
+  }
+
+  @include breakpoint(tablet-small up) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: gu(3) gu();
+  }
 }
 
 .testimonials__item {
