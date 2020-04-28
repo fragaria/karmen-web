@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import classNames from "classnames"
 import { Formik, Form, Field } from "formik"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
@@ -40,9 +41,7 @@ const CheckoutForm = ({
     // Drop internal variant reference
     delete retVals["variant"]
 
-    setSubmitting(true)
-
-    return onBuy(retVals)
+    onBuy(retVals)
   }
 
   const intl = useIntl()
@@ -161,6 +160,10 @@ const CheckoutForm = ({
           evt.preventDefault()
           setFieldValue("quantity", Math.max(1, values.quantity - 1))
         }
+
+        const submitClass = classNames("button button--red", {
+          "button--loading": isSubmitting,
+        })
 
         return (
           <Form className="checkout-form">
@@ -548,7 +551,7 @@ const CheckoutForm = ({
                 </p>
                 <button
                   type="submit"
-                  className="button button--red"
+                  className={submitClass}
                   disabled={isSubmitting || !isValid}
                 >
                   <FormattedMessage

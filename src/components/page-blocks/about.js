@@ -43,7 +43,11 @@ const AboutBlock = props => {
       <section {...props}>
         <div className="about-hero">
           <div className="content-block about-hero__headline">
-            <img className="about-hero__img" src={kpsImg} alt="Karmen by Fragaria" />
+            <img
+              className="about-hero__img"
+              src={kpsImg}
+              alt="Karmen by Fragaria"
+            />
             <h1 className="about-hero__main sitenav__anchorpush">
               <span className="sitenav__anchor" id="about"></span>
               <FormattedMessage

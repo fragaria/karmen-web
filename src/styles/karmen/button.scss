@@ -1,60 +1,87 @@
-@mixin buttonStyle($foreground, $background, $foregroundHover, $backgroundHover) {
-    color: $foreground;
-    background-color: $background;
-    transition: all .2s ease-in-out;
-    text-transform: uppercase;
-    font-family: getFontFamily($bodytype);
-    font-weight: 600;
-    letter-spacing: 2px;
-    cursor: pointer;
-
-    @include fontsize(s2);
-
-    &:hover,
-    &:focus {
-        color: $foregroundHover;
-        background: $backgroundHover;
+@mixin buttonPulse($name, $color) {
+  @keyframes button-pulse-#{$name} {
+    0% {
+      box-shadow: 0 0 0 0px fade-out($color: $color, $amount: 0.2);
     }
-
-    &:focus {
-        outline: none;
+    100% {
+      box-shadow: 0 0 0 gu(1) fade-out($color: $color, $amount: 1);
     }
+  }
+  animation: button-pulse-#{$name} 1s infinite;
+}
 
-    &:disabled {
-      background: map-get($palette, gray-dark);
-    }
+@mixin buttonStyle(
+  $name,
+  $foreground,
+  $background,
+  $foregroundHover,
+  $backgroundHover
+) {
+  color: $foreground;
+  background-color: $background;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-family: getFontFamily($bodytype);
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  @include fontsize(s2);
+
+  &:hover:not(.button--loading),
+  &:focus {
+    color: $foregroundHover;
+    background: $backgroundHover;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: wait;
+  }
+
+  &:disabled:not(.button--loading) {
+    background: map-get($palette, gray-dark);
+  }
+
+  &.button--loading {
+    @include buttonPulse($name, $background);
+  }
 }
 
 .button,
 a.button {
-    display: inline-block;
-    padding: 0 gu(1);
-    line-height: gu(3);
-    height: gu(3);
-    border: 0;
+  display: inline-block;
+  padding: 0 gu(1);
+  line-height: gu(3);
+  height: gu(3);
+  border: 0;
 
-    @include breakpoint(tablet up) {
-      padding: 0 gu(1.5);
-    }
+  @include breakpoint(tablet up) {
+    padding: 0 gu(1.5);
+  }
 
-    @include buttonStyle(
-        map-get(map-get($button-variants, primary), foreground),
-        map-get(map-get($button-variants, primary), background),
-        map-get(map-get($button-variants, primary), foregroundHover),
-        map-get(map-get($button-variants, primary), backgroundHover)
-    );
+  @include buttonStyle(
+    "primary",
+    map-get(map-get($button-variants, primary), foreground),
+    map-get(map-get($button-variants, primary), background),
+    map-get(map-get($button-variants, primary), foregroundHover),
+    map-get(map-get($button-variants, primary), backgroundHover)
+  );
 }
 
-
 @each $variantName, $variantSettings in $button-variants {
-    .button.button--#{$variantName} {
-        @include buttonStyle(
-            map-get($variantSettings, foreground),
-            map-get($variantSettings, background),
-            map-get($variantSettings, foregroundHover),
-            map-get($variantSettings, backgroundHover)
-        );
-    }
+  .button.button--#{$variantName} {
+    @include buttonStyle(
+      $variantName,
+      map-get($variantSettings, foreground),
+      map-get($variantSettings, background),
+      map-get($variantSettings, foregroundHover),
+      map-get($variantSettings, backgroundHover)
+    );
+  }
 }
 
 .button.button--responsive {
