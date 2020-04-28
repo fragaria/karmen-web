@@ -133,18 +133,24 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  @include breakpoint(mobile up) {
+  @include breakpoint(tablet-small up) {
     flex-direction: row;
   }
 }
 
 .footer-linkgroups__group {
-  padding-right: gu(3);
+  padding-right: gu(1);
+
+  @include breakpoint(tablet-tiny up) {
+    padding-right: gu(2);
+  }
+
+  @include breakpoint(desktop up) {
+    padding-right: gu(3);
+  }
 }
 
 .footer-linkgroups__item {
-  // @include baseline(s2, $bodytype, 1);
-
   a {
     @include anchor-style();
   }
