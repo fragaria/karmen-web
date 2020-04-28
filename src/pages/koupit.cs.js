@@ -16,6 +16,7 @@ const BuyPage = ({ location }) => {
         description="Kupte si Karmen a kontrolér Karmen Pill a ovládejte všechny svoje 3D tiskárny odkudkoliv na světě."
         lang="cs"
         img={pillWCloudImg}
+        pathname="/cs/koupit/"
       />
       <SEOBusinessInfo />
       <BuyBlock />

@@ -7,7 +7,7 @@ import PaidBlock from "components/page-blocks/paid"
 const Paid = ({ location }) => {
   return (
     <Layout location={location}>
-      <SEOMetadata title="Paid" />
+      <SEOMetadata title="Paid" pathname="/en/paid/" />
       <PaidBlock />
     </Layout>
   )

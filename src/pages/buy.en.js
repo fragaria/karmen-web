@@ -15,6 +15,7 @@ const BuyPage = ({ location }) => {
         title="Buy Karmen"
         description="Buy Karmen and its companion Karmen Pill box and control all your 3D printers from anywhere in the world."
         img={pillWCloudImg}
+        pathname="/en/buy/"
       />
       <SEOBusinessInfo />
       <BuyBlock />

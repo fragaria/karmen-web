@@ -18,7 +18,10 @@ import StoryBlock from "components/page-blocks/story"
 const IndexENPage = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-home">
-      <SEOMetadata title="Your 3D printers anytime, anywhere with Karmen" />
+      <SEOMetadata
+        title="Your 3D printers anytime, anywhere with Karmen"
+        pathname="/en/"
+      />
       <SEOBusinessInfo />
       <HeroBlock className="v-home-hero v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />

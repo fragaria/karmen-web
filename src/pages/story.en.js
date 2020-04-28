@@ -12,6 +12,7 @@ const StoryPage = ({ location }) => {
       <SEOMetadata
         title="The Karmen story"
         description="All innovations come from laziness. And that was of course the case of Karmen too."
+        pathname="/en/story/"
       />
       <SEOBusinessInfo />
       <AboutBlock />

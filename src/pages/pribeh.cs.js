@@ -13,6 +13,7 @@ const StoryPage = ({ location }) => {
         lang="cs"
         title="Příběh Karmen"
         description="Všechny inovace vychází z lenosti. Stejně tak vznikla i Karmen."
+        pathname="/cs/pribeh/"
       />
       <SEOBusinessInfo />
       <AboutBlock />
