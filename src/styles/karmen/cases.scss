@@ -37,7 +37,7 @@
     }
 
     @include breakpoint(desktop up) {
-      padding: gu(6) gu(2.5) gu(4);
+      padding: gu(6) gu(3) gu(4);
     }
 
     &:before {
