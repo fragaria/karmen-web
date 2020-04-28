@@ -58,11 +58,11 @@ function SEOMetadata({ description, lang, meta, title, img, pathname }) {
           content: "index,follow",
         },
         {
-          name: `og:url`,
+          property: `og:url`,
           content: metaUrl,
         },
         {
-          name: `og:image`,
+          property: `og:image`,
           content: metaImg,
         },
         {
