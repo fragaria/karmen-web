@@ -7,7 +7,7 @@ import PaymentCancelledBlock from "components/page-blocks/payment-cancelled"
 const Zruseno = ({ location }) => {
   return (
     <Layout location={location}>
-      <SEOMetadata title="Platba zrušena" />
+      <SEOMetadata title="Platba zrušena" lang="cs" />
       <PaymentCancelledBlock />
     </Layout>
   )

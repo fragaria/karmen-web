@@ -33,7 +33,7 @@
     padding: gu(2) gu(1) 0;
 
     @include breakpoint(tablet-small up) {
-      padding: gu(2) gu(2.5);
+      padding: gu(2) gu(2);
     }
 
     @include breakpoint(desktop up) {

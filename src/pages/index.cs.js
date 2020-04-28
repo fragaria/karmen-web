@@ -18,7 +18,7 @@ import StoryBlock from "components/page-blocks/story"
 const IndexPage = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-home">
-      <SEOMetadata title="Vítejte" />
+      <SEOMetadata title="Vítejte" lang="cs" />
       <SEOBusinessInfo />
       <HeroBlock className="v-home-hero v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />

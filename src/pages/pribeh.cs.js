@@ -9,7 +9,11 @@ import AboutBlock from "components/page-blocks/about"
 const StoryPage = ({ location }) => {
   return (
     <Layout location={location} containerClass="v-story">
-      <SEOMetadata title="Příběh Karmen" />
+      <SEOMetadata
+        lang="cs"
+        title="Příběh Karmen"
+        description="Všechny inovace vychází z lenosti. Stejně tak vznikla i Karmen."
+      />
       <SEOBusinessInfo />
       <AboutBlock />
     </Layout>

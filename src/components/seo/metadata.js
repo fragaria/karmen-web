@@ -30,7 +30,7 @@ function SEOMetadata({ description, lang, meta, title, img, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImg = img || fallbackImg
+  const metaImg = `${site.siteMetadata.siteUrl}${img || fallbackImg}`
   const metaUrl = `${site.siteMetadata.siteUrl}${pathname || "/"}`
 
   return (
