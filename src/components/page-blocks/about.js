@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl"
 
 import { BackgroundImage } from "components/image"
 
+import kpsImg from "assets/img/karmen-plus-strawberry.svg"
 import strawberryImg from "assets/img/strawberry.svg"
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
@@ -42,6 +43,7 @@ const AboutBlock = props => {
       <section {...props}>
         <div className="about-hero">
           <div className="content-block about-hero__headline">
+            <img className="about-hero__img" src={kpsImg} />
             <h1 className="about-hero__main sitenav__anchorpush">
               <span className="sitenav__anchor" id="about"></span>
               <FormattedMessage

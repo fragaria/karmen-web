@@ -19,11 +19,18 @@
 }
 
 .about-hero__main {
-  @include baseline(s9, $headingtype, 3, $below: 1);
+  @include baseline(s9, $headingtype, 2, $below: 1);
 }
 
 .about-hero__sub {
   @include baseline(s4, $bodytype, 1);
+}
+
+.about-hero__img {
+  height: gu(3);
+  display: none;
+  margin: auto;
+  margin-bottom: gu();
 }
 
 .about-body {
@@ -105,6 +112,10 @@
   .about-hero {
     height: gu(16);
     margin-bottom: gu(3);
+  }
+
+  .about-hero__img {
+    display: block;
   }
 
   .about-founders {
