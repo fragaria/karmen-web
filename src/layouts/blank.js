@@ -9,12 +9,14 @@ import React from "react"
 import classNames from "classnames"
 import PropTypes from "prop-types"
 
+import IEWarning from "components/legacy/ie-warning"
+
 const BlankLayout = ({ wrapperClass = "", children } = {}) => {
   const containerClass = classNames(
-    "page-container baseline-grid js-ie-warn",
+    "page-container baseline-grid",
     wrapperClass
   )
-  return <div className={containerClass}>{children}</div>
+  return <IEWarning className={containerClass}>{children}</IEWarning>
 }
 
 BlankLayout.propTypes = {
