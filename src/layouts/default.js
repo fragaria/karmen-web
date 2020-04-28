@@ -47,6 +47,8 @@ const CC = () => {
         backdropFilter: "saturate(180%) blur(10px)",
         fontSize: ".9rem",
         padding: "1rem",
+        zIndex: "9999",
+        justifyContent: "center",
       }}
       buttonStyle={{
         fontFamily: "'Fira Sans', Helvetica, Arial, sans-serif",
