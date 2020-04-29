@@ -4,7 +4,6 @@ import { FormattedMessage } from "react-intl"
 
 import { BackgroundImage } from "components/image"
 
-import kpsImg from "assets/img/karmen-plus-strawberry.svg"
 import strawberryImg from "assets/img/strawberry.svg"
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
@@ -16,6 +15,9 @@ const AboutBlock = props => {
       }
       martinBurian: file(relativePath: { eq: "martin-burian.jpg" }) {
         ...fluidImage600_traced
+      }
+      cover: file(relativePath: { eq: "scientist.jpg" }) {
+        ...fluidImage1920
       }
       site {
         siteMetadata {
@@ -41,28 +43,25 @@ const AboutBlock = props => {
       </span>
       <meta itemProp="url" content={data.site.siteMetadata.siteUrl} />
       <section {...props}>
-        <div className="about-hero">
-          <div className="content-block about-hero__headline">
-            <img
-              className="about-hero__img"
-              src={kpsImg}
-              alt="Karmen by Fragaria"
-            />
-            <h1 className="about-hero__main sitenav__anchorpush">
-              <span className="sitenav__anchor" id="about"></span>
-              <FormattedMessage
-                id="about-block.story_title"
-                defaultMessage="The Karmen story"
-              />
-            </h1>
-            <h2 className="about-hero__sub">
-              <FormattedMessage
-                id="about-block.story_motto"
-                defaultMessage="All innovations come from laziness"
-              />
-            </h2>
+        <BackgroundImage file={data.cover} className="about-hero">
+          <div className="about-hero__cover">
+            <div className="content-block about-hero__headline">
+              <h1 className="about-hero__main sitenav__anchorpush">
+                <span className="sitenav__anchor" id="about"></span>
+                <FormattedMessage
+                  id="about-block.story_title"
+                  defaultMessage="The Karmen story"
+                />
+              </h1>
+              <h2 className="about-hero__sub">
+                <FormattedMessage
+                  id="about-block.story_motto"
+                  defaultMessage="All innovations come from laziness"
+                />
+              </h2>
+            </div>
           </div>
-        </div>
+        </BackgroundImage>
 
         <div className="content-block content-block--narrower about-body">
           <h3>
