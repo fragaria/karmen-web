@@ -521,7 +521,7 @@ const CheckoutForm = ({
               </div>
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
-              <div className="typeset">
+              {/* <div className="typeset">
                 <p className="checkout-form__corona-warning">
                   <FormattedMessage
                     id="checkoutform.corona_warning"
@@ -539,7 +539,7 @@ const CheckoutForm = ({
                     }}
                   />
                 </p>
-              </div>
+              </div> */}
               <div className="checkout-form__submit">
                 <p>
                   <em>
