@@ -80,6 +80,17 @@ const Sitenav = () => {
               <span itemProp="name">Karmen</span>
             </Link>
 
+            {data.site.siteMetadata.nav[intl.locale].map(item => (
+              <Link
+                to={item.url}
+                className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
+                itemProp="url"
+                key={item.url}
+              >
+                <span itemProp="name">{item.name}</span>
+              </Link>
+            ))}
+
             {intl.locale === "en" && (
               <Link
                 to="/cs/"
@@ -98,17 +109,6 @@ const Sitenav = () => {
                 EN
               </Link>
             )}
-
-            {data.site.siteMetadata.nav[intl.locale].map(item => (
-              <Link
-                to={item.url}
-                className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
-                itemProp="url"
-                key={item.url}
-              >
-                <span itemProp="name">{item.name}</span>
-              </Link>
-            ))}
           </div>
           <button className={mobileToggleClasses} onClick={toggleMobileMenu}>
             <span className="hamburger-box">

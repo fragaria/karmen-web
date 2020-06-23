@@ -48,7 +48,9 @@
 }
 
 .sitenav__links {
+  position: relative;
   display: flex;
+  width: 100%;
   align-items: center;
 }
 
@@ -85,28 +87,31 @@
 .sitenav__company {
   display: block;
   margin: 0;
+  margin-right: gu(1);
   font-family: getFontFamily($headingtype);
   font-weight: map-get($headingtype, semi);
   font-size: 1.25rem;
   letter-spacing: .01rem;
 
+  @include breakpoint(mobile up) {
+    margin-right: gu(1.5);
+  }
+
   @include breakpoint(tablet-tiny up) {
+    margin-right: gu(2.5);
     font-size: 1.5rem;
   }
+
 }
 
 .sitenav__langswitch {
   background: map-get($palette, gray-light);
-  margin-left: gu(1);
   padding: gu(0.3) gu(0.5);
   margin-right: gu(.5);
 
-  @include breakpoint(mobile up) {
-    margin-left: gu(1.5);
-  }
-
-  @include breakpoint(tablet-tiny up) {
-    margin-left: gu(2.5);
+  @include breakpoint(tablet up) {
+    position: absolute;
+    right: 0;
   }
 }
 
