@@ -108,12 +108,14 @@ module.exports = {
         { name: "Pricing", url: `/en/#buy` },
         { name: "Buy", url: `/en/buy/` },
         { name: "Karmen story", url: `/en/story/` },
+        { name: "Contact", url: `/en/#contact` },
       ],
       cs: [
         { name: "Jak na to", url: `/cs/#principle` },
         { name: "Cena", url: `/cs/#buy` },
         { name: "Koupit", url: `/cs/koupit/` },
         { name: "Příběh Karmen", url: `/cs/pribeh/` },
+        { name: "Kontakt", url: `/en/#contact` },
       ],
     },
     footerNav: {
@@ -269,6 +271,9 @@ module.exports = {
     // Make specific links smooth-scrollable
     {
       resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      },
     },
     // Generate sitemap in production mode
     {

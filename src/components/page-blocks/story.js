@@ -26,7 +26,7 @@ const StoryBlock = props => {
         <div className="story">
           <div className="story__story story-box">
             <h1 className="sitenav__anchorpush">
-              <span className="sitenav__anchor" id="story"></span>
+              <span className="sitenav__anchor" id="contact"></span>
               <FormattedMessage
                 id="story-block.karmen_story"
                 defaultMessage="The Karmen story"

@@ -91,24 +91,46 @@ const Sitenav = () => {
               </Link>
             ))}
 
-            {intl.locale === "en" && (
-              <Link
-                to="/cs/"
-                className="sitenav__langswitch"
-                title="Přepnout do češtiny"
-              >
-                CS
-              </Link>
-            )}
-            {intl.locale !== "en" && (
-              <Link
-                to="/en/"
-                className="sitenav__langswitch"
-                title="Switch to english"
-              >
-                EN
-              </Link>
-            )}
+            <div className="sitenav__right">
+              {intl.locale === "en" && (
+                <>
+                  <a
+                    href="https://cloud.karmen.tech/login"
+                    target="_blank"
+                    className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
+                  >
+                    Log in
+                  </a>
+
+                  <Link
+                    to="/cs/"
+                    className="sitenav__langswitch"
+                    title="Přepnout do češtiny"
+                  >
+                    CS
+                  </Link>
+                </>
+              )}
+              {intl.locale !== "en" && (
+                <>
+                  <a
+                    href="https://cloud.karmen.tech/login"
+                    target="_blank"
+                    className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
+                  >
+                    Přihlásit se
+                  </a>
+
+                  <Link
+                    to="/en/"
+                    className="sitenav__langswitch"
+                    title="Switch to english"
+                  >
+                    EN
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
           <button className={mobileToggleClasses} onClick={toggleMobileMenu}>
             <span className="hamburger-box">

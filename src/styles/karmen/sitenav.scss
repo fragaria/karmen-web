@@ -108,12 +108,8 @@
   background: map-get($palette, gray-light);
   padding: gu(0.3) gu(0.5);
   margin-right: gu(.5);
-
-  @include breakpoint(tablet up) {
-    position: absolute;
-    right: 0;
-  }
 }
+
 
 .sitenav__anchorpush {
   position: relative;
@@ -125,6 +121,16 @@
 
   @include breakpoint(tablet up) {
     top: -1 * map-get($sitenav-height, tablet-tiny);
+  }
+}
+
+.sitenav__right {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(tablet up) {
+    position: absolute;
+    right: 0;
   }
 }
 
