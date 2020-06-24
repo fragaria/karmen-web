@@ -56,7 +56,7 @@ const PricingBlock = ({ location, ...props }) => {
                   </h3>
                 </dd>
                 <dt className="price__item">
-                  <span>Karmen</span>
+                  <span>Karmen Cloud</span>
                 </dt>
                 <dd className="price__sum price__sum--limited-offer">
                   <h3>
