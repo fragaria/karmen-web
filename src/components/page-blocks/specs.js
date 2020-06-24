@@ -96,7 +96,7 @@ const SpecsBlock = props => {
                 }}
                 alt="Karmen cloud"
               />
-              <h2>Karmen</h2>
+              <h2>Karmen Cloud</h2>
             </div>
             <ul className="arrow-list">
               <li className="arrow-list__item">
