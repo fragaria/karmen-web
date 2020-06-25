@@ -265,16 +265,6 @@ module.exports = {
           "https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    // Make specific links smooth-scrollable
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100
-      },
-    },
     // Generate sitemap in production mode
     {
       resolve: "gatsby-plugin-sitemap",
