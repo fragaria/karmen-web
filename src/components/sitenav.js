@@ -99,7 +99,7 @@ const Sitenav = () => {
                     target="_blank"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
                   >
-                    Log in
+                    Sign up
                   </a>
 
                   <Link
