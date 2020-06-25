@@ -109,13 +109,15 @@ module.exports = {
         { name: "Buy", url: `/en/buy/` },
         { name: "Karmen story", url: `/en/story/` },
         { name: "Contact", url: `/en/#contact` },
+        { name: "Press", url: `/en/press` },
       ],
       cs: [
         { name: "Jak na to", url: `/cs/#principle` },
         { name: "Cena", url: `/cs/#buy` },
         { name: "Koupit", url: `/cs/koupit/` },
         { name: "Příběh Karmen", url: `/cs/pribeh/` },
-        { name: "Kontakt", url: `/en/#contact` },
+        { name: "Kontakt", url: `/cs/#contact` },
+        { name: "Tiskové zprávy", url: `/cs/tiskove-zpravy` },
       ],
     },
     footerNav: {
@@ -214,6 +216,36 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, "src", "assets", "img"),
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `press`,
+        path: `${__dirname}/src/content/press`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
       },
     },
     `gatsby-transformer-sharp`,
