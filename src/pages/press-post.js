@@ -12,7 +12,7 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} containerClass="v-story">
+    <Layout location={location} containerClass="v-press">
       <SEOMetadata
         title="The Karmen story"
         description="All innovations come from laziness. And that was of course the case of Karmen too."
@@ -20,9 +20,9 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
       />
       <SEOBusinessInfo />
 
-      <article>
+      <article className="content-block content-block--narrower">
         <header>
-          <h1>
+          <h1 className="page-block-headline">
             {post.frontmatter.title}
           </h1>
           <p>
@@ -31,25 +31,6 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
-
-      <nav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }
@@ -69,6 +50,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        lang
         date(formatString: "MMMM DD, YYYY")
         description
       }
