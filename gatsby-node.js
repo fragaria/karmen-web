@@ -18,7 +18,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title
+                title,
+                lang
               }
             }
           }
@@ -35,16 +36,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-
     createPage({
-      path: post.node.fields.slug,
+      path: `${post.node.frontmatter.lang}/press${post.node.fields.slug.replace(/en\/|cs\//gi, '')}`,
       component: pressPost,
       context: {
         slug: post.node.fields.slug,
-        previous,
-        next,
+        lang: post.node.frontmatter.lang,
       },
     })
   })

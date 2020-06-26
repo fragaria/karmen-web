@@ -30,25 +30,54 @@
     @include baseline(s8, $headingtype, 2, $above: 3, $below: 2);
     @include baseline(s8, $headingtype, 2, $above: 4, $below: 3, $breakpoint: mobile up);
     @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 3, $breakpoint: tablet-small up);
+  }
+}
 
-    @include breakpoint(desktop up) {
-      @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 3);
+.v-press-post {
+  small {
+    display: block;
+
+    @include baseline(s3, $bodytype, 1, $above: 0, $below: 1);
+    @include baseline(s3, $bodytype, 1, $above: 0, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  &:not(:first-child) {
+    h3 {
+      position: relative;
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: -1px;
+        width: 100%;
+        background: map-get($palette, gray-medium);
+        height: 1px;
+      }
     }
   }
 }
 
-.v-press-post:not(:first-child) {
-  h3 {
-    position: relative;
+.v-press-detail {
+  p {
+    @include baseline(s3, $bodytype, 1, $below: 1);
+    @include baseline(s4, $bodytype, 1, $below: 1, $breakpoint: tablet-small up);
+  }
 
-    &:after {
-      content: " ";
-      display: block;
-      position: absolute;
-      top: -1px;
-      width: 100%;
-      background: map-get($palette, gray-medium);
-      height: 1px;
-    }
+  .page-block-headline {
+    @include baseline(s8, $headingtype, 2, $above: 3, $below: 1);
+    @include baseline(s8, $headingtype, 2, $above: 4, $below: 1, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  small {
+    display: block;
+
+    @include baseline(s3, $bodytype, 1, $below: 3);
+    @include baseline(s3, $bodytype, 1, $below: 3, $breakpoint: tablet-small up);
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin: gu(2) 0;
   }
 }

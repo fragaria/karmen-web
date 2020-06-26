@@ -117,7 +117,7 @@ module.exports = {
         { name: "Koupit", url: `/cs/koupit/` },
         { name: "Příběh Karmen", url: `/cs/pribeh/` },
         { name: "Kontakt", url: `/cs/#contact` },
-        { name: "Tiskové zprávy", url: `/cs/tiskove-zpravy` },
+        { name: "Tiskové zprávy", url: `/cs/press` },
       ],
     },
     footerNav: {

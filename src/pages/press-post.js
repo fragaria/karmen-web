@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "layouts/en"
 
@@ -8,11 +8,9 @@ import SEOBusinessInfo from "components/seo/business-info"
 
 const PressPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
-    <Layout location={location} containerClass="v-press">
+    <Layout location={location} containerClass="v-press v-press-detail">
       <SEOMetadata
         title="The Karmen story"
         description="All innovations come from laziness. And that was of course the case of Karmen too."
@@ -25,11 +23,14 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
           <h1 className="page-block-headline">
             {post.frontmatter.title}
           </h1>
-          <p>
+          <small>
             {post.frontmatter.date}
-          </p>
+          </small>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          className="text-left"
+        />
       </article>
     </Layout>
   )

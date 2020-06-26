@@ -27,7 +27,7 @@ const PressListing = ({ posts, site, location, ...props }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug} className="v-press-post content-block content-block--narrower">
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <Link style={{ boxShadow: `none` }} to={node.frontmatter.lang + "/press" + node.fields.slug.replace(/en\/|cs\//gi, '')}>
                 <h3>
                     {title}
                 </h3>

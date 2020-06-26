@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "layouts/cs"
 
@@ -7,8 +7,6 @@ import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
 import PressListing from "components/page-blocks/press-listing"
-
-import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
 const PressPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
@@ -58,6 +56,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            lang
             description
           }
         }
