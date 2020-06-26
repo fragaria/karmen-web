@@ -1,28 +1,30 @@
 ---
-title: CS Karmen turns common 3D printers into smart ones
+title: Karmen promění běžné 3D tiskárny na chytré
 date: "2020-03-30T22:12:03.284Z"
 lang: cs
-description: "A revolutionary blend of cloud service and a hardware controller by Czech engineers brings an open source solution for remote management and monitoring of 3D printers to everyone’s doorstep."
+description: "Revoluční spojení cloudové služby a kontroleru z dílny českých vývojářů přináší open source řešení pro vzdálenou správu a monitoring 3D tiskáren"
 ---
 
-A Czech developer company [Fragaria](https://fragaria.cz) introduces [Karmen](https://karmen.tech/en/): a solution to make common 3D printers “smarter”, to improve their accessibility and to make their usage a lot more convenient.
+Česká vývojářská firma [Fragaria](https://fragaria.cz) dnes představila řešení [Karmen](https://karmen.tech/en/), které přidá běžným 3D tiskárnám novou úroveň „chytrosti“, přístupnosti a pohodlnosti používání.
 
-[Karmen](https://karmen.tech/en/) users can manage their 3D print jobs from anywhere in the world—run them, pause them, cancel them or just merely watch their progress layer by layer. It doesn’t matter where the printer operator resides: being it in the same room, at work or on the other side of the globe. Up until now, printer operators had to be physically present at the very place where print happens as most printers simply lack the remote management support.
+Pomocí [Karmen](https://karmen.tech/en/) může uživatel spravovat 3D tiskové úlohy odkudkoli – spouštět je, pozastavovat, rušit nebo třeba sledovat, jak vznikají vrstvu po vrstvě. Je jedno, jestli se obsluha tiskárny nachází ve stejné místnosti, v práci nebo třeba na druhé straně světa. Vzdálenou správu dosud většina běžných 3D tiskáren neobsahuje, obsluha tak musela být do dnešního dne fyzicky přítomna v místě tisku.
 
-“3D printing or additive manufacturing isn’t just a lab high-tech business anymore, it gradually makes its way to schools, offices, engineer workshops and home hobbyists. Unfortunately, the majority of current printers force their users to stick around—they’re not connected to any network and have to be managed and controlled locally. When dealing with more demanding print jobs that require multiple hours to finish, this limitation turns out to be rather impractical. More often than one would like, this results in print jobs having to be repeated over and over from the beginning. Thanks to the Karmen cloud service and Karmen Pill controller, this problem becomes a thing of the past,” says Martin Burián, Fragaria’s chief executive.
+„3D tisk neboli aditivní výroba už není pouhou high-tech vychytávkou v laboratořích, ale dostává se do škol, kanceláří, na stoly vývojářů či mezi domácí uživatele. Problém většiny současných tiskáren je ovšem lokálně omezený provoz – nejsou totiž připojeny do sítě a musí se proto obsluhovat i kontrolovat lokálně. To především u náročnějších tiskových úloh, které trvají několik hodin, není praktické a z personálního hlediska ani příliš reálné. Navíc to často vede k tomu, že se 3D tiskové úlohy musí několikrát opakovat od samého začátku. Tento problém se díky cloudové službě Karmen a kontroleru Karmen Pill stává minulostí,“ řekl Martin Burián, obchodní ředitel společnosti Fragaria.
 
-The Karmen solution stands on two pillars: a cloud service called simply Karmen and a unique hardware controller named Karmen Pill.
+Řešení Karmen se skládá ze dvou částí: cloudové služby Karmen a unikátního kontroleru Karmen Pill.
 
-The cloud service is being developed as an open source solution and its task is to control an arbitrary number of 3D printers directly from a web browser running on one’s computer, tablet or smartphone. It can be used to schedule print jobs, inspect print progress or distribute jobs among printers. Thanks to the software solution used it is compatible with a broad range of printers and slicers.
+![Karmen Schema](./karmen_schema.png)
 
-Karmen **cloud service** supports most of today’s smart printers equipped with additional hardware like Wi-Fi network adapter, webcam for printer monitoring, assistive lighting or some diagnostic facilities. That said, most current FDM 3D printers still don&#39;t support it and that’s why the Karmen Pill controller is available for purchase to fill in the gap.
+Cloudová služba je vyvíjena jako open source řešení a jejím úkolem je ovládat jednu či více 3D tiskáren z webového prohlížeče počítače, tabletu či telefonu. Umožňuje např. zadávat tiskové úlohy, sledovat průběh tisku či distribuovat tisk mezi více tiskárnami, a díky použitému softwarovému řešení je kompatibilní se širokou škálou tiskáren i slicerů.
 
-**Karmen Pill** is a tiny box (measuring only 77 x 34 x 12 mm) that enables you to connect your printer to the local network or to the internet, and to link it up with the Karmen cloud service. Printer connection is made using an USB interface.
+**Cloudová služba** Karmen dokáže pracovat s většinou dnešních chytrých 3D tiskáren, které již z výroby obsahují zabudovaný rozšiřující hardware, jako například Wi-Fi připojení, kameru na sledování tisku, světlo na přisvícení či některé diagnostické funkce. Většina současných FDM 3D tiskáren nicméně možnost vzdálené správy nepodporuje, proto je součástí řešení Karmen i hardwarový kontroler Karmen Pill, který si mohou uživatelé ke cloudové službě Karmen přikoupit.
 
-It is compatible with the most widely used slicers including Slic3r, PrusaSlicer and Ultimaker Cura. Besides the live video streaming capabilities, it provides its users with real time diagnostics like temperature sensor details and ongoing print stats. Likewise, basic printer controls—the start-stop-pause combo—are also available. It is based upon an open source Octoprint printer controller.
+**Karmen Pill** je malá krabička s rozměry 77 x 34 x 12 mm, která připojením přes USB port, zpřístupní tiskárnu do lokální sítě nebo internetu a umožní ji připojit ke cloudové službě Karmen.
 
-The Pill is priced at 130 EUR excl. VAT, pre-orders are already available on [karmen.tech](https://karmen.tech/en/) website. If you decide to go with our hosted cloud service option, you will be granted limited traffic and printer connections for free.
+Karmen Pill je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura. Umožňuje přenos obrazu z kamery do webového rozhraní, přes nějž poskytuje uživateli rovněž informace o teplotě senzorů a probíhajícím tisku. Umožňuje také základní ovládání tiskárny, typicky spuštění a (po)zastavení tisku. Karmen Pill je založena na open source řešení vycházejícím ze systému Octoprint.
 
-“Whole Karmen project is designed to be mostly open source. We are huge open source supporters and have strong confidence it is the right way to go. Our goal is to create a thriving community of developers and home hobby enthusiasts that will help us improve the project further. Nevertheless, for those who want a production-ready, fully supported and regularly updated solution to just connect their printers and manage them remotely without a hassle, our paid cloud service with the ready-made Karmen Pill controller is available,” adds Martin Bílek, Fragaria’s CTO.
+Cena Karmen Pill je 3.500 Kč bez DPH a zájemci si ji mohou předobjednat na webu [karmen.tech](https://karmen.tech/en/). V případě, že využijete naší hostované služby, máte provoz do určitého množství připojených tiskáren a objemu dat zdarma.
 
-During the testing period which took several months, Karmen has been battle-tested by selected clients from the ranks of individuals, companies and even big corporations. Some of the happy users include IKEM, Třebešín Technical College, an innovative medical equipment producer BTL, Czech Technical University in Prague and several other schools and makerspaces.
+„Celé naše řešení Karmen stavíme do značné míry jako open source. Máme jej rádi a věříme, že je to správná cesta. Naším cílem je vybudovat kolem Karmen komunitu vývojářů a domácích kutilů, kteří nám do budoucna pomohou projekt dále rozvíjet. Nicméně pro uživatele, kteří potřebují hotové, podporované a aktualizované řešení a chtějí jednoduše připojit 3D tiskárny a pomocí webu snadno řídit a monitorovat své tiskové úlohy, je k dispozici naše placená cloudová služba a předpřipravený hardwarový kontroler Karmen Pill,“ dodal Martin Bílek, technický ředitel společnosti Fragaria.
+
+V rámci několikaměsíčního zkušebního provozu už Karmen vyzkoušeli vybraní zákazníci z řad jednotlivců, firem i velkých organizací. Mezi spokojené uživatele patří např. IKEM, Střední průmyslová škola Na Třebešíně, výrobce inovativních zdravotnických pomůcek BTL, České vysoké učení technické v Praze a několik dalších škol a coworkingových dílen.

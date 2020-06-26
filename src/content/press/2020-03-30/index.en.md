@@ -13,6 +13,8 @@ A Czech developer company [Fragaria](https://fragaria.cz) introduces [Karmen](ht
 
 The Karmen solution stands on two pillars: a cloud service called simply Karmen and a unique hardware controller named Karmen Pill.
 
+![Karmen Schema](./karmen_schema.png)
+
 The cloud service is being developed as an open source solution and its task is to control an arbitrary number of 3D printers directly from a web browser running on one’s computer, tablet or smartphone. It can be used to schedule print jobs, inspect print progress or distribute jobs among printers. Thanks to the software solution used it is compatible with a broad range of printers and slicers.
 
 Karmen **cloud service** supports most of today’s smart printers equipped with additional hardware like Wi-Fi network adapter, webcam for printer monitoring, assistive lighting or some diagnostic facilities. That said, most current FDM 3D printers still don&#39;t support it and that’s why the Karmen Pill controller is available for purchase to fill in the gap.

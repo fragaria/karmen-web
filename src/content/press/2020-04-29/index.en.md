@@ -1,0 +1,23 @@
+---
+title: Cute, smart and Czech - Karmen arrives on the 3D printing market
+date: "2020-04-29T22:12:03.284Z"
+lang: en
+description: "The Czech development company Fragaria has launched Karmen, which turns ordinary 3D printers into “smart printers.” Karmen consists of a cloud service and the Karmen Pill controller. The first batch was sold out in pre-orders."
+---
+
+
+[Fragaria](https://fragaria.cz) launched its Karmen solution in the last week of April 2020; it consists of a [cloud service](https://cloud.karmen.tech) and the Karmen Pill controller, which provides a network connection to ordinary FDM printers. Until now, these printers could only be controlled directly at the device in most cases. The fact that the first run sold out within a week is proof that the 3D printing community could not wait for a solution like this.
+
+“We had a lot of interest even before the official launch, so we enabled pre-orders on our [website](https://karmen.tech/en/). The pre-orderers actually bought out the entire first production run of Karmen Pills. Due to the current coronavirus situation and the fact that some of our suppliers have had to shut down their operations, we found ourselves without stock for a while. We’ve managed to gradually get this shortage under control, and we believe we’ll be able to deliver Pills worldwide by mid-May at the latest. The Karmen Pill can be purchased either at our website or at the [mall.cz online store](https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042),” Fragaria CEO Martin Burián says.
+
+![Karmen Pill](./karmen_pill.png)
+
+The Karmen Pill is a small box with a camera and LED light for use when printing at night or in enclosed spaces. By connecting to a USB port, the printer is accessible via a local network or the internet, and this enables the control of 3D printers remotely via the Karmen cloud service. Until now, the vast majority of printers could only be controlled in person and directly at the device. The Karmen Pill costs EUR 130 without VAT. The price includes a ready-made solution that is automatically updated; after basic setup, it’s easy to connect to a printer, register it with the Karmen cloud service and start printing. The Karmen Pill is compatible with the most popular slicers, including Slic3r, PrusaSlicer or the Ultimaker Cura.
+
+[Cloud service](https://cloud.karmen.tech) Karmen is open for registration for all printers with a standard interface and which can be managed using solutions such as [Octoprint](https://octoprint.org/). Printer management is now free in the application. In addition to individual devices, it’s also possible to collectively manage all printers in an organization. Any school, company, coworking space or other institution can connect its printers and manage them remotely, monitor them and send prints using the Karmen cloud service. The development roadmap includes many new features, such as records of consumed material, print hours and other functionality for monitoring print costs, automatic detection of printing errors, intelligent distribution and print planning, etc.
+
+Numerous testers are already helping to make Karmen accessible to a wide variety of 3D printers, and there are a lot out there. The community of 3D printers and open source technology enthusiasts is very important to Karmen, and Fragaria is already working on an online service to share knowledge and user experience that will contribute to Karmen’s further development. The entire solution is mostly open source, and both end-user and developer [documentation](https://docs.karmen.tech) is available. This will continue to grow thanks to the enthusiasm of the worldwide 3D printing community.
+
+“We’ve seen many skilled do-it-yourselfers who have created their own solutions for remote 3D print monitoring. Because we’ve tried to build Karmen as an open solution from the beginning, it’ll be possible very soon to register 3D printers on the Karmen cloud service that either have their own connectivity built in, or which connect through similar homebuilt solutions built on things like OctoPrint or Raspberry Pi,” Product Manager Martin Bílek says. “We love the 3D printing community and are looking forward to them starting to model and share Karmen Pill mounts. These aren’t included in the package, but anyone can print their own mount in any shape. There’s also a lot of room for students of schools that use Karmen.”
+
+In coming months, Karmen will be expanded to include monitoring functions, print analysis, statistics and intelligent error detection. In the second half of the year, Karmen will work intensively with secondary schools and universities, and will support them in incorporating 3D printing into their curricula.

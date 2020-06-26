@@ -6,6 +6,8 @@ import Layout from "layouts/cs"
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
+import PressListing from "components/page-blocks/press-listing"
+
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
 const PressPage = ({ data, location }) => {
@@ -22,46 +24,15 @@ const PressPage = ({ data, location }) => {
       />
       <SEOBusinessInfo />
 
-      <article itemType="http://schema.org/Organization" itemScope>
-        <span
-          itemProp="logo"
-          itemType="http://schema.org/ImageObject"
-          itemScope
-          className="hidden"
-        >
-          <meta itemProp="caption" content={site.siteMetadata.title} />
-          <meta itemProp="url" content={karmenLogo} />
-          <meta itemProp="width" content="1000" />
-          <meta itemProp="height" content="1000" />
-        </span>
-        <meta itemProp="url" content={site.siteMetadata.siteUrl} />
-        <section>
+      <h1 className="page-block-headline">
+        Tiskové zprávy
+      </h1>
 
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug} className="content-block content-block--narrower">
-              <header>
-                <h3>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
-
-        </section>
-      </article>
+      <PressListing
+        posts={posts}
+        site={site}
+        location={location}
+       />
     </Layout>
   )
 }
