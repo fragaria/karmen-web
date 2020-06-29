@@ -77,7 +77,7 @@ const CheckoutBooth = () => {
   return (
     <>
       {!config.siteMetadata.checkout.octobatConfigured && (
-        <div class="typeset">
+        <div className="typeset">
           <p>
             <strong>Configure octobat!</strong>
           </p>

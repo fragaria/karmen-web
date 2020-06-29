@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import classNames from "classnames"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { useIntl, FormattedMessage } from "react-intl"
 import { slide as MobileMenu } from "react-burger-menu"
 
@@ -97,9 +96,10 @@ const Sitenav = () => {
                   <a
                     href="https://cloud.karmen.tech/login"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
                   >
-                    Log in
+                    Sign up
                   </a>
 
                   <Link
@@ -116,6 +116,7 @@ const Sitenav = () => {
                   <a
                     href="https://cloud.karmen.tech/login"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
                   >
                     Přihlásit se
