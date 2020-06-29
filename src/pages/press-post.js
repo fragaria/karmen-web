@@ -17,21 +17,22 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
         pathname="/en/story/"
       />
       <SEOBusinessInfo />
-
-      <article className="content-block content-block--narrower">
-        <header>
-          <h1 className="page-block-headline">
-            {post.frontmatter.title}
-          </h1>
-          <small>
-            {post.frontmatter.date}
-          </small>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          className="text-left"
-        />
-      </article>
+      {post && (
+        <article className="content-block content-block--narrower">
+          <header>
+            <h1 className="page-block-headline">
+              {post.frontmatter.title}
+            </h1>
+            <small>
+              {post.frontmatter.date}
+            </small>
+          </header>
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className="text-left"
+          />
+        </article>
+      )}
     </Layout>
   )
 }
