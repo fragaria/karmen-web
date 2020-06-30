@@ -22,6 +22,11 @@
         text-decoration: none;
       }
     }
+
+    em,
+    i {
+      font-style: italic;
+    }
   }
 
   .page-block-headline {
@@ -39,6 +44,10 @@
 
     @include baseline(s3, $bodytype, 1, $above: 0, $below: 1);
     @include baseline(s3, $bodytype, 1, $above: 0, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  a:hover h3 {
+    color: map-get($palette, red);
   }
 
   &:not(:first-child) {
