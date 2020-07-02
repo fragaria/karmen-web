@@ -1,5 +1,5 @@
 ---
-title: Hezká, chytrá, česká - Karmen vstoupila na trh 3D tisku
+title: Hezká, chytrá, česká - Karmen vstoupila na trh 3D tisku
 date: "2020-04-29T22:12:03.284Z"
 lang: cs
 description: "Česká vývojářská firma Fragaria spustila Karmen, díky níž se i z obyčejné 3D tiskárny stane “chytrá”. Karmen se skládá z cloudové služby a kontroleru Karmen Pill. První vyrobenou dávku už vykoupili předobjednatelé."

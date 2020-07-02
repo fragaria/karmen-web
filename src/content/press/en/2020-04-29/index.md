@@ -1,5 +1,5 @@
 ---
-title: Cute, smart and Czech - Karmen arrives on the 3D printing market
+title: Cute, smart and Czech - Karmen arrives on the 3D printing market
 date: "2020-04-29T22:12:03.284Z"
 lang: en
 description: "The Czech development company Fragaria has launched Karmen, which turns ordinary 3D printers into “smart printers.” Karmen consists of a cloud service and the Karmen Pill controller. The first batch was sold out in pre-orders."
