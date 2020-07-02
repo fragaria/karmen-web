@@ -306,5 +306,12 @@ module.exports = {
         exclude: ["/cs/platba-zrusena/", "/en/payment-cancelled/"],
       },
     },
+    // Facebook tracking
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "1437679376404045",
+      },
+    },
   ],
 }
