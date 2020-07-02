@@ -67,6 +67,7 @@
     "lint": "npm run format",
     "extract-messages": "babel ./src  --out-file /dev/null",
     "manage-translations": "node ./translations.js",
+    "translations": "rm -fr ./src/i18n/messages && babel ./src  --out-file /dev/null && node ./translations.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

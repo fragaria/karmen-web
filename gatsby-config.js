@@ -104,72 +104,132 @@ module.exports = {
     ],
     nav: {
       en: [
-        { name: "How it works", url: `/en/#principle` },
-        { name: "Pricing", url: `/en/#buy` },
-        { name: "Buy", url: `/en/buy/` },
-        { name: "Karmen story", url: `/en/story/` },
-        { name: "Contact", url: `/en/#contact` },
-        { name: "Press", url: `/en/press` },
+        {
+          name: "How it works",
+          url: `/en/#principle`
+        },
+        {
+          name: "Pricing",
+          url: `/en/#buy`
+        },
+        {
+          name: "Buy",
+          url: `/en/buy/`
+        },
+        {
+          name: "Karmen story",
+          url: `/en/story/`
+        },
+        {
+          name: "Contact",
+          url: `/en/#contact`
+        },
+        {
+          name: "Community",
+          url: `/en/#community`
+        },
+        {
+          name: "Press",
+          url: `/en/press`
+        },
       ],
       cs: [
-        { name: "Jak na to", url: `/cs/#principle` },
-        { name: "Cena", url: `/cs/#buy` },
-        { name: "Koupit", url: `/cs/koupit/` },
-        { name: "Příběh Karmen", url: `/cs/pribeh/` },
-        { name: "Kontakt", url: `/cs/#contact` },
-        { name: "Tiskové zprávy", url: `/cs/press` },
+        {
+          name: "Jak na to",
+          url: `/cs/#principle`
+        },
+        {
+          name: "Cena",
+          url: `/cs/#buy`
+        },
+        {
+          name: "Koupit",
+          url: `/cs/koupit/`
+        },
+        {
+          name: "Příběh Karmen",
+          url: `/cs/pribeh/`
+        },
+        {
+          name: "Kontakt",
+          url: `/cs/#contact`
+        },
+        {
+          name: "Komunita",
+          url: `/cs/#community`
+        },
+        {
+          name: "Tiskové zprávy",
+          url: `/cs/press`
+        },
       ],
     },
     footerNav: {
       en: [
         [
-          { name: "Sign up", url: "https://cloud.karmen.tech/register" },
-          { name: "Log in", url: "https://cloud.karmen.tech" },
-        ],
-        [
-          { name: "Karmen docs", url: "https://docs.karmen.tech/#/quickstart" },
           {
-            name: "Karmen Pill docs",
-            url: "https://docs.karmen.tech/#/pill-getting-started",
+            name: "Sign up to Karmen Cloud",
+            url: "https://cloud.karmen.tech/register"
           },
-        ],
-        [
+          {
+            name: "Log in to Karmen Cloud",
+            url: "https://cloud.karmen.tech"
+          },
           {
             name: "Source code on GitHub",
             url: "https://github.com/fragaria/karmen",
           },
           {
-            name: "Releases",
+            name: "Releases and updates",
             url: "https://github.com/fragaria/karmen/releases",
+          },
+        ],
+        [
+          {
+            name: "Karmen Cloud Docs - what is it and how to connect to a cloud?",
+            url: "https://docs.karmen.tech/#/quickstart"
+          },
+          {
+            name: "Karmen Pill docs - what is it and how to use it?",
+            url: "https://docs.karmen.tech/#/pill-getting-started",
+          },
+          {
+            name: "Connecting other OctoPrint boxes to Karmen Cloud",
+            url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
           },
         ],
       ],
       cs: [
         [
           {
-            name: "Zaregistrovat se",
+            name: "Registrace do Karmen Cloudu",
             url: "https://cloud.karmen.tech/register",
           },
-          { name: "Přihlásit se", url: "https://cloud.karmen.tech" },
-        ],
-        [
           {
-            name: "Karmen dokumentace",
-            url: "https://docs.karmen.tech/#/quickstart",
+            name: "Přihlásit se do Karmen Cloudu",
+            url: "https://cloud.karmen.tech"
           },
-          {
-            name: "Karmen Pill dokumentace",
-            url: "https://docs.karmen.tech/#/pill-getting-started",
-          },
-        ],
-        [
           {
             name: "Zdrojový kód na GitHubu",
             url: "https://github.com/fragaria/karmen",
           },
           {
-            name: "Releasy",
+            name: "Releasy a updaty",
             url: "https://github.com/fragaria/karmen/releases",
+          },
+        ],
+        [
+          {
+            name: "Karmen Cloud dokumentace - co je Karmen Cloud a jak se připojit?",
+            url: "https://docs.karmen.tech/#/quickstart",
+          },
+          {
+            name: "Karmen Pill dokumentace - co je to a jak ji používat?",
+            url: "https://docs.karmen.tech/#/pill-getting-started",
+          },
+          {
+            name: "Připojení zařízení s OctoPrint do Karmen Cloudu",
+            url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
           },
         ],
       ],
