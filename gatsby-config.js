@@ -313,5 +313,12 @@ module.exports = {
         pixelId: "1437679376404045",
       },
     },
+    // Twitter tracking
+    {
+      resolve: `gatsby-plugin-twitter-pixel`,
+      options: {
+        pixelId: "o3y3k",
+      },
+    },
   ],
 }
