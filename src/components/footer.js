@@ -32,8 +32,8 @@ const FooterLinks = ({ navGroups }) => (
   <nav aria-label="Footer" className="footer-linkgroups">
     <h1 className="footer-linkgroups__title">
       <FormattedMessage
-        id="footer.important_links"
-        defaultMessage="Important links"
+        id="footer.community"
+        defaultMessage="Community"
       />
     </h1>
     <div className="footer-linkgroups__container">
@@ -87,7 +87,7 @@ const Footer = () => {
   const intl = useIntl()
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="community">
       <div className="footer__section">
         <div className="content-block footer-sitelinks">
           <FooterLinks

@@ -22,7 +22,6 @@
   "checkoutform.summary",
   "checkoutform.shipping",
   "checkoutform.total",
-  "checkoutform.corona_warning",
   "checkoutform.cta_note",
   "checkoutform.cta_buy",
   "footer.gh_profile_title",
@@ -30,7 +29,7 @@
   "footer.fb_profile_title",
   "footer.yt_channel_title",
   "footer.docs_title",
-  "footer.important_links",
+  "footer.community",
   "gitter.label",
   "about-block.story_title",
   "about-block.story_motto",
@@ -112,8 +111,5 @@
   "subscription-box.sub",
   "subscription-box.cta",
   "cookieconsent.cta",
-  "cookieconsent.statement",
-  "notfound.headline",
-  "notfound.sub",
-  "notfound.cta"
+  "cookieconsent.statement"
 ]

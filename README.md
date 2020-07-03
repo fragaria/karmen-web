@@ -34,6 +34,19 @@ npm start
 
 Testing site will be available at `http://localhost:8000/`.
 
+
+## Translations
+
+We use `react-intl` for translations, so english version is auto-extracted from `defaultMessage` attribute of `FormattedMessage` component.
+
+**To add or update texts:**
+
+1. Use `defaultMessage` for english version update
+2. run `npm translate`
+3. Edit `src/i18n/translations/cs.json`
+4. run `npm run manage-translations`
+
+
 ## Bundling for production
 
 Create production bundle using:
