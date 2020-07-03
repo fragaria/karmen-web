@@ -12,6 +12,7 @@
     "gatsby": "^2.19.45",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.1",
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-load-script": "^1.0.6",
@@ -21,6 +22,7 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-sitemap": "^2.3.6",
+    "gatsby-plugin-twitter-pixel": "^2.0.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-copy-linked-files": "^2.3.6",
     "gatsby-remark-images": "^3.3.12",
@@ -67,6 +69,7 @@
     "lint": "npm run format",
     "extract-messages": "babel ./src  --out-file /dev/null",
     "manage-translations": "node ./translations.js",
+    "translations": "rm -fr ./src/i18n/messages && babel ./src  --out-file /dev/null && node ./translations.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
