@@ -72,13 +72,13 @@
   display: none;
 
   &:not(&--lowprio) {
-    @include breakpoint(mobile up) {
+    @media screen and (max-width: $sitenav-breakpoint) {
       display: block;
     }
   }
 
   &--lowprio {
-    @include breakpoint(tablet up) {
+    @media screen and (min-width: $sitenav-breakpoint) {
       display: block;
     }
   }
@@ -101,7 +101,6 @@
     margin-right: gu(2.5);
     font-size: 1.5rem;
   }
-
 }
 
 .sitenav__langswitch {
@@ -128,7 +127,7 @@
   display: flex;
   align-items: center;
 
-  @include breakpoint(tablet up) {
+  @media screen and (min-width: $sitenav-breakpoint) {
     position: absolute;
     right: 0;
   }
@@ -185,7 +184,7 @@
     }
   }
 
-  @include breakpoint(tablet up) {
+  @media screen and (min-width: $sitenav-breakpoint) {
     display: none;
   }
 }
