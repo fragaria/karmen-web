@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "layouts/blank"
 
 import SEOMetadata from "components/seo/metadata"
+import SEOJsonLd from "components/seo/seo-json-ld"
 
 import karmenLogoImg from "assets/img/karmen-logo-stroked.svg"
 
@@ -30,6 +31,7 @@ const NotFoundPage = () => {
   return (
     <Layout lang="en" wrapperClass="page-container--nopush">
       <SEOMetadata title="Oh-oh! There is nothing here." />
+      <SEOJsonLd title="Not found" />
       <div className="v-error typeset">
         <div className="v-error__inner">
           <img
