@@ -4,6 +4,8 @@ import Layout from "layouts/cs"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
+import SEOJsonLd from "components/seo/seo-json-ld"
+
 import AboutBlock from "components/page-blocks/about"
 
 const StoryPage = ({ location }) => {
@@ -16,6 +18,12 @@ const StoryPage = ({ location }) => {
         pathname="/cs/pribeh/"
       />
       <SEOBusinessInfo />
+      <SEOJsonLd
+        lang="cs"
+        title="Příběh Karmen"
+        pathname="/cs/pribeh/"
+      />
+
       <AboutBlock />
     </Layout>
   )

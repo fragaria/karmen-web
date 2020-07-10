@@ -5,6 +5,7 @@ import Layout from "layouts/cs"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
+import SEOJsonLd from "components/seo/seo-json-ld"
 
 import PressListing from "components/page-blocks/press-listing"
 
@@ -21,6 +22,11 @@ const PressPage = ({ data, location }) => {
         pathname="/cs/press/"
       />
       <SEOBusinessInfo />
+      <SEOJsonLd
+        title="Tiskové zprávy"
+        lang="cs"
+        pathname="/cs/press/"
+      />
 
       <h1 className="page-block-headline">
         Tiskové zprávy
