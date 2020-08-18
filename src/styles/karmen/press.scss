@@ -87,7 +87,7 @@
   }
 
   h2 {
-    @include baseline(s6, $headingtype, 1, $above: 1, $below: 1);
+    @include baseline(s6, $headingtype, 1.5, $above: 1, $below: 1);
   }
 
   .gatsby-resp-image-wrapper {
