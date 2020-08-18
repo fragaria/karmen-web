@@ -86,6 +86,10 @@
     @include baseline(s3, $bodytype, 1, $below: 3, $breakpoint: tablet-small up);
   }
 
+  h2 {
+    @include baseline(s7, $headingtype, 1, $above: 1, $below: 1);
+  }
+
   .gatsby-resp-image-wrapper {
     margin: gu(2) 0;
   }
