@@ -38,7 +38,7 @@ Even if many prints take place overnight or on weekends, they can sleep peaceful
 
 
 
-Karmen helps print 300 shields for the Tiskne celé Česko [The Whole Czech Republic is Printing] project
+Karmen helps print 300 shields for the Tiskne celé Česko (The Whole Czech Republic is Printing) project
 -------------
 
 *“The transition to the cloud was welcome, as well as other minor improvements which are part of the current version. For example, being able to keep an eye on what’s being printed is a small but significant plus. We no longer have to keep the lights on in the room throughout the print, and only turn them on if we need to. Print management also helps. We can see exactly what individual printers printed, and when. By connecting everything via wifi, the complicated networking and interconnection of components is eliminated,”* Frýbert says, going over Karmen’s advantages.
