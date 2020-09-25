@@ -197,6 +197,10 @@ module.exports = {
             name: "Connecting other OctoPrint boxes to Karmen Cloud",
             url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
           },
+          {
+            name: "Buy Pill on Mall.cz",
+            url: "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
+          },
         ],
       ],
       cs: [
@@ -230,6 +234,10 @@ module.exports = {
           {
             name: "Připojení zařízení s OctoPrint do Karmen Cloudu",
             url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
+          },
+          {
+            name: "Nákup pillu přes Mall.cz",
+            url: "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
           },
         ],
       ],
