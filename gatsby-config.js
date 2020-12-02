@@ -1,5 +1,12 @@
 const path = require("path")
 const languages = require("./src/i18n/languages")
+const sharp = require('sharp')
+
+// Avoid segfaults on Netlify
+// https://github.com/gatsbyjs/gatsby/issues/6291
+sharp.cache(false)
+sharp.simd(false)
+
 
 module.exports = {
   siteMetadata: {
@@ -386,6 +393,27 @@ module.exports = {
       resolve: `gatsby-plugin-twitter-pixel`,
       options: {
         pixelId: "o3y3k",
+      },
+    },
+    // Google Tag Manager
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TX6XRX5",
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+        // Name of the event that is triggered
+        // on every Gatsby route change.
+        //
+        // Defaults to gatsby-route-change
+        routeChangeEventName: "route-change",
       },
     },
   ],
