@@ -342,19 +342,6 @@ module.exports = {
         icon: `src/assets/img/karmen-logo-rect.svg`, // This path is relative to the root of the site.
       },
     },
-    /**
-     * Adds GA tracking script.
-     * Will ONLY be appended when running gatsby build.
-     */
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-9784905-23",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-      },
-    },
     {
       resolve: "gatsby-plugin-i18n",
       options: {
