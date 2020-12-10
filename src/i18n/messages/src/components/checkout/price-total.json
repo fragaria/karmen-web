@@ -1,0 +1,1 @@
+[{"id":"price-total.price_note","defaultMessage":"excl. VAT","file":"src/components/checkout/price-total.js","start":{"line":5,"column":13},"end":{"line":8,"column":3}},{"id":"checkoutform.total","defaultMessage":"Total:","file":"src/components/checkout/price-total.js","start":{"line":21,"column":10},"end":{"line":21,"column":78}}]

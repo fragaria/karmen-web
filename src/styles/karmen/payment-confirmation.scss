@@ -1,0 +1,37 @@
+.payment-confirmation {
+  background: map-get($palette, white);
+
+  h2 {
+    @include baseline(s6, $headingtype, 2, $below: 2, $above: 0);
+  }
+}
+
+.payment-confirmation__notification {
+  background: map-get($palette, red);
+  color: map-get($palette, white);
+  padding: gu(1) gu(1) gu(1.5);
+  text-align: center;;
+}
+
+@include breakpoint(tablet up) {
+  .payment-confirmation__notification {
+    padding: gu(1) gu(2) gu(1.5);
+    text-align: left;;
+  }
+}
+
+.payment-confirmation__notification-sentence {
+  @include baseline(s4, $bodytype, 1, $below: 0, $above: 0);
+
+  display: block;
+  font-weight: bold;
+}
+
+
+.payment-confirmation__details {
+  background: map-get($palette, white);
+
+  h2 {
+    @include baseline(s6, $headingtype, 2, $below: 2, $above: 0);
+  }
+}

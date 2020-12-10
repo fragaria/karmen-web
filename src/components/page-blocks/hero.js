@@ -40,7 +40,7 @@ const HeroBlock = props => {
         <div className="content-block">
           <Link
             to={learnLink}
-            className="button button--red button--responsive hero__cta"
+            className="button button--red button--responsive button--shifted"
           >
             <FormattedMessage id="hero-block.cta" defaultMessage="Learn more" />
             <br />

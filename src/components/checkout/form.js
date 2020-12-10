@@ -13,10 +13,50 @@ import {
   getItemByProp,
 } from "./config"
 
-const messages = defineMessages({
+import PriceSummary from "./price-summary"
+import PriceTotal from "./price-total"
+
+const getPurchaseDetails = values => {
+  const currentCountry = values["country"]
+
+  // Get Pill config by its id
+  const pillRef = getItemByProp(PILLS, "id", values["variant"])
+  // Select right SKU according to the country used
+  const pillSku = getPillRefSku(pillRef, currentCountry)
+  // Get pill variant config (currency + price) by the sku
+  const pillVariant = getItemByProp(PILL_SKUS, "sku", pillSku)
+  // Shipping variant according to selected country
+  const shippingVariant = selectShippingVariant(values["country"])
+  // Total pill price (multiplied by quantity) excl. VAT
+  const pillPrice = pillVariant.price * values["quantity"]
+  // Total shipping price
+  const shippingPrice = shippingVariant.price
+  // Total price (pill + shipping)
+  const totalPrice = pillPrice + shippingPrice
+
+  return {
+    pillRef,
+    pillSku,
+    pillVariant,
+    shippingVariant,
+    pillPrice,
+    shippingPrice,
+    totalPrice,
+  }
+}
+
+export const messages = defineMessages({
   priceNote: {
     id: "checkoutform.price_note",
     defaultMessage: "excl. VAT",
+  },
+  paymentMethodCard: {
+    id: "checkoutform.payment_method_card",
+    defaultMessage: "Online by card",
+  },
+  paymentMethodTransfer: {
+    id: "checkoutform.payment_method_transfer",
+    defaultMessage: "Bank transfer",
   },
 })
 
@@ -28,18 +68,18 @@ const CheckoutForm = ({
 }) => {
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
-    // Get Pill config by its id
-    const pillRef = getItemByProp(PILLS, "id", retVals["variant"])
+    const purchaseDetails = getPurchaseDetails(values)
 
     retVals["product"] = {
-      // Provide full Pill name
-      name: pillRef.name,
-      // Select right SKU according to the country used
-      sku: getPillRefSku(pillRef, retVals["country"]),
+      name: purchaseDetails.pillRef.name,
+      sku: purchaseDetails.pillSku,
     }
 
     // Drop internal variant reference
     delete retVals["variant"]
+
+    // Append extended purchase details for order summary use
+    retVals["purchaseDetails"] = getPurchaseDetails(values)
 
     onBuy(retVals)
   }
@@ -55,10 +95,13 @@ const CheckoutForm = ({
         email: "",
         phone: "",
         company: "",
+        vatId: "",
+        // buyAsCompany: false,
         street: "",
         city: "",
         postalCode: "",
         state: "",
+        paymentMethod: "card",
         country: initialCountryCode,
       }}
       validate={values => {
@@ -129,22 +172,15 @@ const CheckoutForm = ({
       onSubmit={onSubmit}
     >
       {({ isSubmitting, isValid, values, setFieldValue }) => {
-        const currentCountry = values["country"]
+        const selectedPaymentMethod = values["paymentMethod"]
 
-        // Get Pill config by its id
-        const pillRef = getItemByProp(PILLS, "id", values["variant"])
-        // Select right SKU according to the country used
-        const pillSku = getPillRefSku(pillRef, currentCountry)
-        // Get pill variant config (currency + price) by the sku
-        const pillVariant = getItemByProp(PILL_SKUS, "sku", pillSku)
-        // Shipping variant according to selected country
-        const shippingVariant = selectShippingVariant(values["country"])
-        // Total pill price (multiplied by quantity) excl. VAT
-        const pillPrice = pillVariant.price * values["quantity"]
-        // Total shipping price
-        const shippingPrice = shippingVariant.price
-        // Total price (pill + shipping)
-        const totalPrice = pillPrice + shippingPrice
+        const {
+          pillVariant,
+          shippingVariant,
+          pillPrice,
+          shippingPrice,
+          totalPrice,
+        } = getPurchaseDetails(values)
 
         const getClass = (base, meta) =>
           base +
@@ -315,7 +351,7 @@ const CheckoutForm = ({
                       <label className="form-label" htmlFor="company">
                         <FormattedMessage
                           id="checkoutform.label_company"
-                          defaultMessage="Company name"
+                          defaultMessage="Company name (optional)"
                         />
                       </label>
                       <div className={getClass("form-control-wrapper", meta)}>
@@ -332,6 +368,54 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
+              <div className="form__line">
+                <Field name="vatId">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="vatId">
+                        <FormattedMessage
+                          id="checkoutform.label_vat_id"
+                          defaultMessage="Company Tax Number (optional)"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input
+                          className="form-control form-control--bordered"
+                          type="text"
+                          {...field}
+                        />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              {/* <div className="form__line">
+                <Field name="buyAsCompany">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="company">
+                        <FormattedMessage
+                          id="checkoutform.label_buy_as_company"
+                          defaultMessage="Buy as company (Add company's VAT number)"
+                        />
+                      </label>
+                      <div className={getClass("form-control-wrapper", meta)}>
+                        <input
+                          className="form-control form-control--bordered"
+                          type="checkbox"
+                          {...field}
+                        />
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div> */}
               <div className="form__line">
                 <Field name="street">
                   {({ field, meta }) => (
@@ -464,6 +548,41 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
+              <div className="form__line">
+                <Field name="paymentMethod">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="paymentMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_payment_method"
+                          defaultMessage="Payment method"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
+                          <option value="card">
+                            {intl.formatMessage(messages.paymentMethodCard)}
+                          </option>
+                          <option value="transfer">
+                            {intl.formatMessage(messages.paymentMethodTransfer)}
+                          </option>
+                        </select>
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
               <h2>
@@ -472,53 +591,19 @@ const CheckoutForm = ({
                   defaultMessage="Summary"
                 />
               </h2>
-              <div className="checkout-form__summary-line">
-                <h3 className="checkout-form__summary-item">
-                  {values["quantity"]}x Karmen Pill:
-                </h3>
-                <div className="checkout-form__summary-price">
-                  <span className="checkout-form__summary-price-main">
-                    {pillPrice} {pillVariant.currency}
-                  </span>
-                  <span className="checkout-form__summary-price-note">
-                    {intl.formatMessage(messages.priceNote)}
-                  </span>
-                </div>
-              </div>
-              <div className="checkout-form__summary-line">
-                <h3 className="checkout-form__summary-item">
-                  <FormattedMessage
-                    id="checkoutform.shipping"
-                    defaultMessage="Shipping:"
-                  />
-                </h3>
-                <div className="checkout-form__summary-price">
-                  <span className="checkout-form__summary-price-main">
-                    {shippingPrice} {shippingVariant.currency}
-                  </span>
-                  <span className="checkout-form__summary-price-note">
-                    {intl.formatMessage(messages.priceNote)}
-                  </span>
-                </div>
-              </div>
+              <PriceSummary
+                pillQuantity={values["quantity"]}
+                pillPrice={pillPrice}
+                pillCurrency={pillVariant.currency}
+                shippingPrice={shippingPrice}
+                shippingCurrency={shippingVariant.currency}
+              />
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
-              <div className="checkout-form__summary-line checkout-form__summary-line--total">
-                <h3 className="checkout-form__summary-item">
-                  <FormattedMessage
-                    id="checkoutform.total"
-                    defaultMessage="Total:"
-                  />
-                </h3>
-                <div className="checkout-form__summary-price">
-                  <span className="checkout-form__summary-price-main">
-                    {totalPrice} {pillVariant.currency}
-                  </span>
-                  <span className="checkout-form__summary-price-note">
-                    {intl.formatMessage(messages.priceNote)}
-                  </span>
-                </div>
-              </div>
+              <PriceTotal
+                totalPrice={totalPrice}
+                totalCurrency={pillVariant.currency}
+              />
             </div>
             <div className="checkout-form__body checkout-form__body--wdivider">
               {/* <div className="typeset">
@@ -543,10 +628,18 @@ const CheckoutForm = ({
               <div className="checkout-form__submit">
                 <p>
                   <em>
-                    <FormattedMessage
-                      id="checkoutform.cta_note"
-                      defaultMessage={`You will be redirected to the checkout page after clicking on "Buy". VAT amount as well as billing details will be resolved there.`}
-                    />
+                    {selectedPaymentMethod === "card" && (
+                      <FormattedMessage
+                        id="checkoutform.cta_note_card"
+                        defaultMessage={`You will be redirected to the checkout page after clicking on "Buy". VAT amount as well as billing details will be resolved there.`}
+                      />
+                    )}
+                    {selectedPaymentMethod === "transfer" && (
+                      <FormattedMessage
+                        id="checkoutform.cta_note_transfer"
+                        defaultMessage={`We will send you payment instructions by email.`}
+                      />
+                    )}
                   </em>
                 </p>
                 <button
