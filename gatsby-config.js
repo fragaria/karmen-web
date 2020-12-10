@@ -7,7 +7,6 @@ const sharp = require('sharp')
 sharp.cache(false)
 sharp.simd(false)
 
-
 module.exports = {
   siteMetadata: {
     author: `Fragaria s.r.o.`,
@@ -36,6 +35,9 @@ module.exports = {
       octobatBeanieConfigurationId:
         process.env.OCTOBAT_BEANIE_CONFIGURATION_ID ||
         "oc_beanie_cc_15861720512wyfd43d44f5",
+    },
+    functions: {
+      rootUrl: process.env.NETLIFY_FUNCTION_ROOT || "/",
     },
     company: {
       websiteTitle: "Karmen",

@@ -6,6 +6,21 @@ import { CheckoutSession } from "./session"
 import CheckoutForm from "./form"
 import { selectShippingVariant } from "./config"
 
+
+const sendOrderConfirmation = async (functionRoot, context) => {
+  await fetch(`${functionRoot}.netlify/functions/send-order-confirmation`, {
+    method: "POST",
+    body: JSON.stringify(context)
+  });
+};
+
+const sendOrderNotification = async (functionRoot, context) => {
+  await fetch(`${functionRoot}.netlify/functions/send-order-notification`, {
+    method: "POST",
+    body: JSON.stringify(context)
+  });
+}
+
 const CheckoutBooth = () => {
   const { site: config } = useStaticQuery(graphql`
     query {
@@ -20,6 +35,9 @@ const CheckoutBooth = () => {
             octobatApiKey
             octobatBeanieConfigurationId
           }
+          functions {
+            rootUrl
+          }
         }
       }
     }
@@ -29,17 +47,35 @@ const CheckoutBooth = () => {
   const langKey = intl.locale
 
   const finalizeSession = async values => {
+    const purchaseDetails = {
+      quantity: values.quantity,
+      pillPrice: values.purchaseDetails.pillPrice,
+      pillCurrency: values.purchaseDetails.pillVariant.currency,
+      shippingPrice: values.purchaseDetails.shippingPrice,
+      shippingCurrency: values.purchaseDetails.shippingVariant.currency,
+      totalPrice: values.purchaseDetails.totalPrice,
+      totalCurrency: values.purchaseDetails.pillVariant.currency,
+    }
+
+    const emailContext = {
+      email: values.email,
+      lang: langKey,
+      name: values.fullName,
+      ...purchaseDetails,
+    }
+
+    await Promise.all([
+      sendOrderConfirmation(config.siteMetadata.functions.rootUrl, emailContext),
+      sendOrderNotification(config.siteMetadata.functions.rootUrl, emailContext),
+    ]);
+
     if (values["paymentMethod"] === "transfer") {
       const redirUrl = langKey === "cs" ? "/cs/potvrzeni-objednavky/" : "/en/order-confirmation/"
       const params = new URLSearchParams()
 
-      params.append("quantity", values.quantity)
-      params.append("pillPrice", values.purchaseDetails.pillPrice)
-      params.append("pillCurrency", values.purchaseDetails.pillVariant.currency)
-      params.append("shippingPrice", values.purchaseDetails.shippingPrice)
-      params.append("shippingCurrency", values.purchaseDetails.shippingVariant.currency)
-      params.append("totalPrice", values.purchaseDetails.totalPrice)
-      params.append("totalCurrency", values.purchaseDetails.pillVariant.currency)
+      for (const [key, value] of Object.entries(purchaseDetails)) {
+        params.append(key, value);
+      }
 
       navigate(`${redirUrl}?${params.toString()}`)
     } else {

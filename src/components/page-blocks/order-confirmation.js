@@ -57,7 +57,7 @@ const OrderConfirmationBlock = ({ params, ...props }) => {
                 <span className="payment-confirmation__notification-sentence">
                   <FormattedMessage
                     id="order-confirmation.notification"
-                    defaultMessage="We've sent you a confirmation email with payment instructions."
+                    defaultMessage="We've sent you an order confirmation by email. Please wait for another email with payment instructions - it will follow real soon."
                   />
                 </span>
               </div>
@@ -81,8 +81,8 @@ const OrderConfirmationBlock = ({ params, ...props }) => {
                 />
               </div>
             </div>
-            <div class="text-center">
-              <a class="button button--red button--responsive button--shifted" href={learnLink}>
+            <div className="text-center">
+              <a className="button button--red button--responsive button--shifted" href={learnLink}>
                 <FormattedMessage
                   id="order-confirmation.browse"
                   defaultMessage="Go back to the website"
