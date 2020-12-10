@@ -22,6 +22,22 @@ Nová objednávka z karmen.tech od %SENDER_NAME% <%SENDER_EMAIL%>:
 %QUANTITY% x Karmen Pill: %PILL_PRICE% %PILL_CURRENCY%
 Doprava: %SHIPPING_PRICE% %SHIPPING_CURRENCY%
 Celkem: %TOTAL_PRICE% %TOTAL_CURRENCY%
+
+Platební metoda: %PAYMENT_METHOD%
+
+Detaily klienta:
+
+Jméno: %SENDER_NAME%
+Email: %SENDER_EMAIL%
+Telefon: %SENDER_PHONE%
+Jazyk: %LANG%
+Firma: %COMPANY%
+Tax ID (IČ): %TAX_ID%
+Ulice: %STREET%
+Město: %CITY%
+PSČ: %ZIP%
+Stát: %STATE%
+Země: %COUNTRY%
 `;
 
 const handler = async (event) => {
@@ -104,13 +120,22 @@ const handler = async (event) => {
     text: textTemplate
       .replace("%SENDER_NAME%", body.name)
       .replace("%SENDER_EMAIL%", body.email)
+      .replace("%SENDER_PHONE%", body.phone)
       .replace("%QUANTITY%", body.quantity)
       .replace("%PILL_PRICE%", body.pillPrice)
       .replace("%PILL_CURRENCY%", body.pillCurrency)
       .replace("%SHIPPING_PRICE%", body.shippingPrice)
       .replace("%SHIPPING_CURRENCY%", body.shippingCurrency)
       .replace("%TOTAL_PRICE%", body.totalPrice)
-      .replace("%TOTAL_CURRENCY%", body.totalCurrency),
+      .replace("%TOTAL_CURRENCY%", body.totalCurrency)
+      .replace("%LANG%", body.lang)
+      .replace("%COMPANY%", body.company)
+      .replace("%TAX_ID%", body.vatId)
+      .replace("%STREET%", body.street)
+      .replace("%CITY%", body.city)
+      .replace("%ZIP%", body.postalCode)
+      .replace("%STATE%", body.state)
+      .replace("%COUNTRY%", body.country)
   }
 
   try {

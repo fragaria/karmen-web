@@ -59,8 +59,17 @@ const CheckoutBooth = () => {
 
     const emailContext = {
       email: values.email,
+      phone: values.phone,
       lang: langKey,
       name: values.fullName,
+      company: values.company,
+      vatId: values.vatId,
+      street: values.street,
+      city: values.city,
+      postalCode: values.postalCode,
+      state: values.state,
+      paymentMethod: values.paymentMethod,
+      country: values.country,
       ...purchaseDetails,
     }
 

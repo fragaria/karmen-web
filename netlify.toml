@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/page-data"
+  to = "/page-data"
+  status = 200
+
+[[redirects]]
   from = "/cs"
   to = "/cs/:splat"
   status = 302
