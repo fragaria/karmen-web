@@ -7,6 +7,7 @@ module.exports.renderTemplate = (template, context) => {
       .replace(/%PAYMENT_METHOD%/g, context.paymentMethod)
       .replace(/%PILL_PRICE%/g, context.pillPrice)
       .replace(/%PILL_CURRENCY%/g, context.pillCurrency)
+      .replace(/%PILL_VARIANT%/g, context.pillVariant)
       .replace(/%SHIPPING_PRICE%/g, context.shippingPrice)
       .replace(/%SHIPPING_CURRENCY%/g, context.shippingCurrency)
       .replace(/%TOTAL_PRICE%/g, context.totalPrice)

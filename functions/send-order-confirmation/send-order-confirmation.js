@@ -27,7 +27,7 @@ Při platbě převodem na účet – prosím vyčkejte na email od nás s plateb
 
 Níže najdete shrnutí své objednávky:
 
-%QUANTITY% x Karmen Pill: %PILL_PRICE% %PILL_CURRENCY%
+%QUANTITY% x %PILL_VARIANT%: %PILL_PRICE% %PILL_CURRENCY%
 Doprava: %SHIPPING_PRICE% %SHIPPING_CURRENCY%
 Celkem: %TOTAL_PRICE% %TOTAL_CURRENCY%
 
@@ -48,7 +48,7 @@ In case you've selected a bank transfer — please wait for an email with paymen
 
 Please find below a summary of your order:
 
-%QUANTITY% x Karmen Pill: %PILL_PRICE% %PILL_CURRENCY%
+%QUANTITY% x %PILL_VARIANT%: %PILL_PRICE% %PILL_CURRENCY%
 Shipping: %SHIPPING_PRICE% %SHIPPING_CURRENCY%
 Total: %TOTAL_PRICE% %TOTAL_CURRENCY%
 

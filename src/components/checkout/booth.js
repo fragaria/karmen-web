@@ -70,6 +70,7 @@ const CheckoutBooth = () => {
       state: values.state,
       paymentMethod: values.paymentMethod,
       country: values.country,
+      pillVariant: values.product.name,
       ...purchaseDetails,
     }
 

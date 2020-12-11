@@ -20,7 +20,7 @@ const NAME_MAX_LENGTH = 50
 const textTemplate = `
 Nová objednávka z karmen.tech od %SENDER_NAME% <%SENDER_EMAIL%>:
 
-%QUANTITY% x Karmen Pill: %PILL_PRICE% %PILL_CURRENCY%
+%QUANTITY% x %PILL_VARIANT%: %PILL_PRICE% %PILL_CURRENCY%
 Doprava: %SHIPPING_PRICE% %SHIPPING_CURRENCY%
 Celkem: %TOTAL_PRICE% %TOTAL_CURRENCY%
 
