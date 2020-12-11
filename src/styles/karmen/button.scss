@@ -92,3 +92,7 @@ a.button {
     width: auto;
   }
 }
+
+.button--shifted {
+  transform: translateY(gu(-1.5));
+}

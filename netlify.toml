@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/page-data"
+  to = "/page-data"
+  status = 200
+
+[[redirects]]
   from = "/cs"
   to = "/cs/:splat"
   status = 302
@@ -23,3 +28,6 @@
   from = "/*"
   to = "/404/"
   status = 404
+
+[build]
+  functions = "functions"
