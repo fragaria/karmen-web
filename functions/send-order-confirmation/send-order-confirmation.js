@@ -2,6 +2,7 @@ const process = require("process")
 const nodemailer = require("nodemailer")
 
 const { validateEmail, validateLength } = require("./validations")
+const { renderTemplate } = require("../render-template")
 
 const transport = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -143,16 +144,7 @@ const handler = async event => {
     from: `Karmen <${process.env.CONTACT_EMAIL}>`,
     to: `${body.name} <${body.email}>`,
     subject: lang === "cs" ? subjectTemplateCS : subjectTemplateEN,
-    text: (lang === "cs" ? textTemplateCS : textTemplateEN)
-      .replace("%SENDER_NAME%", body.name)
-      .replace("%SENDER_EMAIL%", body.email)
-      .replace("%QUANTITY%", body.quantity)
-      .replace("%PILL_PRICE%", body.pillPrice)
-      .replace("%PILL_CURRENCY%", body.pillCurrency)
-      .replace("%SHIPPING_PRICE%", body.shippingPrice)
-      .replace("%SHIPPING_CURRENCY%", body.shippingCurrency)
-      .replace("%TOTAL_PRICE%", body.totalPrice)
-      .replace("%TOTAL_CURRENCY%", body.totalCurrency),
+    text: renderTemplate(lang === "cs" ? textTemplateCS : textTemplateEN, body),
   }
 
   try {

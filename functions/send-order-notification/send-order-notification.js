@@ -2,6 +2,7 @@ const process = require('process')
 const nodemailer = require('nodemailer')
 
 const { validateEmail, validateLength } = require('./validations')
+const { renderTemplate } = require("../render-template")
 
 const transport = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -117,25 +118,7 @@ const handler = async (event) => {
     from: `${body.name} <${process.env.CONTACT_EMAIL}>`,
     to: process.env.CONTACT_EMAIL,
     subject: `Nová objednávka Karmen od ${body.name}`,
-    text: textTemplate
-      .replace("%SENDER_NAME%", body.name)
-      .replace("%SENDER_EMAIL%", body.email)
-      .replace("%SENDER_PHONE%", body.phone)
-      .replace("%QUANTITY%", body.quantity)
-      .replace("%PILL_PRICE%", body.pillPrice)
-      .replace("%PILL_CURRENCY%", body.pillCurrency)
-      .replace("%SHIPPING_PRICE%", body.shippingPrice)
-      .replace("%SHIPPING_CURRENCY%", body.shippingCurrency)
-      .replace("%TOTAL_PRICE%", body.totalPrice)
-      .replace("%TOTAL_CURRENCY%", body.totalCurrency)
-      .replace("%LANG%", body.lang)
-      .replace("%COMPANY%", body.company)
-      .replace("%TAX_ID%", body.vatId)
-      .replace("%STREET%", body.street)
-      .replace("%CITY%", body.city)
-      .replace("%ZIP%", body.postalCode)
-      .replace("%STATE%", body.state)
-      .replace("%COUNTRY%", body.country)
+    text: renderTemplate(textTemplate, body),
   }
 
   try {
