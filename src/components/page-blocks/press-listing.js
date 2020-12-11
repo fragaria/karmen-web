@@ -25,9 +25,10 @@ const PressListing = ({ posts, site, location, ...props }) => {
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const link = "/" + node.frontmatter.lang + "/press" + node.fields.slug.replace(/en\/|cs\//gi, '')
           return (
             <article key={node.fields.slug} className="v-press-post content-block content-block--narrower">
-              <Link style={{ boxShadow: `none` }} to={node.frontmatter.lang + "/press" + node.fields.slug.replace(/en\/|cs\//gi, '')}>
+              <Link style={{ boxShadow: `none` }} to={link}>
                 <h3>
                     {title}
                 </h3>

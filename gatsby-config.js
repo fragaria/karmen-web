@@ -139,7 +139,7 @@ module.exports = {
         },
         {
           name: "Press",
-          url: `/en/press`
+          url: `/en/press/`
         },
       ],
       cs: [
@@ -169,7 +169,7 @@ module.exports = {
         },
         {
           name: "Tiskové zprávy",
-          url: `/cs/press`
+          url: `/cs/press/`
         },
       ],
     },

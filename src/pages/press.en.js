@@ -15,21 +15,16 @@ const PressPage = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-press">
       <SEOMetadata
+        lang="en"
         title="Press releases"
         description="All innovations come from laziness. And that was of course the case of Karmen too."
         pathname="/en/press/"
       />
       <SEOBusinessInfo />
 
-      <h1 className="page-block-headline">
-        Press Releases
-      </h1>
+      <h1 className="page-block-headline">Press Releases</h1>
 
-      <PressListing
-        posts={posts}
-        site={site}
-        location={location}
-       />
+      <PressListing posts={posts} site={site} location={location} />
     </Layout>
   )
 }
@@ -44,9 +39,9 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: {frontmatter: {lang: {eq: "en"}}}
-     ) {
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { lang: { eq: "en" } } }
+    ) {
       edges {
         node {
           excerpt

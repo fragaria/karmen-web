@@ -22,15 +22,9 @@ const PressPage = ({ data, location }) => {
       />
       <SEOBusinessInfo />
 
-      <h1 className="page-block-headline">
-        Tiskové zprávy
-      </h1>
+      <h1 className="page-block-headline">Tiskové zprávy</h1>
 
-      <PressListing
-        posts={posts}
-        site={site}
-        location={location}
-       />
+      <PressListing posts={posts} site={site} location={location} />
     </Layout>
   )
 }
@@ -45,9 +39,9 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: {frontmatter: {lang: {eq: "cs"}}}
-     ) {
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { lang: { eq: "cs" } } }
+    ) {
       edges {
         node {
           excerpt
