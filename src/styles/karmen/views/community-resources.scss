@@ -1,0 +1,68 @@
+.v-community-resources {
+  text-align: center;
+  padding-bottom: gu(4);
+
+  .page-block-headline {
+    text-align: center;
+
+    @include baseline(s8, $headingtype, 2, $above: 2, $below: 2);
+    @include baseline(s8, $headingtype, 2, $above: 4, $below: 3, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 3, $breakpoint: tablet-small up);
+  }
+}
+
+
+.v-community-resources-listing {
+  display: grid;
+  grid-gap: gu(0.5);
+  // grid-template-columns: 100%;
+
+  @include breakpoint(tablet up) {
+    grid-gap: gu();
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.v-community-resources-listing-link {
+  @include baseline(s2, $bodytype, 1, $below: 0);
+
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.v-community-resources-listing__item {
+  background: map-get($palette, white);
+  text-align: left;
+  padding: 0 gu() gu();
+  overflow: hidden;
+
+  h2 {
+    @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0.5);
+    @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0.5, $breakpoint: tablet-small up);
+  }
+
+  p {
+    @include baseline(s3, $bodytype, 1, $below: 0, $above: 1);
+    @include baseline(s3, $bodytype, 1, $below: 0, $above: 1, $breakpoint: tablet-small up);
+
+    strong {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+}

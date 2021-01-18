@@ -130,6 +130,10 @@ module.exports = {
           url: `/en/#contact`,
         },
         {
+          name: "Community",
+          url: `/en/community/`,
+        },
+        {
           name: "Blog",
           url: `/en/blog/`,
         },
@@ -150,6 +154,10 @@ module.exports = {
         {
           name: "Kontakt",
           url: `/cs/#contact`,
+        },
+        {
+          name: "Komunita",
+          url: `/cs/komunita/`,
         },
         {
           name: "Blog",
@@ -291,6 +299,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/src/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resources`,
+        path: `${__dirname}/src/resources`,
       },
     },
     {

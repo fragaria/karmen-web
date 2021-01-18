@@ -4,12 +4,13 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pressPost = path.resolve(`./src/pages/blog-post.js`)
+  const pressPost = path.resolve(`./src/templates/blog-post.js`)
   const result = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fileAbsolutePath: { regex: "/(blog)/" } }
           limit: 1000
         ) {
           edges {
@@ -35,21 +36,23 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
 
-  posts.forEach((post, index) => {
-    const path =
-      "/" +
-      post.node.frontmatter.lang +
-      "/blog/" +
-      post.node.fields.slug.replace(/\/(en|cs)\//gi, "")
-    createPage({
-      path,
-      component: pressPost,
-      context: {
-        slug: post.node.fields.slug,
-        lang: post.node.frontmatter.lang,
-      },
+  posts
+    .filter(post => !!post.node.frontmatter.lang)
+    .forEach((post, index) => {
+      const path =
+        "/" +
+        post.node.frontmatter.lang +
+        "/blog/" +
+        post.node.fields.slug.replace(/\/(en|cs)\//gi, "")
+      createPage({
+        path,
+        component: pressPost,
+        context: {
+          slug: post.node.fields.slug,
+          lang: post.node.frontmatter.lang,
+        },
+      })
     })
-  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

@@ -12,9 +12,9 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location} containerClass="v-blog v-blog-detail">
       <SEOMetadata
-        title="The Karmen story"
-        description="All innovations come from laziness. And that was of course the case of Karmen too."
-        pathname="/en/story/"
+        title={post.frontmatter.title}
+        description={post.excerpt}
+        pathname={location.pathname}
       />
       <SEOBusinessInfo />
       {post && (
