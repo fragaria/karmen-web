@@ -14,12 +14,16 @@
 
 .v-community-resources-listing {
   display: grid;
-  grid-gap: gu(0.5);
-  // grid-template-columns: 100%;
+  grid-gap: 1px;
 
   @include breakpoint(tablet up) {
-    grid-gap: gu();
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+  }
+
+  @include breakpoint(desktop up) {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
   }
 }
 
