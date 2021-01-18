@@ -13,7 +13,7 @@ const BlogPage = ({ data, location }) => {
   const site = data.site
 
   return (
-    <Layout location={location} containerClass="v-press">
+    <Layout location={location} containerClass="v-blog">
       <SEOMetadata
         lang="en"
         title="Blog"

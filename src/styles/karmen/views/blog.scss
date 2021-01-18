@@ -1,4 +1,4 @@
-.v-press {
+.v-blog {
   text-align: center;
   padding-bottom: gu(4);
 
@@ -38,7 +38,7 @@
   }
 }
 
-.v-press-post {
+.v-blog-post {
   small {
     display: block;
 
@@ -67,7 +67,7 @@
   }
 }
 
-.v-press-detail {
+.v-blog-detail {
   p {
     @include baseline(s3, $bodytype, 1, $below: 1);
     @include baseline(s4, $bodytype, 1, $below: 1, $breakpoint: tablet-small up);

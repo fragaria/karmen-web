@@ -10,7 +10,7 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
 
   return (
-    <Layout location={location} containerClass="v-press v-press-detail">
+    <Layout location={location} containerClass="v-blog v-blog-detail">
       <SEOMetadata
         title="The Karmen story"
         description="All innovations come from laziness. And that was of course the case of Karmen too."

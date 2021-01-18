@@ -30,7 +30,7 @@ const BlogListing = ({ posts, site, location, ...props }) => {
           return (
             <article
               key={node.fields.slug}
-              className="v-press-post content-block content-block--narrower"
+              className="v-blog-post content-block content-block--narrower"
             >
               <Link style={{ boxShadow: `none` }} to={link}>
                 <h3>{title}</h3>
