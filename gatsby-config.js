@@ -169,10 +169,6 @@ module.exports = {
       en: [
         [
           {
-            name: "Sign up to Karmen Cloud",
-            url: "https://cloud.karmen.tech/register",
-          },
-          {
             name: "Log in to Karmen Cloud",
             url: "https://cloud.karmen.tech",
           },
@@ -180,20 +176,12 @@ module.exports = {
             name: "Source code on GitHub",
             url: "https://github.com/fragaria/karmen",
           },
-          {
-            name: "Releases and updates",
-            url: "https://github.com/fragaria/karmen/releases",
-          },
         ],
         [
           {
             name:
-              "Karmen Cloud Docs - what is it and how to connect to a cloud?",
-            url: "https://docs.karmen.tech/#/quickstart",
-          },
-          {
-            name: "Karmen Pill docs - what is it and how to use it?",
-            url: "https://docs.karmen.tech/#/pill-getting-started",
+              "Karmen Cloud & Karmen Pill Documentation",
+            url: "https://docs.karmen.tech/",
           },
           {
             name: "Connecting other OctoPrint boxes to Karmen Cloud",
@@ -210,10 +198,6 @@ module.exports = {
       cs: [
         [
           {
-            name: "Registrace do Karmen Cloudu",
-            url: "https://cloud.karmen.tech/register",
-          },
-          {
             name: "Přihlásit se do Karmen Cloudu",
             url: "https://cloud.karmen.tech",
           },
@@ -221,20 +205,12 @@ module.exports = {
             name: "Zdrojový kód na GitHubu",
             url: "https://github.com/fragaria/karmen",
           },
-          {
-            name: "Releasy a updaty",
-            url: "https://github.com/fragaria/karmen/releases",
-          },
         ],
         [
           {
             name:
-              "Karmen Cloud dokumentace - co je Karmen Cloud a jak se připojit?",
-            url: "https://docs.karmen.tech/#/quickstart",
-          },
-          {
-            name: "Karmen Pill dokumentace - co je to a jak ji používat?",
-            url: "https://docs.karmen.tech/#/pill-getting-started",
+              "Dokumentace Karmen Cloud a Karmen Pill",
+            url: "https://docs.karmen.tech/",
           },
           {
             name: "Připojení zařízení s OctoPrint do Karmen Cloudu",
