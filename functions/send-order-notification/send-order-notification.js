@@ -1,7 +1,7 @@
-const process = require('process')
-const nodemailer = require('nodemailer')
+const process = require("process")
+const nodemailer = require("nodemailer")
 
-const { validateEmail, validateLength } = require('./validations')
+const { validateEmail, validateLength } = require("./validations")
 const { renderTemplate } = require("../render-template")
 
 const transport = nodemailer.createTransport({
@@ -9,10 +9,9 @@ const transport = nodemailer.createTransport({
   port: process.env.SMTP_PORT,
   auth: {
     user: process.env.SMTP_USERNAME,
-    pass: process.env.SMTP_PASSWORD
-  }
-});
-
+    pass: process.env.SMTP_PASSWORD,
+  },
+})
 
 const NAME_MIN_LENGTH = 3
 const NAME_MAX_LENGTH = 50
@@ -39,22 +38,22 @@ Město: %CITY%
 PSČ: %ZIP%
 Stát: %STATE%
 Země: %COUNTRY%
-`;
+`
 
-const handler = async (event) => {
+const handler = async event => {
   if (!process.env.CONTACT_EMAIL) {
     return {
       statusCode: 500,
-      body: 'process.env.CONTACT_EMAIL must be defined',
+      body: "process.env.CONTACT_EMAIL must be defined",
     }
   }
 
-  console.log(event.body);
+  console.log(event.body)
 
   const body = JSON.parse(event.body)
 
   try {
-    validateLength('body.name', body.name, NAME_MIN_LENGTH, NAME_MAX_LENGTH)
+    validateLength("body.name", body.name, NAME_MIN_LENGTH, NAME_MAX_LENGTH)
   } catch (error) {
     return {
       statusCode: 403,
@@ -63,7 +62,7 @@ const handler = async (event) => {
   }
 
   try {
-    validateEmail('body.email', body.email)
+    validateEmail("body.email", body.email)
   } catch (error) {
     return {
       statusCode: 403,
@@ -74,44 +73,44 @@ const handler = async (event) => {
   if (!body.quantity) {
     return {
       statusCode: 403,
-      body: "Missing body.quantity"
-    };
+      body: "Missing body.quantity",
+    }
   }
   if (!body.pillPrice) {
     return {
       statusCode: 403,
-      body: "Missing body.pillPrice"
-    };
+      body: "Missing body.pillPrice",
+    }
   }
   if (!body.pillCurrency) {
     return {
       statusCode: 403,
-      body: "Missing body.pillCurrency"
-    };
+      body: "Missing body.pillCurrency",
+    }
   }
   if (!body.shippingPrice) {
     return {
       statusCode: 403,
-      body: "Missing body.shippingPrice"
-    };
+      body: "Missing body.shippingPrice",
+    }
   }
   if (!body.shippingCurrency) {
     return {
       statusCode: 403,
-      body: "Missing body.shippingCurrency"
-    };
+      body: "Missing body.shippingCurrency",
+    }
   }
   if (!body.totalPrice) {
     return {
       statusCode: 403,
-      body: "Missing body.totalPrice"
-    };
+      body: "Missing body.totalPrice",
+    }
   }
   if (!body.totalCurrency) {
     return {
       statusCode: 403,
-      body: "Missing body.totalCurrency"
-    };
+      body: "Missing body.totalCurrency",
+    }
   }
 
   const descriptor = {

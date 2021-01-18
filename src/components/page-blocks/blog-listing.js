@@ -3,9 +3,7 @@ import { Link } from "gatsby"
 
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
-
-const PressListing = ({ posts, site, location, ...props }) => {
-
+const BlogListing = ({ posts, site, location, ...props }) => {
   return (
     <article itemType="http://schema.org/Organization" itemScope>
       <span
@@ -22,16 +20,20 @@ const PressListing = ({ posts, site, location, ...props }) => {
       <meta itemProp="url" content={site.siteMetadata.siteUrl} />
 
       <section {...props}>
-
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          const link = "/" + node.frontmatter.lang + "/press" + node.fields.slug.replace(/en\/|cs\//gi, '')
+          const link =
+            "/" +
+            node.frontmatter.lang +
+            "/blog/" +
+            node.fields.slug.replace(/\/(en|cs)\//gi, "")
           return (
-            <article key={node.fields.slug} className="v-press-post content-block content-block--narrower">
+            <article
+              key={node.fields.slug}
+              className="v-press-post content-block content-block--narrower"
+            >
               <Link style={{ boxShadow: `none` }} to={link}>
-                <h3>
-                    {title}
-                </h3>
+                <h3>{title}</h3>
                 <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
@@ -42,10 +44,9 @@ const PressListing = ({ posts, site, location, ...props }) => {
             </article>
           )
         })}
-
       </section>
     </article>
   )
 }
 
-export default PressListing
+export default BlogListing

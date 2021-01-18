@@ -1,5 +1,5 @@
 const validateEmail = (ctx, str) => {
-  if (typeof str !== 'string' && !(str instanceof String)) {
+  if (typeof str !== "string" && !(str instanceof String)) {
     throw new TypeError(`${ctx} must be a string`)
   }
 
@@ -19,7 +19,7 @@ const validateLength = (ctx, str, min, max) => {
     min = 0
   }
 
-  if (typeof str !== 'string' && !(str instanceof String)) {
+  if (typeof str !== "string" && !(str instanceof String)) {
     throw new TypeError(`${ctx} must be a string`)
   }
 

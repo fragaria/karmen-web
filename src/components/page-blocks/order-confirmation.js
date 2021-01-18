@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl, FormattedMessage } from "react-intl"
 
 import { Image } from "components/image"
-import PriceSummary from "components/checkout/price-summary";
-import PriceTotal from "components/checkout/price-total";
+import PriceSummary from "components/checkout/price-summary"
+import PriceTotal from "components/checkout/price-total"
 
 const OrderConfirmationBlock = ({ params, ...props }) => {
   const data = useStaticQuery(graphql`
@@ -22,13 +22,13 @@ const OrderConfirmationBlock = ({ params, ...props }) => {
   const intl = useIntl()
   const learnLink = intl.locale === "cs" ? "/cs/#meet" : "/en/#meet"
 
-  const pillQuantity = params.get("quantity");
-  const pillPrice = params.get("pillPrice");
-  const pillCurrency = params.get("pillCurrency");
-  const shippingPrice = params.get("shippingPrice");
-  const shippingCurrency = params.get("shippingCurrency");
-  const totalPrice = params.get("totalPrice");
-  const totalCurrency = params.get("totalCurrency");
+  const pillQuantity = params.get("quantity")
+  const pillPrice = params.get("pillPrice")
+  const pillCurrency = params.get("pillCurrency")
+  const shippingPrice = params.get("shippingPrice")
+  const shippingCurrency = params.get("shippingCurrency")
+  const totalPrice = params.get("totalPrice")
+  const totalCurrency = params.get("totalCurrency")
 
   return (
     <div className="content-block content-block--sitenavwide content-block--shift-mobile">
@@ -51,7 +51,6 @@ const OrderConfirmationBlock = ({ params, ...props }) => {
                   <FormattedMessage
                     id="order-confirmation.thankyou"
                     defaultMessage="Thank you for your order!"
-
                   />
                 </span>
                 <span className="payment-confirmation__notification-sentence">
@@ -82,7 +81,10 @@ const OrderConfirmationBlock = ({ params, ...props }) => {
               </div>
             </div>
             <div className="text-center">
-              <a className="button button--red button--responsive button--shifted" href={learnLink}>
+              <a
+                className="button button--red button--responsive button--shifted"
+                href={learnLink}
+              >
                 <FormattedMessage
                   id="order-confirmation.browse"
                   defaultMessage="Go back to the website"

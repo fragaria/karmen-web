@@ -1,7 +1,6 @@
 import React from "react"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
-
 const messages = defineMessages({
   priceNote: {
     id: "price-summary.price_note",

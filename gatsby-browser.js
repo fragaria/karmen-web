@@ -26,28 +26,28 @@ export const onClientEntry = () => {
   }
 }
 
-export const onRouteUpdate = ({location}) => {
-  anchorScroll(location);
-  return true;
-};
+export const onRouteUpdate = ({ location }) => {
+  anchorScroll(location)
+  return true
+}
 
 export const shouldUpdateScroll = ({
   routerProps: { location },
-  getSavedScrollPosition
+  getSavedScrollPosition,
 }) => {
   if (location && location.hash) {
-    anchorScroll(location);
-    return false;
+    anchorScroll(location)
+    return false
   } else {
-    return true;
+    return true
   }
 }
 
-function anchorScroll(location){
+function anchorScroll(location) {
   if (location && location.hash) {
     setTimeout(() => {
-      const elm = document.querySelector(`${location.hash}`);
-      elm.scrollIntoView({ behavior: "smooth" });
-    }, 20);
+      const elm = document.querySelector(`${location.hash}`)
+      elm.scrollIntoView({ behavior: "smooth" })
+    }, 20)
   }
 }

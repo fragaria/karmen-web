@@ -6,19 +6,18 @@ import { CheckoutSession } from "./session"
 import CheckoutForm from "./form"
 import { selectShippingVariant } from "./config"
 
-
 const sendOrderConfirmation = async (functionRoot, context) => {
   await fetch(`${functionRoot}.netlify/functions/send-order-confirmation`, {
     method: "POST",
-    body: JSON.stringify(context)
-  });
-};
+    body: JSON.stringify(context),
+  })
+}
 
 const sendOrderNotification = async (functionRoot, context) => {
   await fetch(`${functionRoot}.netlify/functions/send-order-notification`, {
     method: "POST",
-    body: JSON.stringify(context)
-  });
+    body: JSON.stringify(context),
+  })
 }
 
 const CheckoutBooth = () => {
@@ -75,16 +74,25 @@ const CheckoutBooth = () => {
     }
 
     await Promise.all([
-      sendOrderConfirmation(config.siteMetadata.functions.rootUrl, emailContext),
-      sendOrderNotification(config.siteMetadata.functions.rootUrl, emailContext),
-    ]);
+      sendOrderConfirmation(
+        config.siteMetadata.functions.rootUrl,
+        emailContext
+      ),
+      sendOrderNotification(
+        config.siteMetadata.functions.rootUrl,
+        emailContext
+      ),
+    ])
 
     if (values["paymentMethod"] === "transfer") {
-      const redirUrl = langKey === "cs" ? "/cs/potvrzeni-objednavky/" : "/en/order-confirmation/"
+      const redirUrl =
+        langKey === "cs"
+          ? "/cs/potvrzeni-objednavky/"
+          : "/en/order-confirmation/"
       const params = new URLSearchParams()
 
       for (const [key, value] of Object.entries(purchaseDetails)) {
-        params.append(key, value);
+        params.append(key, value)
       }
 
       navigate(`${redirUrl}?${params.toString()}`)
@@ -111,7 +119,11 @@ const CheckoutBooth = () => {
               name: values["product"].name,
               quantity: values["quantity"],
             },
-            { sku: shippingVariant.sku, name: shippingVariant.name, quantity: 1 },
+            {
+              sku: shippingVariant.sku,
+              name: shippingVariant.name,
+              quantity: 1,
+            },
           ],
           prefillData: {
             customer_name: values["fullName"],
@@ -133,7 +145,6 @@ const CheckoutBooth = () => {
         console.error("Octobat integration not configured")
       }
     }
-
   }
 
   return (

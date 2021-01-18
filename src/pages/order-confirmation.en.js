@@ -5,7 +5,7 @@ import SEOMetadata from "components/seo/metadata"
 import OrderConfirmationBlock from "components/page-blocks/order-confirmation"
 
 const OrderConfirmation = ({ location }) => {
-  const locationParams = new URLSearchParams(location.search);
+  const locationParams = new URLSearchParams(location.search)
 
   return (
     <Layout location={location}>

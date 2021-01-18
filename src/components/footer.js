@@ -31,10 +31,7 @@ const messages = defineMessages({
 const FooterLinks = ({ navGroups }) => (
   <nav aria-label="Footer" className="footer-linkgroups">
     <h1 className="footer-linkgroups__title">
-      <FormattedMessage
-        id="footer.community"
-        defaultMessage="Community"
-      />
+      <FormattedMessage id="footer.community" defaultMessage="Community" />
     </h1>
     <div className="footer-linkgroups__container">
       {navGroups.map((group, index) => (

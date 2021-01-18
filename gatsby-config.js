@@ -1,6 +1,6 @@
 const path = require("path")
 const languages = require("./src/i18n/languages")
-const sharp = require('sharp')
+const sharp = require("sharp")
 
 // Avoid segfaults on Netlify
 // https://github.com/gatsbyjs/gatsby/issues/6291
@@ -115,61 +115,61 @@ module.exports = {
       en: [
         {
           name: "How it works",
-          url: `/en/#principle`
+          url: `/en/#principle`,
         },
         {
           name: "Pricing",
-          url: `/en/#buy`
+          url: `/en/#buy`,
         },
         {
           name: "Buy",
-          url: `/en/buy/`
+          url: `/en/buy/`,
         },
         {
           name: "Karmen story",
-          url: `/en/story/`
+          url: `/en/story/`,
         },
         {
           name: "Contact",
-          url: `/en/#contact`
+          url: `/en/#contact`,
         },
         {
           name: "Community",
-          url: `/en/#community`
+          url: `/en/#community`,
         },
         {
-          name: "Press",
-          url: `/en/press/`
+          name: "Blog",
+          url: `/en/blog/`,
         },
       ],
       cs: [
         {
           name: "Jak na to",
-          url: `/cs/#principle`
+          url: `/cs/#principle`,
         },
         {
           name: "Cena",
-          url: `/cs/#buy`
+          url: `/cs/#buy`,
         },
         {
           name: "Koupit",
-          url: `/cs/koupit/`
+          url: `/cs/koupit/`,
         },
         {
           name: "Příběh Karmen",
-          url: `/cs/pribeh/`
+          url: `/cs/pribeh/`,
         },
         {
           name: "Kontakt",
-          url: `/cs/#contact`
+          url: `/cs/#contact`,
         },
         {
           name: "Komunita",
-          url: `/cs/#community`
+          url: `/cs/#community`,
         },
         {
-          name: "Tiskové zprávy",
-          url: `/cs/press/`
+          name: "Blog",
+          url: `/cs/blog/`,
         },
       ],
     },
@@ -178,11 +178,11 @@ module.exports = {
         [
           {
             name: "Sign up to Karmen Cloud",
-            url: "https://cloud.karmen.tech/register"
+            url: "https://cloud.karmen.tech/register",
           },
           {
             name: "Log in to Karmen Cloud",
-            url: "https://cloud.karmen.tech"
+            url: "https://cloud.karmen.tech",
           },
           {
             name: "Source code on GitHub",
@@ -195,8 +195,9 @@ module.exports = {
         ],
         [
           {
-            name: "Karmen Cloud Docs - what is it and how to connect to a cloud?",
-            url: "https://docs.karmen.tech/#/quickstart"
+            name:
+              "Karmen Cloud Docs - what is it and how to connect to a cloud?",
+            url: "https://docs.karmen.tech/#/quickstart",
           },
           {
             name: "Karmen Pill docs - what is it and how to use it?",
@@ -204,11 +205,13 @@ module.exports = {
           },
           {
             name: "Connecting other OctoPrint boxes to Karmen Cloud",
-            url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
+            url:
+              "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
           },
           {
             name: "Buy Pill on Mall.cz",
-            url: "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
+            url:
+              "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
           },
         ],
       ],
@@ -220,7 +223,7 @@ module.exports = {
           },
           {
             name: "Přihlásit se do Karmen Cloudu",
-            url: "https://cloud.karmen.tech"
+            url: "https://cloud.karmen.tech",
           },
           {
             name: "Zdrojový kód na GitHubu",
@@ -233,7 +236,8 @@ module.exports = {
         ],
         [
           {
-            name: "Karmen Cloud dokumentace - co je Karmen Cloud a jak se připojit?",
+            name:
+              "Karmen Cloud dokumentace - co je Karmen Cloud a jak se připojit?",
             url: "https://docs.karmen.tech/#/quickstart",
           },
           {
@@ -242,11 +246,13 @@ module.exports = {
           },
           {
             name: "Připojení zařízení s OctoPrint do Karmen Cloudu",
-            url: "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
+            url:
+              "https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6",
           },
           {
             name: "Nákup pillu přes Mall.cz",
-            url: "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
+            url:
+              "https://www.mall.cz/prislusenstvi-3d-tisk/karmen-pill-karmen-pill-100020418042",
           },
         ],
       ],
@@ -299,8 +305,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `press`,
-        path: `${__dirname}/src/content/press`,
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
       },
     },
     {

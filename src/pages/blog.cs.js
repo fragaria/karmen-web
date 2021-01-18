@@ -1,35 +1,35 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "layouts/en"
+import Layout from "layouts/cs"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
-import PressListing from "components/page-blocks/press-listing"
+import BlogListing from "components/page-blocks/blog-listing"
 
-const PressPage = ({ data, location }) => {
+const BlogPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   const site = data.site
 
   return (
     <Layout location={location} containerClass="v-press">
       <SEOMetadata
-        lang="en"
-        title="Press releases"
-        description="All innovations come from laziness. And that was of course the case of Karmen too."
-        pathname="/en/press/"
+        lang="cs"
+        title="Blog"
+        description="Všechny inovace vychází z lenosti. Stejně tak vznikla i Karmen."
+        pathname="/cs/blog/"
       />
       <SEOBusinessInfo />
 
-      <h1 className="page-block-headline">Press Releases</h1>
+      <h1 className="page-block-headline">Blog</h1>
 
-      <PressListing posts={posts} site={site} location={location} />
+      <BlogListing posts={posts} site={site} location={location} />
     </Layout>
   )
 }
 
-export default PressPage
+export default BlogPage
 
 export const pageQuery = graphql`
   query {
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { lang: { eq: "en" } } }
+      filter: { frontmatter: { lang: { eq: "cs" } } }
     ) {
       edges {
         node {
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "LL", locale: "cs")
             title
             lang
             description

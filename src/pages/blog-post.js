@@ -20,12 +20,8 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
       {post && (
         <article className="content-block content-block--narrower">
           <header>
-            <h1 className="page-block-headline">
-              {post.frontmatter.title}
-            </h1>
-            <small>
-              {post.frontmatter.date}
-            </small>
+            <h1 className="page-block-headline">{post.frontmatter.title}</h1>
+            <small>{post.frontmatter.date}</small>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -40,7 +36,7 @@ const PressPostTemplate = ({ data, pageContext, location }) => {
 export default PressPostTemplate
 
 export const pageQuery = graphql`
-  query PressPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!, $lang: String!) {
     site {
       siteMetadata {
         title
@@ -53,7 +49,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         lang
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "LL", locale: $lang)
         description
       }
     }

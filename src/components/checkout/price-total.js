@@ -8,10 +8,7 @@ const messages = defineMessages({
   },
 })
 
-const PriceTotal = ({
-  totalPrice,
-  totalCurrency,
-}) => {
+const PriceTotal = ({ totalPrice, totalCurrency }) => {
   const intl = useIntl()
 
   return (

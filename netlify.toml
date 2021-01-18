@@ -1,4 +1,44 @@
 [[redirects]]
+  from = "/en/press/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/cs/press/"
+  to = "/cs/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/press/2020-08-05/"
+  to = "/en/blog/2020-08-05-schools-put-3d-printing-to-work-in-education-karmen-a-czech-company-is-helping-with-that/"
+  status = 302
+
+[[redirects]]
+  from = "/en/press/2020-04-29/"
+  to = "/en/blog/2020-04-29-cute-smart-and-czech-karmen-arrives-on-the-3d-printing-market/"
+  status = 302
+
+[[redirects]]
+  from = "/en/press/2020-03-30/"
+  to = "/en/blog/2020-03-30-karmen-turns-common-3d-printers-into-smart-ones/"
+  status = 302
+
+[[redirects]]
+  from = "/cs/press/2020-08-05/"
+  to = "/cs/blog/2020-08-05-skoly-zapojuji-3d-tisk-do-vyroby-pomaha-jim-s-tim-ceska-karmen/"
+  status = 302
+
+[[redirects]]
+  from = "/cs/press/2020-04-29/"
+  to = "/cs/blog/2020-04-29-hezka-chytra-ceska-karmen-vstoupila-na-trh-3d-tisku/"
+  status = 302
+
+[[redirects]]
+  from = "/cs/press/2020-03-30/"
+  to = "/cs/blog/2020-03-30-karmen-promeni-bezne-3d-tiskarny-na-chytre/"
+  status = 302
+
+[[redirects]]
   from = "/page-data"
   to = "/page-data"
   status = 200

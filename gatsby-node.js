@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pressPost = path.resolve(`./src/pages/press-post.js`)
+  const pressPost = path.resolve(`./src/pages/blog-post.js`)
   const result = await graphql(
     `
       {
@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title,
+                title
                 lang
               }
             }
@@ -36,8 +36,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
+    const path =
+      "/" +
+      post.node.frontmatter.lang +
+      "/blog/" +
+      post.node.fields.slug.replace(/\/(en|cs)\//gi, "")
     createPage({
-      path: `${post.node.frontmatter.lang}/press${post.node.fields.slug.replace(/en\/|cs\//gi, '')}`,
+      path,
       component: pressPost,
       context: {
         slug: post.node.fields.slug,
@@ -59,4 +64,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
