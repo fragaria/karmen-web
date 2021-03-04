@@ -156,12 +156,12 @@ module.exports = {
           url: `/cs/#contact`,
         },
         {
-          name: "Komunita",
-          url: `/cs/komunita/`,
-        },
-        {
           name: "Blog",
           url: `/cs/blog/`,
+        },
+        {
+          name: "O Nás",
+          url: `/cs/o-nas/`,
         },
       ],
     },
