@@ -1,8 +1,9 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import { defineMessages, useIntl } from "react-intl"
+import { defineMessages, useIntl, FormattedMessage } from "react-intl"
 
 import strawberryImg from "assets/img/strawberry.svg"
+import karmenImg from "assets/img/karmen-logo.svg"
 
 const messages = defineMessages({
   ghProfileTitle: {
@@ -26,6 +27,28 @@ const messages = defineMessages({
     defaultMessage: "Karmen docs",
   },
 })
+
+const FooterLinks = ({ navGroups }) => (
+  <nav aria-label="Footer" className="footer-linkgroups">
+    <h1 className="footer-linkgroups__title">
+      <FormattedMessage id="footer.community" defaultMessage="Community" />
+    </h1>
+    <div className="footer-linkgroups__container">
+      {navGroups.map((group, index) => (
+        <ul key={index} className="footer-linkgroups__group arrow-list">
+          {group.map(item => (
+            <li
+              key={item.url}
+              className="footer-linkgroups__item arrow-list__item"
+            >
+              <a href={item.url}>{item.name}</a>
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  </nav>
+)
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -62,6 +85,14 @@ const Footer = () => {
 
   return (
     <footer className="footer" id="community">
+      <div className="footer__section">
+        <div className="content-block footer-sitelinks">
+          <FooterLinks
+            navGroups={data.site.siteMetadata.footerNav[intl.locale]}
+          />
+          <img className="footer__karmenlogo" src={karmenImg} alt="Karmen" />
+        </div>
+      </div>
       <div className="footer__section">
         <div className="content-block footer__bottom">
           <div className="footer__brandinfo">
