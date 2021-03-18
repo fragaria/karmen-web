@@ -160,8 +160,8 @@ module.exports = {
           url: `/cs/blog/`,
         },
         {
-          name: "O Nás",
-          url: `/cs/o-nas/`,
+          name: "Komunita",
+          url: `/cs/komunita/`,
         },
       ],
     },
