@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "layouts/en"
+import Layout from "layouts/cs"
 import { graphql } from "gatsby"
 
 import SEOMetadata from "components/seo/metadata"
