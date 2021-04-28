@@ -87,6 +87,8 @@
   "principle-block.all_done": "You’re good to go!",
   "principle-block.connect": "Connect Pill to your printer",
   "principle-block.connect_note": "Use the printer’s USB port",
+  "principle-block.connect_octoprint": "Connect OctoPrint to Karmen Cloud service",
+  "principle-block.connect_octoprint_note": "If you don't know what OctoPrint is, don't bother",
   "principle-block.headline": "How it works",
   "principle-block.signup": "Sign up",
   "principle-block.signup_note": "Register at {signupLink}",

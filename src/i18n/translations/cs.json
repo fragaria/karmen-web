@@ -87,6 +87,8 @@
   "principle-block.all_done": "Vše je připraveno!",
   "principle-block.connect": "Připojte Pill k vaší tiskárně",
   "principle-block.connect_note": "Pomocí USB portu tiskárny",
+  "principle-block.connect_octoprint": "Connect OctoPrint to Karmen Cloud service",
+  "principle-block.connect_octoprint_note": "If you don't know what OctoPrint is, don't bother",
   "principle-block.headline": "Jak na to?",
   "principle-block.signup": "Zaregistrujte se",
   "principle-block.signup_note": "Zaregistrujte se na {signupLink}",

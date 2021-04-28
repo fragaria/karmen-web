@@ -20,6 +20,13 @@
   }
 }
 
+a.principle__box {
+  cursor: pointer;
+  &:hover {
+    background: map-get($palette, gray-semilight);
+  }
+}
+
 .principle-box {
   &--emphasized {
     background: map-get($palette, red);

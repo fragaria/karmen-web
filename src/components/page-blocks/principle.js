@@ -30,7 +30,7 @@ const PrincipleBlock = props => {
           />
         </h1>
         <div className="principle">
-          <div className="principle__box principle-box">
+          <a href="https://cloud.karmen.tech/register" className="principle__box principle-box">
             <div className="principle-box__nr">
               <h3 className="principle-box__nr-text">01</h3>
             </div>
@@ -46,11 +46,7 @@ const PrincipleBlock = props => {
                   id="principle-block.signup_note"
                   defaultMessage="Register at {signupLink}"
                   values={{
-                    signupLink: (
-                      <a href="https://cloud.karmen.tech/register">
-                        cloud.karmen.tech/register
-                      </a>
-                    ),
+                    signupLink: "cloud.karmen.tech/register",
                   }}
                 />
               </h3>
@@ -62,8 +58,8 @@ const PrincipleBlock = props => {
                 style={{ backgroundSize: "contain" }}
               />
             </div>
-          </div>
-          <div className="principle__box principle-box">
+          </a>
+          <a href="https://docs.karmen.tech/#/pill-getting-started?id=initial-configuration" className="principle__box principle-box">
             <div className="principle-box__nr">
               <h3 className="principle-box__nr-text">02</h3>
             </div>
@@ -88,8 +84,8 @@ const PrincipleBlock = props => {
                 style={{ backgroundSize: "contain" }}
               />
             </div>
-          </div>
-          <div className="principle__box principle-box principle-box--cutoff">
+          </a>
+          <a href="https://docs.karmen.tech/#/quickstart" className="principle__box principle-box principle-box--cutoff">
             <div className="principle-box__nr">
               <h3 className="principle-box__nr-text">03</h3>
             </div>
@@ -114,10 +110,36 @@ const PrincipleBlock = props => {
                 style={{ backgroundSize: "contain" }}
               />
             </div>
-          </div>
-          <div className="principle__box principle-box principle-box--emphasized">
+          </a>
+          <a href="https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6" className="principle__box principle-box principle-box--cutoff">
             <div className="principle-box__nr">
               <h3 className="principle-box__nr-text">04</h3>
+            </div>
+            <div className="principle-box__content">
+              <h2 className="principle-box__title">
+                <FormattedMessage
+                  id="principle-block.connect_octoprint"
+                  defaultMessage="Connect OctoPrint to Karmen Cloud service"
+                />
+              </h2>
+              <h3 className="principle-box__sub">
+                <FormattedMessage
+                  id="principle-block.connect_octoprint_note"
+                  defaultMessage="If you don't know what OctoPrint is, don't bother"
+                />
+              </h3>
+            </div>
+            <div className="principle-box__img">
+              <BackgroundImage
+                className="principle-box__img-body"
+                file={data.cloud}
+                style={{ backgroundSize: "contain" }}
+              />
+            </div>
+          </a>
+          <div className="principle__box principle-box principle-box--emphasized">
+            <div className="principle-box__nr">
+              <h3 className="principle-box__nr-text">05</h3>
             </div>
             <div className="principle-box__content">
               <h2 className="principle-box__title">

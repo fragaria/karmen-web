@@ -374,26 +374,26 @@
         "defaultMessage": "excl. VAT",
         "end": {
           "column": 3,
-          "line": 9
+          "line": 8
         },
         "file": "src/components/checkout/price-summary.js",
         "id": "price-summary.price_note",
         "start": {
           "column": 13,
-          "line": 6
+          "line": 5
         }
       },
       {
         "defaultMessage": "Shipping:",
         "end": {
           "column": 12,
-          "line": 41
+          "line": 40
         },
         "file": "src/components/checkout/price-summary.js",
         "id": "checkoutform.shipping",
         "start": {
           "column": 10,
-          "line": 38
+          "line": 37
         }
       }
     ],
@@ -418,13 +418,13 @@
         "defaultMessage": "Total:",
         "end": {
           "column": 78,
-          "line": 21
+          "line": 18
         },
         "file": "src/components/checkout/price-total.js",
         "id": "checkoutform.total",
         "start": {
           "column": 10,
-          "line": 21
+          "line": 18
         }
       }
     ],
@@ -500,8 +500,8 @@
       {
         "defaultMessage": "Community",
         "end": {
-          "column": 8,
-          "line": 37
+          "column": 75,
+          "line": 34
         },
         "file": "src/components/footer.js",
         "id": "footer.community",
@@ -825,39 +825,39 @@
         "defaultMessage": "Your 3D printers{lineBreak}anytime, anywhere",
         "end": {
           "column": 16,
-          "line": 29
+          "line": 30
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.headline",
         "start": {
           "column": 14,
-          "line": 25
+          "line": 26
         }
       },
       {
         "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
         "end": {
           "column": 16,
-          "line": 36
+          "line": 37
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.sub",
         "start": {
           "column": 14,
-          "line": 32
+          "line": 33
         }
       },
       {
         "defaultMessage": "Learn more",
         "end": {
           "column": 80,
-          "line": 45
+          "line": 46
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.cta",
         "start": {
           "column": 12,
-          "line": 45
+          "line": 46
         }
       }
     ],
@@ -882,7 +882,7 @@
         "defaultMessage": "Thank you for your order!",
         "end": {
           "column": 20,
-          "line": 55
+          "line": 54
         },
         "file": "src/components/page-blocks/order-confirmation.js",
         "id": "order-confirmation.thankyou",
@@ -892,42 +892,42 @@
         }
       },
       {
-        "defaultMessage": "We've sent you a confirmation email with payment instructions.",
+        "defaultMessage": "We've sent you an order confirmation by email. Please wait for another email with payment instructions - it will follow real soon.",
         "end": {
           "column": 20,
-          "line": 61
+          "line": 60
         },
         "file": "src/components/page-blocks/order-confirmation.js",
         "id": "order-confirmation.notification",
         "start": {
           "column": 18,
-          "line": 58
+          "line": 57
         }
       },
       {
         "defaultMessage": "Order summary",
         "end": {
           "column": 20,
-          "line": 69
+          "line": 68
         },
         "file": "src/components/page-blocks/order-confirmation.js",
         "id": "order-confirmation.summary",
         "start": {
           "column": 18,
-          "line": 66
+          "line": 65
         }
       },
       {
         "defaultMessage": "Go back to the website",
         "end": {
           "column": 18,
-          "line": 89
+          "line": 91
         },
         "file": "src/components/page-blocks/order-confirmation.js",
         "id": "order-confirmation.browse",
         "start": {
           "column": 16,
-          "line": 86
+          "line": 88
         }
       }
     ],
@@ -1149,7 +1149,7 @@
         "defaultMessage": "Register at {signupLink}",
         "end": {
           "column": 18,
-          "line": 55
+          "line": 51
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.signup_note",
@@ -1162,65 +1162,91 @@
         "defaultMessage": "Connect Pill to your printer",
         "end": {
           "column": 18,
-          "line": 75
+          "line": 71
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect",
         "start": {
           "column": 16,
-          "line": 72
+          "line": 68
         }
       },
       {
         "defaultMessage": "Use the printer’s USB port",
         "end": {
           "column": 18,
-          "line": 81
+          "line": 77
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.connect_note",
         "start": {
           "column": 16,
-          "line": 78
+          "line": 74
         }
       },
       {
         "defaultMessage": "Connect the new printer to your fleet",
         "end": {
           "column": 18,
-          "line": 101
+          "line": 97
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer",
         "start": {
           "column": 16,
-          "line": 98
+          "line": 94
         }
       },
       {
         "defaultMessage": "It’s faster than drinking a cup of coffee",
         "end": {
           "column": 18,
-          "line": 107
+          "line": 103
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.add_printer_note",
         "start": {
           "column": 16,
-          "line": 104
+          "line": 100
+        }
+      },
+      {
+        "defaultMessage": "Connect OctoPrint to Karmen Cloud service",
+        "end": {
+          "column": 18,
+          "line": 123
+        },
+        "file": "src/components/page-blocks/principle.js",
+        "id": "principle-block.connect_octoprint",
+        "start": {
+          "column": 16,
+          "line": 120
+        }
+      },
+      {
+        "defaultMessage": "If you don't know what OctoPrint is, don't bother",
+        "end": {
+          "column": 18,
+          "line": 129
+        },
+        "file": "src/components/page-blocks/principle.js",
+        "id": "principle-block.connect_octoprint_note",
+        "start": {
+          "column": 16,
+          "line": 126
         }
       },
       {
         "defaultMessage": "You’re good to go!",
         "end": {
           "column": 18,
-          "line": 127
+          "line": 149
         },
         "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.all_done",
         "start": {
           "column": 16,
-          "line": 124
+          "line": 146
         }
       }
     ],
