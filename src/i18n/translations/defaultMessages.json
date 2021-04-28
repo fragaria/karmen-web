@@ -825,39 +825,39 @@
         "defaultMessage": "Your 3D printers{lineBreak}anytime, anywhere",
         "end": {
           "column": 16,
-          "line": 30
+          "line": 29
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.headline",
         "start": {
           "column": 14,
-          "line": 26
+          "line": 25
         }
       },
       {
         "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
         "end": {
           "column": 16,
-          "line": 37
+          "line": 36
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.sub",
         "start": {
           "column": 14,
-          "line": 33
+          "line": 32
         }
       },
       {
         "defaultMessage": "Learn more",
         "end": {
           "column": 80,
-          "line": 46
+          "line": 45
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.cta",
         "start": {
           "column": 12,
-          "line": 46
+          "line": 45
         }
       }
     ],
@@ -1429,159 +1429,281 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Chci hotové řešení",
+        "end": {
+          "column": 16,
+          "line": 47
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.full-solution_title",
+        "start": {
+          "column": 18,
+          "line": 44
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
+        "end": {
+          "column": 18,
+          "line": 52
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.full-solution_desc",
+        "start": {
+          "column": 19,
+          "line": 49
+        }
+      },
+      {
+        "defaultMessage": "I want it easy",
+        "end": {
+          "column": 18,
+          "line": 63
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.full-solution_cta",
+        "start": {
+          "column": 16,
+          "line": 60
+        }
+      },
+      {
+        "defaultMessage": "Mám svůj hardware",
+        "end": {
+          "column": 16,
+          "line": 84
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.own-hardware_title",
+        "start": {
+          "column": 18,
+          "line": 81
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
+        "end": {
+          "column": 18,
+          "line": 89
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.own-hardware_desc",
+        "start": {
+          "column": 19,
+          "line": 86
+        }
+      },
+      {
+        "defaultMessage": "I got my own",
+        "end": {
+          "column": 18,
+          "line": 100
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.own-hardware__cta",
+        "start": {
+          "column": 16,
+          "line": 97
+        }
+      },
+      {
+        "defaultMessage": "Vyrobím si sám",
+        "end": {
+          "column": 16,
+          "line": 121
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.create_title",
+        "start": {
+          "column": 18,
+          "line": 118
+        }
+      },
+      {
+        "defaultMessage": "Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod.",
+        "end": {
+          "column": 18,
+          "line": 126
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.create_desc",
+        "start": {
+          "column": 19,
+          "line": 123
+        }
+      },
+      {
+        "defaultMessage": "I'll make it myself",
+        "end": {
+          "column": 18,
+          "line": 137
+        },
+        "file": "src/components/page-blocks/solutions.js",
+        "id": "solutions-block.create_cta",
+        "start": {
+          "column": 16,
+          "line": 134
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/solutions.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Connects to the printer’s USB port",
         "end": {
           "column": 18,
-          "line": 49
+          "line": 50
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_1",
         "start": {
           "column": 16,
-          "line": 46
+          "line": 47
         }
       },
       {
         "defaultMessage": "Provides internet connectivity",
         "end": {
           "column": 18,
-          "line": 55
+          "line": 56
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_2",
         "start": {
           "column": 16,
-          "line": 52
+          "line": 53
         }
       },
       {
         "defaultMessage": "Includes a web camera with LED light",
         "end": {
           "column": 18,
-          "line": 61
+          "line": 62
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_3",
         "start": {
           "column": 16,
-          "line": 58
+          "line": 59
         }
       },
       {
         "defaultMessage": "Simple installation with a wizard",
         "end": {
           "column": 18,
-          "line": 67
+          "line": 68
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_4",
         "start": {
           "column": 16,
-          "line": 64
+          "line": 65
         }
       },
       {
         "defaultMessage": "Enables remote printer management with Karmen",
         "end": {
           "column": 18,
-          "line": 73
+          "line": 74
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_5",
         "start": {
           "column": 16,
-          "line": 70
+          "line": 71
         }
       },
       {
         "defaultMessage": "Getting started",
         "end": {
           "column": 16,
-          "line": 85
+          "line": 86
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.pill_getting_started",
         "start": {
           "column": 14,
-          "line": 82
+          "line": 83
         }
       },
       {
         "defaultMessage": "Remote printer management via web browser",
         "end": {
           "column": 18,
-          "line": 106
+          "line": 107
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_1",
         "start": {
           "column": 16,
-          "line": 103
+          "line": 104
         }
       },
       {
         "defaultMessage": "Live monitoring and statistics",
         "end": {
           "column": 18,
-          "line": 112
+          "line": 113
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_2",
         "start": {
           "column": 16,
-          "line": 109
+          "line": 110
         }
       },
       {
         "defaultMessage": "Team management",
         "end": {
           "column": 18,
-          "line": 118
+          "line": 119
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_3",
         "start": {
           "column": 16,
-          "line": 115
+          "line": 116
         }
       },
       {
         "defaultMessage": "Open API and easy integration with other systems",
         "end": {
           "column": 18,
-          "line": 124
+          "line": 125
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_4",
         "start": {
           "column": 16,
-          "line": 121
+          "line": 122
         }
       },
       {
         "defaultMessage": "SaaS or on-premise",
         "end": {
           "column": 18,
-          "line": 130
+          "line": 131
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_5",
         "start": {
           "column": 16,
-          "line": 127
+          "line": 128
         }
       },
       {
         "defaultMessage": "Quickstart",
         "end": {
           "column": 16,
-          "line": 142
+          "line": 143
         },
         "file": "src/components/page-blocks/specs.js",
         "id": "specs-block.karmen_quickstart",
         "start": {
           "column": 14,
-          "line": 139
+          "line": 140
         }
       }
     ],
