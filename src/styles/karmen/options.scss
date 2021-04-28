@@ -1,4 +1,4 @@
-.solutions {
+.options {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,11 @@
   }
 }
 
-.solutions-title {
+.options-title {
   @include baseline(s9, $headingtype, 2, $above: 3, $below: 3);
 }
 
-.solutions__box {
+.options__box {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
 
   @include breakpoint(tablet-tiny up) {
     flex-direction: row;
-    .solutions__img {
+    .options__img {
       width: gu(8);
       margin-right: gu(2.5);
     }
@@ -34,14 +34,14 @@
     flex-direction: column;
   }
 
-  + .solutions__box {
+  + .options__box {
     margin-top: gu(1);
 
     @include breakpoint(desktop up) {
       margin-top: 0;
     }
   }
-  .solutions__box__border {
+  .options__box__border {
     border-left: 1px map-get($palette, gray-medium) solid;
     height: 100%;
     position: absolute;
@@ -58,11 +58,11 @@
   }
 }
 
-.solutions__cta {
+.options__cta {
   margin-top: gu(0.5);
 }
 
-.solutions__img {
+.options__img {
   width: 100%;
   max-width: gu(12);
   height: gu(8);

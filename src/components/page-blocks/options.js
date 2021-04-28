@@ -4,9 +4,9 @@ import { FormattedMessage } from "react-intl"
 
 import { BackgroundImage } from "components/image"
 
-const SolutionsBlock = props => {
+const OptionsBlock = props => {
   const data = useStaticQuery(graphql`
-    query SolutionsQuery {
+    query {
       site {
         siteMetadata {
           pillDocs
@@ -26,50 +26,50 @@ const SolutionsBlock = props => {
   return (
     <div className="content-block">
       <section {...props}>
-        <h1 className="solutions-title">Které řešení</h1>
-        <div className="solutions">
-          <div className="solutions__box">
-            <div className="solutions__top-row">
+        <h1 className="options-title">Které řešení</h1>
+        <div className="options">
+          <div className="options__box">
+            <div className="options__top-row">
               <BackgroundImage
                 file={data.pill}
                 style={{
                   backgroundPosition: "left bottom",
                   backgroundSize: "contain",
                 }}
-                className="solutions__img"
+                className="options__img"
                 alt="Karmen Pill"
               />
             </div>
-            <div className="solutions__desc">
+            <div className="options__desc">
               <h2><FormattedMessage
-                id="solutions-block.full-solution_title"
+                id="options-block.full-solution_title"
                 defaultMessage="Chci hotové řešení"
               /></h2>
               <div className="typeset">
                 <p><FormattedMessage
-                  id="solutions-block.full-solution_desc"
+                  id="options-block.full-solution_desc"
                   defaultMessage="Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího."
                 /></p>
               </div>
               <a
                 href={data.site.siteMetadata.pillDocs}
-                className="button button--responsive solutions__cta"
+                className="button button--responsive options__cta"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FormattedMessage
-                  id="solutions-block.full-solution_cta"
+                  id="options-block.full-solution_cta"
                   defaultMessage="I want it easy"
                 />
               </a>
             </div>
           </div>
-          <div className="solutions__box">
-            <span className="solutions__box__border"></span>
-            <div className="solutions__top-row">
+          <div className="options__box">
+            <span className="options__box__border"></span>
+            <div className="options__top-row">
               <BackgroundImage
                 file={data.cloud}
-                className="solutions__img"
+                className="options__img"
                 style={{
                   backgroundPosition: "left bottom",
                   backgroundSize: "contain",
@@ -77,36 +77,36 @@ const SolutionsBlock = props => {
                 alt="Karmen cloud"
               />
             </div>
-            <div className="solutions__desc">
+            <div className="options__desc">
               <h2><FormattedMessage
-                id="solutions-block.own-hardware_title"
+                id="options-block.own-hardware_title"
                 defaultMessage="Mám svůj hardware"
               /></h2>
               <div className="typeset">
                 <p><FormattedMessage
-                  id="solutions-block.own-hardware_desc"
+                  id="options-block.own-hardware_desc"
                   defaultMessage="Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího."
                 /></p>
               </div>
               <a
                 href={data.site.siteMetadata.karmenDocs}
-                className="button button--responsive solutions__cta"
+                className="button button--responsive options__cta"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FormattedMessage
-                  id="solutions-block.own-hardware__cta"
+                  id="options-block.own-hardware__cta"
                   defaultMessage="I got my own"
                 />
               </a>
             </div>
           </div>
-          <div className="solutions__box">
-            <span className="solutions__box__border"></span>
-            <div className="solutions__top-row">
+          <div className="options__box">
+            <span className="options__box__border"></span>
+            <div className="options__top-row">
               <BackgroundImage
                 file={data.cloud}
-                className="solutions__img"
+                className="options__img"
                 style={{
                   backgroundPosition: "left bottom",
                   backgroundSize: "contain",
@@ -114,25 +114,25 @@ const SolutionsBlock = props => {
                 alt="Karmen cloud"
               />
             </div>
-            <div className="solutions__desc">
+            <div className="options__desc">
               <h2><FormattedMessage
-                id="solutions-block.create_title"
+                id="options-block.create_title"
                 defaultMessage="Vyrobím si sám"
               /></h2>
               <div className="typeset">
                 <p><FormattedMessage
-                  id="solutions-block.create_desc"
+                  id="options-block.create_desc"
                   defaultMessage="Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod."
                 /></p>
               </div>
               <a
                 href={data.site.siteMetadata.karmenDocs}
-                className="button button--responsive solutions__cta"
+                className="button button--responsive options__cta"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FormattedMessage
-                  id="solutions-block.create_cta"
+                  id="options-block.create_cta"
                   defaultMessage="I'll make it myself"
                 />
               </a>
@@ -144,4 +144,4 @@ const SolutionsBlock = props => {
   )
 }
 
-export default SolutionsBlock
+export default OptionsBlock

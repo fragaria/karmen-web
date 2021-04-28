@@ -866,6 +866,128 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Chci hotové řešení",
+        "end": {
+          "column": 16,
+          "line": 47
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.full-solution_title",
+        "start": {
+          "column": 18,
+          "line": 44
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
+        "end": {
+          "column": 18,
+          "line": 52
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.full-solution_desc",
+        "start": {
+          "column": 19,
+          "line": 49
+        }
+      },
+      {
+        "defaultMessage": "I want it easy",
+        "end": {
+          "column": 18,
+          "line": 63
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.full-solution_cta",
+        "start": {
+          "column": 16,
+          "line": 60
+        }
+      },
+      {
+        "defaultMessage": "Mám svůj hardware",
+        "end": {
+          "column": 16,
+          "line": 84
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.own-hardware_title",
+        "start": {
+          "column": 18,
+          "line": 81
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
+        "end": {
+          "column": 18,
+          "line": 89
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.own-hardware_desc",
+        "start": {
+          "column": 19,
+          "line": 86
+        }
+      },
+      {
+        "defaultMessage": "I got my own",
+        "end": {
+          "column": 18,
+          "line": 100
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.own-hardware__cta",
+        "start": {
+          "column": 16,
+          "line": 97
+        }
+      },
+      {
+        "defaultMessage": "Vyrobím si sám",
+        "end": {
+          "column": 16,
+          "line": 121
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.create_title",
+        "start": {
+          "column": 18,
+          "line": 118
+        }
+      },
+      {
+        "defaultMessage": "Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod.",
+        "end": {
+          "column": 18,
+          "line": 126
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.create_desc",
+        "start": {
+          "column": 19,
+          "line": 123
+        }
+      },
+      {
+        "defaultMessage": "I'll make it myself",
+        "end": {
+          "column": 18,
+          "line": 137
+        },
+        "file": "src/components/page-blocks/options.js",
+        "id": "solutions-block.create_cta",
+        "start": {
+          "column": 16,
+          "line": 134
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/options.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 16,
