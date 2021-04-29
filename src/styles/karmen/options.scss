@@ -10,7 +10,7 @@
 }
 
 .options-title {
-  @include baseline(s9, $headingtype, 2, $above: 3, $below: 3);
+  @include baseline(s9, $headingtype, 2, $above: 8, $below: 3);
 }
 
 .options__box {
@@ -24,13 +24,13 @@
     flex-direction: row;
     .options__img {
       width: gu(8);
-      margin-right: gu(2.5);
     }
   }
   @include breakpoint(desktop up) {
     margin-bottom: 0;
   }
   @include breakpoint(fullhd up) {
+    text-align: center;
     flex-direction: column;
   }
 
@@ -50,7 +50,6 @@
 
   h2 {
     flex: 1;
-    padding-right: gu(1);
     white-space: nowrap;
 
     @include baseline(s7, $headingtype, 2, $above: 0, $below: 1);
@@ -69,6 +68,10 @@
 
   @include breakpoint(tablet-tiny up) {
     max-width: 100%;
+    margin: 0 gu(2.5) 0 0;
+  }
+  @include breakpoint(desktop up) {
+    margin: 0 auto;
   }
 }
 

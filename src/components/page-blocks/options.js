@@ -33,7 +33,7 @@ const OptionsBlock = props => {
               <BackgroundImage
                 file={data.pill}
                 style={{
-                  backgroundPosition: "left bottom",
+                  backgroundPosition: "center bottom",
                   backgroundSize: "contain",
                 }}
                 className="options__img"
@@ -71,7 +71,7 @@ const OptionsBlock = props => {
                 file={data.cloud}
                 className="options__img"
                 style={{
-                  backgroundPosition: "left bottom",
+                  backgroundPosition: "center bottom",
                   backgroundSize: "contain",
                 }}
                 alt="Karmen cloud"
@@ -108,7 +108,7 @@ const OptionsBlock = props => {
                 file={data.cloud}
                 className="options__img"
                 style={{
-                  backgroundPosition: "left bottom",
+                  backgroundPosition: "center bottom",
                   backgroundSize: "contain",
                 }}
                 alt="Karmen cloud"
