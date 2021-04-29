@@ -1,13 +1,13 @@
-.story {
+.contact {
   display: grid;
   grid-gap: 0;
   background: map-get($palette, white);
-  grid-template-areas: "story"
+  grid-template-areas: "contact-form"
                        "team"
                        "contact";
 }
 
-.story-box {
+.contact-box {
   padding: gu(2) gu(1) 0;
 
   @include breakpoint(tablet-small up) {
@@ -19,8 +19,8 @@
   }
 }
 
-.story__story {
-  grid-area: story;
+.contact__form {
+  grid-area: contact-form;
 
   h1 {
     @include baseline(s8, $headingtype, 1, $below: 1);
@@ -33,8 +33,8 @@
   }
 }
 
-.story__team,
-.story__contact {
+.contact__team,
+.contact__contact {
   h1 {
     @include baseline(s7, $headingtype, 1, $below: 1);
     @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
@@ -45,11 +45,11 @@
   }
 }
 
-.story__team {
+.contact__team {
   grid-area: team;
 }
 
-.story__contact {
+.contact__contact {
   grid-area: contact;
 
   @include breakpoint(tablet-small down) {
@@ -58,22 +58,22 @@
 }
 
 @include breakpoint(tablet-small up) {
-  .story {
+  .contact {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "story  team"
-                         "story  contact";
+    grid-template-areas: "contact-form  team"
+                         "contact-form  contact";
   }
 
-  .story-box {
+  .contact-box {
     border-top: 0;
   }
 
-  .story__team,
-  .story__contact {
+  .contact__team,
+  .contact__contact {
     border-left: 1px map-get($palette, gray-semilight) solid;
   }
 
-  .story__team {
+  .contact__team {
     border-bottom: 1px map-get($palette, gray-semilight) solid;
   }
 }

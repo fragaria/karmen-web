@@ -13,7 +13,7 @@ import PrincipleBlock from "components/page-blocks/principle"
 import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
 import SpecsBlock from "components/page-blocks/specs"
-import StoryBlock from "components/page-blocks/story"
+import ContactBlock from "components/page-blocks/contact"
 
 const IndexENPage = ({ data, location }) => {
   return (
@@ -33,7 +33,7 @@ const IndexENPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <TestimonialsBlock className="v-home-testimonials v-home-section" />
-      <StoryBlock className="v-home-story v-home-section" />
+      <ContactBlock className="v-home-story v-home-section" />
     </Layout>
   )
 }
