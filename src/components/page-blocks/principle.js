@@ -111,35 +111,9 @@ const PrincipleBlock = props => {
               />
             </div>
           </a>
-          <a href="https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6" className="principle__box principle-box principle-box--cutoff">
-            <div className="principle-box__nr">
-              <h3 className="principle-box__nr-text">04</h3>
-            </div>
-            <div className="principle-box__content">
-              <h2 className="principle-box__title">
-                <FormattedMessage
-                  id="principle-block.connect_octoprint"
-                  defaultMessage="Connect OctoPrint to Karmen Cloud service"
-                />
-              </h2>
-              <h3 className="principle-box__sub">
-                <FormattedMessage
-                  id="principle-block.connect_octoprint_note"
-                  defaultMessage="If you don't know what OctoPrint is, don't bother"
-                />
-              </h3>
-            </div>
-            <div className="principle-box__img">
-              <BackgroundImage
-                className="principle-box__img-body"
-                file={data.cloud}
-                style={{ backgroundSize: "contain" }}
-              />
-            </div>
-          </a>
           <div className="principle__box principle-box principle-box--emphasized">
             <div className="principle-box__nr">
-              <h3 className="principle-box__nr-text">05</h3>
+              <h3 className="principle-box__nr-text">04</h3>
             </div>
             <div className="principle-box__content">
               <h2 className="principle-box__title">

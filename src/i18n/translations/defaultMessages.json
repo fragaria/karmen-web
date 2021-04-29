@@ -822,81 +822,86 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "The Karmen contact",
+        "defaultMessage": "Connect Octo",
         "end": {
           "column": 16,
-          "line": 33
+          "line": 24
         },
-        "file": "src/components/page-blocks/contact.js",
-        "id": "contact-block.karmen_contact",
+        "file": "src/components/page-blocks/connect-octo.js",
+        "id": "connect-octo-block.headline",
         "start": {
           "column": 14,
+          "line": 21
+        }
+      },
+      {
+        "defaultMessage": "Karmen with its simple online access solves what many OctoPrint users just can’t achieve easily: having their box accessible on the road literally from anywhere.",
+        "end": {
+          "column": 16,
           "line": 30
-        }
-      },
-      {
-        "defaultMessage": "Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective.",
-        "end": {
-          "column": 16,
-          "line": 39
         },
-        "file": "src/components/page-blocks/contact.js",
-        "id": "contact-block.karmen_contact_full",
+        "file": "src/components/page-blocks/connect-octo.js",
+        "id": "connect-octo.claim",
         "start": {
           "column": 14,
-          "line": 36
+          "line": 27
         }
-      },
+      }
+    ],
+    "path": "src/components/page-blocks/connect-octo.json"
+  },
+  {
+    "descriptors": [
       {
-        "defaultMessage": "See full contact",
+        "defaultMessage": "Contact form",
         "end": {
           "column": 16,
-          "line": 48
+          "line": 32
         },
         "file": "src/components/page-blocks/contact.js",
-        "id": "contact-block.karmen_contact_link",
+        "id": "contact-block.title",
         "start": {
           "column": 14,
-          "line": 45
+          "line": 29
         }
       },
       {
         "defaultMessage": "Karmen team",
         "end": {
           "column": 16,
-          "line": 56
+          "line": 57
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.karmen_team",
         "start": {
           "column": 14,
-          "line": 53
+          "line": 54
         }
       },
       {
         "defaultMessage": "See the team",
         "end": {
           "column": 18,
-          "line": 63
+          "line": 64
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.karmen_team_link",
         "start": {
           "column": 16,
-          "line": 60
+          "line": 61
         }
       },
       {
         "defaultMessage": "Contact us",
         "end": {
           "column": 16,
-          "line": 72
+          "line": 73
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.contact_us",
         "start": {
           "column": 14,
-          "line": 69
+          "line": 70
         }
       }
     ],
