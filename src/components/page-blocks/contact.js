@@ -16,6 +16,9 @@ const ContactBlock = props => {
     }
   `)
 
+  const intl = useIntl()
+  const teamLink = intl.locale === "cs" ? "/cs/pribeh/#team" : "/en/story/#team"
+
   return (
     <div className="content-block content-block--sitenavwide content-block--shift-mobile">
       <section {...props}>
