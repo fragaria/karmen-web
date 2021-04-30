@@ -27,11 +27,27 @@ const ContactBlock = props => {
             <h1 className="sitenav__anchorpush">
               <span className="sitenav__anchor" id="contact"></span>
               <FormattedMessage
-                id="contact-block.karmen_contact"
-                defaultMessage="The Karmen contact"
+                id="contact-block.title"
+                defaultMessage="Contact form"
               />
             </h1>
-            Pridat Formular
+            <div className="">
+              <div className="form__field">
+                <label className="form-label" htmlFor="variant">
+                  E-mail
+                </label>
+                <input className="form-control form-control--small form-control--bordered" type="text"/>
+              </div>
+              <div className="form__field">
+                <label className="form-label" htmlFor="variant">
+                  Message
+                </label>
+                <textarea className="form-control form-control--small form-control--bordered" type="text"/>
+              </div>
+              <div className="form__field">
+                <button className="button button--primary">Send</button>
+              </div>
+            </div>
           </div>
           <div className="contact__team contact-box">
             <h1>

@@ -1421,42 +1421,16 @@
         }
       },
       {
-        "defaultMessage": "Connect OctoPrint to Karmen Cloud service",
+        "defaultMessage": "You’re good to go!",
         "end": {
           "column": 18,
           "line": 123
         },
         "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.connect_octoprint",
-        "start": {
-          "column": 16,
-          "line": 120
-        }
-      },
-      {
-        "defaultMessage": "If you don't know what OctoPrint is, don't bother",
-        "end": {
-          "column": 18,
-          "line": 129
-        },
-        "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.connect_octoprint_note",
-        "start": {
-          "column": 16,
-          "line": 126
-        }
-      },
-      {
-        "defaultMessage": "You’re good to go!",
-        "end": {
-          "column": 18,
-          "line": 149
-        },
-        "file": "src/components/page-blocks/principle.js",
         "id": "principle-block.all_done",
         "start": {
           "column": 16,
-          "line": 146
+          "line": 120
         }
       }
     ],
@@ -1922,81 +1896,42 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "The Karmen story",
+        "defaultMessage": "Příběh Karmen",
         "end": {
-          "column": 16,
-          "line": 33
+          "column": 14,
+          "line": 17
         },
         "file": "src/components/page-blocks/story.js",
-        "id": "story-block.karmen_story",
+        "id": "story.headline",
         "start": {
-          "column": 14,
-          "line": 30
+          "column": 12,
+          "line": 14
         }
       },
       {
-        "defaultMessage": "Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective.",
+        "defaultMessage": "Za Karmen stojí softwarová společnost Fragaria. Nápad se zrodil z vlastní potřeby, kdy zaměstnanci řešili otázku zefektivnění obsluhy 3D tiskárny v kanceláři.",
         "end": {
-          "column": 16,
-          "line": 39
+          "column": 14,
+          "line": 23
         },
         "file": "src/components/page-blocks/story.js",
-        "id": "story-block.karmen_story_full",
+        "id": "story.sub",
         "start": {
-          "column": 14,
-          "line": 36
+          "column": 12,
+          "line": 20
         }
       },
       {
-        "defaultMessage": "See full story",
+        "defaultMessage": "Příběh Karmen",
         "end": {
-          "column": 16,
-          "line": 48
-        },
-        "file": "src/components/page-blocks/story.js",
-        "id": "story-block.karmen_story_link",
-        "start": {
           "column": 14,
-          "line": 45
-        }
-      },
-      {
-        "defaultMessage": "Karmen team",
-        "end": {
-          "column": 16,
-          "line": 56
+          "line": 29
         },
         "file": "src/components/page-blocks/story.js",
-        "id": "story-block.karmen_team",
+        "id": "story.cta",
         "start": {
-          "column": 14,
-          "line": 53
-        }
-      },
-      {
-        "defaultMessage": "See the team",
-        "end": {
-          "column": 18,
-          "line": 63
-        },
-        "file": "src/components/page-blocks/story.js",
-        "id": "story-block.karmen_team_link",
-        "start": {
-          "column": 16,
-          "line": 60
-        }
-      },
-      {
-        "defaultMessage": "Contact us",
-        "end": {
-          "column": 16,
-          "line": 72
-        },
-        "file": "src/components/page-blocks/story.js",
-        "id": "story-block.contact_us",
-        "start": {
-          "column": 14,
-          "line": 69
+          "column": 12,
+          "line": 26
         }
       }
     ],

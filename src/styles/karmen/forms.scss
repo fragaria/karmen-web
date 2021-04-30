@@ -57,6 +57,11 @@ $field-height: gu(3);
   }
 }
 
+.form-control--small {
+  height: gu(2);
+  padding: 0 gu(0.75);
+}
+
 .form-control-wrapper {
   position: relative;
   /*
@@ -139,5 +144,7 @@ select.form-control {
 textarea.form-control {
   min-height: gu(4);
   line-height: gu();
+  padding-top: gu(0.5);
+  padding-bottom: gu(0.5);
   // border: 0;
 }

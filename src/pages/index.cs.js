@@ -36,7 +36,7 @@ const IndexPage = ({ data, location }) => {
         location={location}
         className="v-home-pricing v-home-section"
       />
-      <ContactBlock className="v-home-story v-home-section" />
+      <ContactBlock className="v-home-contact v-home-section" />
     </Layout>
   )
 }
