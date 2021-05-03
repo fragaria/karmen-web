@@ -14,8 +14,7 @@
 
 .v-community-resources-listing {
   display: grid;
-  grid-gap: 1px;
-  background-color: map-get($palette, gray-semilight);
+  grid-gap: gu(.4);
 
   @include breakpoint(tablet up) {
     grid-template-columns: 1fr 1fr;
@@ -30,8 +29,8 @@
 
 
 .v-community-resources-listing-link {
-  @include baseline(s2, $bodytype, 1, $below: 0);
-
+  @include baseline(s3, $bodytype, 1, $below: 0.5, $above: 0);
+  color: map-get($palette, red);
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -39,10 +38,13 @@
 }
 
 .v-community-resources-listing__item {
+  display: flex;
+  flex-direction: column;
   background: map-get($palette, white);
   text-align: left;
   padding: 0 gu() gu();
   overflow: hidden;
+  text-align: center;
 
   h2 {
     @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0.5);
@@ -70,4 +72,13 @@
       font-style: italic;
     }
   }
+}
+.v-community-resources-listing__item__html {
+  padding-bottom: gu(1);
+}
+.v-community-resources-listing__item__link-wrap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

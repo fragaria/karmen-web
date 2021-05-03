@@ -57,6 +57,11 @@
   }
 }
 
+.content-block--move-up {
+  margin-top: gu(-4);
+  z-index: 10;
+}
+
 .content-block--cover-mobile {
   @include cbMargin(gu(-1.5));
 

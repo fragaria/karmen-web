@@ -4,12 +4,19 @@ import { graphql } from "gatsby"
 
 import SEOMetadata from "components/seo/metadata"
 import CommunityResources from "components/page-blocks/community-resources"
+import { BackgroundImage } from "../components/image"
 
 const Komunita = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-community-resources">
       <SEOMetadata title="Komunita" pathname={location.pathname} />
-      <h1 className="page-block-headline">Komunita</h1>
+      <BackgroundImage file={data.cover} className="community">
+        <div className="community__cover">
+          <div className="content-block">
+            <h1 className="community__headline">Komunita</h1>
+          </div>
+        </div>
+      </BackgroundImage>
       <CommunityResources
         resources={data.resources.edges.map(({ node }) => node)}
       />
@@ -21,6 +28,9 @@ export default Komunita
 
 export const pageQuery = graphql`
   query {
+    cover: file(relativePath: { eq: "community-lead.jpg" }) {
+      ...fluidImage1920
+    }
     resources: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/resources/cs/" } }
       sort: { fields: fields___slug }

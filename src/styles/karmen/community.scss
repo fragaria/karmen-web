@@ -1,0 +1,30 @@
+.community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: gu(13);
+  background-size: cover;
+  z-index: 1;
+  color: #fff;
+}
+
+.community__cover {
+  &:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.community__headline {
+  @include baseline(s9, $headingtype, 2, $below: 1);
+  margin-top: gu(-3);
+}
