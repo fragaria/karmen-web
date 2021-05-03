@@ -2,6 +2,7 @@
 title: OctoPrint
 link: https://medium.com/karmen3d/connecting-octoprint-boxes-to-karmen-53afc48ea9b6
 linkTitle: Zjistit jak připojit OctoPrint
+ico: octoprint
 ---
 
 Jak připojit vlastní OctoPrint ke Karmen Cloud?
