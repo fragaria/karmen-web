@@ -1,33 +1,5 @@
-.hero {
-  background-size: cover;
-  height: gu(16);
-
-  @include breakpoint(desktop up) {
-    height: gu(19);
-  }
-}
-
-.hero__cover {
-  position: relative;
-  height: 100%;
-
-  &:before {
-    z-index: -1;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
-}
-
 .hero__headline {
-  color: map-get($palette, white);
   z-index: 1;
-  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 
   @include baseline(s8, $headingtype, 2, $above: 2, $below: 1);
   @include baseline(s8, $headingtype, 2, $above: 3, $below: 1, $breakpoint: mobile up);
@@ -35,18 +7,37 @@
   @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 1, $breakpoint: tablet-small up);
 
   @include breakpoint(desktop up) {
-    @include baseline(s9, $headingtype, 2.5, $above: 6, $below: 1);
+    @include baseline(s9, $headingtype, 2.5, $above: 4.5, $below: 1);
   }
 }
 
 .hero__sub,
 .hero__above {
-  color: map-get($palette, white);
   z-index: 1;
-  text-shadow: 0 0 gu(.5) rgba(0, 0, 0, 0.5);
 }
 
 .hero__sub {
   @include baseline(s4, $bodytype, 1, $below: 1);
+}
+.hero__cover {
+  position: relative;
+}
+.hero__circle {
+  width: 1160px;
+  height: 1160px;
+  border-radius: 50%;
+  background-color: map-get($palette, gray-light);
+  position: absolute;
+  bottom: 120px;
+  right: -218px;
+}
+.hero__image {
+  padding-bottom: gu(5);
+  &:before,
+  &:after {
+    @include breakpoint(tablet-small down) {
+      background-image: none !important;
+    }
+  }
 }
 

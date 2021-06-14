@@ -15,7 +15,9 @@
   $foreground,
   $background,
   $foregroundHover,
-  $backgroundHover
+  $backgroundHover,
+  $borderColor: $background,
+  $borderColorHover: $backgroundHover
 ) {
   color: $foreground;
   background-color: $background;
@@ -25,6 +27,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   cursor: pointer;
+  border: 1px solid $borderColor;
 
   @include fontsize(s2);
 
@@ -32,6 +35,7 @@
   &:focus {
     color: $foregroundHover;
     background: $backgroundHover;
+    border-color: $borderColorHover;
   }
 
   &:focus {
@@ -55,12 +59,12 @@
 a.button {
   display: inline-block;
   padding: 0 gu(1);
-  line-height: gu(3);
-  height: gu(3);
+  line-height: gu(2);
+  height: gu(2);
   border: 0;
 
   @include breakpoint(tablet up) {
-    padding: 0 gu(1.5);
+    padding: 0 gu(1);
   }
 
   @include buttonStyle(
@@ -68,7 +72,9 @@ a.button {
     map-get(map-get($button-variants, primary), foreground),
     map-get(map-get($button-variants, primary), background),
     map-get(map-get($button-variants, primary), foregroundHover),
-    map-get(map-get($button-variants, primary), backgroundHover)
+    map-get(map-get($button-variants, primary), backgroundHover),
+    map-get(map-get($button-variants, primary), borderColor),
+    map-get(map-get($button-variants, primary), borderColorHover),
   );
 }
 
@@ -79,7 +85,9 @@ a.button {
       map-get($variantSettings, foreground),
       map-get($variantSettings, background),
       map-get($variantSettings, foregroundHover),
-      map-get($variantSettings, backgroundHover)
+      map-get($variantSettings, backgroundHover),
+      map-get($variantSettings, borderColor),
+      map-get($variantSettings, borderColorHover)
     );
   }
 }
@@ -95,4 +103,20 @@ a.button {
 
 .button--shifted {
   transform: translateY(gu(-1.5));
+}
+
+.button-mt {
+  margin-top: gu(1);
+}
+
+.button-mb {
+  margin-bottom: gu(1);
+}
+
+.button--mr {
+  margin-right: gu(.75);
+}
+
+.button--ml {
+  margin-left: gu(.75);
 }

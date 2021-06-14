@@ -3,7 +3,6 @@
   flex-direction: column;
   min-height: 100vh;
   padding-top: map-get($sitenav-height, mobile);
-  background-color: map-get($palette, gray-light);
   overflow: hidden;
 
   @include breakpoint(tablet-tiny up) {

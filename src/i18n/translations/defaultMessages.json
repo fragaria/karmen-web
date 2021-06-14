@@ -913,39 +913,52 @@
         "defaultMessage": "Your 3D printers{lineBreak}anytime, anywhere",
         "end": {
           "column": 16,
-          "line": 29
+          "line": 34
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.headline",
         "start": {
           "column": 14,
-          "line": 25
+          "line": 30
         }
       },
       {
         "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
         "end": {
           "column": 16,
-          "line": 36
+          "line": 41
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.sub",
         "start": {
           "column": 14,
-          "line": 32
+          "line": 37
         }
       },
       {
-        "defaultMessage": "Learn more",
+        "defaultMessage": "I want Karmen",
         "end": {
-          "column": 80,
-          "line": 45
+          "column": 85,
+          "line": 47
         },
         "file": "src/components/page-blocks/hero.js",
         "id": "hero-block.cta",
         "start": {
-          "column": 12,
-          "line": 45
+          "column": 14,
+          "line": 47
+        }
+      },
+      {
+        "defaultMessage": "Meet Karmen",
+        "end": {
+          "column": 84,
+          "line": 54
+        },
+        "file": "src/components/page-blocks/hero.js",
+        "id": "hero-block.meet",
+        "start": {
+          "column": 14,
+          "line": 54
         }
       }
     ],
@@ -1439,6 +1452,24 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Produkty",
+        "end": {
+          "column": 16,
+          "line": 12
+        },
+        "file": "src/components/page-blocks/products.js",
+        "id": "products.headline",
+        "start": {
+          "column": 14,
+          "line": 9
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/products.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Meet Karmen",
         "end": {
           "column": 18,
@@ -1922,7 +1953,7 @@
         }
       },
       {
-        "defaultMessage": "Příběh Karmen",
+        "defaultMessage": "Více",
         "end": {
           "column": 14,
           "line": 29
@@ -2073,5 +2104,23 @@
       }
     ],
     "path": "src/layouts/default.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "All innovations come from laziness",
+        "end": {
+          "column": 16,
+          "line": 22
+        },
+        "file": "src/pages/komunita.cs.js",
+        "id": "about-block.story_motto",
+        "start": {
+          "column": 14,
+          "line": 19
+        }
+      }
+    ],
+    "path": "src/pages/komunita.cs.json"
   }
 ]

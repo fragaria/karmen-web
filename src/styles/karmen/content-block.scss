@@ -69,3 +69,7 @@
       @include cbMargin(auto);
   }
 }
+
+.content-block--relative {
+  position: relative;
+}
