@@ -13,7 +13,6 @@ import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
 import OptionsBlock from "components/page-blocks/options"
 import ContactBlock from "components/page-blocks/contact"
-import StoryBlock from "components/page-blocks/story"
 import ConnectOctoBlock from "components/page-blocks/connect-octo"
 
 const IndexPage = ({ data, location }) => {
@@ -27,7 +26,6 @@ const IndexPage = ({ data, location }) => {
       <SEOBusinessInfo />
       <HeroBlock className="v-home-hero v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
-      <StoryBlock className="v-home-story v-home-section" />
       <TestimonialsBlock className="v-home-testimonials v-home-section" />
       <OptionsBlock className="v-home-options v-home-section" />
       <PrincipleBlock className="v-home-principle v-home-section" />
