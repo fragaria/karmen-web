@@ -8,9 +8,11 @@ const LookHere = () => {
 
   return (
     <div className="look-here">
-      <h2 className="look-here__headline">Nenašli jste co hledáte?</h2>
+      <h2 className="look-here__headline"><FormattedMessage id="look-here.headline" defaultMessage="Nenašli jste co hledáte?" /></h2>
       <div className="look-here__body">
-        <p>Hledáte něco jinýho nebo máte konkrétní otázku?<br/>Prohlédnete si Karmen dokumentaci nebo nás kontaktujte</p>
+        <p>
+          <FormattedMessage id="look-here.body" defaultMessage="Hledáte něco jinýho nebo máte konkrétní otázku?<br/>Prohlédnete si Karmen dokumentaci nebo nás kontaktujte" />
+        </p>
       </div>
       <Link
         to={'https://docs.karmen.tech/'}

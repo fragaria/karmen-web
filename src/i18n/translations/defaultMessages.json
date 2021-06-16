@@ -967,6 +967,63 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Nenašli jste co hledáte?",
+        "end": {
+          "column": 128,
+          "line": 11
+        },
+        "file": "src/components/page-blocks/look-here.js",
+        "id": "look-here.headline",
+        "start": {
+          "column": 42,
+          "line": 11
+        }
+      },
+      {
+        "defaultMessage": "Hledáte něco jinýho nebo máte konkrétní otázku?<br/>Prohlédnete si Karmen dokumentaci nebo nás kontaktujte",
+        "end": {
+          "column": 174,
+          "line": 14
+        },
+        "file": "src/components/page-blocks/look-here.js",
+        "id": "look-here.body",
+        "start": {
+          "column": 10,
+          "line": 14
+        }
+      },
+      {
+        "defaultMessage": "Karmen documentation",
+        "end": {
+          "column": 85,
+          "line": 21
+        },
+        "file": "src/components/page-blocks/look-here.js",
+        "id": "look-here.doc",
+        "start": {
+          "column": 8,
+          "line": 21
+        }
+      },
+      {
+        "defaultMessage": "Contact us",
+        "end": {
+          "column": 79,
+          "line": 27
+        },
+        "file": "src/components/page-blocks/look-here.js",
+        "id": "look-here.contact",
+        "start": {
+          "column": 8,
+          "line": 27
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/look-here.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Chci hotové řešení",
         "end": {
           "column": 16,
