@@ -1,0 +1,14 @@
+.look-here {
+  text-align: center;
+}
+.look-here__headline {
+  @include baseline(s7, $headingtype, 2, $above: 2, $below: 1.5);
+}
+.look-here__body {
+  color: map-get($palette, gray-dark);
+  margin-bottom: gu(1.5);
+  p {
+    color: #858585;
+    @include baseline(s3, $bodytype, 1, $below: 1);
+  }
+}
