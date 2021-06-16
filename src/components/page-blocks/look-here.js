@@ -11,7 +11,9 @@ const LookHere = () => {
       <h2 className="look-here__headline"><FormattedMessage id="look-here.headline" defaultMessage="Nenašli jste co hledáte?" /></h2>
       <div className="look-here__body">
         <p>
-          <FormattedMessage id="look-here.body" defaultMessage="Hledáte něco jinýho nebo máte konkrétní otázku?<br/>Prohlédnete si Karmen dokumentaci nebo nás kontaktujte" />
+          <FormattedMessage id="look-here.body"
+                            defaultMessage="Hledáte něco jinýho nebo máte konkrétní otázku?{lineBreak}Prohlédnete si Karmen dokumentaci nebo nás kontaktujte"
+                            values={{ lineBreak: <br /> }}/>
         </p>
       </div>
       <Link
