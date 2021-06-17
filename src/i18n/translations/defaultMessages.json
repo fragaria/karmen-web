@@ -2168,13 +2168,13 @@
         "defaultMessage": "Frequently asked questions",
         "end": {
           "column": 10,
-          "line": 18
+          "line": 20
         },
         "file": "src/pages/faq.cs.js",
         "id": "faq.headline",
         "start": {
           "column": 8,
-          "line": 15
+          "line": 17
         }
       }
     ],
@@ -2186,13 +2186,13 @@
         "defaultMessage": "Frequently asked questions",
         "end": {
           "column": 10,
-          "line": 18
+          "line": 20
         },
         "file": "src/pages/faq.en.js",
         "id": "faq.headline",
         "start": {
           "column": 8,
-          "line": 15
+          "line": 17
         }
       }
     ],

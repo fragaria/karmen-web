@@ -137,6 +137,10 @@ module.exports = {
           name: "Blog",
           url: `/en/blog/`,
         },
+        {
+          name: "FAQ",
+          url: `/en/faq/`,
+        },
       ],
       cs: [
         {
@@ -162,6 +166,10 @@ module.exports = {
         {
           name: "Komunita",
           url: `/cs/komunita/`,
+        },
+        {
+          name: "FAQ",
+          url: `/cs/faq/`,
         },
       ],
     },

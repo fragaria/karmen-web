@@ -1,0 +1,99 @@
+.v-faq-resources {
+  padding-bottom: gu(4);
+
+  .page-block-headline {
+    text-align: center;
+
+    @include baseline(s8, $headingtype, 2, $above: 2, $below: 2);
+    @include baseline(s8, $headingtype, 2, $above: 4, $below: 3, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 4, $below: 3, $breakpoint: tablet-small up);
+  }
+}
+
+.v-faq-resources-listing {
+  overflow: hidden;
+  //@include breakpoint(tablet up) {
+  //  grid-template-columns: 1fr 1fr;
+  //}
+  //
+  //@include breakpoint(desktop up) {
+  //  grid-template-columns: 1fr 1fr;
+  //}
+}
+
+.v-faq-resources__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-faq-resources__item.active {
+  .v-faq-resources__item__header {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+.v-faq-resources__item__header {
+  background-color: map-get($palette, white);
+  padding: gu(1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: map-get($palette, gray-light);
+  }
+}
+
+.v-faq-resources__item__headline {
+  @include baseline(s5, $headingtype);
+  padding-top: 0 !important;
+  padding-right: gu(2);
+}
+
+.v-faq-resources__item__content {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.v-faq-resources__item__content__inner {
+  padding: gu(1);
+}
+
+.v-faq-resources__item__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+
+  &:before,
+  &:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    transition: transform 0.25s ease-out;
+  }
+
+  /* Vertical line */
+  &:before{
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    margin-left: -2px;
+  }
+
+  /* horizontal line */
+  &:after{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: -2px;
+  }
+
+  &.active {
+    cursor: pointer;
+    &:before{ transform: rotate(90deg); }
+    &:after{ transform: rotate(180deg); }
+  }
+}
