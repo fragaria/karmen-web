@@ -32,7 +32,7 @@ export const pageQuery = graphql`
       ...fluidImage1920
     }
     resources: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/resources/en/" } }
+      filter: { fileAbsolutePath: { regex: "/resources/community/en/" } }
       sort: { fields: fields___slug }
       limit: 1000
     ) {

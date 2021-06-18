@@ -39,10 +39,10 @@
   display: flex;
   flex-direction: column;
   background: map-get($palette, white);
-  text-align: left;
+  text-align: center;
   padding: gu() gu() gu();
   overflow: hidden;
-  text-align: center;
+  box-shadow: inset 0px -10px 156px -141px rgba(0,0,0,0.75);
 
   h2 {
     @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0);
