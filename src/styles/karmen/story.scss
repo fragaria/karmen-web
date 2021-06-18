@@ -1,0 +1,38 @@
+.story {
+  padding-bottom: gu(2);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  @include breakpoint(tablet up) {
+    flex-flow: row;
+  }
+}
+.story__sub {
+  @include baseline(s4, $bodytype, 1, $below: 1);
+}
+.story__content {
+  order: 2;
+  @include breakpoint(tablet up) {
+    order: 1;
+    width: 40%;
+  }
+}
+.story__illustration {
+  width: 100%;
+  order: 1;
+  margin-bottom: gu(1);
+  @include breakpoint(tablet up) {
+    order: 2;
+    margin-bottom: 0;
+    padding-left: 10%;
+    width: 50%;
+  }
+}
+.story__headline {
+  @include baseline(s8, $headingtype, 2, $above: 0, $below: 0.5);
+  @include baseline(s9, $headingtype, 3, $above: 0, $below: 2, $breakpoint: desktop up);
+}
+.story__sub {
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0 );
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0, $breakpoint: desktop up);
+}

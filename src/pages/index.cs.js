@@ -14,6 +14,7 @@ import SolutionBlock from "components/page-blocks/solution"
 import OptionsBlock from "components/page-blocks/options"
 import ContactBlock from "components/page-blocks/contact"
 import ConnectOctoBlock from "components/page-blocks/connect-octo"
+import StoryBlock from "../components/page-blocks/story"
 
 const IndexPage = ({ data, location }) => {
   return (
@@ -35,6 +36,7 @@ const IndexPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <ContactBlock className="v-home-contact v-home-section" />
+      <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )
 }

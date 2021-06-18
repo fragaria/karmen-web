@@ -122,6 +122,10 @@ module.exports = {
           url: `/en/#buy`,
         },
         {
+          name: "Karmen story",
+          url: `/en/story/`,
+        },
+        {
           name: "Buy",
           url: `/en/buy/`,
         },
@@ -150,6 +154,10 @@ module.exports = {
         {
           name: "Cena",
           url: `/cs/#buy`,
+        },
+        {
+          name: "Příběh Karmen",
+          url: `/cs/pribeh/`,
         },
         {
           name: "Koupit",
