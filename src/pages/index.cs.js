@@ -7,6 +7,7 @@ import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
 import HeroBlock from "components/page-blocks/hero"
+import MeetKarmenBlock from "components/page-blocks/meet-karmen"
 import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
 import TestimonialsBlock from "components/page-blocks/testimonials"
@@ -14,7 +15,7 @@ import SolutionBlock from "components/page-blocks/solution"
 import OptionsBlock from "components/page-blocks/options"
 import ContactBlock from "components/page-blocks/contact"
 import ConnectOctoBlock from "components/page-blocks/connect-octo"
-import StoryBlock from "../components/page-blocks/story"
+import StoryBlock from "components/page-blocks/story"
 
 const IndexPage = ({ data, location }) => {
   return (
@@ -26,6 +27,7 @@ const IndexPage = ({ data, location }) => {
       />
       <SEOBusinessInfo />
       <HeroBlock className="v-home-hero v-home-section" />
+      <MeetKarmenBlock className="v-home-meet-karmen v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
       <TestimonialsBlock className="v-home-testimonials v-home-section" />
       <OptionsBlock className="v-home-options v-home-section" />

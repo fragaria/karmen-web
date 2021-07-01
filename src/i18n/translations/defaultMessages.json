@@ -1024,6 +1024,50 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Meet Karmen",
+        "end": {
+          "column": 14,
+          "line": 17
+        },
+        "file": "src/components/page-blocks/meet-karmen.js",
+        "id": "meet-karmen-block.headline",
+        "start": {
+          "column": 12,
+          "line": 14
+        }
+      },
+      {
+        "defaultMessage": "Karmen lets you manage your 3D printers remotely.",
+        "end": {
+          "column": 14,
+          "line": 23
+        },
+        "file": "src/components/page-blocks/meet-karmen.js",
+        "id": "meet-karmen-block.claim_1",
+        "start": {
+          "column": 12,
+          "line": 20
+        }
+      },
+      {
+        "defaultMessage": "Get rid of SD cards once and for all.",
+        "end": {
+          "column": 14,
+          "line": 28
+        },
+        "file": "src/components/page-blocks/meet-karmen.js",
+        "id": "meet-karmen-block.claim_2",
+        "start": {
+          "column": 12,
+          "line": 25
+        }
+      }
+    ],
+    "path": "src/components/page-blocks/meet-karmen.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Chci hotové řešení",
         "end": {
           "column": 16,
@@ -1527,172 +1571,146 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Meet Karmen",
+        "defaultMessage": "What is Karmen solving?",
         "end": {
-          "column": 18,
-          "line": 78
+          "column": 14,
+          "line": 15
         },
         "file": "src/components/page-blocks/solution.js",
         "id": "solution-block.meet_karmen",
         "start": {
-          "column": 16,
-          "line": 75
+          "column": 12,
+          "line": 12
         }
       },
       {
-        "defaultMessage": "Karmen lets you manage your 3D printers remotely.",
+        "defaultMessage": "Tisk pod kontrolou, ať jste kdekoliv",
+        "end": {
+          "column": 18,
+          "line": 24
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_headline_print",
+        "start": {
+          "column": 16,
+          "line": 21
+        }
+      },
+      {
+        "defaultMessage": "Kamera se světlem vám umožní sledovat, jak tisk pokračuje. Můžete ho také zastavit nebo znovu spustit",
+        "end": {
+          "column": 18,
+          "line": 30
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_desc_print",
+        "start": {
+          "column": 16,
+          "line": 27
+        }
+      },
+      {
+        "defaultMessage": "Ovládání tiskárny na dálku",
+        "end": {
+          "column": 18,
+          "line": 39
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_headline_remote",
+        "start": {
+          "column": 16,
+          "line": 36
+        }
+      },
+      {
+        "defaultMessage": "Karmen vám umožní nahrát tisková data a ovládat tiskové úlohy na dálku, ať už jste u vedlejšího stolu nebo na jiném kontinentu.",
+        "end": {
+          "column": 18,
+          "line": 45
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_desc_remote",
+        "start": {
+          "column": 16,
+          "line": 42
+        }
+      },
+      {
+        "defaultMessage": "V týmu se to lépe tiskne",
+        "end": {
+          "column": 18,
+          "line": 54
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_headline_team",
+        "start": {
+          "column": 16,
+          "line": 51
+        }
+      },
+      {
+        "defaultMessage": "Řízení tiskáren můžete sdílet s přáteli nebo kolegy, přidělovat jim role nebo třeba ukázat klientům, jak práce postupuje",
+        "end": {
+          "column": 18,
+          "line": 60
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_desc_team",
+        "start": {
+          "column": 16,
+          "line": 57
+        }
+      },
+      {
+        "defaultMessage": "Tiskové úlohy ve vaší kapse",
+        "end": {
+          "column": 18,
+          "line": 69
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_headline_mobile",
+        "start": {
+          "column": 16,
+          "line": 66
+        }
+      },
+      {
+        "defaultMessage": "Všechny funkce, které Karmen Pill a Kamern Cloud nabízejí, můžete ovládat také ze svého mobilního zařízení",
+        "end": {
+          "column": 18,
+          "line": 75
+        },
+        "file": "src/components/page-blocks/solution.js",
+        "id": "solution-block.solution_desc_mobile",
+        "start": {
+          "column": 16,
+          "line": 72
+        }
+      },
+      {
+        "defaultMessage": "Víc tiskáren víc vytiskne",
         "end": {
           "column": 18,
           "line": 84
         },
         "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.claim_1",
+        "id": "solution-block.solution_headline_printers",
         "start": {
           "column": 16,
           "line": 81
         }
       },
       {
-        "defaultMessage": "Get rid of SD cards once and for all.",
+        "defaultMessage": "Karmen Cloud můžete přes jedno rozhraní ovládat libovolný počet tiskáren na libovolném počtu různých míst",
         "end": {
           "column": 18,
-          "line": 89
+          "line": 90
         },
         "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.claim_2",
+        "id": "solution-block.solution_desc_printers",
         "start": {
           "column": 16,
-          "line": 86
-        }
-      },
-      {
-        "defaultMessage": "Your print jobs. Centralized.",
-        "end": {
-          "column": 22,
-          "line": 115
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_1_title",
-        "start": {
-          "column": 20,
-          "line": 112
-        }
-      },
-      {
-        "defaultMessage": "It doesn’t matter how many 3D printers you have or where they’re located. Karmen lets you manage your printers on a computer or smartphone. Start, pause and stop print jobs, change the order in the queue or redirect to another device.",
-        "end": {
-          "column": 22,
-          "line": 121
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_1_content",
-        "start": {
-          "column": 20,
-          "line": 118
-        }
-      },
-      {
-        "defaultMessage": "Right there with you on the road",
-        "end": {
-          "column": 22,
-          "line": 129
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_2_title",
-        "start": {
-          "column": 20,
-          "line": 126
-        }
-      },
-      {
-        "defaultMessage": "It’s easy to send new print jobs over the internet and assign them to printers according to workload or filament colour.",
-        "end": {
-          "column": 22,
-          "line": 135
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_2_content",
-        "start": {
-          "column": 20,
-          "line": 132
-        }
-      },
-      {
-        "defaultMessage": "Video from print jobs in real time",
-        "end": {
-          "column": 22,
-          "line": 143
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_3_title",
-        "start": {
-          "column": 20,
-          "line": 140
-        }
-      },
-      {
-        "defaultMessage": "Monitor print job progress in real time. Check job status visually anytime and show print progress to colleagues and clients.",
-        "end": {
-          "column": 22,
-          "line": 149
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_3_content",
-        "start": {
-          "column": 20,
-          "line": 146
-        }
-      },
-      {
-        "defaultMessage": "Easy team management",
-        "end": {
-          "column": 22,
-          "line": 157
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_4_title",
-        "start": {
-          "column": 20,
-          "line": 154
-        }
-      },
-      {
-        "defaultMessage": "Create teams for all your printers. Members can manage their devices remotely, while support has a complete overview of device usage.",
-        "end": {
-          "column": 22,
-          "line": 163
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_4_content",
-        "start": {
-          "column": 20,
-          "line": 160
-        }
-      },
-      {
-        "defaultMessage": "Tested by the toughest users",
-        "end": {
-          "column": 22,
-          "line": 171
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_5_title",
-        "start": {
-          "column": 20,
-          "line": 168
-        }
-      },
-      {
-        "defaultMessage": "Karmen has proven itself everywhere there’s a need to rapidly and effectively innovate, such as in healthcare and technology companies.",
-        "end": {
-          "column": 22,
-          "line": 177
-        },
-        "file": "src/components/page-blocks/solution.js",
-        "id": "solution-block.slide_5_content",
-        "start": {
-          "column": 20,
-          "line": 174
+          "line": 87
         }
       }
     ],
@@ -1986,40 +2004,53 @@
       {
         "defaultMessage": "Příběh Karmen",
         "end": {
-          "column": 14,
-          "line": 17
+          "column": 18,
+          "line": 33
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story.headline",
         "start": {
-          "column": 12,
-          "line": 14
+          "column": 16,
+          "line": 30
         }
       },
       {
-        "defaultMessage": "Za Karmen stojí softwarová společnost Fragaria. Nápad se zrodil z vlastní potřeby, kdy zaměstnanci řešili otázku zefektivnění obsluhy 3D tiskárny v kanceláři.",
+        "defaultMessage": "Všechny funkce, které Karmen Pill a Kamern Cloud nabízejí, můžete ovládat také ze svého mobilního zařízení",
         "end": {
-          "column": 14,
-          "line": 23
+          "column": 18,
+          "line": 39
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story.sub",
         "start": {
-          "column": 12,
-          "line": 20
+          "column": 16,
+          "line": 36
         }
       },
       {
-        "defaultMessage": "Více",
+        "defaultMessage": "Zobrazit celý příběh",
         "end": {
-          "column": 14,
-          "line": 29
+          "column": 18,
+          "line": 45
         },
         "file": "src/components/page-blocks/story.js",
         "id": "story.cta",
         "start": {
-          "column": 12,
-          "line": 26
+          "column": 16,
+          "line": 42
+        }
+      },
+      {
+        "defaultMessage": "Tým Karmen",
+        "end": {
+          "column": 18,
+          "line": 51
+        },
+        "file": "src/components/page-blocks/story.js",
+        "id": "story.team",
+        "start": {
+          "column": 16,
+          "line": 48
         }
       }
     ],
