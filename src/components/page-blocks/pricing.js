@@ -15,100 +15,173 @@ const messages = defineMessages({
 
 const PricingBlock = ({ location, ...props }) => {
   const intl = useIntl()
-  const buyLink = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
+  const buyLinkFull = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
+  const buyLinkMyself = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
+  const registerLink = "https://cloud.karmen.tech/register"
   const data = useStaticQuery(graphql`
     query {
-      pillWCloud: file(relativePath: { eq: "pill-w-cloud.png" }) {
+      pillTablet: file(relativePath: { eq: "karmen-pill-tablet.jpg" }) {
         ...fluidImage1024
       }
+      cloudMobile: file(relativePath: { eq: "karmen-cloud-tablet-mobile.jpg" }) {
+        ...fluidImage1024
+      }
+      diy: file(relativePath: { eq: "karmen-diy.jpg" }) {
+        ...fluidImage1024
+      }
+      
     }
   `)
 
   return (
-    <div className="content-block content-block--narrower content-block--shift-mobile">
+    <div className="content-block content-block--narrow">
       <section {...props}>
         <h1 className="page-block-headline sitenav__anchorpush">
           <span className="sitenav__anchor" id="buy"></span>
           <FormattedMessage
             id="pricing-block.headline"
-            defaultMessage="One price, unlimited possibilities"
+            defaultMessage="Jaké řešení si vybrat?"
           />
         </h1>
         <div className="pricing">
           <div className="pricing__box">
-            <div className="pricing__box-img">
-              <Image file={data.pillWCloud} alt="Pill + Karmen cloud service" />
+            <div className="pricing__img">
+              <Image file={data.pillTablet} alt="Pill + Karmen cloud service" />
             </div>
 
-            <div className="pricing__box--price">
-              <h2 className="price__title">Pill + Karmen</h2>
-
-              <dl className="price__items">
-                <dt className="price__item">
-                  <span>Karmen Pill</span>
-                </dt>
-                <dd className="price__sum">
-                  <h3>
+            <div className="pricing__info">
+              <h2 className="pricing__title">
+                <FormattedMessage
+                  id="pricing-block.full_title"
+                  defaultMessage="Chci hotové řešení"
+                />
+              </h2>
+              <div className="pricing__desc">
+                <p>
+                  <FormattedMessage
+                    id="pricing-block.full_desc"
+                    defaultMessage="Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího."
+                  />
+                </p>
+              </div>
+              <div className="pricing__buy">
+                <div className="pricing__buy-left">
+                  <Link to={buyLinkFull} className="pricing__buybutton button button--red">
                     <FormattedMessage
-                      id="pricing-block.pill_price"
-                      defaultMessage="130 EUR"
+                      id="pricing-block.cta"
+                      defaultMessage="Buy Karmen"
                     />
-                  </h3>
-                </dd>
-                <dt className="price__item">
-                  <span>Karmen Cloud</span>
-                </dt>
-                <dd className="price__sum price__sum--limited-offer">
-                  <h3>
+                  </Link>
+                </div>
+                <div className="pricing__buy-right">
+                  <div className="pricing__price-vat">
                     <FormattedMessage
-                      id="pricing-block.karmen_price"
-                      defaultMessage="Free"
-                    />
-                  </h3>
-                  <div className="price__note">
-                    <FormattedMessage
-                      id="pricing-block.karmen_price_note"
-                      defaultMessage="Special limited offer"
-                    />
-                    <i
-                      className="pricing__offerinfo icon--info"
-                      data-tip={intl.formatMessage(messages.specialOfferMemo)}
-                    ></i>
-                    <ReactTooltip
-                      place="bottom"
-                      type="dark"
-                      effect="solid"
-                      className="tooltip"
-                      border={false}
-                      borderRadius="0"
-                      html={true}
-                      backgroundColor={"rgba(0, 0, 0, .95)"}
+                      id="pricing-block.full_price_vat"
+                      defaultMessage="4 260 KČ s DPH"
                     />
                   </div>
-                </dd>
-              </dl>
-              <div className="price__sum--total">
-                <h2>
-                  <FormattedMessage
-                    id="pricing-block.combo_price"
-                    defaultMessage="130 EUR"
-                  />
-                </h2>
-                <div className="price__note">
-                  <FormattedMessage
-                    id="pricing-block.combo_price_note"
-                    defaultMessage="excl. VAT"
-                  />
+                  <div className="pricing__price">
+                    <FormattedMessage
+                      id="pricing-block.full_price"
+                      defaultMessage="4 060 KČ bez DPH"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <Link to={buyLink} className="pricing__buybutton button button--red">
-            <FormattedMessage
-              id="pricing-block.buy"
-              defaultMessage="Buy Karmen"
-            />
-          </Link>
+          <div className="pricing__box">
+            <div className="pricing__img">
+              <Image file={data.cloudMobile} />
+            </div>
+
+            <div className="pricing__info">
+              <h2 className="pricing__title">
+                <FormattedMessage
+                  id="pricing-block.myself_title"
+                  defaultMessage="Vyrobím si sám"
+                />
+              </h2>
+              <div className="pricing__desc">
+                <p>
+                  <FormattedMessage
+                    id="pricing-block.myself_desc"
+                    defaultMessage="Bez Karmen Pill se obejdete, pokud máte vlastní zařízení pro monitoring tisku kompatibilní s Octoprintem. Stačí se registrovat do Cloudu."
+                  />
+                </p>
+              </div>
+              <div className="pricing__buy">
+                <div className="pricing__buy-left">
+                  <Link to={buyLinkMyself} className="pricing__buybutton button button--red">
+                    <FormattedMessage
+                      id="pricing-block.cta"
+                      defaultMessage="Buy Karmen"
+                    />
+                  </Link>
+                </div>
+                <div className="pricing__buy-right">
+                  <div className="pricing__price-vat">
+                    <FormattedMessage
+                      id="pricing-block.myself_price_vat"
+                      defaultMessage="3 260 KČ s DPH"
+                    />
+                  </div>
+                  <div className="pricing__price">
+                    <FormattedMessage
+                      id="pricing-block.myself_price"
+                      defaultMessage="2860 KČ bez DPH"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="pricing__box">
+            <div className="pricing__img">
+              <Image file={data.diy} />
+            </div>
+
+            <div className="pricing__info">
+              <h2 className="pricing__title">
+                <FormattedMessage
+                  id="pricing-block.diy_title"
+                  defaultMessage="Mám vlastní řešení"
+                />
+              </h2>
+              <div className="pricing__desc">
+                <p>
+                  <FormattedMessage
+                    id="pricing-block.diy_desc"
+                    defaultMessage="Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod."
+                  />
+                </p>
+              </div>
+              <div className="pricing__buy">
+                <div className="pricing__buy-left">
+                  <Link to={registerLink} className="pricing__buybutton button button--red">
+                    <FormattedMessage
+                      id="pricing-block.cta_register"
+                      defaultMessage="Registrovat"
+                    />
+                  </Link>
+                </div>
+                <div className="pricing__buy-right">
+                  <div className="pricing__price-vat">
+                    <FormattedMessage
+                      id="pricing-block.diy_price_vat"
+                      defaultMessage="Zdarma"
+                    />
+                  </div>
+                  <div className="pricing__price">
+                    <FormattedMessage
+                      id="pricing-block.diy_price"
+                      defaultMessage="Zdarma pro všechny"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

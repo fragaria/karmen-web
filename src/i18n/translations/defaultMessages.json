@@ -1348,7 +1348,7 @@
         }
       },
       {
-        "defaultMessage": "One price, unlimited possibilities",
+        "defaultMessage": "Jaké řešení si vybrat?",
         "end": {
           "column": 12,
           "line": 35
@@ -1361,81 +1361,55 @@
         }
       },
       {
-        "defaultMessage": "130 EUR",
+        "defaultMessage": "Chci hotové řešení",
         "end": {
-          "column": 22,
-          "line": 55
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.pill_price",
-        "start": {
-          "column": 20,
-          "line": 52
-        }
-      },
-      {
-        "defaultMessage": "Free",
-        "end": {
-          "column": 22,
-          "line": 66
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.karmen_price",
-        "start": {
-          "column": 20,
-          "line": 63
-        }
-      },
-      {
-        "defaultMessage": "Special limited offer",
-        "end": {
-          "column": 22,
-          "line": 72
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.karmen_price_note",
-        "start": {
-          "column": 20,
-          "line": 69
-        }
-      },
-      {
-        "defaultMessage": "130 EUR",
-        "end": {
-          "column": 20,
-          "line": 95
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.combo_price",
-        "start": {
           "column": 18,
-          "line": 92
-        }
-      },
-      {
-        "defaultMessage": "excl. VAT",
-        "end": {
-          "column": 20,
-          "line": 101
+          "line": 48
         },
         "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.combo_price_note",
+        "id": "pricing-block.full_title",
         "start": {
-          "column": 18,
-          "line": 98
+          "column": 16,
+          "line": 45
         }
       },
       {
         "defaultMessage": "Buy Karmen",
         "end": {
-          "column": 14,
-          "line": 110
+          "column": 22,
+          "line": 59
         },
         "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.buy",
+        "id": "pricing-block.cta",
         "start": {
-          "column": 12,
-          "line": 107
+          "column": 20,
+          "line": 56
+        }
+      },
+      {
+        "defaultMessage": "4 260 KČ s DPH",
+        "end": {
+          "column": 22,
+          "line": 67
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.full_price_vat",
+        "start": {
+          "column": 20,
+          "line": 64
+        }
+      },
+      {
+        "defaultMessage": "4 060 KČ bez DPH",
+        "end": {
+          "column": 22,
+          "line": 73
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.full_price",
+        "start": {
+          "column": 20,
+          "line": 70
         }
       }
     ],
@@ -1444,7 +1418,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "How it works",
+        "defaultMessage": "Práci s Karmen zvádne každý",
         "end": {
           "column": 12,
           "line": 30
@@ -1457,94 +1431,55 @@
         }
       },
       {
-        "defaultMessage": "Sign up",
+        "defaultMessage": "Práce s Karmen Cloud a Pill je velice snadná zvládne ji{lineBreak}i úplný začátečník.",
         "end": {
-          "column": 18,
-          "line": 42
+          "column": 12,
+          "line": 38
         },
         "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.signup",
+        "id": "principle-block.sub",
         "start": {
-          "column": 16,
-          "line": 39
+          "column": 10,
+          "line": 34
         }
       },
       {
-        "defaultMessage": "Register at {signupLink}",
+        "defaultMessage": "Přihlásíte se do{lineBreak}Karmen Cloud",
         "end": {
           "column": 18,
-          "line": 51
+          "line": 57
         },
         "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.signup_note",
+        "id": "principle-block.login_title",
         "start": {
           "column": 16,
-          "line": 45
+          "line": 53
         }
       },
       {
-        "defaultMessage": "Connect Pill to your printer",
-        "end": {
-          "column": 18,
-          "line": 71
-        },
-        "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.connect",
-        "start": {
-          "column": 16,
-          "line": 68
-        }
-      },
-      {
-        "defaultMessage": "Use the printer’s USB port",
+        "defaultMessage": "Připojíte Pill k tiskárně{lineBreak}a Karmen Cloud",
         "end": {
           "column": 18,
           "line": 77
         },
         "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.connect_note",
+        "id": "principle-block.pill_title",
         "start": {
           "column": 16,
-          "line": 74
+          "line": 73
         }
       },
       {
-        "defaultMessage": "Connect the new printer to your fleet",
+        "defaultMessage": "Pohodlně tisknete a řídíte{lineBreak}Vaše tiskárny",
         "end": {
-          "column": 18,
-          "line": 97
+          "column": 16,
+          "line": 96
         },
         "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.add_printer",
+        "id": "principle-block.cloud_title",
         "start": {
-          "column": 16,
-          "line": 94
-        }
-      },
-      {
-        "defaultMessage": "It’s faster than drinking a cup of coffee",
-        "end": {
-          "column": 18,
-          "line": 103
-        },
-        "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.add_printer_note",
-        "start": {
-          "column": 16,
-          "line": 100
-        }
-      },
-      {
-        "defaultMessage": "You’re good to go!",
-        "end": {
-          "column": 18,
-          "line": 123
-        },
-        "file": "src/components/page-blocks/principle.js",
-        "id": "principle-block.all_done",
-        "start": {
-          "column": 16,
-          "line": 120
+          "column": 14,
+          "line": 92
         }
       }
     ],

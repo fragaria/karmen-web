@@ -1,111 +1,69 @@
 .principle {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: auto;
-  text-align: left;
+  width: 100%;
+  display: grid;
+  grid-gap: gu(3);
+  margin-top: gu(3);
+
+  @include breakpoint(tablet up) {
+    grid-gap: gu(5);
+  }
+  @include breakpoint(desktop up) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.principle-title {
+  text-align: center;
+  @include baseline(s9, $headingtype, 2, $above: 8, $below: 1);
+}
+.principle-sub {
+  text-align: center;
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0);
+  @include baseline(s4, $bodytype, 1, $below: 1, $above: 0, $breakpoint: desktop up);
 }
 
 .principle__box {
-  display: flex;
-  width: 100%;
-  min-height: gu(4);
-  background: map-get($palette, white);
-  position: relative;
-
-  @include baseline-border($color: map-get($palette, gray-semilight));
-
-  &:first-child {
-    @include baseline-border-cancel();
-  }
-}
-
-a.principle__box {
-  cursor: pointer;
-  &:hover {
-    background: map-get($palette, gray-semilight);
-  }
-}
-
-.principle-box {
-  &--emphasized {
-    background: map-get($palette, red);
-
-    @include baseline-border-cancel();
-
-    &,
-    .principle-box__sub {
-      color: map-get($palette, white);
-    }
-
-    .principle-box__nr .principle-box__nr-text {
-      color: map-get($palette, white);
-    }
-
-    .principle-box__img {
-      min-height: gu(4);
-      justify-content: center;
-      font-size: 3rem;
-    }
-  }
-}
-
-.principle-box__title {
-  // @note: this is fixed by compensating on principle-box__content bottom padding
-  @include baseline(s6, $headingtype, 1, $above:0, $below: 0);
-}
-
-.principle-box__sub {
-  color: map-get($palette, red);
-  @include baseline(s3, $bodytype, $below: 0);
-
-  a {
-    @include anchor-style();
-  }
-}
-
-.principle-box__nr {
-  padding: gu(1) gu(.5) gu(0) gu(1);
-
-  @include breakpoint(tablet-small up) {
-    padding: gu(1.5) gu(1) gu(0) gu(3);
-  }
-
-  .principle-box__nr-text {
-    color: map-get($palette, red);
-    text-align: right;
-    font-weight: bold;
-    @include baseline(s8, $bodytype, 1, $above: .4, $below: 0);
-    @include baseline(s6, $bodytype, 1, $above: 0, $below: 0,  $breakpoint: tablet-small up);
-  }
-}
-
-.principle-box__content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding: gu(1) gu(1) gu(1) 0;
+  text-align: center;
 
-  @include breakpoint(tablet-small up) {
-    padding: gu(1.5) gu(1.5) gu(1) 0;
+  @include breakpoint(tablet-tiny up) {
+    .principle__img {
+      width: gu(11);
+    }
+  }
+  @include breakpoint(desktop up) {
+    margin-bottom: 0;
+  }
+
+  + .principle__box {
+    margin-top: gu(1);
+    @include breakpoint(desktop up) {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    flex: 1;
+    white-space: nowrap;
+
+    @include baseline(s6, $headingtype, 1.5, $above: 1, $below: 1);
+    @include baseline(s6, $headingtype, 1.5, $above: 1, $below: 1, $breakpoint: tablet-small up);
   }
 }
 
-.principle-box__img {
-  display: none;
 
-  @include breakpoint(tablet-small up) {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    min-height: gu(6);
-    padding: gu(1);
+.principle__img {
+  width: 100%;
+  max-width: gu(18);
+  height: gu(7);
+  margin: 0 auto;
+  @include breakpoint(tablet-tiny up) {
+    max-width: 100%;
   }
-
-  .principle-box__img-body {
-    display: block;
-    width: 100%;
-    // margin: auto;
-    // @note: needs to be fixed for the bottom line to work
-    // height: auto;
+  @include breakpoint(desktop up) {
+    margin: 0 auto;
   }
 }

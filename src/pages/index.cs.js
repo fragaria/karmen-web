@@ -29,14 +29,14 @@ const IndexPage = ({ data, location }) => {
       <HeroBlock className="v-home-hero v-home-section" />
       <MeetKarmenBlock className="v-home-meet-karmen v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
-      <TestimonialsBlock className="v-home-testimonials v-home-section" />
-      <OptionsBlock className="v-home-options v-home-section" />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <ConnectOctoBlock className="v-home-octo v-home-section" />
       <PricingBlock
         location={location}
         className="v-home-pricing v-home-section"
       />
+      <TestimonialsBlock className="v-home-testimonials v-home-section" />
+      <OptionsBlock className="v-home-options v-home-section" />
+      <ConnectOctoBlock className="v-home-octo v-home-section" />
       <ContactBlock className="v-home-contact v-home-section" />
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
