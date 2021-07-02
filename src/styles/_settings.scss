@@ -79,19 +79,33 @@ $button-variants: (
         background: map-get($palette, black),
         foregroundHover: map-get($palette, white),
         backgroundHover: map-get($palette, red),
+        borderColor: map-get($palette, black),
+        borderColorHover: map-get($palette, red)
     ),
     primaryToWhite: (
         foreground: map-get($palette, white),
         background: map-get($palette, black),
         foregroundHover: map-get($palette, black),
         backgroundHover: map-get($palette, white),
+        borderColor: map-get($palette, black),
+        borderColorHover: map-get($palette, white)
     ),
     red: (
         foreground: map-get($palette, white),
         background: map-get($palette, red),
         foregroundHover: map-get($palette, white),
         backgroundHover: map-get($palette, black),
+        borderColor: map-get($palette, red),
+        borderColorHover: map-get($palette, black)
     ),
+    outlineBlack: (
+        foreground: map-get($palette, black),
+        background: map-get($palette, white),
+        foregroundHover: map-get($palette, white),
+        backgroundHover: map-get($palette, black),
+        borderColor: map-get($palette, black),
+        borderColorHover: map-get($palette, black)
+    )
 );
 
 // Sharebox
@@ -271,3 +285,7 @@ $hamburger-layer-color: map-get($palette, white);
 $hamburger-layer-border-radius: 0;
 $hamburger-hover-opacity: 1;
 $hamburger-types: (collapse);
+
+// Scroll icon indicator settings
+
+$icon-scroll-color: #858585;

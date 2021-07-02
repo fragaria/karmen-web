@@ -1,98 +1,62 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
 import { FormattedMessage, useIntl } from "react-intl"
+import { graphql, Link, useStaticQuery } from "gatsby"
+
+import { Image } from "components/image"
 
 const StoryBlock = props => {
+  const intl = useIntl()
+  const storyLink = intl.locale === "cs" ? "/cs/pribeh" : "/en/story"
+  const teamLink = storyLink + "#team"
   const data = useStaticQuery(graphql`
-    query StoryQuery {
-      site {
-        siteMetadata {
-          company {
-            phone
-            contactEmail
+    query {
+      file(relativePath: { eq: "story-illustration.png" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-
-  const intl = useIntl()
-  const storyLink = intl.locale === "cs" ? "/cs/pribeh/" : "/en/story/"
-  const teamLink = intl.locale === "cs" ? "/cs/pribeh/#team" : "/en/story/#team"
-
   return (
-    <div className="content-block content-block--sitenavwide content-block--shift-mobile">
       <section {...props}>
-        <div className="story">
-          <div className="story__story story-box">
-            <h1 className="sitenav__anchorpush">
-              <span className="sitenav__anchor" id="contact"></span>
-              <FormattedMessage
-                id="story-block.karmen_story"
-                defaultMessage="The Karmen story"
-              />
-            </h1>
-            <p>
-              <FormattedMessage
-                id="story-block.karmen_story_full"
-                defaultMessage="Karmen was made by the Fragaria software company. The idea was born from necessity when employees had to solve the problem of making 3D printer management in their office more effective."
-              />
-            </p>
-            <Link
-              className="button button--red button--responsive"
-              to={storyLink}
-            >
-              <FormattedMessage
-                id="story-block.karmen_story_link"
-                defaultMessage="See full story"
-              />
-            </Link>
-          </div>
-          <div className="story__team story-box">
-            <h1>
-              <FormattedMessage
-                id="story-block.karmen_team"
-                defaultMessage="Karmen team"
-              />
-            </h1>
-            <p>
-              <Link className="anchor anchor--default" to={teamLink}>
+        <div className="content-block">
+          <div className="story">
+            <div className="story__content">
+              <h1 className="story__headline">
                 <FormattedMessage
-                  id="story-block.karmen_team_link"
-                  defaultMessage="See the team"
+                  id="story.headline"
+                  defaultMessage="Příběh Karmen"
+                />
+              </h1>
+              <h2 className="story__sub">
+                <FormattedMessage
+                  id="story.sub"
+                  defaultMessage="Všechny funkce, které Karmen Pill a Kamern Cloud nabízejí, můžete ovládat také ze svého mobilního zařízení"
+                />
+              </h2>
+              <Link className="button button--red button--mr button-mb" to={storyLink}>
+                <FormattedMessage
+                  id="story.cta"
+                  defaultMessage="Zobrazit celý příběh"
                 />
               </Link>
-            </p>
-          </div>
-          <div className="story__contact story-box">
-            <h1>
-              <FormattedMessage
-                id="story-block.contact_us"
-                defaultMessage="Contact us"
-              />
-            </h1>
-            <ul className="list list--unstyled">
-              <li>
-                <a
-                  className="anchor anchor--default"
-                  href={`mailto:${data.site.siteMetadata.company.contactEmail}`}
-                >
-                  {data.site.siteMetadata.company.contactEmail}
-                </a>
-              </li>
-              <li>
-                <a
-                  className="anchor anchor--default"
-                  href={`tel:${data.site.siteMetadata.company.phone}`}
-                >
-                  {data.site.siteMetadata.company.phone}
-                </a>
-              </li>
-            </ul>
+              <Link className="button button--outlineBlack" to={teamLink}>
+                <FormattedMessage
+                  id="story.team"
+                  defaultMessage="Tým Karmen"
+                />
+              </Link>
+            </div>
+            <div className="story__illustration">
+              <Image file={data.file}/>
+            </div>
           </div>
         </div>
       </section>
-    </div>
   )
 }
 

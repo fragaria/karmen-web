@@ -1,0 +1,81 @@
+.contact {
+  display: grid;
+  grid-gap: 0;
+  background: map-get($palette, white);
+  grid-template-areas: "contact-form"
+                       "team"
+                       "contact";
+}
+
+.contact-box {
+  padding: gu(2) gu(1) 0;
+
+  @include breakpoint(tablet-small up) {
+    padding: gu(2);
+  }
+
+  @include breakpoint(desktop up) {
+    padding: gu(2) gu(2) gu(2) gu(3);
+  }
+}
+
+.contact__form {
+  grid-area: contact-form;
+  .form__field {
+    padding-bottom: gu(1);
+  }
+  h1 {
+    @include baseline(s8, $headingtype, 1, $below: 1);
+    @include baseline(s7, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
+    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: fullhd up);
+  }
+
+  p {
+    @include baseline(s3, $bodytype, 1, $below: 2);
+  }
+}
+
+.contact__team,
+.contact__contact {
+  h1 {
+    @include baseline(s7, $headingtype, 1, $below: 1);
+    @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  p, li a {
+    @include baseline(s3, $bodytype, $above: 0);
+  }
+}
+
+.contact__team {
+  grid-area: team;
+}
+
+.contact__contact {
+  grid-area: contact;
+
+  @include breakpoint(tablet-small down) {
+    padding-bottom: gu(2);
+  }
+}
+
+@include breakpoint(tablet-small up) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "contact-form  team"
+                         "contact-form  contact";
+  }
+
+  .contact-box {
+    border-top: 0;
+  }
+
+  .contact__team,
+  .contact__contact {
+    border-left: 1px map-get($palette, gray-semilight) solid;
+  }
+
+  .contact__team {
+    border-bottom: 1px map-get($palette, gray-semilight) solid;
+  }
+}

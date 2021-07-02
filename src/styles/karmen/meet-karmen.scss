@@ -1,0 +1,14 @@
+.meet-karmen {
+  overflow: hidden;
+  text-align: center;
+}
+
+.meet-karmen__headline {
+  @include baseline(s8, $headingtype, 2);
+  @include baseline(s9, $headingtype, 3, $above: 0, $breakpoint: desktop up);
+}
+
+.meet-karmen__sub {
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 1);
+  @include baseline(s4, $bodytype, 1, $below: 1, $above: 1, $breakpoint: desktop up);
+}

@@ -1,0 +1,32 @@
+.connect-octo {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: gu(6);
+  @include breakpoint(tablet up) {
+    flex-direction: row;
+  }
+}
+.connect-octo__headline {
+  @include baseline(s8, $headingtype, 2, $above: 0, $below: 0.5);
+  @include baseline(s9, $headingtype, 3, $above: 0, $below: 2, $breakpoint: desktop up);
+}
+.connect-octo__sub {
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0 );
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0, $breakpoint: desktop up);
+}
+.connect-octo__desc {
+  @include breakpoint(tablet up) {
+    flex-basis: 50%;
+    padding-right: gu(3);
+  }
+}
+.connect-octo__img {
+  width: 100%;
+  max-width: gu(12);
+  height: gu(5.5);
+  @include breakpoint(tablet up) {
+    height: gu(12);
+    max-width: gu(20);
+    flex-basis: 50%;
+  }
+}

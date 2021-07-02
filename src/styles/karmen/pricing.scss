@@ -15,31 +15,32 @@
   // background: map-get($palette, white);
   text-align: left;
   position: relative;
-  margin-bottom: gu();
+  margin-bottom: gu(3);
 
-  @include breakpoint(mobile up) {
+  @include breakpoint(tablet-small up) {
     display: flex;
+    align-items: center;
   }
 
-  .pricing__box--price {
-    flex: 1.1;
+  .pricing__info {
+    flex-shrink: 0;
+    flex-basis: 60%;
     padding-top: gu();
 
     @include breakpoint(tablet-small up) {
-      padding-left: gu(3);
       padding-top: 0;
+      padding-left: gu(3);
     }
-
-    @include breakpoint(tablet up) {
-      flex: .9;
+    @include breakpoint(desktop up) {
+      padding-left: gu(5);
+      flex-basis: 45%;
     }
   }
 
-  .price__title {
+  .pricing__title {
     text-align: center;
 
-    @include breakpoint(mobile up) {
-      padding-left: gu(2);
+    @include breakpoint(tablet-small up) {
       text-align: left;
     }
 
@@ -52,124 +53,14 @@
     @include baseline(s7, $headingtype, 2, $above: 0, $below: 1, $breakpoint: tablet-small up);
   }
 
-
-  .price__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: gu(1.5);
-    padding-right: gu(1.5);
+  .pricing__img {
+    width: 100%;
+    max-width: 560px;
 
     @include breakpoint(mobile up) {
-      grid-template-columns: auto 1fr;
-      padding-left: gu(2);
-      padding-right: 0;
     }
-
-    @include breakpoint(tablet-small up) {
-      padding-left: 0;
-    }
-  }
-
-  .price__item {
-    position: relative;
-    padding-right: gu(.5);
-    white-space: nowrap;
-    @include baseline(s3, $bodytype, 1);
-
-    @include breakpoint(tablet-small up) {
-      padding-right: gu(4);
-
-      &:after {
-        position: absolute;
-        content: ". . . . . . . . . . . . . . . . . ";
-        right: gu(.5);
-        white-space: nowrap;
-        color: map-get($palette, gray-dark);
-      }
-
-      > span {
-        position: relative;
-        background: map-get($palette, gray-light);
-        padding-right: gu(.5);
-        z-index: 1;
-      }
-    }
-  }
-
-  .price__sum {
-    h3 {
-      color: map-get($palette, black);
-      text-transform: uppercase;
-      font-weight: bold;
-
-      @include baseline(s3, $bodytype, 1);
-
-      @include breakpoint(mobile up) {}
-    }
-
-    &.price__sum--limited-offer {
-      h3 {
-        color: map-get($palette, green);
-      }
-    }
-  }
-
-
-  .price__sum--total {
-    text-align: center;
-
-    @include breakpoint(mobile up) {
-      padding-left: gu(2);
-      text-align: left;
-    }
-
-    @include breakpoint(tablet-small up) {
-      padding-left: 0;
-    }
-
-    h2 {
-      color: map-get($palette, red);
-      text-transform: uppercase;
-
-      @include baseline(s9, $headingtype, 2, $above: 2);
-    }
-
-    .price__note {
-      position: relative;
-
-      @include breakpoint(mobile up) {
-        position: absolute;
-      }
-    }
-  }
-
-  .price__note {
-    position: absolute;
-    @include baseline(s1, $bodytype, 1, $above: 0);
-    @include baseline(s1, $bodytype, .55, $breakpoint: mobile up);
-    @include baseline(s1, $bodytype, .75, $breakpoint: tablet-small up);
-
-    @include breakpoint(tablet-small up) {
-      white-space: nowrap;
-    }
-  }
-
-  .pricing__box-img {
-    flex: .9;
-    max-width: 12rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: gu();
-    height: gu(6);
-
-    @include breakpoint(mobile up) {
-      max-width: 100%;
-      // max-width: gu(15)
-    }
-
 
     @include breakpoint(tablet up) {
-      flex: 1.1;
     }
 
     img {
@@ -178,29 +69,32 @@
       max-width: 100%;
     }
   }
+  .pricing__desc {
+    @include baseline(s4, $bodytype, 1, $below: 0, $above: 0);
+  }
 }
-
-.pricing__offerinfo {
-  margin-left: gu(0.25);
+.pricing__buy {
+  display: flex;
+  margin-top: gu(2);
+  align-items: center;
 }
-
+.pricing__buy-left {
+  margin-right: gu();
+}
 .pricing__buybutton.button {
   position: relative;
-  // Override default button styles
-  margin: gu(2) auto 0;
-  padding-left: gu(3.5);
-  padding-right: gu(2);
-  text-align: left;
+  height: gu(2.25);
+  line-height: gu(2.25);
+}
 
-  &:before {
-    display: block;
-    position: absolute;
-    left: gu(2);
-    width: gu(1);
-    font-family: $icomoon-font-family;
-    content: $icon--cart;
-    color: currentColor;
-    font-size: 1.6em;
-    font-weight: normal;
-  }
+.pricing__price-vat {
+  color: map-get($palette, red);
+  white-space: nowrap;
+  padding-top: 0 !important;
+  @include baseline(s6, $headingtype, 1, $below: 0, $above: 0);
+}
+
+.pricing__price {
+  white-space: nowrap;
+  @include baseline(s4, $headingtype, 1, $below: 0, $above: 0);
 }

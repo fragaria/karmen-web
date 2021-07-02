@@ -1,79 +1,38 @@
 .story {
-  display: grid;
-  grid-gap: 0;
-  background: map-get($palette, white);
-  grid-template-areas: "story"
-                       "team"
-                       "contact";
-}
-
-.story-box {
-  padding: gu(2) gu(1) 0;
-
-  @include breakpoint(tablet-small up) {
-    padding: gu(2);
-  }
-
-  @include breakpoint(desktop up) {
-    padding: gu(2) gu(2) gu(2) gu(3);
+  padding-bottom: gu(2);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  @include breakpoint(tablet up) {
+    flex-flow: row;
   }
 }
-
-.story__story {
-  grid-area: story;
-
-  h1 {
-    @include baseline(s8, $headingtype, 1, $below: 1);
-    @include baseline(s7, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
-    @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: fullhd up);
-  }
-
-  p {
-    @include baseline(s3, $bodytype, 1, $below: 2);
+.story__sub {
+  @include baseline(s4, $bodytype, 1, $below: 1);
+}
+.story__content {
+  order: 2;
+  @include breakpoint(tablet up) {
+    order: 1;
+    width: 40%;
   }
 }
-
-.story__team,
-.story__contact {
-  h1 {
-    @include baseline(s7, $headingtype, 1, $below: 1);
-    @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
-  }
-
-  p, li a {
-    @include baseline(s3, $bodytype, $above: 0);
-  }
-}
-
-.story__team {
-  grid-area: team;
-}
-
-.story__contact {
-  grid-area: contact;
-
-  @include breakpoint(tablet-small down) {
-    padding-bottom: gu(2);
+.story__illustration {
+  width: 100%;
+  order: 1;
+  margin-bottom: gu(1);
+  @include breakpoint(tablet up) {
+    order: 2;
+    margin-bottom: 0;
+    padding-left: 10%;
+    width: 50%;
   }
 }
-
-@include breakpoint(tablet-small up) {
-  .story {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "story  team"
-                         "story  contact";
-  }
-
-  .story-box {
-    border-top: 0;
-  }
-
-  .story__team,
-  .story__contact {
-    border-left: 1px map-get($palette, gray-semilight) solid;
-  }
-
-  .story__team {
-    border-bottom: 1px map-get($palette, gray-semilight) solid;
-  }
+.story__headline {
+  @include baseline(s8, $headingtype, 2, $above: 0, $below: 0.5);
+  @include baseline(s9, $headingtype, 3, $above: 0, $below: 2, $breakpoint: desktop up);
+}
+.story__sub {
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0 );
+  @include baseline(s4, $bodytype, 1, $below: 2, $above: 0, $breakpoint: desktop up);
 }

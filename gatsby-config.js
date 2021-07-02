@@ -122,6 +122,10 @@ module.exports = {
           url: `/en/#buy`,
         },
         {
+          name: "Karmen story",
+          url: `/en/story/`,
+        },
+        {
           name: "Buy",
           url: `/en/buy/`,
         },
@@ -137,6 +141,10 @@ module.exports = {
           name: "Blog",
           url: `/en/blog/`,
         },
+        {
+          name: "FAQ",
+          url: `/en/faq/`,
+        },
       ],
       cs: [
         {
@@ -148,6 +156,10 @@ module.exports = {
           url: `/cs/#buy`,
         },
         {
+          name: "Příběh Karmen",
+          url: `/cs/pribeh/`,
+        },
+        {
           name: "Koupit",
           url: `/cs/koupit/`,
         },
@@ -156,12 +168,16 @@ module.exports = {
           url: `/cs/#contact`,
         },
         {
+          name: "Blog",
+          url: `/cs/blog/`,
+        },
+        {
           name: "Komunita",
           url: `/cs/komunita/`,
         },
         {
-          name: "Blog",
-          url: `/cs/blog/`,
+          name: "FAQ",
+          url: `/cs/faq/`,
         },
       ],
     },

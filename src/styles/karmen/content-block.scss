@@ -57,10 +57,19 @@
   }
 }
 
+.content-block--move-up {
+  margin-top: gu(-4);
+  z-index: 10;
+}
+
 .content-block--cover-mobile {
   @include cbMargin(gu(-1.5));
 
   @include breakpoint(tablet-small up) {
       @include cbMargin(auto);
   }
+}
+
+.content-block--relative {
+  position: relative;
 }
