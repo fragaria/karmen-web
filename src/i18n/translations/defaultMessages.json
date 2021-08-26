@@ -1351,65 +1351,195 @@
         "defaultMessage": "Jaké řešení si vybrat?",
         "end": {
           "column": 12,
-          "line": 35
+          "line": 44
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.headline",
         "start": {
           "column": 10,
-          "line": 32
+          "line": 41
         }
       },
       {
         "defaultMessage": "Chci hotové řešení",
         "end": {
           "column": 18,
-          "line": 48
+          "line": 57
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_title",
         "start": {
           "column": 16,
-          "line": 45
+          "line": 54
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
+        "end": {
+          "column": 20,
+          "line": 64
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.full_desc",
+        "start": {
+          "column": 18,
+          "line": 61
         }
       },
       {
         "defaultMessage": "Buy Karmen",
         "end": {
           "column": 22,
-          "line": 59
+          "line": 119
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.cta",
         "start": {
           "column": 20,
-          "line": 56
+          "line": 116
         }
       },
       {
         "defaultMessage": "4 260 KČ s DPH",
         "end": {
           "column": 22,
-          "line": 67
+          "line": 81
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price_vat",
         "start": {
           "column": 20,
-          "line": 64
+          "line": 78
         }
       },
       {
         "defaultMessage": "4 060 KČ bez DPH",
         "end": {
           "column": 22,
-          "line": 73
+          "line": 87
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price",
         "start": {
           "column": 20,
-          "line": 70
+          "line": 84
+        }
+      },
+      {
+        "defaultMessage": "Vyrobím si sám",
+        "end": {
+          "column": 18,
+          "line": 103
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.myself_title",
+        "start": {
+          "column": 16,
+          "line": 100
+        }
+      },
+      {
+        "defaultMessage": "Bez Karmen Pill se obejdete, pokud máte vlastní zařízení pro monitoring tisku kompatibilní s Octoprintem. Stačí se registrovat do Cloudu.",
+        "end": {
+          "column": 20,
+          "line": 110
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.myself_desc",
+        "start": {
+          "column": 18,
+          "line": 107
+        }
+      },
+      {
+        "defaultMessage": "3 260 KČ s DPH",
+        "end": {
+          "column": 22,
+          "line": 127
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.myself_price_vat",
+        "start": {
+          "column": 20,
+          "line": 124
+        }
+      },
+      {
+        "defaultMessage": "2860 KČ bez DPH",
+        "end": {
+          "column": 22,
+          "line": 133
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.myself_price",
+        "start": {
+          "column": 20,
+          "line": 130
+        }
+      },
+      {
+        "defaultMessage": "Mám vlastní řešení",
+        "end": {
+          "column": 18,
+          "line": 149
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.diy_title",
+        "start": {
+          "column": 16,
+          "line": 146
+        }
+      },
+      {
+        "defaultMessage": "Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod.",
+        "end": {
+          "column": 20,
+          "line": 156
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.diy_desc",
+        "start": {
+          "column": 18,
+          "line": 153
+        }
+      },
+      {
+        "defaultMessage": "Registrovat",
+        "end": {
+          "column": 22,
+          "line": 165
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.cta_register",
+        "start": {
+          "column": 20,
+          "line": 162
+        }
+      },
+      {
+        "defaultMessage": "Zdarma",
+        "end": {
+          "column": 22,
+          "line": 173
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.diy_price_vat",
+        "start": {
+          "column": 20,
+          "line": 170
+        }
+      },
+      {
+        "defaultMessage": "Zdarma pro všechny",
+        "end": {
+          "column": 22,
+          "line": 179
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.diy_price",
+        "start": {
+          "column": 20,
+          "line": 176
         }
       }
     ],
@@ -1484,24 +1614,6 @@
       }
     ],
     "path": "src/components/page-blocks/principle.json"
-  },
-  {
-    "descriptors": [
-      {
-        "defaultMessage": "Produkty",
-        "end": {
-          "column": 16,
-          "line": 12
-        },
-        "file": "src/components/page-blocks/products.js",
-        "id": "products.headline",
-        "start": {
-          "column": 14,
-          "line": 9
-        }
-      }
-    ],
-    "path": "src/components/page-blocks/products.json"
   },
   {
     "descriptors": [
