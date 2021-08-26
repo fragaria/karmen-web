@@ -10,7 +10,6 @@ import CasesBlock from "components/page-blocks/cases"
 import HeroBlock from "components/page-blocks/hero"
 import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
-import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
 import SpecsBlock from "components/page-blocks/specs"
 import ContactBlock from "components/page-blocks/contact"
@@ -35,7 +34,6 @@ const IndexENPage = ({ data, location }) => {
       />
       <CasesBlock className="v-home-cases v-home-section" />
       <SpecsBlock className="v-home-specs v-home-section" />
-      <TestimonialsBlock className="v-home-testimonials v-home-section" />
       <ContactBlock className="v-home-story v-home-section" />
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>

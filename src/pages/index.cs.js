@@ -10,7 +10,6 @@ import HeroBlock from "components/page-blocks/hero"
 import MeetKarmenBlock from "components/page-blocks/meet-karmen"
 import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
-import TestimonialsBlock from "components/page-blocks/testimonials"
 import SolutionBlock from "components/page-blocks/solution"
 import OptionsBlock from "components/page-blocks/options"
 import ContactBlock from "components/page-blocks/contact"
@@ -34,7 +33,6 @@ const IndexPage = ({ data, location }) => {
         location={location}
         className="v-home-pricing v-home-section"
       />
-      <TestimonialsBlock className="v-home-testimonials v-home-section" />
       <OptionsBlock className="v-home-options v-home-section" />
       <ConnectOctoBlock className="v-home-octo v-home-section" />
       <ContactBlock className="v-home-contact v-home-section" />
