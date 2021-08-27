@@ -1,48 +1,31 @@
 .pricing {
-  display: flex;
-  position: relative;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   min-height: gu(10);
+  column-gap: gu(2);
 
   @include breakpoint(tablet-small up) {
     padding-top: gu(2);
-    // flex-direction: row;
+  }
+  @include breakpoint(tablet-small up) {
+
   }
 }
 
 .pricing__box {
   width: 100%;
-  // background: map-get($palette, white);
-  text-align: left;
+  text-align: center;
   position: relative;
   margin-bottom: gu(3);
-
-  @include breakpoint(tablet-small up) {
-    display: flex;
-    align-items: center;
-  }
 
   .pricing__info {
     flex-shrink: 0;
     flex-basis: 60%;
     padding-top: gu();
-
-    @include breakpoint(tablet-small up) {
-      padding-top: 0;
-      padding-left: gu(3);
-    }
-    @include breakpoint(desktop up) {
-      padding-left: gu(5);
-      flex-basis: 45%;
-    }
   }
 
   .pricing__title {
     text-align: center;
-
-    @include breakpoint(tablet-small up) {
-      text-align: left;
-    }
 
     @include breakpoint(tablet-small up) {
       padding-left: 0;
@@ -55,31 +38,23 @@
 
   .pricing__img {
     width: 100%;
-    max-width: 560px;
-
-    @include breakpoint(mobile up) {
-    }
-
-    @include breakpoint(tablet up) {
-    }
-
-    img {
-      display: block;
-      width: 100%;
+    max-width: gu(18);
+    height: gu(7);
+    margin: 0 auto;
+    @include breakpoint(tablet-tiny up) {
       max-width: 100%;
+    }
+    @include breakpoint(desktop up) {
+      margin: 0 auto;
     }
   }
   .pricing__desc {
-    @include baseline(s4, $bodytype, 1, $below: 0, $above: 0);
+    @include baseline(s4, $bodytype, 1.2, $below: 0, $above: 0);
   }
 }
 .pricing__buy {
-  display: flex;
-  margin-top: gu(2);
-  align-items: center;
-}
-.pricing__buy-left {
-  margin-right: gu();
+  margin-top: gu(1);
+  text-align: center;
 }
 .pricing__buybutton.button {
   position: relative;
@@ -88,10 +63,11 @@
 }
 
 .pricing__price-vat {
+  margin-top: gu(2);
   color: map-get($palette, red);
   white-space: nowrap;
   padding-top: 0 !important;
-  @include baseline(s6, $headingtype, 1, $below: 0, $above: 0);
+  @include baseline(s7, $headingtype, 1, $below: 0, $above: 0);
 }
 
 .pricing__price {

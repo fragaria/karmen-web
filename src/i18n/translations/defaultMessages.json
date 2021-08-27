@@ -1387,159 +1387,159 @@
         }
       },
       {
-        "defaultMessage": "Buy Karmen",
-        "end": {
-          "column": 22,
-          "line": 119
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.cta",
-        "start": {
-          "column": 20,
-          "line": 116
-        }
-      },
-      {
         "defaultMessage": "4 260 KČ s DPH",
         "end": {
-          "column": 22,
-          "line": 81
+          "column": 18,
+          "line": 71
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price_vat",
         "start": {
-          "column": 20,
-          "line": 78
+          "column": 16,
+          "line": 68
         }
       },
       {
         "defaultMessage": "4 060 KČ bez DPH",
         "end": {
-          "column": 22,
-          "line": 87
+          "column": 18,
+          "line": 77
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price",
         "start": {
+          "column": 16,
+          "line": 74
+        }
+      },
+      {
+        "defaultMessage": "Chci hotové řešení",
+        "end": {
+          "column": 22,
+          "line": 115
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.cta",
+        "start": {
           "column": 20,
-          "line": 84
+          "line": 112
         }
       },
       {
         "defaultMessage": "Vyrobím si sám",
         "end": {
           "column": 18,
-          "line": 103
+          "line": 99
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_title",
         "start": {
           "column": 16,
-          "line": 100
+          "line": 96
         }
       },
       {
         "defaultMessage": "Bez Karmen Pill se obejdete, pokud máte vlastní zařízení pro monitoring tisku kompatibilní s Octoprintem. Stačí se registrovat do Cloudu.",
         "end": {
           "column": 20,
-          "line": 110
+          "line": 106
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_desc",
         "start": {
           "column": 18,
-          "line": 107
+          "line": 103
         }
       },
       {
         "defaultMessage": "3 260 KČ s DPH",
         "end": {
           "column": 22,
-          "line": 127
+          "line": 123
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_price_vat",
         "start": {
           "column": 20,
-          "line": 124
+          "line": 120
         }
       },
       {
         "defaultMessage": "2860 KČ bez DPH",
         "end": {
           "column": 22,
-          "line": 133
+          "line": 129
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_price",
         "start": {
           "column": 20,
-          "line": 130
+          "line": 126
         }
       },
       {
         "defaultMessage": "Mám vlastní řešení",
         "end": {
           "column": 18,
-          "line": 149
+          "line": 145
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_title",
         "start": {
           "column": 16,
-          "line": 146
+          "line": 142
         }
       },
       {
         "defaultMessage": "Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod.",
         "end": {
           "column": 20,
-          "line": 156
+          "line": 152
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_desc",
         "start": {
           "column": 18,
-          "line": 153
+          "line": 149
         }
       },
       {
         "defaultMessage": "Registrovat",
         "end": {
           "column": 22,
-          "line": 165
+          "line": 161
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.cta_register",
         "start": {
           "column": 20,
-          "line": 162
+          "line": 158
         }
       },
       {
         "defaultMessage": "Zdarma",
         "end": {
           "column": 22,
-          "line": 173
+          "line": 169
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_price_vat",
         "start": {
           "column": 20,
-          "line": 170
+          "line": 166
         }
       },
       {
         "defaultMessage": "Zdarma pro všechny",
         "end": {
           "column": 22,
-          "line": 179
+          "line": 175
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_price",
         "start": {
           "column": 20,
-          "line": 176
+          "line": 172
         }
       }
     ],

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import ReactTooltip from "react-tooltip"
 import { FormattedMessage, useIntl, defineMessages } from "react-intl"
 
 import { Image } from "components/image"
+import { BackgroundImage } from "components/image"
 
 const messages = defineMessages({
   specialOfferMemo: {
@@ -45,10 +45,15 @@ const PricingBlock = ({ location, ...props }) => {
         </h1>
         <div className="pricing">
           <div className="pricing__box">
-            <div className="pricing__img">
-              <Image file={data.pillTablet} alt="Pill + Karmen cloud service" />
-            </div>
-
+            <BackgroundImage
+              file={data.pillTablet}
+              style={{
+                backgroundPosition: "center bottom",
+                backgroundSize: "contain",
+              }}
+              className="pricing__img"
+              alt="Pill + Karmen cloud service"
+            />
             <div className="pricing__info">
               <h2 className="pricing__title">
                 <FormattedMessage
@@ -64,37 +69,37 @@ const PricingBlock = ({ location, ...props }) => {
                   />
                 </p>
               </div>
+              <div className="pricing__price-vat">
+                <FormattedMessage
+                  id="pricing-block.full_price_vat"
+                  defaultMessage="4 260 KČ s DPH"
+                />
+              </div>
+              <div className="pricing__price">
+                <FormattedMessage
+                  id="pricing-block.full_price"
+                  defaultMessage="4 060 KČ bez DPH"
+                />
+              </div>
               <div className="pricing__buy">
-                <div className="pricing__buy-left">
-                  <Link to={buyLinkFull} className="pricing__buybutton button button--red">
-                    <FormattedMessage
-                      id="pricing-block.cta"
-                      defaultMessage="Buy Karmen"
-                    />
-                  </Link>
-                </div>
-                <div className="pricing__buy-right">
-                  <div className="pricing__price-vat">
-                    <FormattedMessage
-                      id="pricing-block.full_price_vat"
-                      defaultMessage="4 260 KČ s DPH"
-                    />
-                  </div>
-                  <div className="pricing__price">
-                    <FormattedMessage
-                      id="pricing-block.full_price"
-                      defaultMessage="4 060 KČ bez DPH"
-                    />
-                  </div>
-                </div>
+                <Link to={buyLinkFull} className="pricing__buybutton button button--responsive button--red">
+                  <FormattedMessage
+                    id="pricing-block.cta"
+                    defaultMessage="Buy Karmen"
+                  />
+                </Link>
               </div>
             </div>
           </div>
           <div className="pricing__box">
-            <div className="pricing__img">
-              <Image file={data.cloudMobile} />
-            </div>
-
+            <BackgroundImage
+              file={data.cloudMobile}
+              style={{
+                backgroundPosition: "center bottom",
+                backgroundSize: "contain",
+              }}
+              className="pricing__img"
+            />
             <div className="pricing__info">
               <h2 className="pricing__title">
                 <FormattedMessage
@@ -110,37 +115,37 @@ const PricingBlock = ({ location, ...props }) => {
                   />
                 </p>
               </div>
+              <div className="pricing__price-vat">
+                <FormattedMessage
+                  id="pricing-block.myself_price_vat"
+                  defaultMessage="3 260 KČ s DPH"
+                />
+              </div>
+              <div className="pricing__price">
+                <FormattedMessage
+                  id="pricing-block.myself_price"
+                  defaultMessage="2860 KČ bez DPH"
+                />
+              </div>
               <div className="pricing__buy">
-                <div className="pricing__buy-left">
-                  <Link to={buyLinkMyself} className="pricing__buybutton button button--red">
-                    <FormattedMessage
-                      id="pricing-block.cta"
-                      defaultMessage="Buy Karmen"
-                    />
-                  </Link>
-                </div>
-                <div className="pricing__buy-right">
-                  <div className="pricing__price-vat">
-                    <FormattedMessage
-                      id="pricing-block.myself_price_vat"
-                      defaultMessage="3 260 KČ s DPH"
-                    />
-                  </div>
-                  <div className="pricing__price">
-                    <FormattedMessage
-                      id="pricing-block.myself_price"
-                      defaultMessage="2860 KČ bez DPH"
-                    />
-                  </div>
-                </div>
+                <Link to={buyLinkMyself} className="pricing__buybutton button--responsive button button--red">
+                  <FormattedMessage
+                    id="pricing-block.cta"
+                    defaultMessage="Buy Karmen"
+                  />
+                </Link>
               </div>
             </div>
           </div>
           <div className="pricing__box">
-            <div className="pricing__img">
-              <Image file={data.diy} />
-            </div>
-
+            <BackgroundImage
+              file={data.diy}
+              style={{
+                backgroundPosition: "center bottom",
+                backgroundSize: "contain",
+              }}
+              className="pricing__img"
+            />
             <div className="pricing__info">
               <h2 className="pricing__title">
                 <FormattedMessage
@@ -156,29 +161,25 @@ const PricingBlock = ({ location, ...props }) => {
                   />
                 </p>
               </div>
+              <div className="pricing__price-vat">
+                <FormattedMessage
+                  id="pricing-block.diy_price_vat"
+                  defaultMessage="Zdarma"
+                />
+              </div>
+              <div className="pricing__price">
+                <FormattedMessage
+                  id="pricing-block.diy_price"
+                  defaultMessage="Zdarma pro všechny"
+                />
+              </div>
               <div className="pricing__buy">
-                <div className="pricing__buy-left">
-                  <Link to={registerLink} className="pricing__buybutton button button--red">
-                    <FormattedMessage
-                      id="pricing-block.cta_register"
-                      defaultMessage="Registrovat"
-                    />
-                  </Link>
-                </div>
-                <div className="pricing__buy-right">
-                  <div className="pricing__price-vat">
-                    <FormattedMessage
-                      id="pricing-block.diy_price_vat"
-                      defaultMessage="Zdarma"
-                    />
-                  </div>
-                  <div className="pricing__price">
-                    <FormattedMessage
-                      id="pricing-block.diy_price"
-                      defaultMessage="Zdarma pro všechny"
-                    />
-                  </div>
-                </div>
+                <Link to={registerLink} className="pricing__buybutton button--responsive button button--red">
+                  <FormattedMessage
+                    id="pricing-block.cta_register"
+                    defaultMessage="Registrovat"
+                  />
+                </Link>
               </div>
             </div>
           </div>
