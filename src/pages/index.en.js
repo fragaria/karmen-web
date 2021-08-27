@@ -27,11 +27,11 @@ const IndexENPage = ({ data, location }) => {
       <HeroBlock className="v-home-hero v-home-section" />
       <MeetKarmenBlock className="v-home-meet-karmen v-home-section" />
       <SolutionBlock className="v-home-solution v-home-section" />
-      <PrincipleBlock className="v-home-principle v-home-section" />
       <PricingBlock
         location={location}
         className="v-home-pricing v-home-section"
       />
+      <PrincipleBlock className="v-home-principle v-home-section" />
       <CasesBlock className="v-home-cases v-home-section" />
       <SpecsBlock className="v-home-specs v-home-section" />
       <ContactBlock className="v-home-story v-home-section" />
