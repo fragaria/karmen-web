@@ -1,4 +1,4 @@
-.pricing {
+.pricing-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: gu(10);
@@ -10,6 +10,20 @@
   @include breakpoint(tablet-small up) {
 
   }
+}
+
+.pricing {
+  position: relative;
+}
+.pricing-circle {
+  width: 1570px;
+  height: 1570px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left: -528px;
+  z-index: -1;
 }
 
 .pricing__box {
