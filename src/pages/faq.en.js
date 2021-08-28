@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "layouts/cs"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import SEOMetadata from "components/seo/metadata"
 import FaqResources from "components/page-blocks/faq-resources"
-import { FormattedMessage } from "react-intl"
 import LookHere from "../components/page-blocks/look-here"
 
 const Faq = ({ data, location }) => {
