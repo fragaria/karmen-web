@@ -1,26 +1,59 @@
 .contact {
-  display: grid;
-  grid-gap: 0;
+  margin-bottom: gu(2);
+  display: flex;
   background: map-get($palette, white);
-  grid-template-areas: "contact-form"
-                       "team"
-                       "contact";
+  flex-flow: column;
+  @include breakpoint(desktop up) {
+    flex-flow: row;
+    margin-bottom: gu(4);
+  }
+}
+.contact-page {
+  padding-top: gu(2);
+  @include breakpoint(desktop up) {
+    padding-top: gu(4);
+  }
+}
+
+.contact__column {
+  flex-grow: 1;
+  margin-right: gu(2);
+  h2 {
+    @include baseline(s5, $headingtype, 1, $below: 1);
+    text-transform: uppercase;
+  }
+}
+
+.contact-box-wrap {
+  display: flex;
+  flex-flow: column;
+  @include breakpoint(tablet-small up) {
+    flex-flow: row;
+  }
+  @include breakpoint(fullhd up) {
+    flex-flow: column;
+  }
 }
 
 .contact-box {
-  padding: gu(2) gu(1) 0;
+  flex-grow: 1;
+  margin-top: gu(2);
+  //+ .contact-box {
+  //  @include breakpoint(tablet up) {
+  //    margin-top: gu(2);
+  //  }
+  //}
+}
 
-  @include breakpoint(tablet-small up) {
-    padding: gu(2);
-  }
-
-  @include breakpoint(desktop up) {
-    padding: gu(2) gu(2) gu(2) gu(3);
-  }
+.contact__headline {
+  @include baseline(s8, $headingtype, 1, $below: 1);
 }
 
 .contact__form {
-  grid-area: contact-form;
+  margin-top: gu(2);
+  textarea {
+    min-height: gu(8);
+  }
   .form__field {
     padding-bottom: gu(1);
   }
@@ -35,47 +68,3 @@
   }
 }
 
-.contact__team,
-.contact__contact {
-  h1 {
-    @include baseline(s7, $headingtype, 1, $below: 1);
-    @include baseline(s6, $headingtype, 1, $below: 1, $breakpoint: tablet-small up);
-  }
-
-  p, li a {
-    @include baseline(s3, $bodytype, $above: 0);
-  }
-}
-
-.contact__team {
-  grid-area: team;
-}
-
-.contact__contact {
-  grid-area: contact;
-
-  @include breakpoint(tablet-small down) {
-    padding-bottom: gu(2);
-  }
-}
-
-@include breakpoint(tablet-small up) {
-  .contact {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "contact-form  team"
-                         "contact-form  contact";
-  }
-
-  .contact-box {
-    border-top: 0;
-  }
-
-  .contact__team,
-  .contact__contact {
-    border-left: 1px map-get($palette, gray-semilight) solid;
-  }
-
-  .contact__team {
-    border-bottom: 1px map-get($palette, gray-semilight) solid;
-  }
-}

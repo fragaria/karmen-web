@@ -433,81 +433,16 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "GitHub profile page",
-        "end": {
-          "column": 3,
-          "line": 12
-        },
-        "file": "src/components/footer.js",
-        "id": "footer.gh_profile_title",
-        "start": {
-          "column": 18,
-          "line": 9
-        }
-      },
-      {
-        "defaultMessage": "Twitter profile page",
-        "end": {
-          "column": 3,
-          "line": 16
-        },
-        "file": "src/components/footer.js",
-        "id": "footer.tw_profile_title",
-        "start": {
-          "column": 18,
-          "line": 13
-        }
-      },
-      {
-        "defaultMessage": "Facebook profile page",
-        "end": {
-          "column": 3,
-          "line": 20
-        },
-        "file": "src/components/footer.js",
-        "id": "footer.fb_profile_title",
-        "start": {
-          "column": 18,
-          "line": 17
-        }
-      },
-      {
-        "defaultMessage": "Karmen YouTube channel",
-        "end": {
-          "column": 3,
-          "line": 24
-        },
-        "file": "src/components/footer.js",
-        "id": "footer.yt_channel_title",
-        "start": {
-          "column": 18,
-          "line": 21
-        }
-      },
-      {
-        "defaultMessage": "Karmen docs",
-        "end": {
-          "column": 3,
-          "line": 28
-        },
-        "file": "src/components/footer.js",
-        "id": "footer.docs_title",
-        "start": {
-          "column": 13,
-          "line": 25
-        }
-      },
-      {
         "defaultMessage": "Community",
         "end": {
           "column": 75,
-          "line": 34
+          "line": 13
         },
         "file": "src/components/footer.js",
         "id": "footer.community",
         "start": {
           "column": 6,
-          "line": 34
+          "line": 13
         }
       }
     ],
@@ -853,55 +788,120 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Your name",
+        "end": {
+          "column": 3,
+          "line": 11
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.form_name",
+        "start": {
+          "column": 12,
+          "line": 8
+        }
+      },
+      {
+        "defaultMessage": "Your e-mail",
+        "end": {
+          "column": 3,
+          "line": 15
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.form_email",
+        "start": {
+          "column": 13,
+          "line": 12
+        }
+      },
+      {
+        "defaultMessage": "Content of the message",
+        "end": {
+          "column": 3,
+          "line": 19
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.form_message",
+        "start": {
+          "column": 15,
+          "line": 16
+        }
+      },
+      {
         "defaultMessage": "Contact form",
         "end": {
-          "column": 16,
-          "line": 32
+          "column": 12,
+          "line": 46
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.title",
         "start": {
-          "column": 14,
-          "line": 29
+          "column": 10,
+          "line": 43
         }
       },
       {
-        "defaultMessage": "Karmen team",
+        "defaultMessage": "Send",
         "end": {
-          "column": 16,
-          "line": 57
+          "column": 20,
+          "line": 65
         },
         "file": "src/components/page-blocks/contact.js",
-        "id": "contact-block.karmen_team",
+        "id": "contact-block.send_button",
         "start": {
-          "column": 14,
-          "line": 54
+          "column": 18,
+          "line": 62
         }
       },
       {
-        "defaultMessage": "See the team",
+        "defaultMessage": "Nebo nás kontaktujte přímo",
         "end": {
           "column": 18,
-          "line": 64
-        },
-        "file": "src/components/page-blocks/contact.js",
-        "id": "contact-block.karmen_team_link",
-        "start": {
-          "column": 16,
-          "line": 61
-        }
-      },
-      {
-        "defaultMessage": "Contact us",
-        "end": {
-          "column": 16,
-          "line": 73
+          "line": 76
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.contact_us",
         "start": {
-          "column": 14,
-          "line": 70
+          "column": 16,
+          "line": 73
+        }
+      },
+      {
+        "defaultMessage": "Adresa společnosti",
+        "end": {
+          "column": 18,
+          "line": 102
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.karmen_adress_headline",
+        "start": {
+          "column": 16,
+          "line": 99
+        }
+      },
+      {
+        "defaultMessage": "Česká republika",
+        "end": {
+          "column": 20,
+          "line": 112
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.karmen_adress_cz",
+        "start": {
+          "column": 18,
+          "line": 109
+        }
+      },
+      {
+        "defaultMessage": "Sledujte nás",
+        "end": {
+          "column": 18,
+          "line": 121
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.karmen_watch_us",
+        "start": {
+          "column": 16,
+          "line": 118
         }
       }
     ],
@@ -1364,182 +1364,182 @@
         "defaultMessage": "Chci hotové řešení",
         "end": {
           "column": 18,
-          "line": 57
+          "line": 62
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_title",
         "start": {
           "column": 16,
-          "line": 54
+          "line": 59
         }
       },
       {
         "defaultMessage": "Karmen Pill a Karmen Cloud vám umožní kompletně ovládat 3D tisk. Nepotřebujete nic dalšího.",
         "end": {
           "column": 20,
-          "line": 64
+          "line": 69
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_desc",
         "start": {
           "column": 18,
-          "line": 61
+          "line": 66
         }
       },
       {
         "defaultMessage": "4 260 KČ s DPH",
         "end": {
           "column": 18,
-          "line": 71
+          "line": 76
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price_vat",
         "start": {
           "column": 16,
-          "line": 68
+          "line": 73
         }
       },
       {
         "defaultMessage": "4 060 KČ bez DPH",
         "end": {
           "column": 18,
-          "line": 77
+          "line": 82
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.full_price",
         "start": {
           "column": 16,
-          "line": 74
+          "line": 79
         }
       },
       {
-        "defaultMessage": "Chci hotové řešení",
+        "defaultMessage": "Buy Karmen",
         "end": {
-          "column": 22,
-          "line": 115
+          "column": 20,
+          "line": 135
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.cta",
         "start": {
-          "column": 20,
-          "line": 112
+          "column": 18,
+          "line": 132
         }
       },
       {
         "defaultMessage": "Vyrobím si sám",
         "end": {
           "column": 18,
-          "line": 99
+          "line": 108
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_title",
         "start": {
           "column": 16,
-          "line": 96
+          "line": 105
         }
       },
       {
         "defaultMessage": "Bez Karmen Pill se obejdete, pokud máte vlastní zařízení pro monitoring tisku kompatibilní s Octoprintem. Stačí se registrovat do Cloudu.",
         "end": {
           "column": 20,
-          "line": 106
+          "line": 115
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_desc",
         "start": {
           "column": 18,
-          "line": 103
+          "line": 112
         }
       },
       {
         "defaultMessage": "3 260 KČ s DPH",
         "end": {
-          "column": 22,
-          "line": 123
+          "column": 18,
+          "line": 122
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_price_vat",
         "start": {
-          "column": 20,
-          "line": 120
+          "column": 16,
+          "line": 119
         }
       },
       {
         "defaultMessage": "2860 KČ bez DPH",
         "end": {
-          "column": 22,
-          "line": 129
+          "column": 18,
+          "line": 128
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.myself_price",
         "start": {
-          "column": 20,
-          "line": 126
+          "column": 16,
+          "line": 125
         }
       },
       {
         "defaultMessage": "Mám vlastní řešení",
         "end": {
           "column": 18,
-          "line": 145
+          "line": 154
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_title",
         "start": {
           "column": 16,
-          "line": 142
+          "line": 151
         }
       },
       {
         "defaultMessage": "Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod.",
         "end": {
           "column": 20,
-          "line": 152
+          "line": 161
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_desc",
         "start": {
           "column": 18,
-          "line": 149
-        }
-      },
-      {
-        "defaultMessage": "Registrovat",
-        "end": {
-          "column": 22,
-          "line": 161
-        },
-        "file": "src/components/page-blocks/pricing.js",
-        "id": "pricing-block.cta_register",
-        "start": {
-          "column": 20,
           "line": 158
         }
       },
       {
         "defaultMessage": "Zdarma",
         "end": {
-          "column": 22,
-          "line": 169
+          "column": 18,
+          "line": 168
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_price_vat",
         "start": {
-          "column": 20,
-          "line": 166
+          "column": 16,
+          "line": 165
         }
       },
       {
         "defaultMessage": "Zdarma pro všechny",
         "end": {
-          "column": 22,
-          "line": 175
+          "column": 18,
+          "line": 174
         },
         "file": "src/components/page-blocks/pricing.js",
         "id": "pricing-block.diy_price",
         "start": {
+          "column": 16,
+          "line": 171
+        }
+      },
+      {
+        "defaultMessage": "Registrovat",
+        "end": {
           "column": 20,
-          "line": 172
+          "line": 181
+        },
+        "file": "src/components/page-blocks/pricing.js",
+        "id": "pricing-block.cta_register",
+        "start": {
+          "column": 18,
+          "line": 178
         }
       }
     ],
@@ -2151,6 +2151,76 @@
       }
     ],
     "path": "src/components/sitenav.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "GitHub profile page",
+        "end": {
+          "column": 3,
+          "line": 9
+        },
+        "file": "src/components/social.js",
+        "id": "footer.gh_profile_title",
+        "start": {
+          "column": 18,
+          "line": 6
+        }
+      },
+      {
+        "defaultMessage": "Twitter profile page",
+        "end": {
+          "column": 3,
+          "line": 13
+        },
+        "file": "src/components/social.js",
+        "id": "footer.tw_profile_title",
+        "start": {
+          "column": 18,
+          "line": 10
+        }
+      },
+      {
+        "defaultMessage": "Facebook profile page",
+        "end": {
+          "column": 3,
+          "line": 17
+        },
+        "file": "src/components/social.js",
+        "id": "footer.fb_profile_title",
+        "start": {
+          "column": 18,
+          "line": 14
+        }
+      },
+      {
+        "defaultMessage": "Karmen YouTube channel",
+        "end": {
+          "column": 3,
+          "line": 21
+        },
+        "file": "src/components/social.js",
+        "id": "footer.yt_channel_title",
+        "start": {
+          "column": 18,
+          "line": 18
+        }
+      },
+      {
+        "defaultMessage": "Karmen docs",
+        "end": {
+          "column": 3,
+          "line": 25
+        },
+        "file": "src/components/social.js",
+        "id": "footer.docs_title",
+        "start": {
+          "column": 13,
+          "line": 22
+        }
+      }
+    ],
+    "path": "src/components/social.json"
   },
   {
     "descriptors": [

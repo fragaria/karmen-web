@@ -1,6 +1,23 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { FormattedMessage, useIntl } from "react-intl"
+import { useStaticQuery, graphql } from "gatsby"
+import { defineMessages, FormattedMessage, useIntl } from "react-intl"
+
+import Social from "../social"
+
+const messages = defineMessages({
+  formName: {
+    id: "contact-block.form_name",
+    defaultMessage: "Your name",
+  },
+  formEmail: {
+    id: "contact-block.form_email",
+    defaultMessage: "Your e-mail",
+  },
+  formMessage: {
+    id: "contact-block.form_message",
+    defaultMessage: "Content of the message",
+  }
+})
 
 const ContactBlock = props => {
   const data = useStaticQuery(graphql`
@@ -17,79 +34,94 @@ const ContactBlock = props => {
   `)
 
   const intl = useIntl()
-  const teamLink = intl.locale === "cs" ? "/cs/pribeh/#team" : "/en/story/#team"
 
   return (
-    <div className="content-block content-block--sitenavwide content-block--shift-mobile">
+    <div className="contact-page content-block">
       <section {...props}>
+        <h1 className="sitenav__anchorpush contact__headline">
+          <span className="sitenav__anchor" id="contact"></span>
+          <FormattedMessage
+            id="contact-block.title"
+            defaultMessage="Contact form"
+          />
+        </h1>
         <div className="contact">
-          <div className="contact__form contact-box">
-            <h1 className="sitenav__anchorpush">
-              <span className="sitenav__anchor" id="contact"></span>
-              <FormattedMessage
-                id="contact-block.title"
-                defaultMessage="Contact form"
-              />
-            </h1>
-            <div className="">
+          <div className="contact__column">
+            <div className="contact__form">
               <div className="form__field">
-                <label className="form-label" htmlFor="variant">
-                  E-mail
-                </label>
-                <input className="form-control form-control--small form-control--bordered" type="text"/>
+                <input className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formName)} type="text"/>
               </div>
               <div className="form__field">
-                <label className="form-label" htmlFor="variant">
-                  Message
-                </label>
-                <textarea className="form-control form-control--small form-control--bordered" type="text"/>
+                <input className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formEmail)} type="text"/>
               </div>
               <div className="form__field">
-                <button className="button button--primary">Send</button>
+                <textarea className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formMessage)} type="text"/>
+              </div>
+              <div className="form__field">
+                <button className="button button--red">
+                  <FormattedMessage
+                    id="contact-block.send_button"
+                    defaultMessage="Send"
+                  />
+                </button>
               </div>
             </div>
           </div>
-          <div className="contact__team contact-box">
-            <h1>
-              <FormattedMessage
-                id="contact-block.karmen_team"
-                defaultMessage="Karmen team"
-              />
-            </h1>
-            <p>
-              <Link className="anchor anchor--default" to={teamLink}>
+          <div className="contact__column contact-box-wrap">
+            <div className="contact-box">
+              <h2>
                 <FormattedMessage
-                  id="contact-block.karmen_team_link"
-                  defaultMessage="See the team"
+                  id="contact-block.contact_us"
+                  defaultMessage="Nebo nás kontaktujte přímo"
                 />
-              </Link>
-            </p>
-          </div>
-          <div className="contact__contact contact-box">
-            <h1>
-              <FormattedMessage
-                id="contact-block.contact_us"
-                defaultMessage="Contact us"
-              />
-            </h1>
-            <ul className="list list--unstyled">
-              <li>
-                <a
-                  className="anchor anchor--default"
-                  href={`mailto:${data.site.siteMetadata.company.contactEmail}`}
-                >
-                  {data.site.siteMetadata.company.contactEmail}
-                </a>
-              </li>
-              <li>
-                <a
-                  className="anchor anchor--default"
-                  href={`tel:${data.site.siteMetadata.company.phone}`}
-                >
-                  {data.site.siteMetadata.company.phone}
-                </a>
-              </li>
-            </ul>
+              </h2>
+              <ul className="list list--unstyled list--adress">
+                <li>
+                  <a
+                    className="anchor anchor--emphasized"
+                    href={`mailto:${data.site.siteMetadata.company.contactEmail}`}
+                  >
+                    {data.site.siteMetadata.company.contactEmail}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="anchor anchor--emphasized"
+                    href={`tel:${data.site.siteMetadata.company.phone}`}
+                  >
+                    {data.site.siteMetadata.company.phone}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="contact-box">
+              <h2>
+                <FormattedMessage
+                  id="contact-block.karmen_adress_headline"
+                  defaultMessage="Adresa společnosti"
+                />
+              </h2>
+              <ul className="list list--unstyled list--adress">
+                <li>Fragaria s.r.o.</li>
+                <li>Ječná 507/6</li>
+                <li>120 00 Praha 2</li>
+                <li>
+                  <FormattedMessage
+                    id="contact-block.karmen_adress_cz"
+                    defaultMessage="Česká republika"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div className="contact-box">
+              <h2>
+                <FormattedMessage
+                  id="contact-block.karmen_watch_us"
+                  defaultMessage="Sledujte nás"
+                />
+              </h2>
+              <Social class="social--red"/>
+            </div>
           </div>
         </div>
       </section>

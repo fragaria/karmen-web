@@ -131,7 +131,7 @@ module.exports = {
         },
         {
           name: "Contact",
-          url: `/en/#contact`,
+          url: `/en/contact/`,
         },
         {
           name: "Community",
@@ -165,7 +165,7 @@ module.exports = {
         },
         {
           name: "Kontakt",
-          url: `/cs/#contact`,
+          url: `/cs/kontakt/`,
         },
         {
           name: "Blog",
