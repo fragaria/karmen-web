@@ -1,0 +1,33 @@
+.social {
+  line-height: gu(2);
+  font-size: gu(1);
+  margin-bottom: gu(2);
+
+  @include breakpoint(mobile up) {
+    font-size: gu(0.75);
+    margin-bottom: 0;
+  }
+}
+
+.social__icon {
+  transition: #{$anchor-hover-transition};
+
+  &:hover {
+    color: $anchor-hover-color;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.social__icon + .social__icon {
+  margin-left: 0.8em;
+}
+
+.social--red .social__icon {
+  color: $anchor-hover-color;
+  &:hover {
+    color: black;
+  }
+}
