@@ -11,7 +11,6 @@ import MeetKarmenBlock from "components/page-blocks/meet-karmen"
 import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
 import SolutionBlock from "components/page-blocks/solution"
-import ContactBlock from "components/page-blocks/contact"
 import StoryBlock from "components/page-blocks/story"
 
 const IndexPage = ({ data, location }) => {
@@ -31,7 +30,6 @@ const IndexPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <ContactBlock className="v-home-contact v-home-section" />
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )
