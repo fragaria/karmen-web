@@ -148,8 +148,8 @@ module.exports = {
       ],
       cs: [
         {
-          name: "Jak na to",
-          url: `/cs/#principle`,
+          name: "Produkty",
+          url: `/cs/produkty`,
         },
         {
           name: "Cena",

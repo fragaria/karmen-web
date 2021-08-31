@@ -1,0 +1,103 @@
+.products-list {
+  display: flex;
+  margin: 0 gu(-2);
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: gu(2);
+  @include breakpoint(tablet-small up) {
+    flex-flow: row;
+    align-items: flex-start;
+  }
+  @include breakpoint(tablet up) {
+
+  }
+}
+
+.products-list__box {
+  //padding: gu(2);
+  margin-left: gu(2);
+  margin-right: gu(2);
+  width: 100%;
+  max-width: gu(13);
+  text-align: center;
+  position: relative;
+  margin-bottom: gu(1);
+  @include breakpoint(tablet-tiny up) {
+    max-width: gu(14);
+  }
+  @include breakpoint(tablet-small up) {
+    margin-bottom: gu(3);
+  }
+  @include breakpoint(desktop up) {
+    max-width: initial;
+  }
+  .products-list__info {
+    flex-shrink: 0;
+    flex-basis: 60%;
+    padding-top: gu(.5);
+  }
+
+  .products-list__title {
+    text-align: center;
+
+    @include breakpoint(tablet-small up) {
+      padding-left: 0;
+    }
+
+    @include baseline(s6, $headingtype, 1, $above: 1, $below: 1, $breakpoint: mobile down);
+    @include baseline(s6, $headingtype, 1, $below: 1);
+    @include baseline(s6, $headingtype, 2, $above: 0, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  .products-list__img {
+    width: 100%;
+    max-width: gu(18);
+    height: gu(6);
+    margin: 0 auto;
+    @include breakpoint(tablet-tiny up) {
+      height: gu(9);
+      max-width: 100%;
+    }
+    @include breakpoint(tablet-small up) {
+      height: gu(4.5);
+      margin: 0 auto;
+    }
+    @include breakpoint(tablet up) {
+      height: gu(6);
+    }
+    @include breakpoint(desktop up) {
+      height: gu(7);
+    }
+  }
+  .products-list__desc {
+    @include baseline(s4, $bodytype, 1.2, $below: 0, $above: 0);
+    padding-top: 0 !important;
+  }
+}
+
+.products-list__buy {
+  margin-top: gu(2);
+  text-align: center;
+}
+.products-list__buybutton.button {
+  position: relative;
+  height: gu(2.25);
+  line-height: gu(2.25);
+}
+
+.products-list__price-vat {
+  margin-top: gu(1);
+  color: map-get($palette, red);
+  white-space: nowrap;
+  padding-top: 0 !important;
+  @include baseline(s6, $headingtype, 1, $below: 0, $above: 0);
+}
+
+.products-list__price {
+  white-space: nowrap;
+  @include baseline(s4, $headingtype, 1, $below: 0, $above: 0);
+  &--novat {
+    margin-top: gu(1);
+  }
+}

@@ -101,6 +101,11 @@ a.button {
   }
 }
 
+.button.button--full {
+  width: 100%;
+  text-align: center;
+}
+
 .button--shifted {
   transform: translateY(gu(-1.5));
 }
