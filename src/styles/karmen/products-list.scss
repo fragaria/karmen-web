@@ -15,7 +15,6 @@
 }
 
 .products-list__box {
-  //padding: gu(2);
   margin-left: gu(2);
   margin-right: gu(2);
   width: 100%;
@@ -64,10 +63,7 @@
       margin: 0 auto;
     }
     @include breakpoint(tablet up) {
-      height: gu(6);
-    }
-    @include breakpoint(desktop up) {
-      height: gu(7);
+      height: 190px;
     }
   }
   .products-list__desc {

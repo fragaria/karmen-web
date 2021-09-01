@@ -19,13 +19,13 @@ const ProductsList = ({ location, ...props }) => {
   const registerLink = "https://cloud.karmen.tech/register"
   const data = useStaticQuery(graphql`
     query {
-      pillTablet: file(relativePath: { eq: "karmen-pill-tablet.jpg" }) {
+      pillTablet: file(relativePath: { eq: "product-pill.png" }) {
         ...fluidImage1024
       }
-      cloudMobile: file(relativePath: { eq: "karmen-cloud-tablet-mobile.jpg" }) {
+      cloudMobile: file(relativePath: { eq: "product-cloud.png" }) {
         ...fluidImage1024
       }
-      diy: file(relativePath: { eq: "karmen-diy.jpg" }) {
+      diy: file(relativePath: { eq: "product-diy.png" }) {
         ...fluidImage1024
       }
       
