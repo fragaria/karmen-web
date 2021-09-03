@@ -118,8 +118,8 @@ module.exports = {
           url: `/en/#principle`,
         },
         {
-          name: "Pricing",
-          url: `/en/#buy`,
+          name: "Products",
+          url: `/en/products/`,
         },
         {
           name: "Karmen story",

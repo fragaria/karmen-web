@@ -8,8 +8,8 @@ const Products = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-products">
       <SEOMetadata
-        lang="cs"
-        title="Produkty"
+        lang="en"
+        title="Products"
         pathname={location.pathname}
       />
       <ProductsBlock location={location} />

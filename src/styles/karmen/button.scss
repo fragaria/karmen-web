@@ -104,6 +104,11 @@ a.button {
 .button.button--full {
   width: 100%;
   text-align: center;
+  padding-left: gu(4);
+  padding-right: gu(4);
+  @include breakpoint(tablet up) {
+    width: auto;
+  }
 }
 
 .button--shifted {

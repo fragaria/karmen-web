@@ -14,9 +14,10 @@ const messages = defineMessages({
 
 const ProductsList = ({ location, ...props }) => {
   const intl = useIntl()
-  const buyLinkFull = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
-  const buyLinkMyself = intl.locale === "cs" ? "/cs/koupit/" : "/en/buy/"
-  const registerLink = "https://cloud.karmen.tech/register"
+  const cloudLink = intl.locale === "cs" ? "/cs/produkty/" : "/en/products/"
+  const pillLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill/" : "/en/products/karmen-pill/"
+  const diyLink = intl.locale === "cs" ? "/cs/produkty/" : "/en/products/"
+  // const registerLink = "https://cloud.karmen.tech/register"
   const data = useStaticQuery(graphql`
     query {
       pillTablet: file(relativePath: { eq: "product-pill.png" }) {
@@ -61,7 +62,7 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={buyLinkMyself} className="products-list__buybutton button--full button button--red">
+              <Link to={cloudLink} className="products-list__buybutton button--full button button--red">
                 <FormattedMessage
                   id="pricing-block.cta__myself"
                   defaultMessage="Chci cloud"
@@ -109,7 +110,7 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={buyLinkFull} className="products-list__buybutton button button--full button--red">
+              <Link to={pillLink} className="products-list__buybutton button button--full button--red">
                 <FormattedMessage
                   id="pricing-block.cta__full"
                   defaultMessage="Chci hotové řešení"
@@ -156,7 +157,7 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={registerLink} className="products-list__buybutton button--full button button--red">
+              <Link to={diyLink} className="products-list__buybutton button--full button button--red">
                 <FormattedMessage
                   id="pricing-block.cta_register"
                   defaultMessage="Chci skládačku"
