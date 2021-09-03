@@ -38,8 +38,7 @@ const ContactBlock = props => {
   return (
     <div className="contact-page content-block">
       <section {...props}>
-        <h1 className="sitenav__anchorpush contact__headline">
-          <span className="sitenav__anchor" id="contact"></span>
+        <h1 className="contact__headline">
           <FormattedMessage
             id="contact-block.title"
             defaultMessage="Contact form"
