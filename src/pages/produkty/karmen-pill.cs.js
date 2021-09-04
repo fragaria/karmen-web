@@ -27,22 +27,31 @@ import logoTrebesin from "assets/img/logo-prumyslovka-trebesin.png"
 
 const GalleryCarousel = ({data}) => {
   const CustomButtonGroupAsArrows = ({ next, previous, ...rest }) => {
-    const { carouselState: {
-      currentSlide,
-      totalItems,
-      slidesToShow
-    } } = rest;
-    return (
-      <div className="carousel-arrows">
-        <button className={`carousel__arrow carousel__arrow--left${currentSlide === 0 ? ' disabled' : ''}`} onClick={previous}></button>
-        <button className={`carousel__arrow carousel__arrow--right${currentSlide === (totalItems - slidesToShow) ? ' disabled' : ''}`} onClick={next}></button>
-      </div>
-    );
+    const {
+      carouselState: {
+        currentSlide,
+        totalItems,
+        slidesToShow
+      }
+    } = rest;
+    const isArrowsDisabled = totalItems <= slidesToShow;
+    if(!isArrowsDisabled) {
+      return (
+        <div className="carousel-arrows">
+          <button className={`carousel__arrow carousel__arrow--left${currentSlide === 0 ? ' disabled' : ''}`} onClick={previous}></button>
+          <button className={`carousel__arrow carousel__arrow--right${currentSlide === (totalItems - slidesToShow) ? ' disabled' : ''}`} onClick={next}></button>
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
   };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 5000, min: 1024 },
+      breakpoint: { max: 8000, min: 1024 },
       items: 4,
       slidesToSlide: 4
     },
@@ -72,6 +81,7 @@ const GalleryCarousel = ({data}) => {
         customButtonGroup={<CustomButtonGroupAsArrows />}
         renderButtonGroupOutside={true}
         containerClass="product-detail__gallery"
+        renderArrowsWhenDisabled={true}
       >
         <BackgroundImage
           file={data.gallery1}
@@ -108,7 +118,7 @@ const PackageCarousel = ({data}) => {
       // the naming can be any, depends on you.
       breakpoint: { max: 5000, min: 1024 },
       items: 4,
-      slidesToSlide: 4
+      slidesToSlide: 4,
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
@@ -135,6 +145,7 @@ const PackageCarousel = ({data}) => {
         arrows={false}
         showDots={true}
         dotListClass="carousel__dots"
+        containerClass="carousel__pckg"
       >
        <div className="package-content__item">
          <div className="pckg-item__text">
