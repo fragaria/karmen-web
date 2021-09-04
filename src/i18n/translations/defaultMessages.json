@@ -2347,6 +2347,115 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Karmen Pill skládačka",
+        "end": {
+          "column": 14,
+          "line": 38
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.title",
+        "start": {
+          "column": 12,
+          "line": 35
+        }
+      },
+      {
+        "defaultMessage": "Baví Vás DO IT YOURSELF projekty, kupovali jste si ábíčko a skládali modely, rádi kutíte a troufnete si postavit vlastní zařízení? Složte si Karmen Pill sami podle návodu. Nakupte komponenty (raspberry, kameru, SD kartu, kabely) připájejte vše dohromady, vytiskněte si vlastní Pill z dodaných STL, nahrajte software, slepte krabičku dohromady, zapojte, připojte na wifi, na tiskárnu a sledujte tisk na kameře.",
+        "end": {
+          "column": 14,
+          "line": 44
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.desc",
+        "start": {
+          "column": 12,
+          "line": 41
+        }
+      },
+      {
+        "defaultMessage": "Zdarma",
+        "end": {
+          "column": 14,
+          "line": 50
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.price",
+        "start": {
+          "column": 12,
+          "line": 47
+        }
+      },
+      {
+        "defaultMessage": "Zdarma pro všechny",
+        "end": {
+          "column": 14,
+          "line": 56
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.price-vat",
+        "start": {
+          "column": 12,
+          "line": 53
+        }
+      },
+      {
+        "defaultMessage": "Zakoupit",
+        "end": {
+          "column": 14,
+          "line": 62
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.buy_button",
+        "start": {
+          "column": 12,
+          "line": 59
+        }
+      },
+      {
+        "defaultMessage": "Jak na to?",
+        "end": {
+          "column": 18,
+          "line": 75
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-diy.title_howto",
+        "start": {
+          "column": 16,
+          "line": 72
+        }
+      },
+      {
+        "defaultMessage": "Kompatibilita s nejrozširenejšími slicery",
+        "end": {
+          "column": 18,
+          "line": 83
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-pill.compatibility_title",
+        "start": {
+          "column": 16,
+          "line": 80
+        }
+      },
+      {
+        "defaultMessage": "Karmen Pill je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura.",
+        "end": {
+          "column": 20,
+          "line": 90
+        },
+        "file": "src/components/product-detail/karmen-diy.js",
+        "id": "product-detail-pill.compatibility_text",
+        "start": {
+          "column": 18,
+          "line": 87
+        }
+      }
+    ],
+    "path": "src/components/product-detail/karmen-diy.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Kabel k připojení s tiskárnou",
         "end": {
           "column": 14,

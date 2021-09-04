@@ -53,6 +53,14 @@
   }
 }
 
+.product-detail__img--diy,
+.product-detail__img--diy:before,
+.product-detail__img--diy:after {
+  @include breakpoint(tablet-tiny up) {
+    background-size: 473px;
+  }
+}
+
 .product-detail__img {
   height: 266px;
   margin: gu() gu() 0;

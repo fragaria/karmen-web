@@ -16,7 +16,7 @@ const ProductsList = ({ location, ...props }) => {
   const intl = useIntl()
   const cloudLink = intl.locale === "cs" ? "/cs/produkty/karmen-cloud" : "/en/products/karmen-cloud"
   const pillLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill/" : "/en/products/karmen-pill/"
-  const diyLink = intl.locale === "cs" ? "/cs/produkty/" : "/en/products/"
+  const diyLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill-skladacka" : "/en/products/karmen-pill-diy"
   // const registerLink = "https://cloud.karmen.tech/register"
   const data = useStaticQuery(graphql`
     query {
