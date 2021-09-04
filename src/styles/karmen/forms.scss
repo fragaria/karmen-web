@@ -55,6 +55,9 @@ $field-height: gu(3);
   &--bordered {
     border: 1px map-get($palette, gray-medium) solid;
   }
+  &--grey {
+    background-color: map-get($palette, gray-medium);
+  }
 }
 
 .form-control--small {

@@ -1,100 +1,13 @@
 .pricing {
-  display: flex;
   position: relative;
-  flex-direction: column;
-  min-height: gu(10);
-
-  @include breakpoint(tablet-small up) {
-    padding-top: gu(2);
-    // flex-direction: row;
-  }
 }
-
-.pricing__box {
-  width: 100%;
-  // background: map-get($palette, white);
-  text-align: left;
-  position: relative;
-  margin-bottom: gu(3);
-
-  @include breakpoint(tablet-small up) {
-    display: flex;
-    align-items: center;
-  }
-
-  .pricing__info {
-    flex-shrink: 0;
-    flex-basis: 60%;
-    padding-top: gu();
-
-    @include breakpoint(tablet-small up) {
-      padding-top: 0;
-      padding-left: gu(3);
-    }
-    @include breakpoint(desktop up) {
-      padding-left: gu(5);
-      flex-basis: 45%;
-    }
-  }
-
-  .pricing__title {
-    text-align: center;
-
-    @include breakpoint(tablet-small up) {
-      text-align: left;
-    }
-
-    @include breakpoint(tablet-small up) {
-      padding-left: 0;
-    }
-
-    @include baseline(s7, $headingtype, 1, $above: 1, $below: 1, $breakpoint: mobile down);
-    @include baseline(s7, $headingtype, 1, $below: 1);
-    @include baseline(s7, $headingtype, 2, $above: 0, $below: 1, $breakpoint: tablet-small up);
-  }
-
-  .pricing__img {
-    width: 100%;
-    max-width: 560px;
-
-    @include breakpoint(mobile up) {
-    }
-
-    @include breakpoint(tablet up) {
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-  .pricing__desc {
-    @include baseline(s4, $bodytype, 1, $below: 0, $above: 0);
-  }
-}
-.pricing__buy {
-  display: flex;
-  margin-top: gu(2);
-  align-items: center;
-}
-.pricing__buy-left {
-  margin-right: gu();
-}
-.pricing__buybutton.button {
-  position: relative;
-  height: gu(2.25);
-  line-height: gu(2.25);
-}
-
-.pricing__price-vat {
-  color: map-get($palette, red);
-  white-space: nowrap;
-  padding-top: 0 !important;
-  @include baseline(s6, $headingtype, 1, $below: 0, $above: 0);
-}
-
-.pricing__price {
-  white-space: nowrap;
-  @include baseline(s4, $headingtype, 1, $below: 0, $above: 0);
+.pricing-circle {
+  width: 1570px;
+  height: 1570px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left: -528px;
+  z-index: -1;
 }

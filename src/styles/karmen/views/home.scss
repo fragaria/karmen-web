@@ -28,7 +28,7 @@ $narrow-parts-width: gu(45);
 }
 
 .v-home-story {
-  padding-top: 0;
+  margin-bottom: gu(4);
 }
 
 .v-home-section .page-block-headline {
@@ -60,8 +60,6 @@ $narrow-parts-width: gu(45);
 }
 
 .v-home-pricing {
-  max-width: $narrow-parts-width;
-  margin: auto;
   text-align: center;
 }
 

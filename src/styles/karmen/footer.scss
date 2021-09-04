@@ -86,33 +86,6 @@
   font-weight: bold;
 }
 
-.footer__social {
-  line-height: gu(2);
-  font-size: gu(1);
-  margin-bottom: gu(2);
-
-  @include breakpoint(mobile up) {
-    font-size: gu(0.75);
-    margin-bottom: 0;
-  }
-}
-
-.footer__social-icon {
-  transition: #{$anchor-hover-transition};
-
-  &:hover {
-    color: $anchor-hover-color;
-  }
-
-  span {
-    display: none;
-  }
-}
-
-.footer__social-icon + .footer__social-icon {
-  margin-left: 0.8em;
-}
-
 .footer__bottom {
   display: flex;
   flex-direction: column-reverse;

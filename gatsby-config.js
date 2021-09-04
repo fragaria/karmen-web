@@ -118,8 +118,8 @@ module.exports = {
           url: `/en/#principle`,
         },
         {
-          name: "Pricing",
-          url: `/en/#buy`,
+          name: "Products",
+          url: `/en/products/`,
         },
         {
           name: "Karmen story",
@@ -131,7 +131,7 @@ module.exports = {
         },
         {
           name: "Contact",
-          url: `/en/#contact`,
+          url: `/en/contact/`,
         },
         {
           name: "Community",
@@ -148,8 +148,8 @@ module.exports = {
       ],
       cs: [
         {
-          name: "Jak na to",
-          url: `/cs/#principle`,
+          name: "Produkty",
+          url: `/cs/produkty`,
         },
         {
           name: "Cena",
@@ -165,7 +165,7 @@ module.exports = {
         },
         {
           name: "Kontakt",
-          url: `/cs/#contact`,
+          url: `/cs/kontakt/`,
         },
         {
           name: "Blog",

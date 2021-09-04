@@ -14,7 +14,7 @@
 
 .principle-title {
   text-align: center;
-  @include baseline(s9, $headingtype, 2, $above: 8, $below: 1);
+  @include baseline(s9, $headingtype, 2, $above: 0, $below: 1);
 }
 .principle-sub {
   text-align: center;

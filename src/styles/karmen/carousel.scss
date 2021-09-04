@@ -1,0 +1,73 @@
+.carousel-wrapper {
+  display: flex;
+  flex-flow: column;
+  .react-multi-carousel-list {
+    order: 2;
+  }
+}
+.carousel-arrows {
+  order: 1;
+  display: flex;
+  margin-top: gu(.25);
+  margin-bottom: gu(1.15);
+  align-items: center;
+  justify-content: center;
+}
+.carousel__arrow {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: map-get($palette, red);
+  border: 1px solid map-get($palette, red);
+  -webkit-tap-highlight-color: transparent;
+  + .carousel__arrow {
+    margin-left: gu(.5);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #d01f25;
+  }
+  &.disabled {
+    cursor: initial;
+    background-color: map-get($palette, white);
+    border-color: #6F6F6F;
+    &:after {
+      border-color: #6F6F6F;
+    }
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+}
+.carousel__arrow--left {
+  &:after {
+    transform: rotate(45deg);
+    margin-right: -6px;
+  }
+}
+.carousel__arrow--right {
+  &:after {
+    transform: rotate(-135deg);
+    margin-left: -4px;
+  }
+}
+
+.carousel__dots.react-multi-carousel-dot-list {
+  justify-content: center;
+  button {
+    border: 0;
+    border-radius: 0;
+    background: map-get($palette, gray-dark);
+    margin: 0 gu(.25);
+  }
+  .react-multi-carousel-dot--active button {
+    background: map-get($palette, red);
+  }
+}

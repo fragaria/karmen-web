@@ -101,6 +101,16 @@ a.button {
   }
 }
 
+.button.button--full {
+  width: 100%;
+  text-align: center;
+  @include breakpoint(tablet up) {
+    width: auto;
+    padding-left: gu(3);
+    padding-right: gu(3);
+  }
+}
+
 .button--shifted {
   transform: translateY(gu(-1.5));
 }
