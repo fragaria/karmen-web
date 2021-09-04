@@ -33,10 +33,26 @@
   background-size: contain;
   background-position: left center;
   @include breakpoint(tablet-tiny up) {
-    background-size: 509px;
     background-position: right center;
   }
 }
+
+.product-detail__img--pill,
+.product-detail__img--pill:before,
+.product-detail__img--pill:after {
+  @include breakpoint(tablet-tiny up) {
+    background-size: 509px;
+  }
+}
+
+.product-detail__img--cloud,
+.product-detail__img--cloud:before,
+.product-detail__img--cloud:after {
+  @include breakpoint(tablet-tiny up) {
+    background-size: 561px;
+  }
+}
+
 .product-detail__img {
   height: 266px;
   margin: gu() gu() 0;

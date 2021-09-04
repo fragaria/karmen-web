@@ -4,7 +4,7 @@ import Layout from "layouts/cs"
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
-import ProductBlockKarmenPill from "components/product-detail/karmen-pill.js"
+import ProductBlockKarmenCloud from "components/product-detail/karmen-cloud.js"
 
 const KarmenPill = ({ location }) => {
   return (
@@ -12,11 +12,11 @@ const KarmenPill = ({ location }) => {
       <SEOMetadata
         lang="cs"
         title="Karmen Pill"
-        description="Detail produktu Karmen Pill"
-        pathname="/cs/produkty/karmen-pill/"
+        description="Detail produktu Karmen Cloud"
+        pathname="/cs/produkty/karmen-cloud/"
       />
       <SEOBusinessInfo />
-      <ProductBlockKarmenPill/>
+      <ProductBlockKarmenCloud/>
     </Layout>
   )
 }

@@ -1,10 +1,11 @@
 import React from "react"
 
-import Layout from "layouts/cs"
+import Layout from "layouts/en"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
+import ProductBlockKarmenPill from "components/product-detail/karmen-pill.js"
 
 const KarmenPill = ({ location }) => {
   return (
@@ -16,7 +17,7 @@ const KarmenPill = ({ location }) => {
         pathname="/en/products/karmen-pill/"
       />
       <SEOBusinessInfo />
-      <h1>Karmen Pill EN</h1>
+      <ProductBlockKarmenPill/>
     </Layout>
   )
 }

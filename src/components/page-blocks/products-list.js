@@ -14,7 +14,7 @@ const messages = defineMessages({
 
 const ProductsList = ({ location, ...props }) => {
   const intl = useIntl()
-  const cloudLink = intl.locale === "cs" ? "/cs/produkty/" : "/en/products/"
+  const cloudLink = intl.locale === "cs" ? "/cs/produkty/karmen-cloud" : "/en/products/karmen-cloud"
   const pillLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill/" : "/en/products/karmen-pill/"
   const diyLink = intl.locale === "cs" ? "/cs/produkty/" : "/en/products/"
   // const registerLink = "https://cloud.karmen.tech/register"

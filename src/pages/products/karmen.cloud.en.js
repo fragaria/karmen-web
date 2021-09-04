@@ -1,22 +1,22 @@
 import React from "react"
-import Layout from "layouts/cs"
+import Layout from "layouts/en"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
-import ProductBlockKarmenPill from "components/product-detail/karmen-pill.js"
+import ProductBlockKarmenCloud from "components/product-detail/karmen-cloud.js"
 
 const KarmenPill = ({ location }) => {
   return (
     <Layout location={location} containerClass="v-product-detail">
       <SEOMetadata
-        lang="cs"
+        lang="en"
         title="Karmen Pill"
-        description="Detail produktu Karmen Pill"
-        pathname="/cs/produkty/karmen-pill/"
+        description="Details about Karmen Cloud"
+        pathname="/en/products/karmen-cloud/"
       />
       <SEOBusinessInfo />
-      <ProductBlockKarmenPill/>
+      <ProductBlockKarmenCloud/>
     </Layout>
   )
 }
