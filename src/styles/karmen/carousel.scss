@@ -12,6 +12,17 @@
   margin-bottom: gu(1.15);
   align-items: center;
   justify-content: center;
+  &.carousel-arrows--right-to-headline {
+
+    @include breakpoint(tablet-tiny up) {
+      position: absolute;
+      top: gu(0.4);
+      right: 0;
+    }
+    @include breakpoint(tablet-small up) {
+      top: gu(1.25);
+    }
+  }
 }
 .carousel__arrow {
   cursor: pointer;

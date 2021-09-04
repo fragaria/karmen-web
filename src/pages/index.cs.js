@@ -12,6 +12,7 @@ import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
 import SolutionBlock from "components/page-blocks/solution"
 import StoryBlock from "components/page-blocks/story"
+import TestimonialsBlock from "components/page-blocks/testimonials"
 
 const IndexPage = ({ data, location }) => {
   return (
@@ -30,6 +31,7 @@ const IndexPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
+      <TestimonialsBlock/>
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )
