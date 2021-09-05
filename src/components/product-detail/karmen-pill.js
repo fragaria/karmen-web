@@ -1,13 +1,14 @@
-import  React from "react"
-
-import { Link, useStaticQuery, graphql } from "gatsby"
-
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import { BackgroundImage } from "components/image"
-
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import { BackgroundImage } from "components/image"
+import CheckoutBooth from "components/checkout/booth"
+
+import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
+import KarmenPillPackageCarousel from "components/product-detail/karmen-pill-package"
 
 import czFlag from "assets/img/cz-flag.png"
 import iconPackage from "assets/img/icon-package.png"
@@ -21,305 +22,83 @@ import logoCvut from "assets/img/logo-cvut.png"
 import logoIkem from "assets/img/logo-ikem.png"
 import logoTrebesin from "assets/img/logo-prumyslovka-trebesin.png"
 
-const GalleryCarousel = ({data}) => {
-  const CustomButtonGroupAsArrows = ({ next, previous, ...rest }) => {
-    const {
-      carouselState: {
-        currentSlide,
-        totalItems,
-        slidesToShow
-      }
-    } = rest;
-    const isArrowsDisabled = totalItems <= slidesToShow;
-    if(!isArrowsDisabled) {
-      return (
-        <div className="carousel-arrows">
-          <button className={`carousel__arrow carousel__arrow--left${currentSlide === 0 ? ' disabled' : ''}`} onClick={previous}></button>
-          <button className={`carousel__arrow carousel__arrow--right${currentSlide === (totalItems - slidesToShow) ? ' disabled' : ''}`} onClick={next}></button>
-        </div>
-      )
-    } else {
-      return (
-        <div></div>
-      )
-    }
-  };
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 8000, min: 1024 },
-      items: 4,
-      slidesToSlide: 4
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
-      slidesToSlide: 3
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 464 },
-      items: 2,
-      slidesToSlide: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 40
-    }
-  };
-  return (
-    <div className="carousel-wrapper">
-      <Carousel
-        responsive={responsive}
-        centerMode={false}
-        partialVisible={true}
-        arrows={false}
-        customButtonGroup={<CustomButtonGroupAsArrows />}
-        renderButtonGroupOutside={true}
-        containerClass="product-detail__gallery"
-        renderArrowsWhenDisabled={true}
-      >
-        <BackgroundImage
-          file={data.gallery1}
-          style={{
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-          }}
-          className="gallery__item"
-        />
-        <BackgroundImage
-          file={data.gallery2}
-          style={{
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-          }}
-          className="gallery__item"
-        />
-        <BackgroundImage
-          file={data.gallery3}
-          style={{
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
-          }}
-          className="gallery__item"
-        />
-      </Carousel>
-    </div>
-  )
-}
-
-const PackageCarousel = ({data}) => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 5000, min: 1024 },
-      items: 4,
-      slidesToSlide: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
-      slidesToSlide: 3
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 464 },
-      items: 2,
-      slidesToSlide: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 0
-    }
-  };
-  return (
-    <div className="carousel-wrapper">
-      <Carousel
-        responsive={responsive}
-        centerMode={false}
-        partialVisible={false}
-        arrows={false}
-        showDots={true}
-        dotListClass="carousel__dots"
-        containerClass="carousel__pckg"
-      >
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.print_cable"
-              defaultMessage="Kabel k připojení s tiskárnou"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgCablePrint}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.print_cable_pill"
-              defaultMessage="Kabel k propojení Pill s tiskárnou"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgCablePrintPill}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.focus_ring"
-              defaultMessage="Zaostřovací kolečko kamery"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgFocusRing}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.cable_pill_pc"
-              defaultMessage="Kabel k ůvodnímu nastavení Pill s PC"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgCablePillPc}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.usb_cable"
-              defaultMessage="Prodlužovací USB kabel"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgCableUsb}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.karmen_pill"
-              defaultMessage="Karmen Pill"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgKarmenPill}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.power_suply"
-              defaultMessage="Napájecí 5V adaptér"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgPowerSupply}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-        <div className="package-content__item">
-          <div className="pckg-item__text">
-            <FormattedMessage
-              id="product-detail-package.karmen_pill_case"
-              defaultMessage="Obal pro Karmen Pill"
-            />
-          </div>
-          <BackgroundImage
-            file={data.pckgKarmenPillCase}
-            style={{
-              backgroundPosition: "center center",
-              backgroundSize: "contain",
-            }}
-            className="pckg-item__img"
-          />
-        </div>
-      </Carousel>
-    </div>
-  )
-}
-
-const ProductBlockKarmenPill = ({ props, location }) => {
-  const pillBuy = 'test';
+const ProductBlockKarmenPill = ({ props }) => {
   const data = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          checkout {
+            enabled
+          }
+          company {
+            contactEmail
+          }
+        }
+      }
       pillFull: file(relativePath: { eq: "product-full-pill.png" }) {
         ...fluidImage1024_traced
-      },
-      gallery1: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality1.jpg" }) {
-        ...fluidImage1024
-      },
-      gallery2: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality2.jpg" }) {
-        ...fluidImage1024
-      },
-      gallery3: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality3.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgCablePrint: file(relativePath: { eq: "karmen-pill/pckg-content/cable-print.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgCablePrintPill: file(relativePath: { eq: "karmen-pill/pckg-content/cable-print-pill.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgFocusRing: file(relativePath: { eq: "karmen-pill/pckg-content/focus-ring.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgCablePillPc: file(relativePath: { eq: "karmen-pill/pckg-content/cable-pill-pc.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgKarmenPill: file(relativePath: { eq: "karmen-pill/pckg-content/karmen-pill.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgKarmenPillCase: file(relativePath: { eq: "karmen-pill/pckg-content/karmen-pill-case.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgPowerSupply: file(relativePath: { eq: "karmen-pill/pckg-content/power-supply.jpg" }) {
-        ...fluidImage1024
-      },
-      pckgCableUsb: file(relativePath: { eq: "karmen-pill/pckg-content/cable-usb.jpg" }) {
-        ...fluidImage1024
       }
     }
   `)
+  const checkoutEnabled = data.site.siteMetadata.checkout.enabled
+  const [active, setActive] = useState(false);
+  const toggleSidebar = evt => {
+    evt.preventDefault();
+    if (active) {
+      document.documentElement.classList.remove('overflow-sidebar-opened');
+    } else {
+      document.documentElement.classList.add('overflow-sidebar-opened');
+    }
+    setActive(!active);
+  }
   return (
-    <div>
+    <section>
+      <section className={`offcanvas-sidebar ${ active === true ? 'active' : ''}`}>
+        <button className="sidebar__button sidebar__button--big button button--red" onClick={toggleSidebar}>
+          <FormattedMessage
+            id="product-detail-pill.back"
+            defaultMessage="Zpět"
+          />
+        </button>
+        <div className="offcanvas-sidebar__inner">
+          <div className="sidebar__header">
+            <button className="sidebar__button button button--red" onClick={toggleSidebar}>
+              <FormattedMessage
+                id="product-detail-pill.back"
+                defaultMessage="Zpět"
+              />
+            </button>
+            <h1 className="sidebar__headline">
+              <FormattedMessage
+                id="buy-block.headline"
+                defaultMessage="Buy Karmen"
+              />
+            </h1>
+          </div>
+          {!checkoutEnabled && (
+            <div className="buy__disabled-warning typeset">
+              <p className="s5">
+                <FormattedMessage
+                  id="buy-block.disabled_temporarily"
+                  defaultMessage="Due to unexpectedly large number of orders, we had to <strong>temporarily disable our online store</strong> to be able fulfill the orders within a reasonable time. Please <contactLink>drop us an email</contactLink> in case you're interested in buying Karmen and we'll let you know once the store is back online."
+                  values={{
+                    strong: (...chunks) => <strong>{chunks}</strong>,
+                    contactLink: (...chunks) => (
+                      <a
+                        href={`mailto:${data.site.siteMetadata.company.contactEmail}`}
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  }}
+                />
+              </p>
+            </div>
+          )}
+          {checkoutEnabled && <CheckoutBooth />}
+        </div>
+      </section>
+      <div className={`offcanvas-overlay ${ active === true ? 'active' : ''}`}></div>
       <div className="product-detail__hero">
         <BackgroundImage
           file={data.pillFull}
@@ -363,12 +142,18 @@ const ProductBlockKarmenPill = ({ props, location }) => {
               defaultMessage="3500 Kč bez DPH"
             />
           </div>
-          <Link to={pillBuy} className="product-detail__buy-button button button--full button--red">
+          {/*<Link to={pillBuy} className="product-detail__buy-button button button--full button--red">*/}
+          {/*  <FormattedMessage*/}
+          {/*    id="product-detail-pill.buy_button"*/}
+          {/*    defaultMessage="Zakoupit"*/}
+          {/*  />*/}
+          {/*</Link>*/}
+          <button className="product-detail__buy-button button button-full button--red" onClick={toggleSidebar}>
             <FormattedMessage
               id="product-detail-pill.buy_button"
               defaultMessage="Zakoupit"
             />
-          </Link>
+          </button>
           <ul className="product-detail__delivery list--unstyled">
             <li>
               <img src={iconPackage} className="list-icon" alt="Odeslání do dvou dnů"/>
@@ -400,9 +185,8 @@ const ProductBlockKarmenPill = ({ props, location }) => {
               </h1>
               {/*
               TODO: galerie by mela byt sitenavwide
-              TODO: sipky by meli byt na desktopu vedle nadpisu
               */}
-              <GalleryCarousel data={data} />
+              <KarmenPillGalleryCarousel />
             </section>
             <section className="product-detail__functions">
               <h1 className="product-detail__headline2">
@@ -579,13 +363,13 @@ const ProductBlockKarmenPill = ({ props, location }) => {
                 />
               </h1>
               <div className="product-detail__package-content">
-                <PackageCarousel data={data}/>
+                <KarmenPillPackageCarousel />
               </div>
             </section>
           </div>
         </section>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,5 @@
 .sitenav {
-  width: 100%;
+  width: calc(100% - (100% - 100vw)); // posune o kousek navku aby neskákala když zmizí scrollbar na overflow hidden
   position: fixed;
   top: 0;
   z-index: 1000;

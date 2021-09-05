@@ -14,13 +14,19 @@ $field-height: gu(3);
 
 .form__multiline {
   display: flex;
-
+  flex-flow: column;
+  .form__field:not(:first-of-type) {
+    margin-top: gu(.5);
+  }
+  @include breakpoint(tablet-small up) {
+    flex-flow: row;
+    .form__field:not(:first-of-type) {
+      margin-top: 0;
+      margin-left: gu(0.5);
+    }
+  }
   .form__field {
     width: 100%;
-  }
-
-  .form__field:not(:first-of-type) {
-    margin-left: gu(0.5);
   }
 }
 

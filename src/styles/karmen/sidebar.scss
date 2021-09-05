@@ -1,0 +1,97 @@
+html {
+  margin-right: calc(100% - 100vw);
+  margin-left: 0;
+}
+.overflow-sidebar-opened {
+  body {
+    overflow: hidden;
+    //margin-right: 15px;
+  }
+}
+.offcanvas-sidebar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+  transition: transform 0.5s ease 0s;
+  transform: translate3d(100%, 0px, 0px);
+  overflow-y: scroll;
+  &.active {
+    transform: translate3d(0, 0px, 0px);
+  }
+  .offcanvas-sidebar__inner {
+    background-color: #fff;
+    width: 100%;
+    @include breakpoint(tablet-tiny up) {
+      width: 546px;
+    }
+    @include breakpoint(tablet-small up) {
+      width: 648px;
+    }
+  }
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  margin-top: gu(.75);
+  margin-bottom: gu(.75);
+  padding: 0 gu();
+  @include breakpoint(tablet up) {
+    display: none;
+  }
+}
+.sidebar__headline {
+  @include baseline(s8, $headingtype, 1.5, $below: 0, $above: 0);
+  margin-bottom: 0 !important;
+}
+.sidebar__button {
+  margin-right: gu(.5);
+  padding: 0 .5rem;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 11L1.5 6L6.5 1' stroke='white' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -9000px;
+  overflow: hidden;
+  &--big {
+    margin-top: gu();
+    margin-right: gu();
+    text-indent: initial;
+    padding: 0 1.5rem 0 2.5rem;
+    width: auto;
+    height: 3rem;
+    line-height: 3rem;
+    background-position-x: gu(.75);
+    background-position-y: center;
+    display: none;
+    @include breakpoint(tablet up) {
+      display: block;
+    }
+  }
+}
+
+.offcanvas-overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease 0s;
+  backdrop-filter: saturate(80%) blur(4px);
+  transform: translate3d(100%, 0px, 0px);
+  &.active {
+    display: block;
+    opacity: 1;
+    transform: translate3d(0, 0px, 0px);
+  }
+}

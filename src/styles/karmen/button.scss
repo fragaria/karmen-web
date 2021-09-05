@@ -34,7 +34,7 @@
   &:hover:not(.button--loading),
   &:focus {
     color: $foregroundHover;
-    background: $backgroundHover;
+    background-color: $backgroundHover;
     border-color: $borderColorHover;
   }
 

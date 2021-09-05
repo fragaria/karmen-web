@@ -17,7 +17,7 @@
       position: absolute;
       top: -1px;
       left: 0;
-      width: 100%;
+      width: 99%;
       border: 1px map-get($palette, gray-semilight) solid;
     }
   }
@@ -48,7 +48,7 @@
 }
 
 .checkout-form__quantity-field {
-  max-width: gu(4);
+  max-width: gu(6);
   margin: 0;
 
   input::-webkit-outer-spin-button,
@@ -80,7 +80,7 @@
     background-color: transparent;
     border: 0;
     font-size: 1.8rem;
-    min-width: gu(1.5);
+    min-width: gu(2);
     -webkit-appearance: none;
     -moz-appearance: none;
 
