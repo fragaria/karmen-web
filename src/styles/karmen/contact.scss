@@ -55,7 +55,7 @@
     min-height: gu(8);
   }
   .form__field {
-    padding-bottom: gu(1);
+    padding-bottom: 6px;
   }
   h1 {
     @include baseline(s8, $headingtype, 1, $below: 1);
@@ -65,6 +65,13 @@
 
   p {
     @include baseline(s3, $bodytype, 1, $below: 2);
+  }
+  .form__field-error {
+    min-height: 2rem;
+    padding: 0 gu(.75);
+    @include baseline(s2, $bodytype, 1, $below: 0, $above: 0);
+    padding-top: 0 !important;
+    color: #7e7e7e;
   }
 }
 

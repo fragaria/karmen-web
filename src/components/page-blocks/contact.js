@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { defineMessages, FormattedMessage, useIntl } from "react-intl"
 
+import { Formik, Form, Field } from "formik"
+
 import Social from "../social"
 
 const messages = defineMessages({
@@ -28,12 +30,77 @@ const ContactBlock = props => {
             phone
             contactEmail
           }
+          functions {
+            rootUrl
+          }
         }
       }
     }
   `)
 
   const intl = useIntl()
+
+  const sendMessage = async (functionRoot, context) => {
+    await fetch(`${functionRoot}.netlify/functions/send-email`, {
+      method: "POST",
+      body: JSON.stringify(context),
+    })
+  }
+
+  const onSubmit = async (values) => {
+    console.log(JSON.stringify(values, null, 2));
+    const emailContext = {
+      name: values.name,
+      email: values.email,
+      message: values.message
+    }
+    await Promise.all([
+      sendMessage(
+        data.siteMetadata.functions.rootUrl,
+        emailContext
+      )
+    ])
+  }
+
+  const validate = values => {
+    const errors = {};
+    if (!values.name) {
+      errors.name = (
+        <FormattedMessage
+          id="checkoutform.error_missing_name"
+        />
+      );
+    }
+
+    if (!values.email) {
+      errors.email = (
+        <FormattedMessage
+          id="checkoutform.error_missing_email"
+        />
+      )
+    }
+    if (
+      values.email &&
+      !values.email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)
+    ) {
+      errors.email = (
+        <FormattedMessage
+          id="checkoutform.error_invalid_email"
+        />
+      )
+    }
+
+    if (!values.message) {
+      errors.message = (
+        <FormattedMessage
+          id="contact-block.form_error_message"
+          defaultMessage="Please fill out the message."
+        />
+      );
+    }
+
+    return errors
+  }
 
   return (
     <div className="contact-page content-block">
@@ -47,23 +114,71 @@ const ContactBlock = props => {
         <div className="contact">
           <div className="contact__column">
             <div className="contact__form">
-              <div className="form__field">
-                <input className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formName)} type="text"/>
-              </div>
-              <div className="form__field">
-                <input className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formEmail)} type="text"/>
-              </div>
-              <div className="form__field">
-                <textarea className="form-control form-control--small form-control--grey" placeholder={intl.formatMessage(messages.formMessage)} type="text"/>
-              </div>
-              <div className="form__field">
-                <button className="button button--red">
-                  <FormattedMessage
-                    id="contact-block.send_button"
-                    defaultMessage="Send"
-                  />
-                </button>
-              </div>
+              <Formik
+                validate={validate}
+                initialValues={{
+                  test: 'cvcv',
+                  email: '',
+                  name: '',
+                  message: ''
+                }}
+                onSubmit={onSubmit}
+              >
+                {({ isSubmitting, errors, touched }) => (
+                  <Form>
+                    <div className="form__field">
+                      <Field
+                        className="form-control form-control--small form-control--grey"
+                        placeholder={intl.formatMessage(messages.formName)}
+                        type="text"
+                        id="name"
+                        name="name"
+                      />
+                      <div className="form__field-error">
+                        {touched.name && errors.name && <div>{errors.name}</div>}
+                      </div>
+                    </div>
+                    <div className="form__field">
+                      <Field
+                        className="form-control form-control--small form-control--grey"
+                        placeholder={intl.formatMessage(messages.formEmail)}
+                        type="email"
+                        id="email"
+                        name="email"
+                      />
+                      <div className="form__field-error">
+                        {touched.email && errors.email && <div>{errors.email}</div>}
+                      </div>
+                    </div>
+                    <div className="form__field">
+                      <Field
+                        as="textarea"
+                        className="form-control form-control--small form-control--grey"
+                        placeholder={intl.formatMessage(messages.formMessage)}
+                        type="message"
+                        id="message"
+                        name="message"
+                      />
+                      <div className="form__field-error">
+                        {touched.message && errors.message && <div>{errors.message}</div>}
+                      </div>
+                    </div>
+                    <div className="form__field">
+
+                    </div>
+                    <button
+                      className="button button--red"
+                      type="submit"
+                      disabled={isSubmitting}
+                    >
+                      <FormattedMessage
+                        id="contact-block.send_button"
+                        defaultMessage="Send"
+                      />
+                    </button>
+                  </Form>
+                )}
+              </Formik>
             </div>
           </div>
           <div className="contact__column contact-box-wrap">
