@@ -6,20 +6,21 @@ import Layout from "layouts/en"
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
-import CasesBlock from "components/page-blocks/cases"
 import HeroBlock from "components/page-blocks/hero"
+import MeetKarmenBlock from "components/page-blocks/meet-karmen"
 import PricingBlock from "components/page-blocks/pricing"
 import PrincipleBlock from "components/page-blocks/principle"
 import SolutionBlock from "components/page-blocks/solution"
-import SpecsBlock from "components/page-blocks/specs"
 import StoryBlock from "components/page-blocks/story"
-import MeetKarmenBlock from "components/page-blocks/meet-karmen"
+import TestimonialsBlock from "components/page-blocks/testimonials"
+
 
 const IndexENPage = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-home">
       <SEOMetadata
         title="Your 3D printers anytime, anywhere with Karmen"
+        lang="en"
         pathname="/en/"
       />
       <SEOBusinessInfo />
@@ -31,8 +32,7 @@ const IndexENPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <CasesBlock className="v-home-cases v-home-section" />
-      <SpecsBlock className="v-home-specs v-home-section" />
+      <TestimonialsBlock/>
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )

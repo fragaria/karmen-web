@@ -791,117 +791,166 @@
         "defaultMessage": "Your name",
         "end": {
           "column": 3,
-          "line": 11
+          "line": 13
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.form_name",
         "start": {
           "column": 12,
-          "line": 8
+          "line": 10
         }
       },
       {
         "defaultMessage": "Your e-mail",
         "end": {
           "column": 3,
-          "line": 15
+          "line": 17
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.form_email",
         "start": {
           "column": 13,
-          "line": 12
+          "line": 14
         }
       },
       {
         "defaultMessage": "Content of the message",
         "end": {
           "column": 3,
-          "line": 19
+          "line": 21
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.form_message",
         "start": {
           "column": 15,
-          "line": 16
+          "line": 18
+        }
+      },
+      {
+        "end": {
+          "column": 10,
+          "line": 72
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "checkoutform.error_missing_name",
+        "start": {
+          "column": 8,
+          "line": 70
+        }
+      },
+      {
+        "end": {
+          "column": 10,
+          "line": 80
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "checkoutform.error_missing_email",
+        "start": {
+          "column": 8,
+          "line": 78
+        }
+      },
+      {
+        "end": {
+          "column": 10,
+          "line": 90
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "checkoutform.error_invalid_email",
+        "start": {
+          "column": 8,
+          "line": 88
+        }
+      },
+      {
+        "defaultMessage": "Please fill out the message.",
+        "end": {
+          "column": 10,
+          "line": 99
+        },
+        "file": "src/components/page-blocks/contact.js",
+        "id": "contact-block.form_error_message",
+        "start": {
+          "column": 8,
+          "line": 96
         }
       },
       {
         "defaultMessage": "Contact form",
         "end": {
           "column": 12,
-          "line": 45
+          "line": 113
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.title",
         "start": {
           "column": 10,
-          "line": 42
+          "line": 110
         }
       },
       {
         "defaultMessage": "Send",
         "end": {
-          "column": 20,
-          "line": 64
+          "column": 24,
+          "line": 178
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.send_button",
         "start": {
-          "column": 18,
-          "line": 61
+          "column": 22,
+          "line": 175
         }
       },
       {
         "defaultMessage": "Nebo nás kontaktujte přímo",
         "end": {
           "column": 18,
-          "line": 75
+          "line": 191
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.contact_us",
         "start": {
           "column": 16,
-          "line": 72
+          "line": 188
         }
       },
       {
         "defaultMessage": "Adresa společnosti",
         "end": {
           "column": 18,
-          "line": 101
+          "line": 217
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.karmen_adress_headline",
         "start": {
           "column": 16,
-          "line": 98
+          "line": 214
         }
       },
       {
         "defaultMessage": "Česká republika",
         "end": {
           "column": 20,
-          "line": 111
+          "line": 227
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.karmen_adress_cz",
         "start": {
           "column": 18,
-          "line": 108
+          "line": 224
         }
       },
       {
         "defaultMessage": "Sledujte nás",
         "end": {
           "column": 18,
-          "line": 120
+          "line": 236
         },
         "file": "src/components/page-blocks/contact.js",
         "id": "contact-block.karmen_watch_us",
         "start": {
           "column": 16,
-          "line": 117
+          "line": 233
         }
       }
     ],
@@ -2552,380 +2601,406 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Zpět",
+        "end": {
+          "column": 16,
+          "line": 69
+        },
+        "file": "src/components/product-detail/karmen-pill.js",
+        "id": "product-detail-pill.back",
+        "start": {
+          "column": 14,
+          "line": 66
+        }
+      },
+      {
+        "defaultMessage": "Buy Karmen",
+        "end": {
+          "column": 16,
+          "line": 75
+        },
+        "file": "src/components/product-detail/karmen-pill.js",
+        "id": "buy-block.headline",
+        "start": {
+          "column": 14,
+          "line": 72
+        }
+      },
+      {
         "defaultMessage": "Due to unexpectedly large number of orders, we had to <strong>temporarily disable our online store</strong> to be able fulfill the orders within a reasonable time. Please <contactLink>drop us an email</contactLink> in case you're interested in buying Karmen and we'll let you know once the store is back online.",
         "end": {
           "column": 18,
-          "line": 75
+          "line": 94
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "buy-block.disabled_temporarily",
         "start": {
           "column": 16,
-          "line": 62
+          "line": 81
         }
       },
       {
         "defaultMessage": "Karmen Pill",
         "end": {
           "column": 14,
-          "line": 97
+          "line": 116
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.title",
         "start": {
           "column": 12,
-          "line": 94
+          "line": 113
         }
       },
       {
         "defaultMessage": "Karmen Pill je malá krabička s rozměry 77 x 34 x 12 mm, která připojením přes USB port, zpřístupní tiskárnu do lokální sítě nebo internetu a umožní ji připojit ke cloudové službě Karmen.",
         "end": {
           "column": 14,
-          "line": 103
+          "line": 122
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.desc",
         "start": {
           "column": 12,
-          "line": 100
+          "line": 119
         }
       },
       {
         "defaultMessage": "Karmen vyrábíme v Čechách.",
         "end": {
           "column": 14,
-          "line": 112
+          "line": 131
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.made_in",
         "start": {
           "column": 12,
-          "line": 109
+          "line": 128
         }
       },
       {
         "defaultMessage": "4235 Kč s DPH",
         "end": {
           "column": 14,
-          "line": 118
+          "line": 137
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.price",
         "start": {
           "column": 12,
-          "line": 115
+          "line": 134
         }
       },
       {
         "defaultMessage": "3500 Kč bez DPH",
         "end": {
           "column": 14,
-          "line": 124
+          "line": 143
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.price-vat",
         "start": {
           "column": 12,
-          "line": 121
+          "line": 140
         }
       },
       {
         "defaultMessage": "Zakoupit",
         "end": {
           "column": 14,
-          "line": 136
+          "line": 155
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.buy_button",
         "start": {
           "column": 12,
-          "line": 133
+          "line": 152
         }
       },
       {
         "defaultMessage": "Odeslání do dvou dnů",
         "end": {
           "column": 16,
-          "line": 144
+          "line": 163
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.delivery",
         "start": {
           "column": 14,
-          "line": 141
+          "line": 160
         }
       },
       {
         "defaultMessage": "Poštovné 60 Kč",
         "end": {
           "column": 16,
-          "line": 151
+          "line": 170
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.delivery_price",
         "start": {
           "column": 14,
-          "line": 148
+          "line": 167
         }
       },
       {
         "defaultMessage": "Karmen v praxi",
         "end": {
           "column": 18,
-          "line": 165
+          "line": 184
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.subheading_in-work",
         "start": {
           "column": 16,
-          "line": 162
+          "line": 181
         }
       },
       {
         "defaultMessage": "Funkce Karmen Pill",
         "end": {
           "column": 18,
-          "line": 177
+          "line": 196
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.title_functions",
         "start": {
           "column": 16,
-          "line": 174
+          "line": 193
         }
       },
       {
         "defaultMessage": "Umožňuje přenos obrazu z kamery do webového rozhraní, přes nějž poskytuje uživateli rovněž informace o teplotě senzorů a probíhajícím tisku. Umožňuje také základní ovládání tiskárny.",
         "end": {
           "column": 20,
-          "line": 184
+          "line": 203
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.functions_text",
         "start": {
           "column": 18,
-          "line": 181
+          "line": 200
         }
       },
       {
         "defaultMessage": "Plug & Play",
         "end": {
           "column": 24,
-          "line": 195
+          "line": 214
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_plug_headline",
         "start": {
           "column": 22,
-          "line": 192
+          "line": 211
         }
       },
       {
         "defaultMessage": "Připojíte na wifi a následně k tiskárně a je to.",
         "end": {
           "column": 24,
-          "line": 201
+          "line": 220
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_plug_desc",
         "start": {
           "column": 22,
-          "line": 198
+          "line": 217
         }
       },
       {
         "defaultMessage": "Wi-Fi konektivita",
         "end": {
           "column": 24,
-          "line": 210
+          "line": 229
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_wifi_headline",
         "start": {
           "column": 22,
-          "line": 207
+          "line": 226
         }
       },
       {
         "defaultMessage": "Z každé lokální 3D tiskárny snadno udělá tiskárnu síťovou.",
         "end": {
           "column": 24,
-          "line": 216
+          "line": 235
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_wifi_desc",
         "start": {
           "column": 22,
-          "line": 213
+          "line": 232
         }
       },
       {
         "defaultMessage": "USB propojení s tiskárnou",
         "end": {
           "column": 24,
-          "line": 225
+          "line": 244
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_usb_headline",
         "start": {
           "column": 22,
-          "line": 222
+          "line": 241
         }
       },
       {
         "defaultMessage": "Pro připojení vám stačí jeden USB port.",
         "end": {
           "column": 24,
-          "line": 231
+          "line": 250
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_usb_desc",
         "start": {
           "column": 22,
-          "line": 228
+          "line": 247
         }
       },
       {
         "defaultMessage": "Přisvětlovací dioda",
         "end": {
           "column": 24,
-          "line": 240
+          "line": 259
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_light_headline",
         "start": {
           "column": 22,
-          "line": 237
+          "line": 256
         }
       },
       {
         "defaultMessage": "Karmen Vám přisvítí díky LED didodě.",
         "end": {
           "column": 24,
-          "line": 246
+          "line": 265
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_light_desc",
         "start": {
           "column": 22,
-          "line": 243
+          "line": 262
         }
       },
       {
         "defaultMessage": "Obraz z kamery",
         "end": {
           "column": 24,
-          "line": 255
+          "line": 274
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_camera_headline",
         "start": {
           "column": 22,
-          "line": 252
+          "line": 271
         }
       },
       {
         "defaultMessage": "U tiskárny už nemusíte stát osobně, celý průběh 3D tisku můžete sledovat na dálku kdykoli a odkudkoli.",
         "end": {
           "column": 24,
-          "line": 261
+          "line": 280
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_camera_desc",
         "start": {
           "column": 22,
-          "line": 258
+          "line": 277
         }
       },
       {
         "defaultMessage": "Kompatibilita se slicery",
         "end": {
           "column": 24,
-          "line": 270
+          "line": 289
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_compatibility_headline",
         "start": {
           "column": 22,
-          "line": 267
+          "line": 286
         }
       },
       {
         "defaultMessage": "Jejich počet neustále rozšiřujeme.",
         "end": {
           "column": 24,
-          "line": 276
+          "line": 295
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.function_compatibility_desc",
         "start": {
           "column": 22,
-          "line": 273
+          "line": 292
         }
       },
       {
         "defaultMessage": "Kompatibilita s nejrozširenejšími slicery",
         "end": {
           "column": 18,
-          "line": 287
+          "line": 306
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.compatibility_title",
         "start": {
           "column": 16,
-          "line": 284
+          "line": 303
         }
       },
       {
         "defaultMessage": "Karmen Pill je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura.",
         "end": {
           "column": 20,
-          "line": 294
+          "line": 313
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.compatibility_text",
         "start": {
           "column": 18,
-          "line": 291
+          "line": 310
         }
       },
       {
         "defaultMessage": "Ověřeno uživateli",
         "end": {
           "column": 18,
-          "line": 314
+          "line": 333
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.user_proved_title",
         "start": {
           "column": 16,
-          "line": 311
+          "line": 330
         }
       },
       {
         "defaultMessage": "Za dva roky fungování používá nyní Karmen přes 120 uživatelů. Zákazníci z řad jednotlivců, firem i velkých organizací.",
         "end": {
           "column": 20,
-          "line": 321
+          "line": 340
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.user_proved_text",
         "start": {
           "column": 18,
-          "line": 318
+          "line": 337
         }
       },
       {
         "defaultMessage": "Obsah balení",
         "end": {
           "column": 18,
-          "line": 344
+          "line": 363
         },
         "file": "src/components/product-detail/karmen-pill.js",
         "id": "product-detail-pill.package-content_title",
         "start": {
           "column": 16,
-          "line": 341
+          "line": 360
         }
       }
     ],
