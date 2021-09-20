@@ -79,6 +79,15 @@
   }
 }
 
+/**
+TEMPORARY - remove as DIY is ready to buy
+ */
+.product-detail__right--without-btn {
+  @include breakpoint(tablet up) {
+    padding-bottom: gu(4);
+  }
+}
+
 .product-detail-circle {
   width: 665px;
   height: 665px;

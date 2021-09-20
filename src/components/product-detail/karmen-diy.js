@@ -30,7 +30,7 @@ const ProductBlockKarmenPillDiy = ({ props }) => {
           }}
           className="product-detail__left product-detail__img product-detail__img--diy">
         </BackgroundImage>
-        <div className="product-detail__right">
+        <div className="product-detail__right product-detail__right--without-btn">
           <h1 className="product-detail__headline">
             <FormattedMessage
               id="product-detail-diy.title"
@@ -49,18 +49,18 @@ const ProductBlockKarmenPillDiy = ({ props }) => {
               defaultMessage="Zdarma"
             />
           </div>
-          <div className="product-detail__price-vat">
-            <FormattedMessage
-              id="product-detail-diy.price-vat"
-              defaultMessage="Zdarma pro všechny"
-            />
-          </div>
-          <Link to={diyBuy} className="product-detail__buy-button button button--full button--red">
-            <FormattedMessage
-              id="product-detail-diy.buy_button"
-              defaultMessage="Zakoupit"
-            />
-          </Link>
+          {/*<div className="product-detail__price-vat">*/}
+          {/*  <FormattedMessage*/}
+          {/*    id="product-detail-diy.price-vat"*/}
+          {/*    defaultMessage="Zdarma pro všechny"*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<Link to={diyBuy} className="product-detail__buy-button button button--full button--red">*/}
+          {/*  <FormattedMessage*/}
+          {/*    id="product-detail-diy.buy_button"*/}
+          {/*    defaultMessage="Zakoupit"*/}
+          {/*  />*/}
+          {/*</Link>*/}
           <div className="product-detail-circle"></div>
         </div>
       </div>
