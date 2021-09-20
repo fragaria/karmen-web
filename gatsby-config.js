@@ -114,20 +114,12 @@ module.exports = {
     nav: {
       en: [
         {
-          name: "How it works",
-          url: `/en/#principle`,
-        },
-        {
           name: "Products",
           url: `/en/products/`,
         },
         {
           name: "Karmen story",
           url: `/en/story/`,
-        },
-        {
-          name: "Buy",
-          url: `/en/buy/`,
         },
         {
           name: "Contact",
@@ -158,10 +150,6 @@ module.exports = {
         {
           name: "Příběh Karmen",
           url: `/cs/pribeh/`,
-        },
-        {
-          name: "Koupit",
-          url: `/cs/koupit/`,
         },
         {
           name: "Kontakt",
