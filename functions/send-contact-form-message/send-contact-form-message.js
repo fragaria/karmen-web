@@ -16,12 +16,12 @@ const transport = nodemailer.createTransport({
 const NAME_MIN_LENGTH = 3
 const NAME_MAX_LENGTH = 50
 
-const subjectTemplateCS = `Zprava z webu`
+const subjectTemplateCS = `Zpráva z webu`
 const textTemplateCS = `
-Zprava z webu
-Jmeno: %SENDER_NAME%
+Zpráva z webu
+Jméno: %SENDER_NAME%
 E-mail: %SENDER_EMAIL%
-Zprava: %SENDER_MESSAGE%
+Zpráva: %SENDER_MESSAGE%
 `
 
 const subjectTemplateEN = `Message from website`

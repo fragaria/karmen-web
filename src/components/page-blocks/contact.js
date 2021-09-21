@@ -41,22 +41,14 @@ const ContactBlock = props => {
   const intl = useIntl()
 
   const sendMessage = async (functionRoot, context) => {
-    await fetch(`${functionRoot}.netlify/functions/send-email`, {
+    await fetch(`${functionRoot}.netlify/functions/send-contact-form-message`, {
       method: "POST",
       body: JSON.stringify(context),
     })
   }
 
   const onSubmit = async values => {
-    console.log(JSON.stringify(values, null, 2))
-    const emailContext = {
-      name: values.name,
-      email: values.email,
-      message: values.message,
-    }
-    await Promise.all([
-      sendMessage(data.siteMetadata.functions.rootUrl, emailContext),
-    ])
+    await sendMessage(data.site.siteMetadata.functions.rootUrl, {...values, lang: intl.locale});
   }
 
   const validate = values => {
@@ -102,7 +94,6 @@ const ContactBlock = props => {
               <Formik
                 validate={validate}
                 initialValues={{
-                  test: "cvcv",
                   email: "",
                   name: "",
                   message: "",
