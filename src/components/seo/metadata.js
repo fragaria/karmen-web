@@ -95,7 +95,10 @@ function SEOMetadata({ description, lang, meta, title, img, pathname }) {
         },
       ].concat(meta)}
     >
-      <meta name="facebook-domain-verification" content="dkgvc9zjrewf4g2yxieshccvr9cajx" />
+      <meta
+        name="facebook-domain-verification"
+        content="dkgvc9zjrewf4g2yxieshccvr9cajx"
+      />
     </Helmet>
   )
 }

@@ -183,8 +183,7 @@ module.exports = {
         ],
         [
           {
-            name:
-              "Karmen Cloud & Karmen Pill Documentation",
+            name: "Karmen Cloud & Karmen Pill Documentation",
             url: "https://docs.karmen.tech/",
           },
           {
@@ -212,8 +211,7 @@ module.exports = {
         ],
         [
           {
-            name:
-              "Dokumentace Karmen Cloud a Karmen Pill",
+            name: "Dokumentace Karmen Cloud a Karmen Pill",
             url: "https://docs.karmen.tech/",
           },
           {

@@ -8,28 +8,44 @@ import { graphql, useStaticQuery } from "gatsby"
 const KarmenPillPackageCarousel = () => {
   const data = useStaticQuery(graphql`
     query {
-      pckgCablePrint: file(relativePath: { eq: "karmen-pill/pckg-content/cable-print.jpg" }) {
+      pckgCablePrint: file(
+        relativePath: { eq: "karmen-pill/pckg-content/cable-print.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgCablePrintPill: file(relativePath: { eq: "karmen-pill/pckg-content/cable-print-pill.jpg" }) {
+      }
+      pckgCablePrintPill: file(
+        relativePath: { eq: "karmen-pill/pckg-content/cable-print-pill.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgFocusRing: file(relativePath: { eq: "karmen-pill/pckg-content/focus-ring.jpg" }) {
+      }
+      pckgFocusRing: file(
+        relativePath: { eq: "karmen-pill/pckg-content/focus-ring.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgCablePillPc: file(relativePath: { eq: "karmen-pill/pckg-content/cable-pill-pc.jpg" }) {
+      }
+      pckgCablePillPc: file(
+        relativePath: { eq: "karmen-pill/pckg-content/cable-pill-pc.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgKarmenPill: file(relativePath: { eq: "karmen-pill/pckg-content/karmen-pill.jpg" }) {
+      }
+      pckgKarmenPill: file(
+        relativePath: { eq: "karmen-pill/pckg-content/karmen-pill.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgKarmenPillCase: file(relativePath: { eq: "karmen-pill/pckg-content/karmen-pill-case.jpg" }) {
+      }
+      pckgKarmenPillCase: file(
+        relativePath: { eq: "karmen-pill/pckg-content/karmen-pill-case.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgPowerSupply: file(relativePath: { eq: "karmen-pill/pckg-content/power-supply.jpg" }) {
+      }
+      pckgPowerSupply: file(
+        relativePath: { eq: "karmen-pill/pckg-content/power-supply.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      pckgCableUsb: file(relativePath: { eq: "karmen-pill/pckg-content/cable-usb.jpg" }) {
+      }
+      pckgCableUsb: file(
+        relativePath: { eq: "karmen-pill/pckg-content/cable-usb.jpg" }
+      ) {
         ...fluidImage1024
       }
     }
@@ -44,19 +60,19 @@ const KarmenPillPackageCarousel = () => {
     desktop: {
       breakpoint: { max: 1024, min: 768 },
       items: 3,
-      slidesToSlide: 3
+      slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
       items: 2,
-      slidesToSlide: 2
+      slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 0
-    }
-  };
+      partialVisibilityGutter: 0,
+    },
+  }
   return (
     <div className="carousel-wrapper">
       <Carousel

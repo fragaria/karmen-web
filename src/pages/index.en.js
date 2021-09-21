@@ -14,7 +14,6 @@ import SolutionBlock from "components/page-blocks/solution"
 import StoryBlock from "components/page-blocks/story"
 import TestimonialsBlock from "components/page-blocks/testimonials"
 
-
 const IndexENPage = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-home">
@@ -32,7 +31,7 @@ const IndexENPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <TestimonialsBlock/>
+      <TestimonialsBlock />
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )

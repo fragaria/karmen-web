@@ -98,7 +98,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__social">
-            <Social/>
+            <Social />
           </div>
         </div>
       </div>

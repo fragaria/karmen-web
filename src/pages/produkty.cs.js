@@ -7,11 +7,7 @@ import SEOMetadata from "components/seo/metadata"
 const Products = ({ data, location }) => {
   return (
     <Layout location={location} containerClass="v-products">
-      <SEOMetadata
-        lang="cs"
-        title="Produkty"
-        pathname={location.pathname}
-      />
+      <SEOMetadata lang="cs" title="Produkty" pathname={location.pathname} />
       <ProductsBlock location={location} />
     </Layout>
   )

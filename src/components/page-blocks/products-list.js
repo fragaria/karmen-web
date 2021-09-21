@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl, defineMessages } from "react-intl"
 
 import { BackgroundImage } from "components/image"
 
-const messages = defineMessages({
+defineMessages({
   specialOfferMemo: {
     id: "pricing-block.special_offer_memo",
     defaultMessage:
@@ -14,9 +14,18 @@ const messages = defineMessages({
 
 const ProductsList = ({ location, ...props }) => {
   const intl = useIntl()
-  const cloudLink = intl.locale === "cs" ? "/cs/produkty/karmen-cloud" : "/en/products/karmen-cloud"
-  const pillLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill/" : "/en/products/karmen-pill/"
-  const diyLink = intl.locale === "cs" ? "/cs/produkty/karmen-pill-skladacka" : "/en/products/karmen-pill-diy"
+  const cloudLink =
+    intl.locale === "cs"
+      ? "/cs/produkty/karmen-cloud"
+      : "/en/products/karmen-cloud"
+  const pillLink =
+    intl.locale === "cs"
+      ? "/cs/produkty/karmen-pill/"
+      : "/en/products/karmen-pill/"
+  const diyLink =
+    intl.locale === "cs"
+      ? "/cs/produkty/karmen-pill-skladacka"
+      : "/en/products/karmen-pill-diy"
   // const registerLink = "https://cloud.karmen.tech/register"
   const data = useStaticQuery(graphql`
     query {
@@ -29,7 +38,6 @@ const ProductsList = ({ location, ...props }) => {
       diy: file(relativePath: { eq: "product-diy.png" }) {
         ...fluidImage1024
       }
-      
     }
   `)
 
@@ -62,7 +70,10 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={cloudLink} className="products-list__buybutton button--full button button--red">
+              <Link
+                to={cloudLink}
+                className="products-list__buybutton button--full button button--red"
+              >
                 <FormattedMessage
                   id="pricing-block.cta__myself"
                   defaultMessage="Chci cloud"
@@ -110,7 +121,10 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={pillLink} className="products-list__buybutton button button--full button--red">
+              <Link
+                to={pillLink}
+                className="products-list__buybutton button button--full button--red"
+              >
                 <FormattedMessage
                   id="pricing-block.cta__full"
                   defaultMessage="Chci hotové řešení"
@@ -157,7 +171,10 @@ const ProductsList = ({ location, ...props }) => {
               </p>
             </div>
             <div className="products-list__buy">
-              <Link to={diyLink} className="products-list__buybutton button--full button button--red">
+              <Link
+                to={diyLink}
+                className="products-list__buybutton button--full button button--red"
+              >
                 <FormattedMessage
                   id="pricing-block.cta_register"
                   defaultMessage="Chci skládačku"

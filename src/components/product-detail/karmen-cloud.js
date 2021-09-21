@@ -1,4 +1,4 @@
-import  React from "react"
+import React from "react"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
 
@@ -11,7 +11,7 @@ import logoPrusaSlicer from "assets/img/logo-prusa-slicer.png"
 import logoUltimakerCura from "assets/img/logo-ultimaker-cura.png"
 
 const ProductBlockKarmenCloud = ({ props }) => {
-  const cloudRegister = 'test';
+  const cloudRegister = "test"
   const data = useStaticQuery(graphql`
     query {
       cloudFull: file(relativePath: { eq: "product-full-cloud.png" }) {
@@ -25,11 +25,11 @@ const ProductBlockKarmenCloud = ({ props }) => {
         <BackgroundImage
           file={data.cloudFull}
           style={{
-            backgroundSize: '',
-            backgroundPosition: ''
+            backgroundSize: "",
+            backgroundPosition: "",
           }}
-          className="product-detail__left product-detail__img product-detail__img--cloud">
-        </BackgroundImage>
+          className="product-detail__left product-detail__img product-detail__img--cloud"
+        ></BackgroundImage>
         <div className="product-detail__right">
           <h1 className="product-detail__headline">
             <FormattedMessage
@@ -55,7 +55,10 @@ const ProductBlockKarmenCloud = ({ props }) => {
               defaultMessage="Zdarma pro všechny"
             />
           </div>
-          <Link to={cloudRegister} className="product-detail__buy-button button button--full button--red">
+          <Link
+            to={cloudRegister}
+            className="product-detail__buy-button button button--full button--red"
+          >
             <FormattedMessage
               id="product-detail-cloud.register_button"
               defaultMessage="Registrovat se"

@@ -2,8 +2,6 @@ import Carousel from "react-multi-carousel"
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-
-
 import { BackgroundImage } from "components/image"
 
 const KarmenPillGalleryCarousel = () => {
@@ -11,63 +9,73 @@ const KarmenPillGalleryCarousel = () => {
     query {
       pillFull: file(relativePath: { eq: "product-full-pill.png" }) {
         ...fluidImage1024_traced
-      },
-      gallery1: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality1.jpg" }) {
+      }
+      gallery1: file(
+        relativePath: { eq: "karmen-pill/karmen-pill-in-reality1.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      gallery2: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality2.jpg" }) {
+      }
+      gallery2: file(
+        relativePath: { eq: "karmen-pill/karmen-pill-in-reality2.jpg" }
+      ) {
         ...fluidImage1024
-      },
-      gallery3: file(relativePath: { eq: "karmen-pill/karmen-pill-in-reality3.jpg" }) {
+      }
+      gallery3: file(
+        relativePath: { eq: "karmen-pill/karmen-pill-in-reality3.jpg" }
+      ) {
         ...fluidImage1024
       }
     }
   `)
   const CustomButtonGroupAsArrows = ({ next, previous, ...rest }) => {
     const {
-      carouselState: {
-        currentSlide,
-        totalItems,
-        slidesToShow
-      }
-    } = rest;
-    const isArrowsDisabled = totalItems <= slidesToShow;
-    if(!isArrowsDisabled) {
+      carouselState: { currentSlide, totalItems, slidesToShow },
+    } = rest
+    const isArrowsDisabled = totalItems <= slidesToShow
+    if (!isArrowsDisabled) {
       return (
         <div className="carousel-arrows">
-          <button className={`carousel__arrow carousel__arrow--left${currentSlide === 0 ? ' disabled' : ''}`} onClick={previous}></button>
-          <button className={`carousel__arrow carousel__arrow--right${currentSlide === (totalItems - slidesToShow) ? ' disabled' : ''}`} onClick={next}></button>
+          <button
+            className={`carousel__arrow carousel__arrow--left${
+              currentSlide === 0 ? " disabled" : ""
+            }`}
+            onClick={previous}
+          ></button>
+          <button
+            className={`carousel__arrow carousel__arrow--right${
+              currentSlide === totalItems - slidesToShow ? " disabled" : ""
+            }`}
+            onClick={next}
+          ></button>
         </div>
       )
     } else {
-      return (
-        <div></div>
-      )
+      return <div></div>
     }
-  };
+  }
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 8000, min: 1024 },
       items: 4,
-      slidesToSlide: 4
+      slidesToSlide: 4,
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
       items: 3,
-      slidesToSlide: 3
+      slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
       items: 2,
-      slidesToSlide: 2
+      slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 40
-    }
-  };
+      partialVisibilityGutter: 40,
+    },
+  }
   return (
     <div className="carousel-wrapper">
       <Carousel

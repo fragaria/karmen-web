@@ -18,7 +18,7 @@ const messages = defineMessages({
   formMessage: {
     id: "contact-block.form_message",
     defaultMessage: "Content of the message",
-  }
+  },
 })
 
 const ContactBlock = props => {
@@ -47,47 +47,32 @@ const ContactBlock = props => {
     })
   }
 
-  const onSubmit = async (values) => {
-    console.log(JSON.stringify(values, null, 2));
+  const onSubmit = async values => {
+    console.log(JSON.stringify(values, null, 2))
     const emailContext = {
       name: values.name,
       email: values.email,
-      message: values.message
+      message: values.message,
     }
     await Promise.all([
-      sendMessage(
-        data.siteMetadata.functions.rootUrl,
-        emailContext
-      )
+      sendMessage(data.siteMetadata.functions.rootUrl, emailContext),
     ])
   }
 
   const validate = values => {
-    const errors = {};
+    const errors = {}
     if (!values.name) {
-      errors.name = (
-        <FormattedMessage
-          id="checkoutform.error_missing_name"
-        />
-      );
+      errors.name = <FormattedMessage id="checkoutform.error_missing_name" />
     }
 
     if (!values.email) {
-      errors.email = (
-        <FormattedMessage
-          id="checkoutform.error_missing_email"
-        />
-      )
+      errors.email = <FormattedMessage id="checkoutform.error_missing_email" />
     }
     if (
       values.email &&
       !values.email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)
     ) {
-      errors.email = (
-        <FormattedMessage
-          id="checkoutform.error_invalid_email"
-        />
-      )
+      errors.email = <FormattedMessage id="checkoutform.error_invalid_email" />
     }
 
     if (!values.message) {
@@ -96,7 +81,7 @@ const ContactBlock = props => {
           id="contact-block.form_error_message"
           defaultMessage="Please fill out the message."
         />
-      );
+      )
     }
 
     return errors
@@ -117,10 +102,10 @@ const ContactBlock = props => {
               <Formik
                 validate={validate}
                 initialValues={{
-                  test: 'cvcv',
-                  email: '',
-                  name: '',
-                  message: ''
+                  test: "cvcv",
+                  email: "",
+                  name: "",
+                  message: "",
                 }}
                 onSubmit={onSubmit}
               >
@@ -135,7 +120,9 @@ const ContactBlock = props => {
                         name="name"
                       />
                       <div className="form__field-error">
-                        {touched.name && errors.name && <div>{errors.name}</div>}
+                        {touched.name && errors.name && (
+                          <div>{errors.name}</div>
+                        )}
                       </div>
                     </div>
                     <div className="form__field">
@@ -147,7 +134,9 @@ const ContactBlock = props => {
                         name="email"
                       />
                       <div className="form__field-error">
-                        {touched.email && errors.email && <div>{errors.email}</div>}
+                        {touched.email && errors.email && (
+                          <div>{errors.email}</div>
+                        )}
                       </div>
                     </div>
                     <div className="form__field">
@@ -160,12 +149,12 @@ const ContactBlock = props => {
                         name="message"
                       />
                       <div className="form__field-error">
-                        {touched.message && errors.message && <div>{errors.message}</div>}
+                        {touched.message && errors.message && (
+                          <div>{errors.message}</div>
+                        )}
                       </div>
                     </div>
-                    <div className="form__field">
-
-                    </div>
+                    <div className="form__field"></div>
                     <button
                       className="button button--red"
                       type="submit"
@@ -234,7 +223,7 @@ const ContactBlock = props => {
                   defaultMessage="Sledujte nás"
                 />
               </h2>
-              <Social class="social--red"/>
+              <Social class="social--red" />
             </div>
           </div>
         </div>

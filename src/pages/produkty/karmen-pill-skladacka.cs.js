@@ -16,7 +16,7 @@ const KarmenDiy = ({ location }) => {
         pathname="/cs/produkty/karmen-pill-skladacka/"
       />
       <SEOBusinessInfo />
-      <ProductBlockKarmenPillDiy/>
+      <ProductBlockKarmenPillDiy />
     </Layout>
   )
 }

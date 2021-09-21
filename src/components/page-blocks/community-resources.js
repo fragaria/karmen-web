@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const CommunityResources = ({ resources, site, location, ...props }) => {
-  const iconPrefix = 'community__icon--';
+  const iconPrefix = "community__icon--"
   return (
     <section
       {...props}
@@ -17,13 +17,19 @@ const CommunityResources = ({ resources, site, location, ...props }) => {
               key={frontmatter.link}
               className="v-community-resources-listing__item"
             >
-              {frontmatter.icon !== '' &&
-              <div className="community__icon-wrap">
-                <i className={`community__icon ${iconPrefix + frontmatter.ico}`}></i>
-              </div>
-              }
-              <h2 className="v-community-resources-listing__item__headline">{frontmatter.title}</h2>
-              <div className="v-community-resources-listing__item__html"
+              {frontmatter.icon !== "" && (
+                <div className="community__icon-wrap">
+                  <i
+                    className={`community__icon ${iconPrefix +
+                      frontmatter.ico}`}
+                  ></i>
+                </div>
+              )}
+              <h2 className="v-community-resources-listing__item__headline">
+                {frontmatter.title}
+              </h2>
+              <div
+                className="v-community-resources-listing__item__html"
                 dangerouslySetInnerHTML={{
                   __html: html,
                 }}
@@ -46,7 +52,7 @@ const CommunityResources = ({ resources, site, location, ...props }) => {
                     {frontmatter.linkTitle}
                   </Link>
                 )}
-            </div>
+              </div>
             </article>
           )
         })}

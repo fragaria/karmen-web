@@ -1,9 +1,8 @@
 import React from "react"
 import { FormattedMessage } from "react-intl"
-import ProductsList from "./products-list";
+import ProductsList from "./products-list"
 
 const PricingBlock = ({ location, ...props }) => {
-
   return (
     <section {...props}>
       <div className="pricing">

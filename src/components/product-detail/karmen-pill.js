@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FormattedMessage } from "react-intl"
 
-import "react-multi-carousel/lib/styles.css";
+import "react-multi-carousel/lib/styles.css"
 
 import { BackgroundImage } from "components/image"
 import CheckoutBooth from "components/checkout/booth"
@@ -41,20 +41,25 @@ const ProductBlockKarmenPill = ({ props }) => {
     }
   `)
   const checkoutEnabled = data.site.siteMetadata.checkout.enabled
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
   const toggleSidebar = evt => {
-    evt.preventDefault();
+    evt.preventDefault()
     if (active) {
-      document.documentElement.classList.remove('overflow-sidebar-opened');
+      document.documentElement.classList.remove("overflow-sidebar-opened")
     } else {
-      document.documentElement.classList.add('overflow-sidebar-opened');
+      document.documentElement.classList.add("overflow-sidebar-opened")
     }
-    setActive(!active);
+    setActive(!active)
   }
   return (
     <section>
-      <section className={`offcanvas-sidebar ${ active === true ? 'active' : ''}`}>
-        <button className="sidebar__button sidebar__button--big button button--red" onClick={toggleSidebar}>
+      <section
+        className={`offcanvas-sidebar ${active === true ? "active" : ""}`}
+      >
+        <button
+          className="sidebar__button sidebar__button--big button button--red"
+          onClick={toggleSidebar}
+        >
           <FormattedMessage
             id="product-detail-pill.back"
             defaultMessage="Zpět"
@@ -62,7 +67,10 @@ const ProductBlockKarmenPill = ({ props }) => {
         </button>
         <div className="offcanvas-sidebar__inner">
           <div className="sidebar__header">
-            <button className="sidebar__button button button--red" onClick={toggleSidebar}>
+            <button
+              className="sidebar__button button button--red"
+              onClick={toggleSidebar}
+            >
               <FormattedMessage
                 id="product-detail-pill.back"
                 defaultMessage="Zpět"
@@ -98,16 +106,18 @@ const ProductBlockKarmenPill = ({ props }) => {
           {checkoutEnabled && <CheckoutBooth />}
         </div>
       </section>
-      <div className={`offcanvas-overlay ${ active === true ? 'active' : ''}`}></div>
+      <div
+        className={`offcanvas-overlay ${active === true ? "active" : ""}`}
+      ></div>
       <div className="product-detail__hero">
         <BackgroundImage
           file={data.pillFull}
           style={{
-            backgroundSize: '',
-            backgroundPosition: ''
+            backgroundSize: "",
+            backgroundPosition: "",
           }}
-          className="product-detail__left product-detail__img product-detail__img--pill">
-        </BackgroundImage>
+          className="product-detail__left product-detail__img product-detail__img--pill"
+        ></BackgroundImage>
         <div className="product-detail__right">
           <h1 className="product-detail__headline">
             <FormattedMessage
@@ -123,7 +133,7 @@ const ProductBlockKarmenPill = ({ props }) => {
           </div>
           <div className="product-detail__made-in">
             <div className="made-in-icon">
-              <img src={czFlag}/>
+              <img src={czFlag} />
             </div>
             <FormattedMessage
               id="product-detail-pill.made_in"
@@ -148,7 +158,10 @@ const ProductBlockKarmenPill = ({ props }) => {
           {/*    defaultMessage="Zakoupit"*/}
           {/*  />*/}
           {/*</Link>*/}
-          <button className="product-detail__buy-button button button-full button--red" onClick={toggleSidebar}>
+          <button
+            className="product-detail__buy-button button button-full button--red"
+            onClick={toggleSidebar}
+          >
             <FormattedMessage
               id="product-detail-pill.buy_button"
               defaultMessage="Zakoupit"
@@ -156,14 +169,22 @@ const ProductBlockKarmenPill = ({ props }) => {
           </button>
           <ul className="product-detail__delivery list--unstyled">
             <li>
-              <img src={iconPackage} className="list-icon" alt="Odeslání do dvou dnů"/>
+              <img
+                src={iconPackage}
+                className="list-icon"
+                alt="Odeslání do dvou dnů"
+              />
               <FormattedMessage
                 id="product-detail-pill.delivery"
                 defaultMessage="Odeslání do dvou dnů"
               />
             </li>
             <li>
-              <img src={iconTruck} className="list-icon" alt="Odeslání do dvou dnů"/>
+              <img
+                src={iconTruck}
+                className="list-icon"
+                alt="Odeslání do dvou dnů"
+              />
               <FormattedMessage
                 id="product-detail-pill.delivery_price"
                 defaultMessage="Poštovné 60 Kč"

@@ -16,7 +16,7 @@ const ContactPage = ({ location }) => {
         pathname="/en/contact/"
       />
       <SEOBusinessInfo />
-      <ContactBlock/>
+      <ContactBlock />
     </Layout>
   )
 }

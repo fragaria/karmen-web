@@ -31,7 +31,7 @@ const IndexPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <TestimonialsBlock/>
+      <TestimonialsBlock />
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )

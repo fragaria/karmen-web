@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import { intl, defineMessages, useIntl } from "react-intl"
+import { defineMessages, useIntl } from "react-intl"
 
 const messages = defineMessages({
   ghProfileTitle: {
@@ -50,8 +50,7 @@ const Social = props => {
       {data.site.siteMetadata.company.social.github && (
         <a
           href={
-            "https://github.com/" +
-            data.site.siteMetadata.company.social.github
+            "https://github.com/" + data.site.siteMetadata.company.social.github
           }
           className="icon--github social__icon"
           title={intl.formatMessage(messages.ghProfileTitle)}

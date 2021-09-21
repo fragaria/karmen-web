@@ -8,12 +8,9 @@ const FaqResources = ({ resources, site, location, ...props }) => {
       className="content-block content-block--narrower content-block--shift-mobile"
     >
       <div className="v-faq-resources-listing">
-        {resources.map((resource, index) =>
-          <FaqItem
-            key={index}
-            resources={resource}
-          />
-        )}
+        {resources.map((resource, index) => (
+          <FaqItem key={index} resources={resource} />
+        ))}
       </div>
     </section>
   )

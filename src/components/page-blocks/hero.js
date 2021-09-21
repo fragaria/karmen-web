@@ -45,14 +45,17 @@ const HeroBlock = props => {
               to={learnLink}
               className="button button--red button--mr button-mb"
             >
-              <FormattedMessage id="hero-block.cta" defaultMessage="I want Karmen" />
+              <FormattedMessage
+                id="hero-block.cta"
+                defaultMessage="I want Karmen"
+              />
               <br />
             </Link>
-            <Link
-              to={meetKarmenLink}
-              className="button button--outlineBlack"
-            >
-              <FormattedMessage id="hero-block.meet" defaultMessage="Meet Karmen" />
+            <Link to={meetKarmenLink} className="button button--outlineBlack">
+              <FormattedMessage
+                id="hero-block.meet"
+                defaultMessage="Meet Karmen"
+              />
               <br />
             </Link>
           </BackgroundImage>

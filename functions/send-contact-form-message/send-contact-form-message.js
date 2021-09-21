@@ -32,7 +32,6 @@ E-mail: %SENDER_EMAIL%
 Zprava: %SENDER_MESSAGE%
 `
 
-
 const handler = async event => {
   if (!process.env.CONTACT_EMAIL) {
     return {

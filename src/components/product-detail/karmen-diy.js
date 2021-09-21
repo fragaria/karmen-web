@@ -1,4 +1,4 @@
-import  React from "react"
+import React from "react"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
 
@@ -11,7 +11,7 @@ import logoPrusaSlicer from "assets/img/logo-prusa-slicer.png"
 import logoUltimakerCura from "assets/img/logo-ultimaker-cura.png"
 
 const ProductBlockKarmenPillDiy = ({ props }) => {
-  const diyBuy = 'test';
+  const diyBuy = "test"
   const data = useStaticQuery(graphql`
     query {
       diyFull: file(relativePath: { eq: "product-full-diy.png" }) {
@@ -25,11 +25,11 @@ const ProductBlockKarmenPillDiy = ({ props }) => {
         <BackgroundImage
           file={data.diyFull}
           style={{
-            backgroundSize: '',
-            backgroundPosition: ''
+            backgroundSize: "",
+            backgroundPosition: "",
           }}
-          className="product-detail__left product-detail__img product-detail__img--diy">
-        </BackgroundImage>
+          className="product-detail__left product-detail__img product-detail__img--diy"
+        ></BackgroundImage>
         <div className="product-detail__right product-detail__right--without-btn">
           <h1 className="product-detail__headline">
             <FormattedMessage
