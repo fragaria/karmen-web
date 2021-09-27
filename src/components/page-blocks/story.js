@@ -35,7 +35,10 @@ const StoryBlock = props => {
             <h2 className="story__sub">
               <FormattedMessage
                 id="story.sub"
-                defaultMessage="Všechny funkce, které Karmen Pill a Kamern Cloud nabízejí, můžete ovládat také ze svého mobilního zařízení"
+                defaultMessage={`Za Karmen stojí softwarová společnost {linkFraga}. Nápad na vývoj se zrodil z vlastní potřeby, kdy \"jsme chtěli sledovat tisky i mimo pracovní dobu a nechtěli jsme kopírovat gcody na SDéčka\"`}
+                values={{
+                  linkFraga: <a href='https://fragaria.cz/'>Fragaria</a>
+                }}
               />
             </h2>
             <Link
