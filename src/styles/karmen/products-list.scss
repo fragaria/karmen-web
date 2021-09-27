@@ -69,6 +69,7 @@
   .products-list__desc {
     @include baseline(s4, $bodytype, 1.2, $below: 0, $above: 0);
     padding-top: 0 !important;
+    min-height: 7.5rem;
   }
 }
 
