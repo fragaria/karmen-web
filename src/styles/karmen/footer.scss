@@ -4,7 +4,6 @@
 
 .footer__section {
   position: relative;
-  padding: gu(2) 0;
 
   &:after {
     content: " ";
@@ -14,25 +13,6 @@
     width: 100%;
     background: map-get($palette, gray-semilight);
     height: 1px;
-  }
-}
-
-.footer-sitelinks {
-  display: flex;
-
-  .footer__karmenlogo {
-    margin-left: auto;
-    align-self: flex-end;
-    margin-bottom: gu(-.75);
-  }
-}
-
-.footer__karmenlogo {
-  display: none;
-  height: gu(5);
-
-  @include breakpoint(tablet-small up) {
-    display: block;
   }
 }
 
@@ -90,6 +70,8 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  padding-bottom: gu(1);
+  padding-top: gu(1);
 
   @include breakpoint(mobile up) {
     flex-direction: row;
@@ -98,21 +80,13 @@
 }
 
 .footer-linkgroups__title {
-  @include baseline(s7, $headingtype, 2, $below: 2);
-}
-
-.footer-linkgroups__container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  @include breakpoint(tablet-small up) {
-    flex-direction: row;
-  }
+  @include baseline(s5, $headingtype, 2, $below: .5);
+  text-transform: uppercase;
 }
 
 .footer-linkgroups__group {
   padding-right: gu(1);
+  list-style: none;
 
   @include breakpoint(tablet-tiny up) {
     padding-right: gu(2);
@@ -124,7 +98,37 @@
 }
 
 .footer-linkgroups__item {
+  padding-top: gu(.15);
+  padding-bottom: gu(.15);
   a {
-    @include anchor-style();
+    text-decoration: underline;
   }
+}
+
+.footer__nav-headline {
+  font-family: getFontFamily($headingtype);
+  font-weight: map-get($headingtype, semi);
+  font-size: 1.25rem;
+  letter-spacing: .01rem;
+  text-transform: uppercase;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(tablet-small up) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.footer__col {
+  margin-bottom: gu(1);
+  @include breakpoint(tablet-small up) {
+    width: 25%;
+  }
+}
+
+.footer-sitelinks {
+  font-size: 14px;
+  @include contentBlockVariant(56rem, $mobilePadding: 1.5, $defaultPadding: 1.5);
 }

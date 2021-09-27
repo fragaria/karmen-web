@@ -111,6 +111,36 @@ module.exports = {
         href: "https://www.trebesin.cz/",
       },
     ],
+    productsNav: {
+      en: [
+        {
+          name: "Karmen Cloud",
+          url: `/en/products/karmen-cloud`,
+        },
+        {
+          name: "Karmen Pill",
+          url: `/en/products/karmen-pill`,
+        },
+        {
+          name: "Karmen Pill DIY",
+          url: `/en/products/karmen-pill-diy`,
+        }
+      ],
+      cs: [
+        {
+          name: "Karmen Cloud",
+          url: `/cs/produkty/karmen-cloud`,
+        },
+        {
+          name: "Karmen Pill",
+          url: `/cs/produkty/karmen-pill`,
+        },
+        {
+          name: "Karmen Pill skládačka",
+          url: `/cs/produkty/karmen-pill-skladacka`,
+        }
+      ]
+    },
     nav: {
       en: [
         {

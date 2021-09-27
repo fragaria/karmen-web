@@ -11,7 +11,7 @@ const KarmenPill = ({ location }) => {
     <Layout location={location} containerClass="v-product-detail">
       <SEOMetadata
         lang="en"
-        title="Karmen Pill"
+        title="Karmen Cloud"
         description="Details about Karmen Cloud"
         pathname="/en/products/karmen-cloud/"
       />
