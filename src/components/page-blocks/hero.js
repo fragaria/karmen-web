@@ -6,8 +6,8 @@ import { BackgroundImage } from "components/image"
 
 const HeroBlock = props => {
   const intl = useIntl()
-  const learnLink = intl.locale === "cs" ? "/cs/#meet" : "/en/#meet"
-  const meetKarmenLink = intl.locale === "cs" ? "/cs/pribeh/" : "/en/story/"
+  const learnLink = intl.locale === "cs" ? "/cs/#solutions" : "/en/#solutions"
+  const meetKarmenLink = intl.locale === "cs" ? "/cs/pribeh" : "/en/story"
 
   const data = useStaticQuery(graphql`
     query {
@@ -37,7 +37,7 @@ const HeroBlock = props => {
             <h2 className="hero__sub">
               <FormattedMessage
                 id="hero-block.sub"
-                defaultMessage="Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals."
+                defaultMessage="Get a complete overview of all your print jobs."
                 values={{ lineBreak: <br /> }}
               />
             </h2>
@@ -54,7 +54,7 @@ const HeroBlock = props => {
             <Link to={meetKarmenLink} className="button button--outlineBlack">
               <FormattedMessage
                 id="hero-block.meet"
-                defaultMessage="Meet Karmen"
+                defaultMessage="Our story"
               />
               <br />
             </Link>

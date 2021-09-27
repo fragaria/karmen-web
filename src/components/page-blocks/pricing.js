@@ -9,7 +9,7 @@ const PricingBlock = ({ location, ...props }) => {
         <div className="pricing-circle"></div>
         <div className="content-block">
           <h1 className="page-block-headline sitenav__anchorpush">
-            <span className="sitenav__anchor" id="buy"></span>
+            <span className="sitenav__anchor" id="solutions"></span>
             <FormattedMessage
               id="pricing-block.headline"
               defaultMessage="Jaké řešení si vybrat?"

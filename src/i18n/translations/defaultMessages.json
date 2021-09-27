@@ -972,7 +972,7 @@
         }
       },
       {
-        "defaultMessage": "Get a complete overview of all your print jobs.{lineBreak}For companies, schools, co-working spaces and individuals.",
+        "defaultMessage": "Get a complete overview of all your print jobs.",
         "end": {
           "column": 16,
           "line": 42
@@ -998,7 +998,7 @@
         }
       },
       {
-        "defaultMessage": "Meet Karmen",
+        "defaultMessage": "Our story",
         "end": {
           "column": 16,
           "line": 58
