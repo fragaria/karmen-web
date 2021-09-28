@@ -124,7 +124,7 @@ module.exports = {
         {
           name: "Karmen Pill DIY",
           url: `/en/products/karmen-pill-diy`,
-        }
+        },
       ],
       cs: [
         {
@@ -138,8 +138,8 @@ module.exports = {
         {
           name: "Karmen Pill skládačka",
           url: `/cs/produkty/karmen-pill-skladacka`,
-        }
-      ]
+        },
+      ],
     },
     nav: {
       en: [

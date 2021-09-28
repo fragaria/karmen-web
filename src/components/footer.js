@@ -5,20 +5,16 @@ import { useIntl, FormattedMessage } from "react-intl"
 import Social from "./social"
 
 import strawberryImg from "assets/img/strawberry.svg"
-import karmenImg from "assets/img/karmen-logo.svg"
 
 const FooterLinks = ({ navGroups }) => (
   <nav aria-label="Footer" className="footer-linkgroups">
     <div className="footer-linkgroups__container">
       <ul className="footer-linkgroups__group">
-      {navGroups.map(item => (
-            <li
-              key={item.url}
-              className="footer-linkgroups__item"
-            >
-              <a href={item.url}>{item.name}</a>
-            </li>
-      ))}
+        {navGroups.map(item => (
+          <li key={item.url} className="footer-linkgroups__item">
+            <a href={item.url}>{item.name}</a>
+          </li>
+        ))}
       </ul>
     </div>
   </nav>
@@ -69,19 +65,34 @@ const Footer = () => {
         <div className="content-block footer-sitelinks">
           <div className="footer__row">
             <div className="footer__col">
-              <h5 className="footer-linkgroups__title">Stránky</h5>
+              <h5 className="footer-linkgroups__title">
+                <FormattedMessage
+                  id="footer.pages_headline"
+                  defaultMessage="Pages"
+                />
+              </h5>
               <FooterLinks
                 navGroups={data.site.siteMetadata.nav[intl.locale]}
               />
             </div>
             <div className="footer__col">
-              <h5 className="footer-linkgroups__title">Naše produkty</h5>
+              <h5 className="footer-linkgroups__title">
+                <FormattedMessage
+                  id="footer.products_headline"
+                  defaultMessage="Products"
+                />
+              </h5>
               <FooterLinks
                 navGroups={data.site.siteMetadata.productsNav[intl.locale]}
               />
             </div>
             <div className="footer__col">
-              <h5 className="footer-linkgroups__title">Kontaktujte nás</h5>
+              <h5 className="footer-linkgroups__title">
+                <FormattedMessage
+                  id="footer.contact_headline"
+                  defaultMessage="Contact us"
+                />
+              </h5>
               <ul className="list list--unstyled list--adress">
                 <li>
                   <a
@@ -102,7 +113,12 @@ const Footer = () => {
               </ul>
             </div>
             <div className="footer__col">
-              <h5 className="footer-linkgroups__title">Sledujte nás</h5>
+              <h5 className="footer-linkgroups__title">
+                <FormattedMessage
+                  id="footer.social_headline"
+                  defaultMessage="Watch us"
+                />
+              </h5>
               <Social class="social--footer" />
             </div>
           </div>
