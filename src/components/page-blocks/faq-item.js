@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 
-const FaqItem = ({ resources, site, location, ...props }) => {
+const FaqItem = ({ key, resources, site, location, ...props }) => {
   const [active, setActive] = useState(false)
   const [setHeight, setHeightState] = useState("0px")
   const { frontmatter, html } = resources
@@ -14,9 +14,21 @@ const FaqItem = ({ resources, site, location, ...props }) => {
     )
   }
 
+  const handleKeyDown = ev => {
+    if (ev.keyCode === 32 || ev.keyCode === 13) {
+      toggleItem(ev)
+    }
+  }
+
   return (
     <article className={"v-faq-resources__item " + (active ? "active" : "")}>
-      <div className="v-faq-resources__item__header" role="tab" onClick={toggleItem}>
+      <div
+        className="v-faq-resources__item__header"
+        role="tab"
+        tabIndex={key}
+        onClick={toggleItem}
+        onKeyDown={handleKeyDown}
+      >
         <h2 className="v-faq-resources__item__headline">{frontmatter.title}</h2>
         <div
           className={

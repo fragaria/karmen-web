@@ -144,13 +144,13 @@ const ProductBlockKarmenCloud = ({ props }) => {
               </div>
               <div className="product-detail__logo-list">
                 <div className="product-detail__logo">
-                  <img className="logo-img" src={logoCura} />
+                  <img className="logo-img" src={logoCura} alt="Ultimaker Cura: World’s most popular 3D printing software" />
                 </div>
                 <div className="product-detail__logo">
-                  <img className="logo-img" src={logoPrusaSlicer} />
+                  <img className="logo-img" src={logoPrusaSlicer} alt="PrusaSlicer: open-source, feature-rich, frequently updated tool that contains everything you need to export the perfect print files" />
                 </div>
                 <div className="product-detail__logo">
-                  <img className="logo-img" src={logoUltimakerCura} />
+                  <img className="logo-img" src={logoUltimakerCura} alt="Slic3r: Open source 3D printing toolbox" />
                 </div>
               </div>
             </section>

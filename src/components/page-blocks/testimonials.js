@@ -21,6 +21,7 @@ const TestimonialsCarousel = ({ data }) => {
               currentSlide === 0 ? " disabled" : ""
             }`}
             onClick={previous}
+            aria-label="prev"
           ></button>
           <button
             title="Next"
@@ -28,6 +29,7 @@ const TestimonialsCarousel = ({ data }) => {
               currentSlide === totalItems - slidesToShow ? " disabled" : ""
             }`}
             onClick={next}
+            aria-label="next"
           ></button>
         </div>
       )

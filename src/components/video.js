@@ -26,10 +26,6 @@ const VideoPlayer = props => {
       vidRef.current.pause()
     }
   }
-  function stop() {
-    setPlaying(false)
-    vidRef.current.currentTime = 0
-  }
 
   function replay() {
     setPlaying(true)
@@ -39,6 +35,7 @@ const VideoPlayer = props => {
   }
 
   function videoEnded(video) {
+    vidRef.current.currentTime = 0
     vidRef.current.load()
     setPaused(false)
     setPlaying(false)
@@ -56,11 +53,22 @@ const VideoPlayer = props => {
   function handleTouchEnd(e) {
     e.preventDefault()
     if (playing || paused) {
-      console.log("touch")
       setShowControls(true)
       setTimeout(() => {
         setShowControls(false)
       }, 2000)
+    }
+  }
+
+  const handleKeyDownOnPlay = ev => {
+    if (ev.keyCode === 32 || ev.keyCode === 13) {
+      playToggle()
+    }
+  }
+
+  const handleKeyDownOnReplay = ev => {
+    if (ev.keyCode === 32 || ev.keyCode === 13) {
+      replay()
     }
   }
 
@@ -74,12 +82,12 @@ const VideoPlayer = props => {
       }
       onMouseMove={handleMouseMove}
       onTouchEnd={handleTouchEnd}
+      role="presentation"
     >
       <video
         ref={vidRef}
         src={props.video}
         type="video/mp4"
-        onEnded={stop}
         poster={props.poster}
         onEnded={videoEnded}
       >
@@ -87,19 +95,23 @@ const VideoPlayer = props => {
       </video>
       <div className="video-overlay">
         <div className="video-controls">
-          <div
+          <button
             className="video-controls__button video-controls__button--play"
             onClick={playToggle}
             onTouchEnd={playToggle}
+            aria-label="Play/Pause"
+            onKeyDown={handleKeyDownOnPlay}
           >
             <div className="video-controls-button__play-icon"></div>
             <div className="video-controls-button__pause-icon"></div>
-          </div>
-          <div
+          </button>
+          <button
             className="video-controls__button video-controls__button--replay"
             onClick={replay}
             onTouchEnd={replay}
-          ></div>
+            aria-label="Replay"
+            onKeyDown={handleKeyDownOnReplay}
+          ></button>
         </div>
       </div>
     </div>

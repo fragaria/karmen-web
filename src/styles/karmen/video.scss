@@ -47,6 +47,7 @@ video[poster] {
   position: relative;
 }
 .video-controls__button {
+  border: 0;
   border-radius: 50%;
   background-color: $video-button-bg;
   cursor: pointer;

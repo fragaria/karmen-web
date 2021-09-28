@@ -40,12 +40,14 @@ const KarmenPillGalleryCarousel = () => {
               currentSlide === 0 ? " disabled" : ""
             }`}
             onClick={previous}
+            aria-label="prev"
           ></button>
           <button
             className={`carousel__arrow carousel__arrow--right${
               currentSlide === totalItems - slidesToShow ? " disabled" : ""
             }`}
             onClick={next}
+            aria-label="next"
           ></button>
         </div>
       )
