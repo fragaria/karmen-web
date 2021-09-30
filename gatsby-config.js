@@ -72,7 +72,7 @@ module.exports = {
       },
     },
     pillDocs: "https://docs.karmen.tech/",
-    karmenDocs: "https://next.karmen.tech/",
+    karmenDocs: "https://cloud.karmen.tech/",
     clients: [
       {
         title: "3darena",
