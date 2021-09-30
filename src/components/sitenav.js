@@ -94,7 +94,7 @@ const Sitenav = () => {
               {intl.locale === "en" && (
                 <>
                   <a
-                    href="https://cloud.karmen.tech/login"
+                    href="https://next.karmen.tech/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
@@ -114,7 +114,7 @@ const Sitenav = () => {
               {intl.locale !== "en" && (
                 <>
                   <a
-                    href="https://cloud.karmen.tech/login"
+                    href="https://next.karmen.tech/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"

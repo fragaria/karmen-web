@@ -204,7 +204,7 @@ module.exports = {
         [
           {
             name: "Log in to Karmen Cloud",
-            url: "https://cloud.karmen.tech",
+            url: "https://next.karmen.tech",
           },
           {
             name: "Source code on GitHub",
@@ -232,7 +232,7 @@ module.exports = {
         [
           {
             name: "Přihlásit se do Karmen Cloudu",
-            url: "https://cloud.karmen.tech",
+            url: "https://next.karmen.tech",
           },
           {
             name: "Zdrojový kód na GitHubu",

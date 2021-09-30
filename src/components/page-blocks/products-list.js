@@ -26,7 +26,7 @@ const ProductsList = ({ location, ...props }) => {
     intl.locale === "cs"
       ? "/cs/produkty/karmen-pill-skladacka"
       : "/en/products/karmen-pill-diy"
-  // const registerLink = "https://cloud.karmen.tech/register"
+  // const registerLink = "https://next.karmen.tech/registration"
   const data = useStaticQuery(graphql`
     query {
       pillTablet: file(relativePath: { eq: "product-pill.png" }) {

@@ -5,4 +5,4 @@ linkTitle: Návod najdete zde
 ico: cloud_doc
 ---
 
-Jak [přidat tiskárny](https://docs.karmen.tech/#/quickstart) a tisknout přes Karmen. <br> Za předpokladu, že ještě nemáte vytvořený účet, začněte [zde](https://cloud.karmen.tech/register).
+Jak [přidat tiskárny](https://docs.karmen.tech/#/quickstart) a tisknout přes Karmen. <br> Za předpokladu, že ještě nemáte vytvořený účet, začněte [zde](https://next.karmen.tech/registration).

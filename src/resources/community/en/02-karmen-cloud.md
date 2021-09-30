@@ -1,6 +1,6 @@
 ---
 title: Karmen Cloud
-link: https://cloud.karmen.tech/
+link: https://next.karmen.tech/
 linkTitle: Sign in to Karmen Cloud
 ico: reg
 ---
