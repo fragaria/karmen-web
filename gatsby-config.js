@@ -43,7 +43,7 @@ module.exports = {
       websiteTitle: "Karmen",
       officialName: "Fragaria s.r.o.",
       phone: "+420 222 581 311",
-      contactEmail: "info@karmen.tech",
+      contactEmail: "karmen@karmen.tech",
       ico: "48590151",
       dic: "CZ48590151",
       accountNr: "2700620429/2010",
