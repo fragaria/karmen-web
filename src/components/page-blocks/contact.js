@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { defineMessages, FormattedMessage, useIntl } from "react-intl"
 
 import { Formik, Form, Field } from "formik"
 
 import Social from "../social"
+import FormMessage from "./form-message";
 
 const messages = defineMessages({
   formName: {
@@ -39,16 +40,44 @@ const ContactBlock = props => {
   `)
 
   const intl = useIntl()
+  const [showMessage, setShowMessage] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
-  const sendMessage = async (functionRoot, context) => {
-    await fetch(`${functionRoot}.netlify/functions/send-contact-form-message`, {
-      method: "POST",
-      body: JSON.stringify(context),
-    })
-  }
+  const onSubmit = async (
+    values,
+    { setSubmitting, setErrors, setStatus, resetForm }
+  ) => {
+    await fetch(
+      `${data.site.siteMetadata.functions.rootUrl}.netlify/functions/send-contact-form-message`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          ...values,
+          lang: intl.locale
+        }),
+      }
+    ).then(
+      async (response) => {
+        if(response.ok) {
+          setMessageSent(true);
+          setShowMessage(true);
+          resetForm({})
+          setStatus({ success: true })
+        } else {
+          setStatus({ success: false })
+          setSubmitting(false)
+          setMessageSent(false);
+          setShowMessage(true);
+        }
 
-  const onSubmit = async values => {
-    await sendMessage(data.site.siteMetadata.functions.rootUrl, {...values, lang: intl.locale});
+      },
+      (error) => {
+        setStatus({ success: false })
+        setSubmitting(false)
+        setErrors({ submit: error.message })
+        setMessageSent(false);
+        setShowMessage(true);
+      })
   }
 
   const validate = values => {
@@ -91,6 +120,7 @@ const ContactBlock = props => {
         <div className="contact">
           <div className="contact__column">
             <div className="contact__form">
+              <FormMessage show={showMessage} success={messageSent}/>
               <Formik
                 validate={validate}
                 initialValues={{

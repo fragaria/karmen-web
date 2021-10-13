@@ -75,3 +75,14 @@
   }
 }
 
+.form-message {
+  padding: gu();
+  background-color: map-get($palette, gray-light);
+  margin-bottom: gu(1);
+  &.success {
+    background-color: #BDEBC7;
+  }
+  &.error {
+    background-color: rgba(map-get($palette, red), .2);
+  }
+}
