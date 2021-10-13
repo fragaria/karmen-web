@@ -43,7 +43,7 @@ module.exports = {
       websiteTitle: "Karmen",
       officialName: "Fragaria s.r.o.",
       phone: "+420 222 581 311",
-      contactEmail: "info@karmen.tech",
+      contactEmail: "karmen@karmen.tech",
       ico: "48590151",
       dic: "CZ48590151",
       accountNr: "2700620429/2010",
@@ -71,8 +71,8 @@ module.exports = {
         gitter: "fragaria/karmen",
       },
     },
-    pillDocs: "https://docs.karmen.tech/#/pill-getting-started",
-    karmenDocs: "https://docs.karmen.tech/#/quickstart",
+    pillDocs: "https://docs.karmen.tech/#/karmen-pill-zaciname",
+    karmenDocs: "https://docs.karmen.tech/#/karmen-pill-zaciname",
     clients: [
       {
         title: "3darena",
@@ -204,7 +204,7 @@ module.exports = {
         [
           {
             name: "Log in to Karmen Cloud",
-            url: "https://cloud.karmen.tech",
+            url: "https://next.karmen.tech",
           },
           {
             name: "Source code on GitHub",
@@ -232,7 +232,7 @@ module.exports = {
         [
           {
             name: "Přihlásit se do Karmen Cloudu",
-            url: "https://cloud.karmen.tech",
+            url: "https://next.karmen.tech",
           },
           {
             name: "Zdrojový kód na GitHubu",
