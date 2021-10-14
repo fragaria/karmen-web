@@ -174,28 +174,24 @@ module.exports = {
           url: `/cs/produkty`,
         },
         {
-          name: "Cena",
-          url: `/cs/#buy`,
-        },
-        {
           name: "Příběh Karmen",
           url: `/cs/pribeh/`,
-        },
-        {
-          name: "Kontakt",
-          url: `/cs/kontakt/`,
-        },
-        {
-          name: "Blog",
-          url: `/cs/blog/`,
         },
         {
           name: "Komunita",
           url: `/cs/komunita/`,
         },
         {
+          name: "Blog",
+          url: `/cs/blog/`,
+        },
+        {
           name: "FAQ",
           url: `/cs/faq/`,
+        },
+        {
+          name: "Kontakt",
+          url: `/cs/kontakt/`,
         },
       ],
     },
