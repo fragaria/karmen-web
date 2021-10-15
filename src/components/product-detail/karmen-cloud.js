@@ -11,7 +11,7 @@ import logoPrusaSlicer from "assets/img/logo-prusa-slicer.png"
 import logoUltimakerCura from "assets/img/logo-ultimaker-cura.png"
 
 const ProductBlockKarmenCloud = ({ props }) => {
-  const cloudRegister = "test"
+  const cloudRegister = "https://next.karmen.tech/registration"
   const data = useStaticQuery(graphql`
     query {
       cloudFull: file(relativePath: { eq: "product-full-cloud.png" }) {
