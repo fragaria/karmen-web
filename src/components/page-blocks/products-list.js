@@ -22,11 +22,14 @@ const ProductsList = ({ location, ...props }) => {
     intl.locale === "cs"
       ? "/cs/produkty/karmen-pill/"
       : "/en/products/karmen-pill/"
-  const diyLink =
-    intl.locale === "cs"
-      ? "/cs/produkty/karmen-pill-skladacka"
-      : "/en/products/karmen-pill-diy"
+  // const diyLink =
+  //   intl.locale === "cs"
+  //     ? "/cs/produkty/karmen-pill-skladacka"
+  //     : "/en/products/karmen-pill-diy"
   // const registerLink = "https://next.karmen.tech/registration"
+  const pluginLink = "https://github.com/fragaria/karmen-octoprint-connector"
+  const octoLink = "https://octoprint.org/"
+  const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
   const data = useStaticQuery(graphql`
     query {
       pillTablet: file(relativePath: { eq: "product-pill.png" }) {
@@ -58,14 +61,18 @@ const ProductsList = ({ location, ...props }) => {
             <h2 className="products-list__title">
               <FormattedMessage
                 id="pricing-block.myself_title"
-                defaultMessage="Mám vlastní řešení"
+                defaultMessage="Chci jen webovou službu"
               />
             </h2>
             <div className="products-list__desc">
               <p>
                 <FormattedMessage
                   id="pricing-block.myself_desc"
-                  defaultMessage="Bez Karmen Pill se obejdete, pokud máte vlastní zařízení pro monitoring tisku kompatibilní s Octoprintem."
+                  defaultMessage="Stáhněte si náš {pluginLink} do Vašeho {octoLink}, připojte si své tiskárny do Karmen Cloudu a webovou službu na ovládání 3D tiskáren nechte na nás."
+                  values={{
+                    pluginLink: <a href={pluginLink}>plugin</a>,
+                    octoLink: <a href={octoLink}>Octoprintu</a>
+                  }}
                 />
               </p>
             </div>
@@ -88,8 +95,11 @@ const ProductsList = ({ location, ...props }) => {
             </div>
             <div className="products-list__price">
               <FormattedMessage
-                id="pricing-block.myself_price"
-                defaultMessage="Karmen Cloud je zdarma pro všechny"
+                id="pricing-block.manual"
+                defaultMessage="{manualLink}"
+                values={{
+                  manualLink: <a href={manualLink}>Návod jak připojit Octoprint</a>
+                }}
               />
             </div>
           </div>
@@ -109,7 +119,7 @@ const ProductsList = ({ location, ...props }) => {
             <h2 className="products-list__title">
               <FormattedMessage
                 id="pricing-block.full_title"
-                defaultMessage="Chci hotové řešení"
+                defaultMessage="Chci kompletní řešení"
               />
             </h2>
             <div className="products-list__desc">
@@ -146,55 +156,55 @@ const ProductsList = ({ location, ...props }) => {
           </div>
         </div>
         {/* DIY */}
-        <div className="products-list__box">
-          <BackgroundImage
-            file={data.diy}
-            style={{
-              backgroundPosition: "center bottom",
-              backgroundSize: "contain",
-            }}
-            className="products-list__img"
-          />
-          <div className="products-list__info">
-            <h2 className="products-list__title">
-              <FormattedMessage
-                id="pricing-block.diy_title"
-                defaultMessage="Mám vlastní řešení"
-              />
-            </h2>
-            <div className="products-list__desc">
-              <p>
-                <FormattedMessage
-                  id="pricing-block.diy_desc"
-                  defaultMessage="Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod."
-                />
-              </p>
-            </div>
-            <div className="products-list__buy">
-              <Link
-                to={diyLink}
-                className="products-list__buybutton button--full button button--red"
-              >
-                <FormattedMessage
-                  id="pricing-block.cta_register"
-                  defaultMessage="Chci skládačku"
-                />
-              </Link>
-            </div>
-            {/*<div className="products-list__price-vat">*/}
-            {/*  <FormattedMessage*/}
-            {/*    id="pricing-block.diy_price_vat"*/}
-            {/*    defaultMessage="Připravujeme"*/}
-            {/*  />*/}
-            {/*</div>*/}
-            <div className="products-list__price products-list__price--novat">
-              <FormattedMessage
-                id="pricing-block.diy_price"
-                defaultMessage="Připravujeme"
-              />
-            </div>
-          </div>
-        </div>
+        {/*<div className="products-list__box">*/}
+        {/*  <BackgroundImage*/}
+        {/*    file={data.diy}*/}
+        {/*    style={{*/}
+        {/*      backgroundPosition: "center bottom",*/}
+        {/*      backgroundSize: "contain",*/}
+        {/*    }}*/}
+        {/*    className="products-list__img"*/}
+        {/*  />*/}
+        {/*  <div className="products-list__info">*/}
+        {/*    <h2 className="products-list__title">*/}
+        {/*      <FormattedMessage*/}
+        {/*        id="pricing-block.diy_title"*/}
+        {/*        defaultMessage="Mám vlastní řešení"*/}
+        {/*      />*/}
+        {/*    </h2>*/}
+        {/*    <div className="products-list__desc">*/}
+        {/*      <p>*/}
+        {/*        <FormattedMessage*/}
+        {/*          id="pricing-block.diy_desc"*/}
+        {/*          defaultMessage="Připravujeme pro vás možnost vytisknout a složit si vlastní Karmen. Už brzy tu najdete návod."*/}
+        {/*        />*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*    <div className="products-list__buy">*/}
+        {/*      <Link*/}
+        {/*        to={diyLink}*/}
+        {/*        className="products-list__buybutton button--full button button--red"*/}
+        {/*      >*/}
+        {/*        <FormattedMessage*/}
+        {/*          id="pricing-block.cta_register"*/}
+        {/*          defaultMessage="Chci skládačku"*/}
+        {/*        />*/}
+        {/*      </Link>*/}
+        {/*    </div>*/}
+        {/*    /!*<div className="products-list__price-vat">*!/*/}
+        {/*    /!*  <FormattedMessage*!/*/}
+        {/*    /!*    id="pricing-block.diy_price_vat"*!/*/}
+        {/*    /!*    defaultMessage="Připravujeme"*!/*/}
+        {/*    /!*  />*!/*/}
+        {/*    /!*</div>*!/*/}
+        {/*    <div className="products-list__price products-list__price--novat">*/}
+        {/*      <FormattedMessage*/}
+        {/*        id="pricing-block.diy_price"*/}
+        {/*        defaultMessage="Připravujeme"*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </section>
   )

@@ -70,6 +70,9 @@
     @include baseline(s4, $bodytype, 1.2, $below: 0, $above: 0);
     padding-top: 0 !important;
     min-height: 7.5rem;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -96,5 +99,8 @@
   @include baseline(s4, $headingtype, 1, $below: 0, $above: 0);
   &--novat {
     margin-top: gu(1);
+  }
+  a {
+    text-decoration: underline;
   }
 }
