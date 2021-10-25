@@ -21,8 +21,14 @@ export const onClientEntry = () => {
     window.location.pathname.startsWith("/en") ||
     window.location.pathname.startsWith("/cs")
 
+  if (window.location.pathname.startsWith("/en")) {
+    const pathname = window.location.pathname.replace("/en", "");
+    window.location.pathname = `/cs${pathname}`
+  }
+
   if (!hasLangPrefix) {
-    window.location.pathname = `/en${window.location.pathname}`
+    // window.location.pathname = `/en${window.location.pathname}`
+    window.location.pathname = `/cs${window.location.pathname}`
   }
 }
 
