@@ -21,7 +21,6 @@ import "intl"
 
 import Sitenav from "components/sitenav"
 import Footer from "components/footer"
-import GitterLink from "components/gitter-link"
 import SubscriptionBox from "components/subscription-box"
 // import IEWarning from "../legacy/ie-warning"
 
@@ -103,7 +102,6 @@ const Layout = ({ children, location, i18nMessages, containerClass } = {}) => {
       <BlankLayout>
         <CC />
         <Sitenav />
-        <GitterLink />
         <div className={wrapperClassName}>
           {/* <IEWarning /> */}
           {children}

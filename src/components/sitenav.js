@@ -124,7 +124,7 @@ const Sitenav = () => {
 
                   <Link
                     to="/en/"
-                    className="sitenav__langswitch"
+                    className="sitenav__langswitch hidden"
                     title="Switch to english"
                   >
                     EN

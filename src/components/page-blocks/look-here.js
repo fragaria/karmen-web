@@ -24,7 +24,7 @@ const LookHere = () => {
         </p>
       </div>
       <Link
-        to={"https://docs.karmen.tech/"}
+        to={"https://docs.karmen.tech/#/faq"}
         className="button button--red button--mr button-mb"
       >
         <FormattedMessage

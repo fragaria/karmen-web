@@ -1,1 +1,1 @@
-[{"id":"faq.headline","defaultMessage":"Frequently asked questions","file":"src/pages/faq.cs.js","start":{"line":17,"column":8},"end":{"line":20,"column":10}}]
+[{"id":"look-here.body","defaultMessage":"Hledáte něco jinýho nebo máte konkrétní otázku?{lineBreak}Prohlédnete si Karmen dokumentaci nebo nás kontaktujte","file":"src/pages/faq.cs.js","start":{"line":15,"column":8},"end":{"line":19,"column":10}}]

@@ -3,7 +3,6 @@ import Layout from "layouts/cs"
 import { graphql } from "gatsby"
 
 import SEOMetadata from "components/seo/metadata"
-import FaqResources from "components/page-blocks/faq-resources"
 import LookHere from "../components/page-blocks/look-here"
 
 const Faq = ({ data, location }) => {
@@ -11,7 +10,6 @@ const Faq = ({ data, location }) => {
     <Layout location={location} containerClass="v-faq-resources">
       <SEOMetadata title="FAQ" lang="cs" pathname={location.pathname} />
       <h1 className="page-block-headline">Často kladené otázky</h1>
-      <FaqResources resources={data.faq.edges.map(({ node }) => node)} />
       <LookHere></LookHere>
     </Layout>
   )

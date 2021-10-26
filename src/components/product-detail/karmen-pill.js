@@ -376,7 +376,7 @@ const ProductBlockKarmenPill = ({ props }) => {
                 </div>
               </div>
             </section>
-            <section className="product-detail__article">
+            {/* <section className="product-detail__article">
               <h1 className="product-detail__headline2">
                 <FormattedMessage
                   id="product-detail-pill.package-content_title"
@@ -386,7 +386,7 @@ const ProductBlockKarmenPill = ({ props }) => {
               <div className="product-detail__package-content">
                 <KarmenPillPackageCarousel />
               </div>
-            </section>
+            </section> */}
           </div>
         </section>
       </div>
