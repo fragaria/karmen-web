@@ -21,7 +21,7 @@ Cloudová služba je vyvíjena jako open source řešení a jejím úkolem je ov
 
 **Karmen Pill** je malá krabička s rozměry 77 x 34 x 12 mm, která připojením přes USB port, zpřístupní tiskárnu do lokální sítě nebo internetu a umožní ji připojit ke cloudové službě Karmen.
 
-Karmen Pill je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura. Umožňuje přenos obrazu z kamery do webového rozhraní, přes nějž poskytuje uživateli rovněž informace o teplotě senzorů a probíhajícím tisku. Umožňuje také základní ovládání tiskárny, typicky spuštění a (po)zastavení tisku. Karmen Pill je založena na open source řešení vycházejícím ze systému Octoprint.
+Karmen je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura. Umožňuje přenos obrazu z kamery do webového rozhraní, přes nějž poskytuje uživateli rovněž informace o teplotě senzorů a probíhajícím tisku. Umožňuje také základní ovládání tiskárny, typicky spuštění a (po)zastavení tisku. Karmen Pill je založena na open source řešení vycházejícím ze systému Octoprint.
 
 Cena Karmen Pill je 3.500 Kč bez DPH a zájemci si ji mohou předobjednat na webu [karmen.tech](https://karmen.tech/en/). V případě, že využijete naší hostované služby, máte provoz do určitého množství připojených tiskáren a objemu dat zdarma.
 

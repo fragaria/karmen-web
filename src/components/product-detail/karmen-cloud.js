@@ -138,7 +138,7 @@ const ProductBlockKarmenCloud = ({ props }) => {
                 <p>
                   <FormattedMessage
                     id="product-detail-pill.compatibility_text"
-                    defaultMessage="Karmen Pill je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura."
+                    defaultMessage="Karmen je kompatibilní s nejrozšířenějšími slicery včetně Slic3r, PrusaSlicer či Ultimaker Cura."
                   />
                 </p>
               </div>
