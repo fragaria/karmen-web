@@ -26,7 +26,7 @@ const PrincipleBlock = props => {
           <span className="sitenav__anchor" id="principle"></span>
           <FormattedMessage
             id="principle-block.headline"
-            defaultMessage="Práci s Karmen zvádne každý"
+            defaultMessage="Práci s Karmen zvládne každý"
           />
         </h1>
         <h2 className="principle-sub">
