@@ -27,8 +27,6 @@ const ProductsList = ({ location, ...props }) => {
   //     ? "/cs/produkty/karmen-pill-skladacka"
   //     : "/en/products/karmen-pill-diy"
   // const registerLink = "https://next.karmen.tech/registration"
-  const pluginLink = "https://github.com/fragaria/karmen-octoprint-connector"
-  const octoLink = "https://octoprint.org/"
   const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
   const data = useStaticQuery(graphql`
     query {
@@ -68,11 +66,7 @@ const ProductsList = ({ location, ...props }) => {
               <p>
                 <FormattedMessage
                   id="pricing-block.myself_desc"
-                  defaultMessage="Stáhněte si náš {pluginLink} do Vašeho {octoLink}, připojte si své tiskárny do Karmen Cloudu a webovou službu na ovládání 3D tiskáren nechte na nás."
-                  values={{
-                    pluginLink: <a href={pluginLink}>plugin</a>,
-                    octoLink: <a href={octoLink}>Octoprintu</a>
-                  }}
+                  defaultMessage="Stáhněte si náš plugin do Vašeho Octoprintu, připojte si své tiskárny do Karmen Cloudu a webovou službu na ovládání 3D tiskáren nechte na nás."
                 />
               </p>
             </div>
