@@ -1,14 +1,14 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { FormattedMessage } from "react-intl"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { FormattedMessage, useIntl } from "react-intl"
 
 import "react-multi-carousel/lib/styles.css"
 
 import { BackgroundImage } from "components/image"
-import CheckoutBooth from "components/checkout/booth"
+// import CheckoutBooth from "components/checkout/booth"
 
 import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
-import KarmenPillPackageCarousel from "components/product-detail/karmen-pill-package"
+// import KarmenPillPackageCarousel from "components/product-detail/karmen-pill-package"
 
 import czFlag from "assets/img/cz-flag.png"
 import iconPackage from "assets/img/icon-package.png"
@@ -23,6 +23,11 @@ import logoIkem from "assets/img/logo-ikem.png"
 import logoTrebesin from "assets/img/logo-prumyslovka-trebesin.png"
 
 const ProductBlockKarmenPill = ({ props }) => {
+  const intl = useIntl()
+  const buyPillLink =
+    intl.locale === "cs"
+      ? "/cs/koupit/"
+      : "/en/koupit/"
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -40,20 +45,20 @@ const ProductBlockKarmenPill = ({ props }) => {
       }
     }
   `)
-  const checkoutEnabled = data.site.siteMetadata.checkout.enabled
+  // const checkoutEnabled = data.site.siteMetadata.checkout.enabled
   const [active, setActive] = useState(false)
-  const toggleSidebar = evt => {
-    evt.preventDefault()
-    if (active) {
-      document.documentElement.classList.remove("overflow-sidebar-opened")
-    } else {
-      document.documentElement.classList.add("overflow-sidebar-opened")
-    }
-    setActive(!active)
-  }
+  // const toggleSidebar = evt => {
+  //   evt.preventDefault()
+  //   if (active) {
+  //     document.documentElement.classList.remove("overflow-sidebar-opened")
+  //   } else {
+  //     document.documentElement.classList.add("overflow-sidebar-opened")
+  //   }
+  //   setActive(!active)
+  // }
   return (
     <section>
-      <section
+      {/* <section
         className={`offcanvas-sidebar ${active === true ? "active" : ""}`}
       >
         <button
@@ -105,10 +110,10 @@ const ProductBlockKarmenPill = ({ props }) => {
           )}
           {checkoutEnabled && <CheckoutBooth />}
         </div>
-      </section>
-      <div
+      </section> */}
+      {/* <div
         className={`offcanvas-overlay ${active === true ? "active" : ""}`}
-      ></div>
+      ></div> */}
       <div className="product-detail__hero">
         <BackgroundImage
           file={data.pillFull}
@@ -152,13 +157,13 @@ const ProductBlockKarmenPill = ({ props }) => {
               defaultMessage="3500 Kč bez DPH"
             />
           </div>
-          {/*<Link to={pillBuy} className="product-detail__buy-button button button--full button--red">*/}
-          {/*  <FormattedMessage*/}
-          {/*    id="product-detail-pill.buy_button"*/}
-          {/*    defaultMessage="Zakoupit"*/}
-          {/*  />*/}
-          {/*</Link>*/}
-          <button
+          <Link to={buyPillLink} className="product-detail__buy-button button button--full button--red">
+            <FormattedMessage
+              id="product-detail-pill.buy_button"
+              defaultMessage="Zakoupit"
+            />
+          </Link>
+          {/* <button
             className="product-detail__buy-button button button-full button--red"
             onClick={toggleSidebar}
           >
@@ -166,7 +171,7 @@ const ProductBlockKarmenPill = ({ props }) => {
               id="product-detail-pill.buy_button"
               defaultMessage="Zakoupit"
             />
-          </button>
+          </button> */}
           <ul className="product-detail__delivery list--unstyled">
             <li>
               <img
