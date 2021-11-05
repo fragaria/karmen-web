@@ -174,6 +174,10 @@ module.exports = {
           url: `/cs/produkty`,
         },
         {
+          name: "Koupit",
+          url: `/cs/koupit`,
+        },
+        {
           name: "Příběh Karmen",
           url: `/cs/pribeh/`,
         },
