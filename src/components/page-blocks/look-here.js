@@ -11,14 +11,14 @@ const LookHere = () => {
       <h2 className="look-here__headline">
         <FormattedMessage
           id="look-here.headline"
-          defaultMessage="Nenašli jste co hledáte?"
+          defaultMessage="Nejčastější dotazy shrnujeme v naší dokumentaci"
         />
       </h2>
       <div className="look-here__body">
         <p>
           <FormattedMessage
             id="look-here.body"
-            defaultMessage="Hledáte něco jinýho nebo máte konkrétní otázku?{lineBreak}Prohlédnete si Karmen dokumentaci nebo nás kontaktujte"
+            defaultMessage="Prozkoumejte je, nebo nám napište."
             values={{ lineBreak: <br /> }}
           />
         </p>
@@ -29,7 +29,7 @@ const LookHere = () => {
       >
         <FormattedMessage
           id="look-here.doc"
-          defaultMessage="Karmen documentation"
+          defaultMessage="Nejčastejší dotazy / FAQ"
         />
       </Link>
       <Link to={contactLink} className="button button--outlineBlack">

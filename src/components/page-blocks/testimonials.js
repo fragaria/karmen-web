@@ -62,7 +62,7 @@ const TestimonialsCarousel = ({ data }) => {
         <div className="testimonial__item">
           <div className="testimonial__description">
             <div className="testimonial__description-text">
-              Karmen Pill je skvělé řešení, jak nejen vzdáleně dohlížet na 3D tiskárny a ovládat je. Pro naši školu je především skvělou pomůckou, jak lépe 3D tisk poskytnout žákům a udělat pro ně tuto novou technologii více zajímavou a ještě atraktivnější.
+              Karmen Pill je skvělé řešení, jak nejen vzdáleně dohlížet na 3D tiskárny, ale také je ovládat. Pro naši školu je Karmen skvělou pomůckou, jak lépe 3D tisk poskytnout žákům a udělat pro ně tuto novou technologii více zajímavou a ještě atraktivnější.
             </div>
           </div>
           <div className="testimonial__info">
@@ -75,7 +75,7 @@ const TestimonialsCarousel = ({ data }) => {
         <div className="testimonial__item">
           <div className="testimonial__description">
             <div className="testimonial__description-text">
-              Kamerky používám doma i v práci k plné spokojenosti. Mohu tisk kontrolovat a ovládat i z telefonu, při nějaké nehodě přerušit či úplně zastavit v noci si přisvítit. Rozhodně, k mé plné spokojenosti, to není klamavá reklama. V kombinaci s mou tiskárnou/tiskárnami je to velmi dobré řešení.
+              Kamerky používám doma i v práci k plné spokojenosti. Mohu tisk kontrolovat a ovládat i z telefonu. Při nějaké nehodě mohu tisk přerušit či úplně zastavit a v noci si přisvítit. Rozhodně to není klamavá reklama.
             </div>
           </div>
           <div className="testimonial__info">
