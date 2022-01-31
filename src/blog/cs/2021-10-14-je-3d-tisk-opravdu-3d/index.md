@@ -14,22 +14,22 @@ Další speciální funkcí, která se dle mého nejvíce blíží opravdovému 
 Na začátku Covid pandemie se 3D tiskařská komunita sjednotila a začala ve velkém tisknout čelenky na štíty pro zdravotníky, do které se zapojily i nějaké firmy. Podobný 3D model čelenky, kterou rozšířil Prusa Research upravil někdo v komunitě tak, že se dala tisknout právě na Vase mode, což výrazně zjednodušilo a urychlilo tisk. Jedná se relativně o složitý tvar, ale úpravou modelu to bylo možné. Pro zajištění pevnosti u štítu bylo zapotřebí tisknout model extruzí 1 mm a ideálně mít zvýšený Flow na 120 %. Když se čelenka vytiskla správně, fungovala výborně, ale bohužel hodně lidí se hnalo za časem a kvalita nebyla vůbec dobrá. Tyto čelenky se pak bohužel nedaly použít, protože nebyly dostatečně pevné. Na Obrázku 1 je vidět vyslicovaná čelenka na Vase mode v softwaru Cura. V náhledu je zapnuta viditelnost přejezdů, ale na celém tisku je pouze jeden, a to ten na první vrstvu. Mě to tehdy hodně zaujalo, a proto se o Vase mode hodně zajímám a používám ho co nejvíc.
 
 ![Obrázek 1 - Uzpůsobená čelenka na tisk na Vasemode - Cura](./celenka-vasemode.png)
-<div style="margin-top: -30px; margin-bottom:40px; text-align: center; font-style:italic">Obrázek 1 - Uzpůsobená čelenka na tisk na Vasemode - Cura</div>
+*Obrázek 1 - Uzpůsobená čelenka na tisk na Vasemode - Cura*
 
 Tím jsou asi možnosti klasického FMD tisku vyčerpány. Jsou tu ale jisté experimentální metody, které posouvají FMD 3D tisk ještě dál. Konkrétně mám na mysli Nonplanar tisk. Výše jsme si vysvětlili, že během standardního tisku se jedna vrstva tiskne v jedné rovině (Planar tisk). Z toho vyplývá, že nerovinný (Nonplanar) tisk se nedrží v jedné rovině, ale využívá omezeně celý 3D prostor. Tisk funguje tak, že během tisku jedné vrstvy dokáže tiskárna hýbat osou Z při zachování pohybu v osách X a Y.  Pokud bychom tedy chtěli tisknout kopec ve tvaru hory Říp, můžeme klasickým Planar tiskem vytisknout základní tvar a poté tento tvar „potisknout“ pár TOP vrstvami Nonplanar tiskem, který by překryl nedokonalosti standardního tisku. Na Obrázku 2 je vidět vlevo klasický planar tisk a vpravo nonplanar tisk. Dalším využitím je tisk složitějších tvarů, jako jsou různé vrtule, lodní šrouby, křídla letadel a podobně.
 
 ![Obrázek 2 – Klasický/Nonplanar tisk zdroj: https://www.youtube.com/watch?v=km1lvuva5mI](./klasicky-tisk-vs-nonplanar.png)
-<div style="margin-top: -30px; margin-bottom:40px; text-align: center; font-style:italic">Obrázek 2 – Klasický/Nonplanar tisk zdroj: https://www.youtube.com/watch?v=km1lvuva5mI</div>
+*Obrázek 2 – Klasický/Nonplanar tisk zdroj: https://www.youtube.com/watch?v=km1lvuva5mI*
 
 Na internetu najdete mnoho videí i článků, ve kterých jsou vidět výsledky a i porovnání výtisků obou metod. Na Obrázku 3 je boční pohled na křídlo letadla, které bylo tisknuto právě Nonplanar metodou.
 
 ![Obrázek 3 - Příklad Nonplanetárního tisku Zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/](./nonplanetarni-tisk-priklad.png)
-<div style="margin-top: -30px; margin-bottom:40px; text-align: center; font-style:italic">Obrázek 3 - Příklad Nonplanetárního tisku Zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/</div>
+*Obrázek 3 - Příklad Nonplanetárního tisku Zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/*
 
 Zajímavé je, že takového tisku je možné docílit i bez větších fyzických úprav na tiskárně, ale to má za následek jistá omezení. V první řadě se musí přizpůsobit software a to jak ze strany firmwaru tiskárny, tak sliceru. V druhé řadě je tu omezení na straně tiskové hlavy. Na obrázku 4 je vidět problematika, která u Nonplanar tisku nastává. V levé části obrázku vidíme standardní Planar tisk, který všichni dobře známe. Prostřední a pravá část obrázku ukazuje různé úhly, pod kterými mohou, respektive nemohou klasické trysky tisknout. Za předpokladu, že nebudeme na tiskárně upravovat tiskovou hlavu ani trysku, je možné dosáhnout nižších úhlů, než když se použije nějaké vhodnější řešení jako jsou delší trysky apod.
 
 ![Obrázek 4 - omezení úhlu tisku zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/](./omezeni-uhlu-tisku.png)
-<div style="margin-top: -30px; margin-bottom:40px; text-align: center; font-style:italic">Obrázek 4 - omezení úhlu tisku zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/</div>
+*Obrázek 4 - omezení úhlu tisku zdroj: https://hackaday.com/2016/07/27/3d-printering-non-planar-layer-fdm/*
 
 Další možností je pustit se do úpravy tiskové hlavy. Pokud by se jí přidaly další dva stupně volnosti, dokázala by se naklánět ve dvou osách a tím pádem by bylo možné tisknout pod větším úhlem, ale to už bychom mohli pojmenovat spíše 5D tisk (Popř. 3+2D tisk). Takovýmto tiskem bychom ale určitě narazili na spoustu problémů v různých oblastech a je velkou otázkou, jestli je něco takového vůbec potřeba.
 
