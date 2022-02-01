@@ -121,7 +121,10 @@ TEMPORARY - remove as DIY is ready to buy
   display: flex;
   align-items: center;
   font-weight: bold;
+
   .made-in-icon {
+    height: gu(.75);
+    width: gu(.75);
     margin-right: gu(.5);
   }
 }

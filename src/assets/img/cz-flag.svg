@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>czech-republic-flag-round</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M154.284069,299.94 L145.715931,299.94 C64.8540725,297.672292 0,231.410196 0,150 C0,67.157 67.157,0 150,0 C232.843,0 300,67.157 300,150 C300,231.410196 235.145927,297.672292 154.284069,299.94 L154.284069,299.94 Z" id="path-1"></path>
+    </defs>
+    <g id="czech-republic-flag-round" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Clip-2"></g>
+        <polygon id="Fill-1" fill="#C4242B" mask="url(#mask-2)" points="0 299.94 300 299.94 300 0 0 0"></polygon>
+        <polygon id="Fill-3" fill="#FFFFFE" mask="url(#mask-2)" points="0 150 300 150 300 0 0 0"></polygon>
+        <polyline id="Fill-4" fill="#213F6A" mask="url(#mask-2)" points="150 150 -75 0 -75 300 150 150"></polyline>
+    </g>
+</svg>

@@ -10,7 +10,7 @@ import { BackgroundImage } from "components/image"
 import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
 // import KarmenPillPackageCarousel from "components/product-detail/karmen-pill-package"
 
-import czFlag from "assets/img/cz-flag.png"
+import czFlag from "assets/img/cz-flag.svg"
 import iconPackage from "assets/img/icon-package.png"
 import iconTruck from "assets/img/icon-truck.png"
 
