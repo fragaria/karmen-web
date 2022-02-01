@@ -4,6 +4,8 @@ import classNames from "classnames"
 import { Formik, Form, Field } from "formik"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
+import fbTrack from "./fb-track"
+
 import {
   PILLS,
   PILL_SKUS,
@@ -87,7 +89,8 @@ const CheckoutForm = ({
     // Append extended purchase details for order summary use
     retVals["purchaseDetails"] = getPurchaseDetails(values);
 
-    onBuy(retVals);
+    fbTrack('track', 'Purchase', retVals["purchaseDetails"]["pillVariant"])
+    onBuy(retVals)
   }
 
   const intl = useIntl()
