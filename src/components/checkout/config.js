@@ -301,6 +301,23 @@ export const COUNTRIES = [
   { name: "Zimbabwe", id: "ZW" },
 ]
 
+export const OS_TYPE = [
+  { name: "Windows", id: "WIN" },
+  { name: "MacOS", id: "MAC" },
+  { name: "Linux", id: "LIN" }
+]
+
+export const PRINTER_TYPE = [
+  { name: "Ender 3, 5, 6, 7", id: "END" },
+  { name: "Prusa Mini", id: "PRU1" },
+  { name: "Prusa MK2, S, 2.5, S, MK3, S, +", id: "PRU2" },
+  { name: "Artillery Genius", id: "AG" },
+  { name: "Anet A8", id: "AA8" },
+  { name: "Kryal Cube", id: "KC" },
+  { name: "FLSun Speed Racer", id: "FLS" }
+]
+
+
 /**
  * Find item by given property in given item list
  */

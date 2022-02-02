@@ -8,6 +8,8 @@ import {
   PILLS,
   PILL_SKUS,
   COUNTRIES,
+  OS_TYPE,
+  PRINTER_TYPE,
   selectShippingVariant,
   getPillRefSku,
   getItemByProp,
@@ -58,6 +60,10 @@ export const messages = defineMessages({
     id: "checkoutform.payment_method_transfer",
     defaultMessage: "Bank transfer",
   },
+  printerTypeOther: {
+    id: "checkoutform.label_printer_type_other",
+    defaultMessage: "Other printer type",
+  },
 })
 
 const CheckoutForm = ({
@@ -79,9 +85,9 @@ const CheckoutForm = ({
     delete retVals["variant"]
 
     // Append extended purchase details for order summary use
-    retVals["purchaseDetails"] = getPurchaseDetails(values)
+    retVals["purchaseDetails"] = getPurchaseDetails(values);
 
-    onBuy(retVals)
+    onBuy(retVals);
   }
 
   const intl = useIntl()
@@ -103,6 +109,9 @@ const CheckoutForm = ({
         state: "",
         paymentMethod: "card",
         country: initialCountryCode,
+        printerType: "END",
+        printerTypeOther: "",
+        osType: "WIN",
       }}
       validate={values => {
         const errors = {}
@@ -583,7 +592,111 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
+
+              <div className="form__line">
+                <Field name="printerType">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="printerType">
+                        <FormattedMessage
+                          id="checkoutform.label_printer_type"
+                          defaultMessage="Printer type"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
+                          {PRINTER_TYPE.map(printer => (
+                            <option key={printer.id} value={printer.id}>
+                              {printer.name}
+                            </option>
+                          ))}
+                          <option value="OTHER">
+                            {intl.formatMessage(messages.printerTypeOther)}
+                          </option>
+                        </select>
+
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+
+              {values["printerType"] === "OTHER" && (
+                <div className="form__line">
+                  <Field name="printerTypeOther">
+                    {({ field, meta }) => (
+                      <>
+                        <label className="form-label" htmlFor="printerTypeOther">
+                          <FormattedMessage
+                            id="checkoutform.label_printer_type_other"
+                            defaultMessage="Other printer type"
+                          />
+                        </label>
+                        <div className={getClass("form-control-wrapper", meta)}>
+                          <input
+                            className="form-control form-control--bordered"
+                            type="text"
+                            {...field}
+                          />
+                          {meta.touched && meta.error && (
+                            <p className="form-control-error">{meta.error}</p>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </Field>
+                </div>
+              )}
+
+              <div className="form__line">
+                <Field name="osType">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="osType">
+                        <FormattedMessage
+                          id="checkoutform.label_os_type"
+                          defaultMessage="Operating system"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
+                          {OS_TYPE.map(os => (
+                            <option key={os.id} value={os.id}>
+                              {os.name}
+                            </option>
+                          ))}
+                        </select>
+
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
             </div>
+
+
             <div className="checkout-form__body checkout-form__body--wdivider">
               <h2>
                 <FormattedMessage
