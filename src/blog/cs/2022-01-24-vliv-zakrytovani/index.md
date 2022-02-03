@@ -12,7 +12,7 @@ Jelikož se mi koncem listopadu v Black Friday akci podařilo zakoupit horní kr
 
 Kryt mi přišel po vánočních svátcích a zrovna jsem měl naplánované nějaké delší opakované tisky, tak jsem si řekl, že je to ideální příležitost na opakované měření. Předmětem se stal tisk, který trval něco přes 3,5 hodiny, jako je vidět na obrázku, během kterého se tisklo 9 stejných objektů jeden za druhým. To znamená, že ve sliceru Cura byl nastaven parametr „Print sequence“ na „One at the time“. Kdo toto nastavení nezná, tak to zjednodušeně funguje tak, že tiskárna netiskne první vrstvu u všech tisknutých objektů najednou a pak nepokračuje na druhou, ale že vytiskne celý jeden objekt a pak tiskne objekt další.
 
-![Obrázek 2 - Délka tisku 3h 33m 14s](./image2.png)
+![Obrázek 2 - Délka tisku 3h 33m 14s](./image3.png)
 *Obrázek 2 - Délka tisku 3h 33m 14s*
 
 Jelikož byla obě měření prováděna při tisku stejného gcode, za pokojové teploty (24 °C) a tiskárna byla v obou případech vychladlá, dovolím si okolní vlivy na přesnost měření zanedbat. Během tisku se kolem tiskárny nechodilo, ani se v místnosti nevětralo. Jako nejdůležitější parametry tisku vidím teplotu trysky nastavenou na 220 °C a teplotu bedu 55 °C. Standardně tisknu na menší teplotu trysky, ale jelikož jsem tiskl extruzi 0,5 mm, výšku vrstvy 0,25 mm a rychlosti 100/60 mm/s, je teplota trošku zvýšená, aby docházelo k lepšímu prohřátí materiálu, přesto že se jednalo o klasické PLA.
@@ -23,7 +23,7 @@ Jelikož se standardně používají tiskárny otevřené, budu vycházet z toho
 
 Na obrázcích je vidět výřez grafů během jednotlivých tisků. Červené křivky přísluší hodnotám trysky a modré křivky bedu. Tlustou čarou jsou vyobrazeny měřené teploty (stupnice vlevo). Tenčími čarami jsou zobrazeny jednotlivé křivky aktuálního výkonu trysky a bedu v čase (stupnice vpravo). Aktuální hodnoty, včetně požadovaných, jsou také vidět nahoře v tabulce.
 
-![Obrázek 3 - Graf během tisku bez krytu](./image3.png)
+![Obrázek 3 - Graf během tisku bez krytu](./image2.png)
 *Obrázek 3 - Graf během tisku bez krytu*
 
 Z grafu je tedy odhadem vidět, že výkon trysky se během tisku pohyboval mezi 60 % až 85 %. U bedu je rozsah výkonu od 0 % do 40 %. Po dokončení tisku se na wattmetru objevila hodnota 473 Wh spotřebované elektrické energie.
