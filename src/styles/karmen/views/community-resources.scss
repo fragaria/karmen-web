@@ -123,3 +123,8 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41.5' height='35.5' viewBox='0 0 41.5 35.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; stroke: %23ea262e; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.5px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Group_59' data-name='Group 59' transform='translate(-487.457 -391.25)'%3E%3Cg id='user-plus_2_' data-name='user-plus (2)' transform='translate(489.207 393)'%3E%3Cpath id='Path_10' data-name='Path 10' class='cls-1' d='M26.909,25.667V22.111A7.012,7.012,0,0,0,20,15H7.909A7.012,7.012,0,0,0,1,22.111v3.556' transform='translate(-1 6.333)'/%3E%3Cellipse id='Ellipse_2' data-name='Ellipse 2' class='cls-1' cx='6.909' cy='7.111' rx='6.909' ry='7.111' transform='translate(6.045)'/%3E%3Cline id='Line_15' data-name='Line 15' class='cls-1' y2='10.667' transform='translate(32.818 8.889)'/%3E%3Cline id='Line_16' data-name='Line 16' class='cls-1' x1='10.364' transform='translate(27.636 14.222)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
   }
 }
+
+.community__icon[class*='icon--']{
+  color: map-get($palette, red);
+  font-size: 1.7rem;
+}

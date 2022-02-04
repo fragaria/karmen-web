@@ -44,6 +44,7 @@ export const pageQuery = graphql`
             link
             linkTitle
             ico
+            prefix
           }
         }
       }

@@ -312,6 +312,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `gcodes`,
+        path: `${__dirname}/src/gcodes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `resources`,
         path: `${__dirname}/src/resources`,
       },

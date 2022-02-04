@@ -2,15 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 
 const CommunityResources = ({ resources, site, location, ...props }) => {
-  const iconPrefix = "community__icon--"
   return (
     <section
-      {...props}
-      className="content-block content-block--move-up content-block--narrow content-block--shift-mobile"
+    {...props}
+    className="content-block content-block--move-up content-block--narrow content-block--shift-mobile"
     >
       <div className="v-community-resources-listing">
         {resources.map(({ frontmatter, html }) => {
           const isExternalLink = !frontmatter.link.startsWith("/")
+          const iconPrefix = frontmatter.prefix ? frontmatter.prefix : "community__icon--"
 
           return (
             <article
