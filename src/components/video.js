@@ -11,7 +11,7 @@ const VideoPlayer = props => {
     let video = vidRef
     video.current.addEventListener("mousemove", handleMouseMove)
     return () => {
-      video.current.removeEventListener("mousemove", handleMouseMove)
+      if (video.current) video.current.removeEventListener("mousemove", handleMouseMove)
       if (timer) clearTimeout(timer)
     }
   })
