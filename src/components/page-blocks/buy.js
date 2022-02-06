@@ -69,6 +69,7 @@ const BuyBlock = props => {
           </div>
         </div>
       </article>
+      <script src="https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js" />
     </div>
   )
 }

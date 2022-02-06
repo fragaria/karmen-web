@@ -375,19 +375,19 @@ module.exports = {
     /**
      * Load Octobat Beanie checkout script
      */
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        disable: !process.env.OCTOBAT_API_KEY,
-        src:
-          "https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-load-script",
+    //   options: {
+    //     disable: !process.env.OCTOBAT_API_KEY,
+    //     src:
+    //       "https://cdn.jsdelivr.net/gh/0ctobat/octobat-beanie.js@latest/dist/octobat-beanie.min.js",
+    //   },
+    // },
     // Generate sitemap in production mode
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: ["/cs/platba-zrusena/", "/en/payment-cancelled/"],
+        excludes: ["/cs/platba-zrusena/", "/en/payment-cancelled/"],
       },
     },
     // Facebook tracking
