@@ -40,7 +40,10 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { lang: { eq: "cs" } } }
+      filter: {
+        fileAbsolutePath: { regex: "/blog/" }
+        frontmatter: { lang: { eq: "cs" } }
+      }
     ) {
       edges {
         node {

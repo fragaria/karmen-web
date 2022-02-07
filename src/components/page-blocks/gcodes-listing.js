@@ -1,9 +1,16 @@
-import React from "react"
+import React from "react";
+import ReactDOM from 'react-dom';
+import {GCodeViewer} from "react-gcode-viewer";
+
+
 import { Link } from "gatsby"
 
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
 const GcodesListing = ({ list, site, location, ...props }) => {
+
+  const url = "https://storage.googleapis.com/ucloud-v3/6127a7f9aa32f718b8c1ab4f.gcode"
+
   return (
     <article itemType="http://schema.org/Organization" itemScope>
       <span
@@ -25,23 +32,29 @@ const GcodesListing = ({ list, site, location, ...props }) => {
           const link =
             "/" +
             node.frontmatter.lang +
-            "/blog/" +
+            "/gcodes/" +
             node.fields.slug.replace(/\/(en|cs)\//gi, "")
           return (
-            <article
+            <div
               key={node.fields.slug}
               className="v-blog-post content-block content-block--narrower"
             >
               <Link style={{ boxShadow: `none` }} to={link}>
+              {/* <GCodeViewer
+                  orbitControls
+                  showAxes
+                  url={'/gcodes/' + node.frontmatter.gcode + '.stl'}
+              /> */}
+
                 <h3>{title}</h3>
-                <small>{node.frontmatter.date}</small>
+                <small>{node.frontmatter.gcode}</small>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
               </Link>
-            </article>
+            </div>
           )
         })}
       </section>

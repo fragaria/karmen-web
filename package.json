@@ -43,6 +43,7 @@
     "react-burger-menu": "^3.0.6",
     "react-cookie-consent": "^3.0.0",
     "react-dom": "^17.0.2",
+    "react-gcode-viewer": "^2.0.1",
     "react-helmet": "^5.2.1",
     "react-intl": "^4.7.6",
     "react-multi-carousel": "^2.6.5",

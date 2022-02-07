@@ -43,7 +43,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "LL", locale: "cs")
+            gcode
             title
             lang
             description
