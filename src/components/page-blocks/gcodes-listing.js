@@ -12,7 +12,11 @@ const GcodesListing = ({ list, site, location, ...props }) => {
   const url = "https://storage.googleapis.com/ucloud-v3/6127a7f9aa32f718b8c1ab4f.gcode"
 
   return (
-    <article itemType="http://schema.org/Organization" itemScope>
+    <article
+      className="content-block content-block--narrow"
+      itemType="http://schema.org/Organization"
+      itemScope
+    >
       <span
         itemProp="logo"
         itemType="http://schema.org/ImageObject"
@@ -26,7 +30,7 @@ const GcodesListing = ({ list, site, location, ...props }) => {
       </span>
       <meta itemProp="url" content={site.siteMetadata.siteUrl} />
 
-      <section {...props}>
+      <section {...props} className="v-gcodes">
         {list.edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const link =
@@ -36,8 +40,8 @@ const GcodesListing = ({ list, site, location, ...props }) => {
             node.fields.slug.replace(/\/(en|cs)\//gi, "")
           return (
             <div
+              className="v-gcode"
               key={node.fields.slug}
-              className="v-blog-post content-block content-block--narrower"
             >
               <Link style={{ boxShadow: `none` }} to={link}>
               {/* <GCodeViewer

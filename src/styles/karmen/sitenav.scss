@@ -79,7 +79,9 @@
 
   &--lowprio {
     @media screen and (min-width: $sitenav-breakpoint) {
-      display: block;
+      display: flex;
+      height: 100%;
+      align-items: center;
     }
   }
 }

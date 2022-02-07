@@ -12,7 +12,7 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const url = "https://storage.googleapis.com/ucloud-v3/6127a7f9aa32f718b8c1ab4f.gcode"
   return (
-    <Layout location={location} containerClass="v-blog v-blog-detail">
+    <Layout location={location} containerClass="v-gcode v-gcode-detail">
       <SEOMetadata
         title={post.frontmatter.title}
         description={post.excerpt}
@@ -25,7 +25,7 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
             <h1 className="page-block-headline">{post.frontmatter.title}</h1>
             <small>{post.frontmatter.date}</small>
           </header>
-          <img src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
+          <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
           {/* <GCodeViewer
             orbitControls
             url={url}
