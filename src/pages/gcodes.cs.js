@@ -11,7 +11,7 @@ import GcodesListing from "components/page-blocks/gcodes-listing"
 const GcodesPage = ({ data, location }) => {
   const site = data.site
   return (
-    <Layout location={location} containerClass="v-blog">
+    <Layout location={location} containerClass="v-gcodes">
       <SEOMetadata title="Gcodes" pathname={location.pathname} />
 
       <h1 className="page-block-headline">G-code modely ke stažení</h1>

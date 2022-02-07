@@ -39,13 +39,23 @@
 }
 
 .subscription-box__form {
-  align-self: center;
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  align-self: center;
   width: 100%;
+
+  @include breakpoint(tablet up) {
+    flex-direction: row;
+  }
 
   .form-control-wrapper {
     margin: 0;
     padding: 0;
+  }
+
+  input.form-control {
+    height: auto;
   }
 
   .button {
@@ -74,14 +84,5 @@
 
   @include breakpoint(tablet up) {
     max-width: 30em;
-  }
-}
-
-.subscription-box__form {
-  display: flex;
-  flex-direction: column;
-
-  @include breakpoint(tablet up) {
-    flex-direction: row;
   }
 }

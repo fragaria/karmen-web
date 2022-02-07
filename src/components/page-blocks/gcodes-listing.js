@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import {GCodeViewer} from "react-gcode-viewer";
+// import ReactDOM from 'react-dom';
+// import {GCodeViewer} from "react-gcode-viewer";
 
 
 import { Link } from "gatsby"
@@ -30,7 +30,7 @@ const GcodesListing = ({ list, site, location, ...props }) => {
       </span>
       <meta itemProp="url" content={site.siteMetadata.siteUrl} />
 
-      <section {...props} className="v-gcodes">
+      <section {...props} className="v-gcodes-listing">
         {list.edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const link =
@@ -49,9 +49,8 @@ const GcodesListing = ({ list, site, location, ...props }) => {
                   showAxes
                   url={'/gcodes/' + node.frontmatter.gcode + '.stl'}
               /> */}
-
+                <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
                 <h3>{title}</h3>
-                <small>{node.frontmatter.gcode}</small>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,

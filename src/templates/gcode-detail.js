@@ -1,7 +1,7 @@
 import React from "react"
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { graphql } from "gatsby"
-import { GCodeViewer } from "react-gcode-viewer";
+// import { GCodeViewer } from "react-gcode-viewer";
 
 import Layout from "layouts/en"
 
@@ -20,23 +20,31 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
       />
       <SEOBusinessInfo />
       {post && (
-        <article className="content-block content-block--narrower">
+        <article className="content-block content-block--narrower content-block--relative">
+          <a className="content-block--back" href="../" ><span className="icon--arrow-left"></span></a>
           <header>
-            <h1 className="page-block-headline">{post.frontmatter.title}</h1>
-            <small>{post.frontmatter.date}</small>
+            <div className="page-block-headline">
+              <h1>{post.frontmatter.title}</h1>
+            </div>
           </header>
-          <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
-          {/* <GCodeViewer
-            orbitControls
-            url={url}
-            // url={'/gcodes/' + post.frontmatter.gcode + '.stl'}
-          /> */}
+          <div className="v-gcode-detail">
+            <img className="image" width="1200" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
+            {/* <GCodeViewer
+              orbitControls
+              url={url}
+              // url={'/gcodes/' + post.frontmatter.gcode + '.stl'}
+            /> */}
 
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            className="text-left"
-          />
-          <a className="button button--primary" href={'/gcodes/' + post.frontmatter.gcode + '.stl'}>Stáhnout</a>
+            <section className="v-gcode-detail--content">
+              <div
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                className="text-left"
+              />
+              <div className="text-center">
+                <a className="button button--primary u-margin--top1" href={'/gcodes/' + post.frontmatter.gcode + '.stl'}>Stáhnout</a>
+              </div>
+            </section>
+          </div>
         </article>
       )}
     </Layout>
