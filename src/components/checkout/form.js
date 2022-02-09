@@ -89,7 +89,12 @@ const CheckoutForm = ({
     // Append extended purchase details for order summary use
     retVals["purchaseDetails"] = getPurchaseDetails(values);
 
-    fbTrack('track', 'Purchase', retVals["purchaseDetails"]["pillVariant"])
+    const trackValues = {
+      currency: retVals["purchaseDetails"]["pillVariant"].currency,
+      value: retVals["purchaseDetails"]["pillVariant"].price
+    }
+
+    fbTrack('track', 'Purchase', trackValues)
     onBuy(retVals)
   }
 
