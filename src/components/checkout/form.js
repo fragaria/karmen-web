@@ -37,6 +37,10 @@ const getPurchaseDetails = values => {
   const shippingPrice = shippingVariant.price
   // Total price (pill + shipping)
   const totalPrice = pillPrice + shippingPrice
+  // Add os type name
+  const osType = OS_TYPE.find(item => item.id  === values["osType"]).name
+  // Add printer type name
+  const printerType = values["printerType"] === "OTHER" ? values["printerTypeOther"] : PRINTER_TYPE.find(item => item.id  === values["printerType"]).name
 
   return {
     pillRef,
@@ -46,6 +50,8 @@ const getPurchaseDetails = values => {
     pillPrice,
     shippingPrice,
     totalPrice,
+    osType,
+    printerType,
   }
 }
 
@@ -76,6 +82,8 @@ const CheckoutForm = ({
 }) => {
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
+
+    console.log("values", values)
     const purchaseDetails = getPurchaseDetails(values)
 
     retVals["product"] = {

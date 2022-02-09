@@ -54,6 +54,8 @@ const CheckoutBooth = () => {
       shippingCurrency: values.purchaseDetails.shippingVariant.currency,
       totalPrice: values.purchaseDetails.totalPrice,
       totalCurrency: values.purchaseDetails.pillVariant.currency,
+      osType: values.purchaseDetails.osType,
+      printerType: values.purchaseDetails.printerType,
     }
 
     const emailContext = {
@@ -72,6 +74,8 @@ const CheckoutBooth = () => {
       pillVariant: values.product.name,
       ...purchaseDetails,
     }
+
+    console.log('emailContext', emailContext, values)
 
     await Promise.all([
       sendOrderConfirmation(
