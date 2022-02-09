@@ -62,6 +62,19 @@ const TestimonialsCarousel = ({ data }) => {
         <div className="testimonial__item">
           <div className="testimonial__description">
             <div className="testimonial__description-text">
+            Karmen Pill spolu s Karmen Cloud považujeme za velice užitečné a zdařilé řešení vzdáleného ovládání 3D tiskárny. Není tak problém si např. i z domova večer pustit ve škole 3D tisk a ráno přijít a jen z podložky odebrat hotový výtisk.
+            </div>
+          </div>
+          <div className="testimonial__info">
+            <div className="testimonial__desc">
+              <span className="testimonial__title">Mgr. Vladimír Vais</span>
+              <span className="testimonial__subtitle">Gymnázium Františka Palackého, Neratovice</span>
+            </div>
+          </div>
+        </div>
+        <div className="testimonial__item">
+          <div className="testimonial__description">
+            <div className="testimonial__description-text">
               Karmen Pill je skvělé řešení, jak nejen vzdáleně dohlížet na 3D tiskárny, ale také je ovládat. Pro naši školu je Karmen skvělou pomůckou, jak lépe 3D tisk poskytnout žákům a udělat pro ně tuto novou technologii více zajímavou a ještě atraktivnější.
             </div>
           </div>
