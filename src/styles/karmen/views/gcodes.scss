@@ -51,6 +51,18 @@
 .v-gcode-detail {
   padding-bottom: gu(2);
 
+  table {
+    @include styledTable();
+  }
+
+  .page-block-headline {
+    text-align: center;
+
+    @include baseline(s7, $headingtype, 1.2, $above: 1, $below: 2);
+    @include baseline(s8, $headingtype, 2, $above: 1, $below: 3, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 2, $below: 3, $breakpoint: tablet-small up);
+  }
+
   p {
     @include baseline(s3, $bodytype, 1, $below: 1);
     @include baseline(s4, $bodytype, 1, $below: 1, $breakpoint: tablet-small up);
@@ -64,9 +76,6 @@
 
   small {
     display: block;
-
-    @include baseline(s3, $bodytype, 1, $below: 3);
-    @include baseline(s3, $bodytype, 1, $below: 3, $breakpoint: tablet-small up);
   }
 
   h2 {
@@ -82,5 +91,12 @@
 
     @include baseline(s3, $bodytype, 1, $above: 0, $below: 1);
     @include baseline(s4, $bodytype, 1, $above: 0, $below: 2, $breakpoint: tablet-small up);
+  }
+}
+
+#stlviewer {
+  canvas {
+    max-width: 100%;
+    height: auto!important
   }
 }

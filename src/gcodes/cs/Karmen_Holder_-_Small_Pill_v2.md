@@ -2,7 +2,16 @@
 title: Karmen_Holder_-_Small_Pill_v2
 lang: cs
 gcode: "Karmen_Holder_-_Small_Pill_v2"
+downloads: ["Karmen_Holder_-_Small_Pill_v2"]
 description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur"
+material: {
+  material: "PLA, ASA",
+  description: "Pokud na své tiskárně tisknete z materiálů, které vyžadují větší vyhřátí podložky, doporučujeme použít ASA, aby nedošlo k deformaci držáku."
+}
+support: Ano
+layer: 0.2mm
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.
+
+Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.

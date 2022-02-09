@@ -112,6 +112,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
-    })
+    },
+    {
+      name: `downloads`,
+      node,
+      value,
+    }
+    )
   }
 }

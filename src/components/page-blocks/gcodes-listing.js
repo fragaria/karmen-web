@@ -1,16 +1,9 @@
-import React from "react";
-// import ReactDOM from 'react-dom';
-// import {GCodeViewer} from "react-gcode-viewer";
-
-
+import React from 'react'
 import { Link } from "gatsby"
 
 import karmenLogo from "assets/img/karmen-logo-social-media.png"
 
 const GcodesListing = ({ list, site, location, ...props }) => {
-
-  const url = "https://storage.googleapis.com/ucloud-v3/6127a7f9aa32f718b8c1ab4f.gcode"
-
   return (
     <article
       className="content-block content-block--narrow"
@@ -44,11 +37,6 @@ const GcodesListing = ({ list, site, location, ...props }) => {
               key={node.fields.slug}
             >
               <Link style={{ boxShadow: `none` }} to={link}>
-              {/* <GCodeViewer
-                  orbitControls
-                  showAxes
-                  url={'/gcodes/' + node.frontmatter.gcode + '.stl'}
-              /> */}
                 <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
                 <h3>{title}</h3>
                 <p

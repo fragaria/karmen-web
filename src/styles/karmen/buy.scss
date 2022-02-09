@@ -16,7 +16,7 @@
   .page-block-headline {
     text-align: center;
 
-    @include baseline(s9, $headingtype, 2, $below: 1);
+    @include baseline(s8, $headingtype, 2, $below: 1);
     @include baseline(s8, $headingtype, 2, $below: 1, $breakpoint: tablet up);
     @include baseline(s7, $headingtype, 2, $below: 1, $breakpoint: desktop up);
   }
