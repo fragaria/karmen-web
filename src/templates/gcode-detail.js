@@ -1,17 +1,35 @@
 import React, { useState } from 'react'
 import { graphql } from "gatsby"
 import { StlViewer } from 'react-stl-file-viewer'
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 
 import Layout from "layouts/en"
 
 import SEOMetadata from "components/seo/metadata"
 import SEOBusinessInfo from "components/seo/business-info"
 
+
 const GcodeDetailTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const [volume, setvolume] = useState(0)
   const url = '/gcodes/' + post.frontmatter.gcode + '.stl'
   console.log(post)
+
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 7680, min: 630 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 630, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 0,
+    },
+  }
+
+
   return (
     <Layout location={location} containerClass="v-gcode v-gcode-detail">
       <SEOMetadata
@@ -22,25 +40,45 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
       <SEOBusinessInfo />
       {post && (
         <article className="content-block content-block--narrower content-block--relative">
-          <a className="content-block--back" href="../" ><span className="icon--arrow-left"></span></a>
+          <a className="content-block--back" href="../" title="Back" ><span className="icon--arrow-left"></span><span className="hidden">Zpět</span></a>
           <header>
             <div className="page-block-headline">
               <h1>{post.frontmatter.title}</h1>
             </div>
           </header>
+
           <div className="v-gcode-detail">
-            <StlViewer
-              width={900}
-              height={600}
-              url={url}
-              groundColor='rgb(255, 255, 255)'
-              objectColor='rgb(234,39,46)'
-              skyboxColor='rgb(255, 255, 255)'
-              gridLineColor='rgb(0, 0, 0)'
-              lightColor='rgb(255, 255, 255)'
-              volume={setvolume}
-              style={{ position: "absolute"}}
-            />
+
+            <div className="gcode-carousel-container">
+              <Carousel
+                responsive={responsive}
+                showDots={true}
+                infinite={true}
+                dotListClass="gcodes-dot-list"
+                // arrows={false}
+                renderButtonGroupOutside={true}
+                // customButtonGroup={}
+                renderDotsOutside={true}
+              >
+                <img width="900" className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" alt="" />
+                <img width="900" className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" alt="" />
+                <img width="900" className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" alt="" />
+
+                <StlViewer
+                  width={900}
+                  height={500}
+                  url={url}
+                  groundColor='rgb(255, 255, 255)'
+                  objectColor='rgb(234,39,46)'
+                  skyboxColor='rgb(255, 255, 255)'
+                  gridLineColor='rgb(0, 0, 0)'
+                  lightColor='rgb(255, 255, 255)'
+                  volume={setvolume}
+                  style={{ position: "absolute"}}
+                >{volume}</StlViewer>
+              </Carousel>
+            </div>
+
             <section className="v-gcode-detail--content typeset">
               <div
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -89,7 +127,7 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
                       })}
                     </ul>
                   )}
-                  {post.frontmatter.downloads.length == 1 && (
+                  {post.frontmatter.downloads.length === 1 && (
                     <a className="" href={url}>{post.frontmatter.gcode + '.stl'}</a>
                   )}
                   </dd>

@@ -169,7 +169,7 @@ a {
 
         li {
             font-feature-settings: "kern", "onum", "liga";
-            margin-left: gu();
+            margin-left: gu(.6);
 
             ol,
             ul {
@@ -253,11 +253,11 @@ a {
         dt,
         dd {
             font-feature-settings: "kern", "onum", "liga";
-            margin-left: gu();
+            // margin-left: gu();
 
-            @include breakpoint(tablet up) {
-                margin-left: 0;
-            }
+            // @include breakpoint(tablet up) {
+            //     margin-left: 0;
+            // }
         }
         dt {
             font-weight: map-get($bodytype, bold);

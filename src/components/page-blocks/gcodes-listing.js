@@ -37,7 +37,7 @@ const GcodesListing = ({ list, site, location, ...props }) => {
               key={node.fields.slug}
             >
               <Link style={{ boxShadow: `none` }} to={link}>
-                <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" />
+                <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" alt="" />
                 <h3>{title}</h3>
                 <p
                   dangerouslySetInnerHTML={{

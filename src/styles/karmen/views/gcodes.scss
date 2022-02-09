@@ -23,7 +23,7 @@
 .v-gcode{
   h3 {
     @include baseline(s6, $headingtype, 1, $below: 0.25, $above: 0.25);
-    @include baseline(s6, $headingtype, 1.5, $below: 1, $above: 0, $breakpoint: tablet-small up);
+    @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0, $breakpoint: tablet-small up);
   }
   p {
     @include baseline(s3, $bodytype, 1, $below: 2);
@@ -69,8 +69,10 @@
   }
 
   .v-gcode-detail--content {
+    padding-top: gu(3);
+
     @include breakpoint(tablet-small up) {
-      padding: gu(2) gu(4) 0;
+      padding: gu(3) gu(4) 0;
     }
   }
 
@@ -92,6 +94,69 @@
     @include baseline(s3, $bodytype, 1, $above: 0, $below: 1);
     @include baseline(s4, $bodytype, 1, $above: 0, $below: 2, $breakpoint: tablet-small up);
   }
+
+  .gcode-carousel-container {
+    position: relative;
+
+    .react-multi-carousel-list {
+      overflow: visible;
+
+      @include breakpoint(tablet-small up) {
+        overflow: hidden;
+      }
+    }
+
+    .react-multiple-carousel__arrow--left {
+      left: gu(-.5);
+
+      @include breakpoint(tablet-small up) {
+        left: gu();
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: gu(-.5);
+
+      @include breakpoint(tablet-small up) {
+        right: gu();
+      }
+    }
+  }
+
+  .gcodes-dot-list {
+    bottom: gu(-1.5);
+
+    .react-multi-carousel-dot {
+      button {
+        display: block;
+        width: gu(.4);
+        height: gu(.4);
+        margin-right: gu(.45);
+        border-width: 2px;
+        border-radius: 0;
+        background-color: map-get($palette, white);
+        border-color: map-get($palette, red);
+
+        &:hover {
+          background-color: map-get($palette, red);
+        }
+      }
+      &:last-child button {
+        margin-right: 0;
+      }
+    }
+
+    .react-multi-carousel-dot--active button {
+      background-color: map-get($palette, red);
+    }
+  }
+
+  // .gcode-carousel-container {
+  //   .image,
+  //   .gcode-carousel-item {
+  //     width: 900px!important;
+  //   }
+  // }
 }
 
 #stlviewer {

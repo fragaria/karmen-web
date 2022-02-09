@@ -14,7 +14,7 @@ const GcodesPage = ({ data, location }) => {
     <Layout location={location} containerClass="v-gcodes">
       <SEOMetadata title="Gcodes" pathname={location.pathname} />
 
-      <h1 className="page-block-headline">G-code modely ke stažení</h1>
+      <h1 className="page-block-headline">Modely ke stažení</h1>
 
       <GcodesListing list={data.resources} site={site} location={location} />
     </Layout>
