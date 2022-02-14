@@ -106,8 +106,13 @@
       }
     }
 
+    .react-multiple-carousel__arrow {
+      border-radius: 0;
+      z-index: 50;
+    }
+
     .react-multiple-carousel__arrow--left {
-      left: gu(-.5);
+      left: gu(-.6);
 
       @include breakpoint(tablet-small up) {
         left: gu();
@@ -115,7 +120,7 @@
     }
 
     .react-multiple-carousel__arrow--right {
-      right: gu(-.5);
+      right: gu(-.6);
 
       @include breakpoint(tablet-small up) {
         right: gu();

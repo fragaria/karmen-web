@@ -54,10 +54,6 @@
     padding: 0;
   }
 
-  input.form-control {
-    height: auto;
-  }
-
   .button {
     transform: translateY(gu(-0.5));
     margin-left: 0;
@@ -71,6 +67,10 @@
 
   @include breakpoint(tablet up) {
     margin-left: auto;
+
+    input.form-control {
+      height: auto;
+    }
 
     .button {
       width: auto;
