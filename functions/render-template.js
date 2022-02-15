@@ -20,4 +20,6 @@ module.exports.renderTemplate = (template, context) => {
     .replace(/%ZIP%/g, context.postalCode)
     .replace(/%STATE%/g, context.state)
     .replace(/%COUNTRY%/g, context.country)
+    .replace(/%OS_TYPE%/g, context.osType)
+    .replace(/%PRINTER_TYPE%/g, context.printerType)
 }

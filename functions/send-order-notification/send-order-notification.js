@@ -38,6 +38,9 @@ Město: %CITY%
 PSČ: %ZIP%
 Stát: %STATE%
 Země: %COUNTRY%
+
+Operační systém: %OS_TYPE%
+Typ tiskárny: %PRINTER_TYPE%
 `
 
 const handler = async event => {
