@@ -53,6 +53,18 @@ Create production bundle using:
 npm run build
 ```
 
+## E-mail templates
+
+If you need to update texts of e-mails we send, e-mail templates are located in `functions` directory:
+
+`functions/send-contact-form-message`
+`functions/send-order-confirmation`
+`functions/send-order-notification`
+
+In case you need to add new variables, you need to update one of renderers `functions/render-template-contact-form.js` of `functions/render-template.js`
+
+
+
 ## Using Docker
 
 This theme has built-in Docker support. For many users, it's the easiest option
