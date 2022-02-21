@@ -75,8 +75,6 @@ const CheckoutBooth = () => {
       ...purchaseDetails,
     }
 
-    console.log('emailContext', emailContext, values)
-
     await Promise.all([
       sendOrderConfirmation(
         config.siteMetadata.functions.rootUrl,
