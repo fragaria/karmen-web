@@ -21,9 +21,11 @@ const VideoPlayer = props => {
     if (!playing) {
       setPaused(false)
       vidRef.current.play()
+      dataLayer.push({'event': 'video_play'});
     } else {
       setPaused(true)
       vidRef.current.pause()
+      dataLayer.push({'event': 'video_pause'});
     }
   }
 
