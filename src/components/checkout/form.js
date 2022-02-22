@@ -104,7 +104,7 @@ const CheckoutForm = ({
 
     fbTrack('track', 'Purchase', trackValues)
 
-    dataLayer.push({'event': 'Purchase', ...trackValues});
+    window.dataLayer.push({'event': 'Purchase', ...trackValues});
 
     onBuy(retVals)
   }
