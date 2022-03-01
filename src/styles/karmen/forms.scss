@@ -1,4 +1,4 @@
-$field-height: gu(3);
+$field-height: gu(2);
 
 .form {
   width: 100%;
@@ -78,7 +78,7 @@ $field-height: gu(3);
    * This breaks the grid temporarily for sake of better readability.
    */
   $shift: gu(0.5);
-  margin-top: $shift * -1;
+  margin-top: $shift;
   padding-bottom: $shift;
   margin-bottom: gu(-1);
 
