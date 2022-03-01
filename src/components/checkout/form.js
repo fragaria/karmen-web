@@ -5,6 +5,7 @@ import { Formik, Form, Field } from "formik"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
 import fbTrack from "./fb-track"
+import PacketaPicker from "./packeta-picker.js"
 
 import {
   PILLS,
@@ -576,41 +577,15 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
-              <div className="form__line">
-                <Field name="paymentMethod">
-                  {({ field, meta }) => (
-                    <>
-                      <label className="form-label" htmlFor="paymentMethod">
-                        <FormattedMessage
-                          id="checkoutform.label_payment_method"
-                          defaultMessage="Payment method"
-                        />
-                      </label>
-                      <div
-                        className={getClass(
-                          "form-control-wrapper form-control-wrapper--select",
-                          meta
-                        )}
-                      >
-                        <select
-                          className="form-control form-control--bordered"
-                          {...field}
-                        >
-                          <option value="card">
-                            {intl.formatMessage(messages.paymentMethodCard)}
-                          </option>
-                          <option value="transfer">
-                            {intl.formatMessage(messages.paymentMethodTransfer)}
-                          </option>
-                        </select>
-                        {meta.touched && meta.error && (
-                          <p className="form-control-error">{meta.error}</p>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </Field>
-              </div>
+            </div>
+
+            <div className="checkout-form__body">
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.printer_os_type"
+                  defaultMessage="Printer and OS type"
+                />
+              </h2>
 
               <div className="form__line">
                 <Field name="printerType">
@@ -708,6 +683,7 @@ const CheckoutForm = ({
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
+                        <p className="form-control-error">Vyberte typ operačního systému, na kterém budete provádět úvodní nastavení Karmen Pill.</p>
                       </div>
                     </>
                   )}
@@ -715,6 +691,76 @@ const CheckoutForm = ({
               </div>
             </div>
 
+            <div className="checkout-form__body">
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.payment_and_shipping_method"
+                  defaultMessage="Payment and shipping method"
+                />
+              </h2>
+              <div className="form__line">
+                <Field name="paymentMethod">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="paymentMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_payment_method"
+                          defaultMessage="Payment method"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
+                          <option value="card">
+                            {intl.formatMessage(messages.paymentMethodCard)}
+                          </option>
+                          <option value="transfer">
+                            {intl.formatMessage(messages.paymentMethodTransfer)}
+                          </option>
+                        </select>
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+              <div className="form__line">
+                <Field name="pickupPoint">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="paymentMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_pickup_point"
+                          defaultMessage="Pickup point"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper",
+                          meta
+                        )}
+                        >
+                        <PacketaPicker />
+
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                        <br/><br/><br/>
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+            </div>
 
             <div className="checkout-form__body checkout-form__body--wdivider">
               <h2>
