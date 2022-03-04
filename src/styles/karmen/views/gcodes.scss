@@ -1,0 +1,172 @@
+.v-gcodes,
+.v-gcode-detail {
+  .page-block-headline {
+    text-align: center;
+
+    @include baseline(s8, $headingtype, 2, $above: 1, $below: 2);
+    @include baseline(s8, $headingtype, 2, $above: 1, $below: 3, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 2, $below: 3, $breakpoint: tablet-small up);
+  }
+}
+
+.v-gcodes-listing {
+  text-align: center;
+  padding-bottom: gu(4);
+
+  @include breakpoint(tablet-small up) {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 4rem;
+  }
+}
+
+.v-gcode{
+  h3 {
+    @include baseline(s6, $headingtype, 1, $below: 0.25, $above: 0.25);
+    @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0, $breakpoint: tablet-small up);
+  }
+  p {
+    @include baseline(s3, $bodytype, 1, $below: 2);
+    @include baseline(s3, $bodytype, 1, $below: 0, $breakpoint: tablet-small up);
+
+    strong {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+}
+
+.v-gcode-detail {
+  padding-bottom: gu(2);
+
+  table {
+    @include styledTable();
+  }
+
+  .page-block-headline {
+    text-align: center;
+
+    @include baseline(s7, $headingtype, 1.2, $above: 1, $below: 2);
+    @include baseline(s8, $headingtype, 2, $above: 1, $below: 3, $breakpoint: mobile up);
+    @include baseline(s9, $headingtype, 2.5, $above: 2, $below: 3, $breakpoint: tablet-small up);
+  }
+
+  p {
+    @include baseline(s3, $bodytype, 1, $below: 1);
+    @include baseline(s4, $bodytype, 1, $below: 1, $breakpoint: tablet-small up);
+  }
+
+  .v-gcode-detail--content {
+    padding-top: gu(3);
+
+    @include breakpoint(tablet-small up) {
+      padding: gu(3) gu(4) 0;
+    }
+  }
+
+  small {
+    display: block;
+  }
+
+  h2 {
+    @include baseline(s6, $headingtype, 1.5, $above: 1, $below: 1);
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin: gu(2) 0 0 0;
+  }
+  .gatsby-resp-image-wrapper + em {
+    display: block;
+    text-align: center;
+
+    @include baseline(s3, $bodytype, 1, $above: 0, $below: 1);
+    @include baseline(s4, $bodytype, 1, $above: 0, $below: 2, $breakpoint: tablet-small up);
+  }
+
+  .gcode-carousel-container {
+    position: relative;
+
+    .react-multi-carousel-list {
+      overflow: visible;
+
+      @include breakpoint(tablet-small up) {
+        overflow: hidden;
+      }
+    }
+
+    .react-multiple-carousel__arrow {
+      border-radius: 0;
+      z-index: 50;
+    }
+
+    .react-multiple-carousel__arrow--left {
+      left: gu(-.6);
+
+      @include breakpoint(tablet-small up) {
+        left: gu();
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: gu(-.6);
+
+      @include breakpoint(tablet-small up) {
+        right: gu();
+      }
+    }
+  }
+
+  .gcodes-dot-list {
+    bottom: gu(-1.5);
+
+    .react-multi-carousel-dot {
+      button {
+        display: block;
+        width: gu(.4);
+        height: gu(.4);
+        margin-right: gu(.45);
+        border-width: 2px;
+        border-radius: 0;
+        background-color: map-get($palette, white);
+        border-color: map-get($palette, red);
+
+        &:hover {
+          background-color: map-get($palette, red);
+        }
+      }
+      &:last-child button {
+        margin-right: 0;
+      }
+    }
+
+    .react-multi-carousel-dot--active button {
+      background-color: map-get($palette, red);
+    }
+  }
+
+  // .gcode-carousel-container {
+  //   .image,
+  //   .gcode-carousel-item {
+  //     width: 900px!important;
+  //   }
+  // }
+}
+
+#stlviewer {
+  canvas {
+    max-width: 100%;
+    height: auto!important
+  }
+}

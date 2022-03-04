@@ -1,0 +1,31 @@
+@mixin styledTable() {
+  margin: gu(1) 0;
+
+  td, th {
+    padding: gu(.25) gu(.75);
+    border-left: 1px map-get($palette, gray-medium) solid;
+
+    &:first-child {
+      padding-left: 0;
+      border-left: none
+    }
+  }
+
+  th {
+    font-weight: map-get($bodytype, bold);
+    border-bottom: 1px map-get($palette, gray-dark) solid;
+  }
+
+  td {
+    border-top: 1px map-get($palette, gray-medium) solid;
+    vertical-align: top;
+
+    strong {
+      font-weight: map-get($bodytype, bold);
+    }
+
+    em {
+      font-style: map-get($bodytype, italic);
+    }
+  }
+}

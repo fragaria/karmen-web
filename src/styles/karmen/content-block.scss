@@ -73,3 +73,17 @@
 .content-block--relative {
   position: relative;
 }
+
+.content-block--back {
+  position: absolute;
+  left: 0;
+  color: map-get($palette, red);
+
+  @include breakpoint(tablet-small down) {
+    display: block;
+    padding-left: gu(.5);
+}
+
+  @include baseline(s6, $headingtype, 1, $above: 1, $below: 0);
+  @include baseline(s9, $headingtype, 2.5, $above: 2, $below: 1, $breakpoint: tablet-small up);
+}

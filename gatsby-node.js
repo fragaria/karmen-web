@@ -5,7 +5,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const pressPost = path.resolve(`./src/templates/blog-post.js`)
-  const result = await graphql(
+  const gcodeDetail = path.resolve(`./src/templates/gcode-detail.js`)
+  const blogQuery = await graphql(
     `
       {
         allMarkdownRemark(
@@ -29,12 +30,39 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  if (result.errors) {
-    throw result.errors
+  const gcodesQuery = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fileAbsolutePath: { regex: "/(gcodes)/" } }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                lang
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (blogQuery.errors) {
+    throw blogQuery.errors
+  }
+  if (gcodesQuery.errors) {
+    throw gcodesQuery.errors
   }
 
-  // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
+  // Create pages.
+  const posts = blogQuery.data.allMarkdownRemark.edges
 
   posts
     .filter(post => !!post.node.frontmatter.lang)
@@ -53,7 +81,27 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
-}
+
+    const gcodes = gcodesQuery.data.allMarkdownRemark.edges
+
+    gcodes
+    .filter(post => !!post.node.frontmatter.lang)
+    .forEach((post, index) => {
+      const path =
+        "/" +
+        post.node.frontmatter.lang +
+        "/gcodes/" +
+        post.node.fields.slug.replace(/\/(en|cs)\//gi, "")
+      createPage({
+        path,
+        component: gcodeDetail,
+        context: {
+          slug: post.node.fields.slug,
+          lang: post.node.frontmatter.lang,
+        },
+      })
+    })
+  }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -64,6 +112,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
-    })
+    },
+    {
+      name: `downloads`,
+      node,
+      value,
+    }
+    )
   }
 }
