@@ -36,7 +36,7 @@
     "multiple-stl-viewer": "^0.18.0",
     "node-sass": "^6.0.1",
     "nodemailer": "^6.4.16",
-    "prismjs": "^1.22.0",
+    "prismjs": "^1.27.0",
     "prop-types": "^15.7.2",
     "ptz-i18n": "^1.0.0",
     "pure-react-carousel": "^1.27.6",
