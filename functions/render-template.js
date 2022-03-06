@@ -22,4 +22,5 @@ module.exports.renderTemplate = (template, context) => {
     .replace(/%COUNTRY%/g, context.country)
     .replace(/%OS_TYPE%/g, context.osType)
     .replace(/%PRINTER_TYPE%/g, context.printerType)
+    .replace(/%PACKETA_POINT%/g, context.packetaPoint)
 }

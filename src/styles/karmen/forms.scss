@@ -37,7 +37,7 @@ $field-height: gu(2);
 .form-label {
   display: block;
 
-  @include baseline(s2, $bodytype, $below: 1);
+  @include baseline(s2, $bodytype, $below: 0);
 }
 
 .form-control {

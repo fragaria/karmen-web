@@ -1,11 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 import { Formik, Form, Field } from "formik"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 
 import fbTrack from "./fb-track"
-import PacketaPicker from "./packeta-picker.js"
 
 import {
   PILLS,
@@ -81,6 +80,10 @@ const CheckoutForm = ({
   initialCountryCode,
   showStateField = true,
 }) => {
+  const Packeta  = window.Packeta;
+  const packetaApiKey = '38d0ff9856b09ef3';
+  const [pickupChosen, setPickupChosen] = useState(false);
+
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
 
@@ -105,7 +108,7 @@ const CheckoutForm = ({
 
     fbTrack('track', 'Purchase', trackValues)
 
-    window.dataLayer.push({'event': 'Purchase', ...trackValues});
+    window.dataLayer && window.dataLayer.push({'event': 'Purchase', ...trackValues});
 
     onBuy(retVals)
   }
@@ -132,6 +135,7 @@ const CheckoutForm = ({
         printerType: "END",
         printerTypeOther: "",
         osType: "WIN",
+        packetaPoint: "",
       }}
       validate={values => {
         const errors = {}
@@ -225,6 +229,15 @@ const CheckoutForm = ({
           evt.preventDefault()
           setFieldValue("quantity", Math.max(1, values.quantity - 1))
         }
+
+        const showSelectedPickupPoint = (point) => {
+          if (point) {
+            setPickupChosen(point);
+            setFieldValue('packetaPoint',  point.name)
+          } else {
+            setFieldValue('packetaPoint',  null)
+          }
+        };
 
         const submitClass = classNames("button button--red", {
           "button--loading": isSubmitting,
@@ -734,30 +747,67 @@ const CheckoutForm = ({
                 </Field>
               </div>
               <div className="form__line">
-                <Field name="pickupPoint">
-                  {({ field, meta }) => (
-                    <>
-                      <label className="form-label" htmlFor="paymentMethod">
-                        <FormattedMessage
-                          id="checkoutform.label_pickup_point"
-                          defaultMessage="Pickup point"
-                        />
-                      </label>
-                      <div
-                        className={getClass(
-                          "form-control-wrapper",
-                          meta
-                        )}
-                        >
-                        <PacketaPicker />
+                <Field name="packetaPoint">
+                  {({ field, meta }) => {
 
-                        {meta.touched && meta.error && (
-                          <p className="form-control-error">{meta.error}</p>
-                        )}
-                        <br/><br/><br/>
-                      </div>
-                    </>
-                  )}
+                    return (
+                      <>
+                        <label className="form-label" htmlFor="packetaPoint">
+                          <FormattedMessage
+                            id="checkoutform.label_pickup_point"
+                            defaultMessage="Pickup point"
+                          />
+                        </label>
+                        <div
+                          className={getClass(
+                            "form-control-wrapper typeset",
+                            meta
+                          )}
+                          >
+                            <input type="hidden" {...field} />
+
+                            <p>Karmen Pill doručujeme přes Zásilkovnu.</p>
+
+                            {pickupChosen ?
+                              <>
+                                <p>Vybrali jste si tohle místo k vyzvednutí zásilky:</p>
+                                <address>
+                                  <strong>{pickupChosen.place}</strong><br/>
+                                  {pickupChosen.street}<br/>
+                                  {pickupChosen.zip}{" "}
+                                  {pickupChosen.city}
+                                </address>
+                              </>
+                              :
+                              <p>Vyberte prosím místo pro vyzvednutí zásilky.</p>
+                            }
+
+                            <button
+                              type="button"
+                              className="button button--sm button-mt"
+                              onClick={() => Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint)}
+                            >
+                              {pickupChosen ?
+                                <FormattedMessage
+                                  id="checkoutform.cta_pickup_point_change"
+                                  defaultMessage="Change pickup point"
+                                />
+                                :
+                                <FormattedMessage
+                                  id="checkoutform.cta_pickup_point"
+                                  defaultMessage="Select pickup point"
+                                />
+                              }
+                            </button>
+
+                          {meta.touched && meta.error && (
+                            <p className="form-control-error">{meta.error}</p>
+                          )}
+                          <br/><br/><br/>
+                        </div>
+                      </>
+                    )}
+                  }
                 </Field>
               </div>
             </div>

@@ -386,14 +386,14 @@ module.exports = {
     /**
      * Load Packeta pickup location widget
      */
-     {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        // disable: !process.env.OCTOBAT_API_KEY,
-        src:
-          "https://widget.packeta.com/v6/www/js/library.js",
-      },
-    },
+    //  {
+    //   resolve: "gatsby-plugin-load-script",
+    //   options: {
+    //     // disable: !process.env.OCTOBAT_API_KEY,
+    //     src:
+    //       "https://widget.packeta.com/v6/www/js/library.js",
+    //   },
+    // },
     // Generate sitemap in production mode
     {
       resolve: "gatsby-plugin-sitemap",
