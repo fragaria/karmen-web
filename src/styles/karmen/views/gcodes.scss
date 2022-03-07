@@ -97,9 +97,14 @@
 
   .gcode-carousel-container {
     position: relative;
+    margin: 0 gu(-1);
+
+    @include breakpoint(tablet-small up) {
+      margin: 0;
+    }
 
     .react-multi-carousel-list {
-      overflow: visible;
+      overflow: hidden;
 
       @include breakpoint(tablet-small up) {
         overflow: hidden;
@@ -112,7 +117,7 @@
     }
 
     .react-multiple-carousel__arrow--left {
-      left: gu(-.6);
+      left: 0;
 
       @include breakpoint(tablet-small up) {
         left: gu();
@@ -120,7 +125,7 @@
     }
 
     .react-multiple-carousel__arrow--right {
-      right: gu(-.6);
+      right: 0;
 
       @include breakpoint(tablet-small up) {
         right: gu();

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import STLViewer from "multiple-stl-viewer"
+import {isMobile} from 'react-device-detect';
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
@@ -22,7 +23,7 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
     mobile: {
       breakpoint: { max: 630, min: 0 },
       items: 1,
-      partialVisibilityGutter: 0,
+      slidesToSlide: 1,
     },
   }
 
@@ -57,16 +58,18 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
                 renderDotsOutside={true}
                 swipeable={false}
                 draggable={false}
-                >
+                autoPlay={false}
+                shouldResetAutoplay={false}
+              >
                 {post.frontmatter.downloads.map((download, idx) => {
                   return <STLViewer
                           key={idx}
-                          width={900}
-                          height={500}
+                          width={isMobile ? 500: 900}
+                          height={isMobile ? 400: 500}
                           urls={['/gcodes/' + download + '.stl']}
                           stlColors={['#ea272e']}
                           bedColor="#ffffff"
-                          bedDimensions={'0x0,170x0,170x170,0x170'}
+                          bedDimensions={isMobile ? '0x0,250x0,250x250,0x250' : '0x0,170x0,170x170,0x170'}
                           backgroundColor='#ffffff'
                           rotate={true}
                           orbitControls={true}
