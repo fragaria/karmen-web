@@ -4,7 +4,7 @@ import React from "react"
 
 const LookHere = () => {
   const intl = useIntl()
-  const contactLink = intl.locale === "cs" ? "/cs/#contact" : "/en/#contact"
+  const contactLink = intl.locale === "cs" ? "/cs/kontact" : "/en/contact"
 
   return (
     <div className="look-here">

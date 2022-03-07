@@ -90,6 +90,7 @@
   display: block;
   margin: 0;
   margin-right: gu(1);
+  padding-left: 0;
   font-family: getFontFamily($headingtype);
   font-weight: map-get($headingtype, semi);
   font-size: 1.25rem;
