@@ -80,7 +80,8 @@ const CheckoutForm = ({
   initialCountryCode,
   showStateField = true,
 }) => {
-  const Packeta  = window.Packeta && window.Packeta;
+  const isBrowser = typeof window !== "undefined";
+  const Packeta  = isBrowser ? window.Packeta : undefined;
   const packetaApiKey = '38d0ff9856b09ef3';
   const [pickupChosen, setPickupChosen] = useState(false);
 
@@ -791,7 +792,7 @@ const CheckoutForm = ({
                             <button
                               type="button"
                               className="button button--sm"
-                              onClick={() => Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint)}
+                              onClick={() => isBrowser && Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint)}
                             >
                               {pickupChosen ?
                                 <FormattedMessage
