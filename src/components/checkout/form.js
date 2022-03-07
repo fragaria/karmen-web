@@ -80,7 +80,7 @@ const CheckoutForm = ({
   initialCountryCode,
   showStateField = true,
 }) => {
-  const Packeta  = window.Packeta;
+  const Packeta  = window.Packeta && window.Packeta;
   const packetaApiKey = '38d0ff9856b09ef3';
   const [pickupChosen, setPickupChosen] = useState(false);
 
