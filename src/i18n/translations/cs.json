@@ -32,6 +32,7 @@
   "checkoutform.error_missing_phone": "Vyplňte prosím váš telefon.",
   "checkoutform.error_missing_postal_code": "Vyplňte prosím PSČ.",
   "checkoutform.error_missing_street": "Vyplňte prosím název ulice a číslo domu.",
+  "checkoutform.error_missing_packeta": "Vyberte prosím místo vyzvednutí zásilky.",
   "checkoutform.label_city": "Město",
   "checkoutform.label_company": "Firma (nepovinné)",
   "checkoutform.label_count": "Počet",

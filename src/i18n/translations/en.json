@@ -32,6 +32,7 @@
   "checkoutform.error_missing_phone": "Please fill out your phone number.",
   "checkoutform.error_missing_postal_code": "Please fill out your postal code.",
   "checkoutform.error_missing_street": "Please fill out street and house number of your residence.",
+  "checkoutform.error_missing_packeta": "Pleas choose pickup point.",
   "checkoutform.label_city": "City",
   "checkoutform.label_company": "Company name (optional)",
   "checkoutform.label_count": "Count",

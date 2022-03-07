@@ -199,6 +199,14 @@ const CheckoutForm = ({
             />
           )
         }
+        if (!values.packetaPoint) {
+          errors.packetaPoint = (
+            <FormattedMessage
+              id="checkoutform.error_missing_packeta"
+              defaultMessage="Please choose pickup point."
+            />
+          )
+        }
 
         return errors
       }}
@@ -768,23 +776,21 @@ const CheckoutForm = ({
 
                             <p>Karmen Pill doručujeme přes Zásilkovnu.</p>
 
-                            {pickupChosen ?
-                              <>
-                                <p>Vybrali jste si tohle místo k vyzvednutí zásilky:</p>
-                                <address>
+                            {pickupChosen && (
+                              <div>
+                                <span>Vybrali jste si tohle místo k vyzvednutí zásilky:</span><br/>
+                                <p>
                                   <strong>{pickupChosen.place}</strong><br/>
                                   {pickupChosen.street}<br/>
                                   {pickupChosen.zip}{" "}
                                   {pickupChosen.city}
-                                </address>
-                              </>
-                              :
-                              <p>Vyberte prosím místo pro vyzvednutí zásilky.</p>
-                            }
+                                </p>
+                              </div>
+                            )}
 
                             <button
                               type="button"
-                              className="button button--sm button-mt"
+                              className="button button--sm"
                               onClick={() => Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint)}
                             >
                               {pickupChosen ?
