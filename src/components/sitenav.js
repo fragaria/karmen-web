@@ -19,7 +19,6 @@ const Sitenav = () => {
               twitter
               facebook
               youtube
-              gitter
             }
           }
           nav {
@@ -147,7 +146,7 @@ const Sitenav = () => {
         customCrossIcon={false}
         customBurgerIcon={false}
         disableAutoFocus
-        // gu size for gitter link and menu button
+        // gu size for menu button
         width={"13.5rem"}
         className="sitenav__mobile-menu"
         overlayClassName="sitenav__mobile-overlay"
@@ -162,15 +161,6 @@ const Sitenav = () => {
             <span itemProp="name">{item.name}</span>
           </Link>
         ))}
-        <a
-          href={`https://gitter.im/${data.site.siteMetadata.company.social.gitter}`}
-          itemProp="url"
-          className="sitenav__gitter-link"
-        >
-          <span itemProp="name">
-            <FormattedMessage id="sitenav.gitter" defaultMessage="Get help" />
-          </span>
-        </a>
       </MobileMenu>
     </>
   )

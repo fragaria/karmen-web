@@ -196,10 +196,3 @@
   background: $sitenav-background;
   backdrop-filter: saturate(80%) blur(4px);
 }
-
-// Display gitter link in the menu until it has it's own button (see gitter-link styles)
-.sitenav__gitter-link {
-  @include breakpoint(tablet-tiny up) {
-    display: none !important;
-  }
-}

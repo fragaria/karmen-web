@@ -68,7 +68,6 @@ module.exports = {
         youtube: "UC9kcYa3r0x4MLR47i1flnFw",
         readthedocs: "karmen",
         facebook: "karmen3D",
-        gitter: "fragaria/karmen",
       },
     },
     pillDocs: "https://docs.karmen.tech/#/karmen-pill-zaciname",
