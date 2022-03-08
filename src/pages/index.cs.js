@@ -15,6 +15,8 @@ import StoryBlock from "components/page-blocks/story"
 import TestimonialsBlock from "components/page-blocks/testimonials"
 
 const IndexPage = ({ data, location }) => {
+  const testimonials = data.allMarkdownRemark.edges;
+
   return (
     <Layout location={location} containerClass="v-home">
       <SEOMetadata
@@ -31,7 +33,7 @@ const IndexPage = ({ data, location }) => {
         className="v-home-pricing v-home-section"
       />
       <PrincipleBlock className="v-home-principle v-home-section" />
-      <TestimonialsBlock />
+      <TestimonialsBlock testimonials={testimonials}/>
       <StoryBlock className="v-home-story v-home-section" />
     </Layout>
   )
@@ -48,6 +50,20 @@ export const query = graphql`
           social {
             twitter
             github
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/resources/testimonials/cs/" } }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            person
+            institution
           }
         }
       }
