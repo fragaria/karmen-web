@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { FormattedMessage, useIntl } from "react-intl"
 
@@ -61,15 +61,64 @@ const ProductBlockKarmenPill = ({ props }) => {
               defaultMessage="Karmen Pill"
             />
           </h1>
-          <div className="product-detail__desc">
+          <div className="product-detail__desc typeset">
             <FormattedMessage
               id="product-detail-pill.desc"
-              defaultMessage="Karmen Pill je malá krabička s rozměry 77 x 34 x 12 mm, která připojením přes USB port, zpřístupní tiskárnu do lokální sítě nebo internetu a umožní ji připojit ke cloudové službě Karmen."
+              defaultMessage="Karmen Pill je zařízení, které zajistí zabezpečené ovládání a monitoring 3D tiskárny přes cloudovou službu Karmen."
+            />
+
+            <p/>
+
+            <strong>
+              <FormattedMessage
+                id="product-detail-pill.specs_title"
+                defaultMessage="Karmen Pill se skládá z:"
+              />
+            </strong>
+
+            <ul>
+              <li>
+                <FormattedMessage
+                  id="product-detail-pill.specs01"
+                  defaultMessage="základní desky"
+                />
+              </li>
+              <li>
+                <FormattedMessage
+                  id="product-detail-pill.specs02"
+                  defaultMessage="webkamery a ostřícího kolečka"
+                />
+              </li>
+              <li>
+                <FormattedMessage
+                  id="product-detail-pill.specs03"
+                  defaultMessage="led diody"
+                />
+              </li>
+              <li>
+                <FormattedMessage
+                  id="product-detail-pill.specs04"
+                  defaultMessage="adaptérů a propojovacích kabelů"
+                />
+              </li>
+              <li>
+                <FormattedMessage
+                  id="product-detail-pill.specs05"
+                  defaultMessage="3D tištěných krytů (modely pro tisk - odkaz níže)"
+                />
+              </li>
+            </ul>
+            <FormattedMessage
+              id="product-detail-pill.specs_appendix"
+              defaultMessage="Instalace je velmi jednoduchá, držáky k tiskárně a další díly jsou k dispozici zde"
+              values={{
+                linkGcodes: <a href="../../gcodes/">zde</a>,
+              }}
             />
           </div>
           <div className="product-detail__made-in">
             <div className="made-in-icon">
-              <img src={czFlag} />
+              <img src={czFlag} alt="Czechia" />
             </div>
             <FormattedMessage
               id="product-detail-pill.made_in"
