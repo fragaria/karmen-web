@@ -5,10 +5,8 @@ import { FormattedMessage, useIntl } from "react-intl"
 import "react-multi-carousel/lib/styles.css"
 
 import { BackgroundImage } from "components/image"
-// import CheckoutBooth from "components/checkout/booth"
 
 import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
-// import KarmenPillPackageCarousel from "components/product-detail/karmen-pill-package"
 
 import czFlag from "assets/img/cz-flag.svg"
 import iconPackage from "assets/img/icon-package.png"
@@ -45,75 +43,8 @@ const ProductBlockKarmenPill = ({ props }) => {
       }
     }
   `)
-  // const checkoutEnabled = data.site.siteMetadata.checkout.enabled
-  const [active, setActive] = useState(false)
-  // const toggleSidebar = evt => {
-  //   evt.preventDefault()
-  //   if (active) {
-  //     document.documentElement.classList.remove("overflow-sidebar-opened")
-  //   } else {
-  //     document.documentElement.classList.add("overflow-sidebar-opened")
-  //   }
-  //   setActive(!active)
-  // }
   return (
     <section>
-      {/* <section
-        className={`offcanvas-sidebar ${active === true ? "active" : ""}`}
-      >
-        <button
-          className="sidebar__button sidebar__button--big button button--red"
-          onClick={toggleSidebar}
-        >
-          <FormattedMessage
-            id="product-detail-pill.back"
-            defaultMessage="Zpět"
-          />
-        </button>
-        <div className="offcanvas-sidebar__inner">
-          <div className="sidebar__header">
-            <button
-              className="sidebar__button button button--red"
-              onClick={toggleSidebar}
-            >
-              <FormattedMessage
-                id="product-detail-pill.back"
-                defaultMessage="Zpět"
-              />
-            </button>
-            <h1 className="sidebar__headline">
-              <FormattedMessage
-                id="buy-block.headline"
-                defaultMessage="Buy Karmen"
-              />
-            </h1>
-          </div>
-          {!checkoutEnabled && (
-            <div className="buy__disabled-warning typeset">
-              <p className="s5">
-                <FormattedMessage
-                  id="buy-block.disabled_temporarily"
-                  defaultMessage="Due to unexpectedly large number of orders, we had to <strong>temporarily disable our online store</strong> to be able fulfill the orders within a reasonable time. Please <contactLink>drop us an email</contactLink> in case you're interested in buying Karmen and we'll let you know once the store is back online."
-                  values={{
-                    strong: (...chunks) => <strong>{chunks}</strong>,
-                    contactLink: (...chunks) => (
-                      <a
-                        href={`mailto:${data.site.siteMetadata.company.contactEmail}`}
-                      >
-                        {chunks}
-                      </a>
-                    ),
-                  }}
-                />
-              </p>
-            </div>
-          )}
-          {checkoutEnabled && <CheckoutBooth />}
-        </div>
-      </section> */}
-      {/* <div
-        className={`offcanvas-overlay ${active === true ? "active" : ""}`}
-      ></div> */}
       <div className="product-detail__hero">
         <BackgroundImage
           file={data.pillFull}
@@ -163,15 +94,6 @@ const ProductBlockKarmenPill = ({ props }) => {
               defaultMessage="Zakoupit"
             />
           </Link>
-          {/* <button
-            className="product-detail__buy-button button button-full button--red"
-            onClick={toggleSidebar}
-          >
-            <FormattedMessage
-              id="product-detail-pill.buy_button"
-              defaultMessage="Zakoupit"
-            />
-          </button> */}
           <ul className="product-detail__delivery list--unstyled">
             <li>
               <img
@@ -381,17 +303,6 @@ const ProductBlockKarmenPill = ({ props }) => {
                 </div>
               </div>
             </section>
-            {/* <section className="product-detail__article">
-              <h1 className="product-detail__headline2">
-                <FormattedMessage
-                  id="product-detail-pill.package-content_title"
-                  defaultMessage="Obsah balení"
-                />
-              </h1>
-              <div className="product-detail__package-content">
-                <KarmenPillPackageCarousel />
-              </div>
-            </section> */}
           </div>
         </section>
       </div>
