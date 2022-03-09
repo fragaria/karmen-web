@@ -87,8 +87,6 @@ const CheckoutForm = ({
 
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
-
-    console.log("values", values)
     const purchaseDetails = getPurchaseDetails(values)
 
     retVals["product"] = {
