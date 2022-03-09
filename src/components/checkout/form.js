@@ -134,6 +134,7 @@ const CheckoutForm = ({
         printerType: "END",
         printerTypeOther: "",
         osType: "WIN",
+        delivery: "address",
         packetaPoint: "",
       }}
       validate={values => {
@@ -198,7 +199,7 @@ const CheckoutForm = ({
             />
           )
         }
-        if (!values.packetaPoint) {
+        if (values.delivery === "pickup" && !values.packetaPoint) {
           errors.packetaPoint = (
             <FormattedMessage
               id="checkoutform.error_missing_packeta"
@@ -753,18 +754,59 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
-              <div className="form__line">
-                <Field name="packetaPoint">
-                  {({ field, meta }) => {
 
-                    return (
-                      <>
-                        <label className="form-label" htmlFor="packetaPoint">
-                          <FormattedMessage
-                            id="checkoutform.label_pickup_point"
-                            defaultMessage="Pickup point"
-                          />
-                        </label>
+              <div className="form__line">
+                <Field name="deliveryMethod">
+                  {({ field, meta }) => (
+                    <div
+                      className={getClass(
+                        "form-control-wrapper typeset",
+                        meta
+                      )}
+                    >
+                      <label className="form-label" htmlFor="deliveryMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_delivery"
+                          defaultMessage="Delivery"
+                        />
+                      </label>
+
+                      <p>Karmen Pill doručujeme přes Zásilkovnu. <br/> Zvolte prosím zbůsob doručení zásilky.</p>
+                      <label className="form-control-radio">
+                        <input
+                          type="radio"
+                          value="address"
+                          checked={values.delivery === "address"}
+                          onChange={() => setFieldValue("delivery", "address")}
+                        />
+                        <FormattedMessage
+                          id="checkoutform.label_delivery_address"
+                          defaultMessage="Address"
+                        />
+                      </label>
+
+                      <label className="form-control-radio">
+                        <input
+                          type="radio"
+                          value="pickup"
+                          checked={values.delivery === "pickup"}
+                          onChange={() => setFieldValue("delivery", "pickup")}
+                        />
+                        <FormattedMessage
+                          id="checkoutform.label_delivery_pickup"
+                          defaultMessage="Pickup point"
+                        />
+                      </label>
+                    </div>
+                  )}
+                </Field>
+              </div>
+
+              {values.delivery === "pickup" && (
+                <div className="form__line">
+                  <Field name="packetaPoint">
+                    {({ field, meta }) => {
+                      return (
                         <div
                           className={getClass(
                             "form-control-wrapper typeset",
@@ -773,18 +815,13 @@ const CheckoutForm = ({
                           >
                             <input type="hidden" {...field} />
 
-                            <p>Karmen Pill doručujeme přes Zásilkovnu.</p>
-
                             {pickupChosen && (
-                              <div>
-                                <span>Vybrali jste si tohle místo k vyzvednutí zásilky:</span><br/>
-                                <p>
-                                  <strong>{pickupChosen.place}</strong><br/>
-                                  {pickupChosen.street}<br/>
-                                  {pickupChosen.zip}{" "}
-                                  {pickupChosen.city}
-                                </p>
-                              </div>
+                              <p>
+                                <strong>{pickupChosen.place}</strong><br/>
+                                {pickupChosen.street}<br/>
+                                {pickupChosen.zip}{" "}
+                                {pickupChosen.city}
+                              </p>
                             )}
 
                             <button
@@ -808,13 +845,13 @@ const CheckoutForm = ({
                           {meta.touched && meta.error && (
                             <p className="form-control-error">{meta.error}</p>
                           )}
-                          <br/><br/><br/>
                         </div>
-                      </>
-                    )}
-                  }
-                </Field>
-              </div>
+                      )}
+                    }
+                  </Field>
+                </div>
+              )}
+              <br/><br/><br/>
             </div>
 
             <div className="checkout-form__body checkout-form__body--wdivider">

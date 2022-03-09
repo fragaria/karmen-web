@@ -39,10 +39,11 @@ PSČ: %ZIP%
 Stát: %STATE%
 Země: %COUNTRY%
 
-Místo vyzvednutí: %PACKETA_POINT%
-
 Operační systém: %OS_TYPE%
 Typ tiskárny: %PRINTER_TYPE%
+
+Způsob doručení: %DELIVERY%
+Místo vyzvednutí: %PACKETA_POINT%
 `
 
 const handler = async event => {
