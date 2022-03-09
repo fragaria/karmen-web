@@ -41,6 +41,7 @@
   }
 
   .form-control-wrapper--select {
+    margin-bottom: 0;
     &:after {
       color: map-get($palette, white);
     }
