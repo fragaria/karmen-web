@@ -92,6 +92,12 @@ a.button {
   }
 }
 
+.button.button--sm {
+  padding: 0 gu(.5);
+  line-height: gu(1.5);
+  height: gu(1.5);
+}
+
 .button.button--responsive {
   width: 100%;
   text-align: center;

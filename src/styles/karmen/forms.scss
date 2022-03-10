@@ -1,4 +1,4 @@
-$field-height: gu(3);
+$field-height: gu(2);
 
 .form {
   width: 100%;
@@ -35,9 +35,9 @@ $field-height: gu(3);
 }
 
 .form-label {
-  display: block;
+  display: flex;
 
-  @include baseline(s2, $bodytype, $below: 1);
+  @include baseline(s2, $bodytype, $below: 0);
 }
 
 .form-control {
@@ -78,7 +78,7 @@ $field-height: gu(3);
    * This breaks the grid temporarily for sake of better readability.
    */
   $shift: gu(0.5);
-  margin-top: $shift * -1;
+  margin-top: $shift;
   padding-bottom: $shift;
   margin-bottom: gu(-1);
 
@@ -155,5 +155,20 @@ textarea.form-control {
   line-height: gu();
   padding-top: gu(0.5);
   padding-bottom: gu(0.5);
+  appearance: none;
   // border: 0;
+}
+
+.form-control-radio {
+  display: flex;
+  align-items: center;
+  min-height: gu();
+  cursor: pointer;
+
+  input {
+    height: gu(.5);
+    width: gu(.5);
+    padding: 0;
+    margin: 0 gu(.2) 0 0;
+  }
 }

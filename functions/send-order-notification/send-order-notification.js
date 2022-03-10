@@ -41,6 +41,9 @@ Země: %COUNTRY%
 
 Operační systém: %OS_TYPE%
 Typ tiskárny: %PRINTER_TYPE%
+
+Způsob doručení: %DELIVERY%
+Místo vyzvednutí: %PACKETA_POINT%
 `
 
 const handler = async event => {

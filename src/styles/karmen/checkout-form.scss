@@ -7,7 +7,7 @@
 }
 
 .checkout-form__body {
-  padding: gu(1) gu(1) gu(2);
+  padding: gu() gu() gu();
 
   &--wdivider {
     position: relative;
@@ -41,6 +41,7 @@
   }
 
   .form-control-wrapper--select {
+    margin-bottom: 0;
     &:after {
       color: map-get($palette, white);
     }
@@ -71,7 +72,7 @@
 
 .checkout-form__quantity-field-row {
   display: flex;
-  height: gu(3);
+  height: gu(2);
   // border is totally overriden for this one - see .form-control compensation below
   border: 1px map-get($palette, white) solid;
 
@@ -94,7 +95,7 @@
 
   .form-control {
     border: 0;
-    height: calc(#{gu(3)} - 2px);
+    height: calc(#{gu(2)} - 2px);
 
   }
 }
@@ -161,7 +162,7 @@
 
 @include breakpoint(tablet up) {
   .checkout-form__body {
-    padding: gu(1) gu(2) gu(2);
+    padding: gu() gu(2) gu();
   }
 
   .checkout-form__submit {

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 import { Formik, Form, Field } from "formik"
@@ -80,10 +80,13 @@ const CheckoutForm = ({
   initialCountryCode,
   showStateField = true,
 }) => {
+  const isBrowser = typeof window !== "undefined";
+  const Packeta  = isBrowser ? window.Packeta : undefined;
+  const packetaApiKey = '38d0ff9856b09ef3';
+  const [pickupChosen, setPickupChosen] = useState(false);
+
   const onSubmit = (values, { setSubmitting }) => {
     const retVals = { ...values }
-
-    console.log("values", values)
     const purchaseDetails = getPurchaseDetails(values)
 
     retVals["product"] = {
@@ -104,7 +107,7 @@ const CheckoutForm = ({
 
     fbTrack('track', 'Purchase', trackValues)
 
-    window.dataLayer.push({'event': 'Purchase', ...trackValues});
+    window.dataLayer && window.dataLayer.push({'event': 'Purchase', ...trackValues});
 
     onBuy(retVals)
   }
@@ -131,6 +134,8 @@ const CheckoutForm = ({
         printerType: "END",
         printerTypeOther: "",
         osType: "WIN",
+        delivery: "address",
+        packetaPoint: "",
       }}
       validate={values => {
         const errors = {}
@@ -194,6 +199,14 @@ const CheckoutForm = ({
             />
           )
         }
+        if (values.delivery === "pickup" && !values.packetaPoint) {
+          errors.packetaPoint = (
+            <FormattedMessage
+              id="checkoutform.error_missing_packeta"
+              defaultMessage="Please choose pickup point."
+            />
+          )
+        }
 
         return errors
       }}
@@ -224,6 +237,15 @@ const CheckoutForm = ({
           evt.preventDefault()
           setFieldValue("quantity", Math.max(1, values.quantity - 1))
         }
+
+        const showSelectedPickupPoint = (point) => {
+          if (point) {
+            setPickupChosen(point);
+            setFieldValue('packetaPoint',  point.name)
+          } else {
+            setFieldValue('packetaPoint',  null)
+          }
+        };
 
         const submitClass = classNames("button button--red", {
           "button--loading": isSubmitting,
@@ -576,41 +598,15 @@ const CheckoutForm = ({
                   )}
                 </Field>
               </div>
-              <div className="form__line">
-                <Field name="paymentMethod">
-                  {({ field, meta }) => (
-                    <>
-                      <label className="form-label" htmlFor="paymentMethod">
-                        <FormattedMessage
-                          id="checkoutform.label_payment_method"
-                          defaultMessage="Payment method"
-                        />
-                      </label>
-                      <div
-                        className={getClass(
-                          "form-control-wrapper form-control-wrapper--select",
-                          meta
-                        )}
-                      >
-                        <select
-                          className="form-control form-control--bordered"
-                          {...field}
-                        >
-                          <option value="card">
-                            {intl.formatMessage(messages.paymentMethodCard)}
-                          </option>
-                          <option value="transfer">
-                            {intl.formatMessage(messages.paymentMethodTransfer)}
-                          </option>
-                        </select>
-                        {meta.touched && meta.error && (
-                          <p className="form-control-error">{meta.error}</p>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </Field>
-              </div>
+            </div>
+
+            <div className="checkout-form__body">
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.printer_os_type"
+                  defaultMessage="Printer and OS type"
+                />
+              </h2>
 
               <div className="form__line">
                 <Field name="printerType">
@@ -708,6 +704,7 @@ const CheckoutForm = ({
                         {meta.touched && meta.error && (
                           <p className="form-control-error">{meta.error}</p>
                         )}
+                        <p className="form-control-error">Vyberte typ operačního systému, na kterém budete provádět úvodní nastavení Karmen Pill.</p>
                       </div>
                     </>
                   )}
@@ -715,6 +712,147 @@ const CheckoutForm = ({
               </div>
             </div>
 
+            <div className="checkout-form__body">
+              <h2>
+                <FormattedMessage
+                  id="checkoutform.payment_and_shipping_method"
+                  defaultMessage="Payment and shipping method"
+                />
+              </h2>
+              <div className="form__line">
+                <Field name="paymentMethod">
+                  {({ field, meta }) => (
+                    <>
+                      <label className="form-label" htmlFor="paymentMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_payment_method"
+                          defaultMessage="Payment method"
+                        />
+                      </label>
+                      <div
+                        className={getClass(
+                          "form-control-wrapper form-control-wrapper--select",
+                          meta
+                        )}
+                      >
+                        <select
+                          className="form-control form-control--bordered"
+                          {...field}
+                        >
+                          <option value="card">
+                            {intl.formatMessage(messages.paymentMethodCard)}
+                          </option>
+                          <option value="transfer">
+                            {intl.formatMessage(messages.paymentMethodTransfer)}
+                          </option>
+                        </select>
+                        {meta.touched && meta.error && (
+                          <p className="form-control-error">{meta.error}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </Field>
+              </div>
+
+              <div className="form__line">
+                <Field name="deliveryMethod">
+                  {({ field, meta }) => (
+                    <div
+                      className={getClass(
+                        "form-control-wrapper typeset",
+                        meta
+                      )}
+                    >
+                      <label className="form-label" htmlFor="deliveryMethod">
+                        <FormattedMessage
+                          id="checkoutform.label_delivery"
+                          defaultMessage="Delivery"
+                        />
+                      </label>
+
+                      <p>Karmen Pill doručujeme přes Zásilkovnu. <br/> Zvolte prosím zbůsob doručení zásilky.</p>
+                      <label className="form-control-radio">
+                        <input
+                          type="radio"
+                          value="address"
+                          checked={values.delivery === "address"}
+                          onChange={() => setFieldValue("delivery", "address")}
+                        />
+                        <FormattedMessage
+                          id="checkoutform.label_delivery_address"
+                          defaultMessage="Address"
+                        />
+                      </label>
+
+                      <label className="form-control-radio">
+                        <input
+                          type="radio"
+                          value="pickup"
+                          checked={values.delivery === "pickup"}
+                          onChange={() => setFieldValue("delivery", "pickup")}
+                        />
+                        <FormattedMessage
+                          id="checkoutform.label_delivery_pickup"
+                          defaultMessage="Pickup point"
+                        />
+                      </label>
+                    </div>
+                  )}
+                </Field>
+              </div>
+
+              {values.delivery === "pickup" && (
+                <div className="form__line">
+                  <Field name="packetaPoint">
+                    {({ field, meta }) => {
+                      return (
+                        <div
+                          className={getClass(
+                            "form-control-wrapper typeset",
+                            meta
+                          )}
+                          >
+                            <input type="hidden" {...field} />
+
+                            {pickupChosen && (
+                              <p>
+                                <strong>{pickupChosen.place}</strong><br/>
+                                {pickupChosen.street}<br/>
+                                {pickupChosen.zip}{" "}
+                                {pickupChosen.city}
+                              </p>
+                            )}
+
+                            <button
+                              type="button"
+                              className="button button--sm"
+                              onClick={() => isBrowser && Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint)}
+                            >
+                              {pickupChosen ?
+                                <FormattedMessage
+                                  id="checkoutform.cta_pickup_point_change"
+                                  defaultMessage="Change pickup point"
+                                />
+                                :
+                                <FormattedMessage
+                                  id="checkoutform.cta_pickup_point"
+                                  defaultMessage="Select pickup point"
+                                />
+                              }
+                            </button>
+
+                          {meta.touched && meta.error && (
+                            <p className="form-control-error">{meta.error}</p>
+                          )}
+                        </div>
+                      )}
+                    }
+                  </Field>
+                </div>
+              )}
+              <br/><br/><br/>
+            </div>
 
             <div className="checkout-form__body checkout-form__body--wdivider">
               <h2>
