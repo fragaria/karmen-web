@@ -31,13 +31,14 @@ const GcodesListing = ({ list, site, location, ...props }) => {
             node.frontmatter.lang +
             "/gcodes/" +
             node.fields.slug.replace(/\/(en|cs)\//gi, "")
+          console.log(node.frontmatter.cover)
           return (
             <div
               className="v-gcode"
               key={node.fields.slug}
             >
               <Link style={{ boxShadow: `none` }} to={link}>
-                <img className="image" src="https://user-images.githubusercontent.com/461650/133330840-d11e4681-e265-45d0-b1d9-633ef285d972.png" alt="" />
+                <img className="image" src={node.frontmatter.cover} alt={node.frontmatter.title} />
                 <h3>{title}</h3>
                 <p
                   dangerouslySetInnerHTML={{

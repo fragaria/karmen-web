@@ -49,10 +49,10 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
             <div className="gcode-carousel-container">
               <Carousel
                 responsive={responsive}
-                showDots={post.frontmatter.downloads.length > 1}
+                showDots={post.frontmatter.downloads.length > 0}
                 infinite={true}
                 dotListClass="gcodes-dot-list"
-                arrows={post.frontmatter.downloads.length > 1}
+                arrows={post.frontmatter.downloads.length > 0}
                 renderButtonGroupOutside={true}
                 // customButtonGroup={}
                 renderDotsOutside={true}
@@ -61,7 +61,10 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
                 autoPlay={false}
                 shouldResetAutoplay={false}
               >
-                {post.frontmatter.downloads.map((download, idx) => {
+                {post.frontmatter.cover && (
+                  <img className="image" src={post.frontmatter.cover} alt={post.frontmatter.title} />
+                )}
+                {post.frontmatter.downloads && post.frontmatter.downloads.map((download, idx) => {
                   return <STLViewer
                           key={idx}
                           width={isMobile ? 500: 900}
@@ -77,8 +80,6 @@ const GcodeDetailTemplate = ({ data, pageContext, location }) => {
                         />
                 })}
               </Carousel>
-
-
             </div>
 
             <section className="v-gcode-detail--content typeset">
@@ -153,6 +154,7 @@ export const pageQuery = graphql`
         title
         gcode
         description
+        cover
         material {
           material
           description

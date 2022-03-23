@@ -4,6 +4,7 @@ lang: cs
 gcode: "Karmen-Holder-Small-Pill-v2"
 downloads: ["Karmen-Holder-Small-Pill-v2"]
 description: "Držák na tiskárnu MK3 / MK3S"
+cover: "/gcodes/Karmen-Holder-Small-Pill-v2.jpg"
 material: {
   material: "ASA",
   description: "Pokud na své tiskárně tisknete z materiálů, které vyžadují větší vyhřátí podložky, doporučujeme použít ASA, aby nedošlo k deformaci držáku."

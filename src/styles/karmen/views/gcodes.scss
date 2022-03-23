@@ -26,7 +26,7 @@
     @include baseline(s6, $headingtype, 1.5, $below: 0, $above: 0, $breakpoint: tablet-small up);
   }
   p {
-    @include baseline(s3, $bodytype, 1, $below: 2);
+    @include baseline(s3, $bodytype, 1, $below: 3);
     @include baseline(s3, $bodytype, 1, $below: 0, $breakpoint: tablet-small up);
 
     strong {

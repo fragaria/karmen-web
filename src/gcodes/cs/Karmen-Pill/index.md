@@ -3,11 +3,13 @@ title: "Karmen Pill"
 lang: cs
 gcode: "Karmen-Pill-MMU2-v4"
 downloads: [
+  "SD-Cover-v8",
+  "Karmen-Pill-Top-Cover-v65",
   "Karmen-Pill-Camera-Holder-v37",
-  "Karmen-Pill-MMU2-v4",
-  "Karmen-Pill-Top-Cover-v65"
+  "Karmen-Pill-MMU2-v4"
 ]
 description: "Krabička pro Karmen Pill"
+cover: "/gcodes/Karmen-Pill.jpg"
 material: {
   material: "PLA, ASA",
   description: ""
