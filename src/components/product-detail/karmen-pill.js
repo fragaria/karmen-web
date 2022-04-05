@@ -36,6 +36,7 @@ const ProductBlockKarmenPill = ({ props }) => {
           company {
             contactEmail
           }
+          eshopUrl
         }
       }
       pillFull: file(relativePath: { eq: "product-full-pill.png" }) {
@@ -125,48 +126,12 @@ const ProductBlockKarmenPill = ({ props }) => {
               defaultMessage="Karmen vyrábíme v Čechách."
             />
           </div>
-          <div className="product-detail__price">
+          <Link to={data.site.siteMetadata.eshopUrl} className="product-detail__buy-button button button--full button--red">
             <FormattedMessage
-              id="product-detail-pill.price"
-              defaultMessage="4235 Kč s DPH"
-            />
-          </div>
-          <div className="product-detail__price-vat">
-            <FormattedMessage
-              id="product-detail-pill.price-vat"
-              defaultMessage="3500 Kč bez DPH"
-            />
-          </div>
-          <Link to={buyPillLink} className="product-detail__buy-button button button--full button--red">
-            <FormattedMessage
-              id="product-detail-pill.buy_button"
-              defaultMessage="Zakoupit"
+              id="pricing-block.cta_eshop"
+              defaultMessage="Do e-shopu"
             />
           </Link>
-          <ul className="product-detail__delivery list--unstyled">
-            <li>
-              <img
-                src={iconPackage}
-                className="list-icon"
-                alt="Odeslání do dvou dnů"
-              />
-              <FormattedMessage
-                id="product-detail-pill.delivery"
-                defaultMessage="Odeslání do dvou dnů"
-              />
-            </li>
-            <li>
-              <img
-                src={iconTruck}
-                className="list-icon"
-                alt="Odeslání do dvou dnů"
-              />
-              <FormattedMessage
-                id="product-detail-pill.delivery_price"
-                defaultMessage="Poštovné 60 Kč"
-              />
-            </li>
-          </ul>
           <div className="product-detail-circle"></div>
         </div>
       </div>

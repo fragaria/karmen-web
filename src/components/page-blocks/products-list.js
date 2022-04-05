@@ -18,10 +18,6 @@ const ProductsList = ({ location, ...props }) => {
     intl.locale === "cs"
       ? "/cs/produkty/karmen-cloud"
       : "/en/products/karmen-cloud"
-  const pillLink =
-    intl.locale === "cs"
-      ? "/cs/produkty/karmen-pill/"
-      : "/en/products/karmen-pill/"
   // const diyLink =
   //   intl.locale === "cs"
   //     ? "/cs/produkty/karmen-pill-skladacka"
@@ -38,6 +34,11 @@ const ProductsList = ({ location, ...props }) => {
       }
       diy: file(relativePath: { eq: "product-diy.png" }) {
         ...fluidImage1024
+      }
+      site {
+        siteMetadata {
+          eshopUrl
+        }
       }
     }
   `)
@@ -126,26 +127,14 @@ const ProductsList = ({ location, ...props }) => {
             </div>
             <div className="products-list__buy">
               <Link
-                to={pillLink}
+                to={data.site.siteMetadata.eshopUrl}
                 className="products-list__buybutton button button--full button--red"
               >
                 <FormattedMessage
-                  id="pricing-block.cta__full"
-                  defaultMessage="Chci hotové řešení"
+                  id="pricing-block.cta_eshop"
+                  defaultMessage="Do e-shopu"
                 />
               </Link>
-            </div>
-            <div className="products-list__price-vat">
-              <FormattedMessage
-                id="pricing-block.full_price_vat"
-                defaultMessage="4 235 KČ s DPH"
-              />
-            </div>
-            <div className="products-list__price">
-              <FormattedMessage
-                id="pricing-block.full_price"
-                defaultMessage="3 500 KČ bez DPH"
-              />
             </div>
           </div>
         </div>

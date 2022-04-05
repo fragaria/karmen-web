@@ -7,6 +7,8 @@ const sharp = require("sharp")
 sharp.cache(false)
 sharp.simd(false)
 
+const eshopUrl = "https://508537.myshoptet.com";
+
 module.exports = {
   siteMetadata: {
     author: `Fragaria s.r.o.`,
@@ -27,6 +29,7 @@ module.exports = {
       "css",
     ],
     siteUrl: process.env.SITE_URL || "https://karmen.tech", // no trailing slash!
+    eshopUrl: eshopUrl,
     languages,
     checkout: {
       enabled: (process.env.CHECKOUT_ENABLED || "1") === "1",
@@ -173,8 +176,8 @@ module.exports = {
           url: `/cs/produkty`,
         },
         {
-          name: "Koupit",
-          url: `/cs/koupit`,
+          name: "E-shop",
+          url: eshopUrl,
         },
         {
           name: "Příběh Karmen",
