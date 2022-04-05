@@ -30,9 +30,6 @@
   @include breakpoint(tablet-small up) {
     flex-flow: row;
   }
-  @include breakpoint(fullhd up) {
-    flex-flow: column;
-  }
 }
 
 .contact-box {
