@@ -7,7 +7,7 @@ const sharp = require("sharp")
 sharp.cache(false)
 sharp.simd(false)
 
-const eshopUrl = "https://508537.myshoptet.com";
+const eshopUrl = "https://eshop.karmen.tech/";
 
 module.exports = {
   siteMetadata: {
