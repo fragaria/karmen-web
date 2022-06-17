@@ -146,8 +146,8 @@ module.exports = {
     nav: {
       en: [
         {
-          name: "Products",
-          url: `/en/products/`,
+          name: "Cloud",
+          url: `/en/products/karmen-cloud`,
         },
         {
           name: "Karmen story",
@@ -172,8 +172,8 @@ module.exports = {
       ],
       cs: [
         {
-          name: "Produkty",
-          url: `/cs/produkty`,
+          name: "Cloud",
+          url: `/cs/produkty/karmen-cloud`,
         },
         {
           name: "E-shop",
