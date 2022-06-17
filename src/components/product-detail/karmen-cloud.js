@@ -55,9 +55,15 @@ const ProductBlockKarmenCloud = ({ props }) => {
               defaultMessage="Zdarma pro všechny"
             />
           </div>
+          <a
+            href="https://next.karmen.tech/login"
+            className="product-detail__buy-button button button--red button--mr"
+          >
+            Přihlásit se
+          </a>
           <Link
             to={cloudRegister}
-            className="product-detail__buy-button button button--full button--red"
+            className="product-detail__buy-button button button--outlineBlack"
           >
             <FormattedMessage
               id="product-detail-cloud.register_button"
