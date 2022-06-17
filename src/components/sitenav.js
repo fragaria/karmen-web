@@ -114,7 +114,6 @@ const Sitenav = () => {
                 <>
                   <a
                     href="https://eshop.karmen.tech/cart"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="sitenav__link sitenav__link--lowprio typeset__anchor--nounderline"
                   >
@@ -140,6 +139,22 @@ const Sitenav = () => {
               )}
             </div>
           </div>
+          <a
+            href="https://eshop.karmen.tech/cart"
+            rel="noopener noreferrer"
+            className="sitenav__mobile-menu-cart"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 768 768"
+              stroke="currentColor"
+              className="sitenav__icon"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M544.5 576q25.5 0 44.25 19.5t18.75 45-18.75 44.25-44.25 18.75-45-18.75-19.5-44.25 19.5-45 45-19.5zM31.5 64.5h105l30 63h474q13.5 0 22.5 9.75t9 23.25q0 1.5-4.5 15l-114 207q-18 33-55.5 33h-238.5l-28.5 52.5-1.5 4.5q0 7.5 7.5 7.5h370.5v64.5h-384q-25.5 0-44.25-19.5t-18.75-45q0-15 7.5-30l43.5-79.5-115.5-243h-64.5v-63zM223.5 576q25.5 0 45 19.5t19.5 45-19.5 44.25-45 18.75-44.25-18.75-18.75-44.25 18.75-45 44.25-19.5z"></path>
+            </svg>
+          </a>
+
           <button className={mobileToggleClasses} onClick={toggleMobileMenu}>
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>

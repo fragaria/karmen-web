@@ -201,3 +201,17 @@
   background: $sitenav-background;
   backdrop-filter: saturate(80%) blur(4px);
 }
+
+.sitenav__mobile-menu-cart {
+  position: fixed;
+  top: 0;
+  right: gu(2.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: gu(.65);
+
+  @media screen and (min-width: $sitenav-breakpoint) {
+    display: none;
+  }
+}
