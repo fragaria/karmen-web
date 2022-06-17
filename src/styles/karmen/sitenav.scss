@@ -211,6 +211,13 @@
   justify-content: center;
   padding: gu(.65);
 
+  @include breakpoint(tablet-tiny up) {
+    height: map-get($sitenav-height, tablet-tiny);
+    width: gu(3);
+    padding: gu(.75);
+    right: gu(2.85);
+  }
+
   @media screen and (min-width: $sitenav-breakpoint) {
     display: none;
   }
