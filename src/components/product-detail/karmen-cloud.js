@@ -19,6 +19,7 @@ const ProductBlockKarmenCloud = ({ props }) => {
       }
     }
   `)
+  const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
   return (
     <div>
       <div className="product-detail__hero">
@@ -71,6 +72,15 @@ const ProductBlockKarmenCloud = ({ props }) => {
             />
           </Link>
           <div className="product-detail-circle"></div>
+          <div className="products-list__price">
+            <FormattedMessage
+              id="pricing-block.manual"
+              defaultMessage="{manualLink}"
+              values={{
+                manualLink: <a href={manualLink}>Návod jak připojit Octoprint</a>
+              }}
+            />
+          </div>
         </div>
       </div>
       <div className="product-detail-page content-block">
