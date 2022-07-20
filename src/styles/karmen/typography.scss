@@ -165,7 +165,8 @@ a {
     // Lists.
     ul,
     ol {
-        @include baseline(s4, $bodytype, $below: 1);
+        @include baseline(s3, $bodytype, $below: 1);
+        @include baseline(s4, $bodytype, $below: 1, $breakpoint: tablet-small up);
 
         li {
             font-feature-settings: "kern", "onum", "liga";
