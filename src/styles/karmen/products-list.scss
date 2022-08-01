@@ -1,6 +1,5 @@
 .products-list {
   display: flex;
-  margin: 0 gu(-2);
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -10,7 +9,7 @@
     align-items: flex-start;
   }
   @include breakpoint(tablet up) {
-
+    margin: 0 gu(-2);
   }
 }
 
