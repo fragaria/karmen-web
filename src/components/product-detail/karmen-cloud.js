@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { FormattedMessage } from "react-intl"
 
@@ -19,7 +19,7 @@ const ProductBlockKarmenCloud = ({ props }) => {
       }
     }
   `)
-  const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
+  const manualUrl = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
   return (
     <div>
       <div className="product-detail__hero">
@@ -62,22 +62,22 @@ const ProductBlockKarmenCloud = ({ props }) => {
           >
             Přihlásit se
           </a>
-          <Link
-            to={cloudRegister}
+          <a
+            href={cloudRegister}
             className="product-detail__buy-button button button--outlineBlack"
           >
             <FormattedMessage
               id="product-detail-cloud.register_button"
               defaultMessage="Registrovat se"
             />
-          </Link>
+          </a>
           <div className="product-detail-circle"></div>
           <div className="products-list__price">
             <FormattedMessage
               id="pricing-block.manual"
               defaultMessage="{manualLink}"
               values={{
-                manualLink: <a href={manualLink}>Návod jak připojit Octoprint</a>
+                manualLink: <a href={manualUrl}>Návod jak připojit Octoprint</a>
               }}
             />
           </div>

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Number of breakpoints.
 $breakpoints-limit: length($breakpoints);
 $breakpoint-keys: map-keys($breakpoints);
@@ -13,7 +15,7 @@ $points: map-values($breakpoints);
 
 @function calc-rootsize($breakpoint-idx) {
     // 16 is default font size for most browsers.
-    @return strip-unit(nth($sizes, $breakpoint-idx)) / 16;
+    @return math.div(strip-unit(nth($sizes, $breakpoint-idx)), 16);
 }
 
 
@@ -23,7 +25,7 @@ $points: map-values($breakpoints);
 
     // Loop through breakpoints.
     @for $i from 2 through $breakpoints-limit {
-        @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
+        @media screen and (min-width: (math.div(strip-unit(nth($points, $i)), 16) * 1em) ) {
             font-size: calc-rootsize($i) * 100%;
         }
     }
@@ -41,7 +43,7 @@ $points: map-values($breakpoints);
 
     // Loop through breakpoints.
     @for $i from 2 through $breakpoints-limit {
-        @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
+        @media screen and (min-width: (math.div(strip-unit(nth($points, $i)), 16) * 1em) ) {
             background-size: 100% $grid-unit;
         }
     }
@@ -135,10 +137,10 @@ $points: map-values($breakpoints);
     $size: map-get($scale, $fontsize);
     $rootsize: map-get($rootsizes, $breakpoint);
 
-    $fontsize-rems: strip-unit($size / $rootsize);
+    $fontsize-rems: strip-unit(math.div($size, $rootsize));
     $capheight-rems: $fontsize-rems * $cap-height;
     $lh-rems: strip-unit(gu($lineheight));
-    $push: ($lh-rems - $capheight-rems) / 2;
+    $push: math.div(($lh-rems - $capheight-rems), 2);
     $baseline-shift: strip-unit(gu($above)) + $push;
     $baseline-push: strip-unit(gu($below)) - $push;
 
@@ -200,7 +202,7 @@ $points: map-values($breakpoints);
     $size: map-get($scale, $fontsize);
     $rootsize: map-get($rootsizes, $breakpoint);
 
-    font-size: #{$size / $rootsize}rem;
+    font-size: #{math.div($size, $rootsize)}rem;
 }
 
 /**

@@ -91,6 +91,10 @@ const VideoPlayer = props => {
         poster={props.poster}
         onEnded={videoEnded}
       >
+        <track default
+          kind="captions"
+          srclang="en"
+        />
         Your browser does not support the video tag.
       </video>
       <div className="video-overlay">

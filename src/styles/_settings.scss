@@ -63,7 +63,7 @@ $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
 
-$sitenav-background: hsla(0, 0, 100%, .89);
+$sitenav-background: hsla(0, 0%, 100%, .89);
 
 $page-container-max-width: 120rem; // ~1920px
 $page-content-max-width: 65rem; // ~1344px
@@ -74,7 +74,7 @@ $sitenav-breakpoint: 1280px;
 // Buttons
 
 $button-variants: (
-    primary: (
+    'primary': (
         foreground: map-get($palette, white),
         background: map-get($palette, black),
         foregroundHover: map-get($palette, white),
@@ -82,7 +82,7 @@ $button-variants: (
         borderColor: map-get($palette, black),
         borderColorHover: map-get($palette, red)
     ),
-    primaryToWhite: (
+    'primaryToWhite': (
         foreground: map-get($palette, white),
         background: map-get($palette, black),
         foregroundHover: map-get($palette, black),
@@ -90,7 +90,7 @@ $button-variants: (
         borderColor: map-get($palette, black),
         borderColorHover: map-get($palette, white)
     ),
-    red: (
+    'red': (
         foreground: map-get($palette, white),
         background: map-get($palette, red),
         foregroundHover: map-get($palette, white),
@@ -98,7 +98,7 @@ $button-variants: (
         borderColor: map-get($palette, red),
         borderColorHover: map-get($palette, black)
     ),
-    outlineBlack: (
+    'outlineBlack': (
         foreground: map-get($palette, black),
         background: map-get($palette, white),
         foregroundHover: map-get($palette, white),
@@ -111,12 +111,12 @@ $button-variants: (
 // Sharebox
 
 $sharebox-variants: (
-    facebook: (
+    'facebook': (
         foreground: getBrandInfo(facebook, alt),
         background:getBrandInfo(facebook, main),
         icon: getBrandInfo(facebook, icon),
     ),
-    twitter: (
+    'twitter': (
         foreground: getBrandInfo(twitter, alt),
         background:getBrandInfo(twitter, main),
         icon: getBrandInfo(twitter, icon),

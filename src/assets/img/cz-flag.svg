@@ -6,7 +6,7 @@
     <defs>
         <path d="M154.284069,299.94 L145.715931,299.94 C64.8540725,297.672292 0,231.410196 0,150 C0,67.157 67.157,0 150,0 C232.843,0 300,67.157 300,150 C300,231.410196 235.145927,297.672292 154.284069,299.94 L154.284069,299.94 Z" id="path-1"></path>
     </defs>
-    <g id="czech-republic-flag-round" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="czech-republic-flag-round" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
         <mask id="mask-2" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
