@@ -3,16 +3,16 @@
     <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
     <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
         <g id="Desktop" transform="translate(-349.000000, -64.000000)">
             <g id="Group" transform="translate(349.000000, 64.000000)">
-                <rect id="Rectangle" stroke="#E9252D" stroke-width="12" fill="#FFFFFF" x="34" y="6" width="241" height="501.039252" rx="65"></rect>
+                <rect id="Rectangle" stroke="#E9252D" strokeWidth="12" fill="#FFFFFF" x="34" y="6" width="241" height="501.039252" rx="65"></rect>
                 <path d="M249,73.2646729 C249,44.9620075 225.953334,21.9607477 197.566117,21.9607477 L51.433883,21.9607477 C23.0466657,21.9607477 0,44.9620075 0,73.2646729 L0,483.696075 C0,511.99874 23.0466657,535 51.433883,535 L197.566117,535 C225.953334,535 249,511.99874 249,483.696075 L249,73.2646729 Z" id="Path" fill="#FFFFFF"></path>
                 <path d="M249,73.2646729 C249,44.9620075 225.953334,21.9607477 197.566117,21.9607477 L51.433883,21.9607477 C23.0466657,21.9607477 0,44.9620075 0,73.2646729 L0,483.696075 C0,511.99874 23.0466657,535 51.433883,535 L197.566117,535 C225.953334,535 249,511.99874 249,483.696075 L249,73.2646729 Z M236.141529,73.2646729 L236.141529,483.696075 C236.141529,504.94445 218.855458,522.174019 197.566117,522.174019 L51.433883,522.174019 C30.1445416,522.174019 12.8584708,504.94445 12.8584708,483.696075 L12.8584708,73.2646729 C12.8584708,52.0162972 30.1445416,34.786729 51.433883,34.786729 L197.566117,34.786729 C218.855458,34.786729 236.141529,52.0162972 236.141529,73.2646729 Z" id="Shape" fill="#E9252D"></path>
                 <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="124.536598 208.385319 165.541959 183.988581 165.541959 135.193118 124.536598 110.794393 83.5312369 135.193118 83.5312369 183.988581"></polygon>
                 <polygon id="Path" fill="#EA272E" fill-rule="nonzero" points="124.536598 113.096122 85.4657796 136.343983 85.4657796 182.837717 124.536598 206.08359 163.607416 182.837717 163.607416 136.343983"></polygon>
-                <polygon id="Path" stroke="#EA272E" stroke-width="5" fill="#FFFFFF" fill-rule="nonzero" transform="translate(108.933031, 147.966323) scale(-1, 1) rotate(-90.000000) translate(-108.933031, -147.966323) " points="79.9330312 164.966323 117.865922 164.966323 137.933031 130.966323 100.00014 130.966323"></polygon>
-                <polygon id="Path" stroke="#EA272E" stroke-width="4" fill="#FFFFFF" fill-rule="nonzero" transform="translate(126.503789, 180.111392) scale(-1, 1) rotate(30.000473) translate(-126.503789, -180.111392) " points="115.481853 162.95391 156.440824 163.491602 137.527667 197.268873 96.5667528 196.731156"></polygon>
+                <polygon id="Path" stroke="#EA272E" strokeWidth="5" fill="#FFFFFF" fill-rule="nonzero" transform="translate(108.933031, 147.966323) scale(-1, 1) rotate(-90.000000) translate(-108.933031, -147.966323) " points="79.9330312 164.966323 117.865922 164.966323 137.933031 130.966323 100.00014 130.966323"></polygon>
+                <polygon id="Path" stroke="#EA272E" strokeWidth="4" fill="#FFFFFF" fill-rule="nonzero" transform="translate(126.503789, 180.111392) scale(-1, 1) rotate(30.000473) translate(-126.503789, -180.111392) " points="115.481853 162.95391 156.440824 163.491602 137.527667 197.268873 96.5667528 196.731156"></polygon>
             </g>
         </g>
     </g>

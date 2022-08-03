@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { FormattedMessage, useIntl } from "react-intl"
+import { FormattedMessage } from "react-intl"
 
 import "react-multi-carousel/lib/styles.css"
 
@@ -9,8 +9,6 @@ import { BackgroundImage } from "components/image"
 import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
 
 import czFlag from "assets/img/cz-flag.svg"
-import iconPackage from "assets/img/icon-package.png"
-import iconTruck from "assets/img/icon-truck.png"
 
 import logoCura from "assets/img/logo-cura.png"
 import logoPrusaSlicer from "assets/img/logo-prusa-slicer.png"
@@ -21,11 +19,6 @@ import logoIkem from "assets/img/logo-ikem.png"
 import logoTrebesin from "assets/img/logo-prumyslovka-trebesin.png"
 
 const ProductBlockKarmenPill = ({ props }) => {
-  const intl = useIntl()
-  const buyPillLink =
-    intl.locale === "cs"
-      ? "/cs/koupit/"
-      : "/en/koupit/"
   const data = useStaticQuery(graphql`
     query {
       site {

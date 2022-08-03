@@ -1,6 +1,8 @@
 /**
  * Cast sass string to number
  */
+@use "sass:math";
+
 @function to-number($value) {
     @if type-of($value) == "number" {
         @return $value;
@@ -53,7 +55,7 @@
 ///
 /// @returns {Number} The same number, sans unit.
 @function strip-unit($num) {
-    @return $num / ($num * 0 + 1);
+    @return math.div($num, ($num * 0 + 1));
 }
 
 /// Find the next value in a map.
