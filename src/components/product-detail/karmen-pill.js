@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css"
 import { BackgroundImage } from "components/image"
 
 import KarmenPillGalleryCarousel from "components/product-detail/karmen-pill-gallery"
+import KarmenPillGalleryComparison from "components/product-detail/karmen-pill-comparison"
 
 import czFlag from "assets/img/cz-flag.svg"
 import iconPackage from "assets/img/icon-package.png"
@@ -138,18 +139,6 @@ const ProductBlockKarmenPill = ({ props }) => {
       <div className="product-detail-page content-block">
         <section {...props}>
           <div className="product-detail">
-            <section className="product-detail__gallery-block">
-              <h1 className="product-detail__headline2">
-                <FormattedMessage
-                  id="product-detail-pill.subheading_in-work"
-                  defaultMessage="Karmen v praxi"
-                />
-              </h1>
-              {/*
-              TODO: galerie by mela byt sitenavwide
-              */}
-              <KarmenPillGalleryCarousel />
-            </section>
             <section className="product-detail__functions">
               <h1 className="product-detail__headline2">
                 <FormattedMessage
@@ -260,6 +249,7 @@ const ProductBlockKarmenPill = ({ props }) => {
                 </div>
               </div>
             </section>
+
             <section className="product-detail__article">
               <h1 className="product-detail__headline2">
                 <FormattedMessage
@@ -287,6 +277,31 @@ const ProductBlockKarmenPill = ({ props }) => {
                 </div>
               </div>
             </section>
+
+            <section className="product-detail__comparison">
+              <h1 className="product-detail__headline2">
+                <FormattedMessage
+                  id="product-detail-pill.subheading_comparison"
+                  defaultMessage="Porovnání verzí Karmen Pill"
+                />
+              </h1>
+              <KarmenPillGalleryComparison />
+            </section>
+
+
+            <section className="product-detail__gallery-block">
+              <h1 className="product-detail__headline2">
+                <FormattedMessage
+                  id="product-detail-pill.subheading_in-work"
+                  defaultMessage="Karmen v praxi"
+                />
+              </h1>
+              {/*
+              TODO: galerie by mela byt sitenavwide
+              */}
+              <KarmenPillGalleryCarousel />
+            </section>
+
             <section className="product-detail__article">
               <h1 className="product-detail__headline2">
                 <FormattedMessage
