@@ -19,7 +19,7 @@ const ProductBlockKarmenCloud = ({ props }) => {
       }
     }
   `)
-  const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
+  const manualLink = "https://docs.karmen.tech/#/cs/pripojeni-octoprintu-do-karmen-cloudu"
   return (
     <div>
       <div className="product-detail__hero">

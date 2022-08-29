@@ -23,7 +23,7 @@ const ProductsList = ({ location, ...props }) => {
   //     ? "/cs/produkty/karmen-pill-skladacka"
   //     : "/en/products/karmen-pill-diy"
   // const registerLink = "https://next.karmen.tech/registration"
-  const manualLink = "https://docs.karmen.tech/#/pripojeni-octoprintu-do-karmen-cloudu"
+  const manualLink = "https://docs.karmen.tech/#/cs/pripojeni-octoprintu-do-karmen-cloudu"
   const data = useStaticQuery(graphql`
     query {
       pillTablet: file(relativePath: { eq: "product-pill.png" }) {
