@@ -191,9 +191,6 @@ TEMPORARY - remove as DIY is ready to buy
   }
 }
 
-.product-detail__package-content {
-
-}
 .package-content__item {
   padding: gu(1);
   text-align: center;
@@ -207,4 +204,91 @@ TEMPORARY - remove as DIY is ready to buy
   padding-top: 100%;
   max-width: 200px;
   margin: 0 auto;
+}
+
+.product-detail__comparison {
+  .product-detail__comparison-grid {
+    display: grid;
+    grid-gap: 0 gu(1);
+    // grid-template-columns: 1fr;
+    // grid-template-areas:
+    //   "title01"
+    //   "feature01"
+    //   "title02"
+    //   "feature02"
+    //   "title03"
+    //   "feature03"
+    //   "title04"
+    //   "feature04";
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "image01 image02"
+    "title01 title02"
+    "feature01 feature02"
+    "image03 image04"
+    "title03 title04"
+    "feature03 feature04";
+
+    @include breakpoint(tablet up) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "image01 image02 image03 image04"
+        "title01 title02 title03 title04"
+        "feature01 feature02 feature03 feature04";
+    }
+    padding-top: gu(2);
+    margin: 0 auto;
+  }
+
+  .product-detail__comparison-title {
+    grid-area: title;
+    @include baseline(s5, $headingtype, 1, $below: 0, $above: 1);
+  }
+
+  .product-detail__comparison-list {
+    grid-area: features;
+    list-style-type: none;
+    @include baseline(s3, $bodytype, 1, $below: 2, $above: 0);
+  }
+
+  .product-detail__comparison-image01 {
+    grid-area: image01;
+  }
+  .product-detail__comparison-image02 {
+    grid-area: image02;
+  }
+  .product-detail__comparison-image03 {
+    grid-area: image03;
+  }
+  .product-detail__comparison-image04 {
+    grid-area: image04;
+  }
+
+
+  .product-detail__comparison-title01 {
+    grid-area: title01;
+  }
+  .product-detail__comparison-title02 {
+    grid-area: title02;
+  }
+  .product-detail__comparison-title03 {
+    grid-area: title03;
+  }
+  .product-detail__comparison-title04 {
+    grid-area: title04;
+  }
+
+  .product-detail__comparison-list01 {
+    grid-area: feature01;
+  }
+  .product-detail__comparison-list02 {
+    grid-area: feature02;
+  }
+  .product-detail__comparison-list03 {
+    grid-area: feature03;
+  }
+  .product-detail__comparison-list04 {
+    grid-area: feature04;
+  }
 }
