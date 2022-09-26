@@ -1,5 +1,5 @@
 ---
-title: Karmen jako plugin v Octoprintu, těšíme se na Maker faire a máme další novinky.
+title: Karmen jako plugin v Octoprintu, těšíme se na Maker faire a máme další novinky
 date: "2022-08-31T17:28:16.131Z"
 lang: cs
 description: "Karmen jako plugin v Octoprintu, těšíme se na Maker faire a máme další novinky."
