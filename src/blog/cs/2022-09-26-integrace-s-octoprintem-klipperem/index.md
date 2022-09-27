@@ -18,7 +18,17 @@ Opravili jsme několik hraničních případů, kdy se Pill za specifických oko
 
 ## 3. Maker Faire
 Jsme hrdým partnerem [Maker Faire ČR](https://makerfaire.cz/) a minulý víkend jsme vystavovali v Praze. Bylo to parádní a jsme moc rádi za feedback a podporu. Pokud se chystáte předposlední víkend do Brna, vezměte z domova své zmetky, společně s nimi skoncujeme.
-[https://drive.google.com/drive/folders/1Bont-5t9HYUdgl-nnSd3S-sw4svlGyBJ](https://drive.google.com/drive/folders/1Bont-5t9HYUdgl-nnSd3S-sw4svlGyBJ)
+
+
+![Karmen na Maker Faire 1](./1.jpg)
+![Karmen na Maker Faire 2](./2.jpg)
+![Karmen na Maker Faire 3](./3.jpg)
+![Karmen na Maker Faire 4](./4.jpg)
+
+
+
+
+
 
 ## 4. Novinky z vývoje
 Dále rozšiřujeme funkcionalitu Karmen a přidáváme i další vychytávky. Sdílení tiskáren, videí, g-codů apod. je naší velkou prioritou. Veřejný profil již funguje, podívejte se na ten [náš](https://next.karmen.tech/public/groups/inqp39rw). Veřejný profil si můžete vytvořit a nastavit v Karmen Cloudu v nastavení pracovní skupiny.
