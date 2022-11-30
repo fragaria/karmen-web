@@ -29,7 +29,7 @@ Moc jsme si letos užili Maker faire v Praze a Brně. Spokojenost uživatelů n�
   
 A pokud byste si chtěli pustit celou písničku, koukněte třeba [sem](https://github.com/alexyu132/midi-m300/tree/master/samples).🙂
 
-![Odeslání vlastního GCode příkazu](./2.png)
+![Odeslání vlastního GCode příkazu](./3.png)
 
 
 Dále pracujeme na **veřejném profilu**, abyste mohli při dodržení všech bezpečnostních zásad sdílet videa a nově také informace, co která tiskárna tiskne a live stream z kamery. 
@@ -38,7 +38,7 @@ Dále pracujeme na **veřejném profilu**, abyste mohli při dodržení všech b
 
 Noví uživatelé v [next.karmen.tech](https://next.karmen.tech) dostávají přehledný návod jak jednoduše přidat svou 3D tiskárnu a uploadovat první tiskové soubory.
 
-![Seznámení s aplikací](./3.png)
+![Seznámení s aplikací](./2.png)
 
 ## Feedback a sociální sítě
 Znovu bychom Vás chtěli požádat, zda byste nám dali vědět, jak jste s řešením Karmen spokojeni, co Vám chybí, co je třeba zlepšit a co Vás naopak baví. Kvalitní zpětná vazba nám moc pomáhá. Budeme také rádi za sdílení a komentování našich příspěvků na sociálních sítí, případně nás prosím neváhejte označovat, rádi Vaše příspěvky přesdílíme.
